@@ -1,0 +1,555 @@
+{
+  "generatedAt": "2026-10-04T06:11:16.466Z",
+  "total": 90,
+  "byCategory": {
+    "备案网站": 8,
+    "观猹评分与评价": 15,
+    "米羊账号与官网": 21,
+    "作者个人网站": 6,
+    "作者社交账号": 5,
+    "Alice 推广与下载": 25,
+    "GitHub 项目": 10
+  },
+  "records": [
+    {
+      "file": "9-0.en.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/download",
+      "label": "Download Alice Free"
+    },
+    {
+      "file": "9-0.en.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.fans",
+      "label": "Learn more"
+    },
+    {
+      "file": "9-0.hk.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/download",
+      "label": "免費下載 Alice"
+    },
+    {
+      "file": "9-0.hk.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.fans",
+      "label": "了解更多"
+    },
+    {
+      "file": "9-0.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/download",
+      "label": "免费下载 Alice"
+    },
+    {
+      "file": "9-0.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.fans",
+      "label": "了解更多"
+    },
+    {
+      "file": "9-0.ko.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/download",
+      "label": "Alice 무료 다운로드"
+    },
+    {
+      "file": "9-0.ko.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.fans",
+      "label": "더 알아보기"
+    },
+    {
+      "file": "9-0.tw.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/download",
+      "label": "免費下載 Alice"
+    },
+    {
+      "file": "9-0.tw.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.fans",
+      "label": "了解更多"
+    },
+    {
+      "file": "auth.js",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn",
+      "label": "miyang.cn"
+    },
+    {
+      "file": "auth.js",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn",
+      "label": "miyang.cn"
+    },
+    {
+      "file": "auth.js",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn",
+      "label": "miyang.cn"
+    },
+    {
+      "file": "auth.js",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn",
+      "label": "miyang.cn"
+    },
+    {
+      "file": "auth.js",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn",
+      "label": "miyang.cn"
+    },
+    {
+      "file": "certificate.en.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/profile/ai-learn",
+      "label": "→ View in your Miyang account"
+    },
+    {
+      "file": "certificate.en.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/profile",
+      "label": "edit your nickname on Miyang"
+    },
+    {
+      "file": "certificate.hk.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/profile/ai-learn",
+      "label": "→ 在米羊帳號中查看"
+    },
+    {
+      "file": "certificate.hk.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/profile",
+      "label": "前往米羊修改暱稱"
+    },
+    {
+      "file": "certificate.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/profile/ai-learn",
+      "label": "→ 在米羊账号中查看"
+    },
+    {
+      "file": "certificate.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/profile",
+      "label": "前往米羊修改昵称"
+    },
+    {
+      "file": "certificate.ko.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/profile/ai-learn",
+      "label": "→ 미양 계정에서 보기"
+    },
+    {
+      "file": "certificate.ko.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/profile",
+      "label": "미양에서 닉네임을 수정"
+    },
+    {
+      "file": "certificate.tw.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/profile/ai-learn",
+      "label": "→ 在米羊帳號中查看"
+    },
+    {
+      "file": "certificate.tw.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/profile",
+      "label": "前往米羊修改暱稱"
+    },
+    {
+      "file": "elder.hk.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/",
+      "label": "關於米羊"
+    },
+    {
+      "file": "elder.hk.html",
+      "category": "备案网站",
+      "href": "https://beian.miit.gov.cn/",
+      "label": "粵ICP備2023103765號-2"
+    },
+    {
+      "file": "elder.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/",
+      "label": "关于米羊"
+    },
+    {
+      "file": "elder.html",
+      "category": "备案网站",
+      "href": "https://beian.miit.gov.cn/",
+      "label": "粤ICP备2023103765号-2"
+    },
+    {
+      "file": "elder.tw.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/",
+      "label": "關於米羊"
+    },
+    {
+      "file": "elder.tw.html",
+      "category": "备案网站",
+      "href": "https://beian.miit.gov.cn/",
+      "label": "粵ICP備2023103765號-2"
+    },
+    {
+      "file": "home.en.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/?from=xueai",
+      "label": "Try Alice"
+    },
+    {
+      "file": "home.en.html",
+      "category": "GitHub 项目",
+      "href": "https://github.com/itshen/learn-ai",
+      "label": "GitHub"
+    },
+    {
+      "file": "home.en.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review&utm_source=product-badge&utm_content=review",
+      "label": ""
+    },
+    {
+      "file": "home.en.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review",
+      "label": "Watcha"
+    },
+    {
+      "file": "home.en.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review",
+      "label": "See all reviews on Watcha →"
+    },
+    {
+      "file": "home.en.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/download?from=xueai",
+      "label": "Download Alice free"
+    },
+    {
+      "file": "home.en.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/?from=xueai",
+      "label": "Learn more"
+    },
+    {
+      "file": "home.en.html",
+      "category": "作者社交账号",
+      "href": "https://x.com/luoxiaoshan_ai",
+      "label": "X (Twitter) @luoxiaoshan_ai Click to open profile"
+    },
+    {
+      "file": "home.en.html",
+      "category": "作者个人网站",
+      "href": "https://luoxiaoshan.cn/",
+      "label": "About the Instructor"
+    },
+    {
+      "file": "home.en.html",
+      "category": "GitHub 项目",
+      "href": "https://github.com/itshen/learn-ai",
+      "label": "Open Source on GitHub"
+    },
+    {
+      "file": "home.en.html",
+      "category": "备案网站",
+      "href": "https://beian.miit.gov.cn/",
+      "label": "粤ICP备2023103765号-2"
+    },
+    {
+      "file": "home.hk.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/",
+      "label": "關於我們"
+    },
+    {
+      "file": "home.hk.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/?from=xueai",
+      "label": "體驗 Alice"
+    },
+    {
+      "file": "home.hk.html",
+      "category": "GitHub 项目",
+      "href": "https://github.com/itshen/learn-ai",
+      "label": "GitHub"
+    },
+    {
+      "file": "home.hk.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review&utm_source=product-badge&utm_content=review",
+      "label": ""
+    },
+    {
+      "file": "home.hk.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review",
+      "label": "觀猹"
+    },
+    {
+      "file": "home.hk.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review",
+      "label": "在觀猹看全部評價 →"
+    },
+    {
+      "file": "home.hk.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/download?from=xueai",
+      "label": "免費下載 Alice"
+    },
+    {
+      "file": "home.hk.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/?from=xueai",
+      "label": "了解更多"
+    },
+    {
+      "file": "home.hk.html",
+      "category": "作者社交账号",
+      "href": "https://x.com/luoxiaoshan_ai",
+      "label": "推特 @luoxiaoshan_ai 點擊直達主頁"
+    },
+    {
+      "file": "home.hk.html",
+      "category": "作者个人网站",
+      "href": "https://luoxiaoshan.cn/",
+      "label": "請教作者"
+    },
+    {
+      "file": "home.hk.html",
+      "category": "GitHub 项目",
+      "href": "https://github.com/itshen/learn-ai",
+      "label": "GitHub 開源"
+    },
+    {
+      "file": "home.hk.html",
+      "category": "备案网站",
+      "href": "https://beian.miit.gov.cn/",
+      "label": "粵ICP備2023103765號-2"
+    },
+    {
+      "file": "home.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/",
+      "label": "关于我们"
+    },
+    {
+      "file": "home.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/?from=xueai",
+      "label": "体验 Alice"
+    },
+    {
+      "file": "home.html",
+      "category": "GitHub 项目",
+      "href": "https://github.com/itshen/learn-ai",
+      "label": "GitHub"
+    },
+    {
+      "file": "home.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review&utm_source=product-badge&utm_content=review",
+      "label": ""
+    },
+    {
+      "file": "home.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review",
+      "label": "观猹"
+    },
+    {
+      "file": "home.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review",
+      "label": "在观猹看全部评价 →"
+    },
+    {
+      "file": "home.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/download?from=xueai",
+      "label": "免费下载 Alice"
+    },
+    {
+      "file": "home.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/?from=xueai",
+      "label": "了解更多"
+    },
+    {
+      "file": "home.html",
+      "category": "作者社交账号",
+      "href": "https://x.com/luoxiaoshan_ai",
+      "label": "推特 @luoxiaoshan_ai 点击直达主页"
+    },
+    {
+      "file": "home.html",
+      "category": "作者个人网站",
+      "href": "https://luoxiaoshan.cn/",
+      "label": "请教作者"
+    },
+    {
+      "file": "home.html",
+      "category": "GitHub 项目",
+      "href": "https://github.com/itshen/learn-ai",
+      "label": "GitHub 开源"
+    },
+    {
+      "file": "home.html",
+      "category": "备案网站",
+      "href": "https://beian.miit.gov.cn/",
+      "label": "粤ICP备2023103765号-2"
+    },
+    {
+      "file": "home.ko.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/?from=xueai",
+      "label": "Alice 체험"
+    },
+    {
+      "file": "home.ko.html",
+      "category": "GitHub 项目",
+      "href": "https://github.com/itshen/learn-ai",
+      "label": "GitHub"
+    },
+    {
+      "file": "home.ko.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review&utm_source=product-badge&utm_content=review",
+      "label": ""
+    },
+    {
+      "file": "home.ko.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review",
+      "label": "관차"
+    },
+    {
+      "file": "home.ko.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review",
+      "label": "관차에서 전체 후기 보기 →"
+    },
+    {
+      "file": "home.ko.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/download?from=xueai",
+      "label": "Alice 무료 다운로드"
+    },
+    {
+      "file": "home.ko.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/?from=xueai",
+      "label": "자세히 보기"
+    },
+    {
+      "file": "home.ko.html",
+      "category": "作者社交账号",
+      "href": "https://x.com/luoxiaoshan_ai",
+      "label": "X (트위터) @luoxiaoshan_ai 클릭하여 프로필로 이동"
+    },
+    {
+      "file": "home.ko.html",
+      "category": "作者个人网站",
+      "href": "https://luoxiaoshan.cn/",
+      "label": "강사에게 문의"
+    },
+    {
+      "file": "home.ko.html",
+      "category": "GitHub 项目",
+      "href": "https://github.com/itshen/learn-ai",
+      "label": "GitHub 오픈소스"
+    },
+    {
+      "file": "home.ko.html",
+      "category": "备案网站",
+      "href": "https://beian.miit.gov.cn/",
+      "label": "粤ICP备2023103765号-2"
+    },
+    {
+      "file": "home.tw.html",
+      "category": "米羊账号与官网",
+      "href": "https://miyang.cn/",
+      "label": "關於我們"
+    },
+    {
+      "file": "home.tw.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/?from=xueai",
+      "label": "體驗 Alice"
+    },
+    {
+      "file": "home.tw.html",
+      "category": "GitHub 项目",
+      "href": "https://github.com/itshen/learn-ai",
+      "label": "GitHub"
+    },
+    {
+      "file": "home.tw.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review&utm_source=product-badge&utm_content=review",
+      "label": ""
+    },
+    {
+      "file": "home.tw.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review",
+      "label": "觀猹"
+    },
+    {
+      "file": "home.tw.html",
+      "category": "观猹评分与评价",
+      "href": "https://watcha.cn/products/xue-ai?tab=review",
+      "label": "在觀猹看全部評價 →"
+    },
+    {
+      "file": "home.tw.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/download?from=xueai",
+      "label": "免費下載 Alice"
+    },
+    {
+      "file": "home.tw.html",
+      "category": "Alice 推广与下载",
+      "href": "https://alice.miyang.cn/?from=xueai",
+      "label": "了解更多"
+    },
+    {
+      "file": "home.tw.html",
+      "category": "作者社交账号",
+      "href": "https://x.com/luoxiaoshan_ai",
+      "label": "推特 @luoxiaoshan_ai 點選直達主頁"
+    },
+    {
+      "file": "home.tw.html",
+      "category": "作者个人网站",
+      "href": "https://luoxiaoshan.cn/",
+      "label": "聯絡作者"
+    },
+    {
+      "file": "home.tw.html",
+      "category": "GitHub 项目",
+      "href": "https://github.com/itshen/learn-ai",
+      "label": "GitHub 開源"
+    },
+    {
+      "file": "home.tw.html",
+      "category": "备案网站",
+      "href": "https://beian.miit.gov.cn/",
+      "label": "粵ICP備2023103765號-2"
+    },
+    {
+      "file": "nav-inject.js",
+      "category": "作者个人网站",
+      "href": "https://luoxiaoshan.cn/",
+      "label": "${I18N.t('askAuthor')}"
+    }
+  ]
+}

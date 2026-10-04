@@ -713,7 +713,7 @@ const I18N = window.XUEAI_I18N || {
       ${backHtml}
       <a id="nav-toc-link" href="${I18N.locFile('learn.html')}#${encodeURIComponent(cur)}" title="${I18N.t('tocTitle')}">☰ ${I18N.t('toc')}</a>
       <div class="nav-top-sep"></div>
-      <a id="nav-author-link" href="https://luoxiaoshan.cn/" target="_blank">${I18N.t('askAuthor')}</a>
+      
       <div class="nav-top-sep"></div>
       <div id="nav-pv-badge">
         <span class="nav-pv-label">${I18N.t('today')}</span>
