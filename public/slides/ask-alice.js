@@ -554,7 +554,7 @@
   var RECHARGE_URL = 'https://miyang.cn/console/recharge';   // 米粒充值页
   // 与 miyang_alice/src/public/avatars/avatar_512.png 同源：黑微卷 + 淡金发带 + 星星项链。
   // 曾用 Image2 另生「老师脸」会漂成另一个人，不合规；UI 圆裁由 CSS border-radius 完成。
-  var AVATAR_SRC = 'alice-teacher.png?v=20260808j';
+  var AVATAR_SRC = 'assets/fangpian/tiger-ai-assistant.webp';
   // 本轮任务标记：与 alice-service 的 *_INTENT 对齐（后端只认这几个白名单值）
   var COURSE_SEARCH_INTENT = 'course_search';
   var FEEDBACK_INTENT = 'feedback';

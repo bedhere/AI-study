@@ -55,7 +55,7 @@
       groupHint:          '微信扫一扫入群，或关注公众号与 X 获取更新',
       chan0Name:          '交流群',
       chan0Desc:          '微信扫码入群<br>聊课程与 AI 实战',
-      chan0Alt:           '小山学堂 交流群二维码',
+      chan0Alt:           '方片学堂 交流群二维码',
       chan1Name:          '公众号',
       chan1Desc:          '洛小山<br>文章与课程更新',
       chan1Alt:           '洛小山公众号二维码',
@@ -110,7 +110,7 @@
       groupHint:          '微信掃一掃入羣，或關注公眾號與 X 獲取更新',
       chan0Name:          '交流羣',
       chan0Desc:          '微信掃碼入羣<br>聊課程與 AI 實戰',
-      chan0Alt:           '小山學堂 交流羣QR Code',
+      chan0Alt:           '方片學堂 交流羣QR Code',
       chan1Name:          '公眾號',
       chan1Desc:          '洛小山<br>文章與課程更新',
       chan1Alt:           '洛小山公眾號QR Code',
@@ -165,7 +165,7 @@
       groupHint:          '微信掃一掃入群，或關注公眾號與 X 獲取更新',
       chan0Name:          '交流群',
       chan0Desc:          '微信掃碼入群<br>聊課程與 AI 實戰',
-      chan0Alt:           '小山學堂 交流群二維碼',
+      chan0Alt:           '方片學堂 交流群二維碼',
       chan1Name:          '公眾號',
       chan1Desc:          '洛小山<br>文章與課程更新',
       chan1Alt:           '洛小山公眾號二維碼',
@@ -217,7 +217,7 @@
       groupHint:          'Scan to join the group, or follow us on WeChat Official Account & X for updates',
       chan0Name:          'Study Group',
       chan0Desc:          'Scan with WeChat to join<br>Discuss courses & AI practice',
-      chan0Alt:           'Xiaoshan Academy study group QR code',
+      chan0Alt:           'Fangpian Academy study group QR code',
       chan1Name:          'WeChat Official Account',
       chan1Desc:          'Luo Xiaoshan<br>Articles & course updates',
       chan1Alt:           'Luo Xiaoshan WeChat Official Account QR code',
@@ -268,7 +268,7 @@
       groupHint:          '위챗으로 스캔하여 그룹에 참여하거나, 위챗 공식 계정과 X를 팔로우하여 업데이트를 받으세요',
       chan0Name:          '스터디 그룹',
       chan0Desc:          '위챗으로 스캔하여 참여<br>강의와 AI 실전 토론',
-      chan0Alt:           '샤오산 아카데미 스터디 그룹 QR코드',
+      chan0Alt:           '팡피엔 아카데미 스터디 그룹 QR코드',
       chan1Name:          '위챗 공식 계정',
       chan1Desc:          '뤄샤오산<br>아티클 및 강의 업데이트',
       chan1Alt:           '뤄샤오산 위챗 공식 계정 QR코드',
@@ -373,7 +373,7 @@
 
     /* ── 宽模态框：左图右内容 ── */
     + '.xa-wide{display:flex;border-radius:20px;overflow:hidden;max-width:760px;width:100%;padding:0;}'
-    + '.xa-wide-left{width:280px;flex-shrink:0;position:relative;overflow:hidden;background:#1a1040 url("assets/login-hero.png") center/cover no-repeat;}'
+    + '.xa-wide-left{width:280px;flex-shrink:0;position:relative;overflow:hidden;background:#1a1040 url("assets/fangpian/tiger-open-arms.webp") center/cover no-repeat;}'
     + '.xa-wide-left-overlay{position:absolute;bottom:0;left:0;right:0;padding:18px 20px 16px;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.35) 60%,transparent 100%);}'
     + '.xa-wide-left-overlay p{color:#fff;font-size:12.5px;font-weight:600;line-height:1.55;text-shadow:0 1px 4px rgba(0,0,0,0.5);margin:0;}'
     + '.xa-left-big{font-size:22px !important;font-weight:800 !important;letter-spacing:1px;margin-bottom:4px !important;}'
@@ -495,7 +495,7 @@
        就会甩出「式的销售。」这种两三个字的孤行，所以整体给到 920px。 */
     + '.xa-notice{display:flex;max-width:920px;max-height:88vh;padding:0;overflow:hidden;}'
     + '.xa-notice-art{width:300px;flex-shrink:0;position:relative;background:'
-    + 'url("assets/notice-guard.webp") center/cover no-repeat,#fef9f0;}'
+    + 'url("assets/fangpian/tiger-stern-crossed-arms.webp") center/cover no-repeat,#fef9f0;}'
     /* 配图是奶油浅底（底部实测 #fef9f0），所以这里反过来：浅色蒙版压深色字。
        两个字色都取自图里的赤陶／暖棕，对比度 4.7:1 与 6.5:1，够 WCAG。 */
     + '.xa-notice-art-overlay{position:absolute;bottom:0;left:0;right:0;padding:18px 20px 16px;'
@@ -540,7 +540,7 @@
   function loginUrlFor(next){
     var url = '/auth/login?next=' + encodeURIComponent(next || currentNext());
     /* 来源只允许页面声明的已知值。敬老版由认证服务换用独立 OAuth client，
-       miyang.cn 才能把注册与登录会话可靠地区分为「小山学堂·敬老版」。 */
+       miyang.cn 才能把注册与登录会话可靠地区分为「方片学堂·敬老版」。 */
     if(document.documentElement.getAttribute('data-xa-source') === 'elder'){
       url += '&source=elder';
     }

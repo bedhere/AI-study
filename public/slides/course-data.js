@@ -10,7 +10,7 @@ window.COURSE = {
   meta: {
     title: '学 AI 产品，从入门到精通',
     subtitle: '从大模型底层原理到 AI Agent Harness',
-    brand: '小山学堂',
+    brand: '方片学堂',
     author: '洛小山',
     authorUrl: 'https://luoxiaoshan.cn/',
     github: 'https://github.com/itshen/learn-ai',
@@ -1773,7 +1773,7 @@ window.COURSE = {
       id: 'p-seo',
       num: '课后甜点',
       title: '被搜到：SEO 与 GEO',
-      desc: '产品做出来了、确权了，接下来的问题是有没有人找得到。这一章讲两件事：SEO 的最低可行清单（能被抓、能被读懂、能被收录），以及 GEO 这个新战场（让 ChatGPT、Perplexity、Kimi、豆包在回答问题时愿意引用你）。全章用小山学堂自己的一次真实改造当案例，不教黑帽，不承诺排名，只给能自己动手核对的清单。前两节免登录，其余登录后学习。',
+      desc: '产品做出来了、确权了，接下来的问题是有没有人找得到。这一章讲两件事：SEO 的最低可行清单（能被抓、能被读懂、能被收录），以及 GEO 这个新战场（让 ChatGPT、Perplexity、Kimi、豆包在回答问题时愿意引用你）。全章用方片学堂自己的一次真实改造当案例，不教黑帽，不承诺排名，只给能自己动手核对的清单。前两节免登录，其余登录后学习。',
       color: '#4338ca',
       group: 'extra',
       routes: ['use', 'pro', 'pm', 'build'],
@@ -1804,7 +1804,7 @@ window.COURSE = {
           title: '拆一个真实案例',
           desc: '用本站的改造记录当解剖台',
           lessons: [
-            { file: 'seo-4.html', title: '拆本站：Google 收录 693 页，Bing 只有 50 页', desc: '小山学堂 2026 年 8 月真实审计复盘：sitemap 漏了全部英韩页、Q&A 页白扔了 FAQ 引用、日志把爬虫全丢弃。每个缺口讲清怎么发现、改了什么、拿什么验收', tag: '案例' , navTitle: '拆本站真实改造'},
+            { file: 'seo-4.html', title: '拆本站：Google 收录 693 页，Bing 只有 50 页', desc: '方片学堂 2026 年 8 月真实审计复盘：sitemap 漏了全部英韩页、Q&A 页白扔了 FAQ 引用、日志把爬虫全丢弃。每个缺口讲清怎么发现、改了什么、拿什么验收', tag: '案例' , navTitle: '拆本站真实改造'},
           ],
         },
         {

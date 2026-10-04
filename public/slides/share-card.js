@@ -37,8 +37,8 @@
   /* 海报素材一律同源：站点图床没配 CORS，跨域取图会污染 canvas，
      toDataURL 直接抛 SecurityError。 */
   var ART = {
-    logo: 'assets/logo.png',       /* 站点吉祥物小图标 */
-    art: 'assets/poster-art.webp'  /* Alice + 洛小山，上部大片留白 */
+    logo: 'assets/fangpian/logo-yellow-square.webp',       /* 站点吉祥物小图标 */
+    art: 'assets/fangpian/tiger-reading-seated.webp'  /* Alice + 洛小山，上部大片留白 */
   };
 
   /* 课程名沿用各语言页原有的分享文案，不取 course-data 里的标题——两者历史上就不一致，
@@ -59,8 +59,8 @@
       copyFail: '复制失败，请手动复制地址栏链接',
       downloading: '已开始下载，如未响应请长按图片保存',
       posterCta: '扫码继续学这一节',
-      posterBrand: 'xueai.miyang.cn · 小山学堂',
-      fileTag: '小山学堂'
+      posterBrand: 'xueai.miyang.cn · 方片学堂',
+      fileTag: '方片学堂'
     },
     hk: {
       page: 'learn.hk.html',
@@ -77,8 +77,8 @@
       copyFail: '複製失敗，請手動複製地址欄連結',
       downloading: '已開始下載，如未響應請長按圖片保存',
       posterCta: '掃碼繼續學這一節',
-      posterBrand: 'xueai.miyang.cn · 小山學堂',
-      fileTag: '小山學堂'
+      posterBrand: 'xueai.miyang.cn · 方片學堂',
+      fileTag: '方片學堂'
     },
     tw: {
       page: 'learn.tw.html',
@@ -95,8 +95,8 @@
       copyFail: '複製失敗，請手動複製網址列連結',
       downloading: '已開始下載，如未響應請長按圖片儲存',
       posterCta: '掃碼繼續學這一節',
-      posterBrand: 'xueai.miyang.cn · 小山學堂',
-      fileTag: '小山學堂'
+      posterBrand: 'xueai.miyang.cn · 方片學堂',
+      fileTag: '方片學堂'
     },
     en: {
       page: 'learn.en.html',
@@ -113,7 +113,7 @@
       copyFail: 'Copy failed — please copy the URL manually.',
       downloading: 'Download started — long-press the image if nothing happens',
       posterCta: 'Scan to keep learning',
-      posterBrand: 'xueai.miyang.cn · Xiaoshan Academy',
+      posterBrand: 'xueai.miyang.cn · Fangpian Academy',
       fileTag: 'xueai'
     },
     ko: {
@@ -131,7 +131,7 @@
       copyFail: '복사 실패. 주소창 링크를 직접 복사해 주세요.',
       downloading: '저장을 시작했습니다. 반응이 없으면 이미지를 길게 눌러 저장하세요',
       posterCta: '스캔해서 이어서 학습하기',
-      posterBrand: 'xueai.miyang.cn · 샤오산 아카데미',
+      posterBrand: 'xueai.miyang.cn · 팡피엔 아카데미',
       fileTag: 'xueai'
     }
   };

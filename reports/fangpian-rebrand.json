@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-10-04T07:35:22.075Z",
+  "filesChanged": 20,
+  "replacements": {
+    "$1方片学堂$2": 20
+  },
+  "assets": [
+    "logo-yellow-square.webp",
+    "logo-wordmark-black.webp",
+    "logo-wordmark-yellow.webp",
+    "logo-black-white.webp",
+    "logo-white-black.webp",
+    "tiger-ai-assistant.webp",
+    "tiger-teacher-pointer.webp",
+    "tiger-reading-seated.webp",
+    "tiger-open-arms.webp",
+    "tiger-thinking-seated.webp",
+    "tiger-trophy-wave.webp",
+    "tiger-stern-crossed-arms.webp",
+    "tiger-wink-wave.webp"
+  ]
+}

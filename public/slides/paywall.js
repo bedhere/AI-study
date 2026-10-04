@@ -31,7 +31,7 @@
   /* 措辞与 auth.js 的登录弹窗保持一致，同一个站里两处引导不该各说各的 */
   var _T = {
     zh: {
-      artAlt:        '小山学堂',
+      artAlt:        '方片学堂',
       gateTitle:     '登录后继续免费阅读',
       gateSub:       '本节还没有结束。登录即可解锁余下内容与全部课程，完全免费，不花一分钱。',
       b0Title:       '解锁全部课程',
@@ -48,7 +48,7 @@
       noteLink:      '登录后继续免费阅读'
     },
     hk: {
-      artAlt:        '小山學堂',
+      artAlt:        '方片學堂',
       gateTitle:     '登入後繼續免費閲讀',
       gateSub:       '本節仲未完。登入就可以解鎖餘下內容與全部課程，完全免費，唔使花一分錢。',
       b0Title:       '解鎖全部課程',
@@ -65,7 +65,7 @@
       noteLink:      '登入後繼續免費閲讀'
     },
     tw: {
-      artAlt:        '小山學堂',
+      artAlt:        '方片學堂',
       gateTitle:     '登入後繼續免費閱讀',
       gateSub:       '本節還沒有結束。登入即可解鎖餘下內容與全部課程，完全免費，不用花一毛錢。',
       b0Title:       '解鎖全部課程',
@@ -82,7 +82,7 @@
       noteLink:      '登入後繼續免費閱讀'
     },
     en: {
-      artAlt:        'Xiaoshan Academy',
+      artAlt:        'Fangpian Academy',
       gateTitle:     'Log in to keep reading — free',
       gateSub:       'This lesson is not over yet. Log in to unlock the rest and every other course, '
                      + 'completely free of charge.',
@@ -100,7 +100,7 @@
       noteLink:      'Log in to keep reading'
     },
     ko: {
-      artAlt:        '샤오산 아카데미',
+      artAlt:        '팡피엔 아카데미',
       gateTitle:     '로그인하고 무료로 계속 읽기',
       gateSub:       '이 강의는 아직 끝나지 않았습니다. 로그인하면 나머지 내용과 전체 강의를 '
                      + '완전 무료로 이용할 수 있습니다.',
@@ -132,7 +132,7 @@
     + 'box-shadow:0 1px 3px rgba(15,23,41,.04),0 8px 28px rgba(15,23,41,.05);}'
     + 'html.xa-locked .xa-gate{display:flex;}'
     + '.xa-gate-art{flex:0 0 208px;align-self:stretch;min-height:318px;'
-    + 'background:#1a1040 url("assets/login-hero.webp") center 18% / cover no-repeat;}'
+    + 'background:#1a1040 url("assets/fangpian/tiger-open-arms.webp") center 18% / cover no-repeat;}'
     + '.xa-gate-main{flex:1 1 auto;min-width:0;padding:30px 32px 28px;}'
     + '.xa-gate h2{margin:0 0 7px;font-size:20px;line-height:1.4;'
     + 'color:#0f1729;font-weight:650;letter-spacing:-.2px;}'
