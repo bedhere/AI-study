@@ -5,7 +5,7 @@
 <link rel="icon" href="assets/fangpian/logo-yellow-square.webp" type="image/webp">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>结业证书 · 学 AI 产品，从入门到精通 | 方片学堂</title>
-<meta name="description" content="学完《学 AI 产品，从入门到精通》全部课程即可领取结业证书，证书同步展示在米羊账号的 AI 学习页。">
+<meta name="description" content="学完《学 AI 产品，从入门到精通》全部课程即可领取结业证书，证书同步展示在方片账号的 AI 学习页。">
 <meta name="robots" content="noindex, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -194,9 +194,9 @@ body{
   <!-- 未登录 -->
   <div class="state-card hidden" id="stLogin">
     <h1>登录后查看结业证书</h1>
-    <p>结业证书记录在你的米羊账号下，请先用米羊账号登录。</p>
+    <p>结业证书记录在你的方片账号下，请先用方片账号登录。</p>
     <div style="margin-top:28px;">
-      <a class="btn btn-primary" rel="nofollow" href="/auth/login?next=%2Fslides%2Fcertificate.html">用米羊账号登录</a>
+      <a class="btn btn-primary" rel="nofollow" href="/auth/login?next=%2Fslides%2Fcertificate.html">用方片账号登录</a>
     </div>
   </div>
 
@@ -212,7 +212,7 @@ body{
   <!-- 可领取 -->
   <div class="state-card hidden" id="stClaim">
     <h1>🎓 恭喜你学完了全部课程！</h1>
-    <p>全部 <b id="claimTotal"></b> 节课都已完成。<br>现在就领取你的结业证书吧，证书会同步到你的米羊账号。</p>
+    <p>全部 <b id="claimTotal"></b> 节课都已完成。<br>现在就领取你的结业证书吧，证书会同步到你的方片账号。</p>
     <div style="margin-top:28px;">
       <button class="btn btn-gold" id="claimBtn">领取结业证书</button>
     </div>
@@ -235,7 +235,7 @@ body{
       </div>
     </div>
     <div class="name-note">
-      证书上的姓名取自你的米羊账号昵称。需要改名请
+      证书上的姓名取自你的方片账号昵称。需要改名请
       ，
       几分钟后回到本页刷新即可生效。
     </div>
@@ -256,7 +256,7 @@ body{
   var ACCENT = '#4f7bff';
   var INDIGO = '#6366f1';
 
-  /* 米羊科技官方组合标（透明底 PNG，1400×322），加载完成后重绘补上 */
+  /* 方片科技官方组合标（透明底 PNG，1400×322），加载完成后重绘补上 */
   var MARK = new Image();
   MARK.src = 'assets/miyang-logo.png';
   MARK.onload = function(){ if(CERT) drawCert(CERT); };
@@ -335,7 +335,7 @@ body{
     ctx.textAlign = 'center';
     ctx.textBaseline = 'alphabetic';
 
-    /* 顶部品牌视觉：米羊科技官方组合标（M 标 + 米羊科技 / Miyang.AI） */
+    /* 顶部品牌视觉：方片科技官方组合标（M 标 + 方片科技 / Miyang.AI） */
     if(MARK.complete && MARK.naturalWidth){
       var logoH = 44, logoW = logoH * MARK.naturalWidth / MARK.naturalHeight;
       ctx.drawImage(MARK, W/2 - logoW/2, 80, logoW, logoH);

@@ -346,7 +346,7 @@ function showResult(){
   var right = answers.filter(function(x){ return x.ok; }).length;
   var score = Math.round(right / answers.length * 100);
 
-  /* 成绩上报：按考点组聚合对错，米羊个人中心据此展示薄弱点。
+  /* 成绩上报：按考点组聚合对错，方片个人中心据此展示薄弱点。
      未登录到不了这页；上报失败静默，不影响本地看成绩。
      刷题中途退出再续时 answers 只含本次做过的题，服务端按组累加，不失真。 */
   var gstat = {};

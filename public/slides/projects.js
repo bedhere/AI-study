@@ -22,7 +22,7 @@
       reviewPending: '评价已提交，内容将在人工审核通过后公开显示',
       loginToReview: '登录后就能打分和评价', loginToLike: '登录后可以点赞',
       ratings: '条评分', noRating: '暂无评分，来打第一个分',
-      anonymous: '米羊用户', likeFail: '操作失败，请重试',
+      anonymous: '方片用户', likeFail: '操作失败，请重试',
       badgeTip: '项目作者可把评分徽章挂进 README：',
       langLabel: { zh: '简介', hk: '簡介', tw: '簡介', en: 'EN', ko: 'KO' }
     },
@@ -37,7 +37,7 @@
       reviewPending: '評價已提交，內容將在人工審批通過後公開顯示',
       loginToReview: '登入後就能打分和評價', loginToLike: '登入後可以讚好',
       ratings: '條評分', noRating: '暫無評分，來打第一個分',
-      anonymous: '米羊用戶', likeFail: '操作失敗，請重試',
+      anonymous: '方片用戶', likeFail: '操作失敗，請重試',
       badgeTip: '項目作者可把評分徽章掛進 README：',
       langLabel: { zh: '簡介', hk: '簡介', tw: '簡介', en: 'EN', ko: 'KO' }
     },
@@ -52,7 +52,7 @@
       reviewPending: '評價已提交，內容將在人工審核透過後公開顯示',
       loginToReview: '登入後就能打分和評價', loginToLike: '登入後可以按讚',
       ratings: '條評分', noRating: '暫無評分，來打第一個分',
-      anonymous: '米羊使用者', likeFail: '操作失敗，請重試',
+      anonymous: '方片使用者', likeFail: '操作失敗，請重試',
       badgeTip: '專案作者可把評分徽章掛進 README：',
       langLabel: { zh: '簡介', hk: '簡介', tw: '簡介', en: 'EN', ko: 'KO' }
     },

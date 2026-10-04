@@ -1,7 +1,7 @@
 /**
  * auth.js — xueai.miyang.cn 登录状态与登录 UI（home.html / learn.html 共用）
  *
- * 依赖后端 /auth/* 接口（米羊 OAuth）。
+ * 依赖后端 /auth/* 接口（方片 OAuth）。
  * 本地预览没有该接口时静默降级为「未登录」，不影响页面其他功能。
  *
  * 对外暴露 window.XueaiAuth：
@@ -9,7 +9,7 @@
  *   state        最近一次获取的登录状态
  *   isFree(file) 该课程文件是否免登录（每个篇章前 2 节，另有整章开放的篇章，
  *                见 FREE_ALL_PREFIXES；判定口径必须与服务端一致）
- *   openLoginModal(next) 弹出登录告知弹窗，确认后跳米羊登录
+ *   openLoginModal(next) 弹出登录告知弹窗，确认后跳方片登录
  *   mount(slotEl) 在指定节点渲染登录按钮或头像账号菜单
  */
 (function(){
@@ -22,12 +22,12 @@
   /* ── 三语字典 ── */
   var _T = {
     zh: {
-      defaultNickname:    '米羊用户',
+      defaultNickname:    '方片用户',
       loginBtn:           '登录',
       logoutBtn:          '退出',
-      userTitle:          '米羊个人中心 · AI 学习进展',
+      userTitle:          '方片个人中心 · AI 学习进展',
       accountLabel:       '账号菜单',
-      signedInLabel:      '已登录米羊账号',
+      signedInLabel:      '已登录方片账号',
       profileBtn:         '个人中心',
       /* 登录邀请弹窗 */
       heroTitle:          '全部免费',
@@ -70,19 +70,19 @@
       noticeHeading:      '郑重声明',
       noticePara1:        'xueai.miyang.cn 是免费公益的 AI 学习网站，全部内容<span class="xa-red">永久免费</span>。<br>本站从未授权任何机构或个人将站内内容用于收费课程、付费社群或任何形式的销售。',
       noticePara2a:       '如果你是在培训机构、付费课程或课包里拿到本网站的，说明你为免费内容付了钱。<br>请尽快向对方申请退款，并保留付款凭证。',
-      noticePara2b:       '你也可以访问米羊官网 ，或邮件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我们举报。</span>',
+      noticePara2b:       '你也可以访问方片官网 ，或邮件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我们举报。</span>',
       noticePara3:        '登录只用于同步学习进度、防止内容被恶意贩卖，不收取任何费用。<br>欢迎关注公众号「方片」，我们也会录制教学视频，免费开放给你学习！',
-      noticeVision:       '米羊科技的愿景，是让<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我们愿意做一件不那么聪明的事：把我们掌握的知识开源出来。<br>但开源精神，绝不是商业化倒卖的理由。',
+      noticeVision:       '方片科技的愿景，是让<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我们愿意做一件不那么聪明的事：把我们掌握的知识开源出来。<br>但开源精神，绝不是商业化倒卖的理由。',
       btnX:               '到 X 支持一下小山！',
       btnAck:             '我明白了！'
     },
     hk: {
-      defaultNickname:    '米羊用戶',
+      defaultNickname:    '方片用戶',
       loginBtn:           '登入',
       logoutBtn:          '退出',
-      userTitle:          '米羊個人中心 · AI 學習進展',
+      userTitle:          '方片個人中心 · AI 學習進展',
       accountLabel:       '帳號菜單',
-      signedInLabel:      '已登入米羊帳號',
+      signedInLabel:      '已登入方片帳號',
       profileBtn:         '個人中心',
       /* 登录邀请弹窗 */
       heroTitle:          '全部免費',
@@ -125,19 +125,19 @@
       noticeHeading:      '鄭重聲明',
       noticePara1:        'xueai.miyang.cn 是免費公益的 AI 學習網站，全部內容<span class="xa-red">永久免費</span>。<br>本站從未授權任何機構或個人將站內內容用於收費課程、付費社羣或任何形式的銷售。',
       noticePara2a:       '如果你是在培訓機構、付費課程或課包裏拿到本網站的，説明你為免費內容付了錢。<br>請儘快向對方申請退款，並保留付款憑證。',
-      noticePara2b:       '你也可以訪問米羊官網 ，或郵件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我們舉報。</span>',
+      noticePara2b:       '你也可以訪問方片官網 ，或郵件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我們舉報。</span>',
       noticePara3:        '登入只用於同步學習進度、防止內容被惡意販賣，不收取任何費用。<br>歡迎關注公眾號「方片」，我們也會錄製教學影片，免費開放給你學習！',
-      noticeVision:       '米羊科技的願景，是讓<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我們願意做一件不那麼聰明的事：把我們掌握的知識開源出來。<br>但開源精神，絕不是商業化倒賣的理由。',
+      noticeVision:       '方片科技的願景，是讓<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我們願意做一件不那麼聰明的事：把我們掌握的知識開源出來。<br>但開源精神，絕不是商業化倒賣的理由。',
       btnX:               '到 X 支持一下小山！',
       btnAck:             '我明白了！'
     },
     tw: {
-      defaultNickname:    '米羊用戶',
+      defaultNickname:    '方片用戶',
       loginBtn:           '登入',
       logoutBtn:          '登出',
-      userTitle:          '米羊個人中心 · AI 學習進展',
+      userTitle:          '方片個人中心 · AI 學習進展',
       accountLabel:       '帳號選單',
-      signedInLabel:      '已登入米羊帳號',
+      signedInLabel:      '已登入方片帳號',
       profileBtn:         '個人中心',
       /* 登录邀请弹窗 */
       heroTitle:          '全部免費',
@@ -180,9 +180,9 @@
       noticeHeading:      '鄭重聲明',
       noticePara1:        'xueai.miyang.cn 是免費公益的 AI 學習網站，全部內容<span class="xa-red">永久免費</span>。<br>本站從未授權任何機構或個人將站內內容用於收費課程、付費社群或任何形式的銷售。',
       noticePara2a:       '如果你是在培訓機構、付費課程或課包裡拿到本網站的，說明你為免費內容付了錢。<br>請儘快向對方申請退款，並保留付款憑證。',
-      noticePara2b:       '你也可以訪問米羊官網 ，或郵件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我們舉報。</span>',
+      noticePara2b:       '你也可以訪問方片官網 ，或郵件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我們舉報。</span>',
       noticePara3:        '登入只用於同步學習進度、防止內容被惡意販賣，不收取任何費用。<br>歡迎關注公眾號「方片」，我們也會錄製教學影片，免費開放給你學習！',
-      noticeVision:       '米羊科技的願景，是讓<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我們願意做一件不那麼聰明的事：把我們掌握的知識開源出來。<br>但開源精神，絕不是商業化倒賣的理由。',
+      noticeVision:       '方片科技的願景，是讓<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我們願意做一件不那麼聰明的事：把我們掌握的知識開源出來。<br>但開源精神，絕不是商業化倒賣的理由。',
       btnX:               '到 X 支持一下小山！',
       btnAck:             '我明白了！'
     },

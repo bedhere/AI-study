@@ -197,7 +197,7 @@
     ['hand-coins', '补贴要<strong>当天自己领</strong>，次日凌晨 4 点截止'],
     ['calendar-x', '断一天只作废当天，后面照常领；<strong>7 天全勤再加 700</strong>'],
     ['sunrise', '加入后<strong>今天就是第 1 天</strong>（每天凌晨 4 点刷新）'],
-    ['wallet', '米粒是<strong>米羊通用余额</strong>，旗下各应用通用；也能在 Cherry Studio 等客户端里调用 Alice 的模型'],
+    ['wallet', '米粒是<strong>方片通用余额</strong>，旗下各应用通用；也能在 Cherry Studio 等客户端里调用 Alice 的模型'],
     ['shield-alert', '为维护公平诚信的学习氛围，请保持真实学习。系统若检测到恶意刷课、多账号等作弊行为，将终止计划并限制账号。'],
   ].map(function (r) {
     var cls = r[0] === 'shield-alert' ? ' class="ch-rule--warn"' : '';
@@ -214,7 +214,7 @@
     ' 米粒，本金已经赚回来，之后全是净赚</span></div>' +
     '<ul class="ch-rules">' + rules + '</ul>' +
     '<button type="button" class="ch-cta"><img src="' + COIN + '" alt="">投入 800 米粒，开启伴学</button>' +
-    '<div class="ch-note">米粒从你的米羊账户扣除 · 每人仅可参加一次<br>这 800 米粒不仅能悉数返还，更是我们与你共同坚持、学有所得的约定</div>' +
+    '<div class="ch-note">米粒从你的方片账户扣除 · 每人仅可参加一次<br>这 800 米粒不仅能悉数返还，更是我们与你共同坚持、学有所得的约定</div>' +
     '</div>';
 
   /* ─── 5. 日历卡状态组合 ─── */
@@ -292,7 +292,7 @@
       '<b>' + total + '</b><span>米粒已到账</span></div>' +
       '<div class="ch-settle-days">' + days + '</div>' +
       '<button type="button" class="ch-cta ch-cta--gold">继续学习</button>' +
-      '<div class="ch-note">米粒是米羊通用余额，旗下各应用通用；也能在 Cherry Studio 等客户端里调用 Alice 的模型</div>' +
+      '<div class="ch-note">米粒是方片通用余额，旗下各应用通用；也能在 Cherry Studio 等客户端里调用 Alice 的模型</div>' +
       '</div>';
   }
   document.getElementById('demoSettles').innerHTML =
@@ -336,7 +336,7 @@
       bonusHtml +
       paybackHtml +
       '<button type="button" class="ch-cta ch-cta--gold ch-success-cta-btn">开心收下</button>' +
-      '<div class="ch-note">米粒是米羊通用余额，旗下各应用通用；也能在 Cherry Studio 等客户端里调用 Alice 的模型</div>' +
+      '<div class="ch-note">米粒是方片通用余额，旗下各应用通用；也能在 Cherry Studio 等客户端里调用 Alice 的模型</div>' +
       '</div>';
   }
 

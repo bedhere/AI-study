@@ -256,7 +256,7 @@ body{
   var ACCENT = '#4f7bff';
   var INDIGO = '#6366f1';
 
-  /* 米羊科技官方组合标（透明底 PNG，1400×322），加载完成后重绘补上 */
+  /* 方片科技官方组合标（透明底 PNG，1400×322），加载完成后重绘补上 */
   var MARK = new Image();
   MARK.src = 'assets/miyang-logo.png';
   MARK.onload = function(){ if(CERT) drawCert(CERT); };
@@ -335,7 +335,7 @@ body{
     ctx.textAlign = 'center';
     ctx.textBaseline = 'alphabetic';
 
-    /* 顶部品牌视觉：米羊科技官方组合标（M 标 + 米羊科技 / Miyang.AI） */
+    /* 顶部品牌视觉：方片科技官方组合标（M 标 + 方片科技 / Miyang.AI） */
     if(MARK.complete && MARK.naturalWidth){
       var logoH = 44, logoW = logoH * MARK.naturalWidth / MARK.naturalHeight;
       ctx.drawImage(MARK, W/2 - logoW/2, 80, logoW, logoH);
