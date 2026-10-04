@@ -69,7 +69,7 @@
       phoneLater: '先不参加',
       entryDq: '资格已取消', sDq: '已取消',
       dqTitle: '伴学资格已取消',
-      dqBody: '经核查存在刷课行为，伴学资格已取消。已投入的米粒不予退还，已领取的补贴不受影响。<br>如认为是误判，进交流群找洛小山申诉即可。',
+      dqBody: '经核查存在刷课行为，伴学资格已取消。已投入的米粒不予退还，已领取的补贴不受影响。<br>如认为是误判，进交流群找方片申诉即可。',
       dqWhy: '判定依据',
       dqAppeal: '我要申诉',
       settleFull: '全勤达成！',
@@ -140,7 +140,7 @@
       phoneLater: '先不參加',
       entryDq: '資格已取消', sDq: '已取消',
       dqTitle: '伴學資格已取消',
-      dqBody: '經核查存在刷課行為，伴學資格已取消。已投入嘅米粒唔退，已領取嘅補貼不受影響。<br>如果覺得係誤判，入交流羣搵洛小山申訴就得。',
+      dqBody: '經核查存在刷課行為，伴學資格已取消。已投入嘅米粒唔退，已領取嘅補貼不受影響。<br>如果覺得係誤判，入交流羣搵方片申訴就得。',
       dqWhy: '判定依據',
       dqAppeal: '我要申訴',
       settleFull: '全勤達成！',
@@ -211,7 +211,7 @@
       phoneLater: '先不參加',
       entryDq: '資格已取消', sDq: '已取消',
       dqTitle: '伴學資格已取消',
-      dqBody: '經核查存在刷課行為，伴學資格已取消。已投入的米粒不予退還，已領取的補貼不受影響。<br>如認為是誤判，進交流群找洛小山申訴即可。',
+      dqBody: '經核查存在刷課行為，伴學資格已取消。已投入的米粒不予退還，已領取的補貼不受影響。<br>如認為是誤判，進交流群找方片申訴即可。',
       dqWhy: '判定依據',
       dqAppeal: '我要申訴',
       settleFull: '全勤達成！',
@@ -278,7 +278,7 @@
       phoneLater: 'Maybe later',
       entryDq: 'Disqualified', sDq: 'DQ',
       dqTitle: 'Disqualified from the plan',
-      dqBody: 'A review found abusive lesson marking, so your place has been withdrawn. The stake is not refunded; subsidies already claimed are unaffected.<br>If you believe this is a mistake, reach Luo Xiaoshan via the community group to appeal.',
+      dqBody: 'A review found abusive lesson marking, so your place has been withdrawn. The stake is not refunded; subsidies already claimed are unaffected.<br>If you believe this is a mistake, reach Fangpian via the community group to appeal.',
       dqWhy: 'What the review found',
       dqAppeal: 'Appeal',
       settleFull: 'All 7 Days Done!',
@@ -345,7 +345,7 @@
       phoneLater: '나중에 할게요',
       entryDq: '자격 취소됨', sDq: '취소',
       dqTitle: '플랜 자격이 취소되었습니다',
-      dqBody: '확인 결과 어뷰징 행위가 있어 자격이 취소되었습니다. 투입한 미리는 반환되지 않으며, 이미 받은 보조금은 그대로 유지됩니다.<br>오판이라고 생각되면 커뮤니티 그룹에서 뤄샤오산에게 이의를 제기해 주세요.',
+      dqBody: '확인 결과 어뷰징 행위가 있어 자격이 취소되었습니다. 투입한 미리는 반환되지 않으며, 이미 받은 보조금은 그대로 유지됩니다.<br>오판이라고 생각되면 커뮤니티 그룹에서 팡피엔에게 이의를 제기해 주세요.',
       dqWhy: '판정 근거',
       dqAppeal: '이의 신청',
       settleFull: '개근 달성!',
@@ -669,7 +669,7 @@
     showOverlay(card);
     if (why) card.querySelector('#chDqWhy').textContent = why;
     card.querySelector('#chDqBtn').addEventListener('click', closeOverlay);
-    // 申诉走人不走客服：弹交流群/公众号二维码（auth.js 的现成模态框），进群找洛小山
+    // 申诉走人不走客服：弹交流群/公众号二维码（auth.js 的现成模态框），进群找方片
     card.querySelector('#chDqAppealBtn').addEventListener('click', function () {
       closeOverlay();
       if (window.XueaiAuth && window.XueaiAuth.openGroupModal) {

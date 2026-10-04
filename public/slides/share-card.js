@@ -27,7 +27,7 @@
   var CACHE_MAX = 5;             /* dataURL 只驻内存，长会话不无限堆 */
   var CHROME_H = 120;            /* 浮层里除预览外的固定高度（标题+提示+动作+内边距+描边） */
 
-  /* 海报底图是 Alice + 洛小山的邀请插画（暖奶油调），配色跟着它走，
+  /* 海报底图是 Alice + 方片的邀请插画（暖奶油调），配色跟着它走，
      而不是站点那套蓝渐变——渐变底的海报太冷静，也压不住插画。
      插画上 42% 是刻意留出的空白，文字全部叠在那里；左下角留给二维码。 */
   var INK = '#2c2620';           /* 标题墨色，比纯黑更贴插画的暖调 */
@@ -38,7 +38,7 @@
      toDataURL 直接抛 SecurityError。 */
   var ART = {
     logo: 'assets/fangpian/logo-yellow-square.webp',       /* 站点吉祥物小图标 */
-    art: 'assets/fangpian/tiger-reading-seated.webp'  /* Alice + 洛小山，上部大片留白 */
+    art: 'assets/fangpian/tiger-reading-seated.webp'  /* Alice + 方片，上部大片留白 */
   };
 
   /* 课程名沿用各语言页原有的分享文案，不取 course-data 里的标题——两者历史上就不一致，
@@ -382,7 +382,7 @@
       var W = POSTER_W, H = POSTER_H, PAD = 56;
       var innerW = W - PAD * 2;
 
-      /* 底图：Alice + 洛小山的邀请插画。按宽度铺满、底边对齐——插画是竖长的，
+      /* 底图：Alice + 方片的邀请插画。按宽度铺满、底边对齐——插画是竖长的，
          多出来的高度只能从顶上裁，那里本来就是留白，裁掉不心疼；反过来裁底边
          会把两个人的脚切了。插画没加载出来就退回纯色，版式不塌。 */
       ctx.fillStyle = PAPER;
@@ -468,48 +468,8 @@
         ctx.fillText(lines[i], PAD, y + Math.round(size * 0.86) + i * lineH);
       }
 
-      /* 左下角：二维码 + 引导语。插画把左下这块专门留空了，所以这里不需要
-         整条白卡去盖插画——只给二维码本身一张小白卡当静默区就够。 */
-      var qSize = 132, qPad = 11;
-      var qCardX = PAD, qCardY = H - 296;
-      var qCard = qSize + qPad * 2;
-
-      ctx.save();
-      ctx.shadowColor = 'rgba(88,70,40,0.16)';
-      ctx.shadowBlur = 18;
-      ctx.shadowOffsetY = 5;
-      roundRect(ctx, qCardX, qCardY, qCard, qCard, 14);
-      ctx.fillStyle = '#ffffff';
-      ctx.fill();
-      ctx.restore();
-
-      /* 二维码：qr.js 缺失或抛错就整块跳过，海报照出 */
-      try {
-        if (typeof window.qrcode === 'function') {
-          var q = window.qrcode(0, 'M');
-          q.addData(lessonUrl(lesson));
-          q.make();
-          var n = q.getModuleCount();
-          var cell = qSize / n;
-          /* 静默区由白卡的 11px 内边距提供，按 cell≈4px 算够 2.7 个模块；
-             加上海报本身是浅底，实测扫码稳定 */
-          ctx.fillStyle = '#1c1a17';
-          for (var r2 = 0; r2 < n; r2++) {
-            for (var c2 = 0; c2 < n; c2++) {
-              if (q.isDark(r2, c2)) {
-                ctx.fillRect(qCardX + qPad + c2 * cell, qCardY + qPad + r2 * cell,
-                  cell + 0.5, cell + 0.5);
-              }
-            }
-          }
-        }
-      } catch (e) {
-        if (window.console) console.warn('[share-card] 二维码生成失败，海报降级为无码版', e);
-      }
-
-      /* 引导语和落款都压在二维码正下方那条空白里。宽度只敢给到 44%——
-         再往右就是狐狸的靴子，英文文案本来就长，所以允许折成两行。 */
-      var footMax = W * 0.44, footY = qCardY + qCard + 38;
+      /* 底部引导语和品牌落款 */
+      var footMax = W * 0.44, footY = H - 118;
       ctx.fillStyle = INK;
       ctx.font = '800 ' + (KO ? 21 : 23) + 'px ' + FONT;
       var ctaLines = wrapLines(ctx, T.posterCta, footMax, lang, 2);

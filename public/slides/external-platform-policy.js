@@ -9,9 +9,9 @@
     if (host === 'alice.miyang.cn' || host === 'alice.fans') return true;
     if (host === 'watcha.cn' || host.endsWith('.watcha.cn')) return true;
     if (host === 'miyang.cn' || host === 'www.miyang.cn') return true;
-    if (host === 'luoxiaoshan.cn' || host === 'www.luoxiaoshan.cn') return true;
+    if (host === 'Fangpian.cn' || host === 'www.Fangpian.cn') return true;
     if (host === 'github.com' && pathname.indexOf('/itshen/learn-ai') === 0) return true;
-    if ((host === 'x.com' || host === 'twitter.com') && pathname.indexOf('/luoxiaoshan_ai') === 0) return true;
+    if ((host === 'x.com' || host === 'twitter.com') && pathname.indexOf('/Fangpian_ai') === 0) return true;
     return host === 'beian.miit.gov.cn';
   }
 

@@ -57,7 +57,7 @@
 .flow-label{font-size:12px;color:var(--sub);text-align:center;padding:8px 0;font-weight:600}
 </style>
 <meta name="description" content="深入理解 Workflow 和 Agent 的核心區別：什麼時候用預定義流程，什麼時候讓 LLM 自主決策。">
-<meta name="author" content="洛小山">
+<meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://xueai.miyang.cn/slides/10-1.tw.html">
 <link rel="alternate" hreflang="zh-CN" href="https://xueai.miyang.cn/slides/10-1.html">
@@ -74,7 +74,7 @@
 <meta property="og:image" content="https://xueai.miyang.cn/slides/og/10-1.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"Workflow vs Agent：先搞清楚你要什麼","name":"Workflow vs Agent：先搞清楚你要什麼","url":"https://xueai.miyang.cn/slides/10-1.tw.html","inLanguage":"zh-Hant-TW","author":{"@type":"Person","name":"洛小山"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"課程","educationalLevel":"入門到進階","isPartOf":{"@type":"Course","name":"AI 實戰課 · Agent 設計模式","url":"https://xueai.miyang.cn/slides/learn.html"},"isAccessibleForFree":true,"description":"深入理解 Workflow 和 Agent 的核心區別：什麼時候用預定義流程，什麼時候讓 LLM 自主決策。","datePublished":"2026-07-04","dateModified":"2026-08-27"}</script><meta property="og:description" content="深入理解 Workflow 和 Agent 的核心區別：什麼時候用預定義流程，什麼時候讓 LLM 自主決策。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
+<!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"Workflow vs Agent：先搞清楚你要什麼","name":"Workflow vs Agent：先搞清楚你要什麼","url":"https://xueai.miyang.cn/slides/10-1.tw.html","inLanguage":"zh-Hant-TW","author":{"@type":"Person","name":"方片"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"課程","educationalLevel":"入門到進階","isPartOf":{"@type":"Course","name":"AI 實戰課 · Agent 設計模式","url":"https://xueai.miyang.cn/slides/learn.html"},"isAccessibleForFree":true,"description":"深入理解 Workflow 和 Agent 的核心區別：什麼時候用預定義流程，什麼時候讓 LLM 自主決策。","datePublished":"2026-07-04","dateModified":"2026-08-27"}</script><meta property="og:description" content="深入理解 Workflow 和 Agent 的核心區別：什麼時候用預定義流程，什麼時候讓 LLM 自主決策。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

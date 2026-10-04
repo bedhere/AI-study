@@ -11,8 +11,8 @@ window.COURSE = {
     title: 'AI from Fundamentals to Mastery',
     subtitle: 'From LLM Fundamentals to AI Agent Harness',
     brand: 'Fangpian Academy',
-    author: 'Luo Xiaoshan (洛小山)',
-    authorUrl: 'https://luoxiaoshan.cn/',
+    author: 'Fangpian',
+    authorUrl: 'https://Fangpian.cn/',
     github: 'https://github.com/itshen/learn-ai',
   },
   parts: [

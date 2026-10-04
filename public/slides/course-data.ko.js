@@ -6,8 +6,8 @@ window.COURSE = {
     title: 'AI 입문부터 마스터까지',
     subtitle: '대규모 언어 모델 기초 원리부터 AI Agent Harness까지',
     brand: '팡피엔 아카데미',
-    author: '뤄샤오산(洛小山)',
-    authorUrl: 'https://luoxiaoshan.cn/',
+    author: '팡피엔',
+    authorUrl: 'https://Fangpian.cn/',
     github: 'https://github.com/itshen/learn-ai',
   },
   parts: [

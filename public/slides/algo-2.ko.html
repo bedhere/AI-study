@@ -10,7 +10,7 @@
 <!-- SEO Start -->
 <meta name="description" content="어텐션은 모든 Token이 모든 Token을 보게 합니다: 컨텍스트 길이를 끌면 계산량과 청구서가 제곱으로 치솟아요—긴 대화가 버벅이고 비싸지는 뿌리. 지난 레슨의 O(n²) 자로 LLM 본체를 재어 봅니다.">
 <meta name="keywords" content="어텐션 메커니즘,O(n²),컨텍스트 윈도우,긴 컨텍스트 비용,KV Cache,컨텍스트 압축,LLM 원리">
-<meta name="author" content="뤄샤오산(洛小山)">
+<meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://xueai.miyang.cn/slides/algo-2.ko.html">
 <link rel="alternate" hreflang="zh-CN" href="https://xueai.miyang.cn/slides/algo-2.html">
@@ -106,7 +106,7 @@
 }
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"컨텍스트가 길수록 왜 비쌀까? O(n²) 청구서","name":"컨텍스트가 길수록 왜 비쌀까? O(n²) 청구서","url":"https://xueai.miyang.cn/slides/algo-2.ko.html","inLanguage":"ko","author":{"@type":"Person","name":"뤄샤오산(洛小山)"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"강좌","educationalLevel":"입문~중급","isPartOf":{"@type":"Course","name":"AI 실전 강좌 · 복잡도: 이 코드, 쓸 만한가?","url":"https://xueai.miyang.cn/slides/learn.html"},"isAccessibleForFree":true,"description":"어텐션은 모든 Token이 모든 Token을 보게 합니다: 컨텍스트 길이를 끌면 계산량과 청구서가 제곱으로 치솟아요—긴 대화가 버벅이고 비싸지는 뿌리. 지난 레슨의 O(n²) 자로 LLM 본체를 재어 봅니다.","datePublished":"2026-08-10","dateModified":"2026-08-17"}</script><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
+<!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"컨텍스트가 길수록 왜 비쌀까? O(n²) 청구서","name":"컨텍스트가 길수록 왜 비쌀까? O(n²) 청구서","url":"https://xueai.miyang.cn/slides/algo-2.ko.html","inLanguage":"ko","author":{"@type":"Person","name":"팡피엔"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"강좌","educationalLevel":"입문~중급","isPartOf":{"@type":"Course","name":"AI 실전 강좌 · 복잡도: 이 코드, 쓸 만한가?","url":"https://xueai.miyang.cn/slides/learn.html"},"isAccessibleForFree":true,"description":"어텐션은 모든 Token이 모든 Token을 보게 합니다: 컨텍스트 길이를 끌면 계산량과 청구서가 제곱으로 치솟아요—긴 대화가 버벅이고 비싸지는 뿌리. 지난 레슨의 O(n²) 자로 LLM 본체를 재어 봅니다.","datePublished":"2026-08-10","dateModified":"2026-08-17"}</script><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

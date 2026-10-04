@@ -242,13 +242,13 @@
     {
       "file": "home.en.html",
       "category": "作者社交账号",
-      "href": "https://x.com/luoxiaoshan_ai",
-      "label": "X (Twitter) @luoxiaoshan_ai Click to open profile"
+      "href": "https://x.com/Fangpian_ai",
+      "label": "X (Twitter) @Fangpian_ai Click to open profile"
     },
     {
       "file": "home.en.html",
       "category": "作者个人网站",
-      "href": "https://luoxiaoshan.cn/",
+      "href": "https://Fangpian.cn/",
       "label": "About the Instructor"
     },
     {
@@ -314,13 +314,13 @@
     {
       "file": "home.hk.html",
       "category": "作者社交账号",
-      "href": "https://x.com/luoxiaoshan_ai",
-      "label": "推特 @luoxiaoshan_ai 點擊直達主頁"
+      "href": "https://x.com/Fangpian_ai",
+      "label": "推特 @Fangpian_ai 點擊直達主頁"
     },
     {
       "file": "home.hk.html",
       "category": "作者个人网站",
-      "href": "https://luoxiaoshan.cn/",
+      "href": "https://Fangpian.cn/",
       "label": "請教作者"
     },
     {
@@ -386,13 +386,13 @@
     {
       "file": "home.html",
       "category": "作者社交账号",
-      "href": "https://x.com/luoxiaoshan_ai",
-      "label": "推特 @luoxiaoshan_ai 点击直达主页"
+      "href": "https://x.com/Fangpian_ai",
+      "label": "推特 @Fangpian_ai 点击直达主页"
     },
     {
       "file": "home.html",
       "category": "作者个人网站",
-      "href": "https://luoxiaoshan.cn/",
+      "href": "https://Fangpian.cn/",
       "label": "请教作者"
     },
     {
@@ -452,13 +452,13 @@
     {
       "file": "home.ko.html",
       "category": "作者社交账号",
-      "href": "https://x.com/luoxiaoshan_ai",
-      "label": "X (트위터) @luoxiaoshan_ai 클릭하여 프로필로 이동"
+      "href": "https://x.com/Fangpian_ai",
+      "label": "X (트위터) @Fangpian_ai 클릭하여 프로필로 이동"
     },
     {
       "file": "home.ko.html",
       "category": "作者个人网站",
-      "href": "https://luoxiaoshan.cn/",
+      "href": "https://Fangpian.cn/",
       "label": "강사에게 문의"
     },
     {
@@ -524,13 +524,13 @@
     {
       "file": "home.tw.html",
       "category": "作者社交账号",
-      "href": "https://x.com/luoxiaoshan_ai",
-      "label": "推特 @luoxiaoshan_ai 點選直達主頁"
+      "href": "https://x.com/Fangpian_ai",
+      "label": "推特 @Fangpian_ai 點選直達主頁"
     },
     {
       "file": "home.tw.html",
       "category": "作者个人网站",
-      "href": "https://luoxiaoshan.cn/",
+      "href": "https://Fangpian.cn/",
       "label": "聯絡作者"
     },
     {
@@ -548,7 +548,7 @@
     {
       "file": "nav-inject.js",
       "category": "作者个人网站",
-      "href": "https://luoxiaoshan.cn/",
+      "href": "https://Fangpian.cn/",
       "label": "${I18N.t('askAuthor')}"
     }
   ]

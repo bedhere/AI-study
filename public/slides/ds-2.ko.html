@@ -10,7 +10,7 @@
 <!-- SEO Start -->
 <meta name="description" content="message list는 곧 배열이에요: 번호 달린 칸이 당신과 AI의 말 한마디를 어떻게 담는지, 컨텍스트 윈도우가 왜 「머리는 자르고 꼬리는 남긴다」인지, 오래 채팅하면 왜 까먹는지. 배열 가운데에 직접 데이터를 하나 꽂아 보고, 오른쪽이 몇 번 이사해야 하는지 세어 보세요——대화 이력이 왜 뒤로만 자라는지 바로 이해돼요.">
 <meta name="keywords" content="배열이란,message list,컨텍스트 윈도우,컨텍스트 절단,배열 삽입,append-only,자료구조 배열,입문 자료구조">
-<meta name="author" content="뤄샤오산(洛小山)">
+<meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://xueai.miyang.cn/slides/ds-2.ko.html">
 <link rel="alternate" hreflang="zh-CN" href="https://xueai.miyang.cn/slides/ds-2.html">
@@ -110,7 +110,7 @@
 }
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"배열: 당신이 나눈 말 한마디가 그 안에 있어요","name":"배열: 당신이 나눈 말 한마디가 그 안에 있어요","url":"https://xueai.miyang.cn/slides/ds-2.ko.html","inLanguage":"ko","author":{"@type":"Person","name":"뤄샤오산(洛小山)"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"강좌","educationalLevel":"입문부터 심화까지","isPartOf":{"@type":"Course","name":"AI 실전 강좌 · 선형 구조: 매일 쓰는 것들","url":"https://xueai.miyang.cn/slides/learn.html"},"isAccessibleForFree":true,"description":"message list는 곧 배열이에요: 번호 달린 칸이 당신과 AI의 말 한마디를 어떻게 담는지, 컨텍스트 윈도우가 왜 「머리는 자르고 꼬리는 남긴다」인지, 오래 채팅하면 왜 까먹는지. 배열 가운데에 직접 데이터를 하나 꽂아 보고, 오른쪽이 몇 번 이사해야 하는지 세어 보세요——대화 이력이 왜 뒤로만 자라는지 바로 이해돼요.","datePublished":"2026-08-10","dateModified":"2026-08-17"}</script><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
+<!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"배열: 당신이 나눈 말 한마디가 그 안에 있어요","name":"배열: 당신이 나눈 말 한마디가 그 안에 있어요","url":"https://xueai.miyang.cn/slides/ds-2.ko.html","inLanguage":"ko","author":{"@type":"Person","name":"팡피엔"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"강좌","educationalLevel":"입문부터 심화까지","isPartOf":{"@type":"Course","name":"AI 실전 강좌 · 선형 구조: 매일 쓰는 것들","url":"https://xueai.miyang.cn/slides/learn.html"},"isAccessibleForFree":true,"description":"message list는 곧 배열이에요: 번호 달린 칸이 당신과 AI의 말 한마디를 어떻게 담는지, 컨텍스트 윈도우가 왜 「머리는 자르고 꼬리는 남긴다」인지, 오래 채팅하면 왜 까먹는지. 배열 가운데에 직접 데이터를 하나 꽂아 보고, 오른쪽이 몇 번 이사해야 하는지 세어 보세요——대화 이력이 왜 뒤로만 자라는지 바로 이해돼요.","datePublished":"2026-08-10","dateModified":"2026-08-17"}</script><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

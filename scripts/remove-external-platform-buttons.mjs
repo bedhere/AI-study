@@ -26,9 +26,9 @@ function categoryFor(rawHref) {
   if (host === 'alice.miyang.cn' || host === 'alice.fans') return 'Alice 推广与下载';
   if (host === 'watcha.cn' || host.endsWith('.watcha.cn')) return '观猹评分与评价';
   if (host === 'miyang.cn' || host === 'www.miyang.cn') return '米羊账号与官网';
-  if (host === 'luoxiaoshan.cn' || host === 'www.luoxiaoshan.cn') return '作者个人网站';
+  if (host === 'Fangpian.cn' || host === 'www.Fangpian.cn') return '作者个人网站';
   if (host === 'github.com' && pathname.startsWith('/itshen/learn-ai')) return 'GitHub 项目';
-  if ((host === 'x.com' || host === 'twitter.com') && pathname.startsWith('/luoxiaoshan_ai')) return '作者社交账号';
+  if ((host === 'x.com' || host === 'twitter.com') && pathname.startsWith('/Fangpian_ai')) return '作者社交账号';
   if (host === 'beian.miit.gov.cn') return '备案网站';
   return null;
 }

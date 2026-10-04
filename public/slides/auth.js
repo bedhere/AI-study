@@ -57,10 +57,10 @@
       chan0Desc:          '微信扫码入群<br>聊课程与 AI 实战',
       chan0Alt:           '方片学堂 交流群二维码',
       chan1Name:          '公众号',
-      chan1Desc:          '洛小山<br>文章与课程更新',
-      chan1Alt:           '洛小山公众号二维码',
+      chan1Desc:          '方片<br>文章与课程更新',
+      chan1Alt:           '方片公众号二维码',
       chan2Name:          '推特',
-      chan2Desc:          '@luoxiaoshan_ai<br>点击直达主页',
+      chan2Desc:          '@Fangpian_ai<br>点击直达主页',
       chan2Alt:           'X 主页二维码',
       btnClose:           '关闭',
       /* 郑重声明弹窗 */
@@ -71,7 +71,7 @@
       noticePara1:        'xueai.miyang.cn 是免费公益的 AI 学习网站，全部内容<span class="xa-red">永久免费</span>。<br>本站从未授权任何机构或个人将站内内容用于收费课程、付费社群或任何形式的销售。',
       noticePara2a:       '如果你是在培训机构、付费课程或课包里拿到本网站的，说明你为免费内容付了钱。<br>请尽快向对方申请退款，并保留付款凭证。',
       noticePara2b:       '你也可以访问米羊官网 ，或邮件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我们举报。</span>',
-      noticePara3:        '登录只用于同步学习进度、防止内容被恶意贩卖，不收取任何费用。<br>欢迎关注公众号「洛小山」，我们也会录制教学视频，免费开放给你学习！',
+      noticePara3:        '登录只用于同步学习进度、防止内容被恶意贩卖，不收取任何费用。<br>欢迎关注公众号「方片」，我们也会录制教学视频，免费开放给你学习！',
       noticeVision:       '米羊科技的愿景，是让<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我们愿意做一件不那么聪明的事：把我们掌握的知识开源出来。<br>但开源精神，绝不是商业化倒卖的理由。',
       btnX:               '到 X 支持一下小山！',
       btnAck:             '我明白了！'
@@ -112,10 +112,10 @@
       chan0Desc:          '微信掃碼入羣<br>聊課程與 AI 實戰',
       chan0Alt:           '方片學堂 交流羣QR Code',
       chan1Name:          '公眾號',
-      chan1Desc:          '洛小山<br>文章與課程更新',
-      chan1Alt:           '洛小山公眾號QR Code',
+      chan1Desc:          '方片<br>文章與課程更新',
+      chan1Alt:           '方片公眾號QR Code',
       chan2Name:          '推特',
-      chan2Desc:          '@luoxiaoshan_ai<br>按一下直達主頁',
+      chan2Desc:          '@Fangpian_ai<br>按一下直達主頁',
       chan2Alt:           'X 主頁QR Code',
       btnClose:           '關閉',
       /* 郑重声明弹窗 */
@@ -126,7 +126,7 @@
       noticePara1:        'xueai.miyang.cn 是免費公益的 AI 學習網站，全部內容<span class="xa-red">永久免費</span>。<br>本站從未授權任何機構或個人將站內內容用於收費課程、付費社羣或任何形式的銷售。',
       noticePara2a:       '如果你是在培訓機構、付費課程或課包裏拿到本網站的，説明你為免費內容付了錢。<br>請儘快向對方申請退款，並保留付款憑證。',
       noticePara2b:       '你也可以訪問米羊官網 ，或郵件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我們舉報。</span>',
-      noticePara3:        '登入只用於同步學習進度、防止內容被惡意販賣，不收取任何費用。<br>歡迎關注公眾號「洛小山」，我們也會錄製教學影片，免費開放給你學習！',
+      noticePara3:        '登入只用於同步學習進度、防止內容被惡意販賣，不收取任何費用。<br>歡迎關注公眾號「方片」，我們也會錄製教學影片，免費開放給你學習！',
       noticeVision:       '米羊科技的願景，是讓<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我們願意做一件不那麼聰明的事：把我們掌握的知識開源出來。<br>但開源精神，絕不是商業化倒賣的理由。',
       btnX:               '到 X 支持一下小山！',
       btnAck:             '我明白了！'
@@ -167,10 +167,10 @@
       chan0Desc:          '微信掃碼入群<br>聊課程與 AI 實戰',
       chan0Alt:           '方片學堂 交流群二維碼',
       chan1Name:          '公眾號',
-      chan1Desc:          '洛小山<br>文章與課程更新',
-      chan1Alt:           '洛小山公眾號二維碼',
+      chan1Desc:          '方片<br>文章與課程更新',
+      chan1Alt:           '方片公眾號二維碼',
       chan2Name:          '推特',
-      chan2Desc:          '@luoxiaoshan_ai<br>點選直達主頁',
+      chan2Desc:          '@Fangpian_ai<br>點選直達主頁',
       chan2Alt:           'X 主頁二維碼',
       btnClose:           '關閉',
       /* 郑重声明弹窗 */
@@ -181,7 +181,7 @@
       noticePara1:        'xueai.miyang.cn 是免費公益的 AI 學習網站，全部內容<span class="xa-red">永久免費</span>。<br>本站從未授權任何機構或個人將站內內容用於收費課程、付費社群或任何形式的銷售。',
       noticePara2a:       '如果你是在培訓機構、付費課程或課包裡拿到本網站的，說明你為免費內容付了錢。<br>請儘快向對方申請退款，並保留付款憑證。',
       noticePara2b:       '你也可以訪問米羊官網 ，或郵件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我們舉報。</span>',
-      noticePara3:        '登入只用於同步學習進度、防止內容被惡意販賣，不收取任何費用。<br>歡迎關注公眾號「洛小山」，我們也會錄製教學影片，免費開放給你學習！',
+      noticePara3:        '登入只用於同步學習進度、防止內容被惡意販賣，不收取任何費用。<br>歡迎關注公眾號「方片」，我們也會錄製教學影片，免費開放給你學習！',
       noticeVision:       '米羊科技的願景，是讓<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我們願意做一件不那麼聰明的事：把我們掌握的知識開源出來。<br>但開源精神，絕不是商業化倒賣的理由。',
       btnX:               '到 X 支持一下小山！',
       btnAck:             '我明白了！'
@@ -219,10 +219,10 @@
       chan0Desc:          'Scan with WeChat to join<br>Discuss courses & AI practice',
       chan0Alt:           'Fangpian Academy study group QR code',
       chan1Name:          'WeChat Official Account',
-      chan1Desc:          'Luo Xiaoshan<br>Articles & course updates',
-      chan1Alt:           'Luo Xiaoshan WeChat Official Account QR code',
+      chan1Desc:          'Fangpian<br>Articles & course updates',
+      chan1Alt:           'Fangpian WeChat Official Account QR code',
       chan2Name:          'X (Twitter)',
-      chan2Desc:          '@luoxiaoshan_ai<br>Click to visit profile',
+      chan2Desc:          '@Fangpian_ai<br>Click to visit profile',
       chan2Alt:           'X profile QR code',
       btnClose:           'Close',
       noticeAriaLabel:    'Important Notice',
@@ -232,9 +232,9 @@
       noticePara1:        'xueai.miyang.cn is a free, public-benefit AI learning site. All content is <span class="xa-red">permanently free</span>.<br>Miyang has never authorized any individual or organization to resell the content here in paid courses, paid communities, or any other commercial form.',
       noticePara2a:       'If you received this site through a training program, paid course, or course bundle, you paid for something that should be free.<br>Please request a refund immediately and keep your payment records.',
       noticePara2b:       'You can also visit the Miyang website at  or email <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">to report the issue.</span>',
-      noticePara3:        'Login is only used to sync your learning progress and prevent content from being resold. We charge nothing.<br>Follow "Luo Xiaoshan" on WeChat Official Account — we also publish free tutorial videos there!',
+      noticePara3:        'Login is only used to sync your learning progress and prevent content from being resold. We charge nothing.<br>Follow "Fangpian" on WeChat Official Account — we also publish free tutorial videos there!',
       noticeVision:       'Miyang\'s mission is to <span class="xa-red">make AI accessible to more people</span>.<br>We choose to open-source what we know, even if it\'s not the smartest business move.<br>But open source is never a license for commercial resale.',
-      btnX:               'Support Luo Xiaoshan on X!',
+      btnX:               'Support Fangpian on X!',
       btnAck:             'Got it!'
     },
     ko: {
@@ -270,10 +270,10 @@
       chan0Desc:          '위챗으로 스캔하여 참여<br>강의와 AI 실전 토론',
       chan0Alt:           '팡피엔 아카데미 스터디 그룹 QR코드',
       chan1Name:          '위챗 공식 계정',
-      chan1Desc:          '뤄샤오산<br>아티클 및 강의 업데이트',
-      chan1Alt:           '뤄샤오산 위챗 공식 계정 QR코드',
+      chan1Desc:          '팡피엔<br>아티클 및 강의 업데이트',
+      chan1Alt:           '팡피엔 위챗 공식 계정 QR코드',
       chan2Name:          'X (트위터)',
-      chan2Desc:          '@luoxiaoshan_ai<br>클릭하여 프로필 방문',
+      chan2Desc:          '@Fangpian_ai<br>클릭하여 프로필 방문',
       chan2Alt:           'X 프로필 QR코드',
       btnClose:           '닫기',
       noticeAriaLabel:    '중요 공지',
@@ -283,9 +283,9 @@
       noticePara1:        'xueai.miyang.cn은 무료 공익 AI 학습 사이트로, 모든 콘텐츠는 <span class="xa-red">영구 무료</span>입니다.<br>미양은 어떠한 기관이나 개인에게도 사이트 콘텐츠를 유료 강의, 유료 커뮤니티 또는 기타 상업적 형태로 판매하도록 허가한 적이 없습니다.',
       noticePara2a:       '교육 기관, 유료 강의 또는 강의 패키지를 통해 이 사이트를 접하셨다면, 무료 콘텐츠에 비용을 지불하신 것입니다.<br>즉시 환불을 요청하시고 결제 증빙을 보관하시기 바랍니다.',
       noticePara2b:       '미양 공식 웹사이트 을 방문하시거나, <a href="mailto:connect@miyang.cn">connect@miyang.cn</a>으로 이메일을 보내 <span class="xa-nb">신고하실 수 있습니다.</span>',
-      noticePara3:        '로그인은 학습 진도 동기화와 콘텐츠 무단 판매 방지를 위한 것으로, 어떠한 비용도 청구하지 않습니다.<br>위챗 공식 계정 「뤄샤오산」을 팔로우하세요. 무료 강의 영상도 제공합니다!',
+      noticePara3:        '로그인은 학습 진도 동기화와 콘텐츠 무단 판매 방지를 위한 것으로, 어떠한 비용도 청구하지 않습니다.<br>위챗 공식 계정 「팡피엔」을 팔로우하세요. 무료 강의 영상도 제공합니다!',
       noticeVision:       '미양의 비전은 <span class="xa-red">더 많은 사람들이 AI의 편리함을 누리는 것</span>입니다.<br>우리가 알고 있는 지식을 오픈소스로 공개하는 일을 기꺼이 합니다.<br>하지만 오픈소스 정신은 결코 상업적 재판매의 구실이 될 수 없습니다.',
-      btnX:               'X에서 뤄샤오산 응원하기!',
+      btnX:               'X에서 팡피엔 응원하기!',
       btnAck:             '알겠습니다!'
     }
   };
@@ -304,7 +304,7 @@
   var GROUP_QR = 'assets/group-qrcode.png?v=20260817a';
   var GZH_QR = 'assets/qrcode.jpg';
   var X_QR = 'assets/x-qrcode.png';
-  var X_URL = 'https://x.com/luoxiaoshan_ai';
+  var X_URL = 'https://x.com/Fangpian_ai';
   var X_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
     + '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68'
     + 'l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>';

@@ -77,7 +77,7 @@ window.XUEAI_REVIEWS = [
     "nickname": "White_hat@9808",
     "avatar": "assets/reviews/10090550.webp",
     "upvotes": 8,
-    "content": "免费AI系统课，从大模型原理到Coding Agent全链路。\n洛小山主讲，六大篇章覆盖35主题、148个交互知识点加88个交互演示，边学边动手。深入开源Agent源码（Grok Build Rust），不是浮于表面。课程完全免费，诚意十足。\n不足：后半部分需要一定编程基础，emoji装饰稍多，缺少学习社区氛围。\n结论：产品经理/转型者/独立开发者系统学AI的最佳免费入口。",
+    "content": "免费AI系统课，从大模型原理到Coding Agent全链路。\n方片主讲，六大篇章覆盖35主题、148个交互知识点加88个交互演示，边学边动手。深入开源Agent源码（Grok Build Rust），不是浮于表面。课程完全免费，诚意十足。\n不足：后半部分需要一定编程基础，emoji装饰稍多，缺少学习社区氛围。\n结论：产品经理/转型者/独立开发者系统学AI的最佳免费入口。",
     "review_url": "https://watcha.cn/reply/27455",
     "created_at": "2026-08-12T01:27:48.968Z"
   },

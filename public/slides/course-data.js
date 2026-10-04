@@ -11,8 +11,8 @@ window.COURSE = {
     title: '学 AI 产品，从入门到精通',
     subtitle: '从大模型底层原理到 AI Agent Harness',
     brand: '方片学堂',
-    author: '洛小山',
-    authorUrl: 'https://luoxiaoshan.cn/',
+    author: '方片',
+    authorUrl: 'https://Fangpian.cn/',
     github: 'https://github.com/itshen/learn-ai',
   },
   parts: [
