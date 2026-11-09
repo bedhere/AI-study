@@ -61,7 +61,7 @@ test('every result has a local tiger image and all homepage entries point at the
   for(const suffix of ['','.en','.ko','.tw','.hk']){
     const home=fs.readFileSync('public/slides/home'+suffix+'.html','utf8');
     assert.equal((home.match(/id="tigerTestEntry"/g)||[]).length,1);
-    assert.ok(/id="tigerTestEntry" href="personality.html"/.test(home));
+    assert.ok(/id="tigerTestEntry" href="aiti.html"/.test(home));
     assert.ok(!/href=["'](?:\/slides)?\/jd/.test(home));
   }
 });

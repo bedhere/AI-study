@@ -1,0 +1,181 @@
+{
+  "reference": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/",
+  "assets": [
+    {
+      "id": "01",
+      "name": "赛博诸葛",
+      "referenceKey": "0000",
+      "file": "01_赛博诸葛.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/01_赛博诸葛.png",
+      "bytes": 759247,
+      "sha256": "c3968f2b461343548d99dc70f6ecb00732cb99bb55653dd23cde4886370f492e",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "02",
+      "name": "Prompt法师",
+      "referenceKey": "0100",
+      "file": "02_Prompt法师.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/02_Prompt法师.png",
+      "bytes": 891344,
+      "sha256": "30158dcd9f91671406d5e17ebc5b7ab65c90508652a7b39f351854db54457400",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "03",
+      "name": "AI炼金术士",
+      "referenceKey": "0110",
+      "file": "03_AI炼金术士.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/03_AI炼金术士.png",
+      "bytes": 731315,
+      "sha256": "f0613eb41fdb12a6872ad3809c447f9c56da7cd8ad1c2953a435ce1c71c0e035",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "04",
+      "name": "人机搭子王",
+      "referenceKey": "1011",
+      "file": "04_人机搭子王.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/04_人机搭子王.png",
+      "bytes": 676234,
+      "sha256": "bb48d6daa45d5279681213cd6e899f76907a931f0129a87082c586a8ddd1aa03",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "05",
+      "name": "脑洞永动机",
+      "referenceKey": "0111",
+      "file": "05_脑洞永动机.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/05_脑洞永动机.png",
+      "bytes": 789551,
+      "sha256": "42514b8afafbecd5e893efd3bc60b59eed0be1d17b369f5dd38e209e8589002a",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "06",
+      "name": "数字鲁班",
+      "referenceKey": "0011",
+      "file": "06_数字鲁班.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/06_数字鲁班.png",
+      "bytes": 735265,
+      "sha256": "735cf6b5f013dded3096cfc11c31a1408ef67cb3f2bd29da78a658932ad2996a",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "07",
+      "name": "AI开荒者",
+      "referenceKey": "1110",
+      "file": "07_AI开荒者.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/07_AI开荒者.png",
+      "bytes": 625610,
+      "sha256": "38318cef61011cba5fa2f3695db9eba28cd022cedca77c5980daf52b8a9ea4b8",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "08",
+      "name": "善意放大器",
+      "referenceKey": "1001",
+      "file": "08_善意放大器.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/08_善意放大器.png",
+      "bytes": 655408,
+      "sha256": "150ea16cdbd55d1cfdb93517bab2ac074382526fcb60ecbf6672deb3de1c3b98",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "09",
+      "name": "反幻觉侦探",
+      "referenceKey": "0010",
+      "file": "09_反幻觉侦探.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/09_反幻觉侦探.png",
+      "bytes": 750765,
+      "sha256": "f0004dc711c3d56c2dec88d50eb530a3f46f29121fbb680ba7406241bbb34309",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "10",
+      "name": "效率开挂虎",
+      "referenceKey": "1100",
+      "file": "10_效率开挂虎.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/10_效率开挂虎.png",
+      "bytes": 782888,
+      "sha256": "0098716a32ccf4ceefd2c91f43513a0ee97d7ff952f4287be00e23d0e8dd513f",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "11",
+      "name": "灵感捕手",
+      "referenceKey": "1101",
+      "file": "11_灵感捕手.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/11_灵感捕手.png",
+      "bytes": 663390,
+      "sha256": "660f46355b2e409a23fded96109361c9df576c3cc51927884ac76ae558f27d4a",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "12",
+      "name": "共创带飞王",
+      "referenceKey": "0101",
+      "file": "12_共创带飞王.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/12_共创带飞王.png",
+      "bytes": 766670,
+      "sha256": "2fe41f34a8cdf3dda4f815b17e5672d4f8f2c5c450ae0355d01fa3351b7b06a4",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "13",
+      "name": "AI清醒派",
+      "referenceKey": "0001",
+      "file": "13_AI清醒派.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/13_AI清醒派.png",
+      "bytes": 737931,
+      "sha256": "24e629a62594fd1e311cfd6a85955b66c1268bb983163f36545ccc643cd59423",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "14",
+      "name": "疯狂进化虎",
+      "referenceKey": "1111",
+      "file": "14_疯狂进化虎.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/14_疯狂进化虎.png",
+      "bytes": 737382,
+      "sha256": "4d48375f87707dc9f80c128047b5f0eda06f89f58d96fa0e2e4fa24c6a3eb854",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "15",
+      "name": "靠谱输出机",
+      "referenceKey": "1010",
+      "file": "15_靠谱输出机.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/15_靠谱输出机.png",
+      "bytes": 792188,
+      "sha256": "8705d1cdd7d987f4c8712627d5e684ad62069f32ba710075616bec60df04d962",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "16",
+      "name": "长期主义虎",
+      "referenceKey": "1000",
+      "file": "16_长期主义虎.png",
+      "source": "https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/assets/16_长期主义虎.png",
+      "bytes": 740623,
+      "sha256": "94f4ae7c95e4d6b78d1a82f8c663cb99a57c0835e48fe28d88097a2cff093615",
+      "width": 768,
+      "height": 768
+    }
+  ]
+}

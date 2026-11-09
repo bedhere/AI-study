@@ -7,3 +7,4 @@
 - `public/slides/assets/fangpian/` 中的方片标识和老虎图来自用户提供的素材库，单独归类为公司品牌素材；该记录不改变素材原有权利归属。
 - 删除原站广告、评价和联系方式不等于删除源码来源记录，也不意味着原作者的项目经历、公司资质属于方片新媒体。
 - 方片虎格测试的题目与报告为独立编写，参考 IPIP 公共领域题项的主题、MBTI 四维偏好及 DISC 模型定义。未复制官方付费题库，也未采用带非商业限制的 OEJTS 题目。来源、授权链接和自定义计分边界见 `docs/personality-tests.md`。
+- 后续 AITI 版本使用用户提供的 16 道正式题目与人格设定。`public/slides/assets/aiti/` 的 16 张 PNG 按用户明确选择，来自其指定的参考项目 `https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/`，沿用原始配色。逐图来源、字节数和 SHA-256 保存在该目录的 `manifest.json`；该记录不改变原图的权利归属。

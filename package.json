@@ -18,7 +18,7 @@
     "build:search": "node scripts/build-search-index.mjs",
     "check:resources": "python scripts/check-local-resources.py",
     "pretest": "node scripts/build-search-index.mjs",
-    "test": "node --test tests/local-learning.test.mjs tests/personality.test.mjs"
+    "test": "node --test tests/local-learning.test.mjs tests/personality.test.mjs tests/aiti.test.mjs"
   },
   "dependencies": {
     "react": "19.2.6",

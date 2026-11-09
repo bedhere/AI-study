@@ -68,6 +68,15 @@
       var blob=await new Promise(function(resolve){c.toBlob(resolve,'image/png');});if(!blob)throw Error('Canvas export failed');var url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='方片虎格-'+result.profile.name+'-'+result.kind+'.png';a.click();setTimeout(function(){URL.revokeObjectURL(url);},60000);status.textContent='虎格卡已生成，请在浏览器下载列表查看。';
     }catch(error){status.textContent='图片生成失败，请稍后重试。你也可以使用浏览器截图保存当前名片。';}finally{b.disabled=false;}
   }
-  function render(){var route=location.hash.replace(/^#/,'');if(route==='mbti'||route==='disc')renderQuiz(route);else if(route==='mbti-result'||route==='disc-result')renderResult(route.split('-')[0]);else renderHub();focusMain();}
+  function render(){
+    var route=location.hash.replace(/^#/,'');
+    if(document.body.dataset.test==='disc'){
+      if(route==='disc-result')renderResult('disc');else renderQuiz('disc');
+      var back=document.getElementById('backHub');if(back){back.textContent='‹ 返回方片 AITI';back.onclick=function(){location.href='aiti.html';};}
+      var other=document.getElementById('otherTest');if(other){other.textContent='返回方片 AITI';other.onclick=function(){location.href='aiti.html';};}
+      focusMain();return;
+    }
+    if(route==='mbti'||route==='disc')renderQuiz(route);else if(route==='mbti-result'||route==='disc-result')renderResult(route.split('-')[0]);else renderHub();focusMain();
+  }
   window.addEventListener('hashchange',render);render();
 })();
