@@ -1185,10 +1185,7 @@ footer a:hover{color:var(--text-h);}
     </a>
     <div class="nav-spacer"></div>
 
-    <a class="nl nl-ico" href="elder.tw.html" target="_top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-      爸媽版
-    </a>
+
 
 
 
@@ -1602,7 +1599,7 @@ a.contrib-item:hover .contrib-name{color:var(--text-h);}
       <div class="glow-final"></div>
 
       <h2>準備好了嗎？現在就開始</h2>
-      <p>全部課程免費，每章前兩節直接看，登入方片帳號即可解鎖全部內容。</p>
+      <p>无需登录即可学习，进度保存在当前浏览器。</p>
       <div class="hero-cta">
         <a class="btn-primary" href="learn.tw.html" target="_top"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>進入課程</a>
         <a class="btn-outline" href="#topics" target="_top">瀏覽全部主題</a>
@@ -1613,50 +1610,12 @@ a.contrib-item:hover .contrib-name{color:var(--text-h);}
 <footer class="footer"><div class="wrap">方片新媒体 · 方片学堂</div></footer>
 
 <script src="course-data.tw.js?v=20260903a"></script>
+<script src="local-learning.js?v=2"></script>
 <script src="auth.js?v=20260903a"></script>
 
 
 <script>
-(function(){
-  if(!window.XueaiAuth) return;
-  window.XueaiAuth.mount(document.getElementById('authSlot'));
-
-  /* 首页主 CTA：
-     未登录 → 保持「从第一章开始」，点击弹登录说明（先看看 / 立即登录）；
-     已登录 → 变为「从上次离开的地方开始」，直达上次学习的课程。 */
-  var btn = document.getElementById('heroStart');
-  var txt = document.getElementById('heroStartTxt');
-  if(!btn) return;
-
-  function localLast(){
-    try{
-      return (JSON.parse(localStorage.getItem('ai_course_progress_v1')||'{}').__last) || '';
-    }catch(e){ return ''; }
-  }
-
-  window.XueaiAuth.ready.then(function(state){
-    if(state.loggedIn){
-      var apply = function(last){
-        if(last){
-          txt.textContent = '從上次離開的地方開始';
-          btn.href = 'learn.tw.html#' + encodeURIComponent(last);
-        }
-      };
-      apply(localLast());
-      fetch('/auth/progress', {credentials:'same-origin'})
-        .then(function(r){ return r.json(); })
-        .then(function(d){
-          if(d && d.ok && d.progress && d.progress.__last) apply(d.progress.__last);
-        })
-        .catch(function(){});
-    }else{
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        window.XueaiAuth.openLoginModal('/slides/learn.tw.html', {browseHref:'learn.tw.html'});
-      });
-    }
-  });
-})();
+/* Original remote service retired in local mode. */
 (function(){
   var btn = document.getElementById('themeBtn');
   if(btn){
@@ -1786,7 +1745,7 @@ a.contrib-item:hover .contrib-name{color:var(--text-h);}
   var sortStatus = document.getElementById('topicSortStatus');
   var popularState = 'loading';
   var popularLessons = {};
-  var currentMode = 'popular';
+  var currentMode = 'course';
   var topics = [];
 
   window.COURSE.parts.forEach(function(part){
@@ -1801,98 +1760,7 @@ a.contrib-item:hover .contrib-name{color:var(--text-h);}
      篇章名按索引取本页 COURSE.parts，
      跟随页面语言；结构对不上（如数据版本错位）时回退接口里的名字。
      接口失败或还没有任何学习数据时整块不展示 */
-  (function(){
-    if(!window.fetch) return;
-    fetch('/auth/stats').then(function(r){ return r.json(); }).then(function(d){
-      if(!d || !d.ok || !d.parts || !d.parts.length) return;
-      var hasData = d.completed > 0;
-      d.parts.forEach(function(p){ if(p.percent > 0) hasData = true; });
-      if(!hasData) return;
-      document.getElementById('csCompleted').textContent = d.completed;
-      if(!d.completed){
-        document.getElementById('csCap').textContent = '第一張證書還虛位以待，可能就是你';
-      }
-      var localParts = (window.COURSE && window.COURSE.parts) || [];
-      var useLocal = localParts.length === d.parts.length;
-      var max = 1;
-      d.parts.forEach(function(p){ if(p.percent > max) max = p.percent; });
-      var bars = document.getElementById('csBars');
-      d.parts.forEach(function(p, i){
-        var lp = useLocal ? localParts[i] : null;
-        var row = document.createElement('div');
-        row.className = 'cs-row';
-        var name = document.createElement('span');
-        name.className = 'cs-name';
-        name.textContent = (lp && lp.num) || p.num || p.title;
-        name.title = (lp && lp.title) || p.title;
-        var track = document.createElement('div');
-        track.className = 'cs-track';
-        var fill = document.createElement('i');
-        fill.style.width = (p.percent ? Math.max(p.percent / max * 100, 2) : 0) + '%';
-        track.appendChild(fill);
-        var n = document.createElement('b');
-        n.className = 'cs-n';
-        n.textContent = p.percent + '%';
-        row.appendChild(name); row.appendChild(track); row.appendChild(n);
-        bars.appendChild(row);
-      });
-      document.getElementById('certStats').hidden = false;
-      renderHonors(d.honors);
-    }).catch(function(){});
-
-    /* 荣誉榜：昵称一律 textContent 落地，上游数据不进 HTML。
-       每列取 5 条，某一列没人上榜就藏起该列。发证还少的时候三列会装着
-       同一批人，所以内容与「全球前五」完全重合的列也藏掉，
-       避免同一批名字在页面上并排出现两三次 */
-    function renderHonors(h){
-      if(!h) return;
-      var sig = function(list){
-        return (list || []).map(function(c){ return c.seq + '/' + c.nick; }).join(',');
-      };
-      var topSig = sig(h.top);
-      var cols = [
-        ['top', 'chTop', 'chTopCol', true],
-        ['week', 'chWeek', 'chWeekCol', false],
-        ['recent', 'chRecent', 'chRecentCol', false]
-      ];
-      var any = false;
-      cols.forEach(function(cfg){
-        var list = h[cfg[0]] || [];
-        if(cfg[0] !== 'top'){
-          /* recent 是倒序，正过来再和 top 比 */
-          var norm = cfg[0] === 'recent' ? list.slice().reverse() : list;
-          if(sig(norm) === topSig) list = [];
-        }
-        if(!list.length) return;
-        var ul = document.getElementById(cfg[1]);
-        list.forEach(function(c, i){
-          var li = document.createElement('li');
-          li.className = 'ch-item' + (cfg[3] && i === 0 ? ' gold' : '');
-          var rank = document.createElement('span');
-          rank.className = 'ch-rank';
-          rank.textContent = cfg[0] === 'recent' ? (c.seq || '·') : (i + 1);
-          var nick = document.createElement('span');
-          nick.className = 'ch-nick';
-          nick.textContent = c.nick;
-          var when = document.createElement('span');
-          when.className = 'ch-when';
-          when.textContent = c.seq ? 'No.' + c.seq : fmtDay(c.ts);
-          if(cfg[0] === 'recent') when.textContent = fmtDay(c.ts);
-          li.appendChild(rank); li.appendChild(nick); li.appendChild(when);
-          ul.appendChild(li);
-        });
-        document.getElementById(cfg[2]).hidden = false;
-        any = true;
-      });
-      if(any) document.getElementById('certHonors').hidden = false;
-    }
-
-    function fmtDay(ts){
-      if(!ts) return '';
-      var d = new Date(ts * 1000);
-      return (d.getMonth() + 1) + '/' + d.getDate();
-    }
-  })();
+  /* Original remote service retired in local mode. */
 
   /**
    * 背景：首页需要把后端的知识点访问量聚合到主题卡片。
@@ -2278,53 +2146,13 @@ a.contrib-item:hover .contrib-name{color:var(--text-h);}
    * 设计意图：页面加载后异步预取，成功后缓存数据，失败时记录请求与错误并展示降级状态。
    * 约束：只接受 ok=true 且 lessons 为对象的响应，不使用不完整数据参与排序。
    */
-  function loadPopular(){
-    var endpoint = '/pv/popular?days=7';
-    console.info('[熱門主題] 請求', {endpoint:endpoint, days:7});
-    fetch(endpoint, {credentials:'same-origin'})
-      .then(function(response){
-        if(!response.ok) throw new Error('HTTP '+response.status);
-        return response.json();
-      })
-      .then(function(data){
-        if(!data || data.ok!==true || !data.lessons || typeof data.lessons!=='object'){
-          throw new Error('熱門統計響應格式無效');
-        }
-        popularLessons = data.lessons;
-        popularState = 'ready';
-        sortStatus.textContent = currentMode==='popular'
-          ? '按近 7 天瀏覽熱度排序 · 只看 Top 15'
-          : '主線課程 + 獨立篇章 + 課後甜點 · 完整學習路徑';
-        sortStatus.classList.remove('error');
-        console.info('[熱門主題] 響應', data);
-        if(currentMode==='popular') renderTopics('popular');
-      })
-      .catch(function(error){
-        popularState = 'error';
-        if(currentMode==='popular'){
-          currentMode = 'course';
-          sortCourse.classList.add('active');
-          sortPopular.classList.remove('active');
-          sortCourse.setAttribute('aria-pressed','true');
-          sortPopular.setAttribute('aria-pressed','false');
-          renderTopics('course');
-        }
-        sortStatus.textContent = '熱門資料暫不可用';
-        sortStatus.classList.add('error');
-        console.error('[熱門主題] 載入失敗', {
-          endpoint:endpoint,
-          message:error && error.message,
-          stack:error && error.stack
-        });
-      });
-  }
+  function loadPopular(){}
 
   sortCourse.addEventListener('click', function(){ activateMode('course'); });
   sortPopular.addEventListener('click', function(){ activateMode('popular'); });
   renderHeroStats();
   renderHeroVisual();
-  renderTopics('popular');
-  loadPopular();
+  activateMode('course');
 
   /* 右侧浮动篇章目录：滚进课程区才浮现，全篇章一览（主线/独立篇章/自测甜点），
      滚动时高亮当前篇章，点哪跳哪。热门模式下点击会先切到课程顺序再跳，
@@ -2397,6 +2225,7 @@ a.contrib-item:hover .contrib-name{color:var(--text-h);}
      课程页由 nav-inject.js 注入，首页有自己的导航栏、不走 nav-inject，
      此前因此从未弹出过。脚本名不得含 ad，详见 splash.js 头部注释。 -->
 
-<script src="/pwa-install.js?v=20260901c"></script>
+
+<script src="local-home.js?v=2"></script>
 </body>
 </html>

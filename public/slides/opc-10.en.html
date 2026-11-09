@@ -107,7 +107,7 @@
 }
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
+<!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -222,9 +222,9 @@
 <script>
 /* ── 交互：合伙决策自测 ── */
 var QS = [
-  {k:'gap', q:'Is your biggest stuck point a whole skill block you simply don't have?', s:'E.g. the entire business or sales side—zero experience. If it's just too much work, that's a hiring problem.'},
+  {k:'gap', q:'Is your biggest stuck point a whole skill block you simply don’t have?', s:'E.g. the entire business or sales side—zero experience. If it’s just too much work, that’s a hiring problem.'},
   {k:'overlap', q:'Do their core skills overlap with yours?', s:'If both of you are best at the same thing, that counts as overlap.'},
-  {k:'trust', q:'When they decide something you don't understand in their domain, can you accept it outright?', s:'If your first instinct is to re-check yourself, that counts as failing.'},
+  {k:'trust', q:'When they decide something you don’t understand in their domain, can you accept it outright?', s:'If your first instinct is to re-check yourself, that counts as failing.'},
   {k:'tried', q:'Have you fully delivered something together?', s:'Even a small project—have you seen delivery quality and how they react when things break.'}
 ];
 var ans = {};
@@ -258,16 +258,16 @@ function renderVerdict() {
   var r;
   if (ans.trust === 'no') {
     r = ['v-stop', 'Trust fails—stop counting the rest',
-      'You still want to second-guess their judgment: <b>trust isn't partnership-ready</b>. Partnering like this burns hours on mutual persuasion. Stay in a collaboration and let time prove it.'];
+      'You still want to second-guess their judgment: <b>trust isn’t partnership-ready</b>. Partnering like this burns hours on mutual persuasion. Stay in a collaboration and let time prove it.'];
   } else if (ans.gap === 'no') {
     r = ['v-warn', 'You need hands, not a shareholder',
-      'Too much work → outsource or hire. <b>Equity for execution is the most expensive payment method</b>. Come back when you hit a whole skill block you don't have.'];
+      'Too much work → outsource or hire. <b>Equity for execution is the most expensive payment method</b>. Come back when you hit a whole skill block you don’t have.'];
   } else if (ans.overlap === 'yes') {
-    r = ['v-stop', 'Skills overlap—the company's gaps stay empty',
+    r = ['v-stop', 'Skills overlap—the company’s gaps stay empty',
       'Both of you excel at the same thing: the product gets prettier, <b>the missing side stays empty</b>. Strong opinions on the same work also slow decisions. Find someone on the other side.'];
   } else if (ans.tried === 'no') {
     r = ['v-warn', 'Direction is right—run a trial period first',
-      'Complementarity and trust are there; what's missing is real collaboration data. <b>Work one concrete project for three to six months</b>, pay or split by project, leave equity alone. Talk ratios and nominee arrangements once it runs.'];
+      'Complementarity and trust are there; what’s missing is real collaboration data. <b>Work one concrete project for three to six months</b>, pay or split by project, leave equity alone. Talk ratios and nominee arrangements once it runs.'];
   } else {
     r = ['v-go', 'All four clear—you can talk equity',
       'Complementary skills, radical trust, collaboration verified. Next: write the rules clearly—<b>equity ratios, nominee arrangements, exit and buyback</b>. The next three lessons cover these in order; read them before you negotiate.'];

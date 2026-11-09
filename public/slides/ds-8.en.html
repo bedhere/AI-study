@@ -110,7 +110,7 @@
 }
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
+<!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -414,7 +414,7 @@ btnDagRun.addEventListener('click', async () => {
       /* 死锁：剩下的节点互相等待 */
       const stuck = DAG_NODES.map(n => n.id).filter(id => !done.has(id));
       stuck.forEach(id => dagNodeEls[id].classList.add('stuck'));
-      dagNarr.innerHTML = `<span class="warn">💀 Deadlocked!</span> “Summarize” waits on “Proof,” “Proof” on “Merge,” “Merge” on “Draft”… and the loop lands back on “Summarize.” <b>${stuck.length} Agents wait on each other forever</b>—that’s the cost of a cycle. Hit “Break the cycle” and run again.';
+      dagNarr.innerHTML = `<span class="warn">💀 Deadlocked!</span> “Summarize” waits on “Proof,” “Proof” on “Merge,” “Merge” on “Draft”… and the loop lands back on “Summarize.” <b>${stuck.length} Agents wait on each other forever</b>—that’s the cost of a cycle. Hit “Break the cycle” and run again.`;
       dagStatus.textContent = 'Deadlock: red nodes waiting on each other';
       btnDagRun.disabled = false; btnDagCycle.disabled = false;
       btnDagRun.textContent = 'Run again ↻';

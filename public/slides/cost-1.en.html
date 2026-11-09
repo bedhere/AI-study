@@ -211,15 +211,15 @@ function simCalc() {
   if (profit <= 0) {
     pBar.classList.add('neg');
     verdict.className = 'sim-verdict bad';
-    verdict.innerHTML = 'Gross margin <b>' + margin + '%</b>: the more active users get, the more you lose—every month those ' + USERS + ' users burn ¥' + Math.round(-profit).toLocaleString() + ' for you. That's the bill-shock moment.';
+    verdict.innerHTML = 'Gross margin <b>' + margin + '%</b>: the more active users get, the more you lose—every month those ' + USERS + ' users burn ¥' + Math.round(-profit).toLocaleString() + ' for you. That’s the bill-shock moment.';
   } else if (margin < 40) {
     pBar.classList.remove('neg');
     verdict.className = 'sim-verdict bad';
-    verdict.innerHTML = 'Gross margin down to just <b>' + margin + '%</b>: and that's before R&amp;D, acquisition, and refunds. A little more usage and this business flips red.';
+    verdict.innerHTML = 'Gross margin down to just <b>' + margin + '%</b>: and that’s before R&amp;D, acquisition, and refunds. A little more usage and this business flips red.';
   } else {
     pBar.classList.remove('neg');
     verdict.className = 'sim-verdict';
-    verdict.innerHTML = 'Gross margin <b>' + margin + '%</b>: still healthy for now. Don't celebrate early—users getting more active and contexts getting longer is only a matter of time.';
+    verdict.innerHTML = 'Gross margin <b>' + margin + '%</b>: still healthy for now. Don’t celebrate early—users getting more active and contexts getting longer is only a matter of time.';
   }
 }
 document.getElementById('simUse').addEventListener('input', simCalc);

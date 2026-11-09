@@ -1532,7 +1532,7 @@ window.COURSE = {
       id: 'p9',
       num: 'Bonus',
       title: 'One-Person Company (OPC)',
-      desc: "AI lets one person ship a product—and also multiplies what can be taken from you. This chapter is about securing rights and staying compliant: trademarks, software copyright, patents, domains, ICP filing, registered capital, equity. Every lesson cites the statute and a real case. Do it early and it's an investment; do it late and it's a loss. The first two lessons are open; the rest require signing in.",
+      desc: "AI lets one person ship a product—and also multiplies what can be taken from you. This chapter is about securing rights and staying compliant: trademarks, software copyright, patents, domains, ICP filing, registered capital, equity. Every lesson cites the statute and a real case. Do it early and it's an investment; do it late and it's a loss. All lessons are available locally; progress stays in this browser.",
       color: '#b45309',
       group: 'extra',
       routes: ['use', 'pro', 'pm', 'build'],

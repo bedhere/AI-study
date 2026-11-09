@@ -15,6 +15,10 @@ for(const lang of ['', '.en','.ko','.tw','.hk']){
   curricula.push({language:lang||'zh-CN',parts:context.window.COURSE.parts.length,lessons:lessons.length});
   for(const lesson of lessons){
     if(!fs.existsSync(path.resolve(root,lesson.file)))failures.push({file:path.basename(file),error:`Missing curriculum page: ${lesson.file}`});
+    if(lang){
+      const translated=lesson.file.replace(/\.html$/,lang+'.html');
+      if(!fs.existsSync(path.resolve(root,translated)))failures.push({file:path.basename(file),error:`Missing translation: ${translated}`});
+    }
   }
 }
 let inlineScripts=0;
@@ -47,5 +51,6 @@ if(baselineArgument){
   const knownKeys=new Set(known.map(issue=>JSON.stringify(issue)));
   const introduced=failures.filter(issue=>!knownKeys.has(JSON.stringify(issue)));
   console.log(JSON.stringify({htmlPages:files.filter(f=>f.endsWith('.html')).length,jsFiles:files.filter(f=>f.endsWith('.js')).length,inlineScripts,curricula,newFailures:introduced.length,existingIssues:failures.length-introduced.length,examples:introduced.slice(0,10)},null,2));
-  if(introduced.length)process.exitCode=1;
+  // All open translations must now parse, including issues inherited from the baseline.
+  if(failures.length)process.exitCode=1;
 }

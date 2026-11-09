@@ -42,3 +42,4 @@ next-env.d.ts
 *.zip
 /*项目提示词.md
 __pycache__/
+/public/slides/search-index.*.json

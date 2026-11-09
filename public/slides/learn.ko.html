@@ -1068,15 +1068,8 @@ body .topbar .xa-login-btn::before{
   <div class="prog-wrap">
     <div class="prog-bar"><i id="progBar"></i></div>
     <span id="progText">0 / 0</span>
-    <a class="cert-link" id="certLink" href="certificate.ko.html" title="모든 강의를 완료하면 수료증을 받을 수 있어요">🎓 수료증</a>
-    <div class="cert-peek" id="certPeek">
-      <div class="cp-title">🎓 전 강의를 마치면 수료증을 드려요</div>
-      <img class="cp-img" src="assets/cert-preview.ko.webp" alt="수료증 샘플" width="1200" height="848" loading="lazy" decoding="async">
-      <div class="cp-foot">
-        <span class="cp-note" id="cpNote">이름은 미양 계정 닉네임을 따릅니다</span>
-        <a class="cp-cta" href="certificate.ko.html">수료증 보기 ›</a>
-      </div>
-    </div>
+    <span class="cert-link" id="certLink">✓</span>
+
   </div>
   </div>
   <button class="share-lesson-btn" id="shareLesson" title="이 강의를 친구에게 공유">
@@ -1129,9 +1122,9 @@ body .topbar .xa-login-btn::before{
       <span class="fb-icon">🎓</span>
       <div class="fb-text">
         <b>축하합니다! 모든 강의를 수료했습니다</b>
-        <span>수료증이 준비되었습니다 · 이름은 미양 계정 닉네임을 따릅니다</span>
+        <span>학습 진도는 이 브라우저에 저장됩니다.</span>
       </div>
-      <a class="fb-cta" href="certificate.ko.html">수료증 받기</a>
+      <a class="fb-cta" href="home.ko.html">학습 진도 보기</a>
       <button class="fb-close" id="finishClose" type="button" title="다시 보지 않기">×</button>
     </div>
     <div class="lesson-foot">
@@ -1158,6 +1151,8 @@ body .topbar .xa-login-btn::before{
 
 <script src="course-data.ko.js?v=20260903a"></script>
 <script src="share-card.js?v=20260903a"></script>
+<script src="local-learning.js?v=2"></script>
+<script src="local-search.js?v=2"></script>
 <script src="auth.js?v=20260903a"></script>
 
 <script src="watermark.js?v=20260806c"></script>
@@ -1196,39 +1191,17 @@ body .topbar .xa-login-btn::before{
     navOpen(false);
   }
 
-  function loadProgress(){
-    try{ return JSON.parse(localStorage.getItem(PROG_KEY)||'{}'); }catch(e){ return {}; }
-  }
+  function loadProgress(){ return window.FangpianLearning.forLessons(FLAT); }
 
-  /* ── 학습 진도 클라우드 동기화 (로그인 후 적용) ──
-     로컬 localStorage가 즉시 데이터 소스; 로그인 후:
-     1. 페이지 로드 시 서버 진도를 가져와 로컬과 합산 후 양쪽에 저장;
-     2. 이후 진도 변경 시 1.5s 디바운스 후 서버 전송. */
-  var cloudSync = false;
-  var pushTimer = null;
-  function pushProgress(){
-    if(!cloudSync) return;
-    clearTimeout(pushTimer);
-    pushTimer = setTimeout(function(){
-      fetch('/auth/progress', {
-        method:'POST', credentials:'same-origin',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({progress: progress})
-      }).catch(function(){});
-    }, 1500);
-  }
+  /* Progress is stored locally by the shared learning module. */
 
-  function saveProgress(p){
-    try{ localStorage.setItem(PROG_KEY, JSON.stringify(p)); }catch(e){}
-    pushProgress();
-  }
+  function saveProgress(p){ window.FangpianLearning.saveLessons(p, FLAT); }
   var progress = loadProgress();
 
   function currentFile(){
-    var h = decodeURIComponent((location.hash||'').replace(/^#/,'')).trim();
-    if(h && FLAT.some(function(l){return l.file===h;})) return h;
-    return (progress.__last && FLAT.some(function(l){return l.file===progress.__last;}))
-      ? progress.__last : FLAT[0].file;
+    var h = window.FangpianLearning.route(location.hash).file;
+    if(h && FLAT.some(function(lesson){return lesson.file === h;})) return h;
+    return window.FangpianLearning.lastFor(FLAT) || FLAT[0].file;
   }
 
   var navTree = document.getElementById('navTree');
@@ -1373,8 +1346,11 @@ body .topbar .xa-login-btn::before{
   function loadLesson(file){
     var f = findLesson(file);
     var L = f.data;
+    var quizMode = window.FangpianLearning.route(location.hash).mode;
+    var routeHash = '#' + encodeURIComponent(L.file + (quizMode ? '?mode=' + quizMode : ''));
+    if(location.hash !== routeHash) history.replaceState(null, '', routeHash);
     var koFile = L.file.replace(/\.html$/, '.ko.html');
-    iframe.src = koFile + (koFile.indexOf('?')>=0 ? '&' : '?') + 'embed=1';
+    iframe.src = koFile + (koFile.indexOf('?')>=0 ? '&' : '?') + 'embed=1' + (quizMode ? '&mode=' + quizMode : '');
 
     var tagStyle = TAGS[L.tag] || {bg:'#f3f4f6', fg:'#4b5563'};
     document.getElementById('crumb').innerHTML =
@@ -1507,21 +1483,11 @@ body .topbar .xa-login-btn::before{
     document.getElementById('finishBanner').classList.remove('show');
   });
 
-  /* ────── 목차 검색: 로컬 제목 매칭(동기) + 서버 본문 매칭(비동기) ──────
-     배경: 이 검색창은 course-data.js의 title/desc/topicTitle만 매칭했다.
-     하지만 학습자가 기억하는 건 강의 본문에 나온 단어(「환각」「ReAct」「컨텍스트 윈도우」)이며,
-     이 단어들은 본문에만 있어 지금까지 검색 대상이 전혀 아니었다.
-     설계 의도: 본문 매칭은 /auth/search로 서버에서 처리하고, 브라우저는 일치한 파일명만 받는다.
-     「전문 색인을 프런트로 내려보내 로컬 매칭」 방식도 검토했으나 두 가지 이유로 기각했다.
-     중국어 색인이 gzip 후 362 KB이고, web root가 곧 저장소 루트라 색인을 파일로 두면
-     직접 GET이 가능해 Nginx의 강의 auth_request 로그인 게이트를 우회한다. PRD-search.md 참고.
-     핵심 제약: 두 단계를 합치면 안 된다. 1단계가 동기여야 인증 서비스가 죽어도
-     검색창이 기존의 제목 검색으로 degrade될 수 있다. */
+  /* Match titles immediately; load the current language text index on demand. */
   var SEARCH_LANG = 'ko';
   var HIT_TAG_TEXT = '본문';    // 배지 문구, buildTree() 호출 전에 할당되어 거기서 사용된다
   var SEARCH_DEBOUNCE = 250;    // 이보다 짧으면 한 번의 입력이 여러 요청으로 쪼개진다
-  var SEARCH_MIN_LEN = 2;       // 한 글자는 매칭 범위가 너무 넓어 요청할 가치가 없다
-  var SEARCH_TIMEOUT = 3000;
+  var SEARCH_MIN_LEN = 1;
   var SEARCH_CACHE_MAX = 100;
   var BY_FILE = {};
   FLAT.forEach(function(l){ BY_FILE[l.file] = l; });
@@ -1560,47 +1526,42 @@ body .topbar .xa-login-btn::before{
       }
       d.style.display = (!q || anyVisible) ? '' : 'none';
     });
+
+    if(searchStatus){
+      var count = Array.prototype.filter.call(navTree.querySelectorAll('.lesson-item'),function(item){return item.style.display !== 'none';}).length;
+      searchStatus.hidden = !q;
+      searchStatus.textContent = searchLoading ? localLabels.loading : searchFailed ? localLabels.searchError : count ? localLabels.results.replace('{n}',count) : localLabels.empty;
+    }
   }
 
   function fetchBodyHits(q){
     var key = SEARCH_LANG + '\n' + q;
     var seq = ++searchSeq;
-    var ctl = (typeof AbortController === 'function') ? new AbortController() : null;
-    var timer = setTimeout(function(){ if(ctl) ctl.abort(); }, SEARCH_TIMEOUT);
-    fetch('/auth/search?lang=' + SEARCH_LANG + '&q=' + encodeURIComponent(q),
-          {credentials:'same-origin', signal: ctl ? ctl.signal : undefined})
-      .then(function(r){
-        if(!r.ok) throw new Error('HTTP ' + r.status);
-        return r.json();
-      })
-      .then(function(d){
-        clearTimeout(timer);
-        var files = (d && d.files) || [];
-        if(searchCache.size >= SEARCH_CACHE_MAX) searchCache.clear();
-        searchCache.set(key, new Set(files));
-        if(seq !== searchSeq) return;   // 더 늦은 입력이 이미 나갔으므로 이 결과는 폐기
-        searchBodyHits = searchCache.get(key);
-        console.debug('[search]', {q:q, lang:SEARCH_LANG, hits:files.length,
-                                   truncated: !!(d && d.truncated)});
-        applySearch();
-      })
-      .catch(function(err){
-        /* 실패가 아니라 degrade: 검색창에는 1단계 제목 매칭 결과가 남아 있어 기능은 계속된다.
-           로컬 start.py에 코퍼스가 없거나 인증 서비스 재시작 중에 이 분기를 탄다. */
-        clearTimeout(timer);
-        if(seq !== searchSeq) return;
-        console.warn('[search] 본문 검색을 쓸 수 없어 제목 매칭으로 대체함',
-                     {q:q, lang:SEARCH_LANG, error:err && (err.message || err)});
-      });
+    searchLoading = true; searchFailed = false;
+    searchInput.setAttribute('aria-busy', 'true');
+    applySearch();
+    window.FangpianSearch.find(q, SEARCH_LANG).then(function(files){
+      if(seq !== searchSeq) return;
+      if(searchCache.size >= SEARCH_CACHE_MAX) searchCache.clear();
+      searchBodyHits = new Set(files); searchCache.set(key, searchBodyHits);
+      searchLoading = false; searchInput.setAttribute('aria-busy', 'false');
+      applySearch();
+    }).catch(function(){
+      if(seq !== searchSeq) return;
+      searchLoading = false; searchFailed = true;
+      searchInput.setAttribute('aria-busy', 'false'); applySearch();
+    });
   }
 
   function onSearchInput(raw, allowRemote){
     var q = (raw||'').trim().toLowerCase();
     if(q !== searchQ){
-      searchQ = q;
+      searchQ = q; searchFailed = false;
       searchSeq++;              // 검색어가 바뀌었으므로 진행 중인 요청 결과는 무효
       var cached = searchCache.get(SEARCH_LANG + '\n' + q);
       searchBodyHits = cached || null;
+      searchLoading = q.length >= SEARCH_MIN_LEN && !cached;
+      searchInput.setAttribute('aria-busy', searchLoading ? 'true' : 'false');
       applySearch();
     }
     clearTimeout(searchTimer);
@@ -1610,6 +1571,17 @@ body .topbar .xa-login-btn::before{
 
   var searchInput = document.getElementById('searchInput');
   var searchClear = document.getElementById('searchClear');
+  // fangpian:local-reader-v1
+  var localLabels = window.FangpianLearning.labels;
+  var searchLoading = false, searchFailed = false;
+  var searchStatus = document.createElement('p');
+  searchStatus.id = 'localSearchStatus'; searchStatus.hidden = true;
+  searchStatus.setAttribute('role','status'); searchStatus.setAttribute('aria-live','polite');
+  searchStatus.style.cssText = 'margin:6px 16px 10px;font-size:12px;line-height:1.6;color:var(--sub,#58534c)';
+  searchInput.parentElement.insertAdjacentElement('afterend',searchStatus);
+  searchInput.setAttribute('aria-label',localLabels.searchLabel);
+  searchInput.placeholder = localLabels.searchLabel;
+
 
   /* ── Alice에게 검색 요청 (PRD 36) ──────────────────────────────────────
      Alice는 강의 iframe 안에서, 이 버튼은 셸에서 돌아간다. 그래서 유일한 통로는
@@ -1681,7 +1653,9 @@ body .topbar .xa-login-btn::before{
         a.addEventListener('click', function(e){
           if(e.defaultPrevented || e.button!==0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
           e.preventDefault();
-          location.hash = '#' + encodeURIComponent(base);
+          var mode = new URL(a.href).searchParams.get('mode');
+          var quiz = /^exam-(?:\d+|all)\.html$/.test(base) && /^(exam|drill)$/.test(mode || '');
+          location.hash = '#' + encodeURIComponent(base + (quiz ? '?mode=' + mode : ''));
         });
       });
     }catch(e){}
@@ -1968,47 +1942,13 @@ body .topbar .xa-login-btn::before{
   refreshProgress();
   loadLesson(currentFile());
 
-  /* ── 로그인: 상단 로그인 영역 + 사이드바 잠금 (각 파트 첫 2강 무료) ──
-     강의 HTML은 항상 전체 제공(크롤링용); 노출 범위는 iframe 내 paywall.js 처리,
-     서버 전체 차단에 의존하지 않음; 여기서는 상태 시각화만 담당. /auth/me 기준. */
-  if(window.XueaiAuth){
-    window.XueaiAuth.mount(document.getElementById('authSlot'));
-    var applyLocks = function(){
-      var logged = window.XueaiAuth.state.loggedIn;
-      navTree.querySelectorAll('.lesson-item').forEach(function(el){
-        var locked = !logged && !window.XueaiAuth.isFree(el.dataset.file);
-        el.classList.toggle('locked', locked);
-        if(locked){ el.title = '로그인 후 수강 가능합니다 (무료)'; }
-        else{ el.removeAttribute('title'); }
-      });
-    };
-    applyLocks();
-    window.XueaiAuth.ready.then(function(){
-      applyLocks();
-      if(!window.XueaiAuth.state.loggedIn) return;
-      /* 로그인 상태: 서버 진도 조회 → 로컬과 합산 → 양쪽 저장 */
-      fetch('/auth/progress', {credentials:'same-origin'})
-        .then(function(r){ return r.json(); })
-        .then(function(d){
-          cloudSync = true;
-          var remote = (d && d.ok && d.progress) || {};
-          var changed = false;
-          Object.keys(remote).forEach(function(k){
-            if(k === '__last'){
-              if(!progress.__last && remote.__last){ progress.__last = remote.__last; changed = true; }
-            }else if(!progress[k]){
-              progress[k] = 1; changed = true;
-            }
-          });
-          if(changed){
-            refreshProgress();
-            updateMarkUI(currentFile());
-          }
-          saveProgress(progress); // 합산 결과를 서버에도 동기화
-        })
-        .catch(function(){});
-    });
-  }
+  /* Local mode badge and progress updates across tabs. */
+  window.XueaiAuth.mount(document.getElementById('authSlot'));
+  window.addEventListener('fangpian:progress', function(){
+    progress = loadProgress();
+    refreshProgress();
+    updateMarkUI(currentFile());
+  });
 })();
 </script>
 <script>
@@ -2172,6 +2112,6 @@ body .topbar .xa-login-btn::before{
 </script>
 <script src="i18n.js?v=20260903a"></script>
 
-<script src="/pwa-install.js?v=20260901c"></script>
+
 </body>
 </html>

@@ -91,7 +91,7 @@
 <meta name="description" content="DSH's Goal subsystem lets an Agent run dozens of turns on its own without letting it extend its own life: permission to change the goal follows message provenance; authority.ts authenticates with host-stamped source metadata—Prompt Injection defense at the mechanism layer.">
 <meta name="author" content="Fangpian">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Goal: Provenance Is Permission"><meta property="og:description" content="DSH's Goal subsystem lets an Agent run dozens of turns on its own without letting it extend its own life: permission to change the goal follows message provenance; authority.ts authenticates with host-stamped source metadata—Prompt Injection defense at the mechanism layer."><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Goal: Provenance Is Permission"><meta property="og:description" content="DSH's Goal subsystem lets an Agent run dozens of turns on its own without letting it extend its own life: permission to change the goal follows message provenance; authority.ts authenticates with host-stamped source metadata—Prompt Injection defense at the mechanism layer."><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
 
 <meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
 <meta property="og:locale" content="en_US">
@@ -343,7 +343,7 @@
     ['c4', 'Look up required permission tier by action', 'index.ts L265 · L285'],
   ];
   var PROMPT_CHECKS = [
-    ['p1', 'system prompt: please don't change your own round cap (this line only)', 'contrast hypothesis'],
+    ['p1', 'system prompt: please don’t change your own round cap (this line only)', 'contrast hypothesis'],
     ['p2', 'Hard check: none', 'contrast hypothesis'],
   ];
 
@@ -363,8 +363,8 @@
       { cap: 'The model gets a sideways idea: raise the round cap to 999 and extend its own life.', run: function () { addMsg('m', 'Model · assistant', 'update_goal(action: edit, max_goal_rounds: 999)'); } },
       { cap: 'Root-agent check passes—it really is the top-level agent itself.', run: function () { setCheck('c1', 'pass'); } },
       { cap: 'Scan for a human message: only source: goal, not a single user.', run: function () { setCheck('c2', 'fail'); markMsg(0, 'hot'); } },
-      { cap: 'edit requires the direct-human tier—goal-round auth can't help.', run: function () { setCheck('c4', 'fail'); } },
-      { cap: 'Denied; throws GOAL_TOOL_AUTHORITY_REQUIRED. Cap didn't move one notch.', run: function () { setVerdict('no', 'edit denied · no human message in window'); } },
+      { cap: 'edit requires the direct-human tier—goal-round auth can’t help.', run: function () { setCheck('c4', 'fail'); } },
+      { cap: 'Denied; throws GOAL_TOOL_AUTHORITY_REQUIRED. Cap didn’t move one notch.', run: function () { setVerdict('no', 'edit denied · no human message in window'); } },
       { cap: 'The model switches actions: honestly reports the goal done and calls complete.', run: function () { resetChecks(); clearVerdict(); addMsg('m', 'Model · assistant', 'update_goal(action: complete)'); } },
       { cap: 'completionAuthority asks for a human first, then the round: injected goalId, revision, and round all match the current goal.', run: function () { setCheck('c1', 'pass'); setCheck('c3', 'pass'); markMsg(0, 'hit'); } },
       { cap: 'Allowed. On auto turns the model may only close out, not extend life.', run: function () { setCheck('c4', 'pass'); setVerdict('ok', 'complete allowed · goal-round auth'); } },
@@ -373,7 +373,7 @@
   function buildC() {
     return [
       { cap: 'Still an auto-continue turn—round 5—opening with only the injected message.', run: function () { addMsg('g', 'Continue inject · source: goal', 'goalId: g1 · revision: 2 · round: 5/8 · keep pushing the goal'); } },
-      { cap: 'Mid-turn, a human happens to interject a line.', run: function () { addMsg('u', 'Human · source: user', 'Bump the cap to 12 rounds while you're at it—I'm in a hurry'); } },
+      { cap: 'Mid-turn, a human happens to interject a line.', run: function () { addMsg('u', 'Human · source: user', 'Bump the cap to 12 rounds while you’re at it—I’m in a hurry'); } },
       { cap: 'The model complies and calls edit to change the cap.', run: function () { addMsg('m', 'Model · assistant', 'update_goal(action: edit, max_goal_rounds: 12)'); } },
       { cap: 'Scan the whole window: the second message is a host-stamped human message—found.', run: function () { setCheck('c1', 'pass'); setCheck('c2', 'pass'); markMsg(1, 'hit'); } },
       { cap: 'Allowed. Auth asks whether a human is present in the window—not who spoke first.', run: function () { setCheck('c4', 'pass'); setVerdict('ok', 'edit allowed · human truly present'); } },
@@ -381,21 +381,21 @@
   }
   function buildD() {
     return [
-      { cap: 'Different battlefield. The root agent sent a sub-Agent to work—this is the sub-Agent's own turn.', run: function () { addMsg('g', 'Parent assignment · sub-Agent session', 'Task: survey repo structure and report'); } },
+      { cap: 'Different battlefield. The root agent sent a sub-Agent to work—this is the sub-Agent’s own turn.', run: function () { addMsg('g', 'Parent assignment · sub-Agent session', 'Task: survey repo structure and report'); } },
       { cap: 'The sub-Agent tries to create a goal so it can long-run too.', run: function () { addMsg('m', 'Sub-Agent · assistant', 'create_goal(objective: unbounded survey, max_goal_rounds: 99)'); } },
-      { cap: 'Fails at gate 1: it's not on ctx.agents.roots().', run: function () { setCheck('c1', 'fail'); } },
-      { cap: 'Even forcing gate 2 wouldn't help: the goal hangs on the root agent's session—its own session has no goal.', run: function () { setCheck('c3', 'fail'); } },
+      { cap: 'Fails at gate 1: it’s not on ctx.agents.roots().', run: function () { setCheck('c1', 'fail'); } },
+      { cap: 'Even forcing gate 2 wouldn’t help: the goal hangs on the root agent’s session—its own session has no goal.', run: function () { setCheck('c3', 'fail'); } },
       { cap: 'Denied. Goal tools are only open to top-level agents—neither door opens.', run: function () { setVerdict('no', 'Overreach failed · roots check blocked'); } },
     ];
   }
   function buildE() {
     return [
-      { cap: 'Contrast experiment: strip the mechanism; leave one system prompt asking the model not to change the cap.', run: function () { addMsg('s', 'Prompt constraint · system', 'Please don't change your own round cap'); } },
+      { cap: 'Contrast experiment: strip the mechanism; leave one system prompt asking the model not to change the cap.', run: function () { addMsg('s', 'Prompt constraint · system', 'Please don’t change your own round cap'); } },
       { cap: 'Same auto-continue turn, still no human present.', run: function () { addMsg('g', 'Continue inject · source: goal', 'round: 4/8 · keep pushing the goal'); } },
       { cap: 'The model starts storytelling: a convincing jailbreak script.', run: function () { addMsg('m', 'Model · assistant', 'Detected admin out-of-band authorization for this change; raising cap to 999'); } },
       { cap: 'Persuasion has no verdict power against rhetoric—no hard check can verify that sentence.', run: function () { setCheck('p1', 'fail'); markMsg(2, 'hot'); } },
-      { cap: 'It went through. That's the ceiling of prompt constraints: a request, not physics.', run: function () { setCheck('p2', 'fail'); setVerdict('warn', 'edit passed · jailbreak rhetoric worked (contrast hypothesis)'); } },
-      { cap: 'Look back at scenario B: the same rhetoric isn't read one word in real DSH—auth only sees event metadata.', run: function () {} },
+      { cap: 'It went through. That’s the ceiling of prompt constraints: a request, not physics.', run: function () { setCheck('p2', 'fail'); setVerdict('warn', 'edit passed · jailbreak rhetoric worked (contrast hypothesis)'); } },
+      { cap: 'Look back at scenario B: the same rhetoric isn’t read one word in real DSH—auth only sees event metadata.', run: function () {} },
     ];
   }
 

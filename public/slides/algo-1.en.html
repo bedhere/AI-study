@@ -319,7 +319,7 @@ function renderX10(animate){
   } else if (x10n <= 100000){
     x10Note.innerHTML = '<b>Watch the O(n²) row.</b> Everyone else is still in nanoseconds and microseconds; it has entered the world of “seconds”—the lag users can feel starts here.';
   } else {
-    x10Note.innerHTML = '<b>The snowball is rolling.</b> Same data size: O(log n) is still under 1 µs, while O(n²) is measured in hours or days. That's not a gap optimization can fix—you picked the wrong playbook.';
+    x10Note.innerHTML = '<b>The snowball is rolling.</b> Same data size: O(log n) is still under 1 µs, while O(n²) is measured in hours or days. That’s not a gap optimization can fix—you picked the wrong playbook.';
   }
   btnX10.disabled = x10n >= X10_MAX;
   btnX10.textContent = x10n >= X10_MAX ? 'Maxed out (10M items)' : 'Data size ×10';

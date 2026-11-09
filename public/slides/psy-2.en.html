@@ -379,13 +379,13 @@ const tierSegs = [...document.querySelectorAll('.tier-seg')];
 
 const TIERS = [
   { badge: 'Tier 1', title: 'Tier 1 · Under 1s: show the result raw—no theatrics',
-    desc: 'At this speed users perceive “instant.” A loading animation invents a wait that wasn't there. <b>Semantic-cache hits and fast questions routed to a small model land here</b>: the instant reply is itself a peak—don't cover it with a spinner.',
+    desc: 'At this speed users perceive “instant.” A loading animation invents a wait that wasn’t there. <b>Semantic-cache hits and fast questions routed to a small model land here</b>: the instant reply is itself a peak—don’t cover it with a spinner.',
     chips: ['Cache-hit FAQ', 'Light classify / rewrite', 'Autocomplete'] },
   { badge: 'Tier 2', title: 'Tier 2 · 1–10s: streaming is the floor; progress is bonus',
     desc: 'Users will wait—but they must see motion. <b>Streaming pushes TTFT under 1s</b>; once they start reading, the stopwatch stops. In RAG, surface intermediate states like “retrieved 8 docs”—the wait also lays trust groundwork (lesson 5 on trust calibration).',
     chips: ['Ordinary chat generation', 'RAG Q&A', 'Single-image generation'] },
   { badge: 'Tier 3', title: 'Tier 3 · Over 10s: change the form—sync to async',
-    desc: 'Past the focused-wait limit, stop making them stare. <b>On submit, confirm immediately: “~X minutes—we'll notify you when done”</b>, move the task to background, pull them back with a notification. Prefer high estimates: early finish is a surprise; overrun is a second injury.',
+    desc: 'Past the focused-wait limit, stop making them stare. <b>On submit, confirm immediately: “~X minutes—we’ll notify you when done”</b>, move the task to background, pull them back with a notification. Prefer high estimates: early finish is a surprise; overrun is a second injury.',
     chips: ['Deep Research', 'Batch document processing', 'Video generation', 'Multi-step Agent tasks'] },
 ];
 

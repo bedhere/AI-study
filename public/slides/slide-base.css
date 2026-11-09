@@ -1,5 +1,5 @@
 /* slide-base.css  ——  每个 slide 页面引入 */
-@import url('../style.css');
+/* The former root stylesheet is not part of this application. */
 
 html, body {
   overflow-y: auto;

@@ -1,9 +1,9 @@
-/* 自测页共享引擎：模式选择 / 抽题 / 判分 / 错题回顾 / 成绩上报 / 题目报错。
+/* 自测页共享引擎：模式选择 / 抽题 / 判分 / 错题回顾 / 本地成绩记录。
    页面需在引入本文件前定义：
      window.EXAM_BANK   题库数组（exam-data*.js）
      window.EXAM_CONFIG 页面配置：
        lsKey     刷题进度的 localStorage 键（每个题库必须唯一）
-       examId    考试标识，随成绩上报（服务端暂不消费，先带上）
+       examId    本地成绩记录的考试标识
        pickPlan  模拟考试抽题数 { single, multi, judge }，在整个题库里抽
        pickPerPart 改为按卷均摊，每卷各抽 { single, multi, judge } 道，
                  卷子由考点组编号的百位推导（1xx 是大模型原理篇，依此类推；
@@ -18,6 +18,15 @@
 var CFG = window.EXAM_CONFIG || {};
 var PICK = CFG.pickPlan || { single: 11, multi: 5, judge: 4 };
 var LS_KEY = CFG.lsKey || 'exam-drill-v1';
+var sessionDrillPosition = '0';
+function readDrillPosition(){
+  try { sessionDrillPosition = localStorage.getItem(LS_KEY) || '0'; } catch (error) {}
+  return parseInt(sessionDrillPosition, 10);
+}
+function saveDrillPosition(value){
+  sessionDrillPosition = String(value);
+  try { localStorage.setItem(LS_KEY, sessionDrillPosition); } catch (error) {}
+}
 
 /* ── 引擎 UI 多语言（题库内容与 verdicts 由各语言版页面自带） ── */
 var EX_LANG = (window.XUEAI_I18N && window.XUEAI_I18N.lang) || 'zh';
@@ -185,7 +194,7 @@ function startExam(){
 function startDrill(){
   mode = 'drill';
   quiz = window.EXAM_BANK.map(shuffleOpts);
-  var saved = parseInt(localStorage.getItem(LS_KEY) || '0', 10);
+  var saved = readDrillPosition();
   cur = (saved >= 0 && saved < quiz.length) ? saved : 0;
   answers = [];
   document.getElementById('quizLabel').textContent = EX.drillLabel;
@@ -199,7 +208,7 @@ function enterQuiz(){
   document.getElementById('quizSec').scrollIntoView({behavior:'smooth', block:'start'});
 }
 function quitQuiz(){
-  if (mode === 'drill') localStorage.setItem(LS_KEY, String(cur));
+  if (mode === 'drill') saveDrillPosition(cur);
   backToMode();
 }
 function backToMode(){
@@ -212,7 +221,7 @@ function backToMode(){
 function updateDrillMeta(){
   var el = document.getElementById('drillMeta');
   if (!el) return;                                   /* 没开顺序刷题的卷子没有这个元素 */
-  var saved = parseInt(localStorage.getItem(LS_KEY) || '0', 10);
+  var saved = readDrillPosition();
   el.textContent = (saved > 0 && saved < window.EXAM_BANK.length) ? EX.drillContinue(saved+1, window.EXAM_BANK.length) : EX.drillFromStart;
 }
 
@@ -314,7 +323,7 @@ function submitAnswer(a){
       ex.innerHTML = '<b>' + EX.expLabel + '</b> · ' + q.exp;
       ex.className = 'q-exp show';
     }
-    localStorage.setItem(LS_KEY, String(Math.min(cur+1, quiz.length-1)));
+    saveDrillPosition(Math.min(cur+1, quiz.length-1));
   }
   document.getElementById('qNext').className = 'q-btn show';
 }
@@ -332,7 +341,7 @@ function nextQ(){
   if (cur < quiz.length){ renderQ(); window.scrollTo({top:document.getElementById('quizSec').offsetTop - 20, behavior:'smooth'}); }
   else if (mode === 'exam') showResult();
   else {
-    localStorage.setItem(LS_KEY, '0');
+    saveDrillPosition(0);
     showResult();
   }
 }
@@ -346,26 +355,10 @@ function showResult(){
   var right = answers.filter(function(x){ return x.ok; }).length;
   var score = Math.round(right / answers.length * 100);
 
-  /* 成绩上报：按考点组聚合对错，方片个人中心据此展示薄弱点。
-     未登录到不了这页；上报失败静默，不影响本地看成绩。
-     刷题中途退出再续时 answers 只含本次做过的题，服务端按组累加，不失真。 */
-  var gstat = {};
-  answers.forEach(function(x){
-    var k = String(x.q.g);
-    var s = gstat[k] = gstat[k] || { right: 0, total: 0 };
-    s.total++;
-    if (x.ok) s.right++;
-  });
-  try {
-    fetch('/auth/exam', {
-      method: 'POST',
-      credentials: 'same-origin',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ mode: mode, score: score, right: right,
-                             total: answers.length, groups: gstat,
-                             exam: CFG.examId || '' })
-    })['catch'](function(){});
-  } catch (e) {}
+  /* Keep recent scores locally; company accounts are not connected. */
+  if(window.FangpianLearning){
+    window.FangpianLearning.saveExam({mode:mode,score:score,right:right,total:answers.length,exam:CFG.examId || ''});
+  }
 
   var v = VERDICTS.filter(function(x){ return score >= x.min; }).sort(function(a,b){ return b.min - a.min; })[0] || VERDICTS[VERDICTS.length-1];
   document.getElementById('rTier').textContent = v.tier;
@@ -439,29 +432,8 @@ function submitReport(){
     msg.className = 'rp-msg err';
     return;
   }
-  var btn = document.getElementById('rpSubmit');
-  btn.disabled = true;
-  fetch('/auth/exam-report', {
-    method: 'POST',
-    credentials: 'same-origin',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      g: reportTarget.g,
-      type: reportTarget.type,
-      q: reportTarget.q,
-      detail: detail.slice(0, 500),
-      mode: mode || ''
-    })
-  }).then(function(r){
-    if (!r.ok) throw new Error(r.status);
-    msg.textContent = EX.reportOk;
-    msg.className = 'rp-msg ok';
-    setTimeout(closeReport, 1600);
-  })['catch'](function(){
-    btn.disabled = false;
-    msg.textContent = EX.reportFail;
-    msg.className = 'rp-msg err';
-  });
+  msg.textContent = '反馈服务尚未接入，内容未提交。';
+  msg.className = 'rp-msg err';
 }
 
 /* 页面 onclick 依赖的全局符号 */
@@ -480,27 +452,11 @@ Object.defineProperty(window, 'cur', { get: function(){ return cur; } });
 
 updateDrillMeta();
 
-/* 从自测中心带着 ?mode= 进来的直接开考，省掉再选一次模式。
-   未登录时正文被遮罩挡着，自动开考只会看到空白，所以锁着就先不开。
-   注意 head 内联脚本只按本地缓存的登录标记抢先上锁，paywall.js 要等
-   /auth/me 回来才解锁，比这里晚。所以锁着时得等它解锁再开，
-   不能当场判定成未登录，否则已登录的人也开不了。 */
+/* Local quizzes can open directly from the practice center. */
 (function(){
   var m = /[?&]mode=(exam|drill)/.exec(location.search);
   if (!m) return;
-  var root = document.documentElement;
-  function go(){
-    if (m[1] === 'exam') startExam();
-    else if (CFG.drill !== false) startDrill();
-  }
-  if (!root.classList.contains('xa-locked')){ go(); return; }
-  if (!window.MutationObserver) return;
-  var ob = new MutationObserver(function(){
-    if (root.classList.contains('xa-locked')) return;
-    ob.disconnect(); clearTimeout(timer); go();
-  });
-  ob.observe(root, { attributes: true, attributeFilter: ['class'] });
-  /* 一直没解锁说明确实没登录，别一直挂着 */
-  var timer = setTimeout(function(){ ob.disconnect(); }, 8000);
+  if (m[1] === 'exam') startExam();
+  else if (CFG.drill !== false) startDrill();
 })();
 })();

@@ -123,7 +123,7 @@
 }
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
+<!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -281,7 +281,7 @@ btnRound1.addEventListener('click', async () => {
   kvBusy = true;
   btnRound1.disabled = true;
   toks1.forEach(t => t.className = 'tok');
-  kvStatus.innerHTML = 'Round 1: each token lights up as it's computed…';
+  kvStatus.innerHTML = 'Round 1: each token lights up as it’s computed…';
   for (let i = 0; i < toks1.length; i++){
     if (i > 0) { toks1[i-1].classList.remove('calc'); toks1[i-1].classList.add('done'); }
     toks1[i].classList.add('calc');
@@ -373,9 +373,9 @@ function updBill(){
   } else if (h < 50) {
     billNote.innerHTML = `<b>Hit rate ${h}%—the bill loosens.</b> High-frequency repeats get caught by cache first. Support questions cluster hard; dozens of FAQs often cover most traffic.`;
   } else if (h < 80) {
-    billNote.innerHTML = `<b>Hit rate ${h}%—bill cut more than half.</b> It's not just money: cache hits answer near zero latency—UX gets better. Saving money and speeding up are the same thing here.`;
+    billNote.innerHTML = `<b>Hit rate ${h}%—bill cut more than half.</b> It’s not just money: cache hits answer near zero latency—UX gets better. Saving money and speeding up are the same thing here.`;
   } else {
-    billNote.innerHTML = `<b>Hit rate ${h}%—near the ceiling.</b> What's left is real long-tail novelty—money worth spending. But the higher the hit rate, the more seriously take the “invalidation” risk on the card below—more stored answers means more stale ones.`;
+    billNote.innerHTML = `<b>Hit rate ${h}%—near the ceiling.</b> What’s left is real long-tail novelty—money worth spending. But the higher the hit rate, the more seriously take the “invalidation” risk on the card below—more stored answers means more stale ones.`;
   }
 }
 hitRange.addEventListener('input', updBill);

@@ -96,7 +96,7 @@
 <meta name="description" content="DSH cancel and crash recovery: one AbortSignal per turn, write turn/end even on interrupt, synthesize interrupted closers on cold load, and keep every persisted result after a crash restart.">
 <meta name="author" content="Fangpian">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="What Happens After Esc: Cancel, Crash Recovery, and Re-entry"><meta property="og:description" content="DSH cancel and crash recovery: one AbortSignal per turn, write turn/end even on interrupt, synthesize interrupted closers on cold load, and keep every persisted result after a crash restart."><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="What Happens After Esc: Cancel, Crash Recovery, and Re-entry"><meta property="og:description" content="DSH cancel and crash recovery: one AbortSignal per turn, write turn/end even on interrupt, synthesize interrupted closers on cold load, and keep every persisted result after a crash restart."><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
 
 <meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
 <meta property="og:locale" content="en_US">
@@ -340,7 +340,7 @@
   }
 
   function commonOpening(list) {
-    list.push({ status: 'A new turn starts. The driver creates an AbortController for it: this turn's cancel signal lights up.', run: function () {
+    list.push({ status: 'A new turn starts. The driver creates an AbortController for it: this turn’s cancel signal lights up.', run: function () {
       setProc('', 'Running'); setSig('live', 'turn 7 · live'); setInbox(0);
       addEv('turn/start · turn 7', 'bd');
     } });
@@ -366,7 +366,7 @@
     list.push({ status: 'Tests are half done; the user hits Esc. The UI maps it to agent.cancel({ kind: "user" }).', run: function () {
       addEv('User pressed Esc', 'mark', '', true);
     } });
-    list.push({ status: 'cancel's first job: clear inbox—that follow-up is voided, thrown away unrun (pass keepInbox to keep it). Second: abort(cause) on this turn's controller.', run: function () {
+    list.push({ status: 'cancel’s first job: clear inbox—that follow-up is voided, thrown away unrun (pass keepInbox to keep it). Second: abort(cause) on this turn’s controller.', run: function () {
       setInbox(0); setSig('aborted', 'turn 7 · aborted');
     } });
     list.push({ status: 'The same signal reaches every busy boundary: the model stream stops reading; bash follows the signal and kills the whole process group. Persisted chunks are not deleted.', run: function () {
@@ -377,7 +377,7 @@
       addEv('turn/end · reason: aborted', 'bd');
       setLoss('<b>Settlement:</b><span class="good">all 6 events persisted before cancel kept</span>, plus 3 closing events. The cleared follow-up has no turn/end; foldConsumedWork derives from inbox records that work was thrown away unrun.');
     } });
-    list.push({ status: 'Closing handoff: the cancel holder was cleared before turn/end published—this turn's cancel power ends here. New messages arrive; the next turn gets a fresh signal.', run: function () {
+    list.push({ status: 'Closing handoff: the cancel holder was cleared before turn/end published—this turn’s cancel power ends here. New messages arrive; the next turn gets a fresh signal.', run: function () {
       setSig('live', 'turn 8 · fresh signal'); setProc('', 'Running');
       addEv('turn/start · turn 8', 'bd', 'new turn · new AbortController');
     } });
@@ -387,7 +387,7 @@
   function buildB() {
     var list = [];
     commonOpening(list, true);
-    list.push({ status: 'No Esc this time: the process is kill -9'd and everything stops cold. No catch, no finally—the log stops mid-cut.', run: function () {
+    list.push({ status: 'No Esc this time: the process is kill -9’d and everything stops cold. No catch, no finally—the log stops mid-cut.', run: function () {
       addEv('kill -9 · process gone', 'mark', '', true);
       setProc('dead', 'dead'); setSig('off', 'gone with process'); 
       setLoss('<b>Log right now:</b>turn open, step open, tool/call dangling with no result. But the 6 persisted events are fine.');
@@ -395,7 +395,7 @@
     list.push({ status: 'The user restarts DSH and reopens this session. Cold load scans the log and finds turn/start without a matching turn/end.', run: function () {
       setProc('idle', 'restarted · cold load');
     } });
-    list.push({ status: 'First synthetic event: an error-placeholder result for the dangling tool/call. Text says result unknown—only idempotent ops may retry; don't retry blindly.', run: function () {
+    list.push({ status: 'First synthetic event: an error-placeholder result for the dangling tool/call. Text says result unknown—only idempotent ops may retry; don’t retry blindly.', run: function () {
       addEv('tool/result · synthetic placeholder (result unknown)', 'syn', 'recovery synth');
     } });
     list.push({ status: 'Then synthesize step/end and turn/end { interrupted } to close the tail. interrupted is the only ending the loop never writes itself—seeing it means a crash happened.', run: function () {
@@ -417,12 +417,12 @@
       addEv('kill -9 · process gone', 'mark', '', true);
       setProc('dead', 'dead'); setSig('off', 'gone with process');
     } });
-    list.push({ status: 'Truncate recovery acts: delete everything from turn/start onward; the log rewinds to the previous turn's end.', run: function () {
+    list.push({ status: 'Truncate recovery acts: delete everything from turn/start onward; the log rewinds to the previous turn’s end.', run: function () {
       var n = killRows(0);
       setProc('idle', 'restarted · truncate recovery');
       setLoss('<b>Settlement:</b><span class="bad">' + n + ' persisted events discarded</span>: user message, reasoning the model already figured out, test results already produced—all buried with it.');
     } });
-    list.push({ status: 'Contrast: at the same accident moment, DSH's balancing keeps 6 and drops 0; truncate drops 6. A long-task turn may have dozens of steps—this bill gets much bigger.', run: function () {} });
+    list.push({ status: 'Contrast: at the same accident moment, DSH’s balancing keeps 6 and drops 0; truncate drops 6. A long-task turn may have dozens of steps—this bill gets much bigger.', run: function () {} });
     return list;
   }
 

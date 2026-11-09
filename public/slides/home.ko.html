@@ -1614,50 +1614,12 @@ a.contrib-item:hover .contrib-name{color:var(--text-h);}
 <footer class="footer"><div class="wrap">方片新媒体 · 方片学堂</div></footer>
 
 <script src="course-data.ko.js?v=20260903a"></script>
+<script src="local-learning.js?v=2"></script>
 <script src="auth.js?v=20260903a"></script>
 
 
 <script>
-(function(){
-  if(!window.XueaiAuth) return;
-  window.XueaiAuth.mount(document.getElementById('authSlot'));
-
-  /* 홈페이지 메인 CTA:
-     비로그인 → 「첫 번째 챕터부터 시작」유지, 클릭 시 로그인 안내 팝업（둘러보기 / 바로 로그인）;
-     로그인 → 「지난번에 멈춘 곳에서 이어서 시작」으로 변경, 마지막 학습 위치로 이동. */
-  var btn = document.getElementById('heroStart');
-  var txt = document.getElementById('heroStartTxt');
-  if(!btn) return;
-
-  function localLast(){
-    try{
-      return (JSON.parse(localStorage.getItem('ai_course_progress_v1')||'{}').__last) || '';
-    }catch(e){ return ''; }
-  }
-
-  window.XueaiAuth.ready.then(function(state){
-    if(state.loggedIn){
-      var apply = function(last){
-        if(last){
-          txt.textContent = '지난번에 멈춘 곳에서 이어서 시작';
-          btn.href = 'learn.ko.html#' + encodeURIComponent(last);
-        }
-      };
-      apply(localLast());
-      fetch('/auth/progress', {credentials:'same-origin'})
-        .then(function(r){ return r.json(); })
-        .then(function(d){
-          if(d && d.ok && d.progress && d.progress.__last) apply(d.progress.__last);
-        })
-        .catch(function(){});
-    }else{
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        window.XueaiAuth.openLoginModal('/slides/learn.ko.html', {browseHref:'learn.ko.html'});
-      });
-    }
-  });
-})();
+/* Original remote service retired in local mode. */
 (function(){
   var btn = document.getElementById('themeBtn');
   if(btn){
@@ -1770,7 +1732,7 @@ a.contrib-item:hover .contrib-name{color:var(--text-h);}
   var sortStatus = document.getElementById('topicSortStatus');
   var popularState = 'loading';
   var popularLessons = {};
-  var currentMode = 'popular';
+  var currentMode = 'course';
   var topics = [];
 
   window.COURSE.parts.forEach(function(part){
@@ -1792,98 +1754,7 @@ a.contrib-item:hover .contrib-name{color:var(--text-h);}
      篇章名按索引取本页 COURSE.parts，
      跟随页面语言；结构对不上（如数据版本错位）时回退接口里的名字。
      接口失败或还没有任何学习数据时整块不展示 */
-  (function(){
-    if(!window.fetch) return;
-    fetch('/auth/stats').then(function(r){ return r.json(); }).then(function(d){
-      if(!d || !d.ok || !d.parts || !d.parts.length) return;
-      var hasData = d.completed > 0;
-      d.parts.forEach(function(p){ if(p.percent > 0) hasData = true; });
-      if(!hasData) return;
-      document.getElementById('csCompleted').textContent = d.completed;
-      if(!d.completed){
-        document.getElementById('csCap').textContent = '첫 번째 수료증의 주인공은 아직 없어요 — 바로 당신일지도';
-      }
-      var localParts = (window.COURSE && window.COURSE.parts) || [];
-      var useLocal = localParts.length === d.parts.length;
-      var max = 1;
-      d.parts.forEach(function(p){ if(p.percent > max) max = p.percent; });
-      var bars = document.getElementById('csBars');
-      d.parts.forEach(function(p, i){
-        var lp = useLocal ? localParts[i] : null;
-        var row = document.createElement('div');
-        row.className = 'cs-row';
-        var name = document.createElement('span');
-        name.className = 'cs-name';
-        name.textContent = (lp && lp.num) || p.num || p.title;
-        name.title = (lp && lp.title) || p.title;
-        var track = document.createElement('div');
-        track.className = 'cs-track';
-        var fill = document.createElement('i');
-        fill.style.width = (p.percent ? Math.max(p.percent / max * 100, 2) : 0) + '%';
-        track.appendChild(fill);
-        var n = document.createElement('b');
-        n.className = 'cs-n';
-        n.textContent = p.percent + '%';
-        row.appendChild(name); row.appendChild(track); row.appendChild(n);
-        bars.appendChild(row);
-      });
-      document.getElementById('certStats').hidden = false;
-      renderHonors(d.honors);
-    }).catch(function(){});
-
-    /* 荣誉榜：昵称一律 textContent 落地，上游数据不进 HTML。
-       每列取 5 条，某一列没人上榜就藏起该列。发证还少的时候三列会装着
-       同一批人，所以内容与「全球前五」完全重合的列也藏掉，
-       避免同一批名字在页面上并排出现两三次 */
-    function renderHonors(h){
-      if(!h) return;
-      var sig = function(list){
-        return (list || []).map(function(c){ return c.seq + '/' + c.nick; }).join(',');
-      };
-      var topSig = sig(h.top);
-      var cols = [
-        ['top', 'chTop', 'chTopCol', true],
-        ['week', 'chWeek', 'chWeekCol', false],
-        ['recent', 'chRecent', 'chRecentCol', false]
-      ];
-      var any = false;
-      cols.forEach(function(cfg){
-        var list = h[cfg[0]] || [];
-        if(cfg[0] !== 'top'){
-          /* recent 是倒序，正过来再和 top 比 */
-          var norm = cfg[0] === 'recent' ? list.slice().reverse() : list;
-          if(sig(norm) === topSig) list = [];
-        }
-        if(!list.length) return;
-        var ul = document.getElementById(cfg[1]);
-        list.forEach(function(c, i){
-          var li = document.createElement('li');
-          li.className = 'ch-item' + (cfg[3] && i === 0 ? ' gold' : '');
-          var rank = document.createElement('span');
-          rank.className = 'ch-rank';
-          rank.textContent = cfg[0] === 'recent' ? (c.seq || '·') : (i + 1);
-          var nick = document.createElement('span');
-          nick.className = 'ch-nick';
-          nick.textContent = c.nick;
-          var when = document.createElement('span');
-          when.className = 'ch-when';
-          when.textContent = c.seq ? 'No.' + c.seq : fmtDay(c.ts);
-          if(cfg[0] === 'recent') when.textContent = fmtDay(c.ts);
-          li.appendChild(rank); li.appendChild(nick); li.appendChild(when);
-          ul.appendChild(li);
-        });
-        document.getElementById(cfg[2]).hidden = false;
-        any = true;
-      });
-      if(any) document.getElementById('certHonors').hidden = false;
-    }
-
-    function fmtDay(ts){
-      if(!ts) return '';
-      var d = new Date(ts * 1000);
-      return (d.getMonth() + 1) + '/' + d.getDate();
-    }
-  })();
+  /* Original remote service retired in local mode. */
 
   /**
    * 배경: 홈페이지에서 백엔드의 학습 포인트 조회수를 주제 카드에 집계.
@@ -2240,53 +2111,13 @@ a.contrib-item:hover .contrib-name{color:var(--text-h);}
    * 설계 의도: 페이지 로드 후 비동기 프리페치, 성공 시 데이터 캐시, 실패 시 요청과 오류 기록 및 폴백 상태 표시.
    * 제약: ok=true이고 lessons가 객체인 응답만 수락, 불완전한 데이터는 정렬에 사용하지 않음.
    */
-  function loadPopular(){
-    var endpoint = '/pv/popular?days=7';
-    console.info('[인기 주제] 요청', {endpoint:endpoint, days:7});
-    fetch(endpoint, {credentials:'same-origin'})
-      .then(function(response){
-        if(!response.ok) throw new Error('HTTP '+response.status);
-        return response.json();
-      })
-      .then(function(data){
-        if(!data || data.ok!==true || !data.lessons || typeof data.lessons!=='object'){
-          throw new Error('인기 통계 응답 형식이 잘못되었습니다');
-        }
-        popularLessons = data.lessons;
-        popularState = 'ready';
-        sortStatus.textContent = currentMode==='popular'
-          ? '최근 7일 조회 인기도순 정렬 · Top 15만 표시'
-          : '스타터 + 7대 챕터 + 창업 보너스 · 전체 학습 경로';
-        sortStatus.classList.remove('error');
-        console.info('[인기 주제] 응답', data);
-        if(currentMode==='popular') renderTopics('popular');
-      })
-      .catch(function(error){
-        popularState = 'error';
-        if(currentMode==='popular'){
-          currentMode = 'course';
-          sortCourse.classList.add('active');
-          sortPopular.classList.remove('active');
-          sortCourse.setAttribute('aria-pressed','true');
-          sortPopular.setAttribute('aria-pressed','false');
-          renderTopics('course');
-        }
-        sortStatus.textContent = '인기 데이터를 일시적으로 사용할 수 없습니다';
-        sortStatus.classList.add('error');
-        console.error('[인기 주제] 로드 실패', {
-          endpoint:endpoint,
-          message:error && error.message,
-          stack:error && error.stack
-        });
-      });
-  }
+  function loadPopular(){}
 
   sortCourse.addEventListener('click', function(){ activateMode('course'); });
   sortPopular.addEventListener('click', function(){ activateMode('popular'); });
   renderHeroStats();
   renderHeroVisual();
-  renderTopics('popular');
-  loadPopular();
+  activateMode('course');
 
   /* 右侧浮动篇章目录：滚进课程区才浮现，全篇章一览（主线/独立篇章/自测甜点），
      滚动时高亮当前篇章，点哪跳哪。热门模式下点击会先切到课程顺序再跳，
@@ -2372,6 +2203,7 @@ a.contrib-item:hover .contrib-name{color:var(--text-h);}
      课程页由 nav-inject.js 注入，首页有自己的导航栏、不走 nav-inject，
      此前因此从未弹出过。脚本名不得含 ad，详见 splash.js 头部注释。 -->
 
-<script src="/pwa-install.js?v=20260901c"></script>
+
+<script src="local-home.js?v=2"></script>
 </body>
 </html>

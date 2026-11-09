@@ -353,7 +353,7 @@
     var list = [];
     var state = {};
     list.push({
-      caption: '시작: composeEntries가 받는 건 빈 항목 목록이에요. patch 네 층이 1–4 순서로 칠해지고, 의미론은 ' + (mode === 'replace' ? '통째 교체(DSH 실제 동작)' : 'deep-merge(수업 대조, DSH 미구현)') + '예요.';,
+      caption: '시작: composeEntries가 받는 건 빈 항목 목록이에요. patch 네 층이 1–4 순서로 칠해지고, 의미론은 ' + (mode === 'replace' ? '통째 교체(DSH 실제 동작)' : 'deep-merge(수업 대조, DSH 미구현)') + '예요.',
       run: function () { renderResult({}); markLayer(null); }
     });
     LAYERS.forEach(function (l) {

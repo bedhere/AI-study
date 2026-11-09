@@ -111,7 +111,7 @@
 </style>
 <meta name="description" content="A type system cannot police length, frequency, or prefix stability. Codex writes six bans into AGENTS.md, copies them into the code review skill, and lets review hold the cost after the type has already passed">
 <meta name="author" content="Fangpian">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Write Context Governance into Code Review"><meta property="og:description" content="A type system cannot police length, frequency, or prefix stability. Codex writes six bans into AGENTS.md, copies them into the code review skill, and lets review hold the cost after the type has already passed"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Write Context Governance into Code Review"><meta property="og:description" content="A type system cannot police length, frequency, or prefix stability. Codex writes six bans into AGENTS.md, copies them into the code review skill, and lets review hold the cost after the type has already passed"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
 
 
 
@@ -366,11 +366,11 @@ Codex maintains a context (history of messages) that is sent to the model in inf
       typeOk: true,
       typeText: 'It compiles. The handler stitches ResponseItem::Message directly and skips the registry.',
       chips: [
-        {tag: 'user', text: 'The user's original words are still here.'},
+        {tag: 'user', text: 'The user’s original words are still here.'},
         {tag: 'hint', text: '<hint>remember to run tests</hint>, no marker registration, no cap.', bad: true}
       ],
       chipsFix: [
-        {tag: 'user', text: 'The user's original words are still here.'},
+        {tag: 'user', text: 'The user’s original words are still here.'},
         {tag: 'hint', text: 'Still a wild string from format!. Incremental-plus-cap does not fix rule 6.', bad: true}
       ]
     },
@@ -390,7 +390,7 @@ Codex maintains a context (history of messages) that is sent to the model in inf
       title: 'When AGENTS.md changes, rewrite that history row in place',
       pitch: 'One fewer message, fewer token. Find the old UserInstructions and swap the body.',
       typeOk: true,
-      typeText: 'It rewrites an existing fragment's text; the type is still legal.',
+      typeText: 'It rewrites an existing fragment’s text; the type is still legal.',
       chips: [
         {tag: 'UserInstructions', text: 'History item 3 still has that id; the body has already been swapped for the new AGENTS.md.', bad: true}
       ],
@@ -535,7 +535,7 @@ Codex maintains a context (history of messages) that is sent to the model in inf
     }
     out.push({
       cap: v.block
-        ? 'If this PR is cleared, the model's context gains the row above. The type let it through. The bill starts changing here.'
+        ? 'If this PR is cleared, the model’s context gains the row above. The type let it through. The bill starts changing here.'
         : 'All six passed. The model sees incremental scraps with a cap; the prefix can still hit. P0 still needs a human to write the worst case.',
       trace: id === 'rewrite' ? 6 : (v.r2 === 'block' ? 4 : (v.r6 === 'block' ? 0 : 1)),
       lamps: {6:v.r6, 3:v.r3, 4:v.r4, 5:v.r5, 2:v.r2, 1:v.r1},

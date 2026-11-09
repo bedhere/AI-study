@@ -1068,15 +1068,8 @@ body .topbar .xa-login-btn::before{
   <div class="prog-wrap">
     <div class="prog-bar"><i id="progBar"></i></div>
     <span id="progText">0 / 0</span>
-    <a class="cert-link" id="certLink" href="certificate.en.html" title="Complete all lessons to claim your certificate">🎓 Certificate</a>
-    <div class="cert-peek" id="certPeek">
-      <div class="cp-title">🎓 Finish every lesson, earn your certificate</div>
-      <img class="cp-img" src="assets/cert-preview.en.webp" alt="Certificate sample" width="1200" height="848" loading="lazy" decoding="async">
-      <div class="cp-foot">
-        <span class="cp-note" id="cpNote">Name comes from your Miyang nickname</span>
-        <a class="cp-cta" href="certificate.en.html">See the certificate ›</a>
-      </div>
-    </div>
+    <span class="cert-link" id="certLink">✓</span>
+
   </div>
   </div>
   <button class="share-lesson-btn" id="shareLesson" title="Share this lesson">
@@ -1129,9 +1122,9 @@ body .topbar .xa-login-btn::before{
       <span class="fb-icon">🎓</span>
       <div class="fb-text">
         <b>Congratulations! You&rsquo;ve completed every lesson</b>
-        <span>Your certificate is ready — the name comes from your Miyang nickname</span>
+        <span>Your progress stays in this browser.</span>
       </div>
-      <a class="fb-cta" href="certificate.en.html">Claim certificate</a>
+      <a class="fb-cta" href="home.en.html">View learning progress</a>
       <button class="fb-close" id="finishClose" type="button" title="Don't show again">×</button>
     </div>
     <div class="lesson-foot">
@@ -1158,6 +1151,8 @@ body .topbar .xa-login-btn::before{
 
 <script src="course-data.en.js?v=20260903a"></script>
 <script src="share-card.js?v=20260903a"></script>
+<script src="local-learning.js?v=2"></script>
+<script src="local-search.js?v=2"></script>
 <script src="auth.js?v=20260903a"></script>
 
 <script src="watermark.js?v=20260806c"></script>
@@ -1196,39 +1191,17 @@ body .topbar .xa-login-btn::before{
     navOpen(false);
   }
 
-  function loadProgress(){
-    try{ return JSON.parse(localStorage.getItem(PROG_KEY)||'{}'); }catch(e){ return {}; }
-  }
+  function loadProgress(){ return window.FangpianLearning.forLessons(FLAT); }
 
-  /* ── Cloud progress sync (requires login) ──
-     localStorage is always the immediate source; once logged in:
-     1. On load, fetch server progress, merge (union) with local, write back to both;
-     2. After that, debounce 1.5s push to server on every progress change. */
-  var cloudSync = false;
-  var pushTimer = null;
-  function pushProgress(){
-    if(!cloudSync) return;
-    clearTimeout(pushTimer);
-    pushTimer = setTimeout(function(){
-      fetch('/auth/progress', {
-        method:'POST', credentials:'same-origin',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({progress: progress})
-      }).catch(function(){});
-    }, 1500);
-  }
+  /* Progress is stored locally by the shared learning module. */
 
-  function saveProgress(p){
-    try{ localStorage.setItem(PROG_KEY, JSON.stringify(p)); }catch(e){}
-    pushProgress();
-  }
+  function saveProgress(p){ window.FangpianLearning.saveLessons(p, FLAT); }
   var progress = loadProgress();
 
   function currentFile(){
-    var h = decodeURIComponent((location.hash||'').replace(/^#/,'')).trim();
-    if(h && FLAT.some(function(l){return l.file===h;})) return h;
-    return (progress.__last && FLAT.some(function(l){return l.file===progress.__last;}))
-      ? progress.__last : FLAT[0].file;
+    var h = window.FangpianLearning.route(location.hash).file;
+    if(h && FLAT.some(function(lesson){return lesson.file === h;})) return h;
+    return window.FangpianLearning.lastFor(FLAT) || FLAT[0].file;
   }
 
   var navTree = document.getElementById('navTree');
@@ -1373,8 +1346,11 @@ body .topbar .xa-login-btn::before{
   function loadLesson(file){
     var f = findLesson(file);
     var L = f.data;
+    var quizMode = window.FangpianLearning.route(location.hash).mode;
+    var routeHash = '#' + encodeURIComponent(L.file + (quizMode ? '?mode=' + quizMode : ''));
+    if(location.hash !== routeHash) history.replaceState(null, '', routeHash);
     var iframeSrc = L.file.replace(/\.html$/, '.en.html');
-    iframe.src = iframeSrc + (iframeSrc.indexOf('?')>=0 ? '&' : '?') + 'embed=1';
+    iframe.src = iframeSrc + (iframeSrc.indexOf('?')>=0 ? '&' : '?') + 'embed=1' + (quizMode ? '&mode=' + quizMode : '');
 
     var tagStyle = TAGS[L.tag] || {bg:'#f3f4f6', fg:'#4b5563'};
     document.getElementById('crumb').innerHTML =
@@ -1508,22 +1484,11 @@ body .topbar .xa-login-btn::before{
     document.getElementById('finishBanner').classList.remove('show');
   });
 
-  /* ────── Sidebar search: local title match (sync) + server-side body match (async) ──────
-     Background: this box used to match only title/desc/topicTitle from course-data.js,
-     but what learners remember is a term from the lesson body ("hallucination", "ReAct",
-     "context window"). Those live only in the body, which was 0% searchable.
-     Design intent: body matching runs server-side via /auth/search; the browser only
-     gets back the matching file names. Shipping a full-text index to the client was
-     evaluated and rejected on two grounds: 362 KB gzipped for Chinese, and the web root
-     is the repo root — an index file on disk is directly GET-able, bypassing the Nginx
-     auth_request gate on lessons. See PRD-search.md.
-     Key constraint: the two stages must stay separate. Stage one is synchronous so that
-     when the auth service is down the box still degrades to the old title-only search. */
+  /* Match titles immediately; load the current language text index on demand. */
   var SEARCH_LANG = 'en';
   var HIT_TAG_TEXT = 'in text';  // badge label, read by buildTree() (assigned before its call)
   var SEARCH_DEBOUNCE = 250;     // below this, one burst of typing turns into many requests
-  var SEARCH_MIN_LEN = 2;        // single characters match too broadly to be worth a request
-  var SEARCH_TIMEOUT = 3000;
+  var SEARCH_MIN_LEN = 1;
   var SEARCH_CACHE_MAX = 100;
   var BY_FILE = {};
   FLAT.forEach(function(l){ BY_FILE[l.file] = l; });
@@ -1562,47 +1527,42 @@ body .topbar .xa-login-btn::before{
       }
       d.style.display = (!q || anyVisible) ? '' : 'none';
     });
+
+    if(searchStatus){
+      var count = Array.prototype.filter.call(navTree.querySelectorAll('.lesson-item'),function(item){return item.style.display !== 'none';}).length;
+      searchStatus.hidden = !q;
+      searchStatus.textContent = searchLoading ? localLabels.loading : searchFailed ? localLabels.searchError : count ? localLabels.results.replace('{n}',count) : localLabels.empty;
+    }
   }
 
   function fetchBodyHits(q){
     var key = SEARCH_LANG + '\n' + q;
     var seq = ++searchSeq;
-    var ctl = (typeof AbortController === 'function') ? new AbortController() : null;
-    var timer = setTimeout(function(){ if(ctl) ctl.abort(); }, SEARCH_TIMEOUT);
-    fetch('/auth/search?lang=' + SEARCH_LANG + '&q=' + encodeURIComponent(q),
-          {credentials:'same-origin', signal: ctl ? ctl.signal : undefined})
-      .then(function(r){
-        if(!r.ok) throw new Error('HTTP ' + r.status);
-        return r.json();
-      })
-      .then(function(d){
-        clearTimeout(timer);
-        var files = (d && d.files) || [];
-        if(searchCache.size >= SEARCH_CACHE_MAX) searchCache.clear();
-        searchCache.set(key, new Set(files));
-        if(seq !== searchSeq) return;   // a later query is in flight; discard this result
-        searchBodyHits = searchCache.get(key);
-        console.debug('[search]', {q:q, lang:SEARCH_LANG, hits:files.length,
-                                   truncated: !!(d && d.truncated)});
-        applySearch();
-      })
-      .catch(function(err){
-        /* Degrade, don't fail: the box still holds stage-one title results, so search
-           keeps working. Hit when start.py serves no corpus or auth-service restarts. */
-        clearTimeout(timer);
-        if(seq !== searchSeq) return;
-        console.warn('[search] body search unavailable, falling back to title match',
-                     {q:q, lang:SEARCH_LANG, error:err && (err.message || err)});
-      });
+    searchLoading = true; searchFailed = false;
+    searchInput.setAttribute('aria-busy', 'true');
+    applySearch();
+    window.FangpianSearch.find(q, SEARCH_LANG).then(function(files){
+      if(seq !== searchSeq) return;
+      if(searchCache.size >= SEARCH_CACHE_MAX) searchCache.clear();
+      searchBodyHits = new Set(files); searchCache.set(key, searchBodyHits);
+      searchLoading = false; searchInput.setAttribute('aria-busy', 'false');
+      applySearch();
+    }).catch(function(){
+      if(seq !== searchSeq) return;
+      searchLoading = false; searchFailed = true;
+      searchInput.setAttribute('aria-busy', 'false'); applySearch();
+    });
   }
 
   function onSearchInput(raw, allowRemote){
     var q = (raw||'').trim().toLowerCase();
     if(q !== searchQ){
-      searchQ = q;
+      searchQ = q; searchFailed = false;
       searchSeq++;               // query changed; in-flight results no longer apply
       var cached = searchCache.get(SEARCH_LANG + '\n' + q);
       searchBodyHits = cached || null;
+      searchLoading = q.length >= SEARCH_MIN_LEN && !cached;
+      searchInput.setAttribute('aria-busy', searchLoading ? 'true' : 'false');
       applySearch();
     }
     clearTimeout(searchTimer);
@@ -1612,6 +1572,17 @@ body .topbar .xa-login-btn::before{
 
   var searchInput = document.getElementById('searchInput');
   var searchClear = document.getElementById('searchClear');
+  // fangpian:local-reader-v1
+  var localLabels = window.FangpianLearning.labels;
+  var searchLoading = false, searchFailed = false;
+  var searchStatus = document.createElement('p');
+  searchStatus.id = 'localSearchStatus'; searchStatus.hidden = true;
+  searchStatus.setAttribute('role','status'); searchStatus.setAttribute('aria-live','polite');
+  searchStatus.style.cssText = 'margin:6px 16px 10px;font-size:12px;line-height:1.6;color:var(--sub,#58534c)';
+  searchInput.parentElement.insertAdjacentElement('afterend',searchStatus);
+  searchInput.setAttribute('aria-label',localLabels.searchLabel);
+  searchInput.placeholder = localLabels.searchLabel;
+
 
   /* ── Ask Alice to search (PRD 36) ───────────────────────────────────────
      Alice runs inside the lesson iframe while this button lives in the shell,
@@ -1684,7 +1655,9 @@ body .topbar .xa-login-btn::before{
         a.addEventListener('click', function(e){
           if(e.defaultPrevented || e.button!==0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
           e.preventDefault();
-          location.hash = '#' + encodeURIComponent(base);
+          var mode = new URL(a.href).searchParams.get('mode');
+          var quiz = /^exam-(?:\d+|all)\.html$/.test(base) && /^(exam|drill)$/.test(mode || '');
+          location.hash = '#' + encodeURIComponent(base + (quiz ? '?mode=' + mode : ''));
         });
       });
     }catch(e){}
@@ -1971,48 +1944,13 @@ body .topbar .xa-login-btn::before{
   refreshProgress();
   loadLesson(currentFile());
 
-  /* ── Login: top bar auth area + sidebar lock icons (first two lessons per part are free) ──
-     The page HTML always includes full content for crawlers; visible scope is controlled by
-     paywall.js inside the iframe, not by server-side blocking. This only handles visual state.
-     Both sides use /auth/me as the single source of truth. */
-  if(window.XueaiAuth){
-    window.XueaiAuth.mount(document.getElementById('authSlot'));
-    var applyLocks = function(){
-      var logged = window.XueaiAuth.state.loggedIn;
-      navTree.querySelectorAll('.lesson-item').forEach(function(el){
-        var locked = !logged && !window.XueaiAuth.isFree(el.dataset.file);
-        el.classList.toggle('locked', locked);
-        if(locked){ el.title = 'Log in to access this lesson (free)'; }
-        else{ el.removeAttribute('title'); }
-      });
-    };
-    applyLocks();
-    window.XueaiAuth.ready.then(function(){
-      applyLocks();
-      if(!window.XueaiAuth.state.loggedIn) return;
-      /* Logged in: fetch server progress → union-merge with local → write back to both */
-      fetch('/auth/progress', {credentials:'same-origin'})
-        .then(function(r){ return r.json(); })
-        .then(function(d){
-          cloudSync = true;
-          var remote = (d && d.ok && d.progress) || {};
-          var changed = false;
-          Object.keys(remote).forEach(function(k){
-            if(k === '__last'){
-              if(!progress.__last && remote.__last){ progress.__last = remote.__last; changed = true; }
-            }else if(!progress[k]){
-              progress[k] = 1; changed = true;
-            }
-          });
-          if(changed){
-            refreshProgress();
-            updateMarkUI(currentFile());
-          }
-          saveProgress(progress); // push merged result back to server
-        })
-        .catch(function(){});
-    });
-  }
+  /* Local mode badge and progress updates across tabs. */
+  window.XueaiAuth.mount(document.getElementById('authSlot'));
+  window.addEventListener('fangpian:progress', function(){
+    progress = loadProgress();
+    refreshProgress();
+    updateMarkUI(currentFile());
+  });
 })();
 </script>
 <script src="i18n.js?v=20260903a"></script>
@@ -2177,6 +2115,6 @@ body .topbar .xa-login-btn::before{
 })();
 </script>
 
-<script src="/pwa-install.js?v=20260901c"></script>
+
 </body>
 </html>

@@ -1,6 +1,7 @@
 {
   "baselineCommit": "612564f",
   "source": "Read-only original slides snapshot; recorded before course content edits.",
+  "resolution": "All 25 baseline issues were fixed in phase 2 on 2026-11-09. This list is retained as the historical baseline; verify-content now fails on any remaining script error.",
   "issues": [
     {
       "file": "algo-1.en.html",

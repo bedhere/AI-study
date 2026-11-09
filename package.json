@@ -6,13 +6,19 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "predev": "node scripts/build-search-index.mjs",
     "dev": "vinext dev",
+    "prebuild": "node scripts/build-search-index.mjs",
     "build": "vinext build",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt",
     "check:cleanup": "python scripts/cleanup_legacy.py --check",
-    "verify:content": "node scripts/verify-content.mjs"
+    "verify:content": "node scripts/verify-content.mjs",
+    "build:search": "node scripts/build-search-index.mjs",
+    "check:resources": "python scripts/check-local-resources.py",
+    "pretest": "node scripts/build-search-index.mjs",
+    "test": "node --test tests/local-learning.test.mjs"
   },
   "dependencies": {
     "react": "19.2.6",

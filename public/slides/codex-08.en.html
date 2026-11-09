@@ -119,7 +119,7 @@
 </style>
 <meta name="description" content="Codex splits compaction into three timings times three implementations. Remote results hit a filter first; a mid-turn summary must sit as the last history item; flip the empty-window switch and memory does not come along">
 <meta name="author" content="Fangpian">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="After the Window Fills, What Gets Cut and What Stays"><meta property="og:description" content="Codex splits compaction into three timings times three implementations. Remote results hit a filter first; a mid-turn summary must sit as the last history item; flip the empty-window switch and memory does not come along"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="After the Window Fills, What Gets Cut and What Stays"><meta property="og:description" content="Codex splits compaction into three timings times three implementations. Remote results hit a filter first; a mid-turn summary must sit as the last history item; flip the empty-window switch and memory does not come along"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
 
 
 
@@ -485,7 +485,7 @@
 
     if (impl === 'budget') {
       out.push({
-        cap: 'The dispatcher's first line, TokenBudget, is true. Model and server summaries are both skipped.',
+        cap: 'The dispatcher’s first line, TokenBudget, is true. Model and server summaries are both skipped.',
         trace: 4, chips: clone(FULL), ver: 3, cut: 0, keep: 0,
         stKind: 'hold', st: 'Empty-window switch on; neither remote nor local is reached.',
         badges: ['empty']

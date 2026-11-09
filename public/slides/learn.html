@@ -1068,15 +1068,8 @@ body .topbar .xa-login-btn::before{
   <div class="prog-wrap">
     <div class="prog-bar"><i id="progBar"></i></div>
     <span id="progText">0 / 0</span>
-    <a class="cert-link" id="certLink" href="certificate.html" title="学完全部课程，领取结业证书">🎓 领证书</a>
-    <div class="cert-peek" id="certPeek">
-      <div class="cp-title">🎓 学完全部课程，可领结业证书</div>
-      <img class="cp-img" src="assets/cert-preview.webp" alt="结业证书样张" width="1200" height="848" loading="lazy" decoding="async">
-      <div class="cp-foot">
-        <span class="cp-note" id="cpNote">证书姓名取自方片昵称</span>
-        <a class="cp-cta" href="certificate.html">看看证书 ›</a>
-      </div>
-    </div>
+    <span class="cert-link" id="certLink">✓</span>
+
   </div>
   </div>
   <button class="share-lesson-btn" id="shareLesson" title="分享本节给朋友">
@@ -1129,9 +1122,9 @@ body .topbar .xa-login-btn::before{
       <span class="fb-icon">🎓</span>
       <div class="fb-text">
         <b>恭喜！全部课程已学完</b>
-        <span>你的结业证书已经准备好，姓名取自方片账号昵称</span>
+        <span>学习进度保存在此浏览器。</span>
       </div>
-      <a class="fb-cta" href="certificate.html">领取结业证书</a>
+      <a class="fb-cta" href="home.html">查看学习进度</a>
       <button class="fb-close" id="finishClose" type="button" title="不再提示">×</button>
     </div>
     <div class="lesson-foot">
@@ -1158,6 +1151,8 @@ body .topbar .xa-login-btn::before{
 
 <script src="course-data.js?v=20260903a"></script>
 <script src="share-card.js?v=20260903a"></script>
+<script src="local-learning.js?v=2"></script>
+<script src="local-search.js?v=2"></script>
 <script src="auth.js?v=20260903a"></script>
 
 <script src="watermark.js?v=20260806c"></script>
@@ -1196,39 +1191,17 @@ body .topbar .xa-login-btn::before{
     navOpen(false);
   }
 
-  function loadProgress(){
-    try{ return JSON.parse(localStorage.getItem(PROG_KEY)||'{}'); }catch(e){ return {}; }
-  }
+  function loadProgress(){ return window.FangpianLearning.forLessons(FLAT); }
 
-  /* ── 学习进度云同步（登录后生效） ──
-     本地 localStorage 始终是即时数据源；登录后：
-     1. 页面加载时拉取服务器进度，与本地合并（并集）后写回两端；
-     2. 之后每次进度变化防抖 1.5s 推送到服务器。 */
-  var cloudSync = false;
-  var pushTimer = null;
-  function pushProgress(){
-    if(!cloudSync) return;
-    clearTimeout(pushTimer);
-    pushTimer = setTimeout(function(){
-      fetch('/auth/progress', {
-        method:'POST', credentials:'same-origin',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({progress: progress})
-      }).catch(function(){});
-    }, 1500);
-  }
+  /* Progress is stored locally by the shared learning module. */
 
-  function saveProgress(p){
-    try{ localStorage.setItem(PROG_KEY, JSON.stringify(p)); }catch(e){}
-    pushProgress();
-  }
+  function saveProgress(p){ window.FangpianLearning.saveLessons(p, FLAT); }
   var progress = loadProgress();
 
   function currentFile(){
-    var h = decodeURIComponent((location.hash||'').replace(/^#/,'')).trim();
-    if(h && FLAT.some(function(l){return l.file===h;})) return h;
-    return (progress.__last && FLAT.some(function(l){return l.file===progress.__last;}))
-      ? progress.__last : FLAT[0].file;
+    var h = window.FangpianLearning.route(location.hash).file;
+    if(h && FLAT.some(function(lesson){return lesson.file === h;})) return h;
+    return window.FangpianLearning.lastFor(FLAT) || FLAT[0].file;
   }
 
   var navTree = document.getElementById('navTree');
@@ -1373,7 +1346,10 @@ body .topbar .xa-login-btn::before{
   function loadLesson(file){
     var f = findLesson(file);
     var L = f.data;
-    iframe.src = L.file + (L.file.indexOf('?')>=0 ? '&' : '?') + 'embed=1';
+    var quizMode = window.FangpianLearning.route(location.hash).mode;
+    var routeHash = '#' + encodeURIComponent(L.file + (quizMode ? '?mode=' + quizMode : ''));
+    if(location.hash !== routeHash) history.replaceState(null, '', routeHash);
+    iframe.src = L.file + (L.file.indexOf('?')>=0 ? '&' : '?') + 'embed=1' + (quizMode ? '&mode=' + quizMode : '');
 
     var tagStyle = TAGS[L.tag] || {bg:'#f3f4f6', fg:'#4b5563'};
     document.getElementById('crumb').innerHTML =
@@ -1505,21 +1481,11 @@ body .topbar .xa-login-btn::before{
     document.getElementById('finishBanner').classList.remove('show');
   });
 
-  /* ────── 目录搜索：本地标题匹配（同步）+ 服务端正文匹配（异步） ──────
-     背景：这个框原先只匹配 course-data.js 的 title/desc/topicTitle，而学员
-     记得住的往往是课里讲过的词（「幻觉」「ReAct」「上下文窗口」），这些词只在
-     正文里，全站 37 万字正文此前 0% 参与检索。
-     设计意图：正文匹配交给 /auth/search 在服务端做，浏览器只拿回命中的文件名。
-     曾评估过「下发全文索引到前端本地匹配」，两点否决：中文索引 gzip 后 362 KB；
-     且 web root 即仓库根目录，索引一旦落地成文件就能被直接 GET，绕过 Nginx
-     对课件的 auth_request 登录墙。详见 PRD-search.md。
-     关键约束：两段式不可合并——第一段本地匹配必须同步出结果，鉴权服务挂了、
-     本地 start.py 起不来时，搜索框都要能退回到改动前的标题搜索行为。 */
+  /* Match titles immediately; load the current language text index on demand. */
   var SEARCH_LANG = 'zh';
   var HIT_TAG_TEXT = '正文';    // 角标文案，buildTree() 建节点时取用（在其调用之前赋值）
   var SEARCH_DEBOUNCE = 250;    // 输入防抖：低于此值会把一次输入打成多次请求
-  var SEARCH_MIN_LEN = 2;       // 单字（尤其中文单字）命中面太广，不值得发请求
-  var SEARCH_TIMEOUT = 3000;
+  var SEARCH_MIN_LEN = 1;
   var SEARCH_CACHE_MAX = 100;
   var BY_FILE = {};
   FLAT.forEach(function(l){ BY_FILE[l.file] = l; });
@@ -1562,47 +1528,42 @@ body .topbar .xa-login-btn::before{
       }
       d.style.display = (!q || anyVisible) ? '' : 'none';
     });
+
+    if(searchStatus){
+      var count = Array.prototype.filter.call(navTree.querySelectorAll('.lesson-item'),function(item){return item.style.display !== 'none';}).length;
+      searchStatus.hidden = !q;
+      searchStatus.textContent = searchLoading ? localLabels.loading : searchFailed ? localLabels.searchError : count ? localLabels.results.replace('{n}',count) : localLabels.empty;
+    }
   }
 
   function fetchBodyHits(q){
     var key = SEARCH_LANG + '\n' + q;
     var seq = ++searchSeq;
-    var ctl = (typeof AbortController === 'function') ? new AbortController() : null;
-    var timer = setTimeout(function(){ if(ctl) ctl.abort(); }, SEARCH_TIMEOUT);
-    fetch('/auth/search?lang=' + SEARCH_LANG + '&q=' + encodeURIComponent(q),
-          {credentials:'same-origin', signal: ctl ? ctl.signal : undefined})
-      .then(function(r){
-        if(!r.ok) throw new Error('HTTP ' + r.status);
-        return r.json();
-      })
-      .then(function(d){
-        clearTimeout(timer);
-        var files = (d && d.files) || [];
-        if(searchCache.size >= SEARCH_CACHE_MAX) searchCache.clear();
-        searchCache.set(key, new Set(files));
-        if(seq !== searchSeq) return;   // 更晚的输入已发出，本次结果作废
-        searchBodyHits = searchCache.get(key);
-        console.debug('[search]', {q:q, lang:SEARCH_LANG, hits:files.length,
-                                   truncated: !!(d && d.truncated)});
-        applySearch();
-      })
-      .catch(function(err){
-        /* 降级而非报错：搜索框此时仍持有第一段的标题匹配结果，功能未中断。
-           本地 start.py 未启用语料、鉴权服务重启期间都会走到这里。 */
-        clearTimeout(timer);
-        if(seq !== searchSeq) return;
-        console.warn('[search] 正文搜索不可用，已退回标题匹配',
-                     {q:q, lang:SEARCH_LANG, error:err && (err.message || err)});
-      });
+    searchLoading = true; searchFailed = false;
+    searchInput.setAttribute('aria-busy', 'true');
+    applySearch();
+    window.FangpianSearch.find(q, SEARCH_LANG).then(function(files){
+      if(seq !== searchSeq) return;
+      if(searchCache.size >= SEARCH_CACHE_MAX) searchCache.clear();
+      searchBodyHits = new Set(files); searchCache.set(key, searchBodyHits);
+      searchLoading = false; searchInput.setAttribute('aria-busy', 'false');
+      applySearch();
+    }).catch(function(){
+      if(seq !== searchSeq) return;
+      searchLoading = false; searchFailed = true;
+      searchInput.setAttribute('aria-busy', 'false'); applySearch();
+    });
   }
 
   function onSearchInput(raw, allowRemote){
     var q = (raw||'').trim().toLowerCase();
     if(q !== searchQ){
-      searchQ = q;
+      searchQ = q; searchFailed = false;
       searchSeq++;              // 查询词已变，在途请求的结果不再适用
       var cached = searchCache.get(SEARCH_LANG + '\n' + q);
       searchBodyHits = cached || null;
+      searchLoading = q.length >= SEARCH_MIN_LEN && !cached;
+      searchInput.setAttribute('aria-busy', searchLoading ? 'true' : 'false');
       applySearch();
     }
     clearTimeout(searchTimer);
@@ -1612,6 +1573,17 @@ body .topbar .xa-login-btn::before{
 
   var searchInput = document.getElementById('searchInput');
   var searchClear = document.getElementById('searchClear');
+  // fangpian:local-reader-v1
+  var localLabels = window.FangpianLearning.labels;
+  var searchLoading = false, searchFailed = false;
+  var searchStatus = document.createElement('p');
+  searchStatus.id = 'localSearchStatus'; searchStatus.hidden = true;
+  searchStatus.setAttribute('role','status'); searchStatus.setAttribute('aria-live','polite');
+  searchStatus.style.cssText = 'margin:6px 16px 10px;font-size:12px;line-height:1.6;color:var(--sub,#58534c)';
+  searchInput.parentElement.insertAdjacentElement('afterend',searchStatus);
+  searchInput.setAttribute('aria-label',localLabels.searchLabel);
+  searchInput.placeholder = localLabels.searchLabel;
+
 
   /* ── 让 Alice 搜一搜（PRD 36）──────────────────────────────────────────
      Alice 跑在课件 iframe 里，这个按钮在外壳上，所以只能 postMessage 过去。
@@ -1682,7 +1654,9 @@ body .topbar .xa-login-btn::before{
         a.addEventListener('click', function(e){
           if(e.defaultPrevented || e.button!==0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
           e.preventDefault();
-          location.hash = '#' + encodeURIComponent(base);
+          var mode = new URL(a.href).searchParams.get('mode');
+          var quiz = /^exam-(?:\d+|all)\.html$/.test(base) && /^(exam|drill)$/.test(mode || '');
+          location.hash = '#' + encodeURIComponent(base + (quiz ? '?mode=' + mode : ''));
         });
       });
     }catch(e){}
@@ -1969,48 +1943,13 @@ body .topbar .xa-login-btn::before{
   refreshProgress();
   loadLesson(currentFile());
 
-  /* ── 登录：顶栏登录区 + 侧边栏锁标记（每个篇章前两节免登录） ──
-     课程页 HTML 始终带全文供抓取，可见范围由 iframe 内的 paywall.js 限制，
-     不再依赖服务端整页拦截；这里只负责把状态可视化。两边都以 /auth/me 为准，
-     口径一致，别在这儿另加一套判断。 */
-  if(window.XueaiAuth){
-    window.XueaiAuth.mount(document.getElementById('authSlot'));
-    var applyLocks = function(){
-      var logged = window.XueaiAuth.state.loggedIn;
-      navTree.querySelectorAll('.lesson-item').forEach(function(el){
-        var locked = !logged && !window.XueaiAuth.isFree(el.dataset.file);
-        el.classList.toggle('locked', locked);
-        if(locked){ el.title = '登录后可学习本节（免费）'; }
-        else{ el.removeAttribute('title'); }
-      });
-    };
-    applyLocks();
-    window.XueaiAuth.ready.then(function(){
-      applyLocks();
-      if(!window.XueaiAuth.state.loggedIn) return;
-      /* 登录态：拉服务器进度 → 与本地并集合并 → 写回两端 */
-      fetch('/auth/progress', {credentials:'same-origin'})
-        .then(function(r){ return r.json(); })
-        .then(function(d){
-          cloudSync = true;
-          var remote = (d && d.ok && d.progress) || {};
-          var changed = false;
-          Object.keys(remote).forEach(function(k){
-            if(k === '__last'){
-              if(!progress.__last && remote.__last){ progress.__last = remote.__last; changed = true; }
-            }else if(!progress[k]){
-              progress[k] = 1; changed = true;
-            }
-          });
-          if(changed){
-            refreshProgress();
-            updateMarkUI(currentFile());
-          }
-          saveProgress(progress); // 合并结果同时推回服务器
-        })
-        .catch(function(){});
-    });
-  }
+  /* Local mode badge and progress updates across tabs. */
+  window.XueaiAuth.mount(document.getElementById('authSlot'));
+  window.addEventListener('fangpian:progress', function(){
+    progress = loadProgress();
+    refreshProgress();
+    updateMarkUI(currentFile());
+  });
 })();
 </script>
 <script>
@@ -2171,6 +2110,6 @@ body .topbar .xa-login-btn::before{
 </script>
 <script src="i18n.js?v=20260903a"></script>
 
-<script src="/pwa-install.js?v=20260901c"></script>
+
 </body>
 </html>

@@ -117,7 +117,7 @@
 </style>
 <meta name="description" content="Codex는 정례와 반례를 규칙 자체에 넣습니다. 명령을 어떻게 쪼개고, 접두로 맞추고, 가장 엄한 판정을 고르는지, 그리고 로드 시점 테스트가 오탐을 어떻게 못 박는지">
 <meta name="author" content="팡피엔">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="execpolicy: 정책 파일에 테스트 케이스를 심어두기"><meta property="og:description" content="Codex는 정례와 반례를 규칙 자체에 넣습니다. 명령을 어떻게 쪼개고, 접두로 맞추고, 가장 엄한 판정을 고르는지, 그리고 로드 시점 테스트가 오탐을 어떻게 못 박는지"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="execpolicy: 정책 파일에 테스트 케이스를 심어두기"><meta property="og:description" content="Codex는 정례와 반례를 규칙 자체에 넣습니다. 명령을 어떻게 쪼개고, 접두로 맞추고, 가장 엄한 판정을 고르는지, 그리고 로드 시점 테스트가 오탐을 어떻게 못 박는지"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
 
 
 
@@ -465,7 +465,7 @@
         trace: 3,
         stages: { split: ['on', inner ? '안쪽 argv' : '통째 한 줄'], load: ['warn', '로드 실패'], match: ['dim', '못 들어감'], judge: ['dim', '못 들어감'] },
         tokens: tokOn, note: '뒤의 매칭은 일어나지 않습니다.',
-        pos: ['', '안 돌림'], neg: ['fail', '오탐']
+        pos: ['', '안 돌림'], neg: ['fail', '오탐'],
         vKind: 'warn', v: '로드 실패. 네 명령 모두 allow나 forbidden에 들어갈 기회가 없어요.',
         fin: true
       });
