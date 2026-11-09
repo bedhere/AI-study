@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="RAG 檢索回來的段落不能直接用：先粗排再精排。親手調整權重，看候選段落怎麼重新洗牌——推薦流和搜索結果同理。排序思想在大模型工程裏的真身。">
+<meta name="description" content="上一課的排序比的是數字大小，但 AI 世界裏排的是「相關性」：RAG 從知識庫撈回來一堆段落，誰排前面誰就能擠進上下文——排錯了，模型就會一本正經地引用錯誤資料。這個「打分 + 重排」的環節叫 Rerank。今天你親自上崗，當一次 Rerank 模型。">
 <meta name="keywords" content="Rerank,重排序,RAG,粗排精排,兩階段檢索,推薦系統排序,向量檢索">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="排序在 AI 裏的真身：Rerank">
-<meta property="og:description" content="親手當一次 Rerank 模型：拖三個權重滑塊，看候選段落即時洗牌，舊版政策怎麼被正確條款擠下去。">
+<meta property="og:description" content="上一課的排序比的是數字大小，但 AI 世界裏排的是「相關性」：RAG 從知識庫撈回來一堆段落，誰排前面誰就能擠進上下文——排錯了，模型就會一本正經地引用錯誤資料。這個「打分 + 重排」的環節叫 Rerank。今天你親自上崗，當一次 Rerank 模型。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_HK">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="排序在 AI 裏的真身：Rerank">
-<meta name="twitter:description" content="親手當一次 Rerank 模型：拖三個權重滑塊，看候選段落即時洗牌，舊版政策怎麼被正確條款擠下去。">
+<meta name="twitter:description" content="上一課的排序比的是數字大小，但 AI 世界裏排的是「相關性」：RAG 從知識庫撈回來一堆段落，誰排前面誰就能擠進上下文——排錯了，模型就會一本正經地引用錯誤資料。這個「打分 + 重排」的環節叫 Rerank。今天你親自上崗，當一次 Rerank 模型。">
 
 <!-- SEO End -->
 <style>

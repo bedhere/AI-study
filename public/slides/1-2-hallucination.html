@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>大模型幻觉：为什么 AI 会编造事实 | 方片学堂</title>
+<title>大模型幻觉 (Hallucination) | 方片学堂</title>
 <script>
 // 内嵌词表与注意力权重（自包含，不依赖外部 global-attn.js）
 // 为幻觉演示提供合理的候选词权重数据
@@ -337,7 +337,7 @@ window.GLOBAL_ATTN = (function() {
 }
 </style>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style><!-- SEO Start -->
-<meta name="description" content="大模型幻觉（Hallucination）是什么、为什么产生？从 Token 预测的统计本质出发，解析幻觉的根本成因，以及四种缓解方案：Prompt 约束、RAG、Temperature 调节、人工评测。">
+<meta name="description" content="模型不知道事实，只是在做概率采样。看它如何自信地编造：选择一个案例，点击「开始生成」，观察幻觉如何在逐词生成中产生。">
 <meta name="keywords" content="大模型幻觉,Hallucination,AI胡说,幻觉缓解,RAG,Prompt约束">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -352,8 +352,8 @@ window.GLOBAL_ATTN = (function() {
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
-<meta property="og:title" content="大模型幻觉：为什么 AI 会编造事实">
-<meta property="og:description" content="大模型幻觉（Hallucination）是什么、为什么产生？从 Token 预测的统计本质出发，解析幻觉的根本成因，以及四种缓解方案：Prompt 约束、RAG、Temperature 调节、人工评测。">
+<meta property="og:title" content="大模型幻觉 (Hallucination)">
+<meta property="og:description" content="模型不知道事实，只是在做概率采样。看它如何自信地编造：选择一个案例，点击「开始生成」，观察幻觉如何在逐词生成中产生。">
 
 
 <meta property="og:image:width" content="1200">
@@ -361,8 +361,8 @@ window.GLOBAL_ATTN = (function() {
 <meta property="og:locale" content="zh_CN">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="大模型幻觉：为什么 AI 会编造事实">
-<meta name="twitter:description" content="大模型幻觉（Hallucination）是什么、为什么产生？从 Token 预测的统计本质出发，解析幻觉的根本成因，以及四种缓解方案：Prompt 约束、RAG、Temperature 调节、人工评测。">
+<meta name="twitter:title" content="大模型幻觉 (Hallucination)">
+<meta name="twitter:description" content="模型不知道事实，只是在做概率采样。看它如何自信地编造：选择一个案例，点击「开始生成」，观察幻觉如何在逐词生成中产生。">
 
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">

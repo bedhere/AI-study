@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Qwen 的阶梯逃逸：32k 红线 | Token 降本增效</title>
+<title>Qwen 的阶梯逃逸：32k 红线 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="Qwen 按输入长度分档：33k 的请求全部 33k Token 都按 2 倍价结算，而不是只有超出部分。RAG 场景为垃圾付双倍钱的陷阱，以及预算感知的动态裁剪代码。">
+<meta name="description" content="Qwen 系列的分档逻辑和智谱完全不同：按输入长度计费，分界线在 32k 和 128k。最容易被忽略的计费细节是——越线后不是「超出部分加价」，而是整个请求全量按高价档结算。">
 <meta name="keywords" content="Qwen,输入分档,全量结算,RAG 成本,预算感知截断,上下文裁剪,32k 红线">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
 <meta property="og:title" content="Qwen 的阶梯逃逸：32k 红线">
-<meta property="og:description" content="多 1k Token，整单翻倍：全量结算逻辑与预算感知截断。">
+<meta property="og:description" content="Qwen 系列的分档逻辑和智谱完全不同：按输入长度计费，分界线在 32k 和 128k。最容易被忽略的计费细节是——越线后不是「超出部分加价」，而是整个请求全量按高价档结算。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Qwen 的阶梯逃逸：32k 红线">
-<meta name="twitter:description" content="多 1k Token，整单翻倍：全量结算逻辑与预算感知截断。">
+<meta name="twitter:description" content="Qwen 系列的分档逻辑和智谱完全不同：按输入长度计费，分界线在 32k 和 128k。最容易被忽略的计费细节是——越线后不是「超出部分加价」，而是整个请求全量按高价档结算。">
 
 <!-- SEO End -->
 <style>

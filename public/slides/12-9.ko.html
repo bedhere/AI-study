@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>도구 구현 패밀리와 동적 MCP | 方片学堂</title>
+<title>구현 패밀리, 레지스트리, 동적 MCP | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -19,7 +19,7 @@
 .takeaway{margin-top:22px;padding:19px 22px;border-radius:14px;background:#241a0b;color:#f7ead2;display:flex;gap:13px;line-height:1.75}.takeaway svg{color:var(--gold);flex:0 0 auto}.takeaway b{color:var(--gold)}
 @media(max-width:760px){.families{grid-template-columns:1fr 1fr}.pair{grid-template-columns:1fr}.flow{padding:9px}}@media(max-width:480px){.families{grid-template-columns:1fr}.objective{grid-template-columns:1fr}}
 </style>
-<meta name="description" content="실제 xai-grok-tools 코드베이스, ToolBridge, registry를 기반으로 도구 구현 패밀리와 동적 MCP 호출을 설명합니다.">
+<meta name="description" content="xai-grok-tools는 여러 세트의 내장 도구 구현과 런타임 MCP 도구를 동시에 수용합니다. ToolBridge는 registry를 세션 레이어에 연결하고, SearchTool과 UseTool이 발견 및 호출 진입점을 제공합니다.">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 
@@ -32,10 +32,10 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="도구 구현 패밀리와 동적 MCP">
+<meta property="og:title" content="구현 패밀리, 레지스트리, 동적 MCP">
 
 <meta property="og:locale" content="ko_KR">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:description" content="실제 xai-grok-tools 코드베이스, ToolBridge, registry를 기반으로 도구 구현 패밀리와 동적 MCP 호출을 설명합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:description" content="xai-grok-tools는 여러 세트의 내장 도구 구현과 런타임 MCP 도구를 동시에 수용합니다. ToolBridge는 registry를 세션 레이어에 연결하고, SearchTool과 UseTool이 발견 및 호출 진입점을 제공합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>語法層成本優化：寫給機器的提示詞 | 方片学堂</title>
+<title>語法層優化：寫給機器的提示詞，不要排版 | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>
@@ -59,7 +59,7 @@ body{opacity:0;animation:_si .15s ease .08s forwards}
 }
 </style>
 <!-- SEO Start -->
-<meta name="description" content="在 Prompt 的語法層面如何減少 Token 消耗？對比自然語言與結構化指令的 Token 效率，介紹刪除冗餘詞、使用 XML 標籤分隔、選擇 Token 高效格式等實戰技巧。">
+<meta name="description" content="格式性 Token 最高佔提示詞 13–20%。提示詞是寫給機器的指令，不是給人看的文件。那些 **加粗**、JSON 大括號、縮排換行…都是在花錢買格式。">
 <meta name="keywords" content="Prompt優化,Token優化,Prompt壓縮,語法層優化,AI提示詞效率">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -74,8 +74,8 @@ body{opacity:0;animation:_si .15s ease .08s forwards}
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
-<meta property="og:title" content="語法層成本優化：寫給機器的提示詞">
-<meta property="og:description" content="在 Prompt 的語法層面如何減少 Token 消耗？對比自然語言與結構化指令的 Token 效率，介紹刪除冗餘詞、使用 XML 標籤分隔、選擇 Token 高效格式等實戰技巧。">
+<meta property="og:title" content="語法層優化：寫給機器的提示詞，不要排版">
+<meta property="og:description" content="格式性 Token 最高佔提示詞 13–20%。提示詞是寫給機器的指令，不是給人看的文件。那些 **加粗**、JSON 大括號、縮排換行…都是在花錢買格式。">
 
 
 <meta property="og:image:width" content="1200">
@@ -83,8 +83,8 @@ body{opacity:0;animation:_si .15s ease .08s forwards}
 <meta property="og:locale" content="zh_TW">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="語法層成本優化：寫給機器的提示詞">
-<meta name="twitter:description" content="在 Prompt 的語法層面如何減少 Token 消耗？對比自然語言與結構化指令的 Token 效率，介紹刪除冗餘詞、使用 XML 標籤分隔、選擇 Token 高效格式等實戰技巧。">
+<meta name="twitter:title" content="語法層優化：寫給機器的提示詞，不要排版">
+<meta name="twitter:description" content="格式性 Token 最高佔提示詞 13–20%。提示詞是寫給機器的指令，不是給人看的文件。那些 **加粗**、JSON 大括號、縮排換行…都是在花錢買格式。">
 
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
@@ -165,7 +165,7 @@ const STRATS = [
 `<span class="hl-cmt">// JSON 版本：大量符號開銷</span>
 {
   <span class="hl-key">"user"</span>: {
-    <span class="hl-key">"name"</span>: <span class="hl-str">"Alice"</span>,
+    <span class="hl-key">"name"</span>: <span class="hl-str">"示例助手"</span>,
     <span class="hl-key">"role"</span>: <span class="hl-str">"admin"</span>,
     <span class="hl-key">"permissions"</span>: [
       <span class="hl-str">"read"</span>,
@@ -177,7 +177,7 @@ const STRATS = [
     good:
 `<span class="hl-cmt"># YAML 版本：縮排代替符號</span>
 user:
-  name: <span class="hl-str">Alice</span>
+  name: <span class="hl-str">示例助手</span>
   role: <span class="hl-str">admin</span>
   permissions:
     - <span class="hl-str">read</span>
@@ -194,7 +194,7 @@ user:
     bad:
 `<span class="hl-cmt">// JSON 陣列：欄位名重複 N 遍</span>
 [
-  {<span class="hl-key">"id"</span>: 1, <span class="hl-key">"name"</span>: <span class="hl-str">"Alice"</span>, <span class="hl-key">"role"</span>: <span class="hl-str">"Admin"</span>},
+  {<span class="hl-key">"id"</span>: 1, <span class="hl-key">"name"</span>: <span class="hl-str">"示例助手"</span>, <span class="hl-key">"role"</span>: <span class="hl-str">"Admin"</span>},
   {<span class="hl-key">"id"</span>: 2, <span class="hl-key">"name"</span>: <span class="hl-str">"Bob"</span>,   <span class="hl-key">"role"</span>: <span class="hl-str">"User"</span>},
   {<span class="hl-key">"id"</span>: 3, <span class="hl-key">"name"</span>: <span class="hl-str">"Carol"</span>, <span class="hl-key">"role"</span>: <span class="hl-str">"Admin"</span>},
   <span class="hl-cmt">// ... 50 條記錄
@@ -203,7 +203,7 @@ user:
     good:
 `<span class="hl-cmt"># 帶表頭 CSV：欄位名只出現一次</span>
 id  name   role
-1   Alice  Admin
+1   示例助手  Admin
 2   Bob    User
 3   Carol  Admin
 <span class="hl-cmt">... (共 50 條)</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>How They'll Test You · 30 Questions from Demo to Production | 方片学堂</title>
+<title>Practice · From Demo to Production · 30 Soul-Searching Questions | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>
@@ -56,7 +56,7 @@
 }
 </style>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style><!-- SEO Start -->
-<meta name="description" content="Chapter 3 practical assessment: how will your interviewer, boss, and tech colleagues test your AI Agent productization knowledge? 30 real-scenario questions, each with examining intent, answer framework, and bonus points: Demo-to-production gap, Agent loop control, context compression, long-term memory, multi-Agent collaboration, MCP ecosystem, cost control.">
+<meta name="description" content="You've completed Chapter 3 and now know what separates a Demo from a production product. These 30 questions come from three real scenarios — try answering them out loud first, then check the framework.">
 <meta name="keywords" content="AI product manager interview questions, Agent productization, Agent loops, context compression, long-term memory, multi-Agent, MCP, AI PM interview">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
@@ -71,8 +71,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
-<meta property="og:title" content="How They'll Test You · 30 Questions from Demo to Production">
-<meta property="og:description" content="How will your interviewer, boss, and tech colleagues test your AI Agent productization knowledge? 30 real-scenario questions, each with examining intent, answer framework, and bonus points.">
+<meta property="og:title" content="Practice · From Demo to Production · 30 Soul-Searching Questions">
+<meta property="og:description" content="You've completed Chapter 3 and now know what separates a Demo from a production product. These 30 questions come from three real scenarios — try answering them out loud first, then check the framework.">
 
 
 <meta property="og:image:width" content="1200">
@@ -80,8 +80,8 @@
 <meta property="og:locale" content="en_US">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How They'll Test You · 30 Questions from Demo to Production">
-<meta name="twitter:description" content="How will your interviewer, boss, and tech colleagues test your AI Agent productization knowledge? 30 real-scenario questions, each with examining intent, answer framework, and bonus points.">
+<meta name="twitter:title" content="Practice · From Demo to Production · 30 Soul-Searching Questions">
+<meta name="twitter:description" content="You've completed Chapter 3 and now know what separates a Demo from a production product. These 30 questions come from three real scenarios — try answering them out loud first, then check the framework.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
@@ -94,7 +94,7 @@
     <div class="kicker">How They Will Test You</div>
     <h1>Practice · From Demo to Production · 30 Soul-Searching Questions</h1>
     <p class="subtitle">You've completed Chapter 3 and now know what separates a Demo from a production product. These 30 questions come from three real scenarios — try answering them out loud first, then check the framework.</p>
-  </header>
+  </header><aside class="xa-tldr company-example-note"><p>Assistants, characters and workflows on this page are teaching examples, not launched Fangpian products or verified project results.</p></aside>
 
   <section>
     <div class="iq-intro">
@@ -332,7 +332,7 @@
         <ol>
           <li><strong>Lead with the conclusion:</strong> What the user wants and what the image model needs are two different languages. You need an LLM in the middle to translate — expanding one sentence into a few hundred tokens of precise visual description.</li>
           <li><strong>Give three reasons:</strong> Users don't write image Prompts; nobody voluntarily types "golden hour lighting." The model can't parse vague intent — "zoning out" has no picture for it. And every image model has its own dialect: Midjourney, DALL-E, and Stable Diffusion all prefer different things, so you customize for the target model.</li>
-          <li><strong>Give an example:</strong> "Alice zoning out on the balcony," after the translation layer, becomes a long English description covering pose, expression, lighting, hairstyle, her signature necklace, and composition — and the output actually stays stable.</li>
+          <li><strong>Give an example:</strong> "example assistant zoning out on the balcony," after the translation layer, becomes a long English description covering pose, expression, lighting, hairstyle, her signature necklace, and composition — and the output actually stays stable.</li>
           <li><strong>Place it in the architecture:</strong> This translation layer belongs on the image-generation productization checklist. It's fixed architecture. Skipping it saves a little money and costs you output quality.</li>
         </ol>
       </div>

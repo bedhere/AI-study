@@ -82,7 +82,7 @@ p.body{font-size:15px;line-height:2;color:var(--text);margin:0 0 20px}
   .d-btn{flex:1 1 auto;justify-content:center}
 }
 </style>
-<meta name="description" content="DSH 接外部能力的两条路：MCP 桥接生态里的工具服务器，Extensions 让模型在 harness 里现写现跑 Cordis 插件。命名 hash 防碰撞、断线世代回滚、只桥 tools 的取舍，一页讲清。">
+<meta name="description" content="桥接生态标准与原生扩展怎么分工。核心源码：packages/mcp/mcp-client/ 与 packages/extensions/。">
 <meta name="author" content="方片">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 
@@ -95,7 +95,7 @@ p.body{font-size:15px;line-height:2;color:var(--text);margin:0 0 20px}
 
 
 
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="MCP 与 Extensions：外部工具接入的两条路"><meta property="og:description" content="DSH 接外部能力的两条路：MCP 桥接生态里的工具服务器，Extensions 让模型在 harness 里现写现跑 Cordis 插件。命名 hash 防碰撞、断线世代回滚、只桥 tools 的取舍，一页讲清。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="MCP 与 Extensions：外部工具接入的两条路"><meta property="og:description" content="桥接生态标准与原生扩展怎么分工。核心源码：packages/mcp/mcp-client/ 与 packages/extensions/。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

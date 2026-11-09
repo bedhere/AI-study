@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>출력 계층: 모델의 입을 단속해요 | Token 비용 엔지니어링</title>
+<title>출력 계층: 모델의 입을 단속해요 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="출력 Token은 입력보다 몇 배 비싸요. 모델의 입을 단속하는 세 수: 명확한 네거티브 제약(No yapping)으로 잡담 약 30% 절감, 윤문은 Diff로 하고 전문 재작성 금지, 정지 시퀀스로 물리 절단. Token도 시간도 아끼고 모델이 횡설수설할 걱정도 줄어요.">
+<meta name="description" content="실전 4계층의 마지막. 출력 Token은 입력보다 몇 배 비싸요(3절 요금표 다시 보기), 그리고 API 반환 속도를 직접 정해요. 모델의 입을 단속하는 적합한 조작은 세 종류: 지시 계층, 코드 계층, 엔지니어링 계층.">
 <meta name="keywords" content="출력 최적화,네거티브 제약,No yapping,Diff 출력,정지 시퀀스,stop sequence,Token 절감">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="출력 계층: 모델의 입을 단속해요">
-<meta property="og:description" content="네거티브 제약, Diff 윤문, 정지 시퀀스: 출력단의 세 수.">
+<meta property="og:description" content="실전 4계층의 마지막. 출력 Token은 입력보다 몇 배 비싸요(3절 요금표 다시 보기), 그리고 API 반환 속도를 직접 정해요. 모델의 입을 단속하는 적합한 조작은 세 종류: 지시 계층, 코드 계층, 엔지니어링 계층.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="출력 계층: 모델의 입을 단속해요">
-<meta name="twitter:description" content="네거티브 제약, Diff 윤문, 정지 시퀀스: 출력단의 세 수.">
+<meta name="twitter:description" content="실전 4계층의 마지막. 출력 Token은 입력보다 몇 배 비싸요(3절 요금표 다시 보기), 그리고 API 반환 속도를 직접 정해요. 모델의 입을 단속하는 적합한 조작은 세 종류: 지시 계층, 코드 계층, 엔지니어링 계층.">
 
 <!-- SEO End -->
 <style>

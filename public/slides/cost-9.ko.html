@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>문법 계층: Prompt는 기계를 위해 쓰여요 | Token 비용 엔지니어링</title>
+<title>문법 계층: Prompt는 기계를 위해 쓰여요 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="굵게 쓰는 ** 기호만으로 Token의 8.5%를 먹고, 형식 내용이 프롬프트의 10%–20%를 차지해요. 경험 세 가지: 복잡한 객체는 YAML(JSON 말고), 평평한 리스트는 CSV(JSON 배열 말고), 백엔드 출력은 Minified JSON 강제.">
+<meta name="description" content="실전 네 계층의 첫 층이에요. 많은 제품이 초기에 디버깅 편의를 위해, 혹은 AI가 대신 쓴 프롬프트라서 ###·** 굵게·JSON으로 데이터를 보여 주는 습관이 있어요. 사람에게 친절한 조판이 대규모 언어 모델의 과금 논리에서는 전부 「어휘 세금」이에요.">
 <meta name="keywords" content="프롬프트 최적화,어휘 세금,YAML,TOON,CSV,Minified JSON,Token 절약,포맷 오버헤드">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="문법 계층: Prompt는 기계를 위해 쓰여요">
-<meta property="og:description" content="굵은 **만으로 Token 8.5%를 먹어요: 어휘 세금을 깎는 경험 세 가지.">
+<meta property="og:description" content="실전 네 계층의 첫 층이에요. 많은 제품이 초기에 디버깅 편의를 위해, 혹은 AI가 대신 쓴 프롬프트라서 ###·** 굵게·JSON으로 데이터를 보여 주는 습관이 있어요. 사람에게 친절한 조판이 대규모 언어 모델의 과금 논리에서는 전부 「어휘 세금」이에요.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="문법 계층: Prompt는 기계를 위해 쓰여요">
-<meta name="twitter:description" content="굵은 **만으로 Token 8.5%를 먹어요: 어휘 세금을 깎는 경험 세 가지.">
+<meta name="twitter:description" content="실전 네 계층의 첫 층이에요. 많은 제품이 초기에 디버깅 편의를 위해, 혹은 AI가 대신 쓴 프롬프트라서 ###·** 굵게·JSON으로 데이터를 보여 주는 습관이 있어요. 사람에게 친절한 조판이 대규모 언어 모델의 과금 논리에서는 전부 「어휘 세금」이에요.">
 
 <!-- SEO End -->
 <style>
@@ -145,13 +145,13 @@
 /* ── 三格式对比（50 条记录的估算值） ── */
 var FMT = [
   {name:'JSON 배열', tokens:1000, pct:100, cls:'#dc2626',
-   code:'[\n  {"id": 1, "name": "Alice", "role": "Admin"},\n  {"id": 2, "name": "Bob", "role": "User"},\n  {"id": 3, "name": "Carol", "role": "User"},\n  ...총 50건...\n]',
+   code:'[\n  {"id": 1, "name": "예시 도우미", "role": "Admin"},\n  {"id": 2, "name": "Bob", "role": "User"},\n  {"id": 3, "name": "Carol", "role": "User"},\n  ...총 50건...\n]',
    note:'<b>id, name, role—이 필드명이 50번 반복돼요!</b> 큰따옴표·중괄호·쉼표마다 독립 과금. RAG 장면의 중상 구역이에요.'},
   {name:'YAML', tokens:820, pct:82, cls:'#f59e0b',
-   code:'- id: 1\n  name: Alice\n  role: Admin\n- id: 2\n  name: Bob\n  role: User\n...총 50건...',
+   code:'- id: 1\n  name: 예시 도우미\n  role: Admin\n- id: 2\n  name: Bob\n  role: User\n...총 50건...',
    note:'들여쓰기로 닫기 기호를, 콜론으로 「따옴표+콜론」을 대체: <b>10%–15% 절약, 복잡한 중첩은 40%까지</b>. 자연어 읽기 습관에도 더 잘 맞아요.'},
   {name:'CSV 표', tokens:450, pct:45, cls:'#16a34a',
-   code:'id name role\n1 Alice Admin\n2 Bob User\n3 Carol User\n...총 50건...',
+   code:'id name role\n1 예시 도우미 Admin\n2 Bob User\n3 Carol User\n...총 50건...',
    note:'<b>키 이름은 한 번만, 긴 리스트는 바로 30%–60% 삭감.</b> 같은 컨텍스트 윈도우에 두 배 데이터를 넣을 수 있어요. 평평한 구조면 눈 감고 이걸 고르세요.'}
 ];
 var fmtCur = -1;

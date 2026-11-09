@@ -1150,6 +1150,7 @@ body .topbar .xa-login-btn::before{
 <div class="share-toast" id="shareToast"></div>
 
 <script src="course-data.js?v=20260903a"></script>
+<script src="company-paths.js?v=20261109b"></script>
 <script src="share-card.js?v=20260903a"></script>
 <script src="local-learning.js?v=2"></script>
 <script src="local-search.js?v=2"></script>
@@ -1603,7 +1604,7 @@ body .topbar .xa-login-btn::before{
     /* 输入法合成期间 value 是半截拼音，先藏起来：拿「tishici」去问她没意义 */
     var on = aliceReady && !searchComposing && q.length >= SEARCH_MIN_LEN;
     aliceSearchBtn.hidden = !on;
-    if(on) aliceSearchTxt.textContent = '让 Alice 搜一搜「' + q + '」';
+    if(on) aliceSearchTxt.textContent = '让 示例助手 搜一搜「' + q + '」';
   }
 
   aliceSearchBtn.addEventListener('click', function(){
@@ -1759,14 +1760,8 @@ body .topbar .xa-login-btn::before{
      打开目录时下拉已就位并完成精简；在这里切换，回路线页卡片也跟着选中。
      翻页跟着路线走（见下面的 routeStep），进度与解锁一概不动。 */
   var ROUTE_KEY = 'ai_build_route_v1';
-  var ROUTE_ALL = ['use', 'pro', 'pm', 'build'];
-  var ROUTE_OPTS = [
-    { v: 'all',   label: '完整目录 · 全都要' },
-    { v: 'use',   label: '路线：只想会用 AI' },
-    { v: 'pro',   label: '路线：把 AI 用到专业' },
-    { v: 'pm',    label: '路线：做 AI 产品' },
-    { v: 'build', label: '路线：自己动手搭' },
-  ];
+  var ROUTE_ALL = ['use', 'pro', 'build'];
+  var ROUTE_OPTS = [{"v":"all","label":"浏览完整课程"},{"v":"use","label":"AI 起步者"},{"v":"pro","label":"业务提效者"},{"v":"build","label":"技术共创者"}];
   var routeSel = document.getElementById('routeSel');
 
   function topicRoutes(part, topic){
@@ -1908,10 +1903,12 @@ body .topbar .xa-login-btn::before{
 
   /* roadmap.html（build.js）存的是 JSON 字符串（'"pm"' 带引号），这里读写都走
      JSON，两边才互认；直接 getItem 裸比对会永远对不上。 */
+  var routeQueryApplied = false;
   function savedRoute(){
-    var s = '';
-    try{ s = JSON.parse(localStorage.getItem(ROUTE_KEY) || '""'); }catch(e){}
-    return ROUTE_ALL.indexOf(s) >= 0 ? s : 'all';
+    var storage; try { storage = localStorage; } catch(error) { storage = null; }
+    var selected = window.FangpianPaths.choice(routeQueryApplied ? '' : location.search, storage);
+    routeQueryApplied = true;
+    return selected;
   }
 
   /* 路线选择是课程第一节，人在 iframe 里点。它存完路线只换顶层 hash，learn.html
@@ -1931,6 +1928,7 @@ body .topbar .xa-login-btn::before{
     routeSel.value = savedRoute();
     routeSel.addEventListener('change', function(){
       try{ localStorage.setItem(ROUTE_KEY, JSON.stringify(routeSel.value)); }catch(e){}
+      var roleURL = new URL(location.href); roleURL.searchParams.set('route', routeSel.value); history.replaceState(null, '', roleURL.href);
       applyRoute();
       console.info('[route] 目录切换学习路线', { route: routeSel.value, lessons: routeCount(routeSel.value) });
     });

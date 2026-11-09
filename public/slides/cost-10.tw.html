@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>語義層：雙重蒸餾 | Token 降本增效</title>
+<title>語義層：雙重蒸餾 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="別把上下文視窗當垃圾桶：注意力 O(N²) 讓長提示詞又貴又慢，中段迷失效應讓效果更差。雙重蒸餾解法：動態 Few-Shot 從 4000 Token 砍到 500，LLMLingua-2 把文件壓縮 5-20 倍。">
+<meta name="description" content="格式的稅砍完了，往深一層看內容本身。RAG 和長文件場景裡最常見的工程錯誤：把上下文視窗當垃圾桶——Few-Shot 案例、檢索文件全塞進去，讓模型自己辨識。能用，但不該這樣用。">
 <meta name="keywords" content="上下文優化,中段迷失,Lost in the Middle,動態 Few-Shot,LLMLingua,Prompt 壓縮,RAG 優化">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="語義層：雙重蒸餾">
-<meta property="og:description" content="高密度的 Prompt 才能換來高品質的 Attention。">
+<meta property="og:description" content="格式的稅砍完了，往深一層看內容本身。RAG 和長文件場景裡最常見的工程錯誤：把上下文視窗當垃圾桶——Few-Shot 案例、檢索文件全塞進去，讓模型自己辨識。能用，但不該這樣用。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="語義層：雙重蒸餾">
-<meta name="twitter:description" content="高密度的 Prompt 才能換來高品質的 Attention。">
+<meta name="twitter:description" content="格式的稅砍完了，往深一層看內容本身。RAG 和長文件場景裡最常見的工程錯誤：把上下文視窗當垃圾桶——Few-Shot 案例、檢索文件全塞進去，讓模型自己辨識。能用，但不該這樣用。">
 
 <!-- SEO End -->
 <style>

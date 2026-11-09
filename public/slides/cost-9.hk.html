@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>語法層：Prompt 是寫給機器的 | Token 降本增效</title>
+<title>語法層：Prompt 是寫給機器的 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="加粗用的 ** 符號吃掉 8.5% 的 Token，格式性內容佔提示詞 10%-20%。三條經驗：複雜對象用 YAML 別用 JSON、扁平列表用 CSV 別用 JSON 陣列、後台輸出強制 Minified JSON。">
+<meta name="description" content="進入實戰四層的第一層。很多產品早期為了調試方便，或者乾脆是讓 AI 代寫的提示詞，習慣用 ###、** 加粗、JSON 展示數據。這些對人類友好的排版，在大模型的計費邏輯裏全是「詞法税」。">
 <meta name="keywords" content="提示詞優化,詞法税,YAML,TOON,CSV,Minified JSON,Token 節省,格式化開銷">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="語法層：Prompt 是寫給機器的">
-<meta property="og:description" content="加粗的 ** 就吃掉 8.5% Token：砍掉詞法税的三條經驗。">
+<meta property="og:description" content="進入實戰四層的第一層。很多產品早期為了調試方便，或者乾脆是讓 AI 代寫的提示詞，習慣用 ###、** 加粗、JSON 展示數據。這些對人類友好的排版，在大模型的計費邏輯裏全是「詞法税」。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_HK">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="語法層：Prompt 是寫給機器的">
-<meta name="twitter:description" content="加粗的 ** 就吃掉 8.5% Token：砍掉詞法税的三條經驗。">
+<meta name="twitter:description" content="進入實戰四層的第一層。很多產品早期為了調試方便，或者乾脆是讓 AI 代寫的提示詞，習慣用 ###、** 加粗、JSON 展示數據。這些對人類友好的排版，在大模型的計費邏輯裏全是「詞法税」。">
 
 <!-- SEO End -->
 <style>
@@ -145,13 +145,13 @@
 /* ── 三格式对比（50 条记录的估算值） ── */
 var FMT = [
   {name:'JSON 陣列', tokens:1000, pct:100, cls:'#dc2626',
-   code:'[\n  {"id": 1, "name": "Alice", "role": "Admin"},\n  {"id": 2, "name": "Bob", "role": "User"},\n  {"id": 3, "name": "Carol", "role": "User"},\n  ...共 50 條...\n]',
+   code:'[\n  {"id": 1, "name": "示例助手", "role": "Admin"},\n  {"id": 2, "name": "Bob", "role": "User"},\n  {"id": 3, "name": "Carol", "role": "User"},\n  ...共 50 條...\n]',
    note:'<b>id、name、role 這些字段名重複寫了 50 遍！</b>每個雙引號、花括號、逗號都在獨立計費。這是 RAG 場景的重災區。'},
   {name:'YAML', tokens:820, pct:82, cls:'#f59e0b',
-   code:'- id: 1\n  name: Alice\n  role: Admin\n- id: 2\n  name: Bob\n  role: User\n...共 50 條...',
+   code:'- id: 1\n  name: 示例助手\n  role: Admin\n- id: 2\n  name: Bob\n  role: User\n...共 50 條...',
    note:'縮進代替閉合符號、冒號代替「引號+冒號」：<b>省 10%–15%，複雜嵌套對象能省到 40%</b>。也更符合自然語言閲讀習慣。'},
   {name:'CSV 表格', tokens:450, pct:45, cls:'#16a34a',
-   code:'id name role\n1 Alice Admin\n2 Bob User\n3 Carol User\n...共 50 條...',
+   code:'id name role\n1 示例助手 Admin\n2 Bob User\n3 Carol User\n...共 50 條...',
    note:'<b>鍵名只寫一遍，長列表直接砍 30%–60%。</b>同樣的上下文窗口能塞兩倍的數據。扁平結構閉眼選它。'}
 ];
 var fmtCur = -1;

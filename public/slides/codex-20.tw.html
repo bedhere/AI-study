@@ -116,7 +116,7 @@
 @media(prefers-reduced-motion:reduce){.demo,.demo *{transition-duration:0s!important;animation-duration:0s!important}}
 @media(max-width:760px){.lesson{overflow-x:hidden}.compare{grid-template-columns:1fr}.dm-stage{grid-template-columns:1fr}.objective{grid-template-columns:1fr}.lesson-header:after{display:none}.demo{padding:18px;max-width:100%;min-width:0}.demo-ctrl{width:100%}.demo-ctrl button{flex:1}.dm-req{flex-direction:column}.visual{padding:14px;max-width:100%;min-width:0}.dm-trace li{flex-direction:column;gap:4px}.demo,.visual,.cmp-card{max-width:100%;min-width:0}.lesson code{overflow-wrap:anywhere;word-break:break-word}.dm-summary.on{max-height:640px}}
 </style>
-<meta name="description" content="Codex 把出站收成一條漏斗：域名先判、真 token 只在代理裡替換，沙箱只放行代理埠">
+<meta name="description" content="出站要過幾道門。真 token 不進子行程。模型看見的是假值和一句 403。">
 <meta name="author" content="方片">
 
 
@@ -128,7 +128,7 @@
 
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:locale" content="zh_TW">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="網路與憑證代理：模型看不見的那把鑰匙"><meta property="og:description" content="Codex 把出站收成一條漏斗：域名先判、真 token 只在代理裡替換，沙箱只放行代理埠"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="網路與憑證代理：模型看不見的那把鑰匙"><meta property="og:description" content="出站要過幾道門。真 token 不進子行程。模型看見的是假值和一句 403。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

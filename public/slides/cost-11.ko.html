@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>아키텍처 계층: KV Cache 주의사항 | Token 비용 엔지니어링</title>
+<title>아키텍처 계층: KV Cache 주의사항 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="KV Cache는 상용화 절감에서 가장 과소평가된 기술 포인트예요: 접두사 매칭 캐시 히트면 최대 90% 절약. 두 가지 숨은 함정: tools 파라미터를 동적으로 바꾸면 캐시 전체가 무효가 되고, 거친 슬라이딩 윈도우는 접두사를 영원히 바꿉니다. 챕터 캐시는 히트율을 10%에서 80%로 올려요.">
+<meta name="description" content="상용화 제품의 비용 엔지니어링에서 KV Cache는 가장 과소평가된 기술 포인트 중 하나예요. 캐시 히트와 미스의 비용 차이는 최대 90%—하지만 안에 숨은 함정이 몇 개 있어요. 누가 말해주기 전엔 모를 수 있어요.">
 <meta name="keywords" content="KV Cache,접두사 캐시,컨텍스트 캐싱,캐시 히트,tools 파라미터,슬라이딩 윈도우,챕터 캐시">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="아키텍처 계층: KV Cache 주의사항">
-<meta property="og:description" content="접두사 매칭으로 최대 90% 절약—하지만 도구를 동적으로 바꾸면 캐시 전체가 무효가 돼요.">
+<meta property="og:description" content="상용화 제품의 비용 엔지니어링에서 KV Cache는 가장 과소평가된 기술 포인트 중 하나예요. 캐시 히트와 미스의 비용 차이는 최대 90%—하지만 안에 숨은 함정이 몇 개 있어요. 누가 말해주기 전엔 모를 수 있어요.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="아키텍처 계층: KV Cache 주의사항">
-<meta name="twitter:description" content="접두사 매칭으로 최대 90% 절약—하지만 도구를 동적으로 바꾸면 캐시 전체가 무효가 돼요.">
+<meta name="twitter:description" content="상용화 제품의 비용 엔지니어링에서 KV Cache는 가장 과소평가된 기술 포인트 중 하나예요. 캐시 히트와 미스의 비용 차이는 최대 90%—하지만 안에 숨은 함정이 몇 개 있어요. 누가 말해주기 전엔 모를 수 있어요.">
 
 <!-- SEO End -->
 <style>

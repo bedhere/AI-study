@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>MCP Is More Than Just "Calling Tools" | 方片学堂</title>
+<title>MCP Is More Than Just &quot;Calling Tools&quot; | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}} body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -49,7 +49,7 @@
 .takeaway{background:rgba(124,58,237,.04);border:1.5px solid rgba(124,58,237,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--purple)}
 </style>
-<meta name="description" content="The MCP protocol works in two directions: AI as a Client calling external tools, and AI as a Server being called by Cursor and others. One protocol, bidirectional integration.">
+<meta name="description" content="Most people understand MCP as simply &quot;letting AI call external tools.&quot; But the MCP protocol is bidirectional: example assistant can call other tools, and external clients like Cursor can also call example assistant's capabilities.">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
 
@@ -66,7 +66,7 @@
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="The MCP protocol works in two directions: AI as a Client calling external tools, and AI as a Server being called by Cursor and others. One protocol, bidirectional integration."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="Most people understand MCP as simply &quot;letting AI call external tools.&quot; But the MCP protocol is bidirectional: example assistant can call other tools, and external clients like Cursor can also call example assistant's capabilities."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -76,8 +76,8 @@
   <header class="lesson-header">
     <div class="kicker">MCP in Practice</div>
     <h1>MCP Is More Than Just "Calling Tools"</h1>
-    <p class="subtitle">Most people understand MCP as simply "letting AI call external tools." But the MCP protocol is bidirectional: Alice can call other tools, and external clients like Cursor can also call Alice's capabilities.</p>
-  </header>
+    <p class="subtitle">Most people understand MCP as simply "letting AI call external tools." But the MCP protocol is bidirectional: example assistant can call other tools, and external clients like Cursor can also call example assistant's capabilities.</p>
+  </header><aside class="xa-tldr company-example-note"><p>Assistants, characters and workflows on this page are teaching examples, not launched Fangpian products or verified project results.</p></aside>
 
   <div class="sec-label">Bidirectional Flow Diagram</div>
 
@@ -98,13 +98,13 @@
         <div class="arrow-line">
           <span class="arrow-r" style="color:var(--accent)">→</span>
           <span class="arrow-l" style="color:var(--success)">←</span>
-          <span class="arrow-label" style="color:var(--accent)">Alice calls tools</span>
+          <span class="arrow-label" style="color:var(--accent)">example assistant calls tools</span>
         </div>
       </div>
 
       <div class="flow-center">
         <div class="flow-alice">A</div>
-        <div class="flow-alice-label">Alice</div>
+        <div class="flow-alice-label">example assistant</div>
         <div class="flow-alice-sub">Both Client and Server</div>
       </div>
 
@@ -112,7 +112,7 @@
         <div class="arrow-line">
           <span class="arrow-l" style="color:var(--purple)">←</span>
           <span class="arrow-r" style="color:var(--amber)">→</span>
-          <span class="arrow-label" style="color:var(--purple)">External calls Alice</span>
+          <span class="arrow-label" style="color:var(--purple)">External calls example assistant</span>
         </div>
       </div>
 
@@ -129,24 +129,24 @@
   <div class="role-cards reveal paywall-locked xa-peek">
     <div class="role-card client">
       <h3><span style="font-size:20px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/></svg></span> As Client (Consumer)</h3>
-      <p>Alice connects to external MCP services and calls tool capabilities provided by others:</p>
+      <p>example assistant connects to external MCP services and calls tool capabilities provided by others:</p>
       <ul>
         <li><b>Calendar MCP</b> — view and create events</li>
         <li><b>Email MCP</b> — read and write emails</li>
         <li><b>Database MCP</b> — query data</li>
         <li><b>Browser MCP</b> — access web pages</li>
       </ul>
-      <p style="margin-top:10px"><b style="color:var(--accent)">Key:</b> Alice proactively initiates requests to acquire external capabilities.</p>
+      <p style="margin-top:10px"><b style="color:var(--accent)">Key:</b> example assistant proactively initiates requests to acquire external capabilities.</p>
     </div>
     <div class="role-card server">
       <h3><span style="font-size:20px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 15 3 19 7 23"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span> As Server (Provider)</h3>
-      <p>Alice exposes its own capabilities via the MCP protocol to be called externally:</p>
+      <p>example assistant exposes its own capabilities via the MCP protocol to be called externally:</p>
       <ul>
-        <li><b>Cursor</b> — calls Alice to search notes while coding</li>
-        <li><b>Claude Desktop</b> — lets Claude send messages to Alice</li>
-        <li><b>Automation scripts</b> — scheduled triggers to make Alice execute tasks</li>
+        <li><b>Cursor</b> — calls example assistant to search notes while coding</li>
+        <li><b>Claude Desktop</b> — lets Claude send messages to example assistant</li>
+        <li><b>Automation scripts</b> — scheduled triggers to make example assistant execute tasks</li>
       </ul>
-      <p style="margin-top:10px"><b style="color:var(--purple)">Key:</b> Alice passively receives requests and provides its own capabilities.</p>
+      <p style="margin-top:10px"><b style="color:var(--purple)">Key:</b> example assistant passively receives requests and provides its own capabilities.</p>
     </div>
   </div>
 

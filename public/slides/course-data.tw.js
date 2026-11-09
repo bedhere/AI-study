@@ -36,10 +36,10 @@ window.COURSE = {
           lessons: [
             /* 路线选择放在全课第一节：五条路线最后都汇到「入门与定位」，
                所有人必经此处。注册成课时它才有阅读器外壳，也才进得了翻页序列。 */
-            { file: 'roadmap.html', title: '先選一條適合你的路', desc: '五檔學習路線按目標劃好範圍：只想會用 AI、把 AI 用到專業、做 AI 產品、自己動手搭、全都要。選完課程目錄自動精簡，隨時能改', tag: '開篇' , navTitle: '選學習路線'},
-            { file: '0-intro.html', title: '我們在哪裡？達克效應', desc: '用達克曲線定位學員當前位置，明確課程目標：從愚昧之巔走向平穩高原', tag: '開篇' , navTitle: '我們在哪裡'},
-            { file: '0-how.html', title: '怎樣學，知識才能過腦子', desc: '看完 ≠ 學到：每個案例都要停下來反思、代入自己的業務場景、嘗試輸出', tag: '開篇' , navTitle: '怎樣學才有效'},
-            { file: '0-why.html', title: '為什麼要花時間講原理', desc: 'AI 所有 Harness 操作本質都是對 message list 的處理。理解它，才能看懂所有方案', tag: '開篇' , navTitle: '為什麼要打基礎'},
+            { file: 'roadmap.html', title: "從你的工作目標開始學 AI", desc: "方片正在從 MCN 向科技方向轉型。無論你在哪個崗位，都可以從適合自己的起點開始，把 AI 用進真實工作。", tag: '開篇' , navTitle: "從你的工作目標開始學 AI"},
+            { file: '0-intro.html', title: "我們在哪裡？達克效應", desc: "達克魯寧效應 · Dunning-Kruger Effect：AI 產品經理訓練營，正式開始之前先定位自己。", tag: '開篇' , navTitle: "我們在哪裡？達克效應"},
+            { file: '0-how.html', title: "怎樣學，知識才能過腦？", desc: "這門課不缺內容，缺的是你停下來想一想的 30 秒。", tag: '開篇' , navTitle: "怎樣學，知識才能過腦？"},
+            { file: '0-why.html', title: "為什麼花這麼多時間講原理？", desc: "磨刀不誤砍柴工 · 打好基礎才能真正做工程化", tag: '開篇' , navTitle: "為什麼花這麼多時間講原理？"},
           ],
         },
       ],
@@ -55,7 +55,7 @@ window.COURSE = {
       id: 'p-learn',
       num: '學習方法',
       title: 'AI 教我學習：把它當老師用',
-      desc: '知識隨手就能問出來之後，學得好不好取決於三件事：問得準、驗得住、留得下。三十五節課，一節只講一個動作，四百字左右加一個能上手的演示：提問該帶哪四個部件、它最容易在哪五處編、讀不下去的條款怎麼分四步拆開、帶 AI 精讀幾十萬行原始碼時怎麼讓每個論斷都回到具體行、怎麼讓它出新題而不是出名詞解釋、外部記憶該分哪三層寫、怎麼確認自己真會了而不是讀得順、怎麼把這些動作排進自己的周曆，以及把站內側邊欄的 Alice 用成隨時在場的助教。最後三節收尾：三十二個動作的彙總表、今天十分鐘能填完的三行、用 30 道題找出我沒學會的地方。',
+      desc: "圍繞真實問題練習補充背景、澄清提問、核驗答案、閱讀原文與檢查理解。請在實際使用的 AI 工具中練習，學堂尚未接入對話式助教。",
       color: '#b45309',
       group: 'main',
       routes: ['use', 'pro', 'pm', 'build'],
@@ -63,100 +63,100 @@ window.COURSE = {
       topics: [
         {
           id: 't-learn-open',
-          title: '開篇：稀缺的是判斷',
-          desc: '答案變便宜之後，漲價的是什麼',
+          title: "提問與原文",
+          desc: "讓 AI 幫我判斷：這個建議適合我嗎；讓 AI 幫我找到下一步該問什麼",
           lessons: [
-            { file: 'learn-1.html', title: '讓 AI 幫我判斷：這個建議適合我嗎', desc: 'AI 說年卡划算，可能只是對經常去的人划算。把時間、距離和真實習慣說清楚，答案才是在幫你做決定。', tag: '認知', navTitle: '建議適合我嗎' },
-            { file: 'learn-2.html', title: '讓 AI 幫我找到下一步該問什麼', desc: '能問出答案、能指出可疑處、能問出下一問，這三層是分界。讀完能認出自己停在哪一層。', tag: '認知', navTitle: '找到下一問' },
+            { file: 'learn-1.html', title: "讓 AI 幫我判斷：這個建議適合我嗎", desc: "AI 說年卡划算，可能只是對經常去的人划算。把時間、距離和真實習慣說清楚，答案才是在幫你做決定。", tag: '認知', navTitle: "讓 AI 幫我判斷：這個建議適合我嗎" },
+            { file: 'learn-2.html', title: "讓 AI 幫我找到下一步該問什麼", desc: "能問出答案、能指出可疑處、能問出下一問，這三層是分界。讀完能認出自己停在哪一層，以及下一步寫哪一句。", tag: '認知', navTitle: "讓 AI 幫我找到下一步該問什麼" },
           ],
         },
         {
           id: 't-learn-ask',
-          title: '提問：把講義變成考卷',
-          desc: '一句提問裡該帶什麼',
+          title: "解釋與追問",
+          desc: "讓 AI 按我的情況講清楚；讓 AI 用我熟悉的東西打比方；讓 AI 一次只問我一個問題",
           lessons: [
-            { file: 'learn-3.html', title: '讓 AI 按我的情況講清楚', desc: '錨點、場景、出題、預警，每缺一個，回答就少一塊。四句模板可以直接抄走。', tag: '提問', navTitle: '按我的情況講' },
-            { file: 'learn-4.html', title: '讓 AI 用我熟悉的東西打比方', desc: '它不知道你熟悉什麼，只能從公共題庫裡抽一個源領域。在提問裡空出這一格，填你已經會的東西。', tag: '提問', navTitle: '用熟悉的東西類比' },
-            { file: 'learn-5.html', title: '讓 AI 一次只問我一個問題', desc: '把下一步推理變成一個問句交還給你，往下想的活兒留在你這邊。讀完能看出自己卡在第幾問。', tag: '提問', navTitle: '一次只問一個' },
+            { file: 'learn-3.html', title: "讓 AI 按我的情況講清楚", desc: "錨點、場景、出題、預警，每缺一個，回答就少一塊。四句模板可以直接抄走。", tag: '提問', navTitle: "讓 AI 按我的情況講清楚" },
+            { file: 'learn-4.html', title: "讓 AI 用我熟悉的東西打比方", desc: "它不知道你熟悉什麼，只能從公共題庫裡抽一個源領域。在提問裡空出這一格，填你已經會的東西，比方才接得住。", tag: '提問', navTitle: "讓 AI 用我熟悉的東西打比方" },
+            { file: 'learn-5.html', title: "讓 AI 一次只問我一個問題", desc: "把下一步推理變成一個問句交還給你，往下想的活兒留在你這邊。讀完能讓它一次只問一個，並看出自己卡在第幾問。", tag: '提問', navTitle: "讓 AI 一次只問我一個問題" },
           ],
         },
         {
           id: 't-learn-guard',
-          title: '防幻覺：三道防線',
-          desc: '它會用同一種語氣說錯',
+          title: "核驗與檢查",
+          desc: "讓 AI 標出最可能編錯的五類資訊；讓 AI 的回答先過三道檢查；這次回答，我要不要去查原文",
           lessons: [
-            { file: 'learn-6.html', title: '讓 AI 標出最可能編錯的五類資訊', desc: '一段讀起來很順的回答裡，有五個位置預設該當可疑。讀完能指出它們在哪。', tag: '驗證', navTitle: '標出五類可疑資訊' },
-            { file: 'learn-7.html', title: '讓 AI 的回答先過三道檢查', desc: '要出處、交叉驗證、標註不確定。同一段回答過三道閘，每開一道篩掉的不一樣，三道全開還剩一條得自己翻原文。', tag: '驗證', navTitle: '回答過三道檢查' },
-            { file: 'learn-8.html', title: '這次回答，我要不要去查原文', desc: '按後果決定查不查。越是它答得流暢完整的地方，越值得抽一處去對原文。', tag: '驗證', navTitle: '這次要查原文嗎' },
+            { file: 'learn-6.html', title: "讓 AI 標出最可能編錯的五類資訊", desc: "一段讀起來很順的回答裡，有五個位置預設該當可疑。讀完能指出它們在哪。", tag: '驗證', navTitle: "讓 AI 標出最可能編錯的五類資訊" },
+            { file: 'learn-7.html', title: "讓 AI 的回答先過三道檢查", desc: "要出處、交叉驗證、標註不確定。同一段回答過三道閘，每開一道篩掉的不一樣，三道全開還剩一條得自己翻原文。", tag: '驗證', navTitle: "讓 AI 的回答先過三道檢查" },
+            { file: 'learn-8.html', title: "這次回答，我要不要去查原文", desc: "按後果決定查不查。越是它答得流暢完整的地方，越值得抽一處去對原文。", tag: '驗證', navTitle: "這次回答，我要不要去查原文" },
           ],
         },
         {
           id: 't-learn-hard',
-          title: '啃硬材料：從條款到原始碼',
-          desc: '讀不下去的東西怎麼拆開',
+          title: "閱讀與判斷",
+          desc: "讓 AI 幫我拆開一段看不懂的條款；讓 AI 先告訴我必須懂哪五個概念；讓 AI 只根據我貼出的原文回答；讓 AI 給每條判斷標出原文位置；讓 AI 先確認我手上是哪一版；讓 AI 改稿時保住關鍵資訊",
           lessons: [
-            { file: 'learn-9.html', title: '讓 AI 幫我拆開一段看不懂的條款', desc: '先要地圖，再定位卡點，補那一層前置，最後回到原文。四步走完，那一句能用沒有術語的話說出來。', tag: '閱讀', navTitle: '拆開難懂條款' },
-            { file: 'learn-10.html', title: '讓 AI 先告訴我必須懂哪五個概念', desc: '按目錄、摘要、結論、圖表、正文的順序給它，開工先問要先懂哪五個概念。', tag: '閱讀', navTitle: '先列五個概念' },
-            { file: 'learn-11.html', title: '讓 AI 只根據我貼出的原文回答', desc: '轉述會先丟掉限定條件、例外情況、指向別處的定義，而那正是花錢的部分。', tag: '閱讀', navTitle: '只根據原文' },
-            { file: 'learn-12.html', title: '讓 AI 給每條判斷標出原文位置', desc: 'AI 的每一條判斷都要能指回原文的確切位置。指不回去的那幾條，先別拿來做決定。', tag: '閱讀', navTitle: '標出原文位置' },
-            { file: 'learn-13.html', title: '讓 AI 先確認我手上是哪一版', desc: '同一個檔名下可能是兩份不同的東西。先確認手上這份的日期和來源，後面的判斷只認這一版。', tag: '閱讀', navTitle: '確認是哪一版' },
-            { file: 'learn-14.html', title: '讓 AI 改稿時保住關鍵資訊', desc: '檢查項全過，也可能是因為最難解釋的那段被直接刪掉了。既看留下的，也看少了什麼。', tag: '閱讀', navTitle: '改稿保住關鍵資訊' },
+            { file: 'learn-9.html', title: "讓 AI 幫我拆開一段看不懂的條款", desc: "先要地圖，再定位卡點，補那一層前置，最後回到原文。四步走完，那一句能用沒有術語的話說出來。", tag: '閱讀', navTitle: "讓 AI 幫我拆開一段看不懂的條款" },
+            { file: 'learn-10.html', title: "讓 AI 先告訴我必須懂哪五個概念", desc: "按目錄、摘要、結論、圖表、正文的順序給它，開工先問要先懂哪五個概念。", tag: '閱讀', navTitle: "讓 AI 先告訴我必須懂哪五個概念" },
+            { file: 'learn-11.html', title: "讓 AI 只根據我貼出的原文回答", desc: "轉述會先丟掉限定條件、例外情況、指向別處的定義，而那正是花錢的部分。", tag: '閱讀', navTitle: "讓 AI 只根據我貼出的原文回答" },
+            { file: 'learn-12.html', title: "讓 AI 給每條判斷標出原文位置", desc: "寫下一句判斷之前，先讓 AI 指出原材料的確切位置。找不到對應原文的內容，先不要拿來做決定。", tag: '閱讀', navTitle: "讓 AI 給每條判斷標出原文位置" },
+            { file: 'learn-13.html', title: "讓 AI 先確認我手上是哪一版", desc: "先確認手上材料的來源、日期和版本線索，再讓後面的判斷只基於這一版。", tag: '閱讀', navTitle: "讓 AI 先確認我手上是哪一版" },
+            { file: 'learn-14.html', title: "讓 AI 改稿時保住關鍵資訊", desc: "AI 說改稿已經沒有問題，可能因為它把最難解釋、也最有分量的那段直接刪了。", tag: '閱讀', navTitle: "讓 AI 改稿時保住關鍵資訊" },
           ],
         },
         {
           id: 't-learn-keep',
           title: '讓知識留下來',
-          desc: '取出來，以及寫在對話外面',
+          desc: "合上材料，讓 AI 考我一次；讓 AI 每次換一道沒見過的新題；讓 AI 找出我在哪一步想錯了；讓 AI 在新對話裡接著上次聊；分三層告訴 AI：我是誰、在做什麼；讓 AI 幫我把筆記寫得以後找得到",
           lessons: [
-            { file: 'learn-15.html', title: '合上材料，讓 AI 考我一次', desc: '取出來這個動作本身在加固記憶，重讀加固的是眼熟。', tag: '記憶', navTitle: '合上材料考一次' },
-            { file: 'learn-16.html', title: '讓 AI 每次換一道沒見過的新題', desc: '固定的舊題會被背熟。AI 的獨特價值是能無限次出新題，而複習要放在快忘的時候。', tag: '記憶', navTitle: '每次換一道新題' },
-            { file: 'learn-17.html', title: '讓 AI 找出我在哪一步想錯了', desc: '答錯之後先別看答案，把當時的想法說給它，讓它指出思路在哪一步偏了。', tag: '記憶', navTitle: '找到想錯的一步' },
-            { file: 'learn-18.html', title: '讓 AI 在新對話裡接著上次聊', desc: '上下文視窗是這一次會話的工作區，對話一關就空了。留下的那層得寫在外面。', tag: '上下文', navTitle: '新對話接著聊' },
-            { file: 'learn-19.html', title: '分三層告訴 AI：我是誰、在做什麼', desc: '一句話自我介紹、專案背景、能被檢索的筆記，各寫什麼、寫在哪。', tag: '上下文', navTitle: '分三層介紹自己' },
-            { file: 'learn-20.html', title: '讓 AI 幫我把筆記寫得以後找得到', desc: '一條筆記一個主題，開頭一句話說清結論，帶上當時的困惑。讀完知道每次該挑哪幾條餵進去。', tag: '上下文', navTitle: '筆記以後找得到' },
+            { file: 'learn-15.html', title: "合上材料，讓 AI 考我一次", desc: "取出來這個動作本身在加固記憶，重讀加固的是眼熟。", tag: '記憶', navTitle: "合上材料，讓 AI 考我一次" },
+            { file: 'learn-16.html', title: "讓 AI 每次換一道沒見過的新題", desc: "固定的舊題會被背熟。AI 的獨特價值是能無限次出新題，而複習要放在快忘的時候。", tag: '記憶', navTitle: "讓 AI 每次換一道沒見過的新題" },
+            { file: 'learn-17.html', title: "讓 AI 找出我在哪一步想錯了", desc: "答錯之後先別看答案，把當時的想法說給它，讓它指出思路在哪一步偏了。讀完能定位到自己拐錯的那一步，只補那一步。", tag: '記憶', navTitle: "讓 AI 找出我在哪一步想錯了" },
+            { file: 'learn-18.html', title: "讓 AI 在新對話裡接著上次聊", desc: "上下文視窗是這一次會話的工作區，對話一關就空了。留下的那層得寫在外面。", tag: '上下文', navTitle: "讓 AI 在新對話裡接著上次聊" },
+            { file: 'learn-19.html', title: "分三層告訴 AI：我是誰、在做什麼", desc: "一句話自我介紹、專案背景、能被檢索的筆記，各寫什麼、寫在哪。", tag: '上下文', navTitle: "分三層告訴 AI：我是誰、在做什麼" },
+            { file: 'learn-20.html', title: "讓 AI 幫我把筆記寫得以後找得到", desc: "一條筆記一個主題，開頭一句話說清結論，帶上當時的困惑。讀完知道每次該挑哪幾條餵進去。", tag: '上下文', navTitle: "讓 AI 幫我把筆記寫得以後找得到" },
           ],
         },
         {
           id: 't-learn-check',
           title: '自查與避坑',
-          desc: '怎麼知道自己真會了，以及三個坑',
+          desc: "讓 AI 像外行一樣追問我；讓 AI 改一個條件，再考我一次；讓 AI 等我寫完三行，再給答案；讓 AI 幫我檢查：我是真的懂了嗎；讓 AI 把推理過程還給我；收藏之前，先用自己的話說一遍",
           lessons: [
-            { file: 'learn-21.html', title: '讓 AI 像外行一樣追問我', desc: '讓它只帶初中知識來追問。讀完能拿一個概念跑一遍，看自己卡在第幾問。', tag: '自查', navTitle: '像外行一樣追問' },
-            { file: 'learn-22.html', title: '讓 AI 改一個條件，再考我一次', desc: '一道原題加三種變體，看同一套背下來的步驟在哪一步失去依據。', tag: '自查', navTitle: '改條件再考一次' },
-            { file: 'learn-23.html', title: '讓 AI 等我寫完三行，再給答案', desc: '預測它在邊界上會怎麼走，再讓它故意講錯、你來指。', tag: '自查', navTitle: '寫完三行再給答案' },
-            { file: 'learn-24.html', title: '讓 AI 幫我檢查：我是真的懂了嗎', desc: '好的閱讀體驗和知識進腦是兩件事。蓋住那段讀得很順的解釋說三個要點，缺的那條就露出來。', tag: '避坑', navTitle: '我是真的懂了嗎' },
-            { file: 'learn-25.html', title: '讓 AI 把推理過程還給我', desc: '結論可以借，推演借走了下次還得再借。讀完能用一句話判斷自己剛才是學會了還是只完成了。', tag: '避坑', navTitle: '把推理過程還給我' },
-            { file: 'learn-26.html', title: '收藏之前，先用自己的話說一遍', desc: '擁有資訊和擁有能力之間沒有自動兌換。讀完你會在點星之前多做一步。', tag: '避坑', navTitle: '先用自己的話說' },
+            { file: 'learn-21.html', title: "讓 AI 像外行一樣追問我", desc: "讓它只帶初中知識來追問。讀完能拿一個概念跑一遍，看自己卡在第幾問。", tag: '自查', navTitle: "讓 AI 像外行一樣追問我" },
+            { file: 'learn-22.html', title: "讓 AI 改一個條件，再考我一次", desc: "一道原題加三種變體，看同一套背下來的步驟在哪一步失去依據。讀完能讓它出一道改過條件的題，自己先解。", tag: '自查', navTitle: "讓 AI 改一個條件，再考我一次" },
+            { file: 'learn-23.html', title: "讓 AI 等我寫完三行，再給答案", desc: "預測它在邊界上會怎麼走，再讓它故意講錯、你來指。", tag: '自查', navTitle: "讓 AI 等我寫完三行，再給答案" },
+            { file: 'learn-24.html', title: "讓 AI 幫我檢查：我是真的懂了嗎", desc: "好的閱讀體驗和知識進腦是兩件事。蓋住那段讀得很順的解釋說三個要點，缺的那條就露出來。", tag: '避坑', navTitle: "讓 AI 幫我檢查：我是真的懂了嗎" },
+            { file: 'learn-25.html', title: "讓 AI 把推理過程還給我", desc: "結論可以借，推演借走了下次還得再借。讀完能用一句話判斷自己剛才是學會了還是只完成了。", tag: '避坑', navTitle: "讓 AI 把推理過程還給我" },
+            { file: 'learn-26.html', title: "收藏之前，先用自己的話說一遍", desc: "擁有資訊和擁有能力之間沒有自動兌換。讀完你會在點星之前多做一步。", tag: '避坑', navTitle: "收藏之前，先用自己的話說一遍" },
           ],
         },
         {
           id: 't-learn-plan',
           title: '給自己設計一門課',
-          desc: '把這些動作排進自己的路徑',
+          desc: "讓 AI 按我的目標篩掉暫時用不上的材料；讓 AI 用一個成品檢查我會不會；讓 AI 幫我先留出複習時間",
           lessons: [
-            { file: 'learn-27.html', title: '讓 AI 按我的目標篩掉暫時用不上的材料', desc: '材料按知識完整性編排，你的時間按自己的目標編排。讀完能寫出一句別人看得見的目標，拿它篩材料。', tag: '規劃', navTitle: '按目標篩材料' },
-            { file: 'learn-28.html', title: '讓 AI 用一個成品檢查我會不會', desc: '里程碑到期那天要交一個別人看得見的東西，開工之前先跑一次前置自測。', tag: '規劃', navTitle: '用成品檢查' },
-            { file: 'learn-29.html', title: '讓 AI 幫我先留出複習時間', desc: '排周曆的時候先扣掉複習位，再往剩下的空裡放新內容。讀完能看出複習位是怎麼被一格一格佔掉的。', tag: '規劃', navTitle: '先留複習時間' },
+            { file: 'learn-27.html', title: "讓 AI 按我的目標篩掉暫時用不上的材料", desc: "材料按知識完整性編排，你的時間按自己的目標編排。讀完能寫出一句別人看得見的目標，拿它篩材料。", tag: '規劃', navTitle: "讓 AI 按我的目標篩掉暫時用不上的材料" },
+            { file: 'learn-28.html', title: "讓 AI 用一個成品檢查我會不會", desc: "里程碑到期那天要交一個別人看得見的東西，開工之前先跑一次前置自測。", tag: '規劃', navTitle: "讓 AI 用一個成品檢查我會不會" },
+            { file: 'learn-29.html', title: "讓 AI 幫我先留出複習時間", desc: "排周曆的時候先扣掉複習位，再往剩下的空裡放新內容。讀完能看出複習位是怎麼被新內容一格一格佔掉的。", tag: '規劃', navTitle: "讓 AI 幫我先留出複習時間" },
           ],
         },
         {
           id: 't-learn-alice',
           title: '把側邊欄的 Alice 用起來',
-          desc: '站內這個助手怎麼用',
+          desc: "把當前材料清楚地交給 AI；讓 AI 一次只問一道自測題；把核驗過的學習筆記留給下一次",
           lessons: [
-            { file: 'learn-30.html', title: '直接指著這一頁問 AI', desc: '當前頁正文會自動帶給她，輸入框裡打六個字就夠，不用先把這段複製過去。', tag: '助教', navTitle: '指著這頁問 AI' },
-            { file: 'learn-31.html', title: '讓 AI 現在就考我', desc: '空態第五道模擬面試圍繞本頁標題出題，一次一道，由淺入深。讀完會用它看出哪一句取不出來。', tag: '助教', navTitle: '現在就考我' },
-            { file: 'learn-32.html', title: '讓 AI 下次主動想起我摘抄的內容', desc: '收藏是把那句話挪到另一個地方等你想起來。摘抄進筆記的那條，下一次你問相關的問題，它自己到她手上。', tag: '助教', navTitle: '下次想起摘抄' },
+            { file: 'learn-30.html', title: "把當前材料清楚地交給 AI", desc: "提問時主動提供材料、問題和約束；本頁不依賴學堂內建助教。", tag: '助教', navTitle: "把當前材料清楚地交給 AI" },
+            { file: 'learn-31.html', title: "讓 AI 一次只問一道自測題", desc: "把已學內容交給實際使用的 AI 工具，透過回答問題檢查理解。", tag: '助教', navTitle: "讓 AI 一次只問一道自測題" },
+            { file: 'learn-32.html', title: "把核驗過的學習筆記留給下一次", desc: "普通 AI 對話不一定會自動記住筆記，請主動提供相關上下文。", tag: '助教', navTitle: "把核驗過的學習筆記留給下一次" },
           ],
         },
         {
           id: 't-learn-end',
           title: '收尾',
-          desc: '彙總、今天能做什麼、自測',
+          desc: "從 32 個動作裡選出我的下一步；今天先完成這三行；用 30 道題找出我沒學會的地方",
           lessons: [
-            { file: 'learn-33.html', title: '從 32 個動作裡選出我的下一步', desc: '前面三十二頁各講一件事。勾出現在最缺的那兩三項，這一頁給出該走的頁碼順序。', tag: '彙總', navTitle: '選出我的下一步' },
-            { file: 'learn-34.html', title: '今天先完成這三行', desc: '三個動作，十分鐘以內做得完。這一頁不講新東西，填完帶走自己那三行。', tag: '落地', navTitle: '今天完成三行' },
-            { file: 'learn-35.html', title: '用 30 道題找出我沒學會的地方', desc: '三十道題覆蓋前面三十二頁。每一道先自己答一遍再翻答案，沒答上的那幾條，末尾按頁碼排成一張補課清單。', tag: '自測', navTitle: '找出沒學會的地方' },
+            { file: 'learn-33.html', title: "從 32 個動作裡選出我的下一步", desc: "前面三十二頁各講一件事。勾出現在最缺的那兩三項，這一頁給出該走的頁碼順序。", tag: '彙總', navTitle: "從 32 個動作裡選出我的下一步" },
+            { file: 'learn-34.html', title: "今天先完成這三行", desc: "三個動作，十分鐘以內做得完。這一頁不講新東西，填完帶走自己那三行。", tag: '落地', navTitle: "今天先完成這三行" },
+            { file: 'learn-35.html', title: "用 30 道題找出我沒學會的地方", desc: "三十道題覆蓋前面三十二頁。每一道先自己答一遍再翻答案，沒答上的那幾條，末尾按頁碼排成一張補課清單。", tag: '自測', navTitle: "用 30 道題找出我沒學會的地方" },
           ],
         },
       ],
@@ -176,10 +176,10 @@ window.COURSE = {
           title: 'AI 是個什麼東西',
           desc: '先看它的能力，再看穿它的底牌',
           lessons: [
-            { file: 'zero-0.html', title: 'AI 能幹哪些神奇的活', desc: '六個真實使用現場：整理紀要、看懂報告、給任何人講任何事、陪練面試、做小工具、生成海報。以前是人學軟體，現在是軟體聽人話', tag: '互動' },
-            { file: 'zero-1.html', title: '它其實在玩「接話茬」', desc: '不需要任何基礎：AI 每次只做一件事——猜下一個字。兩個小遊戲，建立你對 AI 的第一個正確直覺', tag: '互動' },
-            { file: 'zero-2.html', title: '它不是搜尋引擎', desc: '搜尋給書架，AI 給結論。理解「憑記憶回答」的三個後果：會記串、知識有截止日期、沒有出處可查', tag: '概念' },
-            { file: 'zero-3.html', title: '它會一本正經地胡說', desc: '三個找茬遊戲：親手從 AI 的回答裡抓出編造的句子，再帶走三個實用的小習慣', tag: '互動' },
+            { file: 'zero-0.html', title: "先別學原理，看看它能幹哪些神奇的活", desc: "如果你還沒怎麼用過 AI，或者只把它當「問答機」用過幾次——這一課先看六個真實的使用現場。看完你會明白一件事：這不是又一個新軟體，這是軟體歷史上第一次「反過來」。", tag: '互動' },
+            { file: 'zero-1.html', title: "AI 到底是什麼？它其實在玩「接話茬」", desc: "別被「人工智慧」四個字嚇到。ChatGPT、DeepSeek、豆包……不管叫什麼名字，它們做的事情本質上只有一件：猜你這句話的下一個詞是什麼。這一課不需要任何基礎，玩兩個小遊戲你就明白了。", tag: '互動' },
+            { file: 'zero-2.html', title: "它不是在網上幫你搜答案", desc: "關於 AI，新手最常見的誤解是：「不就是個更聰明的搜尋框嗎？」——完全不是一回事。上一課你已經知道它在「接話茬」，這一課看清它和搜尋引擎的本質區別，你就知道什麼時候該用哪個。", tag: '概念' },
+            { file: 'zero-3.html', title: "它會一本正經地胡說八道", desc: "前兩課你知道了：它在接話茬，而且憑的是「消化後的記憶」。現在到了最關鍵的一課——接得像，不等於接得對。下面三段 AI 的回答裡，每段都藏著一句編造的話。來，親手抓一次。", tag: '互動' },
           ],
         },
         {
@@ -187,8 +187,8 @@ window.COURSE = {
           title: '怎麼和它說話',
           desc: '兩個立刻能用的說話技巧',
           lessons: [
-            { file: 'zero-4.html', title: '把它當不了解你的新同事', desc: '三檔提問對比 + 提示詞積木組裝器：背景、要求、限制——資訊給一分，它答一分', tag: '互動' },
-            { file: 'zero-5.html', title: '萬能開場白：先問我幾個問題', desc: '說不清需求沒關係，讓它來問你。點選式對話演示，親手體驗回答品質翻倍的瞬間', tag: '互動' , navTitle: '萬能開場白：先問我'},
+            { file: 'zero-4.html', title: "把它當成一個聰明、但完全不了解你的新同事", desc: "為什麼別人用 AI 效果驚人，你問它卻答得平平？九成的差距不在 AI，在問法。這一課給你一個思維模型和一個公式，立刻就能用。", tag: '互動' },
+            { file: 'zero-5.html', title: "萬能開場白：「先問我幾個問題，再開始」", desc: "上一課的公式很好，但你可能已經發現一個死結：很多時候，你自己也不知道該交代什麼。這一課分享一個小辦法：把這個難題原樣丟回給 AI——只需要一句話。", tag: '互動' , navTitle: "萬能開場白：「先問我幾個問題，再開始」"},
           ],
         },
         {
@@ -196,14 +196,14 @@ window.COURSE = {
           title: '小白三千問 · 會用篇',
           desc: '一頁一問：怎麼用得更好、工具怎麼選',
           lessons: [
-            { file: 'zero-q-prompt.html', title: '提示詞到底怎麼寫才好？', desc: '一個萬能骨架（背景+要求+限制）+ 拼圖組裝器：親手拼不同的提示詞，即時看 AI 回答品質的變化', tag: '互動' , navTitle: '提示詞到底怎麼寫才好'},
-            { file: 'zero-q-prompt-engineering.html', title: '「提示詞工程」有什麼意義？', desc: '你的一次聊天 vs 產品團隊的一百萬次呼叫：拖動滑塊，親眼看一段廢話被放大成多大的帳單', tag: '互動' , navTitle: '提示詞工程有什麼意義'},
-            { file: 'zero-q-model-agent-app.html', title: '模型、Agent、應用是什麼關係？', desc: '發動機、整車、網約車的三層類比 + 對號入座小遊戲：聽到新聞就知道說的是哪一層', tag: '互動' , navTitle: '模型、Agent、應用的關係'},
-            { file: 'zero-q-agent.html', title: 'Agent 到底強在哪？', desc: '同一件報銷的事，聊天 AI 和 Agent 幹起來完全不同——點開播放，看 Agent 一步步把活幹完', tag: '互動' , navTitle: 'Agent 到底強在哪'},
-            { file: 'zero-q-skill.html', title: '最近很火的 Skill 是什麼？', desc: '一張寫給 AI 的「經驗小抄」。對比播放：沒帶小抄的管家來回跑 4 趟，帶了小抄的一趟搞完', tag: '互動' , navTitle: '最近很火的 Skill 是什麼'},
-            { file: 'zero-q-vibe-coding.html', title: 'Vibe Coding 是什麼？不會寫程式碼也能做軟體嗎？', desc: '點選一個生活需求，看「一句話描述 → AI 生成 → 改兩輪 → 能用了」的全過程；學三個月 vs 描述十分鐘的時間對比', tag: '互動' , navTitle: 'Vibe Coding 是什麼'},
-            { file: 'zero-q-china-models.html', title: '國產大模型有哪些？該怎麼選？', desc: '通義、Kimi、DeepSeek、豆包、GLM……點選你的場景，對號入座。資料基於全球盲測榜', tag: '互動' , navTitle: '國產大模型怎麼選'},
-            { file: 'zero-q-companies.html', title: '還有哪些重要的 AI 公司？', desc: 'OpenAI、Anthropic、Google、Meta、xAI……配對小遊戲把公司和代表作對上號，再看一份友好圖鑑', tag: '互動' , navTitle: '還有哪些重要的 AI 公司'},
+            { file: 'zero-q-prompt.html', title: "提示詞到底怎麼寫才好？", desc: "網上流傳著各種「神級提示詞模板」，動輒幾百字。其實真正管用的骨架只有三塊，剩下的都是錦上添花。", tag: '互動' , navTitle: "提示詞到底怎麼寫才好？"},
+            { file: 'zero-q-prompt-engineering.html', title: "「提示詞工程」是工程師才需要學的嗎？", desc: "你可能聽過「提示詞工程師」這個職業，甚至聽說過很高的薪水。一個「說話技巧」，憑什麼配得上「工程」兩個字？", tag: '互動' , navTitle: "「提示詞工程」是工程師才需要學的嗎？"},
+            { file: 'zero-q-model-agent-app.html', title: "模型、Agent、AI 應用是什麼關係？", desc: "新聞裡一會兒說「XX 發布新模型」，一會兒說「Agent 元年」，一會兒又是各種 AI App——這三個詞到底誰是誰？", tag: '互動' , navTitle: "模型、Agent、AI 應用是什麼關係？"},
+            { file: 'zero-q-agent.html', title: "Agent 到底強在哪？為什麼大家都在說它", desc: "上一頁說 Agent 是「裝上輪子的整車」。這一頁看它實際跑起來什麼樣——同一件事，聊天式 AI 和 Agent 的差距在哪。", tag: '互動' , navTitle: "Agent 到底強在哪？為什麼大家都在說它"},
+            { file: 'zero-q-skill.html', title: "最近很火的 Skill 到底是什麼？", desc: "刷到過「給 AI 裝技能」「Skill 生態爆發」這類說法嗎？聽著高深，其實這可能是 AI 圈裡最容易理解的一個新詞——你小時候抄在課本角落的小抄，就是它的全部原理。", tag: '互動' , navTitle: "最近很火的 Skill 到底是什麼？"},
+            { file: 'zero-q-vibe-coding.html', title: "Vibe Coding 是什麼？不會寫程式碼也能做軟體嗎？", desc: "最近總刷到「一句話做了個 App」「零基礎做出小工具」這類帖子，這種玩法有個名字，叫 Vibe Coding。它到底靠不可靠？可靠到什麼程度？這一頁給你交個底。", tag: '互動' , navTitle: "Vibe Coding 是什麼？不會寫程式碼也能做軟體嗎？"},
+            { file: 'zero-q-china-models.html', title: "中國大陸大模型有哪些？該怎麼選？", desc: "先說一個可能讓你意外的事實：在全球使用者盲測的排行榜上，中國大陸模型早就不是「追趕者」了——好幾家排在世界前列。真正的問題不是「哪家最強」，而是「你的場景適合哪家」。", tag: '互動' , navTitle: "中國大陸大模型有哪些？該怎麼選？"},
+            { file: 'zero-q-companies.html', title: "除了 OpenAI，還有哪些重要的 AI 公司？", desc: "新聞裡的名字太多記不住？其實常出場的主角就那麼幾位。先玩個配對遊戲，把「公司」和「代表作」對上號。", tag: '互動' , navTitle: "除了 OpenAI，還有哪些重要的 AI 公司？"},
           ],
         },
         {
@@ -211,15 +211,15 @@ window.COURSE = {
           title: '小白三千問 · 概念掃盲',
           desc: '一頁一問：新聞高頻詞的零基礎版',
           lessons: [
-            { file: 'zero-q-token.html', title: 'Token 是什麼？為什麼 AI 按它收費？', desc: '互動分詞器：點一句話看它被切成多少顆 Token，帳單即時跳動；中英文消耗差異一目瞭然', tag: '互動' , navTitle: 'Token 是什麼'},
-            { file: 'zero-q-context-window.html', title: '為什麼聊久了它會「忘事」？', desc: 'AI 的工作臺就那麼大：拖動對話輪數，看臺面放滿後最早的紙條怎麼掉下去，掉的那一刻它開始答非所問', tag: '互動' , navTitle: '為什麼聊久了會忘事'},
-            { file: 'zero-q-reasoning.html', title: '「推理模型」「深度思考」是什麼？', desc: '同一道題兩種模式對比：秒答 vs 先想再答；時間和費用差多少、什麼問題值得開思考，四題小測幫你建立手感', tag: '互動' , navTitle: '推理模型是什麼'},
-            { file: 'zero-q-parameters.html', title: '參數越多越聰明嗎？', desc: '「千億參數」是什麼概念？拖動規模滑塊建立直覺，再看小模型贏在哪：速度、成本、專精場景', tag: '互動' , navTitle: '參數越多越聰明嗎'},
-            { file: 'zero-q-multimodal.html', title: '為什麼有的 AI 看不懂圖片？', desc: '「會說話」和「會看」是兩套本事。給兩個模型各發一張貓圖，親眼看差別，再講清「眼睛」的原理', tag: '互動' , navTitle: '為什麼有的 AI 看不懂圖'},
-            { file: 'zero-q-finetune-vs-rag.html', title: '微調是什麼？和「喂資料」有什麼區別？', desc: '重新上課 vs 開卷考試：兩種讓 AI 懂你的路子並排演示，四個真實場景點選對號入座', tag: '互動' , navTitle: '微調和喂資料的區別'},
-            { file: 'zero-q-knowledge-base.html', title: '企業都在建的「知識庫」是什麼？', desc: '三步動畫：檔案切塊入庫 → 提問時檢索 → 塞進上下文再回答；同一個問題有無知識庫的回答對比', tag: '互動' , navTitle: '企業知識庫是什麼'},
-            { file: 'zero-q-acronyms.html', title: 'GPT、LLM、AIGC…這些縮寫怎麼分？', desc: '配對小遊戲把縮寫和人話解釋連上線，通關後送一張「誰包含誰」的關係圖', tag: '互動' , navTitle: 'AI 縮寫怎麼分'},
-            { file: 'zero-q-nvidia-gpu.html', title: '英偉達為什麼那麼值錢？', desc: 'AI 時代的賣鏟人：一個博士逐題算 vs 一萬個小學生同時算，看懂顯示卡為什麼是搶手貨', tag: '互動' , navTitle: '英偉達為什麼值錢'},
+            { file: 'zero-q-token.html', title: "Token 是什麼？為什麼 AI 按它收費？", desc: "帳單上寫著「按 Token 計費」，新聞裡動不動「百萬 Token」，這顆「Token」到底是個什麼東西？這一頁帶你親手把一句話切開看看。", tag: '互動' , navTitle: "Token 是什麼？為什麼 AI 按它收費？"},
+            { file: 'zero-q-context-window.html', title: "為什麼聊久了它會「忘事」？", desc: "第 1 輪明明說過的事，第 20 輪它答得像完全沒聽過。它沒壞，也沒敷衍你，只是那句話已經不在它眼前了。", tag: '互動' , navTitle: "為什麼聊久了它會「忘事」？"},
+            { file: 'zero-q-reasoning.html', title: "「推理模型」「深度思考」是什麼？", desc: "很多 AI 應用裡都藏著一個「深度思考」開關。開啟它，回答變慢了、帳單變貴了，換來的到底是什麼？", tag: '互動' , navTitle: "「推理模型」「深度思考」是什麼？"},
+            { file: 'zero-q-parameters.html', title: "參數越多越聰明嗎？", desc: "發表會上動不動「千億參數」「兆參數」，數字一個比一個嚇人。這個「參數」到底是什麼？數字大，就一定更聰明嗎？", tag: '互動' , navTitle: "參數越多越聰明嗎？"},
+            { file: 'zero-q-multimodal.html', title: "為什麼有的 AI「看不懂」圖片？", desc: "你可能遇到過：給 AI 發照片，它回「抱歉，請改用文字描述」。也見過能把照片裡的菜譜都認出來的。同樣是 AI，差在哪？", tag: '互動' , navTitle: "為什麼有的 AI「看不懂」圖片？"},
+            { file: 'zero-q-finetune-vs-rag.html', title: "微調是什麼？和「餵資料」有什麼區別？", desc: "老闆說「把公司資料餵給 AI」，供應商說「給你們微調一個專屬模型」，聽著像一回事，報價能差出幾百倍。這一頁用「上課」和「開卷考試」兩個比方，幫你把這筆帳算清楚。", tag: '互動' , navTitle: "微調是什麼？和「餵資料」有什麼區別？"},
+            { file: 'zero-q-knowledge-base.html', title: "企業都在建的「知識庫」是什麼？", desc: "開會總聽到「我們要建知識庫」「接一下 RAG」，聽著像什麼大工程。其實它就是給 AI 配了一個隨用隨查的書架：考試可以開卷了，還得把翻到的那頁指給你看。", tag: '互動' , navTitle: "企業都在建的「知識庫」是什麼？"},
+            { file: 'zero-q-acronyms.html', title: "GPT、LLM、AIGC…這些縮寫怎麼分？", desc: "新聞裡一句話能塞四五個縮寫，個個都眼熟，個個都說不清。別慌，這一頁用一局配對小遊戲加一張關係圖，幫你把它們各歸各位。", tag: '互動' , navTitle: "GPT、LLM、AIGC…這些縮寫怎麼分？"},
+            { file: 'zero-q-nvidia-gpu.html', title: "英偉達為什麼那麼值錢？", desc: "一家「賣顯示卡的」，市值能排進全球最前列，很多人第一反應是看不懂。看懂它只需要兩個畫面：一場淘金潮，和一場算術比賽。", tag: '互動' , navTitle: "英偉達為什麼那麼值錢？"},
           ],
         },
         {
@@ -227,16 +227,16 @@ window.COURSE = {
           title: '小白三千問 · 祛魅打假',
           desc: '一頁一問：拆穿吹牛話術與常見誤解',
           lessons: [
-            { file: 'zero-q-train-or-prompt.html', title: '「我訓了個模型」到底訓了什麼？', desc: '四層梯子：改提示詞、掛知識庫、微調、從頭預訓練，每層標註真實成本；聽五句吹牛，判斷說話人到底在哪層', tag: '互動' , navTitle: '訓模型還是改提示詞'},
-            { file: 'zero-q-jargon-translator.html', title: 'AI 圈黑話翻譯器', desc: '自研、套殼、數字員工、賦能…點選發表會原話翻譯成人話，附含金量分級和三個當場問出底細的追問', tag: '互動' , navTitle: 'AI 圈黑話翻譯器'},
-            { file: 'zero-q-opensource-free.html', title: '「開源模型」等於免費嗎？', desc: '權重、資料、方法三件套逐項檢查主流模型開放了什麼；滿血版 vs 蒸餾版對比，你本地跑的多半是小號', tag: '互動' , navTitle: '開源模型等於免費嗎'},
-            { file: 'zero-q-benchmark.html', title: '「跑分第一」的模型，為什麼用起來不行？', desc: '榜單分和真實好用度的反轉演示 + 三個原因：刷榜、過擬合題庫、場景不匹配；順便說清什麼榜更可信', tag: '互動' , navTitle: '跑分第一為什麼不行'},
-            { file: 'zero-q-ai-learning.html', title: 'AI 越聊越懂我，是它在學習嗎？', desc: '你以為模型在長大，實際是一張筆記被塞回對話：雙畫面對比動畫 + 新開對話「失憶」演示', tag: '互動' , navTitle: 'AI 是在學習嗎'},
-            { file: 'zero-q-ai-detector.html', title: 'AI 檢測器說「這是 AI 寫的」，可信嗎？', desc: '六段文字猜檢測器判定，親手體驗誤傷名場面；為什麼原理上就做不準，被冤枉了怎麼辦', tag: '互動' , navTitle: 'AI 檢測器可信嗎'},
-            { file: 'zero-q-prompt-course.html', title: '「提示詞秘籍」值得買嗎？', desc: '把付費課賣點逐條拆開：哪些本站免費教過、哪些是正確的常識、哪些純屬包裝。骨架免費，功夫在多用', tag: '互動' , navTitle: '提示詞秘籍值得買嗎'},
-            { file: 'zero-q-randomness.html', title: '同一個問題，為什麼每次答案不一樣？', desc: '同題連問三次看三種回答，配「下一個字」機率骰子動畫；這是設計而非故障，什麼場景需要穩定輸出', tag: '互動' , navTitle: '為什麼每次答案不一樣'},
-            { file: 'zero-q-ai-customer-service.html', title: 'AI 客服為什麼那麼蠢？', desc: '同一句投訴發給聊天 AI 和客服機器人，差距一目瞭然；三個原因：省錢用小模型、護欄鎖死、老技術冒充新 AI', tag: '互動' , navTitle: 'AI 客服為什麼蠢'},
-            { file: 'zero-q-siri-vs-chatgpt.html', title: 'Siri 和 ChatGPT 是一種東西嗎？', desc: '同一句話兩代助手的處理路徑動畫：命令匹配聽不懂就道歉，生成式什麼說法都接得住', tag: '互動' , navTitle: 'Siri 和 ChatGPT 的區別'},
+            { file: 'zero-q-train-or-prompt.html', title: "『我訓了個模型』到底訓了什麼？", desc: "飯局上總有人舉著酒杯說「我最近訓了個模型」。這句話的水分可以從零到百分之九十九，這一頁幫你聽出他到底幹了什麼，順便學會三句能讓全桌安靜的追問。", tag: '互動' , navTitle: "『我訓了個模型』到底訓了什麼？"},
+            { file: 'zero-q-jargon-translator.html', title: "AI 圈黑話翻譯器", desc: "發表會、朋友圈、新聞稿裡的 AI 話術，水分普遍不小。這一頁把最常見的八句拿出來逐句翻譯成人話，每句配一個含金量檔位。看完你會發現：話術並不高深，只是沒人給你翻譯過。", tag: '互動' , navTitle: "AI 圈黑話翻譯器"},
+            { file: 'zero-q-opensource-free.html', title: "『開源模型』等於免費嗎？", desc: "新聞裡說某模型「開源了」，評論區一片歡呼「免費用上頂級 AI」。先別急著歡呼，AI 圈的「開源」和你理解的免費，中間隔著好幾層意思，這一頁把它們一層層剝開。", tag: '互動' , navTitle: "『開源模型』等於免費嗎？"},
+            { file: 'zero-q-benchmark.html', title: "『跑分第一』的模型，為什麼用起來不行？", desc: "刷到「新模型霸榜」的新聞，興沖沖換過去，結果寫個週報還沒原來的順手。你沒用錯，榜單也沒造假，只是榜單測的和你要的，從來就沒對齊過。", tag: '互動' , navTitle: "『跑分第一』的模型，為什麼用起來不行？"},
+            { file: 'zero-q-ai-learning.html', title: "AI 越聊越懂我，是它在學習嗎？", desc: "用了一陣子 AI，你可能有過這種感覺：它記得你住哪、愛吃什麼，越聊越貼心，像在慢慢了解你。它真的在學習進化嗎？答案有點意外：它一個字都沒學進去。", tag: '互動' , navTitle: "AI 越聊越懂我，是它在學習嗎？"},
+            { file: 'zero-q-ai-detector.html', title: "AI 檢測器說「這是 AI 寫的」，可信嗎？", desc: "交了論文被判「AI 生成率過高」，認真寫的報告被同事懷疑是機器代筆… 這種檢測結果到底值幾分信任？先別急著喊冤，玩一局小遊戲，你馬上就有答案。", tag: '互動' , navTitle: "AI 檢測器說「這是 AI 寫的」，可信嗎？"},
+            { file: 'zero-q-prompt-course.html', title: "「提示詞秘籍」值得買嗎？", desc: "「獨家萬能模板，限時特價」「學完 AI 副業月入過萬」… 有刷到過這類廣告嗎？掏錢之前，我們把一張典型的宣傳單逐條拆開，給每個賣點蓋個章。", tag: '互動' , navTitle: "「提示詞秘籍」值得買嗎？"},
+            { file: 'zero-q-randomness.html', title: "同一個問題，為什麼每次答案不一樣？", desc: "昨天問它給奶茶店起名，回了三個文藝範；今天原封不動再問一遍，畫風全變。它是記性差，還是在敷衍你？都沒有。點幾下按鈕，你就能親眼看到它的每個字是怎麼來的。", tag: '互動' , navTitle: "同一個問題，為什麼每次答案不一樣？"},
+            { file: 'zero-q-ai-customer-service.html', title: "AI 客服為什麼那麼蠢？", desc: "你可能也納悶過：同一個時代，聊天 AI 已經聰明得像個可靠同事，可點開購物軟體的客服，對面那位還在一本正經地裝傻。這事其實說得通，看完你就知道它蠢在哪、怎麼治。", tag: '互動' , navTitle: "AI 客服為什麼那麼蠢？"},
+            { file: 'zero-q-siri-vs-chatgpt.html', title: "Siri 和 ChatGPT 是一種東西嗎？", desc: "都叫 AI 助手，一個陪了我們十幾年，敬業地重複著「抱歉，我沒聽懂」；一個橫空出世，什麼都能聊。它們看起來是同行，用的卻是兩代技術。這一頁帶你看清差在哪。", tag: '互動' , navTitle: "Siri 和 ChatGPT 是一種東西嗎？"},
           ],
         },
         {
@@ -244,13 +244,13 @@ window.COURSE = {
           title: '小白三千問 · 花錢與安全',
           desc: '一頁一問：費用、帳號與隱私',
           lessons: [
-            { file: 'zero-q-free-vs-paid.html', title: '免費的 AI 夠用嗎？什麼時候值得付費？', desc: '免費版透視：模型檔位、次數、上下文、高峰排隊四項逐個點亮；三類人對號入座，各給一句結論', tag: '互動' , navTitle: '免費的 AI 夠用嗎'},
-            { file: 'zero-q-api-vs-membership.html', title: 'API 是什麼？和開會員有什麼區別？', desc: '包月自助餐 vs 按量散稱：拖動用量滑塊算兩種方式各花多少錢，找到你的分界點', tag: '互動' , navTitle: 'API 和會員的區別'},
-            { file: 'zero-q-image-cost.html', title: '生成一張圖為什麼貴幾十倍？', desc: '一次問答幾釐錢，一張圖兩三毛。成本條動畫 + 三個原因：畫素多、要畫幾十遍、顯示卡被獨佔', tag: '互動' , navTitle: '生成一張圖為什麼貴'},
-            { file: 'zero-q-video-cost.html', title: 'AI 影片為什麼按秒收費？', desc: '拖動滑塊看看：10 秒影片 = 240 幀連貫的圖 + 物理合理 + 音畫同步。省錢順序也一併分享', tag: '互動' , navTitle: 'AI 影片為什麼按秒收費'},
-            { file: 'zero-q-relay.html', title: '什麼是 API 中轉站？', desc: '三折價格背後：你的每句話都要經過一個無法核實的中間人。路徑動畫講清三個結構性風險', tag: '互動' , navTitle: '什麼是 API 中轉站'},
-            { file: 'zero-q-reverse-proxy.html', title: '「拼車號」「共享號」是什麼？', desc: '9.9 的 Plus 拼車 = 三十人合租單人間。動畫演示：記錄互看、封號連坐、鑰匙在別人手裡', tag: '互動' , navTitle: '拼車號、共享號是什麼'},
-            { file: 'zero-q-privacy.html', title: '我的聊天記錄會被拿去訓練嗎？', desc: '一句話發出去之後經過哪些環節、哪步可能進語料；訓練開關怎麼關，免費版和企業版差在哪', tag: '互動' , navTitle: '聊天記錄會被拿去訓練嗎'},
+            { file: 'zero-q-free-vs-paid.html', title: "免費的 AI 夠用嗎？什麼時候值得付費？", desc: "現在開啟任何一個 AI 產品，免費就能聊得很開心。那付費版到底多了什麼？這一頁帶你把免費版拆開看一看，再幫你對號入座，算算這筆錢值得花嗎。", tag: '互動' , navTitle: "免費的 AI 夠用嗎？什麼時候值得付費？"},
+            { file: 'zero-q-api-vs-membership.html', title: "API 是什麼？和開會員有什麼區別？", desc: "總看到有人說「充 key」「調 API」，聽著像圈內黑話。其實它和你每月訂的會員一樣，都是在給 AI 付錢，只是兩種完全不同的付錢方式。這一頁用一個買菜的類比講明白。", tag: '互動' , navTitle: "API 是什麼？和開會員有什麼區別？"},
+            { file: 'zero-q-image-cost.html', title: "生成一張圖，為什麼比聊一次天貴幾十倍？", desc: "很多 AI 應用聊天隨便聊，一到生圖就要收費、限次數。不是產品小氣——是圖片在成本上真的是「另一個物種」。", tag: '互動' , navTitle: "生成一張圖，為什麼比聊一次天貴幾十倍？"},
+            { file: 'zero-q-video-cost.html', title: "AI 生成影片為什麼這麼貴？", desc: "上一頁說一張圖兩三毛。影片呢？按秒計價，一秒一塊五到五塊錢——生成一條 10 秒的短影片，夠你和 AI 聊上萬句。為什麼？", tag: '互動' , navTitle: "AI 生成影片為什麼這麼貴？"},
+            { file: 'zero-q-relay.html', title: "什麼是 API 中轉站？為什麼我們不太推薦？", desc: "如果你開始折騰 AI 工具，早晚會看到這樣的廣告：「GPT / Claude API 三折起，即買即用」。它們叫「中轉站」。先說清楚：不是說賣家都是壞人——而是這個結構本身，有幾個你值得先了解的風險。", tag: '互動' , navTitle: "什麼是 API 中轉站？為什麼我們不太推薦？"},
+            { file: 'zero-q-reverse-proxy.html', title: "「反代帳號」「共享號」是什麼？", desc: "「ChatGPT Plus 拼車，9.9 一個月」「Claude 會員共享號，秒發」——比官方價便宜十幾倍，聽著很香。這一頁把「香」背後的帳算給你看。", tag: '互動' , navTitle: "「反代帳號」「共享號」是什麼？"},
+            { file: 'zero-q-privacy.html', title: "我的聊天記錄會被拿去訓練嗎？", desc: "你和 AI 說過的話，有沒有可能變成它的「教材」？這一頁用一張流向圖講清資料到底去了哪，再告訴你開關在哪類設定裡找、什麼內容堅決別發。", tag: '互動' , navTitle: "我的聊天記錄會被拿去訓練嗎？"},
           ],
         },
         /* 放在小白三千问之后：本主题的「你的下一步」是零基础入门篇的收官分流页，
@@ -260,8 +260,8 @@ window.COURSE = {
           title: '什麼能放心交給它',
           desc: '一套三秒鐘的信任判斷法',
           lessons: [
-            { file: 'zero-6.html', title: '放心用，還是要核實？', desc: '八道判斷題小遊戲 + 信任四象限：有標準答案嗎？錯了後果大嗎？健康錢法律三條紅線', tag: '互動' , navTitle: '放心用，還是要核實'},
-            { file: 'zero-final.html', title: '你的下一步', desc: '六個直覺行囊盤點 + 三道題分流測試，找到最適合你的學習路徑', tag: '收官' },
+            { file: 'zero-6.html', title: "哪些活能放心交給它，哪些最好多確認一步", desc: "你已經知道它很能幹，也知道它會一本正經地出錯。最後一個關鍵問題：遇到一件具體的事，怎麼在三秒內判斷能不能交給 AI？先玩 8 道判斷題，法則就在你的答案裡。", tag: '互動' , navTitle: "哪些活能放心交給它，哪些最好多確認一步"},
+            { file: 'zero-final.html', title: "六個直覺都在了，接下來去哪？", desc: "恭喜你走完零基礎入門篇。你現在對 AI 的理解，已經超過了大多數「用了很久但從沒想過它是什麼」的人。這一頁先盤點行囊，再幫你找到最適合你的下一步。", tag: '收官' },
           ],
         },
       ],
@@ -280,11 +280,11 @@ window.COURSE = {
           title: '基礎原理',
           desc: '訓練資料、訓練 vs 推理、詞表與注意力',
           lessons: [
-            { file: 'training-data.html', title: 'AI 的食物：訓練資料', desc: '15T Token 是什麼概念？語料構成視覺化 + 資料規模直覺滑塊', tag: '互動' , navTitle: '訓練資料規模'},
-            { file: 'train-vs-infer.html', title: '訓練 vs 推理：兩個不同的過程', desc: '對話不是學習，參數凍結，按 Token 計費，這些是 AI 產品必懂的底層邏輯', tag: '概念' , navTitle: '訓練 vs 推理'},
-            { file: '1-2-vocab.html', title: '詞表與訓練', desc: '從語料到詞間矩陣，Token 化 + 注意力權重互動演示', tag: '互動' },
-            { file: '1-2-base.html', title: 'Base 模型：Token 推 Token 機器', desc: '訓練結束後得到什麼？逐步生成 + 機率分佈即時更新', tag: '動畫' , navTitle: 'Base 模型'},
-            { file: '1-2-gpt.html', title: 'GPT 的躍進：PreTraining 改變一切', desc: 'CNN / RNN / BERT / GPT 四種演算法可互動對比，記憶衰減視覺化', tag: '互動' , navTitle: 'GPT 的躍進'},
+            { file: 'training-data.html', title: "AI 的食物：訓練資料", desc: "想讓 AI 學會說話，先要餵給它數以兆計的文字。它讀了人類寫過的絕大多數內容。", tag: '互動' , navTitle: "AI 的食物：訓練資料"},
+            { file: 'train-vs-infer.html', title: "訓練 vs 推理：兩個完全不同的過程", desc: "很多人以為 AI 每次回答都在學習。實際上完全不是這麼回事。", tag: '概念' , navTitle: "訓練 vs 推理：兩個完全不同的過程"},
+            { file: '1-2-vocab.html', title: "詞表與訓練", desc: "大模型學習的第一步：讀取人類提供的海量文字資料。", tag: '互動' },
+            { file: '1-2-base.html', title: "Base 模型：Token 推 Token 機器", desc: "訓練結束後得到的原始模型，它只做一件事。", tag: '動畫' , navTitle: "Base 模型：Token 推 Token 機器"},
+            { file: '1-2-gpt.html', title: "GPT 的躍進", desc: "PreTraining 為什麼改變了一切：從 CNN/RNN/BERT 到 GPT，大模型史上最重要的一步。", tag: '互動' , navTitle: "GPT 的躍進"},
           ],
         },
         {
@@ -292,10 +292,10 @@ window.COURSE = {
           title: '從補全到對話',
           desc: '補全機器是如何變成聊天機器人的',
           lessons: [
-            { file: '1-2-api.html', title: 'chat/completions 之謎', desc: '明明是對話，為什麼 API 叫「補全」？打字機動畫解讀', tag: '動畫' },
-            { file: '1-2-fake-chat.html', title: '偽造聊天記錄', desc: 'OpenAI 最初的實驗：把補全機器變成聊天機器人', tag: '動畫' },
-            { file: '1-2-sft.html', title: 'Chat Template + SFT', desc: 'Jinja 格式、指令微調，大模型終於學會說話', tag: '概念' },
-            { file: '1-2-prompt-power.html', title: '上下文視窗是關鍵', desc: '提示詞為什麼夠用？Token 截斷視覺化，無需重新訓練', tag: '互動' },
+            { file: '1-2-api.html', title: "chat/completions 之謎", desc: "明明是在和大模型對話，為什麼 OpenAI 的 API 路徑裡寫的是「補全」？這個命名背後，藏著對大模型本質的理解。", tag: '動畫' },
+            { file: '1-2-fake-chat.html', title: "大模型的本質是補全，那如果我偽造一段聊天記錄讓它補全呢？", desc: "你不是只會一個字一個字往後吐嗎？ 那我就做出一個格式：「這是一段還沒寫完的聊天紀錄，你來接寫助理的部分。」", tag: '動畫' },
+            { file: '1-2-sft.html', title: "Chat Template + SFT：大模型終於學會「說話」", desc: "從補全機器到對話助手，差的就是這套訓練典範。", tag: '概念' },
+            { file: '1-2-prompt-power.html', title: "為什麼用提示詞就夠了？答案在上下文視窗", desc: "PreTraining 之後：不用重新訓練，把任務描述餵進去就行。但為什麼？", tag: '互動' },
           ],
         },
         {
@@ -303,12 +303,12 @@ window.COURSE = {
           title: '幻覺與四種應對',
           desc: '幻覺成因，以及 Prompt / RAG / Temperature / 評測四種緩解方案',
           lessons: [
-            { file: '1-2-hallucination.html', title: '大模型幻覺演示', desc: '三類典型幻覺：事實錯誤 / 自信編造 / 知識截止', tag: '案例' , navTitle: '大模型幻覺'},
-            { file: '1-2-mitigation-prompt.html', title: '應對 1：Prompt Engineering', desc: '約束指令 + 侷限性：模型不知道自己不知道什麼', tag: '概念' , navTitle: 'Prompt Engineering'},
-            { file: '1-2-mitigation-rag.html', title: '應對 2：RAG 檢索增強生成', desc: '真實文件注入上下文，5 步互動流程動畫，對比有無 RAG 的差異', tag: '互動' , navTitle: 'RAG 檢索增強'},
-            { file: 'rag-advanced.html', title: 'RAG 的代價與優化策略', desc: '成本分析表 + 關鍵詞觸發 / 模型路由 / 語義快取 / 精準切塊四種策略', tag: 'PM 進階' , navTitle: 'RAG 代價與優化'},
-            { file: '1-2-mitigation-temp.html', title: '應對 3：Temperature & Top-P', desc: '拖動滑塊，即時看機率分佈和輸出變化', tag: '互動' , navTitle: 'Temperature & Top-P'},
-            { file: '1-2-mitigation-eval.html', title: '應對 4：評測 + 人工審核', desc: '外部糾錯層，冷啟動階段兜底策略（HITL）', tag: '概念' , navTitle: '評測 + 人工審核'},
+            { file: '1-2-hallucination.html', title: "大模型幻覺 (Hallucination)", desc: "模型不知道事實，只是在做機率取樣。看它如何自信地編造：選擇一個案例，點選「開始生成」，觀察幻覺如何在逐詞生成中產生。", tag: '案例' , navTitle: "大模型幻覺 (Hallucination)"},
+            { file: '1-2-mitigation-prompt.html', title: "Prompt 工程：用指令約束幻覺", desc: "PM 視角：寫需求文件、對接 AI 介面時，如何透過 System Prompt 減少模型編造。", tag: '概念' , navTitle: "Prompt 工程：用指令約束幻覺"},
+            { file: '1-2-mitigation-rag.html', title: "RAG 檢索增強生成：讓模型「開卷答題」", desc: "PM 視角：什麼場景必須上 RAG？如何設計檢索流程？實際上線時容易踩到哪些坑。", tag: '互動' , navTitle: "RAG 檢索增強生成：讓模型「開卷答題」"},
+            { file: 'rag-advanced.html', title: "RAG 的代價與最佳化策略", desc: "每次 RAG 查詢都要額外花錢。如果不做最佳化，成本會隨用量快速失控。", tag: 'PM 進階' , navTitle: "RAG 的代價與最佳化策略"},
+            { file: '1-2-mitigation-temp.html', title: "應對 3：Temperature & Top-P", desc: "PM 視角：API 接入時如何配置取樣參數，不同業務場景的推薦值與風險邊界。手段 03 / 04 · 預防。", tag: '互動' , navTitle: "應對 3：Temperature & Top-P"},
+            { file: '1-2-mitigation-eval.html', title: "應對 4：評測 + 人工審核", desc: "PM 視角：如何量化幻覺風險、設計分級審核流程、讓「人在迴圈裡」成為產品安全網。手段 04 / 04 · 檢測 + 糾正。", tag: '概念' , navTitle: "應對 4：評測 + 人工審核"},
           ],
         },
         {
@@ -316,8 +316,8 @@ window.COURSE = {
           title: '篇章彙總',
           desc: '大模型原理篇核心知識回顧',
           lessons: [
-            { file: 'summary-1.html', title: '彙總（上）· 大模型是什麼 + 幻覺', desc: '訓練本質 / Token / Base→SFT→Chat / 四種幻覺型別與根因', tag: '彙總' , navTitle: '大模型原理篇彙總（上）'},
-            { file: 'summary-1b.html', title: '彙總（下）· 緩解策略 + 決策框架', desc: '四種緩解策略對比 / 常見誤區清單 / 方案選擇判斷矩陣', tag: '彙總' , navTitle: '大模型原理篇彙總（下）'},
+            { file: 'summary-1.html', title: "彙總（上）· 大模型是什麼 + 幻覺", desc: "大模型原理 · 總結回顧 · 上半頁：大模型基礎：它是什麼，為何會幻覺。", tag: '彙總' , navTitle: "彙總（上）· 大模型是什麼 + 幻覺"},
+            { file: 'summary-1b.html', title: "彙總（下）· 緩解策略 + 決策框架", desc: "大模型原理 · 總結回顧 · 下半頁：如何緩解幻覺，以及 AI PM 該有的決策框架。", tag: '彙總' , navTitle: "彙總（下）· 緩解策略 + 決策框架"},
           ],
         },
         {
@@ -325,7 +325,7 @@ window.COURSE = {
           title: '你現在能做什麼',
           desc: '學完這章，你今天能動手做什麼',
           lessons: [
-            { file: 'build-1.html', title: '把那件事定下來', desc: '需求收斂四段演示；三檔任務：寫四行需求、用五個真實輸入試它、劃一條人機分界線', tag: '實戰' },
+            { file: 'build-1.html', title: "別停在「我懂了」，先把那件事定下來", desc: "原理講完，最容易發生的事是：你覺得學到了很多，但合上電腦，手上什麼都沒多。所以從這裡開始，每章結尾都有這麼一頁，只回答一個問題：學完這章，你今天能動手做什麼。", tag: '實戰' },
           ],
         },
         {
@@ -333,7 +333,7 @@ window.COURSE = {
           title: '他們會這樣考你',
           desc: '面試官、老闆、技術同事會怎樣考察本章內容',
           lessons: [
-            { file: 'interview-1.html', title: '大模型基礎 · 30 道靈魂拷問', desc: '每題附考察意圖、答題框架與加分點：機率預測 / message list / 幻覺解釋 / RAG vs 重訓 / Temperature / 上下文視窗', tag: '考察' , navTitle: '他們會這樣考你 · 30 問'},
+            { file: 'interview-1.html', title: "大模型基礎 · 30 道靈魂拷問", desc: "大模型原理篇學完了，懂了和能講出來之間還差一場實戰。這 30 個問題來自三個真實場景，先自己開口回答，再看框架。", tag: '考察' , navTitle: "大模型基礎 · 30 道靈魂拷問"},
           ],
         },
       ],
@@ -352,8 +352,8 @@ window.COURSE = {
           title: '上下文工程',
           desc: 'AI 的工作記憶與溢位處理',
           lessons: [
-            { file: '5-1.html', title: '上下文視窗：AI 的工作記憶', desc: '視窗構成視覺化，拖動模擬溢位效果，主流模型容量對比', tag: '互動' , navTitle: '上下文視窗'},
-            { file: '5-2.html', title: '上下文溢位：三種處理策略', desc: '直接截斷 / 摘要壓縮 / 選擇性保留，視覺化對比每種策略的利弊', tag: '互動' , navTitle: '上下文溢位策略'},
+            { file: '5-1.html', title: "上下文視窗：AI 的工作記憶", desc: "模組五 · 上下文工程 · 第 1 頁。拖動下方滑塊，親自體驗視窗溢位。", tag: '互動' , navTitle: "上下文視窗：AI 的工作記憶"},
+            { file: '5-2.html', title: "上下文溢位：三種處理策略", desc: "模組五 · 上下文工程 · 第 2 頁。點選策略，下方逐步演示效果。", tag: '互動' , navTitle: "上下文溢位：三種處理策略"},
           ],
         },
         {
@@ -361,12 +361,12 @@ window.COURSE = {
           title: 'Prompt 工程',
           desc: 'Markdown、角色扮演、進階技巧與輸出格式',
           lessons: [
-            { file: '6-0a.html', title: '為什麼大模型選擇 Markdown', desc: '純文字模型 + 排版需求 = MD 成為首選，逐步推演 HTML/Word/LaTeX 為何不行', tag: '動畫' , navTitle: '為什麼選 Markdown'},
-            { file: '6-0b.html', title: 'Markdown 語法與渲染 Pipeline', desc: '常用語法速查 + 即時編輯器 + marked.js / markdown-it 渲染方案', tag: '互動' , navTitle: 'MD 語法與工程渲染'},
-            { file: '6-1.html', title: '你說什麼，它就變什麼', desc: '五種角色即時切換，輸出格式控制，System Prompt 核心原理', tag: '互動' , navTitle: 'Prompt 角色扮演'},
-            { file: '6-2.html', title: 'Prompt 進階技巧', desc: 'Few-Shot / CoT / 約束條件 / 任務拆解，好壞對比互動演示', tag: '互動' },
-            { file: '6-3.html', title: '輸出格式取捨', desc: '純文字 / JSON / Markdown / YAML / XML，場景適配度對比與權衡', tag: '互動' },
-            { file: '6-4.html', title: '流式返回與格式配合', desc: 'JSON 全文才能解析 / MD 逐字顯示 / XML 捕獲標籤即渲染，動態演示', tag: '互動' , navTitle: '流式返回與格式'},
+            { file: '6-0a.html', title: "為什麼大模型選擇 Markdown", desc: "模組六 · Prompt Engineering · 前置。一步步推演 Markdown 為何勝出。", tag: '動畫' , navTitle: "為什麼大模型選擇 Markdown"},
+            { file: '6-0b.html', title: "Markdown 語法與工程化渲染", desc: "模組六 · Prompt Engineering · 前置。點選語法元素看原始碼/渲染對比，再看前端渲染方案選型。", tag: '互動' , navTitle: "Markdown 語法與工程化渲染"},
+            { file: '6-1.html', title: "你說什麼，它就變什麼", desc: "透過 System Prompt 指定角色，同一個模型可以變成完全不同的助手。角色扮演是最基礎也最有效的 Prompt 技巧。點選下面的角色和格式，觀察輸出如何變化。", tag: '互動' , navTitle: "你說什麼，它就變什麼"},
+            { file: '6-2.html', title: "Prompt 進階技巧", desc: "掌握 4 個技巧，讓模型回答品質翻倍。點選技巧，下方即時演示好壞對比。", tag: '互動' },
+            { file: '6-3.html', title: "輸出格式取捨", desc: "沒有最好的格式，只有最適合場景的格式。流式返回時，格式選擇的影響格外明顯。選一個格式，點選「開始流式演示」，觀察 Token 生成的體驗差異。", tag: '互動' },
+            { file: '6-4.html', title: "流式返回與格式配合", desc: "LLM 是逐 Token 輸出的。同一個響應內容，格式不同，流式體驗完全不同。選擇場景後點選播放，觀察三種格式的渲染差異。", tag: '互動' , navTitle: "流式返回與格式配合"},
           ],
         },
         {
@@ -375,11 +375,11 @@ window.COURSE = {
           routes: ['pm', 'build'],   // Prompt 注入與防護，做產品才需要
           desc: 'Prompt Injection 原理、案例與防禦實戰',
           lessons: [
-            { file: 'prompt-attack.html', title: 'Prompt Injection：為什麼會被攻擊', desc: 'SQL 注入類比 → Message List 本質 → 缺乏參數化 → 5 大攻擊型別概覽', tag: '安全' , navTitle: 'Prompt 注入原理'},
-            { file: 'prompt-attack-cases.html', title: 'Prompt Injection：12 個攻擊案例', desc: '越權指令 / 角色扮演 / Few-Shot / 結構注入 / 隱喻偽裝，中招版 vs 防禦版', tag: '安全' , navTitle: '12 個攻擊案例'},
-            { file: 'prompt-defense.html', title: 'Prompt 防禦：三層攔截實戰', desc: '輸入層正則 → 提示詞層約束 → 輸出層洩漏檢測 → 二次審核，可模擬攻擊全鏈路', tag: '實戰' , navTitle: 'Prompt 防禦實戰'},
-            { file: 'ai-safety-redlines.html', title: 'AI 安全紅線：四條底線', desc: '不能做的事、做了會怎樣，產品經理必須守住的四類安全邊界', tag: '安全' , navTitle: 'AI 安全紅線'},
-            { file: 'ai-safety-governance.html', title: '風險分級與責任：誰來管、怎麼管', desc: 'AI 輸出的風險分級模型，各角色的責任分工與治理框架', tag: '安全' , navTitle: '風險分級與責任'},
+            { file: 'prompt-attack.html', title: "Prompt Injection：為什麼會被攻擊", desc: "Prompt 注入是大模型應用面臨的最嚴重安全威脅之一。它和 SQL 注入同源：資料和指令混在同一個通道裡。", tag: '安全' , navTitle: "Prompt Injection：為什麼會被攻擊"},
+            { file: 'prompt-attack-cases.html', title: "Prompt Injection：12 個攻擊案例", desc: "12 個經過真實驗證的攻擊案例，分為 5 大類型。選一個案例，切換「中招版 vs 防禦版」，觀察同樣的攻擊在有無防護下的兩種結局。", tag: '安全' , navTitle: "Prompt Injection：12 個攻擊案例"},
+            { file: 'prompt-defense.html', title: "Prompt 防禦：三層攔截實戰", desc: "以真實產品 MoodVerse 為例，看輸入過濾、System Prompt 安全約束、輸出洩漏檢測三層如何層層攔截 Prompt 注入。點選標籤頁逐步瞭解，第三個標籤可親手模擬攻擊全鏈路。", tag: '實戰' , navTitle: "Prompt 防禦：三層攔截實戰"},
+            { file: 'ai-safety-redlines.html', title: "AI 安全紅線：四條底線", desc: "企業使用 AI 的四條不可觸碰的底線。記住這四條，就能避開 90% 的安全事故。點選任意紅線卡片查看詳情。踩到任何一條 = 安全事故。", tag: '安全' , navTitle: "AI 安全紅線：四條底線"},
+            { file: 'ai-safety-governance.html', title: "風險分級與責任", desc: "AI 使用不是能用就行。按風險分級（L1/L2/L3）匹配管控強度，按責任鏈（使用者/審批人/管理者）明確誰擔責。點選左側任意條目查看詳情。", tag: '安全' , navTitle: "風險分級與責任"},
           ],
         },
         {
@@ -388,31 +388,31 @@ window.COURSE = {
           routes: ['pm', 'build'],   // Agent 工程，產品路線要懂能力邊界
           desc: 'Agent 能力、工具呼叫、ReAct、記憶、Skill 與腳手架',
           lessons: [
-            { file: '7-1.html', title: 'Agent：能幹活的 AI', desc: '四大能力 Plan / Tool / Memory / Act，點選查看真實案例', tag: '互動' , navTitle: 'Agent 概念'},
-            { file: '7-2.html', title: '工具呼叫的秘密', desc: '模型輸出 JSON → 框架解析執行 → 結果注回，四步流程視覺化', tag: '互動' , navTitle: '工具呼叫'},
-            { file: '7-2a.html', title: '一次對話背後的 5 條訊息', desc: '拆解 Function Calling 真實鏈路：使用者看到 1 條回覆，背後是 5 條 API 訊息', tag: '深入' , navTitle: '一次對話背後的5條訊息'},
-            { file: '7-2b.html', title: '工具描述的學問', desc: '同樣功能，好描述 vs 壞描述成功率差 3 倍，對比實驗', tag: '深入' },
-            { file: '7-2c.html', title: '多工具編排：併發 vs 序列', desc: 'isConcurrencySafe 決定工具能否並行，排程策略視覺化', tag: '深入' , navTitle: '多工具編排'},
-            { file: '7-2d.html', title: 'MCP 協議：工具的 USB 介面', desc: 'stdio / SSE / Streamable HTTP 三種傳輸方式對比，資料流動畫', tag: '深入' , navTitle: 'MCP 協議'},
-            { file: '7-3.html', title: 'ReAct 實戰：查詢天氣完整鏈路', desc: 'Thought / Action / Observation 逐步演示，7 步完整 Agent 鏈路', tag: '動畫' , navTitle: 'ReAct 實戰'},
-            { file: '7-3a.html', title: '短期記憶 = 上下文視窗', desc: '訊息列表視覺化，每條訊息的 Token 佔用和角色標記', tag: '深入' , navTitle: '上下文視窗'},
-            { file: '7-3b.html', title: '上下文壓縮：四層防線', desc: '60% 裁剪 → 75% 微壓縮 → 85% 摺疊 → 95% 緊急，拖動滑塊看壓縮過程', tag: '深入' , navTitle: '上下文壓縮四層策略'},
-            { file: '7-3c.html', title: '長期記憶：向量檢索', desc: 'Embedding → 向量資料庫 → 語義搜尋，topK 與 minScore 的設計決策', tag: '深入' , navTitle: '長期記憶'},
-            { file: 'vector-db-1.html', title: '從 Embedding 到 Milvus', desc: '語義相似度、ANN 與向量資料庫的職責邊界', tag: '深入' },
-            { file: 'vector-db-2.html', title: 'Milvus 心智模型', desc: 'Collection、Schema、Entity、Index、Search、Query 與 Load', tag: '深入' },
-            { file: 'vector-db-3.html', title: 'Milvus 實操', desc: '連線、建表、批次寫入、索引、搜尋、查詢和刪除', tag: '實戰' },
-            { file: 'vector-db-4.html', title: '從檢索到 RAG', desc: '切分、過濾、混合檢索、RRF、重排與評測', tag: '深入' },
-            { file: '7-4a.html', title: 'ReAct 迴圈：思考→行動→觀察', desc: '一個刪除 console.log 的任務經歷 14 輪迴圈，含自我糾錯', tag: '深入' , navTitle: 'ReAct 迴圈'},
-            { file: '7-4b.html', title: 'Agent 卡死的 5 種模式', desc: '參數格式錯誤、幻覺工具、無限遞迴、資訊不足、API 異常', tag: '深入' , navTitle: 'Agent 卡死的5種模式'},
-            { file: '7-4c.html', title: '權限與安全', desc: '5 種權限模式 + LLM 風險分級 + Human-in-the-loop 設計', tag: '深入' },
-            { file: '7-5.html', title: 'Skill：讓 Agent 少走彎路', desc: 'Skill = 流程說明 + 工具呼叫指引，用「陽臺收衣服」類比好迴圈 vs 差迴圈', tag: '互動' , navTitle: 'Skill 技能'},
-            { file: '7-5a.html', title: 'Skill 的本質', desc: '好迴圈 vs 差迴圈升級版，Skill 如何改變 Agent 執行路徑', tag: '深入' },
-            { file: '7-5b.html', title: '解剖一個真實 Skill', desc: '從真實原始碼學 SKILL.md 的結構設計', tag: '深入' },
-            { file: '7-4.html', title: '腳手架工程：從試驗品到產品', desc: '模擬 Agent 查機票訂酒店，無腳手架 vs 有腳手架完整對比，5 大能力詳解', tag: '互動' , navTitle: '腳手架工程'},
-            { file: '7-6a.html', title: '5 道工程護欄', desc: '迭代上限、輸出截斷、超時控制、中斷恢復、上下文急救', tag: '深入' , navTitle: '5道工程護欄'},
-            { file: '7-6b.html', title: '多 Agent 協作', desc: '子 Agent 排程、Worker Thread、並行 vs 序列執行策略', tag: '深入' },
-            { file: '7-6c.html', title: '可觀測性', desc: '事件流視覺化、Token 追蹤、OpenTelemetry 整合', tag: '深入' },
-            { file: '7-summary.html', title: 'Agent 工程全景圖', desc: '從四大能力到工程落地，一頁看清 Agent 的完整知識地圖', tag: '彙總' },
+            { file: '7-1.html', title: "Agent：能幹活的 AI", desc: "點選能力卡片，右側逐步演示 Agent 在真實場景中的執行過程", tag: '互動' , navTitle: "Agent：能幹活的 AI"},
+            { file: '7-2.html', title: "工具呼叫的秘密", desc: "模型不會真的執行程式碼，它只是輸出一段結構化文字，框架程式碼負責解析並執行。向下滾動，自動追蹤完整呼叫鏈路。", tag: '互動' , navTitle: "工具呼叫的秘密"},
+            { file: '7-2a.html', title: "一次對話背後的 5 條訊息", desc: "左邊：使用者看到的介面 ｜ 右邊：API 裡真正發生的。向下滾動，自動演示一次查天氣背後發生了什麼。", tag: '深入' , navTitle: "一次對話背後的 5 條訊息"},
+            { file: '7-2b.html', title: "工具描述的學問", desc: "同一個任務，左邊失敗，右邊成功，差別只在描述。選擇一個實驗場景，點選執行看對比。", tag: '深入' },
+            { file: '7-2c.html', title: "多工具編排：併發 vs 序列", desc: "同一輪返回 3 個工具呼叫，執行順序怎麼選？選擇模式，點選演示，觀察時間差異。", tag: '深入' , navTitle: "多工具編排：併發 vs 序列"},
+            { file: '7-2d.html', title: "MCP 協議：工具的 USB 介面", desc: "USB 之前每臺裝置要專屬資料線；MCP 之前每個 Agent 要專屬串接程式碼。", tag: '深入' , navTitle: "MCP 協議：工具的 USB 介面"},
+            { file: '7-3.html', title: "ReAct 實戰：當 Agent 卡住了", desc: "ReAct 迴圈：思考 → 行動 → 觀察，迴圈往復。但如果模型對參數格式不瞭解，它會反覆猜測，卡在同一個地方打轉。向下滾動，自動追蹤真實失敗過程。", tag: '動畫' , navTitle: "ReAct 實戰：當 Agent 卡住了"},
+            { file: '7-3a.html', title: "短期記憶 = 上下文視窗", desc: "上下文視窗就是模型的工作臺：模型能看到的一切，都必須放在這張桌子上。向下滾動，觀察工作臺如何被填滿。", tag: '深入' , navTitle: "短期記憶 = 上下文視窗"},
+            { file: '7-3b.html', title: "上下文壓縮：四層防線", desc: "拖動滑塊模擬對話增長，觀察壓縮如何延長上下文壽命。", tag: '深入' , navTitle: "上下文壓縮：四層防線"},
+            { file: '7-3c.html', title: "長期記憶：向量檢索", desc: "讓 Agent 記住上個月的事：透過向量檢索，把使用者偏好、專案配置、歷史 Bug 注入當前對話。", tag: '深入' , navTitle: "長期記憶：向量檢索"},
+            { file: 'vector-db-1.html', title: "從 Embedding 到 Milvus", desc: "先建立直覺：模型把含義變成座標，Milvus 負責在海量座標中快速找到“意思最接近”的內容。", tag: '深入' },
+            { file: 'vector-db-2.html', title: "Milvus 心智模型", desc: "把新術語對映到熟悉的“表、列、行”，再補上向量索引與記憶體載入兩個關鍵概念。", tag: '深入' },
+            { file: 'vector-db-3.html', title: "Milvus 實操", desc: "用一套一致的集合名和真實文字 Embedding，跑通寫入、檢索與刪除；程式碼假定本地 Milvus 已在 19530 埠執行。", tag: '實戰' },
+            { file: 'vector-db-4.html', title: "從檢索到 RAG", desc: "Search 返回“可能相關的片段”，RAG 還要把它們變成有來源、有邊界、能被評測的回答依據。", tag: '深入' },
+            { file: '7-4a.html', title: "ReAct 迴圈：思考 → 行動 → 觀察", desc: "Reasoning + Acting：Agent 靠迴圈完成任務，一問一答只是其中一輪。向下滾動，自動演示一個複雜任務如何經歷 14 輪迴圈。", tag: '深入' , navTitle: "ReAct 迴圈：思考 → 行動 → 觀察"},
+            { file: '7-4b.html', title: "Agent 卡死的 5 種模式", desc: "點選下方卡片選擇一種故障模式 → 播放故障模擬 → 對比加了防護後的表現。", tag: '深入' , navTitle: "Agent 卡死的 5 種模式"},
+            { file: '7-4c.html', title: "權限與安全", desc: "Agent 能做什麼、不能做什麼？切換三種權限模式，觀察同一批操作的不同處理方式。", tag: '深入' },
+            { file: '7-5.html', title: "Skill：讓 Agent 少走彎路", desc: "選擇一個場景，演示自動播放，對比「差迴圈」和「好迴圈」的兩種執行方式。", tag: '互動' , navTitle: "Skill：讓 Agent 少走彎路"},
+            { file: '7-5a.html', title: "Skill 的本質", desc: "給 Agent 裝上「操作手冊」：沒有 Skill 的 Agent 像新員工摸索，有 Skill 的 Agent 像老手照章執行。", tag: '深入' },
+            { file: '7-5b.html', title: "解剖一個示例 Skill", desc: "以 示例助手 發版助手為例：點選每個區域展開詳情，看 Agent 如何讀取並執行一個 Skill。", tag: '深入' },
+            { file: '7-4.html', title: "腳手架工程：從試驗品到產品", desc: "左側模擬同一個「查機票 + 訂飯店」任務在有無腳手架時的差距，滾動到演示區自動播放；右側點選查看 5 大能力詳解。", tag: '互動' , navTitle: "腳手架工程：從試驗品到產品"},
+            { file: '7-6a.html', title: "5 道工程護欄", desc: "沒有護欄的 Agent = 沒有剎車的跑車。點選左側每道護欄，查看場景還原與有無護欄的對比。", tag: '深入' , navTitle: "5 道工程護欄"},
+            { file: '7-6b.html', title: "多 Agent 協作：一個人幹不完，就派團隊", desc: "主 Agent 拆任務 → 子 Agent 各司其職 → 彙總交付。只讀任務並行加速，寫入任務序列保安全。", tag: '深入' },
+            { file: '7-6c.html', title: "可觀測性：Agent 在幹什麼、花了多少錢", desc: "事件流 + 統計面板 · 即時監控 Agent 全生命週期。點選「模擬一次任務」，看一個真實任務的完整事件流。", tag: '深入' },
+            { file: '7-summary.html', title: "Agent 工程全景圖", desc: "工具、記憶、執行、工程四大支柱的完整知識地圖 · 共 14 個知識點。", tag: '彙總' },
           ],
         },
         {
@@ -421,18 +421,18 @@ window.COURSE = {
           routes: ['pm', 'build'],   // 成本與選型，產品路線的剛需
           desc: 'KV Cache、快取、圖片 Token、語法/語義/輸出層優化與模型選型',
           lessons: [
-            { file: '8-1.html', title: '多輪對話為什麼越來越貴', desc: 'Token 累積成本視覺化，拖動輪次檢視費用如何指數增長', tag: '互動' , navTitle: '多輪對話成本'},
-            { file: '8-2.html', title: 'KV Cache：用空間換時間（和錢）', desc: '類比理解 + 節省效果計算器，拖動輪次檢視節省比例', tag: '互動' , navTitle: 'KV Cache'},
-            { file: '8-2b.html', title: '顯式快取：實戰對比', desc: 'cache_control 寫法、快取命中判斷、價格折扣對比，真實省錢效果演示', tag: '互動' , navTitle: '顯式快取'},
-            { file: '8-3.html', title: '動態時間戳：最貴的 System Prompt', desc: '錯誤設計 vs 正確設計，三種時間處理方案對比切換', tag: '反例' , navTitle: '動態時間戳'},
-            { file: '8-4.html', title: '綜合成本優化：從系統角度省錢', desc: '5 層優化策略，成本構成視覺化，節省 70-90% 的系統設計', tag: '系統設計' , navTitle: '綜合成本優化'},
-            { file: '8-5.html', title: '圖片 Token：畫素也在燒錢', desc: '圖片計費公式、縮放機制、解析度陷阱、按任務分級策略', tag: '多模態' , navTitle: '圖片 Token 計費'},
-            { file: '8-5b.html', title: '按任務匹配解析度', desc: '高/中/低三檔解析度策略，不同場景的 Token 消耗對比與選型建議', tag: '多模態' },
-            { file: '8-6.html', title: '語法層優化：寫給機器的提示詞', desc: 'YAML vs JSON、CSV vs 陣列、壓縮 JSON 輸出，格式性 Token 省 10-30%', tag: '提示詞工程' , navTitle: '語法層優化'},
-            { file: '8-7.html', title: '語義層優化：不要把上下文當垃圾桶', desc: '動態 Few-Shot、LLMLingua-2 壓縮、關鍵資訊放首尾，提升資訊密度', tag: 'RAG' , navTitle: '語義層優化'},
-            { file: '8-8.html', title: '輸出層 + KV Cache 進階', desc: '負向約束、Diff 潤色、停止序列；KV Cache 的工具陷阱與滑動視窗問題', tag: '架構' , navTitle: '輸出層+KV進階'},
-            { file: 'cost-eval.html', title: '模型選型：能力 vs 成本', desc: '主流模型能力/成本矩陣、選型決策樹、不同場景的模型匹配策略', tag: '選型' },
-            { file: 'engineering-philosophy.html', title: '大道至簡：堅守第一性原理', desc: 'AI Harness 的本質 / 做 vs 不做的取捨 / 會被時代淘汰的 Harness / 終極問題', tag: '收官' , navTitle: '大道至簡'},
+            { file: '8-1.html', title: "多輪對話為什麼越來越貴？", desc: "LLM 按輸入 Token 數計費。每一輪對話，都要把所有歷史記錄重新發給模型：歷史越長，Token 越多，費用越高。拖動滑塊模擬費用累積。", tag: '互動' , navTitle: "多輪對話為什麼越來越貴？"},
+            { file: '8-2.html', title: "KV Cache：用空間換時間", desc: "每輪對話，模型都要對所有歷史 Token 做 Attention 計算。KV Cache 把已算過的 K/V 矩陣快取下來，下輪只計算新增 Token。", tag: '互動' , navTitle: "KV Cache：用空間換時間"},
+            { file: '8-2b.html', title: "顯式快取：實戰對比", desc: "一行程式碼，保證命中。生產環境必須用顯式快取：隱式快取在分散式架構下不可靠。", tag: '互動' , navTitle: "顯式快取：實戰對比"},
+            { file: '8-3.html', title: "動態時間戳：最貴的 System Prompt", desc: "一個小小的設計錯誤，可以讓你的 KV Cache 完全失效，每輪對話成本翻倍：在 System Prompt 裡寫動態時間。", tag: '反例' , navTitle: "動態時間戳：最貴的 System Prompt"},
+            { file: '8-4.html', title: "綜合成本優化", desc: "單一優化效果有限。分層組合策略可將 AI 成本降低 70–90%。點選下方策略卡片，即時觀察成本條的變化。", tag: '系統設計' , navTitle: "綜合成本優化"},
+            { file: '8-5.html', title: "圖片 Token：畫素也在燒錢", desc: "多模態模型不按「一張圖」計費，而是把圖片切成畫素塊換算成 Token。拖動滑塊改變解析度，即時看 Token 成本變化。", tag: '多模態' , navTitle: "圖片 Token：畫素也在燒錢"},
+            { file: '8-5b.html', title: "圖片 Token：按任務匹配解析度", desc: "不同任務對圖片細節要求不同，用最低解析度滿足任務 = 最省錢。選一個任務類型，看推薦的解析度方案。", tag: '多模態' },
+            { file: '8-6.html', title: "語法層優化：寫給機器的提示詞，不要排版", desc: "格式性 Token 最高佔提示詞 13–20%。提示詞是寫給機器的指令，不是給人看的文件。那些 **加粗**、JSON 大括號、縮排換行…都是在花錢買格式。", tag: '提示詞工程' , navTitle: "語法層優化：寫給機器的提示詞，不要排版"},
+            { file: '8-7.html', title: "語義層優化：不要把上下文視窗當垃圾桶", desc: "資訊密度越高 → 注意力越集中 → 效果越好。三個語義層策略，讓每個 Token 都有價值。", tag: 'RAG' , navTitle: "語義層優化：不要把上下文視窗當垃圾桶"},
+            { file: '8-8.html', title: "輸出層 + KV Cache 進階：控制輸出 = 控制成本", desc: "輸出 Token 比輸入貴 3–5 倍。點選下方技巧切換互動演示，體驗三個輸出層技巧和兩個 KV Cache 進階陷阱。", tag: '架構' , navTitle: "輸出層 + KV Cache 進階：控制輸出 = 控制成本"},
+            { file: 'cost-eval.html', title: "模型選型：能力 vs 成本的權衡", desc: "優化做完了，還需要選對模型。點選下方問題切換視角，看散點圖、月費對比和場景決策框架。", tag: '選型' },
+            { file: 'engineering-philosophy.html', title: "大道至簡：堅守第一性原理", desc: "AI Harness · 收官思考。四步回到原點，看清一切 Harness 手段的本質。", tag: '收官' , navTitle: "大道至簡：堅守第一性原理"},
           ],
         },
         {
@@ -440,11 +440,11 @@ window.COURSE = {
           title: '實用技巧',
           desc: '人機邊界、提問方式、迭代方法、場景判斷與幻覺驗證，一份用 AI 的日常指南',
           lessons: [
-            { file: 'ai-tips-boundary.html', title: '人機知識邊界：四象限策略', desc: '什麼交給 AI、什麼自己來，用四象限快速判斷任務分配', tag: '技巧' , navTitle: '人機知識邊界'},
-            { file: 'ai-tips-context.html', title: '好提問 vs 壞提問', desc: '上下文決定輸出品質，同一個問題好壞對比演示', tag: '技巧' },
-            { file: 'ai-tips-verify.html', title: 'AI 說的能信嗎？找出幻覺', desc: '三種快速驗證方法，識別 AI 自信說錯的場景', tag: '技巧' , navTitle: 'AI 說的能信嗎'},
-            { file: 'ai-tips-iterate.html', title: '迭代的藝術：知道何時收手', desc: '從粗到精的迭代節奏，以及何時該停止追問 AI', tag: '技巧' , navTitle: '迭代的藝術'},
-            { file: 'ai-tips-scenarios.html', title: '場景速查：什麼時候放心用', desc: '高可信 / 需驗證 / 慎用 / 不用，AI 適用場景四分類', tag: '技巧' , navTitle: '場景速查'},
+            { file: 'ai-tips-boundary.html', title: "人機知識邊界：四象限策略", desc: "先判斷問題在哪個區，再決定怎麼用 AI。每次用 AI 之前，先想一個問題：這個答案，我能驗證嗎？", tag: '技巧' , navTitle: "人機知識邊界：四象限策略"},
+            { file: 'ai-tips-context.html', title: "好提問 vs 壞提問：上下文決定一切", desc: "同一個 AI，提問方式不同，輸出天差地別。點選場景切換對比。", tag: '技巧' },
+            { file: 'ai-tips-verify.html', title: "AI 說的能信嗎？", desc: "找出 AI 編造的內容。點選你認為有問題的條目，然後揭曉答案。", tag: '技巧' , navTitle: "AI 說的能信嗎？"},
+            { file: 'ai-tips-iterate.html', title: "迭代的藝術：知道何時收手", desc: "跟著一個真實的文案迭代過程走 4 輪：前 3 輪品質持續上升，第 4 輪畫蛇添足。演示會自動逐輪播放，注意觀察品質儀表的變化。", tag: '技巧' , navTitle: "迭代的藝術：知道何時收手"},
+            { file: 'ai-tips-scenarios.html', title: "場景速查：什麼時候放心用", desc: "9 個常見場景，按風險分成三檔。點選左側場景卡片查看詳細指南，也可以按風險等級篩選。", tag: '技巧' , navTitle: "場景速查：什麼時候放心用"},
           ],
         },
         {
@@ -453,11 +453,11 @@ window.COURSE = {
           routes: ['pm', 'build'],   // 篇章收官，跟著正課走
           desc: 'Harness 核心篇回顧 + 完整課程總結',
           lessons: [
-            { file: 'summary-2.html', title: '彙總（上）· Prompt 工程 + Agent', desc: '上下文溢位策略 / Prompt 六要素 / 工具呼叫真相 / Skill + 腳手架', tag: '彙總' , navTitle: 'Harness 核心篇彙總（上）'},
-            { file: 'summary-2b.html', title: '彙總（下）· 成本優化 + PM 視角', desc: '五層成本體系 / KV Cache 原理 / 圖片 Token / 課程完整能力清單', tag: '彙總' , navTitle: 'Harness 核心篇彙總（下）'},
-            { file: 'summary-final.html', title: '課程總結 · 產品經理的第一節 AI 課', desc: '從大模型原理到工程落地，完整課程一頁回顧', tag: '彙總' , navTitle: '課程總結'},
-            { file: 'summary-final-1.html', title: '總結（上）· 原理 + Harness', desc: '大模型認知框架 / 幻覺應對 / Prompt 與 Agent 核心要點', tag: '彙總' , navTitle: '總結（上）'},
-            { file: 'summary-final-2.html', title: '總結（下）· 實戰 + 成本', desc: '安全防禦 / 成本優化 / 用 AI 的正確姿勢 / 下一步學習路徑', tag: '彙總' , navTitle: '總結（下）'},
+            { file: 'summary-2.html', title: "彙總（上）· Prompt 工程 + Agent", desc: "Harness 核心篇總結回顧 · 上半頁（1 / 2）：設計 Message List 的核心技能，以及讓 AI 從\"說\"到\"做\"的 Agent 工程。", tag: '彙總' , navTitle: "彙總（上）· Prompt 工程 + Agent"},
+            { file: 'summary-2b.html', title: "彙總（下）· 成本優化 + PM 視角", desc: "Harness 核心篇總結回顧 · 下半頁（2 / 2）：五層成本優化體系，以及 AI PM 帶走的完整工程視角。", tag: '彙總' , navTitle: "彙總（下）· 成本優化 + PM 視角"},
+            { file: 'summary-final.html', title: "課程總結 · 產品經理的第一節 AI 課", desc: "今天學了什麼？帶走這四件事：大模型基礎、Prompt 工程、Agent 與成本、安全合規。", tag: '彙總' , navTitle: "課程總結 · 產品經理的第一節 AI 課"},
+            { file: 'summary-final-1.html', title: "總結（上）· 原理 + Harness", desc: "課程總結上半頁（1 / 2）：模組一「大模型是怎麼來的」建立認知直覺，模組二「Prompt 怎麼寫才管用」讓 AI 按你要的輸出。", tag: '彙總' , navTitle: "總結（上）· 原理 + Harness"},
+            { file: 'summary-final-2.html', title: "總結（下）· 實戰 + 成本", desc: "課程總結下半頁（2 / 2）：模組三「AI 能做什麼、要花多少錢」建立自動化與成本意識，模組四「安全合規與紅線意識」知道產品該在哪裡設防。", tag: '彙總' , navTitle: "總結（下）· 實戰 + 成本"},
           ],
         },
         {
@@ -466,7 +466,7 @@ window.COURSE = {
           routes: ['pm', 'build'],   // 落地清單，跟著正課走
           desc: '學完這章，你今天能動手做什麼',
           lessons: [
-            { file: 'build-2.html', title: '讓它連跑五次都能用', desc: '同一輸入五連跑演示；三檔任務：寫第一版提示詞、給不穩定歸類、加示例與違禁項重跑對比', tag: '實戰' },
+            { file: 'build-2.html', title: "寫一版提示詞，讓它連跑五次都能用", desc: "這一章你學了上下文、Prompt 技巧、Agent 和成本，知識點是全課最多的。但落到手上，第一件事只有一件：把 M0 定下的那個需求，寫成一版穩定的提示詞。穩定的意思是不挑運氣。", tag: '實戰' },
           ],
         },
         {
@@ -475,7 +475,7 @@ window.COURSE = {
           routes: ['pm', 'build'],   // 面試題，跟著正課走
           desc: '面試官、老闆、技術同事會怎樣考察本章內容',
           lessons: [
-            { file: 'interview-2.html', title: 'AI Harness · 30 道靈魂拷問', desc: '每題附考察意圖、答題框架與加分點：上下文溢位 / Prompt 工程 / 注入防禦 / 工具呼叫 / 成本帳單 / KV Cache / 輸出格式', tag: '考察' , navTitle: '他們會這樣考你 · 30 問'},
+            { file: 'interview-2.html', title: "AI Harness · 30 道靈魂拷問", desc: "Harness 核心篇講的全是工程實作：上下文、Prompt、安全、Agent、成本。這 30 個問題來自三個真實場景，先自己開口回答，再看框架。", tag: '考察' , navTitle: "AI Harness · 30 道靈魂拷問"},
           ],
         },
       ],
@@ -484,7 +484,7 @@ window.COURSE = {
       id: 'p3',
       num: '動手實戰',
       title: '實戰 · 從 Demo 到產品',
-      desc: '以真實 AI Agent 桌面應用為例，拆解生圖產品化、Agent 迴圈控制、上下文壓縮、長期記憶、Prompt Harness、多 Agent 協作、權限安全與 MCP 生態，走完從「調通 API」到「使用者能用」的完整實戰路徑。',
+      desc: "以虛構的內容生產助手為教學示例，學習視覺生成、工具呼叫、上下文、記憶、提示詞組織、協作、權限與 MCP 整合；不代表方片已上線產品或專案業績。",
       color: '#059669',
       group: 'main',
       prereq: '建議先學過 Harness 核心',
@@ -493,9 +493,9 @@ window.COURSE = {
         {
           id: 't-alice-intro',
           title: '開篇',
-          desc: '本章從哪來：一個真實產品的開發實錄',
+          desc: "以一個虛構的內容生產助手為教學示例，拆解從模型呼叫到可靠交付需要考慮的工程問題；不代表方片已經上線的產品。",
           lessons: [
-            { file: '9-0.html', title: '本章從哪來：Alice 開發實錄', desc: '本章是作者開發 AI Agent 桌面應用 Alice 的經驗總結：約 50 萬行程式碼、132 個工具、8 大模組與本章 8 個小節一一對應', tag: '開篇' , navTitle: 'Alice 開發實錄'},
+            { file: '9-0.html', title: "從業務任務到可交付的 AI 工具", desc: "以一個虛構的內容生產助手為教學示例，拆解從模型呼叫到可靠交付需要考慮的工程問題；不代表方片已經上線的產品。", tag: '開篇' , navTitle: "從業務任務到可交付的 AI 工具"},
           ],
         },
         {
@@ -503,11 +503,11 @@ window.COURSE = {
           title: 'AI 生圖',
           desc: '文生圖、墊圖、角色一致性、多模型降級與產品化',
           lessons: [
-            { file: '9-1.html', title: '文生圖 vs 墊圖：兩種完全不同的事', desc: '一個從文字出發，一個從圖片出發。產品經理要分清什麼時候用哪種', tag: '概念' , navTitle: '文生圖 vs 墊圖'},
-            { file: '9-2.html', title: '用 AI 給 AI 寫 Prompt', desc: '使用者說「畫個夕陽下的貓」，生圖模型需要的是完全不同的描述，解法是用 LLM 做翻譯', tag: '實戰' },
-            { file: '9-3.html', title: '角色一致性：最難的產品問題', desc: '同一個 IP 每次畫都長不一樣。為什麼難、產品上怎麼思考這個問題', tag: '案例' , navTitle: '角色一致性'},
-            { file: '9-4.html', title: '模型會掛，然後呢？', desc: '多模型降級鏈的產品邏輯：優先順序、白名單、探活、全掛時的體驗兜底', tag: '實戰' , navTitle: '模型會掛，然後呢'},
-            { file: '9-5.html', title: '生圖的產品化清單', desc: '從「調通了 API」到「使用者能用」之間還差哪些東西，一張 checklist 數清楚', tag: '系統設計' , navTitle: '生圖產品化清單'},
+            { file: '9-1.html', title: "文生圖 vs 墊圖：兩種完全不同的事", desc: "用同一個虛構人物比較兩種生圖方式：沒有參考圖時外貌容易漂移；有參考圖時，以圖像約束人物特徵，再檢查場景與動作。", tag: '概念' , navTitle: "文生圖 vs 墊圖：兩種完全不同的事"},
+            { file: '9-2.html', title: "用 AI 給 AI 寫 Prompt", desc: "使用者說「示例角色 在陽臺發呆」。生圖模型需要的是一長段精確的視覺描述，光這句話遠遠不夠。中間有一個翻譯步驟：用 LLM 把人話翻譯成生圖語言。", tag: '實戰' },
+            { file: '9-3.html', title: "角色一致性：最難的產品問題", desc: "讓同一個虛構人物在不同場景和服裝中保持一致，對照參考圖檢查外貌特徵與生成偏差。", tag: '案例' , navTitle: "角色一致性：最難的產品問題"},
+            { file: '9-4.html', title: "模型會掛，然後呢？", desc: "在 示例助手 裡，使用者說「幫我畫一張圖」，但背後可能 Gemini 超時了、Seedream 限流了、GPT Image 也出錯了。使用者不關心哪個模型掛了，他只關心：圖到底能不能出來？", tag: '實戰' , navTitle: "模型會掛，然後呢？"},
+            { file: '9-5.html', title: "生圖的產品化清單", desc: "調通生圖介面只是開始。以教學示例為線索，檢查體驗、品質、工程與安全四類上線條件。", tag: '系統設計' , navTitle: "生圖的產品化清單"},
           ],
         },
         {
@@ -516,11 +516,11 @@ window.COURSE = {
           routes: ['build'],   // Agent Loop 實現細節
           desc: '生產級迴圈的控制、防護與流式體驗',
           lessons: [
-            { file: '9-6.html', title: '教科書的 3 步 vs 真實的 N 步', desc: 'ReAct 不止 Think-Act-Observe 三步，生產環境每輪還要做什麼', tag: '概念' , navTitle: '教科書 vs 真實 N 步'},
-            { file: '9-7.html', title: '為什麼 Agent 會卡死', desc: '真實場景中迴圈掛掉的幾種典型模式，以及使用者會看到什麼', tag: '案例' , navTitle: 'Agent 為什麼會卡死'},
-            { file: '9-8.html', title: '防呆設計：怎麼讓迴圈自己停下來', desc: '上限、檢測、降級三類策略的思路，產品經理該在哪裡畫線', tag: '實戰' , navTitle: '防呆設計'},
-            { file: '9-9.html', title: '流式體驗：別讓使用者乾等', desc: '工具在後臺跑 30 秒，使用者看到的應該是什麼？進度感設計', tag: '互動' , navTitle: '流式體驗'},
-            { file: '9-10.html', title: '一條訊息背後的真實成本', desc: '使用者發一句話，底層可能跑 10+ 輪迴圈、幾十條 API 訊息，由此建立成本意識', tag: '深入' , navTitle: '一條訊息的真實成本'},
+            { file: '9-6.html', title: "教科書的 3 步 vs 真實的 N 步", desc: "教科書說 Agent 迴圈是「想→做→看」三步。但當你真正把 Agent 推上生產環境，每轉一圈要做的事比你想像的多得多。", tag: '概念' , navTitle: "教科書的 3 步 vs 真實的 N 步"},
+            { file: '9-7.html', title: "為什麼 Agent 會卡死", desc: "實驗室裡的 Agent 死迴圈很好發現：控制台一刷就看到了。但生產環境的卡死更隱蔽：使用者不會說「你的 Agent 死迴圈了」，他只會說「你的 AI 怎麼那麼慢」或者「它是不是呆掉了」。", tag: '案例' , navTitle: "為什麼 Agent 會卡死"},
+            { file: '9-8.html', title: "防呆設計：怎麼讓迴圈自己停下來", desc: "知道了 Agent 會怎麼卡死，下一步就是設計防護。好的防呆是三層網，讓系統既不會失控，又不會輕易放棄。", tag: '實戰' , navTitle: "防呆設計：怎麼讓迴圈自己停下來"},
+            { file: '9-9.html', title: "流式體驗：別讓使用者乾等", desc: "Agent 在後臺跑了 30 秒，使用者螢幕上應該看到什麼？同樣是等 30 秒，有沒有進度感，體驗天差地別。", tag: '互動' , navTitle: "流式體驗：別讓使用者乾等"},
+            { file: '9-10.html', title: "一條訊息背後的真實成本", desc: "使用者只發了一句話，但底層可能跑了 10+ 輪迴圈、產生幾十條 API 訊息。當你開啟帳單，可能會嚇一跳。", tag: '深入' , navTitle: "一條訊息背後的真實成本"},
           ],
         },
         {
@@ -529,10 +529,10 @@ window.COURSE = {
           routes: ['build'],   // 上下文管理實現細節
           desc: '對話越長越貴越笨：壓縮的藝術與取捨',
           lessons: [
-            { file: '9-11.html', title: '對話越長越貴、越長越笨', desc: '費用遞增 + 注意力衰減 + 視窗有限，三個必須管理上下文的理由', tag: '概念' , navTitle: '越長越貴越笨'},
-            { file: '9-12.html', title: '壓縮是一門取捨的藝術', desc: '有的能刪、有的不能刪、有的要花錢壓，這是產品經理的決策框架', tag: '實戰' , navTitle: '壓縮的藝術'},
-            { file: '9-13.html', title: '使用者說的話能不能刪？', desc: '「聖物」問題：AI 的輸出可以壓縮，但使用者的原話刪了就回不來', tag: '概念' , navTitle: '使用者的話能刪嗎'},
-            { file: '9-14.html', title: '本地壓縮 vs LLM 壓縮', desc: '零成本快但粗 vs 有成本慢但精，什麼時候用哪種', tag: '深入' , navTitle: '本地 vs LLM 壓縮'},
+            { file: '9-11.html', title: "對話越長越貴、越長越笨", desc: "每一輪對話都要把全部歷史重新發給模型：對話越長，費用越高、注意力越分散、離視窗上限越近。這三個問題決定了：上下文不能放任不管。", tag: '概念' , navTitle: "對話越長越貴、越長越笨"},
+            { file: '9-12.html', title: "壓縮是一門取捨的藝術", desc: "上下文太長了怎麼辦？全刪或全留都不對：有的能刪（舊工具輸出）、有的不能刪（使用者原話）、有的要花錢壓（全量摘要）。產品經理需要一個決策框架。", tag: '實戰' , navTitle: "壓縮是一門取捨的藝術"},
+            { file: '9-13.html', title: "使用者說的話能不能刪？", desc: "AI 的輸出可以摘要、工具結果可以截斷，但使用者的原話刪了就回不來了。而且使用者一定會發現：「我明明說了 xxx，你怎麼忘了？」", tag: '概念' , navTitle: "使用者說的話能不能刪？"},
+            { file: '9-14.html', title: "本地壓縮 vs LLM 壓縮", desc: "壓縮上下文有兩條路：本地處理（正則替換、截斷）零成本但粗糙，LLM 摘要有成本但精準。該怎麼選？答案是：都用，但有先後順序。", tag: '深入' , navTitle: "本地壓縮 vs LLM 壓縮"},
           ],
         },
         {
@@ -541,10 +541,10 @@ window.COURSE = {
           routes: ['build'],   // 長期記憶實現細節
           desc: '讓 AI 認識你：記憶的提取、衝突與注入',
           lessons: [
-            { file: '9-15.html', title: '上下文 ≠ 記憶', desc: '白板（上下文視窗）和筆記本（長期記憶）的區別，為什麼需要兩套系統', tag: '概念' },
-            { file: '9-16.html', title: '什麼值得記、什麼不值得記', desc: '不是所有對話都有價值：守門員思路與篩選邏輯', tag: '實戰' , navTitle: '什麼值得記'},
-            { file: '9-17.html', title: '記憶衝突：使用者改了主意怎麼辦', desc: '新舊記憶衝突的四種處理策略：新增 / 合併 / 衝突標記 / 跳過', tag: '案例' , navTitle: '記憶衝突'},
-            { file: '9-18.html', title: '記憶注入的成本問題', desc: '記了 1000 條，每次全塞進去？還是按需檢索？兩種策略的代價', tag: '深入' , navTitle: '記憶注入的成本'},
+            { file: '9-15.html', title: "上下文 ≠ 記憶", desc: "上下文視窗像白板：寫滿了就擦掉，對話結束就清空。長期記憶像筆記本：寫下的東西，下次開啟還在。AI 產品需要兩套系統。", tag: '概念' },
+            { file: '9-16.html', title: "什麼值得記、什麼不值得記", desc: "使用者每天和 AI 聊幾十上百條訊息。「嗯」「好的」「哈哈」佔了大半，真正有價值的偏好和事實可能只有幾條。記憶系統需要一個守門員。", tag: '實戰' , navTitle: "什麼值得記、什麼不值得記"},
+            { file: '9-17.html', title: "記憶衝突：使用者改了主意怎麼辦", desc: "上個月說「喜歡咖啡」，這個月說「改喝茶了」。兩條記憶打架了：舊的要不要刪？新的怎麼存？這背後有四種策略。", tag: '案例' , navTitle: "記憶衝突：使用者改了主意怎麼辦"},
+            { file: '9-18.html', title: "記憶注入的成本問題", desc: "記了 1000 條記憶，每次對話全塞進 system prompt？還是按需檢索相關的幾條？全量注入簡單但貴且噪聲多，按需檢索省錢但可能漏。", tag: '深入' , navTitle: "記憶注入的成本問題"},
           ],
         },
         {
@@ -553,10 +553,10 @@ window.COURSE = {
           routes: ['build'],   // Prompt Harness 實現細節
           desc: '從字串到架構：分層、按需載入與 Skill 模組化',
           lessons: [
-            { file: '9-19.html', title: 'System Prompt 不是一坨文字', desc: '分層管理的必要性：身份、環境、工具指引各自獨立，互不干擾', tag: '架構' , navTitle: 'System Prompt 分層'},
-            { file: '9-20.html', title: '不用的東西別給 AI 看', desc: '100 個工具全塞 system？Token 爆炸。這就需要按需載入的設計思路', tag: '實戰' , navTitle: '按需載入'},
-            { file: '9-21.html', title: 'Skill：可營運的 Prompt 模組', desc: '檔案即配置、版本可追溯，讓 Prompt 也能像程式碼一樣管理', tag: '實戰' , navTitle: 'Skill 模組化'},
-            { file: '9-22.html', title: '提示詞和快取的微妙關係', desc: '改一個字 System Prompt，整條 KV Cache 作廢。怎麼減少手抖的成本', tag: '深入' , navTitle: '提示詞與快取'},
+            { file: '9-19.html', title: "System Prompt 不是一坨文字", desc: "生產級的 System Prompt 不是想到什麼寫什麼。它是分層管理的：身分層、環境層、工具層、行為層，各管各的，改一層不影響其他層。", tag: '架構' , navTitle: "System Prompt 不是一坨文字"},
+            { file: '9-20.html', title: "不用的東西別給 AI 看", desc: "如果你有 100 個工具，全部描述塞進 System Prompt，光工具描述就佔幾萬 token。AI 和人一樣：給太多資訊反而找不到重點。", tag: '實戰' , navTitle: "不用的東西別給 AI 看"},
+            { file: '9-21.html', title: "Skill：可營運的 Prompt 模組", desc: "System Prompt 管我是誰，Tool 管我能做什麼，那 Skill 管什麼？它管的是遇到某件事，怎麼一步一步做好。檔案即配置，版本可追溯。", tag: '實戰' , navTitle: "Skill：可營運的 Prompt 模組"},
+            { file: '9-22.html', title: "提示詞和快取的微妙關係", desc: "KV Cache 的規則極其簡單：前綴一模一樣就命中，差一個字就全部重算。所以，往 System Prompt 裡插入任何動態內容，都可能讓快取永遠打不中。", tag: '深入' , navTitle: "提示詞和快取的微妙關係"},
           ],
         },
         {
@@ -565,10 +565,10 @@ window.COURSE = {
           routes: ['build'],   // 多 Agent 實現細節
           desc: '並行、腦暴、定時任務與協作成本',
           lessons: [
-            { file: '9-23.html', title: '什麼時候需要多個 Agent', desc: '並行加速、角色分工、風險隔離，三種真實場景', tag: '概念' , navTitle: '何時需要多 Agent'},
-            { file: '9-24.html', title: '併發的代價：誰能同時跑', desc: '「看」可以並行，「改」必須排隊，為什麼以及怎麼判斷', tag: '實戰' , navTitle: '併發的代價'},
-            { file: '9-25.html', title: '腦暴：讓多個 AI 吵架', desc: '同一問題多角度獨立思考，彙總共識與分歧，這是群體智慧的 AI 版', tag: '互動' , navTitle: '腦暴模式'},
-            { file: '9-26.html', title: '定時任務的成本陷阱', desc: 'Agent 定時跑任務，上下文是累積還是重建？一個選擇差 10 倍成本', tag: '反例' , navTitle: '定時任務成本'},
+            { file: '9-23.html', title: "什麼時候需要多個 Agent", desc: "不是越多 Agent 越好。大多數時候一個就夠了。但確實有三種場景，一個 Agent 獨木難支。搞清楚什麼時候真的需要分工。", tag: '概念' , navTitle: "什麼時候需要多個 Agent"},
+            { file: '9-24.html', title: "併發的代價：誰能同時跑", desc: "「看」可以並行：多個搜尋同時跑不會衝突。「改」必須排隊：兩個 Agent 同時改同一個檔案會出事。判斷一個操作能否併發，關鍵就一條：它是只讀的嗎？", tag: '實戰' , navTitle: "併發的代價：誰能同時跑"},
+            { file: '9-25.html', title: "腦力激盪：讓多個 AI 吵架", desc: "和人類開會一樣：一個人想到死不如多個人獨立思考再彙總。腦力激盪模式就是把同一個問題扔給多個 Agent，讓它們各自回答，最後由主持人整合共識與分歧。", tag: '互動' , navTitle: "腦力激盪：讓多個 AI 吵架"},
+            { file: '9-26.html', title: "定時任務的成本陷阱", desc: "讓 Agent 每小時整理一次新聞，聽起來簡單。但如果複用舊會話，上下文每次都在增長，24 小時後你的成本會爆炸。一個選擇就能讓月帳單差 10 倍。", tag: '反例' , navTitle: "定時任務的成本陷阱"},
           ],
         },
         {
@@ -577,9 +577,9 @@ window.COURSE = {
           routes: ['build'],   // 權限與安全的落地實現
           desc: 'Agent 的韁繩：權限分級、審批與可觀測性',
           lessons: [
-            { file: '9-27.html', title: 'AI 該有多大的自由', desc: '完全自主 vs 每步審批，五種權限模式和適用場景', tag: '概念' , navTitle: 'AI 的自由度'},
-            { file: '9-28.html', title: '彈窗太多使用者煩，不彈又不安全', desc: 'Human-in-the-loop 的平衡點：風險分級思路', tag: '實戰' , navTitle: '彈窗與安全平衡'},
-            { file: '9-29.html', title: 'Agent 幹了什麼你知道嗎', desc: '事件流與 Token 追蹤。不看日誌你永遠不知道出了什麼錯', tag: '架構' , navTitle: '可觀測性'},
+            { file: '9-27.html', title: "AI 該有多大的自由", desc: "給 AI 全部權限？它可能搞砸一切。每步都審批？使用者會瘋掉。權限設計是一條光譜：從完全自主到每步審批，中間還有三種選擇。", tag: '概念' , navTitle: "AI 該有多大的自由"},
+            { file: '9-28.html', title: "彈窗太多使用者煩，不彈又不安全", desc: "如果 Agent 每做一步都彈窗讓你確認，你點 5 次「允許」之後就想解除安裝了。但如果什麼都不問就自己執行，刪錯了檔案誰來負責？答案是：風險分級。", tag: '實戰' , navTitle: "彈窗太多使用者煩，不彈又不安全"},
+            { file: '9-29.html', title: "Agent 幹了什麼你知道嗎", desc: "Agent 在後臺跑了 3 分鐘：調了幾個工具？花了多少 token？中間有沒有出錯？如果你回答不了這些問題，你的 Agent 就是個黑盒。", tag: '架構' , navTitle: "Agent 幹了什麼你知道嗎"},
           ],
         },
         {
@@ -588,9 +588,9 @@ window.COURSE = {
           routes: ['build'],   // MCP 實戰程式碼
           desc: '工具生態的雙向連線：消費、提供與自配置',
           lessons: [
-            { file: '9-30.html', title: 'MCP 不只是「調工具」', desc: '同一個協議兩個方向：消費別人的工具 vs 把自己暴露給別人', tag: '概念' , navTitle: 'MCP 雙向協議'},
-            { file: '9-31.html', title: '懶連線：不用別連', desc: '註冊了 10 個 MCP 服務，啟動時全連一遍？還是用到再連？', tag: '實戰' , navTitle: '懶連線'},
-            { file: '9-32.html', title: 'AI 自己加工具', desc: 'Agent 執行時發現需要新工具，自己配置 MCP 連線，這就是自配置思路', tag: '深入' , navTitle: 'AI 自加工具'},
+            { file: '9-30.html', title: "MCP 不只是「調工具」", desc: "大多數人理解 MCP 就是「讓 AI 調外部工具」。但 MCP 協議是雙向的：示例助手 不僅能調別人的工具，也能讓 Cursor 等外部客戶端來呼叫 示例助手 的能力。", tag: '概念' , navTitle: "MCP 不只是「調工具」"},
+            { file: '9-31.html', title: "懶連線：不用別連", desc: "你註冊了 10 個 MCP 服務，啟動時全部連線一遍？如果其中 3 個掛了，啟動就卡住了。懶連線的思路很簡單：註冊 ≠ 連線，用到的時候再連。", tag: '實戰' , navTitle: "懶連線：不用別連"},
+            { file: '9-32.html', title: "AI 自己加工具", desc: "使用者說「幫我查日曆」，但你還沒配日曆工具。傳統做法：報錯說「不支援」。更好的做法：Agent 自己去配，問你一聲就行。", tag: '深入' , navTitle: "AI 自己加工具"},
           ],
         },
         {
@@ -598,8 +598,8 @@ window.COURSE = {
           title: '實戰收官',
           desc: '全景回顧與核心洞察',
           lessons: [
-            { file: '9-summary.html', title: '實戰全景圖', desc: '生圖、迴圈、記憶、Prompt、多 Agent、安全、MCP，一張圖串起來', tag: '彙總' },
-            { file: '9-final.html', title: '聊天套殼 vs 真正的 Agent 產品', desc: '同一個 Loop 支撐 N 種場景，差異不在程式碼，在產品決策', tag: '收官' , navTitle: '聊天套殼 vs Agent 產品'},
+            { file: '9-summary.html', title: "實戰全景圖", desc: "動手實戰篇走到這裡，八個主題構成了一張完整的 AI 產品實戰地圖。每個主題都不是孤立的，它們共同回答一個問題：從 Demo 到產品，到底差了什麼？", tag: '彙總' },
+            { file: '9-final.html', title: "聊天套殼 vs 真正的 Agent 產品", desc: "使用者看到的只是冰山一角：一個聊天框、幾次回覆。水面之下，是產品經理需要做的 100 個決策。這些決策的總和，就是聊天套殼和真正的 Agent 產品之間的距離。", tag: '收官' , navTitle: "聊天套殼 vs 真正的 Agent 產品"},
           ],
         },
         {
@@ -607,7 +607,7 @@ window.COURSE = {
           title: '你現在能做什麼',
           desc: '學完這章，你今天能動手做什麼',
           lessons: [
-            { file: 'build-3.html', title: '接上第一個真工具', desc: '工具呼叫閉環四段演示；三檔任務：選定工具、寫三行描述、跑通閉環並故意搞一次破壞', tag: '實戰' },
+            { file: 'build-3.html', title: "讓它從「會說」變成「會做」：接上第一個工具", desc: "提示詞能穩定產生草稿後，先接入一個可核驗、可撤銷或可人工接管的工具操作。", tag: '實戰' },
           ],
         },
         {
@@ -615,7 +615,7 @@ window.COURSE = {
           title: '他們會這樣考你',
           desc: '面試官、老闆、技術同事會怎樣考察本章內容',
           lessons: [
-            { file: 'interview-3.html', title: '實戰 · 從 Demo 到產品 · 30 道靈魂拷問', desc: '每題附考察意圖、答題框架與加分點：Demo 到上線的差距 / Agent 卡死 / 上下文壓縮 / 記憶設計 / 多 Agent / MCP / 成本帳單', tag: '考察' , navTitle: '他們會這樣考你 · 30 問'},
+            { file: 'interview-3.html', title: "實戰 · 從 Demo 到產品 · 30 道靈魂拷問", desc: "動手實戰篇學完了，你已經知道 Demo 和產品之間隔著什麼。這 30 個問題來自三個真實場景，先自己開口回答，再看框架。", tag: '考察' , navTitle: "實戰 · 從 Demo 到產品 · 30 道靈魂拷問"},
           ],
         },
       ],
@@ -635,10 +635,10 @@ window.COURSE = {
           title: 'Agent 設計模式',
           desc: 'Anthropic 官方總結的五種 Workflow + 自主 Agent',
           lessons: [
-            { file: '10-1.html', title: 'Workflow vs Agent：先搞清楚你要什麼', desc: '預定義流程 vs 模型自主決策，Anthropic 定義的兩大類 Agent 系統', tag: '設計模式' , navTitle: 'Workflow vs Agent'},
-            { file: '10-2.html', title: '五種 Workflow 模式', desc: 'Prompt Chaining / Routing / Parallelization / Orchestrator-Workers / Evaluator-Optimizer', tag: '設計模式' },
-            { file: '10-3.html', title: '從 Prompt 工程到上下文工程', desc: '在每一輪推理時策展最優的 Token 組合，寫好提示詞只是其中一環', tag: '方法論' , navTitle: '上下文工程方法論'},
-            { file: '10-4.html', title: '上下文的三板斧', desc: 'Compaction、結構化筆記、子 Agent 架構，長任務的三種上下文管理策略', tag: '方法論' , navTitle: '上下文三板斧'},
+            { file: '10-1.html', title: "Workflow vs Agent：先搞清楚你要什麼", desc: "一個反直覺的觀點：最成功的 AI 實現，往往不是最複雜的那個。在動手搭 Agent 框架之前，先搞清楚你真正需要什麼。", tag: '設計模式' , navTitle: "Workflow vs Agent：先搞清楚你要什麼"},
+            { file: '10-2.html', title: "五種 Workflow 模式", desc: "業界已驗證有效的五種 Workflow 編排模式。它們由簡到繁，每種解決特定類型的問題。不追求最複雜的，追求最合適的。", tag: '設計模式' },
+            { file: '10-3.html', title: "從 Prompt 工程到上下文工程", desc: "當我們從單輪對話走向多步 Agent，僅僅優化 Prompt 已經遠遠不夠。真正的挑戰是：如何策展每一輪推理時送給模型的全部 Token。", tag: '方法論' , navTitle: "從 Prompt 工程到上下文工程"},
+            { file: '10-4.html', title: "上下文的三招", desc: "當任務跨越多個上下文視窗，每個新視窗都會失憶。生產環境中已驗證三種策略來應對這個根本挑戰，讓 Agent 能在長任務中保持連貫和高效。", tag: '方法論' , navTitle: "上下文的三招"},
           ],
         },
         {
@@ -646,10 +646,10 @@ window.COURSE = {
           title: '工具設計的藝術',
           desc: '如何為 Agent 寫出好工具：命名、描述、參數與 ACI',
           lessons: [
-            { file: '10-5.html', title: 'ACI：Agent-Computer Interface', desc: '工具是 Agent 和世界之間的契約。像設計人機介面一樣設計 Agent 介面', tag: '設計模式' , navTitle: 'ACI 工具介面設計'},
-            { file: 'vector-db-5.html', title: 'Milvus 作為 Agent 知識庫工具', desc: '把向量檢索封成 search_knowledge：ToolMessage、記憶分層與呼叫/不呼叫的測試', tag: '實戰' , navTitle: 'Agent 知識庫工具'},
-            { file: '10-6.html', title: 'Think Tool：讓 AI 先想後做', desc: '在複雜工具鏈中給 Agent 一個暫停思考的空間，τ-bench 效能提升 54%', tag: '深入' , navTitle: 'Think Tool'},
-            { file: '10-7.html', title: '用 Agent 優化 Agent 的工具', desc: 'Claude Code 實踐：用 AI 寫工具描述、跑評測、自動迭代優化', tag: '實戰' , navTitle: '用 Agent 優化工具'},
+            { file: '10-5.html', title: "ACI：Agent-Computer Interface", desc: "HCI (人-機互動) 領域已經研究了幾十年，但 Agent 和計算機之間的互動（ACI）才剛剛開始。實戰經驗表明：工具設計的品質，直接決定了 Agent 的能力上限。", tag: '設計模式' , navTitle: "ACI：Agent-Computer Interface"},
+            { file: 'vector-db-5.html', title: "Milvus 作為 Agent 知識庫工具", desc: "讓 Agent 自己判斷何時需要企業資料；工具負責檢索，Agent 負責基於 ToolMessage 組織答案。", tag: '實戰' , navTitle: "Milvus 作為 Agent 知識庫工具"},
+            { file: '10-6.html', title: "Think Tool：讓 AI 先想後做", desc: "Agent 在執行長工具鏈時，經常忘記前面的資訊，或者在需要權衡多條規則時犯錯。實踐證明，給 Agent 一個停下來想一想的工具，就能大幅提升準確率。", tag: '深入' , navTitle: "Think Tool：讓 AI 先想後做"},
+            { file: '10-7.html', title: "用 Agent 優化 Agent 的工具", desc: "工具寫得好不好，Agent 最有發言權。業界驗證了一套「用 Agent 寫工具 → 跑評測 → 自動優化」的工作流，讓工具設計從手工打磨變成系統化迭代。", tag: '實戰' , navTitle: "用 Agent 優化 Agent 的工具"},
           ],
         },
         {
@@ -657,9 +657,9 @@ window.COURSE = {
           title: 'Agent 評測',
           desc: '不評測就是在裸奔。如何系統化驗證 Agent 品質',
           lessons: [
-            { file: '10-8.html', title: '為什麼評測比訓練更重要', desc: '沒有評測，修一個 bug 製造三個。Anthropic 的 Eval 方法論', tag: '方法論' , navTitle: '評測方法論'},
-            { file: '10-9.html', title: '三種 Grader：程式碼、模型、人工', desc: '靜態斷言 vs LLM-as-Judge vs 人工校準，每種適合什麼場景', tag: '實戰' , navTitle: '三種 Grader'},
-            { file: '10-10.html', title: '評測的坑：噪音、作弊與退化', desc: '基礎設施噪音可造成 6pp 誤差、模型會識別考試、改 Prompt 可能讓 Eval 掉 3%', tag: '案例' , navTitle: '評測的坑'},
+            { file: '10-8.html', title: "為什麼評測比訓練更重要", desc: "沒有評測的 Agent 開發就像矇眼開飛機。評測是貫穿整個開發週期的核心基礎設施，遠不止上線前的 checklist。", tag: '方法論' , navTitle: "為什麼評測比訓練更重要"},
+            { file: '10-9.html', title: "三種 Grader：程式碼、模型、人工", desc: "Grader 是評測系統的裁判。選錯了 Grader，評測結果就不可信。生產環境的經驗表明，三種 Grader 組合使用，各取所長。沒有銀彈，但有最優組合。", tag: '實戰' , navTitle: "三種 Grader：程式碼、模型、人工"},
+            { file: '10-10.html', title: "評測的坑：噪音、作弊與退化", desc: "評測做起來了不等於做對了。生產環境中反覆驗證的三個隱蔽陷阱：基礎設施噪音會扭曲結果，模型會識別考試，一個小改動可能讓效能暴跌。", tag: '案例' , navTitle: "評測的坑：噪音、作弊與退化"},
           ],
         },
         {
@@ -668,10 +668,10 @@ window.COURSE = {
           desc: '從一輪對話到跑幾小時：Harness 的設計與演進',
           routes: ['build'],   // 工程實現細節，產品路線跳過
           lessons: [
-            { file: '10-11.html', title: '為什麼 Agent 跑不了長任務', desc: '一口氣做太多、做完就收工，兩種典型失敗模式', tag: '案例' , navTitle: '長任務失敗模式'},
-            { file: '10-12.html', title: 'Initializer + Coding Agent', desc: '初始化 Agent 搭環境、編碼 Agent 增量推進，雙角色 Harness 設計', tag: '設計模式' , navTitle: '雙角色 Harness'},
-            { file: '10-13.html', title: 'Managed Agent：腦手分離', desc: '把思考和執行拆到不同程序，像作業系統一樣虛擬化 Agent', tag: '架構' , navTitle: 'Managed Agent'},
-            { file: '10-14.html', title: 'Session ≠ Context Window', desc: '會話日誌是持久的事件流、上下文視窗是臨時的工作記憶，兩者必須分離', tag: '深入' , navTitle: 'Session vs Context'},
+            { file: '10-11.html', title: "為什麼 Agent 跑不了長任務", desc: "讓 Agent 構建一個完整 Web 應用看似簡單，但現實中充滿了交接失敗和上下文斷裂的陷阱。", tag: '案例' , navTitle: "為什麼 Agent 跑不了長任務"},
+            { file: '10-12.html', title: "Initializer + Coding Agent", desc: "核心思路：把一個 Agent 拆成兩個角色，一個負責規劃，一個負責執行。每次交接都留下乾淨的狀態。", tag: '設計模式' , navTitle: "Initializer + Coding Agent"},
+            { file: '10-13.html', title: "Managed Agent：腦手分離", desc: "核心洞察：把 Agent 的思考和執行拆成獨立元件，讓系統在任何部分出錯時都能優雅恢復。", tag: '架構' , navTitle: "Managed Agent：腦手分離"},
+            { file: '10-14.html', title: "Session 不等於 Context Window", desc: "兩個最容易混淆的概念：Claude 當前能看到的，和所有發生過的事。它們必須分離。", tag: '深入' , navTitle: "Session 不等於 Context Window"},
           ],
         },
         {
@@ -680,8 +680,8 @@ window.COURSE = {
           desc: 'Anthropic 如何在產品中約束 Claude',
           routes: ['build'],   // 工程實現細節，產品路線跳過
           lessons: [
-            { file: '10-15.html', title: '三類風險：濫用、失控、外部攻擊', desc: 'Anthropic 的安全分類框架：使用者濫用 / 模型 Misbehavior / Prompt Injection', tag: '安全' , navTitle: '三類安全風險'},
-            { file: '10-16.html', title: '沙箱與憑證隔離', desc: '生成的程式碼和金鑰永遠不在同一個容器裡。結構性安全比靠提示詞更可靠', tag: '安全' },
+            { file: '10-15.html', title: "三類風險：濫用、失控、外部攻擊", desc: "安全不是加一層提示詞就夠的，需要從架構層面做結構性設計。這裡介紹一套系統化的安全分類框架。", tag: '安全' , navTitle: "三類風險：濫用、失控、外部攻擊"},
+            { file: '10-16.html', title: "沙箱與憑證隔離", desc: "Agent 生成的程式碼和使用者的金鑰永遠不能在同一個地方。這是安全架構的硬性要求，不只是最佳實踐的建議。", tag: '安全' },
           ],
         },
         {
@@ -689,9 +689,9 @@ window.COURSE = {
           title: '進階收官',
           desc: '全景回顧與核心設計原則',
           lessons: [
-            { file: '10-17.html', title: 'Contextual Retrieval：更好的 RAG', desc: '在檢索前先給 Chunk 加上下文，Anthropic 的 RAG 升級方案', tag: '深入' , navTitle: 'Contextual Retrieval'},
-            { file: '10-summary.html', title: '進階全景圖', desc: '設計模式、工具、評測、長執行、安全，一張圖串起來', tag: '彙總' },
-            { file: '10-final.html', title: '做最簡單的、能跑的東西', desc: 'Anthropic 的核心工程哲學："Do the simplest thing that works"', tag: '收官' , navTitle: 'Do the simplest thing'},
+            { file: '10-17.html', title: "Contextual Retrieval：更好的 RAG", desc: "RAG 的核心假設是「檢索到正確的 Chunk 就能給出正確的答案」。但實踐中發現了一個根本性問題：切 Chunk 的過程本身就會丟失關鍵資訊。Contextual Retrieval 正是為了解決這個問題。", tag: '深入' , navTitle: "Contextual Retrieval：更好的 RAG"},
+            { file: '10-summary.html', title: "進階全景圖", desc: "從 Workflow 到 Agent，從 Prompt Engineering 到 Context Engineering，這一篇章覆蓋了核心工程實踐。讓我們把所有主題串起來，形成完整的知識地圖。", tag: '彙總' },
+            { file: '10-final.html', title: "做最簡單的、能跑的東西", desc: "所有複雜的架構設計、精巧的工程模式，最終都指向同一個樸素的真理。", tag: '收官' , navTitle: "做最簡單的、能跑的東西"},
           ],
         },
         {
@@ -699,7 +699,7 @@ window.COURSE = {
           title: '你現在能做什麼',
           desc: '學完這章，你今天能動手做什麼',
           lessons: [
-            { file: 'build-4.html', title: '搭你的第一個評測集', desc: '改動前後跑分對比演示；三檔任務：攢十條真實用例、寫透過標準跑基線、用分數說話', tag: '實戰' },
+            { file: 'build-4.html', title: "別再「感覺變好了」：搭你的第一個評測集", desc: "前三格你都是靠眼睛驗收的，量小還行。但你馬上會遇到那個經典困境：改了一版提示詞，這三個用例變好了，那兩個悄悄變差了，你沒發現。Anthropic 說「不評測就是在裸奔」。這一格給你的 Agent 穿上衣服。", tag: '實戰' },
           ],
         },
         {
@@ -707,7 +707,7 @@ window.COURSE = {
           title: '他們會這樣考你',
           desc: '面試官、老闆、技術同事會怎樣考察本章內容',
           lessons: [
-            { file: 'interview-4.html', title: 'AI 工程設計模式 · 30 道靈魂拷問', desc: '每題附考察意圖、答題框架與加分點：上下文工程 / 長任務 / grep vs RAG / ACI 工具設計 / 評測基建 / LLM-as-Judge / 沙箱隔離', tag: '考察' , navTitle: '他們會這樣考你 · 30 問'},
+            { file: 'interview-4.html', title: "AI 工程設計模式 · 30 道靈魂拷問", desc: "工程進階篇講的全是生產級 Agent 的工程判斷，這類問題在面試和評審會上出現得越來越頻繁。先自己開口回答，再看框架。", tag: '考察' , navTitle: "AI 工程設計模式 · 30 道靈魂拷問"},
           ],
         },
       ],
@@ -727,8 +727,8 @@ window.COURSE = {
           title: 'Harness 概論',
           desc: '遞迴自我改進與 Harness 的核心地位',
           lessons: [
-            { file: '11-1.html', title: '從腳手架到自我改進系統', desc: '遞迴自我改進（RSI）的歷史與近期路徑：模型改進 Harness，不直接改寫權重', tag: '前沿' , navTitle: '從腳手架到自我改進'},
-            { file: '11-2.html', title: 'Harness 三大設計模式', desc: '工作流自動化 / 檔案系統持久記憶 / 子 Agent 與後臺任務，構建 Agent 執行時的三個基石', tag: '設計模式' },
+            { file: '11-1.html', title: "從腳手架到自我改進系統", desc: "Harness 不只是包裹模型的外殼。它正在成為 AI 遞迴自我改進的核心引擎。", tag: '前沿' , navTitle: "從腳手架到自我改進系統"},
+            { file: '11-2.html', title: "Harness 的三大設計模式", desc: "好的 Harness 有清晰的模式語言，絕非一堆腳本拼起來。三個核心模式，覆蓋了當前最強 Agent 系統 90% 的架構決策。", tag: '設計模式' },
           ],
         },
         {
@@ -736,8 +736,8 @@ window.COURSE = {
           title: 'Harness 優化',
           desc: '從上下文工程到工作流自動搜尋',
           lessons: [
-            { file: '11-3.html', title: '上下文工程：從手寫到自動進化', desc: 'ACE → MCE → Meta-Harness：優化物件從 prompt 內容演進到管理機制程式碼', tag: '前沿' , navTitle: '上下文工程自動進化'},
-            { file: '11-4.html', title: '工作流設計：從手工到自動搜尋', desc: 'AI Scientist / ADAS / AFlow，用 MCTS 和 Meta-Agent 搜尋最優工作流', tag: '前沿' , navTitle: '工作流自動搜尋'},
+            { file: '11-3.html', title: "上下文工程：從手寫 Prompt 到自動進化", desc: "隨著 Agent 任務變長，上下文管理不再是可選項。它正在成為 Harness 優化的核心戰場。", tag: '前沿' , navTitle: "上下文工程：從手寫 Prompt 到自動進化"},
+            { file: '11-4.html', title: "工作流設計：從手工到自動搜尋", desc: "工作流的設計空間巨大。我們應該用演算法去搜尋，只靠手動設計遠遠不夠。", tag: '前沿' , navTitle: "工作流設計：從手工到自動搜尋"},
           ],
         },
         {
@@ -745,8 +745,8 @@ window.COURSE = {
           title: '自我改進與進化',
           desc: '讓 Harness 改進自己、用進化演算法搜尋設計空間',
           lessons: [
-            { file: '11-5.html', title: '讓 Harness 改進自己', desc: 'STOP 遞迴改善器 + Self-Harness 的 propose-evaluate-accept 迴圈', tag: '前沿' },
-            { file: '11-6.html', title: '進化搜尋：讓最強 Harness 存活', desc: 'AlphaEvolve / DGM / SIA，用進化演算法在龐大設計空間中發現最優 Agent', tag: '前沿' , navTitle: '進化搜尋'},
+            { file: '11-5.html', title: "讓 Harness 改進自己", desc: "如果 LLM 能優化執行 Agent 的程式碼，它就能觸及比手寫 Prompt 大得多的設計空間。", tag: '前沿' },
+            { file: '11-6.html', title: "進化搜尋：讓最強 Harness 存活", desc: "進化演算法 + 編碼 Agent = 在龐大的 Harness 設計空間中自動發現最優解。", tag: '前沿' , navTitle: "進化搜尋：讓最強 Harness 存活"},
           ],
         },
         {
@@ -754,7 +754,7 @@ window.COURSE = {
           title: '未來與反思',
           desc: '自我改進面臨的根本挑戰',
           lessons: [
-            { file: '11-7.html', title: '未來挑戰：自我改進的七道關', desc: '弱評估器 / 記憶退化 / 獎勵駭客 / 多樣性坍縮 / 人類角色，通往完整 RSI 的瓶頸', tag: '前沿' , navTitle: '未來挑戰七道關'},
+            { file: '11-7.html', title: "未來挑戰：自我改進的七道關", desc: "研究者取得了真正的進展，但通往完整遞迴自我改進的路上，還有若干瓶頸。", tag: '前沿' , navTitle: "未來挑戰：自我改進的七道關"},
           ],
         },
         {
@@ -762,7 +762,7 @@ window.COURSE = {
           title: '你現在能做什麼',
           desc: '學完這章，你今天能動手做什麼',
           lessons: [
-            { file: 'build-5.html', title: '立三條長跑規矩', desc: '上下文佔用曲線與壓縮閾值演示；三檔任務：找到失憶輪次、寫三條規矩、跑通落盤再讀回', tag: '實戰' },
+            { file: 'build-5.html', title: "它跑十輪很聰明，跑五十輪呢？", desc: "這一章講的是讓 Harness 自己進化，聽著離你很遠。但所有自我改進的前提，是先有一個能長跑的 Harness：知道什麼時候壓縮、什麼東西永不能丟、什麼結論要落盤。這三條規矩，你今天就能給自己的 Agent 立起來。", tag: '實戰' },
           ],
         },
         {
@@ -770,7 +770,7 @@ window.COURSE = {
           title: '他們會這樣考你',
           desc: '面試官、老闆、技術同事會怎樣考察本章內容',
           lessons: [
-            { file: 'interview-5.html', title: 'Harness 與自我改進 · 30 道靈魂拷問', desc: '每題附考察意圖、答題框架與加分點：Harness 本質 / 設計模式 / 上下文自動進化 / 獎勵駭客 / RSI 進展與風險', tag: '考察' , navTitle: '他們會這樣考你 · 30 問'},
+            { file: 'interview-5.html', title: "Harness 與自我改進 · 30 道靈魂拷問", desc: "這一章講的是最前沿的東西，考它的人也最容易分出真假。這 30 個問題來自三個真實場景，先自己開口回答，再看框架。", tag: '考察' , navTitle: "Harness 與自我改進 · 30 道靈魂拷問"},
           ],
         },
       ],
@@ -779,7 +779,7 @@ window.COURSE = {
       id: 'p7',
       num: '協作方法論',
       title: 'Vibe Coding 方法論',
-      desc: '產品五連的第一章，也是後面四章的地基：手上沒有一套穩定的協作流程，談好看、好用、使用者覺得好用都是空的。基於作者開源的 xs_vibe_rules 倉庫，把多個真實專案沉澱出的 AI 協作規範拆成課程：流程控制、品質底線、文件沉澱、安全閘門與寫作風格，讓 AI 寫得快也寫得穩。',
+      desc: "參考公開的 AI 協作規範與教學示例，練習流程、品質、文件、環境安全與清楚表達，整理成自己的工作規範。",
       color: '#0d9488',
       group: 'indie',
       cluster: 'chain',
@@ -791,7 +791,7 @@ window.COURSE = {
           title: '理念與入門',
           desc: '為什麼 AI 寫得快反而容易搞砸，Rules 為什麼是最穩的約束方式',
           lessons: [
-            { file: 'vibe-1.html', title: '為什麼要給 AI 立規矩', desc: 'Vibe Coding 的四類典型事故，以及 Rule 是最穩上下文注入方式的原理', tag: '互動' },
+            { file: 'vibe-1.html', title: "為什麼要給 AI 立規矩", desc: "Vibe Coding 指靠自然語言讓 AI 直接產出程式碼的開發方式。它的問題出在品質：沒有規矩的 AI 會返工、漏改、悄悄刪程式碼、留下永久技術債。這一節先看事故長什麼樣，再看約束怎麼注入才最穩。", tag: '互動' },
           ],
         },
         {
@@ -800,8 +800,8 @@ window.COURSE = {
           title: '流程控制',
           desc: '在 AI 動手之前設好人工斷點',
           lessons: [
-            { file: 'vibe-2.html', title: '四步流程：複述、PRD、確認、編碼', desc: '把需求確認環節搬進人機協作，批次修改先列計劃，新功能先查重', tag: '互動' , navTitle: '四步流程'},
-            { file: 'vibe-3.html', title: 'PlayGround：元件的試衣間', desc: '簡化版 Storybook 思路：先做獨立 demo 調好再整合，demo 只增不刪', tag: '互動' , navTitle: 'PlayGround 試衣間'},
+            { file: 'vibe-2.html', title: "四步流程：複述、PRD、確認、編碼", desc: "把軟體工程的需求確認環節搬進人機協作：AI 動手之前必須複述需求、寫出 PRD、拿到明確許可。再加上批次修改斷點和查重規則，把爆炸半徑控制在動手之前。", tag: '互動' , navTitle: "四步流程：複述、PRD、確認、編碼"},
+            { file: 'vibe-3.html', title: "PlayGround：元件的試衣間", desc: "UI 功能直接寫進頁面，改一處影響一片，調一個按鈕要把整個頁面跑起來。解法是先做獨立的元件 PlayGround：每個 UI 元素有單獨的 demo，調好了再整合進正式頁面。", tag: '互動' , navTitle: "PlayGround：元件的試衣間"},
           ],
         },
         {
@@ -810,10 +810,10 @@ window.COURSE = {
           title: '品質底線',
           desc: '樣式複用、註釋、除錯與完整實現的硬性要求',
           lessons: [
-            { file: 'vibe-3b.html', title: '樣式收斂：一個按鈕不要八套 CSS', desc: '樣式為什麼會增殖、怎麼分批收進 token，以及哪些差異該留著', tag: '互動' , navTitle: '樣式收斂'},
-            { file: 'vibe-4.html', title: '註釋三要素與程式碼保護', desc: '背景、設計意圖、關鍵約束缺一不可；禁止靜默刪除程式碼與依賴', tag: '互動' },
-            { file: 'vibe-5.html', title: '除錯鐵律：先 Log 再改碼', desc: '禁止猜測性修復，修復前回答三個問題，改完宣告影響範圍', tag: '互動' , navTitle: '除錯鐵律'},
-            { file: 'vibe-6.html', title: '不接受分期交付', desc: 'AI 愛做「先上簡版」的真實原因，以及為什麼要打破這個模式', tag: '互動' },
+            { file: 'vibe-3b.html', title: "樣式收斂：一個按鈕不要八套 CSS", desc: "讓 AI 連著做十個功能，你會攢出八個長得差不多的按鈕類。它不是不會複用，是每輪對話都不知道你已經有什麼。這一節講樣式為什麼會增殖、怎麼收乾淨，以及哪些差異該留著。", tag: '互動' , navTitle: "樣式收斂：一個按鈕不要八套 CSS"},
+            { file: 'vibe-4.html', title: "註釋三要素與程式碼保護", desc: "AI 寫的註釋多是功能複述，三個月後回來看程式碼，想不起當初為什麼這樣實現。這一節給註釋立結構，也給「刪程式碼」立規矩。頁面裡有兩個可動手的演示。", tag: '互動' },
+            { file: 'vibe-5.html', title: "除錯鐵律：先 Log 再改碼", desc: "AI 遇到報錯的第一反應是猜一個原因改改看，不行再猜一個。這一節立最核心的一條規矩：禁止猜測性修復。下面兩個演示，親手對比兩條修 Bug 路徑。", tag: '互動' , navTitle: "除錯鐵律：先 Log 再改碼"},
+            { file: 'vibe-6.html', title: "不接受分期交付", desc: "你要一個完整的認證系統，AI 說「先做一個簡版的使用者名稱密碼登入，後續再加 OAuth」。後續永遠不會來。這一節用兩個演示，看清「先做簡版」的完整生命週期，並練習正確的回應方式。", tag: '互動' },
           ],
         },
         {
@@ -822,7 +822,7 @@ window.COURSE = {
           title: '文件與沉澱',
           desc: '讓決策跨越對話和時間留存下來',
           lessons: [
-            { file: 'vibe-7.html', title: '三份文件與方法論沉澱', desc: 'FEATURES / CHANGELOG / RELEASE_NOTES 各管一個維度，METHODOLOGY 沉澱產品品味', tag: '互動' },
+            { file: 'vibe-7.html', title: "三份文件與方法論整理", desc: "做了 30 個功能，三個月後想查「這個功能什麼時候加的、當初為什麼這樣設計、中間改過幾次方案」，翻遍 git log 也找不到。解法是讓 AI 按嚴格模板維護三份文件，再加一份自動整理的方法論手冊。本頁兩個演示都可以動手操作。", tag: '互動' },
           ],
         },
         {
@@ -831,8 +831,8 @@ window.COURSE = {
           title: '環境與安全',
           desc: '把環境事實寫死，給破壞性操作上閘',
           lessons: [
-            { file: 'vibe-8.html', title: '把環境事實寫進 Rule', desc: '模型配置、技術棧鎖定、資料格式三分法與 isComposing 這類必踩的坑', tag: '互動' },
-            { file: 'vibe-9.html', title: '破壞性操作的三道閘', desc: '資料庫先備份、不可逆操作先給回退方案、發版前做 diff 審查', tag: '互動' },
+            { file: 'vibe-8.html', title: "把環境事實寫進 Rule", desc: "每次新開對話，AI 都不知道該調哪個模型、超時設多少、專案用什麼框架。把這些環境事實一次性寫死在 Rule 裡，相當於給 AI 一份預填好的 .env 說明書，每輪對話自動帶入。本頁兩個演示都可以真實操作。", tag: '互動' },
+            { file: 'vibe-9.html', title: "破壞性操作的三道閘", desc: "發版時以為只改了 A 功能，實際 diff 裡混進了上週除錯 B 的臨時改動，半成品程式碼進了生產環境。資料庫、配置、部署這些不可逆操作，必須在執行前設閘。下面兩個演練都可以動手操作。", tag: '互動' },
           ],
         },
         {
@@ -841,7 +841,7 @@ window.COURSE = {
           title: '溝通與寫作',
           desc: '對抗上下文漂移，消滅 AI 腔',
           lessons: [
-            { file: 'vibe-10.html', title: '長對話錨定與寫作規範', desc: '超過 10 輪強制複述目標；違禁句式清單讓文案擺脫 AI 腔', tag: '互動' },
+            { file: 'vibe-10.html', title: "長對話錨定與寫作規範", desc: "對話開頭說了用 PostgreSQL，聊到 30 輪 AI 突然建議 SQLite，因為早期約定已經被上下文視窗擠掉了。這一節講兩件事：怎麼對抗長對話的認知漂移，以及怎麼讓 AI 寫出的中文擺脫 AI 腔。兩個互動演示，動手拖一拖、點一點。", tag: '互動' },
           ],
         },
         {
@@ -850,7 +850,7 @@ window.COURSE = {
           title: '專題收官',
           desc: '把這套規則改造成你自己的',
           lessons: [
-            { file: 'vibe-final.html', title: '規則的價值：每條解決一個真實問題', desc: '全景圖回顧 + 使用方法 + 適配自己專案的四個動作', tag: '收官' , navTitle: '規則的價值'},
+            { file: 'vibe-final.html', title: "規則的價值：每條解決一個真實問題", desc: "14 個章節走完了。這套規則的來源只有一個：每發現一次 AI 反覆犯的錯誤，就加一條規則。收官這節把全景圖攤開，再用一個自查嚮導幫你把它改造成你自己的。", tag: '收官' , navTitle: "規則的價值：每條解決一個真實問題"},
           ],
         },
         {
@@ -859,7 +859,7 @@ window.COURSE = {
           title: '你現在能做什麼',
           desc: '學完這章，你今天能動手做什麼',
           lessons: [
-            { file: 'build-6.html', title: '沉澱你自己的協作規範', desc: '四步流程對比演示；三檔任務：寫第一條 Rule、真需求走一遍流程、匯出建造日誌整理成規範 v1', tag: '實戰' },
+            { file: 'build-6.html', title: "最後一格：讓「你的做法」變成「誰來都行」", desc: "前五格你做出了一個能幹活的 Agent，但所有的判斷都在你腦子裡。這一格把它們寫成規矩。立住之後，換個人、換個專案、換個模型，這套東西照樣跑。這才叫工程，不叫手藝。", tag: '實戰' },
           ],
         },
         {
@@ -868,7 +868,7 @@ window.COURSE = {
           title: '他們會這樣考你',
           desc: '面試官、老闆、技術同事會怎樣考察本章內容',
           lessons: [
-            { file: 'interview-7.html', title: 'Vibe Coding 方法論 · 30 道靈魂拷問', desc: '每題附考察意圖、答題框架與加分點：為什麼立規矩 / 品質責任 / 程式碼合入把關 / 拒絕分期 / 決策沉澱 / 安全閘門', tag: '考察' , navTitle: '他們會這樣考你 · 30 問'},
+            { file: 'interview-7.html', title: "Vibe Coding 方法論 · 30 道靈魂拷問", desc: "用 AI 寫程式碼這件事，最不缺的就是質疑。這 30 個問題來自三個真實場景：面試官在驗證深度，老闆在追問責任，技術同事在試探邊界。先自己開口回答，再看框架。", tag: '考察' , navTitle: "Vibe Coding 方法論 · 30 道靈魂拷問"},
           ],
         },
       ],
@@ -888,8 +888,8 @@ window.COURSE = {
           title: '品味成了新瓶頸',
           desc: '執行能力被拉平之後，判斷力開始漲價',
           lessons: [
-            { file: 'taste-1.html', title: '執行免費了，判斷力開始漲價', desc: '當人人都能十分鐘做出能用的東西，「能用」就開始貶值。三個介面先憑直覺投一票，學完這章回來再投一次，看你的眼睛變了沒有', tag: '開篇' , navTitle: '判斷力開始漲價'},
-            { file: 'taste-2.html', title: '「AI 味兒」是怎麼來的', desc: '紫色漸變、毛玻璃、圓角卡片三件套：AI 預設輸出訓練資料的平均值，平均值就是平庸。在一張典型的 AI 生成頁面上點出「AI 味」特徵，集齊揭曉成因', tag: '互動' , navTitle: 'AI 味兒從哪來'},
+            { file: 'taste-1.html', title: "執行免費了，判斷力開始漲價", desc: "AI 把執行門檻打掉了：人人都能十分鐘做出一個能用的頁面、一張能看的圖。這一章不教你畫圖，教兩件練了就會的事：看出哪裡不對，說清要什麼。", tag: '開篇' , navTitle: "執行免費了，判斷力開始漲價"},
+            { file: 'taste-2.html', title: "「AI 味」是怎麼來的", desc: "讓 AI 隨便生成一個頁面，十有八九是紫色漸變、毛玻璃、居中大標題三件套。這種整齊劃一有數學上的原因，看懂了它，你就知道怎麼繞開它。", tag: '互動' , navTitle: "「AI 味」是怎麼來的"},
           ],
         },
         {
@@ -897,10 +897,10 @@ window.COURSE = {
           title: '識別美的四個抓手',
           desc: '層級、留白、剋制、一致性，每個都配找茬',
           lessons: [
-            { file: 'taste-3.html', title: '層級：一屏只有一個主角', desc: '什麼都想強調等於什麼都沒強調。字號、字重、顏色三根槓桿怎麼分配注意力，A/B 找茬揪出搶戲的介面', tag: '互動' , navTitle: '層級：唯一主角'},
-            { file: 'taste-4.html', title: '留白與對齊：大多數醜都醜在間距', desc: '說不上哪裡醜的介面，問題多半在間距。拖動滑塊看呼吸感怎麼來的，再學 8pt 網格這個偷懶神器', tag: '互動' , navTitle: '留白與對齊'},
-            { file: 'taste-5.html', title: '剋制：給顏色和字型做預算', desc: '一個主色、兩種字重、一套圓角。往介面里加顏色看它變成年會海報，再一鍵做減法，感受高階感回來的瞬間', tag: '互動' , navTitle: '剋制：做預算'},
-            { file: 'taste-6.html', title: '一致性：系統感從哪來', desc: '好看的站點背後都有一套設計變數。拆開本站真實的 CSS：控制項高度、圓角、配色為什麼全站只有一檔，改一處全站生效', tag: '案例' , navTitle: '一致性與系統感'},
+            { file: 'taste-3.html', title: "層級：一屏只有一個主角", desc: "開啟一個頁面，視線總得先落在某一處。設計者不安排這個落點，讀者的眼睛就會自己亂撞。這一節講層級：怎麼用字號、字重、顏色三根槓桿，把「先看哪」安排明白。", tag: '互動' , navTitle: "層級：一屏只有一個主角"},
+            { file: 'taste-4.html', title: "留白與對齊：大多數醜都醜在間距", desc: "「說不上哪裡醜，反正就是醜」，這句評價八成在說間距。顏色字型一處沒動，只把間距捋順，介面就能上一個檔次。這一節給你兩條規律和一張現成的數字表。", tag: '互動' , navTitle: "留白與對齊：大多數醜都醜在間距"},
+            { file: 'taste-5.html', title: "剋制：給顏色和字型做預算", desc: "好看的介面大多不是加出來的，是省出來的。這一節給你一套預算表：一個主色加中性色、兩種字重、一套圓角。超預算的東西再好看也砍。", tag: '互動' , navTitle: "剋制：給顏色和字型做預算"},
+            { file: 'taste-6.html', title: "一致性：系統感從哪來", desc: "有一種介面，單看每處都還行，合起來卻透著一股散裝味。它缺的說到底就一樣東西：一套大家共同遵守的變數。這一節講 design token，變數先行，樣式跟隨。", tag: '案例' , navTitle: "一致性：系統感從哪來"},
           ],
         },
         {
@@ -908,9 +908,9 @@ window.COURSE = {
           title: '把審美翻譯給 AI 聽',
           desc: '審美詞彙量決定 AI 產出品質',
           lessons: [
-            { file: 'taste-7.html', title: '「好看」的一百種具體說法', desc: '資訊密度、視覺噪音、呼吸感、對比度層級…點選審美詞彙看釋義與正反案例。說得出名字，才指揮得動 AI', tag: '互動' , navTitle: '審美詞彙表'},
-            { file: 'taste-8.html', title: '生 UI：從形容詞到規格書', desc: '「做個好看的頁面」和「參考 Linear 的資訊密度、只用一個主色」差出一個檔次。三檔提示詞對比產出，現場看差距', tag: '實戰' , navTitle: '生 UI 提示詞'},
-            { file: 'taste-9.html', title: '生圖：構圖、光影、色彩的語言', desc: '生圖提示詞的審美三件套：構圖、光影、色彩。三組對比圖建立直覺，再從四張候選圖裡挑出對的那張', tag: '實戰' , navTitle: '生圖三件套'},
+            { file: 'taste-7.html', title: "「好看」的一百種具體說法", desc: "你對 AI 說「好看一點」，它只能猜；你說「資訊密度加一檔、視覺噪音降下來」，它立刻知道該動哪裡。這一節給你十二個能直接用的審美詞、一套拆解一切視覺差異的八變數，外加一臺把抱怨翻譯成術語的機器。", tag: '互動' , navTitle: "「好看」的一百種具體說法"},
+            { file: 'taste-8.html', title: "生 UI：從形容詞到規格書", desc: "給 AI 提 UI 需求，形容詞是許願，規格是指令。同一個到達頁需求，三檔提示詞能差出三個檔次的產出；這一節教你把「好看」寫成一份 AI 沒法跑偏的規格書。", tag: '實戰' , navTitle: "生 UI：從形容詞到規格書"},
+            { file: 'taste-9.html', title: "生圖：構圖、光影、色彩的語言", desc: "生圖和生 UI 同一個道理：詞彙量決定產出。構圖、光影、色彩三件套，每樣記三個詞；先用三組真圖練眼力，再拼一段能直接用的生圖提示詞。", tag: '實戰' , navTitle: "生圖：構圖、光影、色彩的語言"},
           ],
         },
         {
@@ -918,8 +918,8 @@ window.COURSE = {
           title: '建立自己的參考庫',
           desc: '會看，然後讓 AI 照著你的參考出活',
           lessons: [
-            { file: 'taste-10.html', title: '怎麼看設計才算看進去了', desc: '收藏一百個網站沒用，要按順序拆：先看層級，再量間距，最後數顏色。用這套流程現場拆一個好設計', tag: '方法' , navTitle: '把設計看進去'},
-            { file: 'taste-11.html', title: '把參考餵給 AI', desc: '光靠嘴描述風格太低效。墊圖、風格描述、設計變數三種喂法的適用場景與話術模板，讓 AI 照著你的參考庫出活', tag: '實戰' , navTitle: '把參考餵給 AI'},
+            { file: 'taste-10.html', title: "怎麼看設計才算看進去了", desc: "收藏夾在膨脹，眼力沒長進，問題出在看的方式。這一節給一套固定的拆解順序，把「真好看」翻譯成能帶走的變數，你的參考庫從這裡開始有複利。", tag: '方法' , navTitle: "怎麼看設計才算看進去了"},
+            { file: 'taste-11.html', title: "把參考餵給 AI", desc: "你能看出好在哪之後，下一步是讓 AI 也知道。這一節講三種把參考餵進對話的姿勢：墊圖、風格描述、設計變數，配拿來就用的話術模板。", tag: '實戰' , navTitle: "把參考餵給 AI"},
           ],
         },
         {
@@ -927,7 +927,7 @@ window.COURSE = {
           title: '專題收官',
           desc: '點頭之前，過一遍清單',
           lessons: [
-            { file: 'taste-final.html', title: '驗收清單：點頭之前過一遍', desc: 'AI 交付的介面和圖片，按清單逐項檢查：層級、間距、剋制、一致性、細節。互動式清單可勾選，附延伸閱讀', tag: '收官' , navTitle: '審美驗收清單'},
+            { file: 'taste-final.html', title: "驗收清單：點頭之前過一遍", desc: "AI 出稿越來越快，把關的動作要跟上。收官這一節交付一份 15 項驗收清單，再回訪你在開篇投下的那一票，看看這一章有沒有把眼睛練出來。", tag: '收官' , navTitle: "驗收清單：點頭之前過一遍"},
           ],
         },
       ],
@@ -947,7 +947,7 @@ window.COURSE = {
           title: '好用也成了瓶頸',
           desc: '「能跑通」和「好用」隔著一整章',
           lessons: [
-            { file: 'ixd-1.html', title: '能跑通了，然後呢？', desc: '把「體貼軟體」的特質清單反過來用，就是 AI 預設互動的找茬清單。在一個能跑通的應用裡逐個點出五處不體貼，看看你平時都默默忍了什麼', tag: '開篇' , navTitle: '能跑通不等於好用'},
+            { file: 'ixd-1.html', title: "能跑通了，然後呢？", desc: "上一章練的是看出「哪裡醜」，這一章練看出「哪裡難用」。AI 交付的應用功能齊全、點哪都有反應，但用起來處處硌手。這一節先打好全章的地基：互動的病比審美的病更隱蔽，然後拿一張理論清單，親手抓出五處問題。", tag: '開篇' , navTitle: "能跑通了，然後呢？"},
           ],
         },
         {
@@ -955,10 +955,10 @@ window.COURSE = {
           title: '識別好互動的四個抓手',
           desc: '狀態、防錯、流程、習慣用法',
           lessons: [
-            { file: 'ixd-2.html', title: '狀態三件套：loading、空態、錯誤態', desc: '介面的三種非正常時刻恰恰是體驗分水嶺。空態該教下一步，loading 該報進度，錯誤該說人話給出路。三組 A/B 對決親手挑', tag: '互動' , navTitle: '狀態三件套'},
-            { file: 'ixd-3.html', title: '防錯與可逆：讓使用者敢點', desc: '與其事後報錯，先讓錯誤發生不了；撤銷讓探索變安全，確認彈窗是最弱的防錯。親手改造三個危險按鈕', tag: '互動' , navTitle: '防錯與可逆'},
-            { file: 'ixd-4.html', title: '流程剋制：每多一步掉一批人', desc: '不直接服務目標的操作都是負擔。把一個五步註冊流程逐步砍到兩步，看漏斗裡的人怎麼留下來', tag: '互動' , navTitle: '流程剋制'},
-            { file: 'ixd-5.html', title: '習慣用法：別讓 AI 發明新互動', desc: '使用者靠習慣用法操作軟體，學一次到處用。識別哪個控制項在裝創新，哪個長得像按鈕的不是按鈕', tag: '互動' , navTitle: '習慣用法與能供性'},
+            { file: 'ixd-2.html', title: "狀態三件套：loading、空態、錯誤態", desc: "AI 生成的介面預設只有一種狀態：資料齊全、網路流暢、一切正常。可使用者遇到的頭一屏常常是另外三種：沒資料、在等待、出錯了。這三種非正常時刻恰恰是體驗分水嶺，這一節把三件套逐個拆開，每件配一局 A/B 對決。", tag: '互動' , navTitle: "狀態三件套：loading、空態、錯誤態"},
+            { file: 'ixd-3.html', title: "防錯與可逆：讓使用者敢點", desc: "上一節教錯誤怎麼說，這一節往前挪一步：讓錯誤根本發生不了，發生了也能一鍵回頭。AI 生成的應用最愛用確認彈窗當保險，但那是最弱的一道防線，你自己動手刪兩條資料就明白了。", tag: '互動' , navTitle: "防錯與可逆：讓使用者敢點"},
+            { file: 'ixd-4.html', title: "流程剋制：每多一步掉一批人", desc: "上一節管住了危險按鈕，這一節看整條路：使用者從進來到辦完事，中間有多少步在伺候軟體而沒在辦他的事。AI 生成的流程有個通病：太完整。你來當一回流程審計員，把一個五步註冊砍到兩步。", tag: '互動' , navTitle: "流程剋制：每多一步掉一批人"},
+            { file: 'ixd-5.html', title: "習慣用法：別讓 AI 發明新互動", desc: "流程砍利索了，還有一種病藏得更深：AI 有時會發明看著新穎、沒人會用的互動。這一節講兩個詞，習慣用法（idiom）和能供性（affordance），學完你能一眼認出哪個控制項在裝創新，還能說清為什麼使用者學不會。", tag: '互動' , navTitle: "習慣用法：別讓 AI 發明新互動"},
           ],
         },
         {
@@ -966,8 +966,8 @@ window.COURSE = {
           title: '介面的細節',
           desc: '控制項怎麼選，文案怎麼說',
           lessons: [
-            { file: 'ixd-6.html', title: '控制項選對了嗎：單選、多選、開關與下拉', desc: '互斥選一個用單選鈕，可勾多個用核取方塊，立即生效用開關，選項超過一屏才配用下拉。六個場景連連看，配一張能抄進提示詞的速查表', tag: '互動' , navTitle: '控制項怎麼選'},
-            { file: 'ixd-7.html', title: '介面會說話：使用者怎麼理解你的文案', desc: '「刪除這 3 條」比「確定」誠實。按鈕動詞要說清後果，標籤用使用者的詞，別把資料庫欄位名端給使用者。親手改寫一個彈窗的三處文案', tag: '互動' , navTitle: '介面文案'},
+            { file: 'ixd-6.html', title: "控制項選對了嗎：單選、多選、開關與下拉", desc: "前面四節看的是流程和狀態，這一節鑽進介面最小的零件。控制項是使用者和產品之間的通用語言，用錯一個，使用者就要多點一次、多猜一次。選用規則四句話就講完，AI 不知道這四句，你得替它把關。", tag: '互動' , navTitle: "控制項選對了嗎：單選、多選、開關與下拉"},
+            { file: 'ixd-7.html', title: "介面會說話：使用者怎麼理解你的文案", desc: "控制項選對了，介面還得開口說話。按鈕上的兩個字、彈窗裡的一句話，就是產品和使用者的全部對話。微文案是互動的一半：寫對了，使用者不用想；寫錯了，控制項再標準也白搭。AI 寫微文案只有一招，逢事「確定」。", tag: '互動' , navTitle: "介面會說話：使用者怎麼理解你的文案"},
           ],
         },
         {
@@ -975,8 +975,8 @@ window.COURSE = {
           title: '把互動翻譯給 AI 聽',
           desc: '目標導向 + 狀態機，AI 才知道你要什麼',
           lessons: [
-            { file: 'ixd-8.html', title: '目標導向：用目標描述需求，別用功能清單', desc: '給 AI「小美要三分鐘交完報銷單」比給它「要有上傳、表單、按鈕」產出好得多。兩種提示詞對決，再練習把功能清單改寫成場景', tag: '實戰' , navTitle: '目標導向提需求'},
-            { file: 'ixd-9.html', title: '把狀態機和邊界寫進提示詞', desc: '每個介面把狀態列全，把邊界情況說死，把防錯要求寫明。狀態機補全器 + 邊界輪盤，配可複製的驗收話術模板', tag: '實戰' , navTitle: '狀態機寫進提示詞'},
+            { file: 'ixd-8.html', title: "目標導向：用目標描述需求，別用功能清單", desc: "前七節教你識別好互動，這兩節教你把要求翻譯給 AI 聽。第一句翻譯心法來自《About Face 4》的開篇方法論：先說清使用者是誰、要完成什麼，功能讓 AI 自己推。給它開清單，你會收到一個櫃檯；給它講場景，你會收到一個工具。", tag: '實戰' , navTitle: "目標導向：用目標描述需求，別用功能清單"},
+            { file: 'ixd-9.html', title: "把狀態機和邊界寫進提示詞", desc: "上一節把「要什麼」翻譯成了目標和場景，這一節補上「別糊弄」的部分。規律很簡單：AI 只認真寫你提到的狀態，沒提到的一律按晴天想像。所以狀態要列全，邊界要說死，防錯要寫明，這三樣合起來就是互動規格。", tag: '實戰' , navTitle: "把狀態機和邊界寫進提示詞"},
           ],
         },
         {
@@ -984,7 +984,7 @@ window.COURSE = {
           title: '專題收官',
           desc: '上線前的第二張清單',
           lessons: [
-            { file: 'ixd-final.html', title: '互動驗收清單：上線前的第二張清單', desc: '狀態齊不齊、危險操作可逆嗎、流程還能砍嗎、控制項選對了嗎、文案說人話嗎。互動式清單可勾選，與審美、心理學兩張清單配成一套', tag: '收官' , navTitle: '互動驗收清單'},
+            { file: 'ixd-final.html', title: "互動驗收清單：上線前的第二張清單", desc: "審美篇收官交付了第一張清單管「好看」，這一章交付第二張管「好用」。好看管第一眼，好用管接下來的每一天，而且互動的病更隱蔽：截圖看不出來，要點起來才露餡。14 項，每項一個動作，點頭之前過一遍。", tag: '收官' , navTitle: "互動驗收清單：上線前的第二張清單"},
           ],
         },
       ],
@@ -1004,7 +1004,7 @@ window.COURSE = {
           title: '感知效能',
           desc: '使用者的秒錶和伺服器的秒錶走得不一樣',
           lessons: [
-            { file: 'psy-1.html', title: '工程指標及格了，使用者為什麼還罵慢？', desc: '同一個 5 秒請求，空白凍結、轉圈、流式、步驟外顯四種呈現並排跑，親身體驗物理時長相同、體感差三倍；再認識使用者秒錶的三個走時怪癖', tag: '開篇' , navTitle: '感知效能 ≠ 真實效能'},
+            { file: 'psy-1.html', title: "工程指標及格了，使用者為什麼還罵慢？", desc: "前面的章節教你把延遲壓下來、把成本摳下來、把幻覺率降下來。這一章換一塊秒錶：使用者腦子裡那塊。它和伺服器的秒錶走時不同，打分、續費、解除安裝都跟著它走。第一課先跑個實驗，再把這塊表的走時怪癖逐個拆開。", tag: '開篇' , navTitle: "工程指標及格了，使用者為什麼還罵慢？"},
           ],
         },
         {
@@ -1012,9 +1012,9 @@ window.COURSE = {
           title: '等待與過程設計',
           desc: '難受的從來不是那 5 秒本身',
           lessons: [
-            { file: 'psy-2.html', title: '等待心理學：難受的從來不是那 5 秒', desc: '排隊研究三條定律配迪士尼與休斯頓機場案例；拖動耗時滑塊看三檔呈現決策：1 秒內直接出、10 秒內必須流式、超 10 秒轉非同步', tag: '互動' , navTitle: '等待心理學三定律'},
-            { file: 'psy-3.html', title: '勞動錯覺：讓 AI 把努力演出來', desc: '哈佛實驗：展示工作過程讓使用者多等反而更滿意。秒回 vs 過程外顯的 A/B 投票實驗，思考外顯與檢索來源的一魚三吃，外加三條不能越過的邊界', tag: '互動' , navTitle: '勞動錯覺'},
-            { file: 'psy-4.html', title: '峰終定律：使用者只記得峰值和結尾', desc: '四種會話劇本對比平均分與記憶分怎麼背離；冷水實驗的產品版：旗艦模型花在第一印象、校驗前置護住最後一步、中段放心省錢', tag: '互動' , navTitle: '峰終定律'},
+            { file: 'psy-2.html', title: "等待心理學：難受的從來不是那 5 秒", desc: "第 1 課你已經親手測過：同樣 5 秒，體感能差兩三倍。這一課把背後的規律講透。服務營運研究把排隊心理總結成幾條定律，條條能翻譯成 AI 產品的設計決策，翻譯完你會發現：大部分「太慢了」的差評，修的其實是呈現，模型一行都不用動。", tag: '互動' , navTitle: "等待心理學：難受的從來不是那 5 秒"},
+            { file: 'psy-3.html', title: "勞動錯覺：讓 AI 把努力演出來", desc: "第 2 課說等待要有回饋，這一課的結論更反直覺：有些等待根本沒必要消滅。展示工作過程的產品，讓使用者多等幾秒，滿意度和信任反而更高。這個效應叫勞動錯覺（Labor Illusion）。先做實驗，再看研究，最後把邊界畫清。", tag: '互動' , navTitle: "勞動錯覺：讓 AI 把努力演出來"},
+            { file: 'psy-4.html', title: "峰終定律：使用者只記得峰值和結尾", desc: "諾獎得主卡尼曼發現：人對一段體驗的記憶評分，幾乎只由最強烈的那一刻（峰）和最後一刻（終）決定，和平均水準、持續時長關係不大。這條定律直接回答一個預算問題：最貴的模型、最多的最佳化精力，該花在會話的哪個位置。這一課五個實驗，逐個上手。", tag: '互動' , navTitle: "峰終定律：使用者只記得峰值和結尾"},
           ],
         },
         {
@@ -1022,9 +1022,9 @@ window.COURSE = {
           title: '信任與防禦',
           desc: '既不能全信，也不能不敢用',
           lessons: [
-            { file: 'psy-5.html', title: '信任校準：最好的使用者是半信半疑的', desc: '全信的把編造判例抄進法庭文書，不信的把 AI 變成擺設。六個場景親手判斷信任狀態；可點開的引用、置信度代理訊號、有條件的警告', tag: '互動' , navTitle: '信任校準'},
-            { file: 'psy-9.html', title: '演算法厭惡：AI 犯一次錯，就被永久拉黑', desc: 'Dietvorst 實驗：人看到演算法犯一次錯就棄用，哪怕它整體比人準。先投票親測自己的偏心，再玩歸因翻譯器和微調權開關，看棄用率儀表怎麼被四個槓桿拉回來', tag: '互動' , navTitle: '演算法厭惡'},
-            { file: 'psy-6.html', title: '防禦心理：使用者不是不會用，是不敢用', desc: '資料、能力、責任三種防禦，控制感、可逆性、透明三板斧；三個高防禦設計親手改造，小心埋著的安慰劑陷阱；轉人工按鈕的悖論', tag: '互動' , navTitle: '防禦心理三板斧'},
+            { file: 'psy-5.html', title: "信任校準：最好的使用者是半信半疑的", desc: "前四課都在給體驗掙分，這一課踩一腳剎車：信任這個指標，目標值從來就沒定在滿分。AI 會出錯是改不掉的物理現實，所以健康的使用者長這樣：該信的場景放心用，該查的場景留個心眼。往哪邊偏都要交學費。這一課先看兩筆真實學費，再給你三件能親手撥弄的校準工具。", tag: '互動' , navTitle: "信任校準：最好的使用者是半信半疑的"},
+            { file: 'psy-9.html', title: "演算法厭惡：AI 犯一次錯，就被永久拉黑", desc: "上一課講信任要校準。這一課講校準路上最大的一塊石頭：人對 AI 的容錯率，遠低於對人。同樣犯一次錯，人類同事會被原諒，AI 會被棄用。這個不對稱有實驗、有資料、也有解藥。", tag: '互動' , navTitle: "演算法厭惡：AI 犯一次錯，就被永久拉黑"},
+            { file: 'psy-6.html', title: "防禦心理：使用者不是不會用，是不敢用", desc: "很多 AI 功能的低使用率，檢討時被歸因成「使用者教育不夠」，再做一輪引導彈窗，還是沒人用。真正的原因常常是使用者在防禦：他看懂了你的功能，然後決定不碰。這一課先測你自己防不防，再拆三種防禦的來源，最後把三板斧一把一把撥給你看，五個教具，逐個親手玩。", tag: '互動' , navTitle: "防禦心理：使用者不是不會用，是不敢用"},
           ],
         },
         {
@@ -1032,8 +1032,8 @@ window.COURSE = {
           title: '心智模型與擬人化',
           desc: '使用者拿錯說明書，怪不到使用者頭上',
           lessons: [
-            { file: 'psy-7.html', title: '心智模型：使用者拿錯了說明書', desc: '把 AI 當搜尋引擎、當資料庫、當會學習的學徒、當計算器，四種錯配四類差評。四段對話找茬，再給空狀態示例、邊界前置、記憶外顯三個糾正手段', tag: '互動' , navTitle: '心智模型錯配'},
-            { file: 'psy-8.html', title: '擬人化的度，與 AI 道歉的藝術', desc: 'CASA 典範：使用者必然把 AI 當人，你只能選檔位。五類產品對號入座；同一個錯誤四種道歉文案對比，三要素配方與服務補救悖論', tag: '互動' , navTitle: '擬人化與道歉'},
+            { file: 'psy-7.html', title: "心智模型：使用者拿錯了說明書", desc: "互動設計有個老概念叫心智模型：使用者會帶著一套「這東西應該怎麼運作」的假設來用你的產品，假設錯了，操作就錯，然後差評打給產品，帳算在你頭上。AI 是人類歷史上第一個「長得像老產品、核心兩樣」的東西，心智錯配格外嚴重。這一課先認出四本錯誤說明書，再親手玩三個糾正教具。", tag: '互動' , navTitle: "心智模型：使用者拿錯了說明書"},
+            { file: 'psy-8.html', title: "擬人化的度，與 AI 道歉的藝術", desc: "上世紀 90 年代，史丹佛的 Reeves 和 Nass 在《媒體等同》裡報告了一組反直覺的實驗：人會不由自主地對電腦講禮貌、被電腦誇了會開心，明知對面是機器也照樣套用社交規則。這叫 CASA 典範（把電腦當社會行動者）。它意味著擬人化根本由不得你選：使用者一定會把你的 AI 當某種人對待，你能決定的只有讓它當哪種人，以及它闖禍之後怎麼開口。這一課五個實驗，全部親手玩。", tag: '互動' , navTitle: "擬人化的度，與 AI 道歉的藝術"},
           ],
         },
         {
@@ -1041,10 +1041,10 @@ window.COURSE = {
           title: '長期使用',
           desc: '蜜月期過了，關係才剛開始',
           lessons: [
-            { file: 'psy-10.html', title: '蜜月懸崖：宣傳拉高的期望，要用留存來還', desc: '期望確認理論：滿意度等於體驗減期望。先玩抽卡機看懂「演示是 P99、使用者拿到 P50」，再拖宣傳強度滑塊看註冊轉化和三十日留存此消彼長，最後在期望曲線編輯器上撥三個槓桿', tag: '互動' , navTitle: '蜜月懸崖'},
-            { file: 'psy-11.html', title: 'AI 標籤折扣：同樣的內容，標上 AI 就掉價', desc: '標註 AI 生成後評價系統性下降，用 AI 幹活的人還怕被同事看見。雙盲評分實驗親測折扣，五個場景判斷標籤亮不亮，措辭梯子看折扣差，最後選出使用者敢分享的匯出頁', tag: '互動' , navTitle: 'AI 標籤折扣'},
-            { file: 'psy-12.html', title: '認知卸載：使用者一邊用你，一邊怕自己廢掉', desc: '谷歌效應證明人會把「能查到的」從腦子裡刪掉，AI 把外包範圍從記憶擴大到思考。選外包清單看哪些解除安裝危險，拖 Copilot 到 Autopilot 的定位滑塊，撥開關把回答從「替你想」改成「帶你想」', tag: '互動' , navTitle: '認知卸載'},
-            { file: 'psy-13.html', title: '情感依戀：使用者愛上你的產品之後', desc: '依戀是真實的，Replika 2023 事件證明了深度和風險。依戀訊號分級器給六條使用者訊息判級，點開 Replika 四幕時間線，再撥三層安全閥：身份提醒、脆弱話題轉介、無常性披露', tag: '互動' , navTitle: '情感依戀'},
+            { file: 'psy-10.html', title: "蜜月懸崖：宣傳拉高的期望，要用留存來還", desc: "發表會上的演示驚為天人，上手第一天很興奮，第三天開始挑刺，第三十天解除安裝。這條曲線你在無數 AI 產品上見過。它有兩個成因：期望被宣傳拉高了，新鮮感又天然會掉。兩個都能設計。", tag: '互動' , navTitle: "蜜月懸崖：宣傳拉高的期望，要用留存來還"},
+            { file: 'psy-11.html', title: "AI 標籤折扣：同樣的內容，標上 AI 就掉價", desc: "內容沒變，加四個字「AI 生成」，評價掉一截；工具很好用，使用者卻不想讓同事知道自己在用。這兩件事是同一個偏見的兩面。做 AI 產品，標籤什麼時候必須亮、什麼時候是自己給自己減分，是一道天天要做的題。", tag: '互動' , navTitle: "AI 標籤折扣：同樣的內容，標上 AI 就掉價"},
+            { file: 'psy-12.html', title: "認知卸載：使用者一邊用你，一邊怕自己廢掉", desc: "你的重度使用者裡藏著一批矛盾的人：離了你的產品幹不了活，又隱隱覺得自己正在廢掉。這份焦慮不會寫進 NPS 評語，但它決定續費、決定推薦，也決定他會不會在某天突然「戒掉」你。焦慮的名字叫認知卸載，它能被產品設計接住。", tag: '互動' , navTitle: "認知卸載：使用者一邊用你，一邊怕自己廢掉"},
+            { file: 'psy-13.html', title: "情感依戀：使用者愛上你的產品之後", desc: "擬人化那課講過：人會不由自主地把機器當社會角色對待。這一課講它走到深處的樣子：使用者對 AI 產生真實的情感依戀。它帶來最強的留存曲線，也帶來產品經理職業生涯裡最重的責任。這不是陪伴類產品的專屬課題，任何一個有對話框的產品都躲不開。", tag: '互動' , navTitle: "情感依戀：使用者愛上你的產品之後"},
           ],
         },
         {
@@ -1052,8 +1052,8 @@ window.COURSE = {
           title: '付費與定價',
           desc: '收錢也是一門心理設計',
           lessons: [
-            { file: 'psy-14.html', title: '付費心理：為一個機率商品掏錢，痛在哪', desc: '打表焦慮模擬器親手體驗按量計費怎麼讓每次追問都疼一下，切到包月看同一段對話的心情差；心理帳戶四題看同一筆錢換框架痛感差多少；三個額度開關把免費額度從成本變成轉化器', tag: '互動' , navTitle: '付費心理'},
-            { file: 'psy-15.html', title: '定價心理：錨點、誘餌與體面的價格歧視', desc: '復刻經濟學人的誘餌實驗：沒人選的檔位撤掉後銷量大變；撥開關搭自己的定價頁錨點；判斷五種價格歧視哪些體面哪些找死；最後選出不捱罵的漲價郵件', tag: '互動' , navTitle: '定價心理'},
+            { file: 'psy-14.html', title: "付費心理：為一個機率商品掏錢，痛在哪", desc: "AI 是個奇怪的商品：付同樣的錢，這次生成驚豔，下次翻車，成本還在你看不見的地方按 token 跳動。使用者口袋裡的每一塊錢都連著神經，怎麼收錢，決定了掏錢疼不疼。這一課講付費的心理側，下一課講定價的數字側。", tag: '互動' , navTitle: "付費心理：為一個機率商品掏錢，痛在哪"},
+            { file: 'psy-15.html', title: "定價心理：錨點、誘餌與體面的價格歧視", desc: "上一課講怎麼收錢不疼，這一課講收多少。先記住一個反直覺的事實：使用者對價格沒有客觀感受，全部判斷來自參照物。參照物是可以擺的，這門手藝有一百年曆史，AI 產品還拿到了一件獨有的新工具。", tag: '互動' , navTitle: "定價心理：錨點、誘餌與體面的價格歧視"},
           ],
         },
         {
@@ -1061,7 +1061,7 @@ window.COURSE = {
           title: '回饋設計',
           desc: '壞訊息怎麼才能聽得見',
           lessons: [
-            { file: 'psy-16.html', title: '回饋心理：使用者為什麼不點踩', desc: '一千個不滿意的使用者，點踩的只有十幾個。回饋漏斗模擬器看沉默偏差怎麼層層吃掉訊號，六種使用者行為判讀隱性訊號（重新生成、複製、編輯），點踩後的體驗對決：回饋要有即時回報', tag: '互動' , navTitle: '回饋心理'},
+            { file: 'psy-16.html', title: "回饋心理：使用者為什麼不點踩", desc: "你在回答旁邊放了 👍 和 👎，指望使用者幫你標資料。一個月後一看：點踩率 0.4%，但流失率在漲。不是產品沒問題，是不滿的使用者根本不點踩，他們直接走。這一課講回饋的心理成本，和不靠使用者開口也能聽見的辦法。", tag: '互動' , navTitle: "回饋心理：使用者為什麼不點踩"},
           ],
         },
         {
@@ -1069,7 +1069,7 @@ window.COURSE = {
           title: '延伸書單',
           desc: '這章的規律都有出處',
           lessons: [
-            { file: 'psy-books.html', title: '九本書，把這一章讀厚', desc: '卡尼曼、諾曼、西奧迪尼、塞勒到《媒體等同》，九本書拆出十九條 PM 必須懂的心理學原理，每條標註 AI 產品落點與回看課節；按你產品當前的困惑選書，讀完做一輪原理連線小測', tag: '書單' , navTitle: 'PM 心理學書單'},
+            { file: 'psy-books.html', title: "九本書，把這一章讀厚", desc: "這一章的每個結論都有出處，課裡只給了你壓縮版。這一節把原書排上書架：九本書，拆出十九條 PM 必須懂的心理學原理，每條都標註它在 AI 產品上的落點。別按順序啃，先選你現在最頭疼的問題。", tag: '書單' , navTitle: "九本書，把這一章讀厚"},
           ],
         },
         {
@@ -1077,7 +1077,7 @@ window.COURSE = {
           title: '專題收官',
           desc: '十六個效應一張對照表',
           lessons: [
-            { file: 'psy-final.html', title: '收官 · 十六個效應一張表，外加上線前十四問', desc: '從感知效能到沉默偏差，十六個心理效應 × 工程槓桿完整對照，右列全是學過的開關；可勾選的上線前十四問檢查清單，附十一份延伸閱讀', tag: '收官' , navTitle: '心理學篇收官'},
+            { file: 'psy-final.html', title: "十六個效應一張表，外加上線前十四問", desc: "這一章的每個心理效應都對應一個你早就學過的工程開關。收官把它們排成一張表，再給一份能直接抄進上線流程的檢查清單。心理學不玄：它只是把「使用者為什麼這樣反應」從猜測變成了規律。", tag: '收官' , navTitle: "十六個效應一張表，外加上線前十四問"},
           ],
         },
         {
@@ -1085,7 +1085,7 @@ window.COURSE = {
           title: '他們會這樣考你',
           desc: '面試官、老闆、技術同事會怎樣考察本章內容',
           lessons: [
-            { file: 'psy-interview.html', title: 'AI 產品心理學 · 40 道靈魂拷問', desc: '每題附考察意圖、答題框架與加分點：感知效能 / 峰終取捨 / 信任校準 / 防禦拆除 / 演算法厭惡 / 標籤折扣 / 情感依戀 / 付費與定價 / 沉默偏差 / 體驗指標怎麼寫進 OKR', tag: '考察' , navTitle: '他們會這樣考你 · 40 問'},
+            { file: 'psy-interview.html', title: "AI 產品心理學 · 40 道靈魂拷問", desc: "心理學章學完了，能不能把「使用者為什麼這樣反應」講成可執行的方案，一問便知。這 40 個問題來自三個真實場景，先自己開口回答，再看框架。", tag: '考察' , navTitle: "AI 產品心理學 · 40 道靈魂拷問"},
           ],
         },
       ],
@@ -1094,7 +1094,7 @@ window.COURSE = {
       id: 'p-cost',
       num: '專題篇章',
       title: 'Token 降本增效：AI 應用的成本工程',
-      desc: '前面三章都在讓使用者滿意，這一章問另一個問題：這筆帳劃不划算。產品用得越好，使用者用得越多，利潤反而越薄——AI 商業化是一場和使用者的對賭。這一章基於作者的團隊內部分享整理：先看懂 Token 怎麼數、報價表裡的梯隊與跳檔陷阱（輸出 200 斷崖、輸入 32k 紅線、圖片畫素稅、Agent 的輸入主導），再沿語法、語義、架構、輸出四層把成本一層層摳下來。省 Token 的本質是提高資訊密度：高訊雜比 = 高智慧。',
+      desc: "透過教學示例學習 Token 計量、價格邊界、上下文設計與成本優化；實際價格需按使用時的服務設定核對。",
       color: '#16a34a',
       group: 'indie',
       cluster: 'chain',
@@ -1105,9 +1105,9 @@ window.COURSE = {
           title: '定價即架構',
           desc: '成本構成、Token 怎麼數、報價表怎麼讀',
           lessons: [
-            { file: 'cost-1.html', title: '和使用者對賭的生意', desc: '看到消費帳單會窒息嗎？Token 成本不只是財務帳單，更是延遲與吞吐量的直接對映。這一章講怎麼把它摳下來', tag: '開篇' , navTitle: '和使用者對賭的生意'},
-            { file: 'cost-2.html', title: 'Token 怎麼數：BPE 與隱形的 Token 稅', desc: '從字元到子詞的演進、BPE 的合併規則，以及中文為什麼天生貴 2 倍；「給主人留下些什麼吧」的詭異合併', tag: '互動' , navTitle: 'BPE 與 Token 稅'},
-            { file: 'cost-3.html', title: '報價錶速覽與三大梯隊', desc: 'T0 旗艦 / T1 主力 / T2 走量怎麼分工；光知道哪個貴不夠，要盯住價格跳變的邊界線', tag: '選型' , navTitle: '報價表與三大梯隊'},
+            { file: 'cost-1.html', title: "和使用者對賭的生意", desc: "不知道你有沒有這種感受：我們總想為使用者提供更好的 AI 服務，但在商業化層面，是和使用者在對賭——產品用得越好，使用者用得越多，利潤反而越薄。看到消費帳單的時候，不知道會不會窒息。", tag: '開篇' , navTitle: "和使用者對賭的生意"},
+            { file: 'cost-2.html', title: "Token 怎麼數：BPE 與隱形的「Token 稅」", desc: "帳單按 Token 結算，但 Token 到底是怎麼數出來的？它既不是字元，也不是單詞，而是基於統計規律生成的「子詞」。理解這套規則，你才會明白：同樣一句話，中文為什麼天生比英文貴 2 倍。", tag: '互動' , navTitle: "Token 怎麼數：BPE 與隱形的「Token 稅」"},
+            { file: 'cost-3.html', title: "報價表速覽與三大梯隊", desc: "把常用模型的定價攤開在一張表上，你會看到三個清晰的梯隊。但僅僅知道哪個貴、哪個便宜是遠遠不夠的——真正的成本刺客，藏在那些價格跳變的邊界線裡。", tag: '選型' , navTitle: "報價表速覽與三大梯隊"},
           ],
         },
         {
@@ -1115,9 +1115,9 @@ window.COURSE = {
           title: '三大跳檔陷阱',
           desc: '藏在價格邊界線裡的帳單刺客',
           lessons: [
-            { file: 'cost-4.html', title: 'GLM 的短輸出博弈：200 Token 斷崖', desc: '輸出 199 和 201 是兩種價格，連輸入都回溯漲價；拖動滑塊看帳單跳變，四種應對策略', tag: '互動' , navTitle: '200 Token 斷崖'},
-            { file: 'cost-5.html', title: 'Qwen 的階梯逃逸：32k 紅線', desc: '多 1k Token 整單翻倍的全量結算邏輯；預算感知截斷，別再為 RAG 垃圾付雙倍的錢', tag: '互動' , navTitle: '32k 紅線'},
-            { file: 'cost-6.html', title: '圖片 Token：畫素也要交稅', desc: '輸入解析度即時算 Token 的計算器；32 畫素對齊跳檔、解析度詛咒與圖片成本三條紅線', tag: '互動' , navTitle: '圖片 Token'},
+            { file: 'cost-4.html', title: "GLM 的短輸出博弈：200 Token 斷崖", desc: "觀察 GLM-4.6 的定價結構，會發現一個神奇的設計：它不按輸入長度分檔，而是按輸出長度分檔，分界線在 200 個 Token。輸出 199 和輸出 201，適用完全不同的價格。", tag: '互動' , navTitle: "GLM 的短輸出博弈：200 Token 斷崖"},
+            { file: 'cost-5.html', title: "Qwen 的階梯逃逸：32k 紅線", desc: "Qwen 系列的分檔邏輯和智譜完全不同：按輸入長度計費，分界線在 32k 和 128k。最容易被忽略的計費細節是——越線後不是「超出部分加價」，而是整個請求全量按高價檔結算。", tag: '互動' , navTitle: "Qwen 的階梯逃逸：32k 紅線"},
+            { file: 'cost-6.html', title: "圖片 Token：畫素也要交稅", desc: "文字 BPE 是「合併字元」，圖片編碼是「切割畫素」。你以為傳的是原圖，其實模型按縮放對齊後的解析度計費——這裡面藏著和文字 32k 紅線一模一樣的跳檔陷阱。", tag: '互動' , navTitle: "圖片 Token：畫素也要交稅"},
           ],
         },
         {
@@ -1125,8 +1125,8 @@ window.COURSE = {
           title: 'Agent 的帳單',
           desc: '迴圈執行讓成本累積膨脹',
           lessons: [
-            { file: 'cost-7.html', title: '輸入主導：62:1 的 I/O Ratio', desc: 'Agent 每一輪都要重讀全部歷史。逐輪點開一個 Excel 任務，看 Input 怎麼滾到 31,460 Token', tag: '互動' , navTitle: '輸入主導的 Agent'},
-            { file: 'cost-8.html', title: 'Agent 四大成本陷阱與熔斷', desc: '工具返回爆炸、思考稅、死迴圈、歷史雪球：每個陷阱配一個能落地的策略，外加三條紅線', tag: '深入' , navTitle: 'Agent 四大陷阱'},
+            { file: 'cost-7.html', title: "輸入主導：62:1 的 I/O Ratio", desc: "普通 Chatbot 是一問一答；Agent 是「思考 → 行動 → 觀察 → 再思考」的迴圈。關鍵認知：每一輪的 Input 都包含了全部歷史資訊——輪次越多，Input 越長，成本累積膨脹。", tag: '互動' , navTitle: "輸入主導：62:1 的 I/O Ratio"},
+            { file: 'cost-8.html', title: "Agent 四大成本陷阱與熔斷", desc: "上一節看到的還只是「一次成功的執行」。真實世界裡，Agent 的帳單事故來自四個方向：工具返回爆炸、思考稅、死迴圈、歷史雪球。每一個都有對應的工程解法。", tag: '深入' , navTitle: "Agent 四大成本陷阱與熔斷"},
           ],
         },
         {
@@ -1134,10 +1134,10 @@ window.COURSE = {
           title: '四層實戰優化',
           desc: '語法、語義、架構、輸出，一層層摳',
           lessons: [
-            { file: 'cost-9.html', title: '語法層：Prompt 是寫給機器的', desc: '加粗的 ** 就吃掉 8.5% Token；複雜物件用 YAML、扁平列表用 CSV、後臺輸出強制 Minified JSON', tag: '實戰' , navTitle: '語法層：詞法稅'},
-            { file: 'cost-10.html', title: '語義層：雙重蒸餾', desc: '中段迷失效應：塞得越多越抓不住重點。動態 Few-Shot 從 4000 砍到 500，LLMLingua-2 壓縮 5-20 倍', tag: '實戰' , navTitle: '語義層：雙重蒸餾'},
-            { file: 'cost-11.html', title: '架構層：KV Cache 的注意事項', desc: '字首匹配最高省 90%；動態切換工具為什麼把快取全打穿，滑動視窗 vs 章節快取', tag: '實戰' , navTitle: '架構層：KV Cache'},
-            { file: 'cost-12.html', title: '輸出層：管住模型的嘴', desc: '明確的負向約束砍掉 30% 廢話；潤色用 Diff 別重寫整段；停止序列做物理截斷', tag: '實戰' , navTitle: '輸出層：管住嘴'},
+            { file: 'cost-9.html', title: "語法層：Prompt 是寫給機器的", desc: "進入實戰四層的第一層。很多產品早期為了除錯方便，或者乾脆是讓 AI 代寫的提示詞，習慣用 ###、** 加粗、JSON 展示資料。這些對人類友好的排版，在大模型的計費邏輯裡全是「詞法稅」。", tag: '實戰' , navTitle: "語法層：Prompt 是寫給機器的"},
+            { file: 'cost-10.html', title: "語義層：雙重蒸餾", desc: "格式的稅砍完了，往深一層看內容本身。RAG 和長文件場景裡最常見的工程錯誤：把上下文視窗當垃圾桶——Few-Shot 案例、檢索文件全塞進去，讓模型自己辨識。能用，但不該這樣用。", tag: '實戰' , navTitle: "語義層：雙重蒸餾"},
+            { file: 'cost-11.html', title: "架構層：KV Cache 的注意事項", desc: "在商業化產品的降本增效中，KV Cache 是最被低估的技術點之一。命中快取和沒命中，最高差 90% 的成本——但裡面有幾個隱形的坑，不說你可能不知道。", tag: '實戰' , navTitle: "架構層：KV Cache 的注意事項"},
+            { file: 'cost-12.html', title: "輸出層：管住模型的嘴", desc: "實戰四層的最後一層。輸出 Token 比輸入貴好幾倍（回看第 3 節報價表），而且直接決定介面返回速度。管住模型的嘴，有三類合適的操作：指令層、程式碼層、工程層。", tag: '實戰' , navTitle: "輸出層：管住模型的嘴"},
           ],
         },
         {
@@ -1145,7 +1145,7 @@ window.COURSE = {
           title: '專題收官',
           desc: '省錢的盡頭是資訊密度',
           lessons: [
-            { file: 'cost-final.html', title: '算力時代的極簡主義', desc: '每一個 Token 都在為最終結果貢獻價值嗎？全景清單回顧 + 十八份按主題分類的延伸閱讀', tag: '收官' , navTitle: '算力極簡主義'},
+            { file: 'cost-final.html', title: "算力時代的極簡主義", desc: "做完這幾層優化，你基本上已經跑贏 90% 的粗放型 AI 產品了。收官這一節，把整個專題串成一張清單，再聊聊「省錢」背後的那件更重要的事。", tag: '收官' , navTitle: "算力時代的極簡主義"},
           ],
         },
       ],
@@ -1166,7 +1166,7 @@ window.COURSE = {
           title: '為什麼 AI 時代還要懂',
           desc: '你可以不寫程式碼，但要會驗收 AI 寫的程式碼',
           lessons: [
-            { file: 'ds-1.html', title: '都 2026 年了，為什麼還要懂資料結構？', desc: '一個貫穿全章的隱喻：資料結構 = 收納方式。親手玩一局「找鑰匙」，體會選錯收納有多慢；再看不懂結構的人怎麼把 AI 寫的慢程式碼直接上線', tag: '互動' , navTitle: '為什麼還要懂資料結構'},
+            { file: 'ds-1.html', title: "都 2026 年了，為什麼還要懂資料結構？", desc: "AI 都會寫程式碼了，還要學這個「程式設計師基本功」嗎？先說結論：你可以不寫程式碼，但要會驗收 AI 寫的程式碼。這一章不背定義、不手寫連結串列，只給你一副能看穿程式碼的眼鏡。第一課先玩個遊戲。", tag: '互動' , navTitle: "都 2026 年了，為什麼還要懂資料結構？"},
           ],
         },
         {
@@ -1175,9 +1175,9 @@ window.COURSE = {
           title: '線性結構：你天天在用',
           desc: '陣列、棧、佇列，AI 對話和 Agent 排程的地基',
           lessons: [
-            { file: 'ds-2.html', title: '陣列：你聊的每句話都躺在裡面', desc: 'message list 就是一個陣列：對話歷史怎麼排隊、上下文截斷為什麼掐頭不掐尾；順便看陣列中間插一條資料有多貴', tag: '互動' , navTitle: '陣列與 message list'},
-            { file: 'ds-3.html', title: '棧：Cmd+Z 和「爆棧」的秘密', desc: '後進先出：撤銷鍵、函式呼叫、Agent 的子任務都靠它。親手壓棧彈棧，再看一次沒寫終止條件的遞迴是怎麼把棧壓爆的', tag: '互動' , navTitle: '棧：撤銷與呼叫'},
-            { file: 'ds-4.html', title: '佇列：Agent 的活是排著隊乾的', desc: '先進先出：任務佇列、訊息佇列、生產者消費者。拖動生產和消費的速度，看佇列什麼時候積壓、什麼時候空轉', tag: '互動' , navTitle: '佇列與任務排程'},
+            { file: 'ds-2.html', title: "陣列：你聊的每句話都躺在裡面", desc: "上一課說好了：資料結構 = 收納方式。第一種收納方式你其實天天在餵它資料——你和 AI 的每一段對話，在程式眼裡就是一個 message list，而 message list 的真身，是最樸素的收納方式：一排編了號的格子，叫陣列。這一課先把你的對話攤開來看，再順手回答一個老疑問：為什麼聊久了它會忘事。", tag: '互動' , navTitle: "陣列：你聊的每句話都躺在裡面"},
+            { file: 'ds-3.html', title: "棧：Cmd+Z 和「爆棧」的秘密", desc: "第二種收納方式長得像一疊盤子：只能從最上面放、也只能從最上面拿，這叫棧。聽著限制很大？可你每天按的撤銷鍵、程式裡每一次函式呼叫，靠的都是它。這一課先親手玩壞一個文件再一鍵撤回來，最後圍觀一場「爆棧」事故——全球最大的程式設計師問答網站 Stack Overflow，名字就是從這場事故來的。", tag: '互動' , navTitle: "棧：Cmd+Z 和「爆棧」的秘密"},
+            { file: 'ds-4.html', title: "佇列：Agent 的活是排著隊幹的", desc: "上一課的棧是「後進先出」，這一課把方向掉個頭：先進先出，一頭進、另一頭出——就是食堂打飯的那條隊。別嫌它樸素，AI 服務能扛住一萬個人同時提問、Agent 能有條不紊地幹完一串任務，靠的都是這條隊。這一課你來當排程員：親手開動一條流水線，把它玩到積壓、再救回來。", tag: '互動' , navTitle: "佇列：Agent 的活是排著隊幹的"},
           ],
         },
         {
@@ -1186,8 +1186,8 @@ window.COURSE = {
           title: '雜湊與快取：空間換時間',
           desc: '查得快和省錢，背後是同一招',
           lessons: [
-            { file: 'ds-5.html', title: '雜湊表：為什麼它找東西快到不講理', desc: '把 key 親手塞進桶裡，看雜湊函式怎麼把「翻一遍」變成「直達」；再看兩個 key 撞進同一個桶時怎麼收場', tag: '互動' , navTitle: '雜湊表'},
-            { file: 'ds-6.html', title: '快取：AI 帳單的隱形折扣', desc: 'KV Cache 和語義快取都是同一招：算過的別再算。拖動命中率滑塊即時看帳單變化——Harness 核心篇成本優化的底層原理', tag: '互動' , navTitle: '快取與 KV Cache'},
+            { file: 'ds-5.html', title: "雜湊表：為什麼它找東西快到不講理", desc: "還記得第一課埋下的那條伏筆嗎？「查會員名單」的版本 B 用了一行 set.has(user)，名單從 100 人漲到 1000 萬人，耗時紋絲不動。當時說好第五課揭底——今天就把這個「直達」的魔術拆給你看：它根本不翻，它是算出來的。", tag: '互動' , navTitle: "雜湊表：為什麼它找東西快到不講理"},
+            { file: 'ds-6.html', title: "快取：AI 帳單的隱形折扣", desc: "上一課的雜湊表解決了「怎麼瞬間找到」，這一課解決另一個問題：算過的東西，別再算第二遍。你在模型價格表上見過的「快取命中五折甚至一折」，帳單上省下的每一分錢，背後都是同一種收納方式——把算過的結果存起來，下次直接取。", tag: '互動' , navTitle: "快取：AI 帳單的隱形折扣"},
           ],
         },
         {
@@ -1196,8 +1196,8 @@ window.COURSE = {
           title: '樹與圖：AI 的主場',
           desc: 'Coding Agent 和知識圖譜眼裡的世界',
           lessons: [
-            { file: 'ds-7.html', title: '樹：Coding Agent 眼裡全是它', desc: '檔案目錄、JSON、網頁 DOM、程式碼語法樹——AI 讀你的專案時看到的是一棵棵樹。點開一段程式碼，親眼看它變成 AST', tag: '互動' , navTitle: '樹與 AST'},
-            { file: 'ds-8.html', title: '圖：從知識圖譜到多 Agent 協作', desc: '節點加關係就是圖：社交網路、知識圖譜、Agent 工作流 DAG。點一個節點，看關係怎麼一層層擴散出去', tag: '互動' , navTitle: '圖與 DAG'},
+            { file: 'ds-7.html', title: "樹：Coding Agent 眼裡全是它", desc: "前面幾課的收納方式都是「一排排」的，這一課換個維度：一層套一層的收納。衣櫃裡有格子，格子裡有盒子，盒子裡有袋子——這種「層級 + 包含」的收納方式，在程式設計世界叫「樹」。而 Coding Agent 抬眼望去，你的專案裡全是樹。", tag: '互動' , navTitle: "樹：Coding Agent 眼裡全是它"},
+            { file: 'ds-8.html', title: "圖：從知識圖譜到多 Agent 協作", desc: "上一課的樹規矩得很：每個節點只有一個爹，永遠不繞圈。可現實世界的關係亂多了——你的朋友互相也是朋友，公司和學校和人攪在一起。把「每個節點只能有一個爹」這條規矩撕掉，樹就升級成了圖：節點 + 關係，想怎麼連怎麼連。這一課看圖在 AI 世界的兩大主場。", tag: '互動' , navTitle: "圖：從知識圖譜到多 Agent 協作"},
           ],
         },
         {
@@ -1206,8 +1206,8 @@ window.COURSE = {
           title: '大模型肚子裡的資料結構',
           desc: '前面章節埋的伏筆，這裡揭底',
           lessons: [
-            { file: 'ds-9.html', title: '詞表與 Trie：Tokenizer 的切詞秘密', desc: '大模型原理篇見過分詞，這次看底層：一棵字首樹怎麼把「五花肉」整塊認出來。親手沿著 Trie 走一次分詞', tag: '互動' , navTitle: '詞表與 Trie'},
-            { file: 'ds-10.html', title: '向量：RAG 檢索是在「找最近的鄰居」', desc: 'Embedding 把語義變成座標，相似度就是距離。在平面上拖動查詢點看最近鄰怎麼變，再看 HNSW 為什麼能在億級向量裡瞬間找到', tag: '互動' , navTitle: '向量與近鄰搜尋'},
+            { file: 'ds-9.html', title: "詞表與 Trie：Tokenizer 的切詞秘密", desc: "還記得大模型原理篇那個細節嗎——分詞器把「五花肉」切成一整塊詞元，而不是三個字。當時我們說「常見組合當一個整體」，這次揭底層：分詞器是怎麼在幾萬個詞裡面，瞬間認出「五花肉」該整塊拿走的？答案是一種叫 Trie（前綴樹）的收納方式——把詞表按「共享開頭」掛成一棵樹。", tag: '互動' , navTitle: "詞表與 Trie：Tokenizer 的切詞秘密"},
+            { file: 'ds-10.html', title: "向量：RAG 檢索是在「找最近的鄰居」", desc: "學 RAG 時我們說過：Embedding 把一段話變成一串數字。這串數字到底是什麼？答案簡單得出奇——是座標。給每句話發一個「語義地圖」上的位置，意思越近、位置越近。於是「檢索資料」這件事，就變成了小學生都會的遊戲：在地圖上找離你最近的鄰居。", tag: '互動' , navTitle: "向量：RAG 檢索是在「找最近的鄰居」"},
           ],
         },
         {
@@ -1216,7 +1216,7 @@ window.COURSE = {
           title: '篇章彙總',
           desc: '資料結構篇核心知識回顧',
           lessons: [
-            { file: 'ds-summary.html', title: '彙總 · 八種結構一張決策表', desc: '陣列/棧/佇列/雜湊表/快取/樹/圖/向量各自的強項弱項與 AI 裡的真身；點選場景，看該用哪種收納方式', tag: '彙總' , navTitle: '資料結構篇彙總'},
+            { file: 'ds-summary.html', title: "彙總 · 八種結構一張決策表", desc: "十課走完，八種收納方式全部揭底。這一頁不講新東西，只做一件事：把它們擺上同一張桌子，讓你以後看到場景就能報出結構名。先掃一遍決策表，再玩選型器和快問快答，檢驗自己是不是真的能給 AI 寫的程式碼把關了。", tag: '彙總' , navTitle: "彙總 · 八種結構一張決策表"},
           ],
         },
         {
@@ -1225,7 +1225,7 @@ window.COURSE = {
           title: '你現在能做什麼',
           desc: '學完這章，你今天能動手做什麼',
           lessons: [
-            { file: 'ds-build.html', title: '把 AI 寫的程式碼「驗收」一遍', desc: '三檔任務：讓 AI 解釋它選的資料結構、要求換一種實現對比利弊、給你自己的專案挑一次收納方式', tag: '實戰' , navTitle: '實戰：驗收 AI 的程式碼'},
+            { file: 'ds-build.html', title: "把 AI 寫的程式碼「驗收」一遍", desc: "整章都在說「你可以不寫程式碼，但要會驗收」——今天就驗一次真的。三檔任務按投入挑一個：30 分鐘能完成最輕的那檔，一週能把驗收變成你的工作習慣。每檔都配了直接可用的提示詞。", tag: '實戰' , navTitle: "把 AI 寫的程式碼「驗收」一遍"},
           ],
         },
         {
@@ -1234,7 +1234,7 @@ window.COURSE = {
           title: '他們會這樣考你',
           desc: '面試官、老闆、技術同事會怎樣考察本章內容',
           lessons: [
-            { file: 'ds-interview.html', title: '資料結構 · 30 道靈魂拷問', desc: '每題附考察意圖、答題框架與加分點：陣列 vs 連結串列 / 雜湊碰撞 / 樹的遍歷 / 快取設計 / 向量檢索 / 場景選型', tag: '考察' , navTitle: '他們會這樣考你 · 30 問'},
+            { file: 'ds-interview.html', title: "資料結構 · 30 道靈魂拷問", desc: "資料結構篇學完了，收納方式的直覺建立了沒有，一問便知。這 30 個問題來自三個真實場景，先自己開口回答，再看框架。", tag: '考察' , navTitle: "資料結構 · 30 道靈魂拷問"},
           ],
         },
       ],
@@ -1255,8 +1255,8 @@ window.COURSE = {
           title: '複雜度：一眼看穿程式碼值不值',
           desc: '不用數學，建立對「快慢」的直覺',
           lessons: [
-            { file: 'algo-1.html', title: 'Big-O：一眼看穿程式碼要跑多久', desc: '拖動資料量滑塊，看 O(1)、O(log n)、O(n)、O(n²) 四條曲線怎麼分道揚鑣；資料翻十倍，誰不動聲色、誰當場爆炸', tag: '互動' , navTitle: 'Big-O 複雜度直覺'},
-            { file: 'algo-2.html', title: '為什麼上下文越長越貴？O(n²) 的帳單', desc: '注意力機制要讓每個 Token 看所有 Token：拖動上下文長度，看計算量和帳單按平方往上躥——長對話變卡變貴的根源', tag: '互動' , navTitle: '注意力的 O(n²) 帳單'},
+            { file: 'algo-1.html', title: "Big-O：一眼看穿程式碼要跑多久", desc: "姊妹篇講完了「資料結構 = 收納方式」，這一章講另一半：演算法 = 做事的套路。評價一個套路好不好，程式設計師有一把統一的尺子，叫 Big-O。別被數學符號嚇到——它回答的問題只有一個：資料變多的時候，你的程式碼會慢多少？今天用三個互動把這把尺子裝進你腦子裡。", tag: '互動' , navTitle: "Big-O：一眼看穿程式碼要跑多久"},
+            { file: 'algo-2.html', title: "為什麼上下文越長越貴？O(n²) 的帳單", desc: "上一課你拿到了 Big-O 這把尺子，還記得那條起飛的紅線嗎？今天帶你去看大模型裡最有名的一個 O(n²)——注意力機制。學完你會突然理解一堆老問題：為什麼長對話越來越卡、為什麼上下文視窗是「視窗」不是「倉庫」、為什麼大家拼命做上下文壓縮。", tag: '互動' , navTitle: "為什麼上下文越長越貴？O(n²) 的帳單"},
           ],
         },
         {
@@ -1265,9 +1265,9 @@ window.COURSE = {
           title: '查詢與排序',
           desc: '砍一半的藝術，和排序在 AI 裡的真身',
           lessons: [
-            { file: 'algo-3.html', title: '二分查詢：猜數字遊戲的最優解', desc: '玩一局 1 到 100 猜數字，體會每猜一次範圍砍一半；十億條資料 30 次就能找到——log n 快到什麼程度', tag: '互動' , navTitle: '二分查詢'},
-            { file: 'algo-4.html', title: '排序：冒泡和快排的賽跑', desc: '兩種排序同場競技的視覺化動畫：看冒泡怎麼一步步挪、快排怎麼分割槽跳躍；資料量一大差距有多懸殊', tag: '動畫' , navTitle: '排序演算法賽跑'},
-            { file: 'algo-5.html', title: '排序在 AI 裡的真身：Rerank', desc: 'RAG 檢索回來的段落不能直接用：先粗排再精排。親手調整權重，看候選段落怎麼重新洗牌——推薦流和搜尋結果同理', tag: '互動' , navTitle: 'Rerank 重排序'},
+            { file: 'algo-3.html', title: "二分查詢：猜數字遊戲的最優解", desc: "上一課那條最省心的綠線 O(log n)，今天揭開它的真面目。你小時候玩過「我想了個 1 到 100 的數，你猜」嗎？猜數字的最優策略，就是電腦科學裡最經典的演算法之一——二分查詢。先玩，再講理。", tag: '互動' , navTitle: "二分查詢：猜數字遊戲的最優解"},
+            { file: 'algo-4.html', title: "排序：冒泡和快排的賽跑", desc: "上一課說了，二分查詢的門票是「先排好序」。那排序本身貴不貴？看你用什麼套路。今天安排一場公開賽：同一組亂序資料，氣泡排序和快速排序同時開跑，誰先把柱子從矮到高排整齊誰贏。先看小資料，再上 60 根柱子——差距會讓你印象深刻。", tag: '動畫' , navTitle: "排序：冒泡和快排的賽跑"},
+            { file: 'algo-5.html', title: "排序在 AI 裡的真身：Rerank", desc: "上一課的排序比的是數字大小，但 AI 世界裡排的是「相關性」：RAG 從知識庫撈回來一堆段落，誰排前面誰就能擠進上下文——排錯了，模型就會一本正經地引用錯誤資料。這個「打分 + 重排」的環節叫 Rerank。今天你親自上崗，當一次 Rerank 模型。", tag: '互動' , navTitle: "排序在 AI 裡的真身：Rerank"},
           ],
         },
         {
@@ -1276,8 +1276,8 @@ window.COURSE = {
           title: '遞迴與分治',
           desc: '把大事拆成同一件小事',
           lessons: [
-            { file: 'algo-6.html', title: '遞迴：把大事拆成同一件小事', desc: '遍歷目錄、拆解任務、畫分形樹，套路都一樣：自己呼叫自己。看 Agent 怎麼把「做個官網」遞迴拆成能動手的小任務', tag: '互動' , navTitle: '遞迴'},
-            { file: 'algo-7.html', title: '分治：上下文壓縮的演算法原理', desc: '動手實戰篇的 Compaction 其實是分治：把長對話切段、各自摘要、再合併。親手跑一次遞迴摘要，看資訊怎麼被層層壓縮', tag: '互動' , navTitle: '分治與遞迴摘要'},
+            { file: 'algo-6.html', title: "遞迴：把大事拆成同一件小事", desc: "「做個官網」聽著嚇人，「寫首頁的三行文案」誰都會。工程進階篇裡你見過 Coding Agent 接到大需求後自己列小任務清單——它用的思路有個名字：遞迴。這一課不寫一行程式碼，點一棵任務樹、拖一根滑塊，你就能拿到這個程式設計師嘴裡最玄的詞。", tag: '互動' , navTitle: "遞迴：把大事拆成同一件小事"},
+            { file: 'algo-7.html', title: "分治：上下文壓縮的演算法原理", desc: "動手實戰篇講過：對話太長裝不下時，AI 會做一次 Compaction——把舊對話壓成摘要。當時說「像搬家前把雜物打包」，這一課揭開包裝紙：它是一個有兩千年歷史的演算法套路，叫分治。上一課的遞迴是「拆」，這一課補上另一半：「拆完再合」。", tag: '互動' , navTitle: "分治：上下文壓縮的演算法原理"},
           ],
         },
         {
@@ -1286,9 +1286,9 @@ window.COURSE = {
           title: '搜尋與決策',
           desc: '走迷宮、擲骰子、往前多看幾步',
           lessons: [
-            { file: 'algo-8.html', title: 'BFS 與 DFS：Agent 在程式碼庫裡找檔案', desc: '走迷宮動畫看兩種搜尋的性格：一層層掃 vs 一條道走到黑；Coding Agent 的 grep 檢索、網路爬蟲都是它們的變體', tag: '互動' , navTitle: 'BFS 與 DFS'},
-            { file: 'algo-9.html', title: '貪心與取樣：AI 選詞時的兩種性格', desc: '每步都挑最大的就是貪心解碼，按機率擲骰子就是取樣——Temperature 背後的演算法學。親手對比兩種策略生成的句子', tag: '互動' , navTitle: '貪心與取樣'},
-            { file: 'algo-10.html', title: 'Beam Search：往前多看幾步再選', desc: '貪心一步錯步步錯，Beam Search 同時留幾條候選路往前探。互動對比兩種策略走出的句子，理解「先想再答」的直覺來源', tag: '互動' , navTitle: 'Beam Search'},
+            { file: 'algo-8.html', title: "BFS 與 DFS：Agent 在程式碼庫裡找檔案", desc: "工程進階篇裡，Coding Agent 接到「找出登入報錯的原因」後，會在幾百個資料夾裡翻程式碼。往哪兒翻？先翻完這層再下去，還是抓住一條線索鑽到底？這是兩種截然不同的性格——BFS（廣度優先）和 DFS（深度優先）。這一課讓它們各走一遍同一個迷宮，性格一眼見分曉。", tag: '互動' , navTitle: "BFS 與 DFS：Agent 在程式碼庫裡找檔案"},
+            { file: 'algo-9.html', title: "貪心與取樣：AI 選詞時的兩種性格", desc: "大模型原理篇你看過 AI 逐詞元續寫時腦子裡的候選機率條，也調過 Temperature 旋鈕。當時是「體感」，這一課給它演算法學的名字：每步挑最大的叫貪心，按機率擲骰子叫取樣。同一個開頭，兩種性格各生成三次——差別一眼就能看穿。", tag: '互動' , navTitle: "貪心與取樣：AI 選詞時的兩種性格"},
+            { file: 'algo-10.html', title: "Beam Search：往前多看幾步再選", desc: "上一課留了個坑：貪心每步拿眼前最大的，可能一步錯、步步錯。補上的辦法樸素得可愛——別急著定，多留幾條候選路一起往前走，走完了比總分。這就是 Beam Search（束搜尋）。下面這張「詞格」，讓三種走法同臺競技。", tag: '互動' , navTitle: "Beam Search：往前多看幾步再選"},
           ],
         },
         {
@@ -1297,8 +1297,8 @@ window.COURSE = {
           title: 'AI 時代的演算法學習觀',
           desc: '還要不要刷題，以及怎麼用 AI 學',
           lessons: [
-            { file: 'algo-11.html', title: 'AI 都會做題了，還要刷 LeetCode 嗎？', desc: '面試現狀實話實說：什麼崗位還在考、考到什麼檔位、什麼崗位早就不看了。點選你的目標崗位，對號入座', tag: '互動' , navTitle: '還要刷 LeetCode 嗎'},
-            { file: 'algo-12.html', title: '用 AI 學演算法的正確姿勢', desc: '讓它出題、讓它當考官、讓它逐行講複雜度——三個立刻能用的提示詞模板，把 AI 從「替你做題」變成「陪你練題」', tag: '實戰' , navTitle: '用 AI 學演算法'},
+            { file: 'algo-11.html', title: "AI 都會做題了，還要刷 LeetCode 嗎？", desc: "這是全章被問得最多的問題。答案不是簡單的「要」或「不要」——不同職位差別很大。這一課不灌雞湯，把 2026 年的面試行情實話實說：什麼職位還在考、考到什麼檔位、什麼職位早就不看了。先找到你的位置。", tag: '互動' , navTitle: "AI 都會做題了，還要刷 LeetCode 嗎？"},
+            { file: 'algo-12.html', title: "用 AI 學演算法的正確姿勢", desc: "上一課說了「還值得學」，這一課解決「怎麼學最快」。關鍵一步是把角色換過來：你出題它把關，而不是它出手你圍觀。三個提示詞模板直接拿去用，再做 5 組對比題校準一下你的姿勢。", tag: '實戰' , navTitle: "用 AI 學演算法的正確姿勢"},
           ],
         },
         {
@@ -1307,7 +1307,7 @@ window.COURSE = {
           title: '篇章彙總',
           desc: '演算法篇核心知識回顧',
           lessons: [
-            { file: 'algo-summary.html', title: '彙總 · 五類演算法思想對照表', desc: '複雜度/查詢排序/遞迴分治/圖搜尋/貪心取樣，每類對應 AI 裡的一個真實機制；一張表帶走全章', tag: '彙總' , navTitle: '演算法篇彙總'},
+            { file: 'algo-summary.html', title: "彙總 · 五類演算法思想對照表", desc: "十二課走完，該收網了。這一章其實只講了五類思想，每類都在 AI 裡有個真身。這一頁一張大表帶走全章，再用 8 道場景題測測你能不能「一眼定位」——看到問題就知道該動哪類思想。", tag: '彙總' , navTitle: "彙總 · 五類演算法思想對照表"},
           ],
         },
         {
@@ -1316,7 +1316,7 @@ window.COURSE = {
           title: '你現在能做什麼',
           desc: '學完這章，你今天能動手做什麼',
           lessons: [
-            { file: 'algo-build.html', title: '給 AI 寫的程式碼做一次複雜度體檢', desc: '三檔任務：讓 AI 自報複雜度、要求優化一檔並說清代價、用大資料量實測驗證它沒吹牛', tag: '實戰' , navTitle: '實戰：複雜度體檢'},
+            { file: 'algo-build.html', title: "給 AI 寫的程式碼做一次複雜度體檢", desc: "演算法篇的收官實戰：拿一段真實的 AI 程式碼，走一遍自報 → 優化 → 實測的完整體檢流程。三檔任務按投入挑一個，30 分鐘起步；走到第三檔，你會親眼看到 AI 自報的複雜度有沒有吹牛。", tag: '實戰' , navTitle: "給 AI 寫的程式碼做一次複雜度體檢"},
           ],
         },
         {
@@ -1325,7 +1325,7 @@ window.COURSE = {
           title: '他們會這樣考你',
           desc: '面試官、老闆、技術同事會怎樣考察本章內容',
           lessons: [
-            { file: 'algo-interview.html', title: '演算法 · 30 道靈魂拷問', desc: '每題附考察意圖、答題框架與加分點：Big-O 直覺 / 二分的前提 / 遞迴的風險 / BFS vs DFS / 取樣策略 / AI 時代還考演算法嗎', tag: '考察' , navTitle: '他們會這樣考你 · 30 問'},
+            { file: 'algo-interview.html', title: "演算法 · 30 道靈魂拷問", desc: "演算法篇學完了，複雜度的直覺建立了沒有，一問便知。這 30 個問題來自三個真實場景，先自己開口回答，再看框架。", tag: '考察' , navTitle: "演算法 · 30 道靈魂拷問"},
           ],
         },
       ],
@@ -1346,9 +1346,9 @@ window.COURSE = {
           title: '系統地圖',
           desc: '79 個 Workspace 成員的分層架構與 Rust 選型',
           lessons: [
-            { file: '12-1.html', title: '79 個 Workspace 成員如何組成產品', desc: '按入口、Agent 執行時、工具和基礎設施還原 Cargo Workspace 的真實分層', tag: '架構' , navTitle: '79 個 Workspace 成員'},
-            { file: '12-2.html', title: 'Rust 技術選型：事實與推斷', desc: '從原始碼可驗證事實出發，分析型別系統、併發安全和分發方式帶來的工程取捨', tag: '概念' , navTitle: 'Rust 技術選型'},
-            { file: '12-3.html', title: '從真實 main() 到第一輪取樣', desc: '追蹤入口、會話建立、提示詞渲染、模型取樣與流式返回的完整呼叫鏈', tag: '深入' , navTitle: '從 main() 到首輪取樣'},
+            { file: '12-1.html', title: "79 個 Workspace 成員如何組成產品", desc: "根 Cargo.toml 列出 79 個成員，其中 crates/codegen/ 佔 62 個。理解這套系統，要沿組合入口、互動介面、Agent 宿主、領域能力、推理狀態五條主軸閱讀。", tag: '架構' , navTitle: "79 個 Workspace 成員如何組成產品"},
+            { file: '12-2.html', title: "為什麼 Rust 合適：先分清事實與推斷", desc: "原始碼能證明 Rust 2024、Tokio、強型別建模和原生二進位產物。技術選擇背後的組織動機沒有寫入原始碼，本課只給出有邊界的課程推斷。", tag: '概念' , navTitle: "為什麼 Rust 合適：先分清事實與推斷"},
+            { file: '12-3.html', title: "從真實 main() 到第一輪取樣", desc: "實際入口位於 xai-grok-pager-bin/src/main.rs。同一個組合入口解析命令與互動模式，再把工作交給 TUI 或 Shell Agent 宿主。", tag: '深入' , navTitle: "從真實 main() 到第一輪取樣"},
           ],
         },
         {
@@ -1356,9 +1356,9 @@ window.COURSE = {
           title: 'Agent 核心迴圈',
           desc: 'Session Actor、Compaction 與 System Prompt',
           lessons: [
-            { file: '12-4.html', title: 'Session Actor：執行緒、狀態與取消邊界', desc: '梳理會話狀態所有權、訊息流轉、後臺任務與 CancellationToken 的中斷路徑', tag: '深入' , navTitle: 'Session Actor'},
-            { file: '12-5.html', title: 'Compaction：85% 閾值與可選 two-pass', desc: '核對自動壓縮閾值、memory flush、two-pass 和超時預算的真實配置', tag: '互動' , navTitle: 'Compaction 閾值'},
-            { file: '12-6.html', title: 'PromptContext：可檢查的渲染輸入', desc: '拆解可序列化上下文、TemplateOverride 和 TemplateRenderer 的模板渲染邊界', tag: '概念' , navTitle: 'PromptContext'},
+            { file: '12-4.html', title: "Session Actor：執行緒、狀態與取消邊界", desc: "每個 Session 在獨立 OS 執行緒上執行 current-thread Tokio runtime 與 LocalSet。SessionActor 協調 turn，ChatStateActor 序列擁有對話狀態，CancellationToken 負責協作式終止。", tag: '深入' , navTitle: "Session Actor：執行緒、狀態與取消邊界"},
+            { file: '12-5.html', title: "Compaction：85% 閾值與可選 two-pass", desc: "預設策略在上下文使用率達到 85% 時允許自動壓縮。memory flush 和 two-pass 預設均關閉，啟用後才進入對應流程。", tag: '互動' , navTitle: "Compaction：85% 閾值與可選 two-pass"},
+            { file: '12-6.html', title: "PromptContext：可檢查的渲染輸入", desc: "PromptContext 儲存 Agent 專屬的模板輸入。它透過 Serde derive 獲得序列化能力，再交給 ToolBridge::render_prompt() 完成渲染。", tag: '概念' , navTitle: "PromptContext：可檢查的渲染輸入"},
           ],
         },
         {
@@ -1366,10 +1366,10 @@ window.COURSE = {
           title: '工具系統',
           desc: '登錄檔、分類學與內建工具集',
           lessons: [
-            { file: '12-7.html', title: '程序級外部 Toolset Preset 登錄檔', desc: '理解構建函式、Public 與 Internal 可見性，以及晚註冊對後續解析的影響', tag: '架構' , navTitle: 'Toolset 登錄檔'},
-            { file: '12-8.html', title: 'ToolKind 提供預設只讀語義', desc: '從列舉與 is_read_only() 追蹤只讀預設值和能力過濾邊界', tag: '設計模式' , navTitle: 'ToolKind 只讀語義'},
-            { file: '12-9.html', title: '實現族、登錄檔與動態 MCP', desc: '區分內建工具實現族、靜態登錄檔與執行時發現的 MCP 工具', tag: '深入' , navTitle: '實現族與動態 MCP'},
-            { file: '12-10.html', title: 'Canonical input 是穩定投影', desc: '用 CanonicalToolMeta 和輸入投影解釋跨工具實現的穩定合約', tag: '案例' , navTitle: 'Canonical input'},
+            { file: '12-7.html', title: "行程級外部 Toolset Preset 註冊表", desc: "config.rs 允許 crate 外的擴充程式碼在當前行程內註冊按名稱解析的工具集構建函式，並用 Public 與 Internal 控制是否進入公開列舉。", tag: '架構' , navTitle: "行程級外部 Toolset Preset 註冊表"},
+            { file: '12-8.html', title: "ToolKind 提供預設只讀語義", desc: "is_read_only() 是工具種類層的預設分類。具體工具可以覆蓋它，最終是否執行還要經過規則、沙箱、Hook 與互動批准等控制。", tag: '設計模式' , navTitle: "ToolKind 提供預設只讀語義"},
+            { file: '12-9.html', title: "實現族、註冊表與動態 MCP", desc: "xai-grok-tools 同時容納多套內建工具實現與執行時 MCP 工具。ToolBridge 把 registry 接入會話層，SearchTool 與 UseTool 提供發現和呼叫入口。", tag: '深入' , navTitle: "實現族、註冊表與動態 MCP"},
+            { file: '12-10.html', title: "Canonical input 是穩定投影", desc: "不同 harness 可以使用不同原始參數名。Grok Build 把少量穩定語義投影到 x.ai/tool 中繼資料中，讓展示、遙測和跨工具分析擁有共同詞彙。", tag: '案例' , navTitle: "Canonical input 是穩定投影"},
           ],
         },
         {
@@ -1377,9 +1377,9 @@ window.COURSE = {
           title: '上下文與記憶',
           desc: 'Token 估算、混合檢索與 Dream 機制',
           lessons: [
-            { file: '12-11.html', title: '估算、百分比與嚴格閾值', desc: '區分 Token 估算、使用率計算和 exceeds_threshold 的嚴格比較語義', tag: '互動' , navTitle: 'Token 估算與閾值'},
-            { file: '12-12.html', title: '從檔案變更到混合排序', desc: '追蹤 FTS、向量檢索、時間衰減和 MMR 重排組成的記憶召回流水線', tag: '深入' , navTitle: '混合檢索排序'},
-            { file: '12-13.html', title: 'Dream 的真實機制', desc: '核對空閒門控、DreamLock、後臺整理和記憶寫回的實際邊界', tag: '前沿' , navTitle: 'Dream 機制'},
+            { file: '12-11.html', title: "估算、百分比與嚴格閾值", desc: "xai-token-estimation 提供共享算術原語。它既有 bytes/4 的本地粗估，也有對呼叫方傳入 used 與 total 的使用率和閾值判斷。", tag: '互動' , navTitle: "估算、百分比與嚴格閾值"},
+            { file: '12-12.html', title: "從檔案變更到混合排序", desc: "查詢前先同步髒檔案，再結合 FTS5 BM25 與可選的 sqlite-vec KNN。合併分數經過時間衰減、來源權重與存取增益，最後可選擇啟用 MMR 多樣性重排。", tag: '深入' , navTitle: "從檔案變更到混合排序"},
+            { file: '12-13.html', title: "Dream 的真實機制", desc: "Dream 會把近期 session 日誌與現有 MEMORY.md 合併成長期記憶。它由會話結束、可選週期檢查或手動命令進入，並受門控與最佳努力鎖共同約束。", tag: '前沿' , navTitle: "Dream 的真實機制"},
           ],
         },
         {
@@ -1387,9 +1387,9 @@ window.COURSE = {
           title: '子 Agent 與多 Agent',
           desc: 'Agent 定義 + Persona 疊加的兩層體系',
           lessons: [
-            { file: '12-14.html', title: 'AgentDefinition 與 Persona 如何合併', desc: '拆解 Agent 定義、Persona 覆蓋與最終會話行為的合併順序', tag: '設計模式' , navTitle: 'Agent 與 Persona 合併'},
-            { file: '12-15.html', title: '子 Agent 的四個隔離維度', desc: '從上下文來源、恢復模式、工作樹和任務狀態分析隔離邊界', tag: '深入' , navTitle: '子 Agent 隔離維度'},
-            { file: '12-16.html', title: '多 Agent 的組織方式', desc: '基於公開證據比較 Agent、Persona、協調者與並行任務的組織方式', tag: '案例' , navTitle: '多 Agent 組織方式'},
+            { file: '12-14.html', title: "AgentDefinition 與 Persona 如何合併", desc: "子 Agent 先解析可執行骨架，再把 spawn 參數、role 預設值和 Persona 預設值摺疊為執行時配置。兩套結構在不同階段生效，最終共同決定子會話。", tag: '設計模式' , navTitle: "AgentDefinition 與 Persona 如何合併"},
+            { file: '12-15.html', title: "子 Agent 的四個隔離維度", desc: "上下文來源、身份連續性、工作目錄和檔案改動空間分別控制不同邊界。把它們混成一個「隔離等級」，容易誤讀恢復和 worktree 的真實行為。", tag: '深入' , navTitle: "子 Agent 的四個隔離維度"},
+            { file: '12-16.html', title: "多 Agent 的組織方式", desc: "多 Agent 系統要同時解決角色定義、spawn、狀態查詢、取消、完成通知與資源繼承。Grok Build 的原始碼把這些職責落在定義層與協調事件層。", tag: '案例' , navTitle: "多 Agent 的組織方式"},
           ],
         },
         {
@@ -1397,9 +1397,9 @@ window.COURSE = {
           title: '權限、沙箱與安全',
           desc: '核心級沙箱、權限演進與 Hooks 攔截',
           lessons: [
-            { file: '12-17.html', title: '五種沙箱 Profile', desc: '比較 workspace、devbox、read-only、strict、off 與自訂 Profile 的邊界', tag: '安全' },
-            { file: '12-18.html', title: '從工具請求到受限執行', desc: '沿 ToolKind、權限決策和平臺沙箱追蹤完整授權鏈', tag: '安全' , navTitle: '工具授權鏈'},
-            { file: '12-19.html', title: 'Hooks：明確 deny 才阻斷', desc: '核對生命週期事件、matcher、PreToolUse 阻斷和故障 fail-open 語義', tag: '實戰' , navTitle: 'Hooks 阻斷語義'},
+            { file: '12-17.html', title: "五種沙箱 Profile", desc: "workspace、devbox、read-only、strict、off 定義檔案系統和子行程網路的不同能力集合。名稱提供方向，真實邊界要看解析後的 capability set。", tag: '安全' },
+            { file: '12-18.html', title: "從工具請求到受限執行：完整授權鏈", desc: "一次工具呼叫先被解析成具體存取意圖，再經過 plan gate、hooks、策略規則、會話授權、Auto 模式和使用者確認。允許執行後，沙箱繼續約束作業系統能力。", tag: '安全' , navTitle: "從工具請求到受限執行：完整授權鏈"},
+            { file: '12-19.html', title: "Hooks：明確 deny 才阻斷", desc: "Grok Build 原始碼課第 19 節：Hooks 事件、matcher、阻斷語義與 fail-open 邊界", tag: '實戰' , navTitle: "Hooks：明確 deny 才阻斷"},
           ],
         },
         {
@@ -1407,8 +1407,8 @@ window.COURSE = {
           title: 'MCP 與生態',
           desc: 'MCP 客戶端、OAuth、連線恢復與外掛信任',
           lessons: [
-            { file: '12-20.html', title: 'MCP 連線、發現與恢復', desc: '確認客戶端角色，拆解 OAuth、工具命名、能力發現、狀態合併與重連', tag: '深入' , navTitle: 'MCP 連線與恢復'},
-            { file: '12-21.html', title: 'Plugin Marketplace 的發現與信任', desc: '區分目錄、安裝、執行時發現、啟用狀態與外掛根信任', tag: '架構' , navTitle: 'Marketplace 信任'},
+            { file: '12-20.html', title: "MCP：連線只是起點", desc: "Grok Build 原始碼課第 20 節：MCP 客戶端、OAuth、工具可見性與連線恢復", tag: '深入' , navTitle: "MCP：連線只是起點"},
+            { file: '12-21.html', title: "Marketplace：發現、安裝、執行分層", desc: "Grok Build 原始碼課第 21 節：Plugin Marketplace、外掛發現與信任邊界", tag: '架構' , navTitle: "Marketplace：發現、安裝、執行分層"},
           ],
         },
         {
@@ -1416,9 +1416,9 @@ window.COURSE = {
           title: '超越原始碼',
           desc: '完整對照、經驗教訓與設計啟示',
           lessons: [
-            { file: '12-22.html', title: 'Grok Build 與 Claude Code 證據化對照', desc: '按原始碼、倉庫文件和公開產品行為完成多維比較，保留未知項', tag: '彙總' , navTitle: 'Grok vs Claude 對照'},
-            { file: '12-23.html', title: 'Grok Build 工程覆盤與證據邊界', desc: '用型別、狀態機、測試和倉庫政策覆盤工程優點與適用限制', tag: '收官' , navTitle: '工程覆盤與邊界'},
-            { file: '12-24.html', title: 'Coding Agent 設計工作臺', desc: '圍繞九個系統維度輸出架構決定、故障路徑、驗證方式和結課成果', tag: '收官' , navTitle: '設計工作臺'},
+            { file: '12-22.html', title: "完整對照：先校準證據，再談取捨", desc: "Grok Build 與 Claude Code 完整對照：原始碼證據與公開產品行為分層比較", tag: '彙總' , navTitle: "完整對照：先校準證據，再談取捨"},
+            { file: '12-23.html', title: "工程回顧：能力與邊界一起讀", desc: "Grok Build 原始碼課第 23 節：基於原始碼與 README 的工程回顧和適用邊界", tag: '收官' , navTitle: "工程回顧：能力與邊界一起讀"},
+            { file: '12-24.html', title: "Coding Agent 設計工作臺", desc: "Coding Agent 設計工作臺：九個系統維度與可提交結課成果", tag: '收官' , navTitle: "Coding Agent 設計工作臺"},
           ],
         },
         {
@@ -1426,7 +1426,7 @@ window.COURSE = {
           title: '他們會這樣考你',
           desc: '面試官、老闆、技術同事會怎樣考察本章內容',
           lessons: [
-            { file: 'interview-6.html', title: 'Grok Build 專題 · 30 道靈魂拷問', desc: '每題附考察意圖、答題框架與加分點：執行時迴圈 / Compaction / 工具權限 / 記憶檢索 / 沙箱安全 / MCP 整合', tag: '考察' , navTitle: '他們會這樣考你 · 30 問'},
+            { file: 'interview-6.html', title: "解剖 Grok Build · 30 道靈魂拷問", desc: "協作方法論篇拆的是真實原始碼，這章的問題也最硬核。你說自己懂 Coding Agent，這 30 個問題就是照妖鏡，先自己開口回答，再看框架。", tag: '考察' , navTitle: "解剖 Grok Build · 30 道靈魂拷問"},
           ],
         },
       ],
@@ -1447,8 +1447,8 @@ window.COURSE = {
           title: '系統地圖',
           desc: 'Cordis 外掛核心與配置三層結構',
           lessons: [
-            { file: 'dsh-1.html', title: '一切皆外掛：官宣與原始碼對照', desc: '把釋出文案裡的四種模式、會話日誌、外掛生態逐條對到倉庫裡的 YAML 預設與包結構', tag: '架構' , navTitle: '一切皆外掛' },
-            { file: 'dsh-6.html', title: 'Profile / Bundle / Patch：使用者能把產品改到什麼程度', desc: '配置三層結構怎麼讓使用者不改原始碼就換掉深層能力', tag: '架構' , navTitle: 'Profile 與 Bundle' },
+            { file: 'dsh-1.html', title: "一切皆外掛：官宣與原始碼對照", desc: "發布文裡說的四種模式、外掛生態，在 deepseek-harness 倉庫裡對應哪個檔案？本課一條條對上。", tag: '架構' , navTitle: "一切皆外掛：官宣與原始碼對照" },
+            { file: 'dsh-6.html', title: "Profile / Bundle / Patch：使用者能把產品改到什麼程度", desc: "不改原始碼也能換掉深層能力：配置由四層 patch 對著空陣列疊出來，晚應用的贏，命中同一條就整條替換。", tag: '架構' , navTitle: "Profile / Bundle / Patch：使用者能把產品改到什麼程度" },
           ],
         },
         {
@@ -1456,10 +1456,10 @@ window.COURSE = {
           title: '會話與迴圈',
           desc: '日誌不變數、雙佇列 Inbox、取消恢復與 Goal',
           lessons: [
-            { file: 'dsh-2.html', title: 'Model-visible ⟺ logged：一條會崩給你看的不變數', desc: '從 invariant.ts 的逐位元組比對講起：為什麼模型看到的一切必須能從日誌重建', tag: '深入' , navTitle: '日誌重建不變數' },
-            { file: 'dsh-3.html', title: 'followup / steer / inject：雙佇列 Inbox', desc: '拆解 next-turn 與 next-step 兩條佇列的入隊、claim 與喚醒語義，對照 Claude Code 的中斷模型', tag: '互動' , navTitle: '雙佇列 Inbox' },
-            { file: 'dsh-7.html', title: 'Esc 之後發生了什麼：取消、崩潰恢復與重入', desc: '每輪一個 AbortSignal，中斷也要寫回日誌，崩潰重啟還能接著跑', tag: '深入' , navTitle: '取消與崩潰恢復' },
-            { file: 'dsh-8.html', title: 'Goal：訊息溯源即權限', desc: '長期目標怎麼存、誰有權改，鑑權看訊息來源', tag: '設計模式' , navTitle: 'Goal 與溯源鑑權' },
+            { file: 'dsh-2.html', title: "Model-visible ⟺ logged：一條會崩給你看的不變數", desc: "模型看到的一切都要能從日誌重建，發請求前還要現場驗一遍，驗不過直接崩。", tag: '深入' , navTitle: "Model-visible ⟺ logged：一條會崩給你看的不變數" },
+            { file: 'dsh-3.html', title: "followup / steer / inject：雙佇列 Inbox", desc: "Agent 正在幹活時你想說句話，訊息該排哪條隊、什麼時候被處理。三個 API 共用一個 send()，只差兩個參數。", tag: '互動' , navTitle: "followup / steer / inject：雙佇列 Inbox" },
+            { file: 'dsh-7.html', title: "Esc 之後發生了什麼：取消、崩潰恢復與重入", desc: "每輪一個取消訊號，中斷也要把帳記平，kill -9 之後重啟還能接著跑，已落盤的勞動成果一條不丟。", tag: '深入' , navTitle: "Esc 之後發生了什麼：取消、崩潰恢復與重入" },
+            { file: 'dsh-8.html', title: "Goal：訊息溯源即權限", desc: "長期目標誰有權改，鑑權不讀訊息正文，只認宿主蓋在事件中繼資料上的來源章。本課講這個設計背後的兩層思路。", tag: '設計模式' , navTitle: "Goal：訊息溯源即權限" },
           ],
         },
         {
@@ -1467,10 +1467,10 @@ window.COURSE = {
           title: '上下文工程',
           desc: 'Compaction 雙路徑、計量、Spill 與檢索',
           lessons: [
-            { file: 'dsh-4.html', title: 'Compaction 雙路徑與 replaceGeneration', desc: '壓力觸發與溢位恢復兩條正交路徑，以及用世代號證明「壓縮確實發生過」才允許重試', tag: '深入' , navTitle: 'Compaction 雙路徑' },
-            { file: 'dsh-9.html', title: 'Token 計量：決策用重放，展示用投影', desc: '兩套計量各幹各的，壓縮決策從不信 UI 上那個數', tag: '概念' , navTitle: 'Token 計量' },
-            { file: 'dsh-10.html', title: 'Spill：工具輸出太大怎麼辦', desc: '超限輸出落盤存檔，給模型留一張取回憑證', tag: '實戰' , navTitle: 'Spill 落盤' },
-            { file: 'dsh-11.html', title: '會話檢索與跨會話引用', desc: '舊會話是可檢索的資料庫，引用還能帶出處', tag: '深入' , navTitle: '會話檢索' },
+            { file: 'dsh-4.html', title: "Compaction 雙路徑與 replaceGeneration", desc: "上下文快滿了就主動收拾，真撐爆了就先收拾再重試。重試前先對一遍世代號，收拾沒起效就不許重試。", tag: '深入' , navTitle: "Compaction 雙路徑與 replaceGeneration" },
+            { file: 'dsh-9.html', title: "Token 計量：決策用重放，展示用投影", desc: "兩套計量各幹各的，壓縮決策從不信 UI 上那個數。核心原始碼：packages/llm/token-meter/src/usage-projection.ts。", tag: '概念' , navTitle: "Token 計量：決策用重放，展示用投影" },
+            { file: 'dsh-10.html', title: "Spill：工具輸出太大怎麼辦", desc: "超限輸出落盤存檔，給模型留一張取回憑證。核心原始碼：packages/spill/spill-policy/src/index.ts。", tag: '實戰' , navTitle: "Spill：工具輸出太大怎麼辦" },
+            { file: 'dsh-11.html', title: "會話檢索與跨會話引用", desc: "舊會話是可檢索的資料庫，引用還能帶出處。核心原始碼：packages/session-query/ 與 packages/context/session-reference/。", tag: '深入' , navTitle: "會話檢索與跨會話引用" },
           ],
         },
         {
@@ -1478,10 +1478,10 @@ window.COURSE = {
           title: '工具系統',
           desc: '三段瀑布、輸出契約、檔案編輯與獨有工具面',
           lessons: [
-            { file: 'dsh-12.html', title: '工具執行流水線：三段瀑布與單調 Guard', desc: 'pre-execute 到 post-execute 的三段管線，Guard 只能收緊不能放行', tag: '架構' , navTitle: '工具流水線' },
-            { file: 'dsh-13.html', title: '工具輸出契約：值與展示分離', desc: '同一個結果，模型看的和人看的可以不一樣', tag: '設計模式' , navTitle: 'render intent' },
-            { file: 'dsh-14.html', title: '檔案編輯的工程學：先讀後寫', desc: 'read / edit / write 三件套，沒讀過的檔案不許改', tag: '實戰' , navTitle: '先讀後寫' },
-            { file: 'dsh-17.html', title: 'DSH 獨有的工具面：terminal / lsp / jobs', desc: '別家沒有的幾個工具各解決什麼問題', tag: '案例' , navTitle: '獨有工具面' },
+            { file: 'dsh-12.html', title: "工具執行流水線：三段瀑布與單調 Guard", desc: "pre-execute 到 post-execute 的三段管線，Guard 只能收緊不能放行。核心原始碼：packages/core/tools/src/index.ts。", tag: '架構' , navTitle: "工具執行流水線：三段瀑布與單調 Guard" },
+            { file: 'dsh-13.html', title: "工具輸出契約：值與展示分離", desc: "同一個結果，模型看的和人看的可以不一樣。核心原始碼：packages/core/tools/src/index.ts 與 presentation.ts。", tag: '設計模式' , navTitle: "工具輸出契約：值與展示分離" },
+            { file: 'dsh-14.html', title: "檔案編輯的工程學：先讀後寫", desc: "read / edit / write 三件套，沒讀過的檔案不許改。核心原始碼：packages/fs/fs-observation-policy/src/index.ts。", tag: '實戰' , navTitle: "檔案編輯的工程學：先讀後寫" },
+            { file: 'dsh-17.html', title: "DSH 獨有的工具面：terminal / lsp / jobs", desc: "別家沒有的幾個工具各解決什麼問題。核心原始碼：packages/terminal/、packages/lsp/ 與 packages/jobs/，工具描述全文見 docs/tool-catalog.zh.md。", tag: '案例' , navTitle: "DSH 獨有的工具面：terminal / lsp / jobs" },
           ],
         },
         {
@@ -1489,8 +1489,8 @@ window.COURSE = {
           title: '審批與沙箱',
           desc: '兩個獨立旋鈕與可整體替換的執行世界',
           lessons: [
-            { file: 'dsh-15.html', title: '審批與權限：兩個旋鈕，一個下拉框', desc: '沙箱模式和審批策略是兩個獨立旋鈕，預設只是常用組合', tag: '安全' , navTitle: '審批與權限預設' },
-            { file: 'dsh-16.html', title: '沙箱：從 seatbelt 到執行世界', desc: 'ctx.fs 和 ctx.subprocess 同享一個路徑名稱空間，執行環境可以整體換掉', tag: '安全' , navTitle: '執行世界' },
+            { file: 'dsh-15.html', title: "審批與權限：兩個旋鈕，一個下拉框", desc: "沙箱模式和審批策略是兩個獨立旋鈕，預設只是常用組合。核心原始碼：packages/interaction/user-approval 與 packages/interaction/permission-presets。", tag: '安全' , navTitle: "審批與權限：兩個旋鈕，一個下拉框" },
+            { file: 'dsh-16.html', title: "沙箱：從 seatbelt 到執行世界", desc: "ctx.fs 和 ctx.subprocess 同享一個路徑名稱空間，執行環境可以整體換掉。核心原始碼：packages/sandbox/、packages/e2b/ 與 native/landlock-run/。", tag: '安全' , navTitle: "沙箱：從 seatbelt 到執行世界" },
           ],
         },
         {
@@ -1498,7 +1498,7 @@ window.COURSE = {
           title: '程式碼模式',
           desc: '讓模型寫程式來編排工具呼叫',
           lessons: [
-            { file: 'dsh-5.html', title: 'Code Mode：一段程式碼頂多輪工具呼叫', desc: '官宣叫 PTC，原始碼叫 code mode：worker 沙箱的隔離、通訊協議與雙重記帳', tag: '前沿' , navTitle: 'Code Mode 沙箱' },
+            { file: 'dsh-5.html', title: "Code Mode：一段程式碼頂多輪工具呼叫", desc: "模型寫一段小程式，run_code 把它送進 worker 沙箱，五次工具呼叫一輪搞定。本課講這個設計背後的兩個思路。", tag: '前沿' , navTitle: "Code Mode：一段程式碼頂多輪工具呼叫" },
           ],
         },
         {
@@ -1506,9 +1506,9 @@ window.COURSE = {
           title: '編排與子 Agent',
           desc: 'Subagent 接縫與四種編排原語',
           lessons: [
-            { file: 'dsh-18.html', title: 'Subagent 是一個 seam：從程序內到委派 Claude Code', desc: '子 Agent 是能力接縫，程序內、遠端、別家產品都能接', tag: '架構' , navTitle: 'Subagent seam' },
-            { file: 'dsh-19.html', title: 'workflow / schedule / plan / todo：編排原語的取捨', desc: '四種編排原語各管什麼，為什麼沒做成一個大而全', tag: '概念' , navTitle: '編排原語' },
-            { file: 'dsh-20.html', title: 'Skill、Preset 與自我修改', desc: 'cordis_define 讓 Agent 在執行時改寫自己的執行時', tag: '前沿' , navTitle: 'Skill 與自我修改' },
+            { file: 'dsh-18.html', title: "Subagent 是一個 seam：從行程內到委派 Claude Code", desc: "子 Agent 是能力接縫，行程內、遠端、別家產品都能接。核心原始碼：packages/subagent/。", tag: '架構' , navTitle: "Subagent 是一個 seam：從行程內到委派 Claude Code" },
+            { file: 'dsh-19.html', title: "workflow / schedule / plan / todo：編排原語的取捨", desc: "四種編排原語各管什麼，為什麼沒做成一個大而全。核心文件：docs/subsystems/workflow.zh.md 等四篇。", tag: '概念' , navTitle: "workflow / schedule / plan / todo：編排原語的取捨" },
+            { file: 'dsh-20.html', title: "Skill、Preset 與自我修改", desc: "cordis_define 讓 Agent 在執行時改寫自己的執行時。核心目錄：packages/extensions/tool-cordis/ 與 apps/cli/config/agent-presets/。", tag: '前沿' , navTitle: "Skill、Preset 與自我修改" },
           ],
         },
         {
@@ -1516,9 +1516,9 @@ window.COURSE = {
           title: '模型與外部接入',
           desc: 'LLM 適配層、MCP 與測試基礎設施',
           lessons: [
-            { file: 'dsh-21.html', title: 'MCP 與 Extensions：外部工具接入的兩條路', desc: '橋接生態標準與原生擴充套件怎麼分工', tag: '深入' , navTitle: 'MCP 與擴充套件' },
-            { file: 'dsh-22.html', title: 'LLM 適配層：單次嘗試、顯式重試、雙流持久', desc: '推理流與正文流分開存，重試是顯式事件', tag: '深入' , navTitle: 'LLM 適配層' },
-            { file: 'dsh-26.html', title: '測試一個非確定性系統', desc: '確定性回放、性質測試、專門騙 LLM 客戶端的故障伺服器', tag: '實戰' , navTitle: '測試基礎設施' },
+            { file: 'dsh-21.html', title: "MCP 與 Extensions：外部工具接入的兩條路", desc: "橋接生態標準與原生擴充怎麼分工。核心原始碼：packages/mcp/mcp-client/ 與 packages/extensions/。", tag: '深入' , navTitle: "MCP 與 Extensions：外部工具接入的兩條路" },
+            { file: 'dsh-22.html', title: "LLM 適配層：單次嘗試、顯式重試、雙流持久", desc: "推理流與正文流分開存，重試是顯式事件。核心原始碼：packages/llm/llm/src/assembler.ts 與 packages/core/agent-loop/src/agent.ts。", tag: '深入' , navTitle: "LLM 適配層：單次嘗試、顯式重試、雙流持久" },
+            { file: 'dsh-26.html', title: "測試一個非確定性系統", desc: "確定性回放、性質測試、專門騙 LLM 客戶端的故障伺服器。核心材料：docs/testing.zh.md 與 packages/test-support/。", tag: '實戰' , navTitle: "測試一個非確定性系統" },
           ],
         },
         {
@@ -1526,9 +1526,9 @@ window.COURSE = {
           title: '持久化與基建',
           desc: '日誌治理、憑據儲存與多入口核心',
           lessons: [
-            { file: 'dsh-23.html', title: '持久化治理：版本、fork 邊界與拒絕解讀', desc: '日誌格式怎麼演進，分叉邊界怎麼定，讀不懂的資料寧可拒絕', tag: '架構' , navTitle: '持久化治理' },
-            { file: 'dsh-24.html', title: '憑據、設定、儲存與遙測', desc: '不起眼但全是坑：憑據每次現取、配置不落盤', tag: '實戰' , navTitle: '憑據與儲存' },
-            { file: 'dsh-25.html', title: '多入口與 Typert：一個核心，五張面孔', desc: 'Web、headless、ACP、SDK、HTTP 共享同一個核心', tag: '架構' , navTitle: '多入口' },
+            { file: 'dsh-23.html', title: "持久化治理：版本、fork 邊界與拒絕解讀", desc: "日誌格式怎麼演進，分叉邊界怎麼定，讀不懂的資料寧可拒絕。", tag: '架構' , navTitle: "持久化治理：版本、fork 邊界與拒絕解讀" },
+            { file: 'dsh-24.html', title: "憑據、設定、儲存與遙測", desc: "不起眼但全是坑：憑據每次現取、配置不落盤。", tag: '實戰' , navTitle: "憑據、設定、儲存與遙測" },
+            { file: 'dsh-25.html', title: "多入口與 Typert：一個核心，五張面孔", desc: "Web、headless、ACP、SDK、HTTP 共享同一個核心。", tag: '架構' , navTitle: "多入口與 Typert：一個核心，五張面孔" },
           ],
         },
         {
@@ -1536,8 +1536,8 @@ window.COURSE = {
           title: '工程方法論',
           desc: '用 AI 開發 AI 的規訓體系',
           lessons: [
-            { file: 'dsh-27.html', title: 'Agent Notes 與 AGENTS.md：用 AI 開發 AI 的規訓', desc: '四狀態設計筆記和給 AI 看的編碼規範，團隊立刻能抄', tag: '彙總' , navTitle: 'Agent Notes' },
-            { file: 'dsh-28.html', title: 'KV Cache 是介面', desc: 'prompt 字首穩定性當成相容性承諾來維護', tag: '前沿' , navTitle: 'KV Cache 紀律' },
+            { file: 'dsh-27.html', title: "Agent Notes 與 AGENTS.md：用 AI 開發 AI 的規訓", desc: "四狀態設計筆記和給 AI 看的編碼規範，團隊立刻能抄。", tag: '彙總' , navTitle: "Agent Notes 與 AGENTS.md：用 AI 開發 AI 的規訓" },
+            { file: 'dsh-28.html', title: "KV Cache 是介面", desc: "prompt 前綴穩定性當成相容性承諾來維護。", tag: '前沿' , navTitle: "KV Cache 是介面" },
           ],
         },
         {
@@ -1545,7 +1545,7 @@ window.COURSE = {
           title: '超越原始碼',
           desc: '五種工程觀與最小可抄清單',
           lessons: [
-            { file: 'dsh-29.html', title: '終章：五種工程觀，我們該抄什麼', desc: '五家 harness 設計哲學總表，附最小可抄清單和體量陷阱清單', tag: '收官' , navTitle: '終章 · 該抄什麼' },
+            { file: 'dsh-29.html', title: "終章：五種工程觀，我們該抄什麼", desc: "五家 harness 設計哲學總表，附最小可抄清單和體量陷阱清單。", tag: '收官' , navTitle: "終章：五種工程觀，我們該抄什麼" },
           ],
         },
       ],
@@ -1566,11 +1566,11 @@ window.COURSE = {
           title: '治理與迴圈',
           desc: '一輪對話在內部轉幾圈，誰有資格喊停',
           lessons: [
-            { file: 'codex-01.html', title: '新功能先找落腳的 crate，core 是最後一檔', desc: '開啟倉庫，第一反應是往 core 里加。倉庫把這件事寫成禁令：先找現有的非 core crate，否則新建一個。依賴方向會把葉子型別擋在核心之外。', tag: '工程', navTitle: 'crate 治理' },
-            { file: 'codex-02.html', title: '三層 Turn Loop：誰有資格決定繼續', desc: '你看到的是一輪對話。內部疊了任務殼、輪次、取樣三層迴圈。各層只回答自己那一個問題，控制權每次只在一層。', tag: '架構', navTitle: '三層 Turn Loop' },
-            { file: 'codex-03.html', title: '流還在走，工具已經開工', desc: '模型還在打字，讀檔案的聲音已經響了。取樣迴圈的時序是：流內建 future，流後統一 drain。先 persist，再等結果。', tag: '架構', navTitle: 'SSE 與工具迴圈' },
-            { file: 'codex-04.html', title: '中途插話：這句話進本輪、下一輪，還是被拒', desc: 'Agent 正在改第三個檔案，你看見方向偏了，補了一句：配置用 YAML。回車之後，這句話是開工、插進當前輪，還是當場被拒，Core 當場拍板，不等模型開口。', tag: '架構', navTitle: 'Turn 輸入與 Inbox' },
-            { file: 'codex-05.html', title: '按下取消之後，各層怎麼收手', desc: '工具失敗回給模型，使用者按 Esc 才停 turn。取消令牌從任務傳到取樣再傳到工具。已完成的結果留在歷史裡，100 毫秒之後的硬拆不可逆。', tag: '架構', navTitle: '取消與錯誤' },
+            { file: 'codex-01.html', title: "新功能先找落腳的 crate，core 是最後一檔", desc: "開啟倉庫，第一反應是往 core 里加。倉庫把這件事寫成禁令：先找現有的非 core crate，否則新建一個。依賴方向會把葉子型別擋在核心之外。", tag: '工程', navTitle: "新功能先找落腳的 crate，core 是最後一檔" },
+            { file: 'codex-02.html', title: "三層 Turn Loop：誰有資格決定繼續", desc: "你看到的是一輪對話。內部疊了任務殼、輪次、取樣三層迴圈。各層只回答自己那一個問題，控制權每次只在一層。", tag: '架構', navTitle: "三層 Turn Loop：誰有資格決定繼續" },
+            { file: 'codex-03.html', title: "流還在走，工具已經開工", desc: "模型還在打字，讀檔案的聲音已經響了。取樣迴圈的時序是：流內建 future，流後統一 drain。先 persist，再等結果。", tag: '架構', navTitle: "流還在走，工具已經開工" },
+            { file: 'codex-04.html', title: "中途插話：這句話進本輪、下一輪，還是被拒", desc: "Agent 正在改第三個檔案，你看見方向偏了，補了一句：配置用 YAML。回車之後，這句話是開工、插進當前輪，還是當場被拒，Core 當場拍板，不等模型開口。", tag: '架構', navTitle: "中途插話：這句話進本輪、下一輪，還是被拒" },
+            { file: 'codex-05.html', title: "按下取消之後，各層怎麼收手", desc: "工具失敗回給模型，使用者按 Esc 才停 turn。取消令牌從任務傳到取樣再傳到工具。已完成的結果留在歷史裡，100 毫秒之後的硬拆不可逆。", tag: '架構', navTitle: "按下取消之後，各層怎麼收手" },
           ],
         },
         {
@@ -1578,10 +1578,10 @@ window.COURSE = {
           title: '上下文',
           desc: '往模型上下文裡塞東西，誰來管',
           lessons: [
-            { file: 'codex-06.html', title: '往模型上下文裡塞東西，先給它造一個型別', desc: '每一種注入都是一個型別，自己知道 role、marker 和 body；組裝按欄位分揀，事後靠同一對 marker 認回', tag: '上下文', navTitle: '上下文碎片' },
-            { file: 'codex-07.html', title: '把上下文治理寫進 code review', desc: '長度、頻率、字首穩定這些編譯器證明不了的事，用六條禁令加評審規則守住', tag: '工程', navTitle: '上下文治理' },
-            { file: 'codex-08.html', title: '滿窗之後，砍哪一段留哪一段', desc: '三個時機共用一個分發器，三種實現由開關選中。同一份摘要在中途必須停在歷史最後一項。', tag: '上下文', navTitle: '上下文壓縮' },
-            { file: 'codex-09.html', title: 'JSONL 是真相，SQLite 是映象', desc: '昨天關了終端，今天列表還在，對話也能接著改。這兩件事看起來像同一份儲存，落盤時卻走兩條軌。上軌按行追加，下軌只抄封面。中途拔電之後，能撿回來的永遠是已經過了閘門的那幾行。', tag: '儲存', navTitle: 'JSONL 與 SQLite' },
+            { file: 'codex-06.html', title: "往模型上下文裡塞東西，先給它造一個型別", desc: "批准前綴、工作區、AGENTS.md、被中斷的 turn，全是告訴模型一件它自己看不到的事實。Codex 先給每一種注入造一個型別，型別自己知道 role、marker 和 body。", tag: '上下文', navTitle: "往模型上下文裡塞東西，先給它造一個型別" },
+            { file: 'codex-07.html', title: "把上下文治理寫進 code review", desc: "上一章把往上下文裡塞東西收成型別。型別過了，這段文字仍然可以合法地又長、又勤、又無界。擋這些後果的，是倉庫根十行禁令，外加一份會把同一節再讀一遍的評審 skill。", tag: '工程', navTitle: "把上下文治理寫進 code review" },
+            { file: 'codex-08.html', title: "滿窗之後，砍哪一段留哪一段", desc: "三個時機共用一個分發器，三種實現由開關選中。同一份摘要在中途必須停在歷史最後一項。", tag: '上下文', navTitle: "滿窗之後，砍哪一段留哪一段" },
+            { file: 'codex-09.html', title: "JSONL 是真相，SQLite 是映像", desc: "昨天關了終端，今天列表還在，對話也能接著改。這兩件事看起來像同一份儲存，落盤時卻走兩條軌。上軌按行追加，下軌只抄封面。中途拔電之後，能撿回來的永遠是已經過了閘門的那幾行。", tag: '儲存', navTitle: "JSONL 是真相，SQLite 是映像" },
           ],
         },
         {
@@ -1589,9 +1589,9 @@ window.COURSE = {
           title: '工具',
           desc: '模型能調什麼，怎麼併發，從哪個門出去',
           lessons: [
-            { file: 'codex-10.html', title: '模型看見的工具清單，是一次取樣算出來的', desc: '同一段對話、同一份配置，下一輪取樣卻可能多出 MCP 名字、協作入口或 tool_search。變的是這一次允許廣告哪些 handler。', tag: '工具', navTitle: '工具清單' },
-            { file: 'codex-11.html', title: '對模型說隨便並行，底下用鎖管住', desc: '模型看見的、實際執行的、歷史記錄的，是三套順序。一面旗允許一次發多個呼叫，一把讀寫鎖決定誰能疊著進。', tag: '工具', navTitle: '並行工具與鎖' },
-            { file: 'codex-12.html', title: '統一入口：一條命令按特徵分叉', desc: '模型只看見 exec_command 和 write_stdin。進門之後，tty、遠端環境和 150 毫秒視窗會把同一條命令送到 PTY、pipe、exec-server，或者送進重試門。', tag: '執行', navTitle: '統一執行入口' },
+            { file: 'codex-10.html', title: "模型看見的工具清單，是一次取樣算出來的", desc: "同一段對話、同一份配置，下一輪取樣卻可能多出 MCP 名字、協作入口或 tool_search。變的是這一次允許廣告哪些 handler。", tag: '工具', navTitle: "模型看見的工具清單，是一次取樣算出來的" },
+            { file: 'codex-11.html', title: "對模型說隨便並行，底下用鎖管住", desc: "模型看見的、實際執行的、歷史記錄的，是三套順序。一面旗允許一次發多個呼叫，一把讀寫鎖決定誰能疊著進。", tag: '工具', navTitle: "對模型說隨便並行，底下用鎖管住" },
+            { file: 'codex-12.html', title: "統一入口：一條命令按特徵分叉", desc: "模型只看見 exec_command 和 write_stdin。進門之後，tty、遠端環境和 150 毫秒視窗會把同一條命令送到 PTY、pipe、exec-server，或者送進重試門。", tag: '執行', navTitle: "統一入口：一條命令按特徵分叉" },
           ],
         },
         {
@@ -1599,11 +1599,11 @@ window.COURSE = {
           title: '沙箱',
           desc: '命令跑起來之前，攔在哪幾道關',
           lessons: [
-            { file: 'codex-13.html', title: '沙箱管理器：把權限檔案編譯成一行命令', desc: '工作區可寫，網路收緊。同一條 git status，Mac 套上 sandbox-exec，Linux 套上 helper，Windows 可能原樣出門。差別出在編譯器。', tag: '沙箱', navTitle: '沙箱管理器' },
-            { file: 'codex-14.html', title: 'macOS：把安全策略拼成一個字串', desc: 'Seatbelt 吃的是一段文字。文字由靜態基線加現拼的讀寫網段組成。路徑不進這段文字，走旁邊的參數列。', tag: '沙箱', navTitle: 'macOS Seatbelt' },
-            { file: 'codex-15.html', title: 'Linux：先建檢視，再上 seccomp，最後 exec', desc: '同一條讀取，Mac 上回 Operation not permitted，Linux 上回 No such file or directory。差別在於 Linux 先換程序能看見的檔案樹，再收緊它能呼叫的系統介面。', tag: '沙箱', navTitle: 'Linux 沙箱' },
-            { file: 'codex-16.html', title: 'Windows：受限令牌、防火牆過濾器與兩個專用系統使用者', desc: '沒有 seatbelt 和 bubblewrap 的平臺怎麼疊出沙箱，以及 AppContainer 為什麼被否掉', tag: '沙箱', navTitle: 'Windows 沙箱' },
-            { file: 'codex-17.html', title: 'execpolicy：讓策略檔案自帶測試用例', desc: '正反例寫進規則本身，載入期就跑一遍；字首精確匹配，多規則取最嚴', tag: '策略', navTitle: 'execpolicy' },
+            { file: 'codex-13.html', title: "沙箱管理器：把權限檔案編譯成一行命令", desc: "工作區可寫，網路收緊。同一條 git status，Mac 套上 sandbox-exec，Linux 套上 helper，Windows 可能原樣出門。差別出在編譯器。", tag: '沙箱', navTitle: "沙箱管理器：把權限檔案編譯成一行命令" },
+            { file: 'codex-14.html', title: "macOS：把安全策略拼成一個字串", desc: "Seatbelt 吃的是一段文字。文字由靜態基線加現拼的讀寫網段組成。路徑不進這段文字，走旁邊的參數列。", tag: '沙箱', navTitle: "macOS：把安全策略拼成一個字串" },
+            { file: 'codex-15.html', title: "Linux：先建視圖，再上 seccomp，最後 exec", desc: "同一條讀取，Mac 上回 Operation not permitted，Linux 上回 No such file or directory。差別在於 Linux 先換行程能看見的檔案樹，再收緊它能呼叫的系統介面。", tag: '沙箱', navTitle: "Linux：先建視圖，再上 seccomp，最後 exec" },
+            { file: 'codex-16.html', title: "Windows：受限令牌、防火牆過濾器與兩個專用系統使用者", desc: "沒有 seatbelt，也沒有 bubblewrap。Windows 上的沙箱是三道關卡疊起來的：令牌管寫，專用帳戶管你是誰，WFP 按這個身份濾網。AppContainer 對不上這份權限模型，整套還預設關著。", tag: '沙箱', navTitle: "Windows：受限令牌、防火牆過濾器與兩個專用系統使用者" },
+            { file: 'codex-17.html', title: "execpolicy：讓策略檔案自帶測試用例", desc: "白名單寫錯，通常要等線上才知道。Codex 把正反例寫進規則本身，載入時就地跑一遍。規則和例子打架，這份策略進不了會話。", tag: '策略', navTitle: "execpolicy：讓策略檔案自帶測試用例" },
           ],
         },
         {
@@ -1611,9 +1611,9 @@ window.COURSE = {
           title: '審批與網路',
           desc: '攔不住的交給人，或者交給另一個模型',
           lessons: [
-            { file: 'codex-18.html', title: '審批策略：同一條命令，問不問看哪兩顆旋鈕', desc: '預設問不問跟沙箱種類綁在一起。問過一次之後，記住的是完整命令，還是一段字首。', tag: '審批', navTitle: '審批策略' },
-            { file: 'codex-19.html', title: 'Guardian：讓一個模型去審批另一個模型', desc: '四步法、失敗關閘、超時與拒絕分帳，以及按 turn 計數的熔斷器', tag: '審批', navTitle: 'Guardian' },
-            { file: 'codex-20.html', title: '網路與憑證代理：模型看不見的那把鑰匙', desc: '出站要過幾道門。真 token 不進子程序。模型看見的是假值和一句 403。', tag: '網路', navTitle: '網路與憑證代理' },
+            { file: 'codex-18.html', title: "審批策略：同一條命令，問不問看哪兩顆旋鈕", desc: "預設問不問跟沙箱種類綁在一起。問過一次之後，記住的是完整命令，還是一段前綴。", tag: '審批', navTitle: "審批策略：同一條命令，問不問看哪兩顆旋鈕" },
+            { file: 'codex-19.html', title: "Guardian：讓一個模型去審批另一個模型", desc: "審批彈窗多到人開始無腦點同意時，Codex 把決定權交給一次鎖死的審查會話。超時、壞 JSON、連續拒絕，各有各的收場。", tag: '審批', navTitle: "Guardian：讓一個模型去審批另一個模型" },
+            { file: 'codex-20.html', title: "網路與憑證代理：模型看不見的那把鑰匙", desc: "出站要過幾道門。真 token 不進子行程。模型看見的是假值和一句 403。", tag: '網路', navTitle: "網路與憑證代理：模型看不見的那把鑰匙" },
           ],
         },
         {
@@ -1621,9 +1621,9 @@ window.COURSE = {
           title: '給模型設計的介面',
           desc: '讓模型好用的格式，和跑不完時的收場',
           lessons: [
-            { file: 'codex-21.html', title: 'apply-patch，給模型設計一種 diff', desc: '一份沒有行號的補丁語言：定位靠上下文錨點，應用靠四級匹配，單檔案對不上就不寫盤', tag: '工具', navTitle: 'apply-patch' },
-            { file: 'codex-22.html', title: 'exec 與 wait：跑不完的程式怎麼收場', desc: '能力做減法的 V8 isolate，以及跑不完就讓出 cell、用 wait 續跑的長任務協議', tag: '程式碼模式', navTitle: 'exec 與 wait' },
-            { file: 'codex-23.html', title: '宿主拆分：程式掛在誰身上', desc: '上一課講 exec 和 wait 的語義。這一課問另一件事：這段 JavaScript 到底掛在誰身上，掛點換了之後，故障域和狀態歸屬怎麼變。', tag: '程式碼模式', navTitle: 'Code Mode 宿主' },
+            { file: 'codex-21.html', title: "apply-patch，給模型設計一種 diff", desc: "模型填一份沒有行號的補丁，人看的是事後算出來的 unified diff。同一處修改，兩套格式各自會在哪一步翻車。", tag: '工具', navTitle: "apply-patch，給模型設計一種 diff" },
+            { file: 'codex-22.html', title: "exec 與 wait：跑不完的程式怎麼收場", desc: "與其讓模型發二十次工具呼叫，不如讓它寫一段 JavaScript。這段程式在哪跑、能幹什麼、十秒跑不完又怎麼辦，本課講這三個問題背後的兩個思路。", tag: '程式碼模式', navTitle: "exec 與 wait：跑不完的程式怎麼收場" },
+            { file: 'codex-23.html', title: "宿主拆分：程式掛在誰身上", desc: "上一課講 exec 和 wait 的語義。這一課問另一件事：這段 JavaScript 到底掛在誰身上，掛點換了之後，故障域和狀態歸屬怎麼變。", tag: '程式碼模式', navTitle: "宿主拆分：程式掛在誰身上" },
           ],
         },
         {
@@ -1631,10 +1631,10 @@ window.COURSE = {
           title: '擴充套件',
           desc: '把別人的能力接進來，把自己的能力派出去',
           lessons: [
-            { file: 'codex-24.html', title: '多 Agent 是一張要持久化的圖', desc: '派出去的是節點，邊一出生就是 Open。信先入隊，followup 才叫醒。關掉的是邊，歷史還在。', tag: '多 Agent', navTitle: '多 Agent 圖' },
-            { file: 'codex-25.html', title: '掛鉤點能改什麼，由事件合同決定', desc: '一次 turn 會經過十一個掛鉤。協議認四種處理器，執行表只裝命令和 MCP。超時預設放行，拆卸期丟掉 stdout。', tag: '擴充套件', navTitle: 'Hooks' },
-            { file: 'codex-26.html', title: 'MCP 接進來：模型看見翻譯過的名字', desc: '外部 server 的工具要先過一層翻譯才進模型眼睛。skill 目錄常在，缺 MCP 時另問人。', tag: '擴充套件', navTitle: 'MCP 與 Skills' },
-            { file: 'codex-27.html', title: '搬家只搬對得上的欄位', desc: '換到 Codex 的第一週，最怕去年攢的 hook、MCP 和外掛還在不在。檢測會列出一份清單。匯入只收下能對映的那一部分。', tag: '擴充套件', navTitle: '外掛遷移' },
+            { file: 'codex-24.html', title: "多 Agent 是一張要持久化的圖", desc: "派出去的是節點，邊一出生就是 Open。信先入隊，followup 才叫醒。關掉的是邊，歷史還在。", tag: '多 Agent', navTitle: "多 Agent 是一張要持久化的圖" },
+            { file: 'codex-25.html', title: "掛鉤點能改什麼，由事件合同決定", desc: "一次 turn 會經過十一個掛鉤。協議認四種處理器，執行表只裝命令和 MCP。超時預設放行，拆卸期丟掉 stdout。", tag: '擴充套件', navTitle: "掛鉤點能改什麼，由事件合同決定" },
+            { file: 'codex-26.html', title: "MCP 接進來：模型看見翻譯過的名字", desc: "外部 server 的工具要先過一層翻譯才進模型眼睛。skill 目錄常在，缺 MCP 時另問人。", tag: '擴充套件', navTitle: "MCP 接進來：模型看見翻譯過的名字" },
+            { file: 'codex-27.html', title: "搬家只搬對得上的欄位", desc: "換到 Codex 的第一週，最怕去年攢的 hook、MCP 和外掛還在不在。檢測會列出一份清單。匯入只收下能對應的那一部分。", tag: '擴充套件', navTitle: "搬家只搬對得上的欄位" },
           ],
         },
         {
@@ -1642,9 +1642,9 @@ window.COURSE = {
           title: '協議與介面',
           desc: '核心和外殼之間說什麼話，終端上怎麼顯示',
           lessons: [
-            { file: 'codex-28.html', title: 'SQ 進、EQ 出：同一件事兩副面孔', desc: '命令走程序內的 Submission Queue。事件走能寫成 JSON 的 Event Queue。Rust 名叫 TurnStarted，磁碟上仍寫 task_started。', tag: '協議', navTitle: 'SQ/EQ 事件語言' },
-            { file: 'codex-29.html', title: '對外協議是投影', desc: 'IDE 看見的是 Thread / Turn / Item，不是核心 EventMsg。一次 turn/start 先回響應，再推事件流；審批是反向請求，不回包這一輪就停住。', tag: '協議', navTitle: 'app-server 協議' },
-            { file: 'codex-30.html', title: '流式輸出怎麼在終端兩區之間定稿', desc: '模型按 token 往外推，終端卻是一個寫出去就改不了的字元網格。已經不會變的行交給 scrollback，還可能變的尾巴留在活動 cell，表格沒閉合之前整段扣住。', tag: '介面', navTitle: 'TUI 流式渲染' },
+            { file: 'codex-28.html', title: "SQ 進、EQ 出：同一件事兩副面孔", desc: "命令走行程內的 Submission Queue。事件走能寫成 JSON 的 Event Queue。Rust 名叫 TurnStarted，磁碟上仍寫 task_started。", tag: '協議', navTitle: "SQ 進、EQ 出：同一件事兩副面孔" },
+            { file: 'codex-29.html', title: "對外協議是投影", desc: "IDE 看見的是 Thread / Turn / Item，不是核心 EventMsg。一次 turn/start 先回響應，再推事件流；審批是反向請求，不回包這一輪就停住。", tag: '協議', navTitle: "對外協議是投影" },
+            { file: 'codex-30.html', title: "流式輸出怎麼在終端兩區之間定稿", desc: "模型按 token 往外推，終端卻是一個寫出去就改不了的字元網格。已經不會變的行交給 scrollback，還可能變的尾巴留在活動 cell，表格沒閉合之前整段扣住。", tag: '介面', navTitle: "流式輸出怎麼在終端兩區之間定稿" },
           ],
         },
         {
@@ -1652,8 +1652,8 @@ window.COURSE = {
           title: '收束',
           desc: '把架構寫成檢查項，再回看兩套安全觀',
           lessons: [
-            { file: 'codex-31.html', title: '把架構決策寫成 lint', desc: '同一份 AGENTS.md 裡，有命令的規則會在三臺作業系統上亮紅。只有路徑的那條，重新命名之後沒人發現。', tag: '工程', navTitle: '架構即 lint' },
-            { file: 'codex-32.html', title: '兩種安全視角：同一條命令，兩套判詞', desc: '出事之前有沒有門可以拒絕，出事之後能不能復原模型當時看見的世界。同一條危險命令上，這兩套視角會一致，也會給出相反結論。', tag: '安全', navTitle: '兩種安全視角' },
+            { file: 'codex-31.html', title: "把架構決策寫成 lint", desc: "同一份 AGENTS.md 裡，有命令的規則會在三臺作業系統上亮紅。只有路徑的那條，重新命名之後沒人發現。", tag: '工程', navTitle: "把架構決策寫成 lint" },
+            { file: 'codex-32.html', title: "兩種安全視角：同一條命令，兩套判詞", desc: "出事之前有沒有門可以拒絕，出事之後能不能復原模型當時看見的世界。同一條危險命令上，這兩套視角會一致，也會給出相反結論。", tag: '安全', navTitle: "兩種安全視角：同一條命令，兩套判詞" },
           ],
         },
       ],
@@ -1673,9 +1673,9 @@ window.COURSE = {
           title: '開源到底開的是什麼',
           desc: '權重、許可證與各家的商業算盤',
           lessons: [
-            { file: 'oss-1.html', title: '權重是什麼？一個模型的全部本事', desc: '訓練幾個月最後凝結成的那個檔案：它長什麼樣、多大、為什麼說擁有權重就是擁有控制權', tag: '概念' , navTitle: '權重是什麼'},
-            { file: 'oss-2.html', title: '真開源 vs 假開源：怎麼看懂一張許可證', desc: '三個問題定位開放程度；用同一套尺子橫量 Qwen、Mistral、DeepSeek、Llama 與只給 API 的模型', tag: '選型' , navTitle: '真開源 vs 假開源'},
-            { file: 'oss-3.html', title: '開源是一門生意：各家在圖什麼', desc: '六家廠商的開源策略與變現路徑；衍生模型數量為什麼比下載量更能說明問題', tag: '案例' , navTitle: '開源是一門生意'},
+            { file: 'oss-1.html', title: "權重是什麼？一個模型的全部本事", desc: "新聞裡天天說「某某模型開源了」。開源的到底是什麼？是程式碼嗎？其實主要是一個檔案：權重。搞清楚它是什麼，後面所有關於開源的爭論你都能自己判斷。", tag: '概念' , navTitle: "權重是什麼？一個模型的全部本事"},
+            { file: 'oss-2.html', title: "真開源 vs 假開源：怎麼看懂一張許可證", desc: "幾乎每家都說自己「開源」，但這個詞在各家嘴裡的含義差得很遠。有的能隨便商用，有的使用者量一大就要另外簽合同，有的只是發了篇論文。學會自己判斷，比記住誰家開源更有用。", tag: '選型' , navTitle: "真開源 vs 假開源：怎麼看懂一張許可證"},
+            { file: 'oss-3.html', title: "開源是一門生意：各家在圖什麼", desc: "訓練一個旗艦模型要燒掉鉅額算力，權重一旦放出去就收不回來。既然如此，為什麼還有這麼多公司選擇開源？答案跟慈善無關。看懂各家的算盤，你的選型判斷會穩很多。", tag: '案例' , navTitle: "開源是一門生意：各家在圖什麼"},
           ],
         },
         {
@@ -1683,10 +1683,10 @@ window.COURSE = {
           title: '大模型如何變小',
           desc: '湧現、蒸餾，以及必須付出的代價',
           lessons: [
-            { file: 'oss-4.html', title: '湧現：能力為什麼會突然出現', desc: '跨過某個規模閾值後能力階躍式跳升；以及這個現象在學術上尚存的爭議', tag: '概念' , navTitle: '湧現'},
-            { file: 'oss-5.html', title: '為什麼要把模型做小', desc: '成本、速度、私有化三個現實動機，和小模型做不到的那些事', tag: '方法論' },
-            { file: 'oss-6.html', title: '蒸餾是怎麼做的：從老師到學生', desc: '五步流程、軟標籤與溫度係數；用 DeepSeek-R1 同批開源的六個蒸餾模型做樣本', tag: '案例' , navTitle: '蒸餾是怎麼做的'},
-            { file: 'oss-7.html', title: '蒸餾的代價：模型正在變得越來越像', desc: '口癖、格式怪癖與身份混淆的整批繼承；為什麼多模型交叉驗證可能是假的', tag: '深入' , navTitle: '蒸餾的代價'},
+            { file: 'oss-4.html', title: "湧現：能力為什麼會突然出現", desc: "模型越大越強，這句話聽起來很自然。真實情況要複雜一點。有些能力在模型小的時候接近零分，參數量跨過某個量級之後，短時間內就有了。這個現象叫湧現，它也是後面幾節所有矛盾的起點。", tag: '概念' , navTitle: "湧現：能力為什麼會突然出現"},
+            { file: 'oss-5.html', title: "為什麼要把模型做小：蒸餾的動機", desc: "上一節剛講完，模型越大，能力越容易湧現。那為什麼整個行業還在拼命把模型做小？因為能力不是唯一的約束條件。成本、延遲、資料能不能出門，這三件事會在真實專案裡直接把旗艦模型擋在門外。", tag: '方法論' },
+            { file: 'oss-6.html', title: "蒸餾是怎麼做的：從老師到學生", desc: "上一節講了為什麼要把模型做小。這一節看具體怎麼做。整個過程比想像中樸素：讓老師去答題，把答題過程記下來，拿這批材料去訓練學生。難點不在流程，在細節。", tag: '案例' , navTitle: "蒸餾是怎麼做的：從老師到學生"},
+            { file: 'oss-7.html', title: "蒸餾的代價：模型正在變得越來越像", desc: "上一節說蒸餾是讓學生學老師。問題在於，學生學到的是老師的全部：本事、口癖、偏見、甚至對自己身份的認知。當整個行業都在向少數幾個老師學習，結果就是大家越來越像。", tag: '深入' , navTitle: "蒸餾的代價：模型正在變得越來越像"},
           ],
         },
         {
@@ -1694,8 +1694,8 @@ window.COURSE = {
           title: '在自己的機器上跑起來',
           desc: '算清楚，再裝上',
           lessons: [
-            { file: 'oss-8.html', title: '你的電腦能跑多大的模型', desc: '選顯示卡或 Mac 型號即時出結論；顯存換算公式、量化檔位與 MoE 的顯存速度錯位', tag: '互動' },
-            { file: 'oss-9.html', title: 'Ollama 與 LM Studio 怎麼上手', desc: '從安裝到跑通的完整命令、模型標籤的讀法、量化檔位怎麼選，以及三個最常見的坑', tag: '實戰' , navTitle: 'Ollama 與 LM Studio'},
+            { file: 'oss-8.html', title: "你的電腦能跑多大的模型", desc: "前面講的都是概念，這一節動手。選一下你的顯示卡或者 Mac 型號，直接看結論。看完你會發現，本地跑模型的門檻比大多數人想的低。", tag: '互動' },
+            { file: 'oss-9.html', title: "Ollama 與 LM Studio 怎麼上手", desc: "上一節算出了你能跑什麼，這一節把它裝起來。兩個工具，一個命令列一個圖形介面，第一次用十分鐘能跑通。", tag: '實戰' , navTitle: "Ollama 與 LM Studio 怎麼上手"},
           ],
         },
       ],
@@ -1704,7 +1704,7 @@ window.COURSE = {
       id: 'p-exam',
       num: '自測中心',
       title: '七套篇章自測 · 350 道題',
-      desc: '六個正課篇章各配一套 50 道題的卷子，Grok Build 專題另有一套，全部依據對應內容編寫。模擬考試從題庫隨機抽 25 題、選項打亂，刷兩遍也不重樣；順序刷題則逐題即時判定並展開解析。全部學完還有一份全站綜合考，從 350 題裡按卷均攤抽 35 題，專治跨章節的概念混淆。答錯的考點會記進個人中心的薄弱點，直接給出補課連結。',
+      desc: "按篇章進行練習、自測和綜合複習。成績保存在目前瀏覽器，尚未接入公司帳號、個人中心或雲端弱點分析。",
       color: '#7c3aed',
       group: 'extra',
       routes: ['pm', 'build'],
@@ -1715,7 +1715,7 @@ window.COURSE = {
           title: '怎麼用這七套卷',
           desc: '兩種模式的區別與使用建議',
           lessons: [
-            { file: 'exam.html', title: '自測中心 · 七套篇章自測', desc: '模擬考試與順序刷題的差別、七套卷子的考點分佈、成績與薄弱點是怎麼記錄的', tag: '互動' , navTitle: '自測中心'},
+            { file: 'exam.html', title: "七套篇章自測 · 350 道題", desc: "六個正課篇章各一套卷子，Grok Build 專題另有一套，每套 50 道題，全部依據對應內容編寫。學完一章就來考一次，比反覆重讀有用得多。全部考完了，最後還有一份跨全站的綜合考。", tag: '互動' , navTitle: "七套篇章自測 · 350 道題"},
           ],
         },
         {
@@ -1723,8 +1723,8 @@ window.COURSE = {
           title: '基礎與 Harness',
           desc: '第一、二篇章的自測卷',
           lessons: [
-            { file: 'exam-1.html', title: '大模型基礎 · 篇章自測', desc: '50 題：訓練三階段 / Token 與分詞 / 參數凍結 / Temperature / 幻覺四型 / RAG 與四種緩解策略', tag: '互動' , navTitle: '大模型原理篇自測 · 50 題'},
-            { file: 'exam-2.html', title: 'AI Harness · 篇章自測', desc: '50 題：上下文溢位 / Prompt 工程 / 注入攻防 / 工具呼叫與 MCP / KV Cache 與成本優化', tag: '互動' , navTitle: 'Harness 核心篇自測 · 50 題'},
+            { file: 'exam-1.html', title: "大模型基礎 · 篇章自測", desc: "學完大模型原理篇來驗證一下。50 題全部出自本章課程：訓練三階段、Token 與上下文、幻覺的四種類型、四種緩解策略的選擇。", tag: '互動' , navTitle: "大模型基礎 · 篇章自測"},
+            { file: 'exam-2.html', title: "AI Harness · 篇章自測", desc: "學完Harness 核心篇來驗證一下。50 題全部出自本章課程：上下文視窗、Prompt 工程、注入防禦、工具呼叫、KV Cache 與成本優化。", tag: '互動' , navTitle: "AI Harness · 篇章自測"},
           ],
         },
         {
@@ -1732,8 +1732,8 @@ window.COURSE = {
           title: '實戰與工程設計',
           desc: '第三、四篇章的自測卷',
           lessons: [
-            { file: 'exam-3.html', title: '實戰 · 從 Demo 到產品 · 篇章自測', desc: '50 題：生圖產品化 / Agent 卡死與防呆 / 上下文壓縮 / 長期記憶 / 多 Agent / MCP 生態', tag: '互動' , navTitle: '動手實戰篇自測 · 50 題'},
-            { file: 'exam-4.html', title: 'AI 工程設計模式 · 篇章自測', desc: '50 題：Workflow vs Agent / 上下文三板斧 / ACI 工具設計 / 評測與 Grader / 沙箱隔離', tag: '互動' , navTitle: '工程進階篇自測 · 50 題'},
+            { file: 'exam-3.html', title: "實戰 · 從 Demo 到產品 · 篇章自測", desc: "學完動手實戰篇來驗證一下。50 題全部出自本章課程：生圖產品化、Agent 卡死與防呆、上下文壓縮、長期記憶、多 Agent 與 MCP。", tag: '互動' , navTitle: "實戰 · 從 Demo 到產品 · 篇章自測"},
+            { file: 'exam-4.html', title: "AI 工程設計模式 · 篇章自測", desc: "學完工程進階篇來驗證一下。50 題全部出自本章課程：Workflow vs Agent、上下文工程、ACI 工具設計、評測方法論、沙箱與憑證隔離。", tag: '互動' , navTitle: "AI 工程設計模式 · 篇章自測"},
           ],
         },
         {
@@ -1741,9 +1741,9 @@ window.COURSE = {
           title: '前沿、方法論與原始碼專題',
           desc: '第五、協作方法論篇與 Grok 專題的自測卷',
           lessons: [
-            { file: 'exam-5.html', title: 'Harness 與自我改進 · 篇章自測', desc: '50 題：Harness 三大模式 / 上下文自動進化 / 工作流搜尋 / 遞迴自我改進與七道關', tag: '互動' , navTitle: '自我改進篇自測 · 50 題'},
-            { file: 'exam-7.html', title: 'Vibe Coding 方法論 · 篇章自測', desc: '50 題：流程控制與人工斷點 / 品質底線 / 拒絕分期 / 文件沉澱 / 破壞性操作三道閘', tag: '互動' , navTitle: '協作方法論篇自測 · 50 題'},
-            { file: 'exam-6.html', title: 'Grok Build 專題 · 篇章自測', desc: '50 題：執行時迴圈 / Compaction / 工具審批 / 雙路記憶檢索 / 五種沙箱 / MCP 整合', tag: '互動' , navTitle: 'Grok 專題自測 · 50 題'},
+            { file: 'exam-5.html', title: "Harness 與自我改進 · 篇章自測", desc: "學完自我改進篇來驗證一下。50 題全部出自本章課程：Harness 設計模式、上下文自動進化、遞迴自我改進的機制與七道關。", tag: '互動' , navTitle: "Harness 與自我改進 · 篇章自測"},
+            { file: 'exam-7.html', title: "Vibe Coding 方法論 · 篇章自測", desc: "學完第七篇章來驗證一下。50 題全部出自本章課程：流程控制、品質底線、拒絕分期、文件沉澱、環境與安全閘門。", tag: '互動' , navTitle: "Vibe Coding 方法論 · 篇章自測"},
+            { file: 'exam-6.html', title: "解剖 Grok Build · 篇章自測", desc: "學完協作方法論篇來驗證一下。50 題全部出自本章課程：執行時迴圈、Compaction、工具系統、記憶檢索、沙箱安全與 MCP 整合。", tag: '互動' , navTitle: "解剖 Grok Build · 篇章自測"},
           ],
         },
         {
@@ -1751,7 +1751,7 @@ window.COURSE = {
           title: '學完整門課再來',
           desc: '跨全站的綜合驗收',
           lessons: [
-            { file: 'exam-all.html', title: '全站綜合考 · 七卷抽 35 題', desc: '從 350 題裡每卷均攤抽 5 題，專考跨章節容易串的概念：壓縮與記憶的邊界 / Workflow 與 Agent 選型 / Harness 與提示詞工程的關係', tag: '互動' , navTitle: '全站綜合考 · 35 題'},
+            { file: 'exam-all.html', title: "全站綜合考 · 七章抽 35 題", desc: "篇章卷檢驗單章掌握，這份卷子檢驗的是另一件事：跨章節的概念會不會混。上下文壓縮和長期記憶的邊界在哪、Workflow 和 Agent 該怎麼選、Harness 和提示詞工程是什麼關係，這些只有把七章放在一起考才暴露得出來。學完整門課再來。", tag: '互動' , navTitle: "全站綜合考 · 七章抽 35 題"},
           ],
         },
       ],
@@ -1772,8 +1772,8 @@ window.COURSE = {
           title: '確權的地基',
           desc: '給每樣資產配對的那把鎖',
           lessons: [
-            { file: 'opc-1.html', title: '六種武器：給每樣資產配對的鎖', desc: '商標鎖名字、軟著鎖程式碼、專利鎖技術方案、商業秘密鎖訣竅、著作權鎖內容、域名鎖入口', tag: '開篇' , navTitle: '六種武器'},
-            { file: 'opc-2.html', title: '確權要趁早：做早了是投入，做晚了是損失', desc: '兩條時間線對照：同一件事早做幾百塊、晚做幾十萬，還有些損失根本補不回來', tag: '互動' , navTitle: '確權要趁早'},
+            { file: 'opc-1.html', title: "六種武器：給每樣資產配對的鎖", desc: "你寫的程式碼、起的名字、想出來的演算法、發出去的文章，在法律上是完全不同的東西，各有各的鎖。拿錯鎖等於沒鎖。這一節把六種武器一次認全，後面每一節都會回來用它。", tag: '開篇' , navTitle: "六種武器：給每樣資產配對的鎖"},
+            { file: 'opc-2.html', title: "確權要趁早：做早了是投入，做晚了是損失", desc: "上一節認全了六種武器，這一節講什麼時候動手。答案很短：越早越好。因為確權這件事有個殘酷的特點，同一個動作，早做是幾百塊的投入，晚做是幾萬塊加一兩年時間的損失。", tag: '互動' , navTitle: "確權要趁早：做早了是投入，做晚了是損失"},
           ],
         },
         {
@@ -1782,9 +1782,9 @@ window.COURSE = {
           title: '商標與域名',
           desc: '品牌的戶籍和入口',
           lessons: [
-            { file: 'opc-3.html', title: '商標一個不夠：35、42、41 一起拿', desc: '35 類是商業變現的許可證，42 類管軟體平臺，41 類管課程內容；附類別清單生成器', tag: '互動' , navTitle: '商標類別'},
-            { file: 'opc-4.html', title: '被駁回之後：把擋路的商標拿掉', desc: '真實案例覆盤：駁回、撤三、複審三步怎麼走，舉證責任在誰身上，十五日複審期限', tag: '案例' , navTitle: '商標被駁回'},
-            { file: 'opc-5.html', title: '域名全拿下：十萬的報價怎麼談到五千', desc: '真實議價過程覆盤：手上握著多少字尾，談判桌上就有多少籌碼', tag: '案例' , navTitle: '域名議價'},
+            { file: 'opc-3.html', title: "商標一個不夠：35、42、41 一起拿", desc: "商標按商品和服務分成 45 個類別，註冊哪一類就只在那一類受保護。很多人註冊了一個類就覺得萬事大吉，結果推廣的時候發現推廣本身屬於另一個類。這一節講清做網際網路產品最要緊的幾個類，以及圖樣一致性這個隱形的坑。", tag: '互動' , navTitle: "商標一個不夠：35、42、41 一起拿"},
+            { file: 'opc-4.html', title: "被駁回之後：把擋路的商標拿掉", desc: "「方片數智」第一次提交就被駁回了。擋路的是一個 2015 年就註冊、卻早已沒在使用的在先商標。這一節把從駁回、撤三到複審的完整鏈路拆開講清楚，這條路是我們自己走完的一遍。", tag: '案例' , navTitle: "被駁回之後：把擋路的商標拿掉"},
+            { file: 'opc-5.html', title: "域名全拿下：十萬的報價怎麼談到五千", desc: "miyang.cn 這個域名，曾經在交易平臺上被掛到 102,222 元一口價。最後我們用五千塊拿下。中間沒有什麼談判魔法，只有一件提前三年做完的事：把這個品牌能用的字尾，幾乎全註冊在了自己手裡。", tag: '案例' , navTitle: "域名全拿下：十萬的報價怎麼談到五千"},
           ],
         },
         {
@@ -1793,8 +1793,8 @@ window.COURSE = {
           title: '程式碼、內容與技術',
           desc: '版權自動產生，證據要自己掙',
           lessons: [
-            { file: 'opc-6.html', title: '軟著與備案：版權自動產生，證據要自己掙', desc: '軟著登記、著作權備案、可信時間戳的分工；外包開發的著作權歸屬陷阱', tag: '互動' , navTitle: '軟著與備案'},
-            { file: 'opc-7.html', title: '專利還是商業秘密：先申請，後公開', desc: '公開換獨佔還是保密換無限期；新穎性一旦丟失不可逆，順序錯了沒有補救', tag: '互動' , navTitle: '專利或商業秘密'},
+            { file: 'opc-6.html', title: "軟著與備案：版權自動產生，證據要自己掙", desc: "著作權在創作完成那一刻就自動產生了，不用註冊。聽起來很省心，直到你被抄襲、要打官司的那天才發現：權利是自動的，證據不是。這一節講軟著登記和著作權備案這兩件「花小錢買證據」的事，順帶拆一個外包開發的大坑。", tag: '互動' , navTitle: "軟著與備案：版權自動產生，證據要自己掙"},
+            { file: 'opc-7.html', title: "專利還是商業秘密：先申請，後公開", desc: "手裡有真技術的人要做一道選擇題：申請專利，還是當商業秘密捂著。兩條路的邏輯完全相反，選錯了代價很大。更要命的是順序問題：產品發表在專利申請之前，這個專利就永遠申請不成了。", tag: '互動' , navTitle: "專利還是商業秘密：先申請，後公開"},
           ],
         },
         {
@@ -1803,8 +1803,8 @@ window.COURSE = {
           title: '主體與上線合規',
           desc: '備案、許可、註冊資本',
           lessons: [
-            { file: 'opc-8.html', title: 'ICP 備案是地基，ICP 證是收費執照', desc: '備案管能不能開門，ICP 證管能不能收錢：註冊資本 100 萬加第二類增值電信業務', tag: '互動' , navTitle: 'ICP 備案與證'},
-            { file: 'opc-9.html', title: '註冊資本別亂寫：五年內要真金白銀繳足', desc: '新公司法五年實繳；一人公司要能證明公司財產獨立於自己的財產，證明不了就連帶', tag: '互動' , navTitle: '註冊資本'},
+            { file: 'opc-8.html', title: "ICP 備案是地基，ICP 證是收費執照", desc: "很多人把「ICP 備案」和「ICP 證」當成一回事，其實是兩件事，差著一百萬註冊資本的距離。備案是網站能在國內被連線的前提，人人要辦；ICP 證是合法向使用者收費的執照，門檻高得多。這一節把兩個都講清，重點是註冊公司那天就要做對的一個決定。", tag: '互動' , navTitle: "ICP 備案是地基，ICP 證是收費執照"},
+            { file: 'opc-9.html', title: "註冊資本別亂寫：五年內要真金白銀繳足", desc: "認繳制時代流行把註冊資本寫得很威風，反正不用馬上掏錢。這個玩法 2024 年 7 月起結束了：新公司法要求認繳的錢五年內繳足。這一節講註冊資本怎麼定，順帶拆一人公司最容易炸的兩個雷：公私帳混同，和貪省事用灰產收款。", tag: '互動' , navTitle: "註冊資本別亂寫：五年內要真金白銀繳足"},
           ],
         },
         {
@@ -1813,10 +1813,10 @@ window.COURSE = {
           title: '合夥與股權',
           desc: '互補、控制權、代持與退出',
           lessons: [
-            { file: 'opc-10.html', title: '合夥人要互補：能力重疊的兩個人別合夥', desc: '互補排在志同道合前面；做不到極致互信寧可不合夥；先用專案跑一段試婚期', tag: '互動' , navTitle: '合夥人'},
-            { file: 'opc-11.html', title: '三個人各 1/3 是最貴的公平', desc: '過半數與三分之二兩條表決線；股權結構模擬器算給你看，核心創始人為什麼要 70%', tag: '互動' , navTitle: '平均分配的陷阱'},
-            { file: 'opc-12.html', title: '股權別靠感覺分：五個維度算一遍', desc: '綜合能力、出資額、機會成本、idea 來源、責任擔當；最容易漏掉的兩項佔四成', tag: '互動' , navTitle: '股權五維度'},
-            { file: 'opc-13.html', title: '先簽代持協議，成熟了再動工商登記', desc: '離職不簽字為什麼能鎖死公司；代持協議的效力與邊界、分期成熟、退出與回購', tag: '互動' , navTitle: '代持與退出'},
+            { file: 'opc-10.html', title: "合夥人要互補：能力重疊的兩個人別合夥", desc: "一個人跑到某個點，總會撞上自己補不上的短板，這時候才談合夥人。挑人的第一標準是能力互補，志同道合排在後面。這一節講兩條原則，和一個能省掉很多痛苦的「試婚期」做法。", tag: '互動' , navTitle: "合夥人要互補：能力重疊的兩個人別合夥"},
+            { file: 'opc-11.html', title: "三個人各 1/3 是最貴的公平", desc: "三個人一起幹，股權一人三分之一，誰也不吃虧，談的時候大家都很舒服。這個結構的代價在半年後才出現：公司做不了決定。這一節用表決權門檻算一遍，再講核心創始人為什麼要拿到 70% 以上。", tag: '互動' , navTitle: "三個人各 1/3 是最貴的公平"},
+            { file: 'opc-12.html', title: "股權別靠感覺分：五個維度算一遍", desc: "上一節講了結構，這一節講比例怎麼來。憑感覺談出來的數字，雙方過後都會覺得自己吃虧。把貢獻拆成五個維度，各給一個權重，算完再談，討論的對象就從「誰更重要」變成「這個維度算誰的」。", tag: '互動' , navTitle: "股權別靠感覺分：五個維度算一遍"},
+            { file: 'opc-13.html', title: "先簽代持協議，成熟了再動工商登記", desc: "比例談完了，接下來是怎麼給。早期最容易犯的錯是結構做得太重：持股平臺、期權池、一堆主體，公司還沒跑起來，架子先搭好了。這一節講三條紀律，重點是那句最貴的經驗，離職的人不簽字，公司會被鎖死。", tag: '互動' , navTitle: "先簽代持協議，成熟了再動工商登記"},
           ],
         },
         {
@@ -1825,9 +1825,9 @@ window.COURSE = {
           title: '戰略與收官',
           desc: '出海、選型和新創業公式',
           lessons: [
-            { file: 'opc-14.html', title: '伺服器放哪不重要，使用者在哪才關鍵', desc: '假出海躲不掉境內義務，法規看的是向誰提供服務；真出海是一個獨立專案', tag: '互動' , navTitle: '真出海與假出海'},
-            { file: 'opc-15.html', title: '大廠看不上的長尾，才是一個人的機會', desc: 'ROI 門檻幫你擋掉了最強的對手；國產模型能力差距已小、價格差距還大，按場景選型', tag: '互動' , navTitle: '長尾與選型'},
-            { file: 'opc-final.html', title: '新創業公式：先找買單的人，再用 AI 做出來', desc: '15 節全景圖、確權合規自查十五條、七字真言與止損，以及本週就做的三件事', tag: '收官' , navTitle: '新創業公式'},
+            { file: 'opc-14.html', title: "伺服器放哪不重要，使用者在哪才關鍵", desc: "很多 AI 產品的所謂出海，就是把伺服器放到新加坡，套一層境外模型的介面，然後照樣給國內使用者用。這套操作在合規上是無效的。這一節先把判斷標準說清，再講真出海到底要做哪些事。", tag: '互動' , navTitle: "伺服器放哪不重要，使用者在哪才關鍵"},
+            { file: 'opc-15.html', title: "大廠看不上的長尾，才是一個人的機會", desc: "大公司立項要過 ROI 門檻，一個市場再真實，規模不夠大就不會有人做。這道門檻幫你擋掉了最強的競爭對手。這一節講國內長尾和海外兩條路怎麼選，再講一件直接影響成本的事：模型怎麼挑。", tag: '互動' , navTitle: "大廠看不上的長尾，才是一個人的機會"},
+            { file: 'opc-final.html', title: "新創業公式：先找買單的人，再用 AI 做出來", desc: "前面十五節講的是不踩坑：商標、軟著、專利、備案、註冊資本、股權。這一節講往哪走。舊的創業公式已經失效，因為它的第一步押的是技術門檻，而技術門檻現在接近於零。收官這節把新公式講清，把十五節攤成一張圖，再給一份能勾的自查清單。", tag: '收官' , navTitle: "新創業公式：先找買單的人，再用 AI 做出來"},
           ],
         },
       ],
@@ -1836,7 +1836,7 @@ window.COURSE = {
       id: 'p-seo',
       num: '課後甜點',
       title: '被搜到：SEO 與 GEO',
-      desc: '產品做出來了、確權了，接下來的問題是有沒有人找得到。這一章講兩件事：SEO 的最低可行清單（能被抓、能被讀懂、能被收錄），以及 GEO 這個新戰場（讓 ChatGPT、Perplexity、Kimi、豆包在回答問題時願意引用你）。全章用方片學堂自己的一次真實改造當案例，不教黑帽，不承諾排名，只給能自己動手核對的清單。本地版可直接學習，進度僅保存在目前瀏覽器。',
+      desc: "透過課程來源專案的公開網站案例學習 SEO 與 GEO，區分搜尋收錄、內容可讀性和來源核驗。案例經歷與流量不屬於方片內部平台；存取範圍以公司安排為準。",
       color: '#4338ca',
       group: 'extra',
       routes: ['use', 'pro', 'pm', 'build'],
@@ -1848,7 +1848,7 @@ window.COURSE = {
           title: '先搞清被發現這件事',
           desc: '做完不等於有人來',
           lessons: [
-            { file: 'seo-1.html', title: '做出來了，為什麼沒人來', desc: '三條流量入口各有各的脾氣：搜尋引擎主動搜、AI 引擎直接問、社交傳播替你說。先玩一遍收錄漏斗，看你的產品卡在哪一層', tag: '開篇' , navTitle: '為什麼沒人來'},
+            { file: 'seo-1.html', title: "做出來了，為什麼沒人來", desc: "前面的課把產品做出來了，OPC 把它確了權。然後是一個更樸素的問題：做完不等於有人來。這一節先把「被發現」這件事拆開：流量從哪三條路來、各自什麼脾氣，再用一個五層漏斗，找到你的產品卡在哪一層。", tag: '開篇' , navTitle: "做出來了，為什麼沒人來"},
           ],
         },
         {
@@ -1857,17 +1857,17 @@ window.COURSE = {
           title: '兩個戰場',
           desc: '搜尋引擎給連結，AI 引擎給答案',
           lessons: [
-            { file: 'seo-2.html', title: 'SEO 最低可行清單：能被抓、能被讀懂、能被收錄', desc: '只講做了就有效的部分：一頁一個主題、title 說人話、正文別全靠 JS 渲染、sitemap 與站長平臺提交。抓取模擬器親手切兩態，看爬蟲到底拿到了什麼', tag: '實戰' , navTitle: 'SEO 最低可行清單'},
-            { file: 'seo-3.html', title: 'GEO：讓 AI 引擎願意引用你', desc: '使用者不再只搜，還在問。自包含段落、FAQ 結構化資料、llms.txt 與新鮮度訊號，四個槓桿各配一個當場能玩的教具，附 AI 爬蟲點名冊', tag: '互動' , navTitle: 'GEO 讓 AI 引用你'},
+            { file: 'seo-2.html', title: "SEO 最低可行清單：能被抓、能被讀懂、能被收錄", desc: "SEO 這個詞被各種「秘籍」講得神神祕祕，其實對一個人的小站來說，值得做的部分很小、很明確：讓爬蟲抓得到、讓引擎讀得懂、讓收錄查得著。這一節只講做了就有效、不做就歸零的部分，每一條都能自己動手核對。", tag: '實戰' , navTitle: "SEO 最低可行清單：能被抓、能被讀懂、能被收錄"},
+            { file: 'seo-3.html', title: "GEO：讓 AI 引擎願意引用你", desc: "越來越多的使用者跳過搜尋框，直接把問題丟給 ChatGPT、Kimi 或豆包。答案由 AI 組織，你的站在不在答案裡，成了新的生死線。這門手藝有個名字：GEO（Generative Engine Optimization）。這一節講它的四個槓桿，每個都配一個當場能玩的教具。", tag: '互動' , navTitle: "GEO：讓 AI 引擎願意引用你"},
           ],
         },
         {
           id: 't-seo-case',
           routes: ['pm', 'build'],
           title: '拆一個真實案例',
-          desc: '用本站的改造記錄當解剖臺',
+          desc: "前兩節的清單和槓桿，這一節全部落在一個真實病人身上：案例站點自己。2026 年 8 月 10 日我們給全站做了一次 SEO / GEO 審計，查出十個缺口，當週修完一輪。這一節挑五個最有代表性的，每個講清怎麼發現的、改了什麼、拿什麼驗收。",
           lessons: [
-            { file: 'seo-4.html', title: '拆本站：Google 收錄 693 頁，Bing 只有 50 頁', desc: '方片學堂 2026 年 8 月真實審計覆盤：sitemap 漏了全部英韓頁、Q&A 頁白扔了 FAQ 引用、日誌把爬蟲全丟棄。每個缺口講清怎麼發現、改了什麼、拿什麼驗收', tag: '案例' , navTitle: '拆本站真實改造'},
+            { file: 'seo-4.html', title: "拆案例站點：Google 收錄 693 頁，Bing 只有 50 頁", desc: "前兩節的清單和槓桿，這一節全部落在一個真實病人身上：案例站點自己。2026 年 8 月 10 日我們給全站做了一次 SEO / GEO 審計，查出十個缺口，當週修完一輪。這一節挑五個最有代表性的，每個講清怎麼發現的、改了什麼、拿什麼驗收。", tag: '案例' , navTitle: "拆案例站點：Google 收錄 693 頁，Bing 只有 50 頁"},
           ],
         },
         {
@@ -1876,8 +1876,8 @@ window.COURSE = {
           title: '優先順序與收官',
           desc: '一個人沒有 SEO 團隊，只有排序能力',
           lessons: [
-            { file: 'seo-5.html', title: '一個人的優先順序：先寫能被搜到的問題', desc: '先寫使用者真的會打出來的那句問題，再堆功能；用真實經歷換可信度。反面清單也在這一節：買外鏈、關鍵詞堆砌、AI 批次灌水頁，哪些是找死', tag: '實戰' , navTitle: '一個人的優先順序'},
-            { file: 'seo-final.html', title: '被搜到驗收清單：上線前再過一遍', desc: '十二項可勾選清單：一頁一主題、正文服務端可見、sitemap、一句話答案塊、FAQ 結構化資料、llms.txt。附「怎麼知道有效」的四個度量口徑', tag: '收官' , navTitle: '被搜到驗收清單'},
+            { file: 'seo-5.html', title: "一個人的優先順序：先寫能被搜到的問題", desc: "技術清單前面三節講完了，全是一次性動作。真正日復一日的仗在內容：寫什麼、先寫什麼。一人公司沒有 SEO 團隊、沒有詞庫工具的預算，你唯一的武器是排序能力：把力氣花在有人搜的問題上，用真實經歷換可信度，離歪路遠一點。", tag: '實戰' , navTitle: "一個人的優先順序：先寫能被搜到的問題"},
+            { file: 'seo-final.html', title: "被搜到驗收清單：上線前再過一遍", desc: "全章收官。前五節的東西全部收進一張 12 項清單，每項都是一個能當場核對的動作：查原始碼、數條目、貼地址、看日誌。勾選進度存在本地，每次上線新產品回來過一遍。清單之後是四個度量口徑，回答那個最重要的問題：怎麼知道這些工夫有沒有白做。", tag: '收官' , navTitle: "被搜到驗收清單：上線前再過一遍"},
           ],
         },
       ],
@@ -1898,8 +1898,8 @@ window.COURSE = {
           title: '創業者的自我修養',
           desc: '決心、勇氣與向死而生的心理建設',
           lessons: [
-            { file: 'lei-1.html', title: '誰適合創業：莫名其妙的自信', desc: '創業不是人乾的事：面對困難的勇氣、描繪藍圖的能力，與金山對抗微軟十六年的信念', tag: '開篇' , navTitle: '誰適合創業'},
-            { file: 'lei-2.html', title: '心理準備：第一天就想好怎麼死', desc: '90% 的創業公司都會死；靜悄悄地幹、早死早超生、只給自己四年。危機感才是護身符', tag: '互動' , navTitle: '心理準備'},
+            { file: 'lei-1.html', title: "誰適合創業：莫名其妙的自信", desc: "什麼樣的人適合創業？雷軍的回答從一句玩笑開始：「創業不是人幹的事情，是阿貓阿狗幹的事情。」這一節講創業者需要的三種能力，以及 1996 年金山陷入絕境時，他靠什麼撐過來。", tag: '開篇' , navTitle: "誰適合創業：莫名其妙的自信"},
+            { file: 'lei-2.html', title: "心理準備：第一天就想好怎麼死", desc: "大多數創業者第一天想的是公司會多成功，雷軍創辦小米的第一天想的是公司會怎麼死。這一節講他 40 歲再創業的動機、對失敗率的清醒認知，以及三條具體的保命策略。", tag: '互動' , navTitle: "心理準備：第一天就想好怎麼死"},
           ],
         },
         {
@@ -1907,8 +1907,8 @@ window.COURSE = {
           title: '方向與起點',
           desc: '喜歡的、能幹的、市場足夠大的',
           lessons: [
-            { file: 'lei-3.html', title: '選方向：Go Big Market', desc: '興趣是第一驅動力，但天花板由市場決定：毒霸與詞霸、多玩與 YY 的兩次教訓', tag: '互動' , navTitle: '選方向'},
-            { file: 'lei-4.html', title: '起名：贏在起跑線', desc: '有商標、有域名、含義不錯、朗朗上口；從大米到小米的取名全過程', tag: '互動' , navTitle: '起名'},
+            { file: 'lei-3.html', title: "選方向：Go Big Market", desc: "「你們幹的事情，都不一定是你們能幹的最大的事情。」這一節是雷軍辦金山最大的後悔和總結：方向怎麼選、天花板怎麼算，以及一句他用得比發明人還多的話：Go Big Market，做最肥的市場。", tag: '互動' , navTitle: "選方向：Go Big Market"},
+            { file: 'lei-4.html', title: "起名：贏在起跑線", desc: "雷軍看到的創業者裡，99.9% 的公司名是隨便起的。而聯想、百度、騰訊、華為，這些成功公司的名字全都很好聽。這不是巧合：「你在名字上花多少時間，就意味著你會花多少時間在它的業務上」。這一節看小米這個名字是怎麼磨出來的。", tag: '互動' , navTitle: "起名：贏在起跑線"},
           ],
         },
         {
@@ -1916,8 +1916,8 @@ window.COURSE = {
           title: '產品與口碑',
           desc: '專注、極致、口碑、快',
           lessons: [
-            { file: 'lei-5.html', title: '網際網路七字訣', desc: '一年只出一款手機的自信、把自己逼瘋的極致，與一夜應戰價格戰的快', tag: '互動' },
-            { file: 'lei-6.html', title: '口碑的本質是超出預期', desc: '金碧輝煌的帆船酒店為什麼輸給海底撈：預期管理，與用心可以被使用者感知', tag: '互動' , navTitle: '口碑的本質'},
+            { file: 'lei-5.html', title: "網際網路七字訣", desc: "「網際網路實際上是一種思想，一種做事的方法。這個方法就是七個字：專注、極致、口碑、快。」雷軍說琢磨透這七個字去做事是攻無不克的。它的恐怖之處在於，你要真做到。", tag: '互動' },
+            { file: 'lei-6.html', title: "口碑的本質是超出預期", desc: "網際網路讓口碑傳播變得極快：東西好，很快就會被消費者傳開。但什麼東西才有口碑？雷軍花了很長時間琢磨透這個問題，答案來自兩次親身消費：一趟失望的帆船酒店，和一頓被感動的海底撈。", tag: '互動' , navTitle: "口碑的本質是超出預期"},
           ],
         },
         {
@@ -1925,9 +1925,9 @@ window.COURSE = {
           title: '找錢與融資',
           desc: '信用是融資的全部前提',
           lessons: [
-            { file: 'lei-7.html', title: '第一筆錢：從身邊人開始', desc: '天使投資的本質是熟人信用；商業計劃書沒那麼重要，一句話說清生意才重要', tag: '互動' , navTitle: '第一筆錢'},
-            { file: 'lei-8.html', title: '融資時機：有錢才能融到錢', desc: '錢花掉一半就啟動融資；讓投資人來找你；VC 憑什麼要賺十倍', tag: '互動' , navTitle: '融資時機'},
-            { file: 'lei-9.html', title: '估值的藝術：融資賣的是信心', desc: '先找不可能投你的人問價、從中間價往上走；做價過高的三種副作用', tag: '互動' , navTitle: '估值的藝術'},
+            { file: 'lei-7.html', title: "第一筆錢：從身邊人開始", desc: "辦公司第一件事就是需要錢。雷軍的答案很樸素：天使投資在美國就是湊份子，真正的問題是人家憑什麼相信你。這一節講第一筆錢從哪來、信用怎麼攢，以及為什麼幾百頁的商業計劃書沒人看。", tag: '互動' , navTitle: "第一筆錢：從身邊人開始"},
+            { file: 'lei-8.html', title: "融資時機：有錢才能融到錢", desc: "這個世界很糾結：只有有錢才能融到錢。帳上留足現金、錢花一半就啟動、讓投資人來找你。再看懂 VC 的帳本，明白他要賺十倍為什麼不是貪婪，你就知道該在什麼時候、用什麼姿態談錢。", tag: '互動' , navTitle: "融資時機：有錢才能融到錢"},
+            { file: 'lei-9.html', title: "估值的藝術：融資賣的是信心", desc: "做價越高越好？雷軍的結論正相反：做價高，出售的是一個更高的預期，達不成就要付出代價。這一節講怎麼定價（先做市場調查，從中間價往上走），以及融資這件事的本質：銷售信心。", tag: '互動' , navTitle: "估值的藝術：融資賣的是信心"},
           ],
         },
         {
@@ -1935,8 +1935,8 @@ window.COURSE = {
           title: '股權與合夥人',
           desc: '創業是一場分享 100% 夢想的拼圖',
           lessons: [
-            { file: 'lei-10.html', title: '股權就是拼圖：切忌均分', desc: '50/50 的隱患、三人各 1/3 的死局；極左極右都不行，團隊裡必須有權威', tag: '互動' , navTitle: '股權就是拼圖'},
-            { file: 'lei-11.html', title: '合夥人：先分夢想，再分股份', desc: '股份鎖定四年、退出機制提前談；換合夥人的機率高達三分之一', tag: '互動' , navTitle: '合夥人'},
+            { file: 'lei-10.html', title: "股權就是拼圖：切忌均分", desc: "剛開始創業的時候，那 100% 的股份其實是個夢想。創業的過程，就是拿這 100% 的夢想去跟錢 share、跟最優秀的工程師 share、跟最好的 marketing 和資源 share。雷軍的原話：創業就是拼圖。這一節看拼圖怎麼拼，以及極左、極右、均分這三種拼法為什麼都會死。", tag: '互動' , navTitle: "股權就是拼圖：切忌均分"},
+            { file: 'lei-11.html', title: "合夥人：先分夢想，再分股份", desc: "股份的分配是相對的，不是絕對的：公司做到十億美金，1% 就是一千萬美元。所以找 co-founder 的順序不能反：先 share 夢想，他不 buy in，給他 100% 也沒用；然後才是角色、貢獻和分餅；最後把最難開口的事談完：鎖定四年，退出機制。", tag: '互動' , navTitle: "合夥人：先分夢想，再分股份"},
           ],
         },
         {
@@ -1944,7 +1944,7 @@ window.COURSE = {
           title: '經營基本功',
           desc: '現金流和人是公司的命',
           lessons: [
-            { file: 'lei-12.html', title: '現金流與報酬包', desc: '沒有收入你能活幾個月；工資股票自選的 package 制度讓報酬不再攀比', tag: '互動' },
+            { file: 'lei-12.html', title: "現金流與報酬包", desc: "對早期創業公司來說，最重要的數字是帳上還有多少現金：假如沒有任何收入，你能活多少個月？這是創業公司每天都要想的問題。這一節講雷軍的三筆帳：現金跑道、現金流，和給最優秀的人算的那筆「報酬包」。", tag: '互動' },
           ],
         },
         {
@@ -1952,8 +1952,8 @@ window.COURSE = {
           title: '專題收官',
           desc: '把雷軍的課變成 OPC 的行動清單',
           lessons: [
-            { file: 'lei-final.html', title: '寫給 AI 時代的一人公司', desc: '22 段口述的全景回顧，對映成 OPC 創業自查清單：方向、口碑、現金、股權', tag: '收官' , navTitle: '寫給一人公司'},
-            { file: 'lei-test.html', title: '測一測你的 AI 創業成功率', desc: '12 道題綜合全篇章的核心判斷，算出成功率、六維雷達畫像和回爐處方', tag: '互動' , navTitle: '創業成功率測試'},
+            { file: 'lei-final.html', title: "寫給 AI 時代的一人公司", desc: "22 段口述講完了。雷軍講的是辦公司，但 AI 時代一個人就是一家公司：你自己是 CEO，也是那個技術大拿；你的存款是帳上現金，你的時間是 100% 的股份。收官這節把 12 節課攤成一張全景圖，再把它變成一份屬於 OPC（One Person Company）的自查清單和行動清單。", tag: '收官' , navTitle: "寫給 AI 時代的一人公司"},
+            { file: 'lei-test.html', title: "測一測你的 AI 創業成功率", desc: "13 節課講完了，現在輪到你。12 道題，全部來自前面課程裡雷軍的核心判斷：心態、方向、產品、現金、合夥、AI 槓桿。憑直覺選，別猜「標準答案」，測的是你現在真實的樣子。", tag: '互動' , navTitle: "測一測你的 AI 創業成功率"},
           ],
         },
       ],

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>실제 main()에서 세션 샘플링까지 | 方片学堂</title>
+<title>실제 main()에서 첫 번째 샘플링까지 | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -21,7 +21,7 @@
 .takeaway{display:flex;gap:12px}.takeaway svg{width:26px;flex:none;color:var(--accent)}
 @media(max-width:760px){.lesson-header{padding:30px 22px}.lesson-header:after{font-size:48px}.modes,.source-grid{grid-template-columns:1fr}.handoff{grid-template-columns:1fr}.handoff div:not(:last-child):after{content:"⌄";right:50%;top:auto;bottom:-17px}.route{padding:10px}}
 </style>
-<meta name="description" content="실제 진입점 xai-grok-pager-bin/src/main.rs를 따라 headless, leader, stdio, TUI에서 SessionActor와 SamplerActor까지 추적합니다.">
+<meta name="description" content="실제 진입점은 xai-grok-pager-bin/src/main.rs에 있습니다. 하나의 복합 진입점이 명령과 상호작용 모드를 파싱한 후 TUI 또는 Shell Agent 호스트에 작업을 위임합니다.">
 <meta name="author" content="팡피엔">
 
 
@@ -34,7 +34,7 @@
 
 
 
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="실제 main()에서 첫 번째 샘플링까지"><meta property="og:description" content="실제 진입점 xai-grok-pager-bin/src/main.rs를 따라 headless, leader, stdio, TUI에서 SessionActor와 SamplerActor까지 추적합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="실제 main()에서 첫 번째 샘플링까지"><meta property="og:description" content="실제 진입점은 xai-grok-pager-bin/src/main.rs에 있습니다. 하나의 복합 진입점이 명령과 상호작용 모드를 파싱한 후 TUI 또는 Shell Agent 호스트에 작업을 위임합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>

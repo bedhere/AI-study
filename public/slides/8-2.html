@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>KV Cache：用空间换时间，顺便省下真金白银 | 方片学堂</title>
+<title>KV Cache：用空间换时间 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -86,7 +86,7 @@
 }
 </style>
 <!-- SEO Start -->
-<meta name="description" content="KV Cache 是大模型推理加速的核心技术。解析 KV Cache 的工作原理：如何缓存 Attention 的键值对，避免对已有 Token 的重复计算，从而同时降低延迟和成本。">
+<meta name="description" content="每轮对话，模型都要对所有历史 Token 做 Attention 计算。KV Cache 把已算过的 K/V 矩阵缓存下来，下轮只计算新增 Token。">
 <meta name="keywords" content="KV Cache,大模型缓存,推理加速,Attention Cache,大模型性能优化">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -101,8 +101,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
-<meta property="og:title" content="KV Cache：用空间换时间，顺便省下真金白银">
-<meta property="og:description" content="KV Cache 是大模型推理加速的核心技术。解析 KV Cache 的工作原理：如何缓存 Attention 的键值对，避免对已有 Token 的重复计算，从而同时降低延迟和成本。">
+<meta property="og:title" content="KV Cache：用空间换时间">
+<meta property="og:description" content="每轮对话，模型都要对所有历史 Token 做 Attention 计算。KV Cache 把已算过的 K/V 矩阵缓存下来，下轮只计算新增 Token。">
 
 
 <meta property="og:image:width" content="1200">
@@ -110,8 +110,8 @@
 <meta property="og:locale" content="zh_CN">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="KV Cache：用空间换时间，顺便省下真金白银">
-<meta name="twitter:description" content="KV Cache 是大模型推理加速的核心技术。解析 KV Cache 的工作原理：如何缓存 Attention 的键值对，避免对已有 Token 的重复计算，从而同时降低延迟和成本。">
+<meta name="twitter:title" content="KV Cache：用空间换时间">
+<meta name="twitter:description" content="每轮对话，模型都要对所有历史 Token 做 Attention 计算。KV Cache 把已算过的 K/V 矩阵缓存下来，下轮只计算新增 Token。">
 
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">

@@ -108,7 +108,7 @@
   .layer-card.active .lc-body{max-height:420px}
 }
 </style>
-<meta name="description" content="上下文压缩四层防线：60% 裁剪、75% 微压缩、85% 折叠、95% 紧急压缩。">
+<meta name="description" content="拖动滑块模拟对话增长，观察压缩如何延长上下文寿命。">
 <meta name="author" content="方片">
 
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
@@ -121,7 +121,7 @@
 
 
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="上下文压缩：四层防线"><meta property="og:description" content="上下文压缩四层防线：60% 裁剪、75% 微压缩、85% 折叠、95% 紧急压缩。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="上下文压缩：四层防线"><meta property="og:description" content="拖动滑块模拟对话增长，观察压缩如何延长上下文寿命。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -316,7 +316,7 @@ var DECISIONS = [
   '<b>📌 设计决策：</b>裁剪只删工具返回的冗余数据，用户完全无感。需要决定：哪些工具输出可以摘要？哪些必须保留（比如代码执行结果）？',
   '<b>📌 设计决策：</b>微压缩开始精简早期对话。为什么不一开始就压缩？因为模型需要完整上下文理解用户意图，过早压缩会导致失忆。',
   '<b>📌 设计决策：</b>折叠把多轮对话变成一段摘要。摘要由谁写？让模型自己总结？还是用专门的压缩 Prompt？摘要质量直接影响后续准确性。',
-  '<b>📌 设计决策：</b>紧急压缩是最后一道防线，信息损失明显，但对话不会中断。Alice 的四层策略 vs 简单的「满了就报错」，哪种体验更好？',
+  '<b>📌 设计决策：</b>紧急压缩是最后一道防线，信息损失明显，但对话不会中断。示例助手 的四层策略 vs 简单的「满了就报错」，哪种体验更好？',
   '<b>📌 ⚠️ 超限！</b>四层压缩全部用尽，上下文已超过安全空间。如果继续增长超过 256K 模型上限，API 将返回 context_length_exceeded 错误。这就是为什么还需要上下文急救作为最终兜底。'
 ];
 

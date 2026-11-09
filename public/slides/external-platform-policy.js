@@ -33,12 +33,14 @@
   }, true);
 
   function start() {
+    var pageRoot = document.documentElement;
+    if (!pageRoot) return;
     removeBlockedLinks(document);
     new MutationObserver(function (mutations) {
       mutations.forEach(function (mutation) {
         mutation.addedNodes.forEach(removeBlockedLinks);
       });
-    }).observe(document.documentElement, { childList: true, subtree: true });
+    }).observe(pageRoot, { childList: true, subtree: true });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });

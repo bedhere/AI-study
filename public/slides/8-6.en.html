@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Syntax-Level Cost Optimization: Prompts Written for Machines | 方片学堂</title>
+<title>Syntax-Level Optimization: Prompts for Machines — Skip the Formatting | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>
@@ -59,7 +59,7 @@ body{opacity:0;animation:_si .15s ease .08s forwards}
 }
 </style>
 <!-- SEO Start -->
-<meta name="description" content="How to reduce token consumption at the syntax level of Prompts? Compare token efficiency of natural language vs. structured instructions, and learn practical techniques like removing redundant words, using XML tag delimiters, and choosing token-efficient formats.">
+<meta name="description" content="Formatting tokens can account for up to 13–20% of prompt length. Prompts are instructions for machines, not documents for humans. Those **bold** markers, JSON braces, and indented newlines… are all money spent on formatting.">
 <meta name="keywords" content="Prompt optimization,Token optimization,Prompt compression,syntax-level optimization,AI prompt efficiency">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
@@ -74,8 +74,8 @@ body{opacity:0;animation:_si .15s ease .08s forwards}
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
-<meta property="og:title" content="Syntax-Level Cost Optimization: Prompts Written for Machines">
-<meta property="og:description" content="How to reduce token consumption at the syntax level of Prompts? Compare token efficiency of natural language vs. structured instructions, and learn practical techniques like removing redundant words, using XML tag delimiters, and choosing token-efficient formats.">
+<meta property="og:title" content="Syntax-Level Optimization: Prompts for Machines — Skip the Formatting">
+<meta property="og:description" content="Formatting tokens can account for up to 13–20% of prompt length. Prompts are instructions for machines, not documents for humans. Those **bold** markers, JSON braces, and indented newlines… are all money spent on formatting.">
 
 
 <meta property="og:image:width" content="1200">
@@ -83,8 +83,8 @@ body{opacity:0;animation:_si .15s ease .08s forwards}
 <meta property="og:locale" content="en_US">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Syntax-Level Cost Optimization: Prompts Written for Machines">
-<meta name="twitter:description" content="How to reduce token consumption at the syntax level of Prompts? Compare token efficiency of natural language vs. structured instructions, and learn practical techniques like removing redundant words, using XML tag delimiters, and choosing token-efficient formats.">
+<meta name="twitter:title" content="Syntax-Level Optimization: Prompts for Machines — Skip the Formatting">
+<meta name="twitter:description" content="Formatting tokens can account for up to 13–20% of prompt length. Prompts are instructions for machines, not documents for humans. Those **bold** markers, JSON braces, and indented newlines… are all money spent on formatting.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
@@ -167,7 +167,7 @@ const STRATS = [
 `<span class="hl-cmt">// JSON version: heavy symbol overhead</span>
 {
   <span class="hl-key">"user"</span>: {
-    <span class="hl-key">"name"</span>: <span class="hl-str">"Alice"</span>,
+    <span class="hl-key">"name"</span>: <span class="hl-str">"example assistant"</span>,
     <span class="hl-key">"role"</span>: <span class="hl-str">"admin"</span>,
     <span class="hl-key">"permissions"</span>: [
       <span class="hl-str">"read"</span>,
@@ -179,7 +179,7 @@ const STRATS = [
     good:
 `<span class="hl-cmt"># YAML version: indentation replaces symbols</span>
 user:
-  name: <span class="hl-str">Alice</span>
+  name: <span class="hl-str">example assistant</span>
   role: <span class="hl-str">admin</span>
   permissions:
     - <span class="hl-str">read</span>
@@ -196,7 +196,7 @@ user:
     bad:
 `<span class="hl-cmt">// JSON array: field names repeated N times</span>
 [
-  {<span class="hl-key">"id"</span>: 1, <span class="hl-key">"name"</span>: <span class="hl-str">"Alice"</span>, <span class="hl-key">"role"</span>: <span class="hl-str">"Admin"</span>},
+  {<span class="hl-key">"id"</span>: 1, <span class="hl-key">"name"</span>: <span class="hl-str">"example assistant"</span>, <span class="hl-key">"role"</span>: <span class="hl-str">"Admin"</span>},
   {<span class="hl-key">"id"</span>: 2, <span class="hl-key">"name"</span>: <span class="hl-str">"Bob"</span>,   <span class="hl-key">"role"</span>: <span class="hl-str">"User"</span>},
   {<span class="hl-key">"id"</span>: 3, <span class="hl-key">"name"</span>: <span class="hl-str">"Carol"</span>, <span class="hl-key">"role"</span>: <span class="hl-str">"Admin"</span>},
   <span class="hl-cmt">// ... 50 records
@@ -205,7 +205,7 @@ user:
     good:
 `<span class="hl-cmt"># Header CSV: field names appear only once</span>
 id  name   role
-1   Alice  Admin
+1   example assistant  Admin
 2   Bob    User
 3   Carol  Admin
 <span class="hl-cmt">... (50 total)</span>

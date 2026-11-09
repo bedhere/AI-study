@@ -84,7 +84,7 @@ p.body{font-size:15px;line-height:2;color:var(--text);margin:0 0 20px}
   .d-btn{flex:1 1 auto;justify-content:center}
 }
 </style>
-<meta name="description" content="Agent 的行為依賴模型輸出，怎麼做可復現測試？DSH 的答案：確定性回放讓日誌變成測試資產，性質測試掃蕩交錯序列，一臺專門騙 LLM 客戶端的故障伺服器演練每一種斷法。">
+<meta name="description" content="確定性回放、性質測試、專門騙 LLM 客戶端的故障伺服器。核心材料：docs/testing.zh.md 與 packages/test-support/。">
 <meta name="author" content="方片">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 
@@ -97,7 +97,7 @@ p.body{font-size:15px;line-height:2;color:var(--text);margin:0 0 20px}
 
 
 
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="測試一個非確定性系統"><meta property="og:description" content="Agent 的行為依賴模型輸出，怎麼做可復現測試？DSH 的答案：確定性回放讓日誌變成測試資產，性質測試掃蕩交錯序列，一臺專門騙 LLM 客戶端的故障伺服器演練每一種斷法。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="測試一個非確定性系統"><meta property="og:description" content="確定性回放、性質測試、專門騙 LLM 客戶端的故障伺服器。核心材料：docs/testing.zh.md 與 packages/test-support/。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

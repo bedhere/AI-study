@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>動態時間戳：最貴的 System Prompt 反模式 | 方片学堂</title>
+<title>動態時間戳：最貴的 System Prompt | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -95,7 +95,7 @@
 }
 </style>
 <!-- SEO Start -->
-<meta name="description" content="在 System Prompt 中插入當前時間戳，是最常見也最昂貴的 AI 開發反模式之一。它導致 KV Cache 永遠無法命中，每次請求都要重新計算。本頁分析這個問題及正確做法。">
+<meta name="description" content="一個小小的設計錯誤，可以讓你的 KV Cache 完全失效，每輪對話成本翻倍：在 System Prompt 裏寫動態時間。">
 <meta name="keywords" content="System Prompt反模式,KV Cache失效,動態時間戳,AI開發誤區,Prompt設計">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -110,8 +110,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
-<meta property="og:title" content="動態時間戳：最貴的 System Prompt 反模式">
-<meta property="og:description" content="在 System Prompt 中插入當前時間戳，是最常見也最昂貴的 AI 開發反模式之一。它導致 KV Cache 永遠無法命中，每次請求都要重新計算。本頁分析這個問題及正確做法。">
+<meta property="og:title" content="動態時間戳：最貴的 System Prompt">
+<meta property="og:description" content="一個小小的設計錯誤，可以讓你的 KV Cache 完全失效，每輪對話成本翻倍：在 System Prompt 裏寫動態時間。">
 
 
 <meta property="og:image:width" content="1200">
@@ -119,8 +119,8 @@
 <meta property="og:locale" content="zh_HK">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="動態時間戳：最貴的 System Prompt 反模式">
-<meta name="twitter:description" content="在 System Prompt 中插入當前時間戳，是最常見也最昂貴的 AI 開發反模式之一。它導致 KV Cache 永遠無法命中，每次請求都要重新計算。本頁分析這個問題及正確做法。">
+<meta name="twitter:title" content="動態時間戳：最貴的 System Prompt">
+<meta name="twitter:description" content="一個小小的設計錯誤，可以讓你的 KV Cache 完全失效，每輪對話成本翻倍：在 System Prompt 裏寫動態時間。">
 
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">

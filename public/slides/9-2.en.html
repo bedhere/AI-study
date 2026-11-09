@@ -30,7 +30,7 @@
 .takeaway{background:rgba(124,58,237,.04);border:1.5px solid rgba(124,58,237,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--purple)}
 </style>
-<meta name="description" content="The user says one sentence; the LLM translates it into the detailed Prompt the image model needs. This two-stage translation architecture is the core design of image generation products.">
+<meta name="description" content="The user says &quot;example character is daydreaming on the balcony.&quot; The image model needs a long, precise visual description — that one sentence is far from enough. There is a translation step in the middle: using an LLM to translate plain language into image generation language.">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
 
@@ -47,7 +47,7 @@
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
-<!--seo:begin--><meta property="og:description" content="The user says one sentence; the LLM translates it into the detailed Prompt the image model needs. This two-stage translation architecture is the core design of image generation products."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="The user says &quot;example character is daydreaming on the balcony.&quot; The image model needs a long, precise visual description — that one sentence is far from enough. There is a translation step in the middle: using an LLM to translate plain language into image generation language."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -57,25 +57,25 @@
   <header class="lesson-header">
     <div class="kicker">AI Image Generation</div>
     <h1>Using AI to Write Prompts for AI</h1>
-    <p class="subtitle">The user says "Alice is daydreaming on the balcony." The image model needs a long, precise visual description — that one sentence is far from enough. There is a translation step in the middle: using an LLM to translate plain language into image generation language.</p>
-  </header>
+    <p class="subtitle">The user says "example character is daydreaming on the balcony." The image model needs a long, precise visual description — that one sentence is far from enough. There is a translation step in the middle: using an LLM to translate plain language into image generation language.</p>
+  </header><aside class="xa-tldr company-example-note"><p>Assistants, characters and workflows on this page are teaching examples, not launched Fangpian products or verified project results.</p></aside>
 
   <div class="sec-label">Example 1: Daydreaming on the Balcony</div>
 
   <div class="translate-flow" id="flow1">
     <div class="flow-card" id="f1-step1">
       <div class="step-badge user">User says</div>
-      <div class="user-input">"Alice is daydreaming on the balcony"</div>
+      <div class="user-input">"example character is daydreaming on the balcony"</div>
     </div>
     <div class="flow-connector"></div>
     <div class="flow-card" id="f1-step2">
       <div class="step-badge llm">LLM translates into image generation Prompt</div>
-      <div class="translated-prompt">A young woman named Alice standing on a sunlit balcony, leaning against the railing, gazing into the distance with a dreamy expression. She has shoulder-length dark hair, wearing a white blouse with a small star necklace. Soft afternoon golden hour lighting, potted plants on the balcony, blurred city skyline in background. Illustration style, warm color palette, peaceful mood. Upper body to full body composition.</div>
+      <div class="translated-prompt">A young woman named example character standing on a sunlit balcony, leaning against the railing, gazing into the distance with a dreamy expression. She has shoulder-length dark hair, wearing a white blouse with a small star necklace. Soft afternoon golden hour lighting, potted plants on the balcony, blurred city skyline in background. Illustration style, warm color palette, peaceful mood. Upper body to full body composition.</div>
     </div>
     <div class="flow-connector"></div>
     <div class="flow-card" id="f1-step3">
       <div class="step-badge result">Image model output</div>
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice daydreaming on the balcony" class="flow-result-img">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="example character daydreaming on the balcony" class="flow-result-img">
     </div>
   </div>
 
@@ -86,17 +86,17 @@
   <div class="translate-flow" id="flow2">
     <div class="flow-card" id="f2-step1">
       <div class="step-badge user">User says</div>
-      <div class="user-input">"Alice is cooking"</div>
+      <div class="user-input">"example character is cooking"</div>
     </div>
     <div class="flow-connector"></div>
     <div class="flow-card" id="f2-step2">
       <div class="step-badge llm">LLM translates into image generation Prompt</div>
-      <div class="translated-prompt">A young woman named Alice in a bright modern kitchen during morning time, cooking breakfast. She has shoulder-length dark hair, wearing a casual cardigan over a white top with a star necklace. Warm natural light streaming through windows, kitchen utensils and ingredients on counter, steam rising from pan. Illustration style, cozy domestic atmosphere, soft warm tones. Wide shot showing kitchen environment.</div>
+      <div class="translated-prompt">A young woman named example character in a bright modern kitchen during morning time, cooking breakfast. She has shoulder-length dark hair, wearing a casual cardigan over a white top with a star necklace. Warm natural light streaming through windows, kitchen utensils and ingredients on counter, steam rising from pan. Illustration style, cozy domestic atmosphere, soft warm tones. Wide shot showing kitchen environment.</div>
     </div>
     <div class="flow-connector"></div>
     <div class="flow-card" id="f2-step3">
       <div class="step-badge result">Image model output</div>
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice making breakfast in the kitchen" class="flow-result-img">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="example character making breakfast in the kitchen" class="flow-result-img">
     </div>
   </div>
 
@@ -111,7 +111,7 @@
 
   <div class="takeaway reveal">
     <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-    <span><b>What the user imagines and what the image model needs are completely different languages.</b> In Alice, every single image generation has an LLM doing the translation behind the scenes: expanding one user sentence into a detailed visual description hundreds of tokens long. This isn't a nice-to-have — it's a necessary architecture.</span>
+    <span><b>What the user imagines and what the image model needs are completely different languages.</b> In example character, every single image generation has an LLM doing the translation behind the scenes: expanding one user sentence into a detailed visual description hundreds of tokens long. This isn't a nice-to-have — it's a necessary architecture.</span>
   </div>
 
 </article>

@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>시맨틱 계층: 이중 증류 | Token 비용 엔지니어링</title>
+<title>시맨틱 계층: 이중 증류 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="컨텍스트 윈도우를 쓰레기통으로 쓰지 마세요: 어텐션은 O(N²)라 긴 Prompt는 비싸고 느리고, 중간 소실(lost-in-the-middle) 때문에 품질도 더 나빠져요. 이중 증류: 동적 Few-Shot으로 4000 Token을 500으로, LLMLingua-2로 문서를 5–20배 압축해요.">
+<meta name="description" content="포맷 세금은 잘랐어요. 이제 내용 자체를 봐요. RAG와 긴 문서에서 가장 흔한 엔지니어링 실수: 컨텍스트 윈도우를 쓰레기통으로 쓰는 것—Few-Shot 사례와 검색 문서를 전부 쑤셔 넣고 모델이 알아서 가리라고 기대해요. 되긴 해요. 그렇게 쓰면 안 돼요.">
 <meta name="keywords" content="컨텍스트 최적화,중간 소실,Lost in the Middle,동적 Few-Shot,LLMLingua,Prompt 압축,RAG 최적화">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="시맨틱 계층: 이중 증류">
-<meta property="og:description" content="고밀도 Prompt만이 고품질 Attention을 사요.">
+<meta property="og:description" content="포맷 세금은 잘랐어요. 이제 내용 자체를 봐요. RAG와 긴 문서에서 가장 흔한 엔지니어링 실수: 컨텍스트 윈도우를 쓰레기통으로 쓰는 것—Few-Shot 사례와 검색 문서를 전부 쑤셔 넣고 모델이 알아서 가리라고 기대해요. 되긴 해요. 그렇게 쓰면 안 돼요.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="시맨틱 계층: 이중 증류">
-<meta name="twitter:description" content="고밀도 Prompt만이 고품질 Attention을 사요.">
+<meta name="twitter:description" content="포맷 세금은 잘랐어요. 이제 내용 자체를 봐요. RAG와 긴 문서에서 가장 흔한 엔지니어링 실수: 컨텍스트 윈도우를 쓰레기통으로 쓰는 것—Few-Shot 사례와 검색 문서를 전부 쑤셔 넣고 모델이 알아서 가리라고 기대해요. 되긴 해요. 그렇게 쓰면 안 돼요.">
 
 <!-- SEO End -->
 <style>

@@ -52,7 +52,7 @@
 .takeaway{background:rgba(22,163,74,.04);border:1.5px solid rgba(22,163,74,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--success)}
 </style>
-<meta name="description" content="注册了 10 个 MCP 服务，启动时全连一遍？懒连接的思路：注册≠连接，首次使用时才建立连接。">
+<meta name="description" content="你注册了 10 个 MCP 服务，启动时全部连接一遍？如果其中 3 个挂了，启动就卡住了。懒连接的思路很简单：注册 ≠ 连接，用到的时候再连。">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 
@@ -70,7 +70,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:description" content="注册了 10 个 MCP 服务，启动时全连一遍？懒连接的思路：注册≠连接，首次使用时才建立连接。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="你注册了 10 个 MCP 服务，启动时全部连接一遍？如果其中 3 个挂了，启动就卡住了。懒连接的思路很简单：注册 ≠ 连接，用到的时候再连。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -80,7 +80,7 @@
     <div class="kicker">MCP 实战</div>
     <h1>懒连接：不用别连</h1>
     <p class="subtitle">你注册了 10 个 MCP 服务，启动时全部连接一遍？如果其中 3 个挂了，启动就卡住了。懒连接的思路很简单：注册 ≠ 连接，用到的时候再连。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>注册了 10 个 MCP 服务，启动时全连一遍？还是用到再连？</p></aside><!--seo:end-->  <div class="sec-label">启动方式对比</div>
+  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>注册了 10 个 MCP 服务，启动时全连一遍？还是用到再连？</p></aside><!--seo:end-->  <div class="sec-label">启动方式对比</div>
 
   <div style="text-align:center;margin-bottom:12px">
     <button class="play-btn" id="playBtn" onclick="startCompare()"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align:-1px;margin-right:3px"><polygon points="5 3 19 12 5 21 5 3"/></svg> 模拟启动过程</button>
@@ -131,7 +131,7 @@
   </div>
 
   <div class="l-callout reveal paywall-locked" style="margin-top:20px;font-size:14px;line-height:1.8">
-    <b>真实场景中的差异：</b>Alice 注册了日历、邮件、WPS笔记、浏览器、数据库等 10+ 个 MCP 服务。如果启动时全连，任何一个服务不可用都会拖慢启动。懒连接后，<b>启动从 30 秒降到 0.2 秒</b>，用户感受到的是秒开。
+    <b>真实场景中的差异：</b>示例助手 注册了日历、邮件、WPS笔记、浏览器、数据库等 10+ 个 MCP 服务。如果启动时全连，任何一个服务不可用都会拖慢启动。懒连接后，<b>启动从 30 秒降到 0.2 秒</b>，用户感受到的是秒开。
   </div>
 
   <div class="takeaway reveal paywall-locked">

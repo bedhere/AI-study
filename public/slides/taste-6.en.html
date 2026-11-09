@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Consistency: Where System Feel Comes From | Taste Engineering</title>
+<title>Consistency: Where System Feel Comes From | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <link rel="stylesheet" href="taste.css?v=20260810a">
 <!-- SEO Start -->
-<meta name="description" content="Each piece looks fine alone; together they feel cobbled-together — what's missing is a shared set of variables. Using this site's real top-bar CSS variables, learn design tokens: a variable switch for the mismatched feel, one radius variable driving five controls, and a two-screen spot-the-difference.">
+<meta name="description" content="Some UIs look fine piece by piece, yet feel cobbled-together as a whole. What they lack is one thing: a shared set of variables everyone follows. This lesson is about design tokens — variables first, styles follow.">
 <meta name="keywords" content="design token,design variables,consistency,system feel,CSS variables,UI taste">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
@@ -24,13 +24,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
 <meta property="og:title" content="Consistency: Where System Feel Comes From">
-<meta property="og:description" content="Style is what variables are set to; system feel is that the variables exist.">
+<meta property="og:description" content="Some UIs look fine piece by piece, yet feel cobbled-together as a whole. What they lack is one thing: a shared set of variables everyone follows. This lesson is about design tokens — variables first, styles follow.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Consistency: Where System Feel Comes From">
-<meta name="twitter:description" content="Style is what variables are set to; system feel is that the variables exist.">
+<meta name="twitter:description" content="Some UIs look fine piece by piece, yet feel cobbled-together as a whole. What they lack is one thing: a shared set of variables everyone follows. This lesson is about design tokens — variables first, styles follow.">
 
 <!-- SEO End -->
 <style>
@@ -81,7 +81,7 @@
     <h1>Consistency: Where System Feel Comes From</h1>
     <p class="subtitle">Some UIs look fine piece by piece, yet feel cobbled-together as a whole. What they lack is one thing: a shared set of variables everyone follows. This lesson is about design tokens — variables first, styles follow.</p>
     <div class="chips"><span class="chip">design token</span><span class="chip">CSS variables</span><span class="chip">system feel</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">In one sentence</span><p>Good-looking sites sit on a set of design variables. Open this site's real CSS: why control height, radius, and color stay one tier sitewide — change once, everywhere updates</p></aside><!--seo:end-->  <section class="reveal">
+  </header><aside class="xa-tldr company-source-case"><p>This page uses the source course’s public-website case study as teaching material. Its project history, traffic and indexing data are not Fangpian internal-platform results; code examples do not describe the current school implementation.</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">In one sentence</span><p>Good-looking sites sit on a set of design variables. Open this site's real CSS: why control height, radius, and color stay one tier sitewide — change once, everywhere updates</p></aside><!--seo:end-->  <section class="reveal">
     <div class="sec-label">Fine alone, cobbled-together as a whole</div>
     <p class="desc">The mismatched feel has concrete causes: this button is 36 tall, that one 40; this card radius 8, that one 16; rose a shade deeper here, lighter there. Each was written ad hoc — fine alone, exposed when stacked. The fix is to fold those "ad-hoc numbers" into variables: <b>set tokens first (primary, radius, control height, spacing steps), and every style reads from tokens</b>. Fewer one-off decisions — the UI starts looking like one family.</p>
   </section>

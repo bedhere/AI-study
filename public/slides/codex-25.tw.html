@@ -109,7 +109,7 @@
   .dm-summary.on{max-height:520px}
 }
 </style>
-<meta name="description" content="Codex 的 hook 協議認十一個事件和四種處理器，執行表只裝命令和 MCP。一次 turn 裡每個掛鉤點拿到什麼、能改什麼、什麼時候來不及">
+<meta name="description" content="一次 turn 會經過十一個掛鉤。協議認四種處理器，執行表只裝命令和 MCP。超時預設放行，拆卸期丟掉 stdout。">
 <meta name="author" content="方片">
 
 
@@ -121,7 +121,7 @@
 
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:locale" content="zh_TW">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="掛鉤點能改什麼，由事件合同決定"><meta property="og:description" content="Codex 的 hook 協議認十一個事件和四種處理器，執行表只裝命令和 MCP。一次 turn 裡每個掛鉤點拿到什麼、能改什麼、什麼時候來不及"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="掛鉤點能改什麼，由事件合同決定"><meta property="og:description" content="一次 turn 會經過十一個掛鉤。協議認四種處理器，執行表只裝命令和 MCP。超時預設放行，拆卸期丟掉 stdout。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

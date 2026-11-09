@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="KV Cache와 시맨틱 캐시는 같은 수예요: 이미 계산한 건 다시 계산하지 마세요. 두 라운드 대화에서 접두 token이 어떻게 「캐시 히트, 계산 면제」되는지 보고, 히트율 슬라이더를 끌어 고객지원 봇 월 청구서가 6,000위안에서 수백 위안으로 떨어지는 걸 보세요—Harness 핵심 편의 비용 최적화 밑바닥 원리예요.">
+<meta name="description" content="지난 레슨의 해시 테이블이 「어떻게 순식간에 찾을까」를 풀었다면, 이번엔 다른 문제예요: 이미 계산한 건 두 번 계산하지 마세요. 모델 가격표의 「캐시 히트 반값, 심지어 1할」, 청구서에서 아끼는 모든 돈 뒤에는 같은 수납 방식이 있어요—계산한 결과를 저장해 두고 다음에 바로 꺼내기.">
 <meta name="keywords" content="KV Cache,시맨틱 캐시,프롬프트 캐시,prompt caching,AI 비용 최적화,캐시 무효화,자료구조 입문">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="캐시: AI 청구서의 보이지 않는 할인">
-<meta property="og:description" content="KV Cache와 시맨틱 캐시는 같은 수예요: 이미 계산한 건 다시 계산하지 마세요. 히트율 슬라이더를 끌어 청구서가 실시간으로 바뀌는 걸 보세요.">
+<meta property="og:description" content="지난 레슨의 해시 테이블이 「어떻게 순식간에 찾을까」를 풀었다면, 이번엔 다른 문제예요: 이미 계산한 건 두 번 계산하지 마세요. 모델 가격표의 「캐시 히트 반값, 심지어 1할」, 청구서에서 아끼는 모든 돈 뒤에는 같은 수납 방식이 있어요—계산한 결과를 저장해 두고 다음에 바로 꺼내기.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="캐시: AI 청구서의 보이지 않는 할인">
-<meta name="twitter:description" content="KV Cache와 시맨틱 캐시는 같은 수예요: 이미 계산한 건 다시 계산하지 마세요. 히트율 슬라이더를 끌어 청구서가 실시간으로 바뀌는 걸 보세요.">
+<meta name="twitter:description" content="지난 레슨의 해시 테이블이 「어떻게 순식간에 찾을까」를 풀었다면, 이번엔 다른 문제예요: 이미 계산한 건 두 번 계산하지 마세요. 모델 가격표의 「캐시 히트 반값, 심지어 1할」, 청구서에서 아끼는 모든 돈 뒤에는 같은 수납 방식이 있어요—계산한 결과를 저장해 두고 다음에 바로 꺼내기.">
 
 <!-- SEO End -->
 <style>

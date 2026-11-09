@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="어텐션은 모든 Token이 모든 Token을 보게 합니다: 컨텍스트 길이를 끌면 계산량과 청구서가 제곱으로 치솟아요—긴 대화가 버벅이고 비싸지는 뿌리. 지난 레슨의 O(n²) 자로 LLM 본체를 재어 봅니다.">
+<meta name="description" content="지난 레슨에서 Big-O 자를 손에 넣었죠—이륙하던 빨간 선 기억나요? 오늘은 LLM 안에서 가장 유명한 O(n²)—어텐션 메커니즘을 봅니다. 끝나면 오래된 질문들이 갑자기 풀려요: 왜 긴 대화는 점점 버벅이고, 왜 컨텍스트 윈도우는 「창고」가 아니라 「창문」이며, 왜 다들 컨텍스트 압축에 목을 매는지.">
 <meta name="keywords" content="어텐션 메커니즘,O(n²),컨텍스트 윈도우,긴 컨텍스트 비용,KV Cache,컨텍스트 압축,LLM 원리">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="컨텍스트가 길수록 왜 비쌀까? O(n²) 청구서">
-<meta property="og:description" content="모든 Token이 모든 Token을 되돌아봅니다—n×n 행렬을 끌어 보여 드려요. 컨텍스트 10배면 어텐션 계산 100배.">
+<meta property="og:description" content="지난 레슨에서 Big-O 자를 손에 넣었죠—이륙하던 빨간 선 기억나요? 오늘은 LLM 안에서 가장 유명한 O(n²)—어텐션 메커니즘을 봅니다. 끝나면 오래된 질문들이 갑자기 풀려요: 왜 긴 대화는 점점 버벅이고, 왜 컨텍스트 윈도우는 「창고」가 아니라 「창문」이며, 왜 다들 컨텍스트 압축에 목을 매는지.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="컨텍스트가 길수록 왜 비쌀까? O(n²) 청구서">
-<meta name="twitter:description" content="모든 Token이 모든 Token을 되돌아봅니다—n×n 행렬을 끌어 보여 드려요. 컨텍스트 10배면 어텐션 계산 100배.">
+<meta name="twitter:description" content="지난 레슨에서 Big-O 자를 손에 넣었죠—이륙하던 빨간 선 기억나요? 오늘은 LLM 안에서 가장 유명한 O(n²)—어텐션 메커니즘을 봅니다. 끝나면 오래된 질문들이 갑자기 풀려요: 왜 긴 대화는 점점 버벅이고, 왜 컨텍스트 윈도우는 「창고」가 아니라 「창문」이며, 왜 다들 컨텍스트 압축에 목을 매는지.">
 
 <!-- SEO End -->
 <style>

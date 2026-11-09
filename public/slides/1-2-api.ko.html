@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>chat/completions의 비밀: API가 왜 '대화'가 아닌 '완성'인가? | 方片学堂</title>
+<title>chat/completions의 비밀 | 方片学堂</title>
 
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -141,7 +141,7 @@
 }
 </style>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style><!-- SEO Start -->
-<meta name="description" content="OpenAI의 chat/completions 엔드포인트가 왜 '완성(completions)'이라고 불릴까요? 대화 API의 본질 이해: 모든 요청은 독립적인 텍스트 완성이며, 멀티턴 대화는 클라이언트가 컨텍스트를 이어 붙여 구현합니다.">
+<meta name="description" content="분명히 대형 언어 모델과 대화를 나누고 있는데, 왜 OpenAI의 API 경로에는 '완성(completions)'이라고 쓰여 있을까요? 이 명명 방식 뒤에는 대형 언어 모델의 본질에 대한 이해가 숨어 있습니다.">
 <meta name="keywords" content="chat completions,OpenAI API,대형 언어 모델 API,대화 API,완성 API">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -156,8 +156,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="chat/completions의 비밀: API가 왜 '대화'가 아닌 '완성'인가?">
-<meta property="og:description" content="OpenAI의 chat/completions가 왜 '완성'이라 불릴까요? 모든 요청은 독립적인 텍스트 완성이며, 멀티턴 대화는 클라이언트가 컨텍스트를 이어 붙여 구현합니다.">
+<meta property="og:title" content="chat/completions의 비밀">
+<meta property="og:description" content="분명히 대형 언어 모델과 대화를 나누고 있는데, 왜 OpenAI의 API 경로에는 '완성(completions)'이라고 쓰여 있을까요? 이 명명 방식 뒤에는 대형 언어 모델의 본질에 대한 이해가 숨어 있습니다.">
 
 
 <meta property="og:image:width" content="1200">
@@ -165,8 +165,8 @@
 <meta property="og:locale" content="ko_KR">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="chat/completions의 비밀: API가 왜 '대화'가 아닌 '완성'인가?">
-<meta name="twitter:description" content="OpenAI의 chat/completions가 왜 '완성'이라 불릴까요? 모든 요청은 독립적인 텍스트 완성이며, 멀티턴 대화는 클라이언트가 컨텍스트를 이어 붙여 구현합니다.">
+<meta name="twitter:title" content="chat/completions의 비밀">
+<meta name="twitter:description" content="분명히 대형 언어 모델과 대화를 나누고 있는데, 왜 OpenAI의 API 경로에는 '완성(completions)'이라고 쓰여 있을까요? 이 명명 방식 뒤에는 대형 언어 모델의 본질에 대한 이해가 숨어 있습니다.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->

@@ -88,7 +88,7 @@
   #demo-goal button{flex:1 1 auto}
 }
 </style>
-<meta name="description" content="DSH 的 Goal 子系統讓 Agent 自主跑幾十輪卻給不了自己續命：改目標的權限跟着消息來源走，authority.ts 用宿主蓋章的 source 元數據做鑑權，機制層面防提示注入。">
+<meta name="description" content="長期目標誰有權改，鑑權不讀消息正文，只認宿主蓋在事件元數據上的來源章。本課講這個設計背後的兩層思路。">
 <meta name="author" content="方片">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 
@@ -101,7 +101,7 @@
 
 
 
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Goal：消息溯源即權限"><meta property="og:description" content="DSH 的 Goal 子系統讓 Agent 自主跑幾十輪卻給不了自己續命：改目標的權限跟着消息來源走，authority.ts 用宿主蓋章的 source 元數據做鑑權，機制層面防提示注入。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Goal：消息溯源即權限"><meta property="og:description" content="長期目標誰有權改，鑑權不讀消息正文，只認宿主蓋在事件元數據上的來源章。本課講這個設計背後的兩層思路。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

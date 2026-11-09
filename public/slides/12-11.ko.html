@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Token 사용률과 임계값 경계 | 方片学堂</title>
+<title>추정, 백분율, 엄격한 임계값 | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -20,7 +20,7 @@
 .takeaway{margin-top:22px;padding:19px 22px;border-radius:14px;background:#241a0b;color:#f7ead2;display:flex;gap:13px;line-height:1.75}.takeaway svg{color:var(--gold);flex:0 0 auto}.takeaway b{color:var(--gold)}
 @media(max-width:760px){.primitives{grid-template-columns:1fr}.relation{grid-template-columns:1fr}.relation-arrow{justify-self:center;transform:rotate(90deg)}.meter{padding:9px}}@media(max-width:450px){.objective{flex-direction:column}}
 </style>
-<meta name="description" content="xai-token-estimation의 실제 함수를 기반으로 usage_percentage, 임계값 경계, headroom을 설명합니다.">
+<meta name="description" content="xai-token-estimation은 공유 산술 기본 요소를 제공합니다. bytes/4 기반의 로컬 추정과, 호출자가 전달한 used 및 total에 대한 사용률 및 임계값 판단을 모두 지원합니다.">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 
@@ -33,10 +33,10 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="Token 사용률과 임계값 경계">
+<meta property="og:title" content="추정, 백분율, 엄격한 임계값">
 
 <meta property="og:locale" content="ko_KR">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:description" content="xai-token-estimation의 실제 함수를 기반으로 usage_percentage, 임계값 경계, headroom을 설명합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:description" content="xai-token-estimation은 공유 산술 기본 요소를 제공합니다. bytes/4 기반의 로컬 추정과, 호출자가 전달한 used 및 total에 대한 사용률 및 임계값 판단을 모두 지원합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>

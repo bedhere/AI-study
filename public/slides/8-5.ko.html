@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>이미지 Token: 픽셀도 비용입니다 — 멀티모달 과금 원리 | 方片学堂</title>
+<title>이미지 Token: 픽셀도 비용입니다 | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>
@@ -78,7 +78,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 }
 </style>
 <!-- SEO Start -->
-<meta name="description" content="멀티모달 대형 모델은 이미지에 어떻게 과금할까요? 이미지 Token 계산 방식 해설: 이미지는 해상도에 따라 tile로 분할되고 각 tile이 고정된 Token을 소비합니다. 이미지 크기 제어로 멀티모달 비용을 최적화하는 방법을 알아보세요.">
+<meta name="description" content="멀티모달 모델은 &quot;이미지 1장&quot;으로 과금하지 않고, 이미지를 픽셀 블록으로 잘라 Token으로 환산합니다. 슬라이더를 드래그해 해상도를 바꾸고 Token 비용 변화를 실시간으로 확인하세요.">
 <meta name="keywords" content="이미지Token,멀티모달과금,Vision모델,이미지압축,GPT-4o과금,멀티모달비용">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -93,8 +93,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="이미지 Token: 픽셀도 비용입니다 — 멀티모달 과금 원리">
-<meta property="og:description" content="멀티모달 대형 모델은 이미지에 어떻게 과금할까요? 이미지 Token 계산 방식 해설: 이미지는 해상도에 따라 tile로 분할되고 각 tile이 고정된 Token을 소비합니다. 이미지 크기 제어로 멀티모달 비용을 최적화하는 방법을 알아보세요.">
+<meta property="og:title" content="이미지 Token: 픽셀도 비용입니다">
+<meta property="og:description" content="멀티모달 모델은 &quot;이미지 1장&quot;으로 과금하지 않고, 이미지를 픽셀 블록으로 잘라 Token으로 환산합니다. 슬라이더를 드래그해 해상도를 바꾸고 Token 비용 변화를 실시간으로 확인하세요.">
 
 
 <meta property="og:image:width" content="1200">
@@ -102,8 +102,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <meta property="og:locale" content="ko_KR">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="이미지 Token: 픽셀도 비용입니다 — 멀티모달 과금 원리">
-<meta name="twitter:description" content="멀티모달 대형 모델은 이미지에 어떻게 과금할까요? 이미지 Token 계산 방식 해설: 이미지는 해상도에 따라 tile로 분할되고 각 tile이 고정된 Token을 소비합니다. 이미지 크기 제어로 멀티모달 비용을 최적화하는 방법을 알아보세요.">
+<meta name="twitter:title" content="이미지 Token: 픽셀도 비용입니다">
+<meta name="twitter:description" content="멀티모달 모델은 &quot;이미지 1장&quot;으로 과금하지 않고, 이미지를 픽셀 블록으로 잘라 Token으로 환산합니다. 슬라이더를 드래그해 해상도를 바꾸고 Token 비용 변화를 실시간으로 확인하세요.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->

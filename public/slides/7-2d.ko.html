@@ -72,7 +72,7 @@
   .pc-grid{grid-template-columns:1fr}
 }
 </style>
-<meta name="description" content="MCP(Model Context Protocol)는 AI 도구의 USB 표준입니다. 도구 개발자는 한 번만 어댑터를 작성하면 모든 Agent에 연결할 수 있습니다.">
+<meta name="description" content="USB 이전에는 장치마다 전용 케이블이 필요했고, MCP 이전에는 Agent마다 전용 연결 코드가 필요했습니다.">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 
@@ -89,7 +89,7 @@
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="MCP(Model Context Protocol)는 AI 도구의 USB 표준입니다. 도구 개발자는 한 번만 어댑터를 작성하면 모든 Agent에 연결할 수 있습니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="USB 이전에는 장치마다 전용 케이블이 필요했고, MCP 이전에는 Agent마다 전용 연결 코드가 필요했습니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -99,7 +99,7 @@
     <div class="kicker">Agent 엔지니어링</div>
     <h1>MCP 프로토콜: AI 도구의 USB 인터페이스</h1>
     <p class="subtitle">USB 이전에는 장치마다 전용 케이블이 필요했고, MCP 이전에는 Agent마다 전용 연결 코드가 필요했습니다.</p>
-  </header>
+  </header><aside class="xa-tldr company-example-note"><p>이 페이지의 도우미·캐릭터·흐름은 기술 원리를 설명하는 교육 예제이며 실제 출시 제품이나 실적을 뜻하지 않습니다.</p></aside>
 
   <div class="sec-label">Before / After 비교</div>
   <div class="compare" id="compareArea">
@@ -114,7 +114,7 @@
           <rect class="node-box" x="10" y="15" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
           <text class="node-label" x="55" y="33" fill="var(--purple)">Cursor</text>
           <rect class="node-box" x="10" y="82" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
-          <text class="node-label" x="55" y="100" fill="var(--purple)">Alice</text>
+          <text class="node-label" x="55" y="100" fill="var(--purple)">예시 도우미</text>
           <rect class="node-box" x="10" y="150" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
           <text class="node-label" x="55" y="168" fill="var(--purple)">Claude</text>
 
@@ -159,7 +159,7 @@
           <rect class="node-box" x="10" y="15" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
           <text class="node-label" x="55" y="33" fill="var(--purple)">Cursor</text>
           <rect class="node-box" x="10" y="82" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
-          <text class="node-label" x="55" y="100" fill="var(--purple)">Alice</text>
+          <text class="node-label" x="55" y="100" fill="var(--purple)">예시 도우미</text>
           <rect class="node-box" x="10" y="150" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
           <text class="node-label" x="55" y="168" fill="var(--purple)">Claude</text>
 

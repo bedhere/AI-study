@@ -55,7 +55,7 @@
 .takeaway{background:rgba(217,119,6,.04);border:1.5px solid rgba(217,119,6,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--amber)}
 </style>
-<meta name="description" content="生图模型会超时、限流、宕机，降级链让用户永远能拿到图。用 Alice 的真实状态展示错误处理的产品设计。">
+<meta name="description" content="在 示例助手 里，用户说「帮我画一张图」，但背后可能 Gemini 超时了、Seedream 限流了、GPT Image 也出错了。用户不关心哪个模型挂了，他只关心：图到底能不能出来？">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 
@@ -73,7 +73,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:description" content="生图模型会超时、限流、宕机，降级链让用户永远能拿到图。用 Alice 的真实状态展示错误处理的产品设计。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="在 示例助手 里，用户说「帮我画一张图」，但背后可能 Gemini 超时了、Seedream 限流了、GPT Image 也出错了。用户不关心哪个模型挂了，他只关心：图到底能不能出来？"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -82,28 +82,28 @@
   <header class="lesson-header">
     <div class="kicker">AI 生图</div>
     <h1>模型会挂，然后呢？</h1>
-    <p class="subtitle">在 Alice 里，用户说「帮我画一张图」，但背后可能 Gemini 超时了、Seedream 限流了、GPT Image 也出错了。用户不关心哪个模型挂了，他只关心：图到底能不能出来？</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>多模型降级链的产品逻辑：优先级、白名单、探活、全挂时的体验兜底</p></aside><!--seo:end-->  <div class="sec-label">Alice 的三种状态</div>
+    <p class="subtitle">在 示例助手 里，用户说「帮我画一张图」，但背后可能 Gemini 超时了、Seedream 限流了、GPT Image 也出错了。用户不关心哪个模型挂了，他只关心：图到底能不能出来？</p>
+  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>多模型降级链的产品逻辑：优先级、白名单、探活、全挂时的体验兜底</p></aside><!--seo:end-->  <div class="sec-label">示例助手 的三种状态</div>
 
   <div class="state-imgs reveal">
     <div class="state-item">
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 思考中">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="示例助手 思考中">
       <div class="s-label">思考中</div>
       <div class="s-desc">正在生图，请稍候</div>
     </div>
     <div class="state-item">
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 错误状态">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="示例助手 错误状态">
       <div class="s-label">出错了</div>
       <div class="s-desc">模型返回错误，正在切换备选</div>
     </div>
     <div class="state-item">
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 空状态">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="示例助手 空状态">
       <div class="s-label">全部失败</div>
       <div class="s-desc">所有模型不可用，友好降级</div>
     </div>
   </div>
 
-  <div class="sec-label">降级链：Alice 的保险策略</div>
+  <div class="sec-label">降级链：示例助手 的保险策略</div>
 
   <div class="chain-wrap" id="chainWrap">
     <div class="chain-node fail" id="n1">
@@ -160,10 +160,10 @@
   <div class="sec-label paywall-locked">最终结果：用户看到的</div>
 
   <div class="result-demo reveal paywall-locked">
-    <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 雨天思考 - 最终生图结果">
+    <img src="assets/fangpian/tiger-ai-assistant.webp" alt="示例助手 雨天思考 - 最终生图结果">
     <div class="result-text">
       <h4>虽然经历了两次模型失败，用户依然拿到了图</h4>
-      <p>用户只看到「Alice 正在画…」的等待状态，然后收到结果。背后模型 A 超时、模型 B 限流、模型 C 顶上，这些对用户完全透明。这就是降级链的价值。</p>
+      <p>用户只看到「示例助手 正在画…」的等待状态，然后收到结果。背后模型 A 超时、模型 B 限流、模型 C 顶上，这些对用户完全透明。这就是降级链的价值。</p>
     </div>
   </div>
 
@@ -189,7 +189,7 @@
 
   <div class="takeaway reveal paywall-locked">
     <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-    <span><b>用户不关心你用的哪个模型，他只关心图能不能出来。</b>在 Alice 里，降级链保证了即使主力模型全挂，用户最差也只是多等几秒或收到一句友好提示，永远不会撞上冷冰冰的错误页面。</span>
+    <span><b>用户不关心你用的哪个模型，他只关心图能不能出来。</b>在 示例助手 里，降级链保证了即使主力模型全挂，用户最差也只是多等几秒或收到一句友好提示，永远不会撞上冷冰冰的错误页面。</span>
   </div>
 
 </article>

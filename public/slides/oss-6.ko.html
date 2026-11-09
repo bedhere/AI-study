@@ -43,7 +43,7 @@
 @media (max-width: 768px) { .lbl-pair { grid-template-columns: 1fr; } }
 </style>
 <!-- SEO Start -->
-<meta name="description" content="지식 증류의 전체 흐름: 문제 세트 준비, 교사 모델의 응답과 추론 과정 보존, 정답·오답 라벨 대신 확률 분포 사용, 학생 모델 훈련, 평가와 반복. DeepSeek-R1과 함께 공개된 여섯 개 증류 모델을 예로 실제 증류 산출물이 어떤 모습인지 살펴봅니다.">
+<meta name="description" content="지난 절에서는 모델을 왜 작게 만드는지 다뤘습니다. 이번 절은 구체적으로 어떻게 하는지 봅니다. 전체 과정은 생각보다 소박합니다. 교사에게 문제를 풀게 하고, 그 풀이 과정을 기록해 두고, 그 자료로 학생을 훈련시킵니다. 어려운 건 절차가 아니라 세부입니다.">
 <meta name="keywords" content="지식 증류 과정,소프트 라벨,온도 계수,Teacher Student,DeepSeek-R1-Distill,모델 증류 방법">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -58,7 +58,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="증류는 어떻게 하는가: 교사에서 학생으로">
-<meta property="og:description" content="지식 증류의 전체 흐름, 그리고 DeepSeek-R1과 함께 공개된 여섯 개 증류 모델이라는 실제 사례.">
+<meta property="og:description" content="지난 절에서는 모델을 왜 작게 만드는지 다뤘습니다. 이번 절은 구체적으로 어떻게 하는지 봅니다. 전체 과정은 생각보다 소박합니다. 교사에게 문제를 풀게 하고, 그 풀이 과정을 기록해 두고, 그 자료로 학생을 훈련시킵니다. 어려운 건 절차가 아니라 세부입니다.">
 
 
 <meta property="og:image:width" content="1200">
@@ -66,7 +66,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="증류는 어떻게 하는가: 교사에서 학생으로">
-<meta name="twitter:description" content="지식 증류의 전체 흐름, 그리고 DeepSeek-R1과 함께 공개된 여섯 개 증류 모델이라는 실제 사례.">
+<meta name="twitter:description" content="지난 절에서는 모델을 왜 작게 만드는지 다뤘습니다. 이번 절은 구체적으로 어떻게 하는지 봅니다. 전체 과정은 생각보다 소박합니다. 교사에게 문제를 풀게 하고, 그 풀이 과정을 기록해 두고, 그 자료로 학생을 훈련시킵니다. 어려운 건 절차가 아니라 세부입니다.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->

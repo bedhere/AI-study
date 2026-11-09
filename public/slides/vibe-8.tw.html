@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Vibe Coding 方法論第 8 節：把模型配置、技術棧、資料格式等環境事實寫死在 Rule 裡。含 isComposing 真實輸入體驗區與資料格式三分法選擇器。">
+<meta name="description" content="每次新開對話，AI 都不知道該調哪個模型、超時設多少、專案用什麼框架。把這些環境事實一次性寫死在 Rule 裡，相當於給 AI 一份預填好的 .env 說明書，每輪對話自動帶入。本頁兩個演示都可以真實操作。">
 <meta name="author" content="方片">
-<title>第8節：把環境事實寫進 Rule | AI 系統課</title>
+<title>把環境事實寫進 Rule | 方片学堂</title>
 
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:locale" content="zh_TW">
@@ -94,7 +94,7 @@ pre code{background:none;padding:0;color:#d9f2ec}
 }
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="把環境事實寫進 Rule"><meta property="og:description" content="Vibe Coding 方法論第 8 節：把模型配置、技術棧、資料格式等環境事實寫死在 Rule 裡。含 isComposing 真實輸入體驗區與資料格式三分法選擇器。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="把環境事實寫進 Rule"><meta property="og:description" content="每次新開對話，AI 都不知道該調哪個模型、超時設多少、專案用什麼框架。把這些環境事實一次性寫死在 Rule 裡，相當於給 AI 一份預填好的 .env 說明書，每輪對話自動帶入。本頁兩個演示都可以真實操作。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

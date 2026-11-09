@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>輸出層：管住模型的嘴 | Token 降本增效</title>
+<title>輸出層：管住模型的嘴 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="輸出 Token 比輸入貴好幾倍。三招管住模型的嘴：明確的負向約束（No yapping）砍 30% 廢話、潤色場景用 Diff 別重寫整段、停止序列做物理截斷。省 Token 省時間還不用擔心模型亂講。">
+<meta name="description" content="實戰四層的最後一層。輸出 Token 比輸入貴好幾倍（回看第 3 節報價表），而且直接決定接口返回速度。管住模型的嘴，有三類合適的操作：指令層、程式碼層、工程層。">
 <meta name="keywords" content="輸出優化,負向約束,No yapping,Diff 輸出,停止序列,stop sequence,Token 節省">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="輸出層：管住模型的嘴">
-<meta property="og:description" content="負向約束、Diff 潤色、停止序列：輸出端的三招。">
+<meta property="og:description" content="實戰四層的最後一層。輸出 Token 比輸入貴好幾倍（回看第 3 節報價表），而且直接決定接口返回速度。管住模型的嘴，有三類合適的操作：指令層、程式碼層、工程層。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_HK">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="輸出層：管住模型的嘴">
-<meta name="twitter:description" content="負向約束、Diff 潤色、停止序列：輸出端的三招。">
+<meta name="twitter:description" content="實戰四層的最後一層。輸出 Token 比輸入貴好幾倍（回看第 3 節報價表），而且直接決定接口返回速度。管住模型的嘴，有三類合適的操作：指令層、程式碼層、工程層。">
 
 <!-- SEO End -->
 <style>

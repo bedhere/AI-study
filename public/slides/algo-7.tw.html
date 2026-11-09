@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="動手實戰篇的 Compaction 其實是分治：把長對話切段、各自摘要、再合併。親手跑一次遞迴摘要，看 3600 token 的對話怎麼被壓到 200，也看清壓縮丟掉了什麼。">
+<meta name="description" content="動手實戰篇講過：對話太長裝不下時，AI 會做一次 Compaction——把舊對話壓成摘要。當時說「像搬家前把雜物打包」，這一課揭開包裝紙：它是一個有兩千年歷史的演算法套路，叫分治。上一課的遞迴是「拆」，這一課補上另一半：「拆完再合」。">
 <meta name="keywords" content="分治演算法,上下文壓縮,Compaction原理,遞迴摘要,歸併排序,長對話壓縮,AI上下文">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="分治：上下文壓縮的演算法原理">
-<meta property="og:description" content="把長對話切段、各自摘要、再合併——Compaction 就是分治。親手壓一段 3600 token 的對話到 200，順便看清它丟了什麼。">
+<meta property="og:description" content="動手實戰篇講過：對話太長裝不下時，AI 會做一次 Compaction——把舊對話壓成摘要。當時說「像搬家前把雜物打包」，這一課揭開包裝紙：它是一個有兩千年歷史的演算法套路，叫分治。上一課的遞迴是「拆」，這一課補上另一半：「拆完再合」。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="分治：上下文壓縮的演算法原理">
-<meta name="twitter:description" content="把長對話切段、各自摘要、再合併——Compaction 就是分治。親手壓一次 3600 → 200 token。">
+<meta name="twitter:description" content="動手實戰篇講過：對話太長裝不下時，AI 會做一次 Compaction——把舊對話壓成摘要。當時說「像搬家前把雜物打包」，這一課揭開包裝紙：它是一個有兩千年歷史的演算法套路，叫分治。上一課的遞迴是「拆」，這一課補上另一半：「拆完再合」。">
 
 <!-- SEO End -->
 <style>

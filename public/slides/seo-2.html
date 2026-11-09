@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>SEO 最低可行清单：能被抓、能被读懂、能被收录 | 被搜到：SEO 与 GEO</title>
+<title>SEO 最低可行清单：能被抓、能被读懂、能被收录 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <link rel="stylesheet" href="taste.css?v=20260810a">
 <link rel="stylesheet" href="seo.css?v=20260811a">
 <!-- SEO Start -->
-<meta name="description" content="SEO 的最低可行清单只有三件事：能被抓（正文别全靠 JS 渲染）、能被读懂（一页一个主题，title 说人话）、能被收录（sitemap、robots、站长平台提交）。抓取模拟器亲手切两态，看爬虫到底拿到了什么。">
+<meta name="description" content="SEO 这个词被各种「秘籍」搞得神神叨叨，其实对一个人的小站来说，值得做的部分很小、很明确：让爬虫抓得到、让引擎读得懂、让收录查得着。这一节只讲做了就有效、不做就归零的部分，每一条都能自己动手核对。">
 <meta name="keywords" content="SEO,sitemap,robots.txt,title 优化,meta description,canonical,站长平台,IndexNow,收录">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,15 +23,15 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
+<meta property="og:site_name" content="案例站点 · AI 产品经理培训">
 <meta property="og:title" content="SEO 最低可行清单：能被抓、能被读懂、能被收录">
-<meta property="og:description" content="只讲做了就有效、不做就归零的部分。十项清单，全部能自己动手核对。">
+<meta property="og:description" content="SEO 这个词被各种「秘籍」搞得神神叨叨，其实对一个人的小站来说，值得做的部分很小、很明确：让爬虫抓得到、让引擎读得懂、让收录查得着。这一节只讲做了就有效、不做就归零的部分，每一条都能自己动手核对。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SEO 最低可行清单：能被抓、能被读懂、能被收录">
-<meta name="twitter:description" content="只讲做了就有效、不做就归零的部分。十项清单，全部能自己动手核对。">
+<meta name="twitter:description" content="SEO 这个词被各种「秘籍」搞得神神叨叨，其实对一个人的小站来说，值得做的部分很小、很明确：让爬虫抓得到、让引擎读得懂、让收录查得着。这一节只讲做了就有效、不做就归零的部分，每一条都能自己动手核对。">
 
 <!-- SEO End -->
 <style>
@@ -110,7 +110,7 @@
     <h1>SEO 最低可行清单：能被抓、能被读懂、能被收录</h1>
     <p class="subtitle">SEO 这个词被各种「秘籍」搞得神神叨叨，其实对一个人的小站来说，值得做的部分很小、很明确：<b>让爬虫抓得到、让引擎读得懂、让收录查得着</b>。这一节只讲做了就有效、不做就归零的部分，每一条都能自己动手核对。</p>
     <div class="chips"><span class="chip">抓取模拟器</span><span class="chip">title 改写</span><span class="chip">收录三件套</span><span class="chip">十项自查</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>只讲做了就有效的部分：一页一个主题、title 说人话、正文别全靠 JS 渲染、sitemap 与站长平台提交。抓取模拟器亲手切两态，看爬虫到底拿到了什么</p></aside><!--seo:end-->  <section class="reveal">
+  </header><aside class="xa-tldr company-source-case"><p>本页保留课程来源项目的公开网站案例作为教学材料。案例经历、流量与收录数据不属于方片内部平台，代码示例也不代表当前学堂的实际实现。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>只讲做了就有效的部分：一页一个主题、title 说人话、正文别全靠 JS 渲染、sitemap 与站长平台提交。抓取模拟器亲手切两态，看爬虫到底拿到了什么</p></aside><!--seo:end-->  <section class="reveal">
     <div class="sec-label">最低可行是什么意思</div>
     <p class="desc">传统 SEO 是个大行业：外链建设、竞品词库、站群、老域名…那套东西面向有团队有预算的公司。一个人做产品，学那些是浪费生命。好消息是，搜索引擎这些年一直在把游戏往一个方向推：<b>把内容做好、把技术障碍清掉的站，自然会被善待</b>。</p>
     <p class="desc" style="margin-top:16px">所以最低可行清单的逻辑是：只做那些不做就直接出局的事。按照上一节漏斗的分层，它们正好分成三组：能被抓（抓取层）、能被读懂（理解层）、能被收录（索引层）。三组都通了，剩下的交给内容质量，那是第 5 节的事。</p>
@@ -173,7 +173,7 @@
           <div class="t2-row" data-k="0">
             <div class="t2-serp">invoiceowl.example.com</div>
             <div class="t2-tt" id="t2t0">首页 - 发票猫头鹰</div>
-            <div class="t2-dd" id="t2d0">欢迎访问本站。</div>
+            <div class="t2-dd" id="t2d0">欢迎访问案例站点。</div>
             <div class="t2-why">「首页」两个字没有回答任何问题。改成用户会搜的那句话：谁、干什么、给谁用。description 别写欢迎语，写清这页能帮用户解决什么，它就是你的免费广告位。</div>
           </div>
           <div class="t2-row" data-k="1">
@@ -244,7 +244,7 @@
     <p class="desc">抓得到、读得懂之后，最后一组动作是主动把站送到引擎面前。四样东西，一个下午能全部做完，做完收录从玄学变成一个能看数字的过程。</p>
     <div class="tbl-wrap"><table class="tbl">
       <tr><th>动作</th><th>做什么</th><th>为什么值得</th></tr>
-      <tr><td><b>sitemap.xml</b></td><td>一个 XML 文件列出你全部页面的地址，放在站点根目录。多语言站每个 URL 还要用 <span class="k2-code">hreflang</span> 互指各语言版本</td><td>引擎照着清单抓，不用自己摸索你的站有几页。本站 2026 年 8 月补上英韩页面后，sitemap 条目从约 330 涨到约 950</td></tr>
+      <tr><td><b>sitemap.xml</b></td><td>一个 XML 文件列出你全部页面的地址，放在站点根目录。多语言站每个 URL 还要用 <span class="k2-code">hreflang</span> 互指各语言版本</td><td>引擎照着清单抓，不用自己摸索你的站有几页。案例站点 2026 年 8 月补上英韩页面后，sitemap 条目从约 330 涨到约 950</td></tr>
       <tr><td><b>robots.txt</b></td><td>根目录下的一个文本文件，声明哪些路径欢迎抓、哪些别抓，末尾指向 sitemap 的地址</td><td>它是爬虫进站看的第一个文件。写错一行 Disallow 能把全站封掉，改完务必用站长工具验证</td></tr>
       <tr><td><b>canonical</b></td><td>每页 head 里一行 <span class="k2-code">&lt;link rel="canonical"&gt;</span>，声明这页的正式地址</td><td>带参数的地址、多个入口指向同一页时，引擎知道该把权重记在谁头上，不会自己人分自己人的票</td></tr>
       <tr><td><b>站长平台提交</b></td><td>Google Search Console 和 Bing Webmaster 各注册一次，验证域名、提交 sitemap。Bing 顺手开通 IndexNow：发版后把变更页面的地址推给它</td><td>从此收录数、抓取错误、展示次数全部有报表。别只提交 Google：下一节的 GEO 会讲为什么 Bing 同样重要</td></tr>
@@ -252,7 +252,7 @@
     <p class="desc" style="margin-top:16px">这四样都不需要每天维护。sitemap 让构建脚本自动生成，站长平台每周看一眼报表，就够了。</p>
     <a class="xref" href="seo-4.html">
       <span class="xref-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
-      <span><span class="xref-t">这张清单漏一项会怎样 · 第 4 节</span><span class="xref-d">本站就漏过：sitemap 少了 470 个地址、Bing 没提交。第 4 节整节复盘这些坑的代价和修法。</span></span>
+      <span><span class="xref-t">这张清单漏一项会怎样 · 第 4 节</span><span class="xref-d">案例站点就漏过：sitemap 少了 470 个地址、Bing 没提交。第 4 节整节复盘这些坑的代价和修法。</span></span>
     </a>
   </section>
 
@@ -321,7 +321,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>提交平台把收录变成可观测：</b>Google 和 Bing 都要提交，从此有报表有基线。十项清单打完分，缺哪补哪。</p></div>
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>能进提示词和脚本的要求，别放进记忆和自觉：</b>那段固定提示词贴进项目规则，每个新页面天生合格。</p></div>
     </div>
-    <p class="src-note"><b>内容来源：</b>方片学堂「被搜到」专题原创。文中 sitemap 条目数（约 330 → 约 950）为本站 2026 年 8 月改造的真实数据，详见第 4 节完整复盘。</p>
+    <p class="src-note"><b>内容来源：</b>课程来源项目的 SEO / GEO 教学材料。文中 sitemap 条目数（约 330 → 约 950）为案例站点 2026 年 8 月改造的真实数据，详见第 4 节完整复盘。</p>
   </section>
 
 </main>

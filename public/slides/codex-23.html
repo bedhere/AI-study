@@ -116,7 +116,7 @@
 @media(prefers-reduced-motion:reduce){.demo,.demo *{transition-duration:0s!important;animation-duration:0s!important}}
 @media(max-width:760px){.lesson{overflow-x:hidden}.compare{grid-template-columns:1fr}.dm-cols{grid-template-columns:1fr}.dm-facts{grid-template-columns:1fr}.objective{grid-template-columns:1fr}.lesson-header:after{display:none}.demo{padding:18px}.demo-ctrl{width:100%}.demo-ctrl button{flex:1}.dm-body{min-height:0}.dm-wire,.dm-wire.off{flex:1 1 100%;max-width:none;flex-direction:row;min-height:28px}.dm-wire span{width:24px;height:2px}.visual{padding:14px}.dm-trace li{flex-direction:column;gap:4px}.demo,.visual,.cmp-card{max-width:100%;min-width:0}.lesson code{overflow-wrap:anywhere;word-break:break-word}.dm-summary.on{max-height:560px}}
 </style>
-<meta name="description" content="默认拓扑里 V8 已在独立宿主进程。同一段 JS 换四种宿主，隔离边界、生命周期和失败后果各自不同">
+<meta name="description" content="上一课讲 exec 和 wait 的语义。这一课问另一件事：这段 JavaScript 到底挂在谁身上，挂点换了之后，故障域和状态归属怎么变。">
 <meta name="author" content="方片">
 
 
@@ -128,7 +128,7 @@
 
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
 <meta property="og:locale" content="zh_CN">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="宿主拆分：程序挂在谁身上"><meta property="og:description" content="默认拓扑里 V8 已在独立宿主进程。同一段 JS 换四种宿主，隔离边界、生命周期和失败后果各自不同"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="宿主拆分：程序挂在谁身上"><meta property="og:description" content="上一课讲 exec 和 wait 的语义。这一课问另一件事：这段 JavaScript 到底挂在谁身上，挂点换了之后，故障域和状态归属怎么变。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

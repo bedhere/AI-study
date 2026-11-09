@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>他们会这样考你 · 从 Demo 到产品 30 问 | 方片学堂</title>
+<title>实战 · 从 Demo 到产品 · 30 道灵魂拷问 | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>
@@ -56,7 +56,7 @@
 }
 </style>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style><!-- SEO Start -->
-<meta name="description" content="动手实战篇考察实战：面试官、老板、技术同事会怎样考你 AI Agent 产品化？30 道真实场景问题，每题附考察意图、答题框架与加分点：Demo 到产品的差距、生图产品化、Agent 卡死控制、上下文压缩、长期记忆、Prompt Harness、多 Agent 协作、权限安全、MCP 生态、成本控制。">
+<meta name="description" content="动手实战篇学完了，你已经知道 Demo 和产品之间隔着什么。这 30 个问题来自三个真实场景，先自己开口回答，再看框架。">
 <meta name="keywords" content="AI产品经理面试题,Agent产品化,Agent卡死,上下文压缩,长期记忆,多Agent,MCP,AI PM面试">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -71,8 +71,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
-<meta property="og:title" content="他们会这样考你 · 从 Demo 到产品 30 问">
-<meta property="og:description" content="面试官、老板、技术同事会怎样考你 AI Agent 产品化？30 道真实场景问题，每题附考察意图、答题框架与加分点。">
+<meta property="og:title" content="实战 · 从 Demo 到产品 · 30 道灵魂拷问">
+<meta property="og:description" content="动手实战篇学完了，你已经知道 Demo 和产品之间隔着什么。这 30 个问题来自三个真实场景，先自己开口回答，再看框架。">
 
 
 <meta property="og:image:width" content="1200">
@@ -80,8 +80,8 @@
 <meta property="og:locale" content="zh_CN">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="他们会这样考你 · 从 Demo 到产品 30 问">
-<meta name="twitter:description" content="面试官、老板、技术同事会怎样考你 AI Agent 产品化？30 道真实场景问题，每题附考察意图、答题框架与加分点。">
+<meta name="twitter:title" content="实战 · 从 Demo 到产品 · 30 道灵魂拷问">
+<meta name="twitter:description" content="动手实战篇学完了，你已经知道 Demo 和产品之间隔着什么。这 30 个问题来自三个真实场景，先自己开口回答，再看框架。">
 
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
@@ -94,7 +94,7 @@
     <div class="kicker">他们会这样考你</div>
     <h1>实战 · 从 Demo 到产品 · 30 道灵魂拷问</h1>
     <p class="subtitle">动手实战篇学完了，你已经知道 Demo 和产品之间隔着什么。这 30 个问题来自三个真实场景，先自己开口回答，再看框架。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>每题附考察意图、答题框架与加分点：Demo 到上线的差距 / Agent 卡死 / 上下文压缩 / 记忆设计 / 多 Agent / MCP / 成本账单</p></aside><!--seo:end-->  <section>
+  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>每题附考察意图、答题框架与加分点：Demo 到上线的差距 / Agent 卡死 / 上下文压缩 / 记忆设计 / 多 Agent / MCP / 成本账单</p></aside><!--seo:end-->  <section>
     <div class="iq-intro">
       <div class="iq-intro-title">怎么用这一页</div>
       <div class="iq-intro-lead">每道题都标注了提问者。他们问同一块知识，想听的东西却不一样。</div>
@@ -330,7 +330,7 @@
         <ol>
           <li><strong>先给结论：</strong>用户想的和生图模型需要的是两种语言，中间必须有一层 LLM 做翻译，把一句话扩写成几百 token 的精确视觉描述。</li>
           <li><strong>给三个理由：</strong>用户不会写生图 Prompt，没人会主动打出 golden hour lighting 这种词；模型理解不了模糊意图，「发呆」对它来说根本没画面；每个生图模型方言还不同，Midjourney、DALL-E、Stable Diffusion 偏好各异，得按目标模型定制。</li>
-          <li><strong>举个例子：</strong>「Alice 在阳台发呆」经过翻译层，会变成站姿、神态、灯光、发型、标志性项链、构图俱全的英文长描述，出图才稳定。</li>
+          <li><strong>举个例子：</strong>「示例助手 在阳台发呆」经过翻译层，会变成站姿、神态、灯光、发型、标志性项链、构图俱全的英文长描述，出图才稳定。</li>
           <li><strong>给架构定位：</strong>这层翻译写进生图的产品化清单里，是固定架构，省掉它省的是小钱，赔的是出图质量。</li>
         </ol>
       </div>

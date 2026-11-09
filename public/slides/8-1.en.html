@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Why Do Multi-Turn Conversations Get More Expensive? Token Billing Explained | 方片学堂</title>
+<title>Why Do Multi-Turn Conversations Get More Expensive? | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -50,7 +50,7 @@ input[type=range]{width:100%;accent-color:var(--danger);height:6px;cursor:pointe
 .takeaway b{color:var(--danger)}
 </style>
 <!-- SEO Start -->
-<meta name="description" content="LLM APIs charge by Token. In multi-turn conversations, each turn must send the full history, causing Token consumption to grow linearly. A visual breakdown of multi-turn Token billing logic to help you understand why costs explode.">
+<meta name="description" content="LLMs charge per input Token. Every turn requires resending the full conversation history — the longer the history, the more Tokens, and the higher the cost. Drag the slider to simulate cost accumulation.">
 <meta name="keywords" content="LLM billing,Token billing,multi-turn conversation cost,API cost,LLM cost savings,context cost">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
@@ -65,8 +65,8 @@ input[type=range]{width:100%;accent-color:var(--danger);height:6px;cursor:pointe
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
-<meta property="og:title" content="Why Do Multi-Turn Conversations Get More Expensive? Token Billing Explained">
-<meta property="og:description" content="LLM APIs charge by Token. In multi-turn conversations, each turn must send the full history, causing Token consumption to grow linearly. A visual breakdown of multi-turn Token billing logic to help you understand why costs explode.">
+<meta property="og:title" content="Why Do Multi-Turn Conversations Get More Expensive?">
+<meta property="og:description" content="LLMs charge per input Token. Every turn requires resending the full conversation history — the longer the history, the more Tokens, and the higher the cost. Drag the slider to simulate cost accumulation.">
 
 
 <meta property="og:image:width" content="1200">
@@ -74,8 +74,8 @@ input[type=range]{width:100%;accent-color:var(--danger);height:6px;cursor:pointe
 <meta property="og:locale" content="en_US">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Why Do Multi-Turn Conversations Get More Expensive? Token Billing Explained">
-<meta name="twitter:description" content="LLM APIs charge by Token. In multi-turn conversations, each turn must send the full history, causing Token consumption to grow linearly. A visual breakdown of multi-turn Token billing logic to help you understand why costs explode.">
+<meta name="twitter:title" content="Why Do Multi-Turn Conversations Get More Expensive?">
+<meta name="twitter:description" content="LLMs charge per input Token. Every turn requires resending the full conversation history — the longer the history, the more Tokens, and the higher the cost. Drag the slider to simulate cost accumulation.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Permissions & Safety: What Can an Agent Do — and What Should It Not | 方片学堂</title>
+<title>Permissions &amp; Safety | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
@@ -97,7 +97,7 @@
   .decisions{grid-template-columns:1fr}
 }
 </style>
-<meta name="description" content="Agent permission and safety design: interactive comparison of Confirm, Auto, and Smart modes. Product managers must balance safety and efficiency.">
+<meta name="description" content="What can an Agent do — and what should it not? Switch between three permission modes and observe how the same set of actions is handled differently.">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
 
@@ -110,11 +110,11 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
-<meta property="og:title" content="Permissions &amp; Safety: What Can an Agent Do — and What Should It Not">
+<meta property="og:title" content="Permissions &amp; Safety">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="Agent permission and safety design: interactive comparison of Confirm, Auto, and Smart modes. Product managers must balance safety and efficiency."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="What can an Agent do — and what should it not? Switch between three permission modes and observe how the same set of actions is handled differently."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -124,7 +124,7 @@
     <div class="kicker">Agent Engineering</div>
     <h1>Permissions & Safety</h1>
     <p class="subtitle">What can an Agent do — and what should it not? Switch between three permission modes and observe how the same set of actions is handled differently.</p>
-  </header>
+  </header><aside class="xa-tldr company-example-note"><p>Assistants, characters and workflows on this page are teaching examples, not launched Fangpian products or verified project results.</p></aside>
 
   <div class="sec-label">Choose Permission Mode</div>
   <div class="mode-tabs" id="modeTabs">
@@ -137,7 +137,7 @@
       <div class="mt-desc">All actions are executed automatically with no confirmation</div>
     </div>
     <div class="mode-tab" onclick="pickMode(2)">
-      <div class="mt-name">Smart Mode <span class="mt-tag" style="background:rgba(22,163,74,.08);color:var(--green)">Alice</span></div>
+      <div class="mt-name">Smart Mode <span class="mt-tag" style="background:rgba(22,163,74,.08);color:var(--green)">example assistant</span></div>
       <div class="mt-desc">An LLM classifier assesses risk level and handles each action accordingly</div>
     </div>
   </div>
@@ -177,13 +177,13 @@
   <div class="sec-label paywall-locked">Three Design Decisions</div>
   <div class="decisions paywall-locked">
     <div class="dec-card"><b>📌 Design Decision 1:</b> The core tension in permission design is safety vs. efficiency. Every confirmation dialog interrupts the user flow, but skipping confirmations risks irreversible damage. Which does your product choose?</div>
-    <div class="dec-card"><b>📌 Design Decision 2:</b> Alice's "Smart Mode" uses an LLM to assess risk, but LLM judgments can be wrong. A single misclassification could delete user data. Is this a risk you can accept?</div>
+    <div class="dec-card"><b>📌 Design Decision 2:</b> example assistant's "Smart Mode" uses an LLM to assess risk, but LLM judgments can be wrong. A single misclassification could delete user data. Is this a risk you can accept?</div>
     <div class="dec-card"><b>📌 Design Decision 3:</b> "Read-only" and "destructive" are tool-level flags. It's the PM's job to decide which risk tier each tool belongs to — this is a product decision, not something you can hand off to engineering.</div>
   </div>
 
   <div class="sec-label paywall-locked">Takeaway</div>
   <div class="l-callout paywall-locked">
-    <b>Takeaway</b>&nbsp;The essence of Agent permission design is finding the right balance between safety and efficiency: confirming everything is safest but slowest; allowing everything is fastest but most dangerous. Alice's approach is to use AI to assess risk level — low-risk actions are auto-approved; high-risk actions are intercepted for confirmation.
+    <b>Takeaway</b>&nbsp;The essence of Agent permission design is finding the right balance between safety and efficiency: confirming everything is safest but slowest; allowing everything is fastest but most dangerous. example assistant's approach is to use AI to assess risk level — low-risk actions are auto-approved; high-risk actions are intercepted for confirmation.
   </div>
 </article>
 
@@ -240,7 +240,7 @@ var MODES = [
   },
   {
     name:'Smart Mode',
-    detail:'Alice\'s approach: an LLM classifier evaluates the risk level of each action in real time. Low risk = auto-approve; medium risk = auto-approve but notify the user; high risk = intercept and require confirmation.',
+    detail:'example assistant\'s approach: an LLM classifier evaluates the risk level of each action in real time. Low risk = auto-approve; medium risk = auto-approve but notify the user; high risk = intercept and require confirmation.',
     how:'The LLM classifier assesses risk based on tool metadata and context',
     pros:['Balances safety and efficiency','Only interrupts the user for genuinely dangerous actions','User experience closest to having a reliable assistant'],
     cons:['LLM judgment can fail (false allow / false block)','The classifier itself consumes extra Tokens','Requires maintaining risk classification rules'],

@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>架構層：KV Cache 的注意事項 | Token 降本增效</title>
+<title>架構層：KV Cache 的注意事項 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="KV Cache 是商業化降本最被低估的技術點：前綴匹配命中緩存最高省 90%。兩個隱形的坑：動態切換 tools 參數會把緩存全打穿，粗暴滑動窗口讓前綴永遠在變。章節緩存把命中率從 10% 提到 80%。">
+<meta name="description" content="在商業化產品的降本增效中，KV Cache 是最被低估的技術點之一。命中緩存和沒命中，最高差 90% 的成本——但裏面有幾個隱形的坑，不説你可能不知道。">
 <meta name="keywords" content="KV Cache,前綴緩存,上下文緩存,緩存命中,tools 參數,滑動窗口,章節緩存">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="架構層：KV Cache 的注意事項">
-<meta property="og:description" content="前綴匹配最高省 90%，但動態切換工具會把緩存全打穿。">
+<meta property="og:description" content="在商業化產品的降本增效中，KV Cache 是最被低估的技術點之一。命中緩存和沒命中，最高差 90% 的成本——但裏面有幾個隱形的坑，不説你可能不知道。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_HK">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="架構層：KV Cache 的注意事項">
-<meta name="twitter:description" content="前綴匹配最高省 90%，但動態切換工具會把緩存全打穿。">
+<meta name="twitter:description" content="在商業化產品的降本增效中，KV Cache 是最被低估的技術點之一。命中緩存和沒命中，最高差 90% 的成本——但裏面有幾個隱形的坑，不説你可能不知道。">
 
 <!-- SEO End -->
 <style>

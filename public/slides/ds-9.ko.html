@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="대규모 모델 원리 편에서 토큰화를 봤어요. 이번엔 바닥: 접두사 트리가 「五花肉」(삼겹살 부위 이름)을 한 덩어리로 어떻게 알아보는지. Trie를 따라 직접 토큰화해 보세요.">
+<meta name="description" content="대규모 모델 원리 편의 그 디테일, 기억나세요?—Tokenizer가 「五花肉」을 토큰 한 덩어리로 자르고, 글자 셋이 아니었죠. 그때 「자주 나오는 조합은 한 덩어리」라고 했어요. 이번엔 바닥을 엽니다: 수만 개 단어 속에서 「五花肉」을 통째로 가져가야 한다고 어떻게 순간 알아보나요? 답은 Trie(접두사 트리)라는 수납 방식—어휘 사전을 「공유하는 앞부분」으로 트리에 걸어 두는 거예요.">
 <meta name="keywords" content="Trie 접두사 트리,Tokenizer 토큰화,어휘 사전,BPE,토큰,최장 일치,대규모 모델 토큰화 원리">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="어휘 사전과 Trie: Tokenizer가 단어를 자르는 비밀">
-<meta property="og:description" content="접두사 트리가 「五花肉」을 한 덩어리로 어떻게 알아보나요? Trie를 따라 한 번 토큰화하며 탐욕 최장 일치를 이해하세요.">
+<meta property="og:description" content="대규모 모델 원리 편의 그 디테일, 기억나세요?—Tokenizer가 「五花肉」을 토큰 한 덩어리로 자르고, 글자 셋이 아니었죠. 그때 「자주 나오는 조합은 한 덩어리」라고 했어요. 이번엔 바닥을 엽니다: 수만 개 단어 속에서 「五花肉」을 통째로 가져가야 한다고 어떻게 순간 알아보나요? 답은 Trie(접두사 트리)라는 수납 방식—어휘 사전을 「공유하는 앞부분」으로 트리에 걸어 두는 거예요.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="어휘 사전과 Trie: Tokenizer가 단어를 자르는 비밀">
-<meta name="twitter:description" content="접두사 트리가 「五花肉」을 한 덩어리로 어떻게 알아보나요? Trie를 따라 한 번 토큰화하며 탐욕 최장 일치를 이해하세요.">
+<meta name="twitter:description" content="대규모 모델 원리 편의 그 디테일, 기억나세요?—Tokenizer가 「五花肉」을 토큰 한 덩어리로 자르고, 글자 셋이 아니었죠. 그때 「자주 나오는 조합은 한 덩어리」라고 했어요. 이번엔 바닥을 엽니다: 수만 개 단어 속에서 「五花肉」을 통째로 가져가야 한다고 어떻게 순간 알아보나요? 답은 Trie(접두사 트리)라는 수납 방식—어휘 사전을 「공유하는 앞부분」으로 트리에 걸어 두는 거예요.">
 
 <!-- SEO End -->
 <style>

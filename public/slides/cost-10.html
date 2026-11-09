@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>语义层：双重蒸馏 | Token 降本增效</title>
+<title>语义层：双重蒸馏 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="别把上下文窗口当垃圾桶：注意力 O(N²) 让长提示词又贵又慢，中段迷失效应让效果更差。双重蒸馏解法：动态 Few-Shot 从 4000 Token 砍到 500，LLMLingua-2 把文档压缩 5-20 倍。">
+<meta name="description" content="格式的税砍完了，往深一层看内容本身。RAG 和长文档场景里最常见的工程错误：把上下文窗口当垃圾桶——Few-Shot 案例、检索文档全怼进去，让模型自己辨识。能用，但不该这样用。">
 <meta name="keywords" content="上下文优化,中段迷失,Lost in the Middle,动态 Few-Shot,LLMLingua,Prompt 压缩,RAG 优化">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
 <meta property="og:title" content="语义层：双重蒸馏">
-<meta property="og:description" content="高密度的 Prompt 才能换来高质量的 Attention。">
+<meta property="og:description" content="格式的税砍完了，往深一层看内容本身。RAG 和长文档场景里最常见的工程错误：把上下文窗口当垃圾桶——Few-Shot 案例、检索文档全怼进去，让模型自己辨识。能用，但不该这样用。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="语义层：双重蒸馏">
-<meta name="twitter:description" content="高密度的 Prompt 才能换来高质量的 Attention。">
+<meta name="twitter:description" content="格式的税砍完了，往深一层看内容本身。RAG 和长文档场景里最常见的工程错误：把上下文窗口当垃圾桶——Few-Shot 案例、检索文档全怼进去，让模型自己辨识。能用，但不该这样用。">
 
 <!-- SEO End -->
 <style>

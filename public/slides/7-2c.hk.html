@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>多工具編排：併發還是串行？ | 方片学堂</title>
+<title>多工具編排：併發 vs 串行 | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}} body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -94,7 +94,7 @@
   .compare-row{grid-template-columns:1fr}
 }
 </style>
-<meta name="description" content="多工具編排：併發還是串行？通過甘特圖可視化對比串行、併發、智能分批三種工具編排策略的執行時間差異，幫助產品經理理解框架層面的關鍵設計決策。">
+<meta name="description" content="同一輪返回 3 個工具調用，執行順序點樣揀？選擇模式，點擊演示，觀察時間差異。">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 
@@ -107,12 +107,12 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
-<meta property="og:title" content="多工具編排：併發還是串行？">
+<meta property="og:title" content="多工具編排：併發 vs 串行">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_HK">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:description" content="多工具編排：併發還是串行？通過甘特圖可視化對比串行、併發、智能分批三種工具編排策略的執行時間差異，幫助產品經理理解框架層面的關鍵設計決策。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="同一輪返回 3 個工具調用，執行順序點樣揀？選擇模式，點擊演示，觀察時間差異。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -121,7 +121,7 @@
     <div class="kicker">Agent 工程</div>
     <h1>多工具編排：併發 vs 串行</h1>
     <p class="subtitle">同一輪返回 3 個工具調用，執行順序點樣揀？選擇模式，點擊演示，觀察時間差異。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>isConcurrencySafe 決定工具能否並行，調度策略可視化</p></aside><!--seo:end-->  <div class="orch paywall-locked xa-peek">
+  </header><aside class="xa-tldr company-example-note"><p>本頁的助手、角色與流程為教學示例，不代表方片已上線產品或真實專案業績。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>isConcurrencySafe 決定工具能否並行，調度策略可視化</p></aside><!--seo:end-->  <div class="orch paywall-locked xa-peek">
     <!-- 左：场景 -->
     <aside class="scene-panel">
       <div class="l-label">用戶場景</div>
@@ -181,7 +181,7 @@
 
   <div class="sec-label paywall-locked">Takeaway</div>
   <div class="l-callout paywall-locked">
-    <b>Takeaway</b>　同一輪模型返回多個工具調用時，框架需要決定：全部串行（最安全）、全部併發（最快）、還是按安全性智能分批（Alice 的做法）。這個決定直接影響用戶等待時間。
+    <b>Takeaway</b>　同一輪模型返回多個工具調用時，框架需要決定：全部串行（最安全）、全部併發（最快）、還是按安全性智能分批（示例助手 的做法）。這個決定直接影響用戶等待時間。
   </div>
 </article>
 
@@ -213,7 +213,7 @@ var MODES = [
   },
   {
     key:'smart',
-    title:'智能分批（Alice 方案）',
+    title:'智能分批（示例助手 方案）',
     subtitle:'按安全性自動分組',
     totalTime:2.7,
     batches:[[0],[1,2]],

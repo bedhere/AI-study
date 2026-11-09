@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Vibe Coding 方法論第 10 節：長對話上下文錨定，超過 10 輪強制複述目標；中文寫作規範與違禁句式自查清單。含上下文漂移模擬器與 AI 腔檢測器兩個互動演示。">
+<meta name="description" content="對話開頭説了用 PostgreSQL，聊到 30 輪 AI 突然建議 SQLite，因為早期約定已經被上下文窗口擠掉了。這一節講兩件事：怎麼對抗長對話的認知漂移，以及怎麼讓 AI 寫出的中文擺脱 AI 腔。兩個互動演示，動手拖一拖、點一點。">
 <meta name="author" content="方片">
-<title>第10節：長對話錨定與寫作規範 | AI 系統課</title>
+<title>長對話錨定與寫作規範 | 方片学堂</title>
 
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:locale" content="zh_HK">
@@ -116,7 +116,7 @@ code{color:var(--vibe-deep)}
 }
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="長對話錨定與寫作規範"><meta property="og:description" content="Vibe Coding 方法論第 10 節：長對話上下文錨定，超過 10 輪強制複述目標；中文寫作規範與違禁句式自查清單。含上下文漂移模擬器與 AI 腔檢測器兩個互動演示。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="長對話錨定與寫作規範"><meta property="og:description" content="對話開頭説了用 PostgreSQL，聊到 30 輪 AI 突然建議 SQLite，因為早期約定已經被上下文窗口擠掉了。這一節講兩件事：怎麼對抗長對話的認知漂移，以及怎麼讓 AI 寫出的中文擺脱 AI 腔。兩個互動演示，動手拖一拖、點一點。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

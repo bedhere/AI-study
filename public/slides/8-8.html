@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>输出层优化 + KV Cache 进阶：成本优化的最后一公里 | 方片学堂</title>
+<title>输出层 + KV Cache 进阶：控制输出 = 控制成本 | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>
@@ -136,7 +136,7 @@ pre.code .hl{color:#f38ba8}
 }
 </style>
 <!-- SEO Start -->
-<meta name="description" content="输出 Token 通常比输入贵 2-3 倍。讲解如何通过限制输出长度、要求简洁回答、格式约束来控制输出成本，以及 KV Cache 的进阶使用场景与边界条件。">
+<meta name="description" content="输出 Token 比输入贵 3–5 倍。点击下方技巧切换互动演示，体验三个输出层技巧和两个 KV Cache 进阶陷阱。">
 <meta name="keywords" content="输出Token优化,KV Cache进阶,大模型输出成本,max_tokens,AI成本精细化">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -151,8 +151,8 @@ pre.code .hl{color:#f38ba8}
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
-<meta property="og:title" content="输出层优化 + KV Cache 进阶：成本优化的最后一公里">
-<meta property="og:description" content="输出 Token 通常比输入贵 2-3 倍。讲解如何通过限制输出长度、要求简洁回答、格式约束来控制输出成本，以及 KV Cache 的进阶使用场景与边界条件。">
+<meta property="og:title" content="输出层 + KV Cache 进阶：控制输出 = 控制成本">
+<meta property="og:description" content="输出 Token 比输入贵 3–5 倍。点击下方技巧切换互动演示，体验三个输出层技巧和两个 KV Cache 进阶陷阱。">
 
 
 <meta property="og:image:width" content="1200">
@@ -160,8 +160,8 @@ pre.code .hl{color:#f38ba8}
 <meta property="og:locale" content="zh_CN">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="输出层优化 + KV Cache 进阶：成本优化的最后一公里">
-<meta name="twitter:description" content="输出 Token 通常比输入贵 2-3 倍。讲解如何通过限制输出长度、要求简洁回答、格式约束来控制输出成本，以及 KV Cache 的进阶使用场景与边界条件。">
+<meta name="twitter:title" content="输出层 + KV Cache 进阶：控制输出 = 控制成本">
+<meta name="twitter:description" content="输出 Token 比输入贵 3–5 倍。点击下方技巧切换互动演示，体验三个输出层技巧和两个 KV Cache 进阶陷阱。">
 
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">

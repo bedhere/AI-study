@@ -68,7 +68,7 @@
 .demo-caption{font-size:11.5px;color:var(--sub);margin-top:14px;line-height:1.7}
 @media(max-width:760px){.compare{grid-template-columns:1fr}.dm-cols{grid-template-columns:1fr}.source-head{flex-direction:column}.codemode-visual{padding:14px}.objective{grid-template-columns:1fr}.lesson-header:after{display:none}.dm-stream{min-height:0}.demo{padding:18px}.demo-ctrl{width:100%}.demo-ctrl button{flex:1}}
 </style>
-<meta name="description" content="官宣叫 PTC，源码叫 code mode：模型写一段程序，沙箱一口气跑完多次工具调用，五轮往返变一轮">
+<meta name="description" content="模型写一段小程序，run_code 把它送进 worker 沙箱，五次工具调用一轮搞定。本课讲这个设计背后的两个思路。">
 <meta name="author" content="方片">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 
@@ -81,7 +81,7 @@
 
 
 
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Code Mode：一段代码顶多轮工具调用"><meta property="og:description" content="官宣叫 PTC，源码叫 code mode：模型写一段程序，沙箱一口气跑完多次工具调用，五轮往返变一轮"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Code Mode：一段代码顶多轮工具调用"><meta property="og:description" content="模型写一段小程序，run_code 把它送进 worker 沙箱，五次工具调用一轮搞定。本课讲这个设计背后的两个思路。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

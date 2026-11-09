@@ -69,7 +69,7 @@
 .takeaway{background:rgba(22,163,74,.04);border:1.5px solid rgba(22,163,74,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:20px}
 .takeaway b{color:var(--success)}
 </style>
-<meta name="description" content="System Prompt 한 글자만 바꿔도 전체 KV Cache가 무효화됩니다. 동적 콘텐츠를 주입하는 방식이 캐시 히트율과 비용에 직접적인 영향을 미칩니다.">
+<meta name="description" content="KV Cache의 규칙은 매우 단순합니다: 접두사가 완전히 같으면 히트, 한 글자라도 다르면 전부 재계산합니다. 따라서 System Prompt에 동적 콘텐츠를 삽입하면 캐시가 영원히 히트되지 않을 수 있습니다.">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 
@@ -86,7 +86,7 @@
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="System Prompt 한 글자만 바꿔도 전체 KV Cache가 무효화됩니다. 동적 콘텐츠를 주입하는 방식이 캐시 히트율과 비용에 직접적인 영향을 미칩니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="KV Cache의 규칙은 매우 단순합니다: 접두사가 완전히 같으면 히트, 한 글자라도 다르면 전부 재계산합니다. 따라서 System Prompt에 동적 콘텐츠를 삽입하면 캐시가 영원히 히트되지 않을 수 있습니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dynamic Timestamps: The Most Expensive System Prompt Anti-Pattern | 方片学堂</title>
+<title>Dynamic Timestamps: The Most Expensive System Prompt | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -95,7 +95,7 @@
 }
 </style>
 <!-- SEO Start -->
-<meta name="description" content="Inserting the current timestamp into the System Prompt is one of the most common and costly AI development anti-patterns. It prevents KV Cache from ever hitting, forcing full recomputation on every request.">
+<meta name="description" content="One small design mistake can completely invalidate your KV Cache and double the cost of every conversation: putting a dynamic timestamp in your System Prompt.">
 <meta name="keywords" content="System Prompt anti-pattern,KV Cache miss,dynamic timestamp,AI development pitfalls,Prompt design">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
@@ -110,8 +110,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
-<meta property="og:title" content="Dynamic Timestamps: The Most Expensive System Prompt Anti-Pattern">
-<meta property="og:description" content="Inserting the current timestamp into the System Prompt is one of the most common and costly AI development anti-patterns. It prevents KV Cache from ever hitting, forcing full recomputation on every request.">
+<meta property="og:title" content="Dynamic Timestamps: The Most Expensive System Prompt">
+<meta property="og:description" content="One small design mistake can completely invalidate your KV Cache and double the cost of every conversation: putting a dynamic timestamp in your System Prompt.">
 
 
 <meta property="og:image:width" content="1200">
@@ -119,8 +119,8 @@
 <meta property="og:locale" content="en_US">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dynamic Timestamps: The Most Expensive System Prompt Anti-Pattern">
-<meta name="twitter:description" content="Inserting the current timestamp into the System Prompt is one of the most common and costly AI development anti-patterns. It prevents KV Cache from ever hitting, forcing full recomputation on every request.">
+<meta name="twitter:title" content="Dynamic Timestamps: The Most Expensive System Prompt">
+<meta name="twitter:description" content="One small design mistake can completely invalidate your KV Cache and double the cost of every conversation: putting a dynamic timestamp in your System Prompt.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->

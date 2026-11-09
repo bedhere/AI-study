@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ToolKind 与只读语义 | 方片学堂</title>
+<title>ToolKind 提供默认只读语义 | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -19,7 +19,7 @@
 .takeaway{margin-top:22px;padding:19px 22px;border-radius:14px;background:#241a0b;color:#f7ead2;display:flex;gap:13px;line-height:1.75}.takeaway svg{flex:0 0 auto;color:var(--gold)}.takeaway b{color:var(--gold)}
 @media(max-width:720px){.branch-grid{grid-template-columns:1fr}.gate{padding:10px}.source-head{overflow-wrap:anywhere}}
 </style>
-<meta name="description" content="基于 tool_taxonomy.rs 讲解真实 ToolKind、is_read_only 默认分类及权限决策边界。">
+<meta name="description" content="is_read_only() 是工具种类层的默认分类。具体工具可以覆盖它，最终是否执行还要经过规则、沙箱、Hook 与交互批准等控制。">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 
@@ -32,11 +32,11 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
-<meta property="og:title" content="ToolKind 与只读语义">
+<meta property="og:title" content="ToolKind 提供默认只读语义">
 
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:description" content="基于 tool_taxonomy.rs 讲解真实 ToolKind、is_read_only 默认分类及权限决策边界。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="is_read_only() 是工具种类层的默认分类。具体工具可以覆盖它，最终是否执行还要经过规则、沙箱、Hook 与交互批准等控制。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

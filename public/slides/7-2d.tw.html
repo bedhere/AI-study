@@ -72,7 +72,7 @@
   .pc-grid{grid-template-columns:1fr}
 }
 </style>
-<meta name="description" content="MCP（Model Context Protocol）就是 AI 工具的 USB 標準。工具開發者只寫一次適配，就能接入所有 Agent。">
+<meta name="description" content="USB 之前每臺裝置要專屬資料線；MCP 之前每個 Agent 要專屬串接程式碼。">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 
@@ -90,7 +90,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:description" content="MCP（Model Context Protocol）就是 AI 工具的 USB 標準。工具開發者只寫一次適配，就能接入所有 Agent。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="USB 之前每臺裝置要專屬資料線；MCP 之前每個 Agent 要專屬串接程式碼。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -99,7 +99,7 @@
     <div class="kicker">Agent 工程</div>
     <h1>MCP 協議：工具的 USB 介面</h1>
     <p class="subtitle">USB 之前每臺裝置要專屬資料線；MCP 之前每個 Agent 要專屬串接程式碼。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>stdio / SSE / Streamable HTTP 三種傳輸方式對比，資料流動畫</p></aside><!--seo:end-->  <div class="sec-label">Before / After 對比</div>
+  </header><aside class="xa-tldr company-example-note"><p>本頁的助手、角色與流程為教學示例，不代表方片已上線產品或真實專案業績。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>stdio / SSE / Streamable HTTP 三種傳輸方式對比，資料流動畫</p></aside><!--seo:end-->  <div class="sec-label">Before / After 對比</div>
   <div class="compare" id="compareArea">
     <!-- LEFT: before MCP -->
     <div class="compare-col">
@@ -112,7 +112,7 @@
           <rect class="node-box" x="10" y="15" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
           <text class="node-label" x="55" y="33" fill="var(--purple)">Cursor</text>
           <rect class="node-box" x="10" y="82" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
-          <text class="node-label" x="55" y="100" fill="var(--purple)">Alice</text>
+          <text class="node-label" x="55" y="100" fill="var(--purple)">示例助手</text>
           <rect class="node-box" x="10" y="150" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
           <text class="node-label" x="55" y="168" fill="var(--purple)">Claude</text>
 
@@ -157,7 +157,7 @@
           <rect class="node-box" x="10" y="15" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
           <text class="node-label" x="55" y="33" fill="var(--purple)">Cursor</text>
           <rect class="node-box" x="10" y="82" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
-          <text class="node-label" x="55" y="100" fill="var(--purple)">Alice</text>
+          <text class="node-label" x="55" y="100" fill="var(--purple)">示例助手</text>
           <rect class="node-box" x="10" y="150" width="90" height="36" fill="rgba(124,58,237,.06)" stroke="var(--purple)"/>
           <text class="node-label" x="55" y="168" fill="var(--purple)">Claude</text>
 

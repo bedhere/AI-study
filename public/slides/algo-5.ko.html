@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="RAG가 가져온 문단은 그대로 쓸 수 없어요: 먼저 조검색, 그다음 정밀 랭킹. 가중치를 직접 조절하며 후보 문단이 어떻게 다시 섞이는지 보세요—추천 피드와 검색 결과도 마찬가지입니다. LLM 엔지니어링 속 정렬 사고의 진짜 모습.">
+<meta name="description" content="지난 강의의 정렬은 숫자 크기를 겨뤘지만, AI 세계에서는 “관련성”을 줄 세웁니다: RAG가 지식 베이스에서 문단을 잔뜩 건져 오면, 앞에 선 쪽이 컨텍스트에 끼어들 수 있어요—줄이 틀리면 모델이 틀린 자료를 진지하게 인용합니다. 이 “점수 + 재정렬” 단계가 Rerank예요. 오늘은 직접 투입되어 Rerank 모델을 해 봅니다.">
 <meta name="keywords" content="Rerank,재정렬,RAG,조검색,정밀 랭킹,2단계 검색,추천 시스템 정렬,벡터 검색">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="AI 속 정렬의 진짜 모습: Rerank">
-<meta property="og:description" content="Rerank 모델을 직접 해 보세요: 가중치 슬라이더 세 개를 드래그하며 후보 문단이 실시간으로 섞이고, 구버전 정책이 올바른 조항에 밀려 내려가는 모습을 봅니다.">
+<meta property="og:description" content="지난 강의의 정렬은 숫자 크기를 겨뤘지만, AI 세계에서는 “관련성”을 줄 세웁니다: RAG가 지식 베이스에서 문단을 잔뜩 건져 오면, 앞에 선 쪽이 컨텍스트에 끼어들 수 있어요—줄이 틀리면 모델이 틀린 자료를 진지하게 인용합니다. 이 “점수 + 재정렬” 단계가 Rerank예요. 오늘은 직접 투입되어 Rerank 모델을 해 봅니다.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI 속 정렬의 진짜 모습: Rerank">
-<meta name="twitter:description" content="Rerank 모델을 직접 해 보세요: 가중치 슬라이더 세 개를 드래그하며 후보 문단이 실시간으로 섞이고, 구버전 정책이 올바른 조항에 밀려 내려가는 모습을 봅니다.">
+<meta name="twitter:description" content="지난 강의의 정렬은 숫자 크기를 겨뤘지만, AI 세계에서는 “관련성”을 줄 세웁니다: RAG가 지식 베이스에서 문단을 잔뜩 건져 오면, 앞에 선 쪽이 컨텍스트에 끼어들 수 있어요—줄이 틀리면 모델이 틀린 자료를 진지하게 인용합니다. 이 “점수 + 재정렬” 단계가 Rerank예요. 오늘은 직접 투입되어 Rerank 모델을 해 봅니다.">
 
 <!-- SEO End -->
 <style>

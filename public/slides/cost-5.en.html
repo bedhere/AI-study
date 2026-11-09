@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Qwen's Tier Escape: the 32k Red Line | Token Cost Engineering</title>
+<title>Qwen's Tier Escape: the 32k Red Line | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="Qwen tiers by input length: a 33k request bills all 33k Tokens at 2×—not just the overflow. The trap of paying double for RAG junk, plus budget-aware truncation code.">
+<meta name="description" content="Qwen's tiering logic is the opposite of Zhipu's: bill by input length, with boundaries at 32k and 128k. The detail people miss—crossing the line doesn't surcharge the overflow; it bills the whole request at the higher tier.">
 <meta name="keywords" content="Qwen,input tiering,full-request billing,RAG cost,budget-aware truncation,context truncation,32k red line">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
 <meta property="og:title" content="Qwen's Tier Escape: the 32k Red Line">
-<meta property="og:description" content="1k extra Tokens doubles the whole bill: full-request billing and budget-aware truncation.">
+<meta property="og:description" content="Qwen's tiering logic is the opposite of Zhipu's: bill by input length, with boundaries at 32k and 128k. The detail people miss—crossing the line doesn't surcharge the overflow; it bills the whole request at the higher tier.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Qwen's Tier Escape: the 32k Red Line">
-<meta name="twitter:description" content="1k extra Tokens doubles the whole bill: full-request billing and budget-aware truncation.">
+<meta name="twitter:description" content="Qwen's tiering logic is the opposite of Zhipu's: bill by input length, with boundaries at 32k and 128k. The detail people miss—crossing the line doesn't surcharge the overflow; it bills the whole request at the higher tier.">
 
 <!-- SEO End -->
 <style>

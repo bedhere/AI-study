@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>LLM 환각(Hallucination): AI가 사실을 지어내는 이유 | 方片学堂</title>
+<title>LLM 환각 (Hallucination) | 方片学堂</title>
 <script>
 // Inline vocab table and attention weights (self-contained, does not depend on global-attn.js)
 // Provides plausible candidate token weight data for the hallucination demo
@@ -337,7 +337,7 @@ window.GLOBAL_ATTN = (function() {
 }
 </style>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style><!-- SEO Start -->
-<meta name="description" content="LLM 환각(Hallucination)이란 무엇이며 왜 발생합니까? Token 예측의 통계적 본질에서 출발하여 환각의 근본 원인과 네 가지 완화 방법(Prompt 제약, RAG, Temperature 조절, 인간 평가)을 분석합니다.">
+<meta name="description" content="모델은 사실을 알지 못합니다 — 단지 확률적 샘플링을 수행할 뿐입니다. 모델이 얼마나 자신 있게 허구를 생성하는지 확인해 보세요: 사례를 선택하고 「생성 시작」을 클릭하면 Token 단위로 환각이 발생하는 과정을 관찰할 수 있습니다.">
 <meta name="keywords" content="LLM 환각,Hallucination,AI 허구,환각 완화,RAG,Prompt 제약">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -352,8 +352,8 @@ window.GLOBAL_ATTN = (function() {
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="LLM 환각(Hallucination): AI가 사실을 지어내는 이유">
-<meta property="og:description" content="LLM 환각(Hallucination)이란 무엇이며 왜 발생합니까? Token 예측의 통계적 본질에서 출발하여 환각의 근본 원인과 네 가지 완화 방법을 분석합니다.">
+<meta property="og:title" content="LLM 환각 (Hallucination)">
+<meta property="og:description" content="모델은 사실을 알지 못합니다 — 단지 확률적 샘플링을 수행할 뿐입니다. 모델이 얼마나 자신 있게 허구를 생성하는지 확인해 보세요: 사례를 선택하고 「생성 시작」을 클릭하면 Token 단위로 환각이 발생하는 과정을 관찰할 수 있습니다.">
 
 
 <meta property="og:image:width" content="1200">
@@ -361,8 +361,8 @@ window.GLOBAL_ATTN = (function() {
 <meta property="og:locale" content="ko_KR">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="LLM 환각(Hallucination): AI가 사실을 지어내는 이유">
-<meta name="twitter:description" content="LLM 환각(Hallucination)이란 무엇이며 왜 발생합니까? Token 예측의 통계적 본질에서 출발하여 환각의 근본 원인과 네 가지 완화 방법을 분석합니다.">
+<meta name="twitter:title" content="LLM 환각 (Hallucination)">
+<meta name="twitter:description" content="모델은 사실을 알지 못합니다 — 단지 확률적 샘플링을 수행할 뿐입니다. 모델이 얼마나 자신 있게 허구를 생성하는지 확인해 보세요: 사례를 선택하고 「생성 시작」을 클릭하면 Token 단위로 환각이 발생하는 과정을 관찰할 수 있습니다.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->

@@ -104,7 +104,7 @@
 @media(prefers-reduced-motion:reduce){.demo,.demo *{transition-duration:0s!important;animation-duration:0s!important}}
 @media(max-width:760px){.lesson{overflow-x:hidden}.compare{grid-template-columns:1fr}.dm-cols{grid-template-columns:1fr}.objective{grid-template-columns:1fr}.lesson-header:after{display:none}.demo{padding:18px}.demo-ctrl{width:100%}.demo-ctrl button{flex:1}.dm-body{min-height:0}.visual{padding:14px}.dm-trace li{flex-direction:column;gap:4px}.dm-budget .dm-b-label{padding-top:0}.demo,.visual,.cmp-card{max-width:100%;min-width:0}.lesson code{overflow-wrap:anywhere;word-break:break-word}.dm-meter{width:100%;justify-content:space-between}}
 </style>
-<meta name="description" content="Codex 把默认落点写成禁令：新概念先找现有的非 core crate，否则新建 crate。依赖方向把叶子类型挡在核心之外">
+<meta name="description" content="打开仓库，第一反应是往 core 里加。仓库把这件事写成禁令：先找现有的非 core crate，否则新建一个。依赖方向会把叶子类型挡在核心之外。">
 <meta name="author" content="方片">
 
 
@@ -116,7 +116,7 @@
 
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
 <meta property="og:locale" content="zh_CN">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="新功能先找落脚的 crate，core 是最后一档"><meta property="og:description" content="Codex 把默认落点写成禁令：新概念先找现有的非 core crate，否则新建 crate。依赖方向把叶子类型挡在核心之外"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="新功能先找落脚的 crate，core 是最后一档"><meta property="og:description" content="打开仓库，第一反应是往 core 里加。仓库把这件事写成禁令：先找现有的非 core crate，否则新建一个。依赖方向会把叶子类型挡在核心之外。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

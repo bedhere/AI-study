@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>다중 턴 대화가 왜 점점 비싸지나요? Token 과금 원리 | 方片学堂</title>
+<title>다중 턴 대화가 왜 점점 비싸지나요? | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -50,7 +50,7 @@ input[type=range]{width:100%;accent-color:var(--danger);height:6px;cursor:pointe
 .takeaway b{color:var(--danger)}
 </style>
 <!-- SEO Start -->
-<meta name="description" content="LLM API는 Token 단위로 과금됩니다. 다중 턴 대화에서 매 턴마다 전체 히스토리를 전송해야 하므로 Token 소비가 선형적으로 증가합니다. 다중 턴 Token 과금 로직을 시각적으로 분석하여 비용 폭발의 근본 원인을 이해합니다.">
+<meta name="description" content="LLM은 입력 Token 수 기준으로 과금됩니다. 매 턴마다 전체 대화 히스토리를 모델에 재전송해야 합니다. 히스토리가 길수록 Token이 많아지고 비용이 높아집니다. 슬라이더를 드래그하여 비용 누적을 시뮬레이션해 보세요.">
 <meta name="keywords" content="LLM 과금,Token 과금,다중턴대화비용,API비용,LLM절약,컨텍스트비용">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -65,8 +65,8 @@ input[type=range]{width:100%;accent-color:var(--danger);height:6px;cursor:pointe
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="다중 턴 대화가 왜 점점 비싸지나요? Token 과금 원리">
-<meta property="og:description" content="LLM API는 Token 단위로 과금됩니다. 다중 턴 대화에서 매 턴마다 전체 히스토리를 전송해야 하므로 Token 소비가 선형적으로 증가합니다. 다중 턴 Token 과금 로직을 시각적으로 분석하여 비용 폭발의 근본 원인을 이해합니다.">
+<meta property="og:title" content="다중 턴 대화가 왜 점점 비싸지나요?">
+<meta property="og:description" content="LLM은 입력 Token 수 기준으로 과금됩니다. 매 턴마다 전체 대화 히스토리를 모델에 재전송해야 합니다. 히스토리가 길수록 Token이 많아지고 비용이 높아집니다. 슬라이더를 드래그하여 비용 누적을 시뮬레이션해 보세요.">
 
 
 <meta property="og:image:width" content="1200">
@@ -74,8 +74,8 @@ input[type=range]{width:100%;accent-color:var(--danger);height:6px;cursor:pointe
 <meta property="og:locale" content="ko_KR">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="다중 턴 대화가 왜 점점 비싸지나요? Token 과금 원리">
-<meta name="twitter:description" content="LLM API는 Token 단위로 과금됩니다. 다중 턴 대화에서 매 턴마다 전체 히스토리를 전송해야 하므로 Token 소비가 선형적으로 증가합니다. 다중 턴 Token 과금 로직을 시각적으로 분석하여 비용 폭발의 근본 원인을 이해합니다.">
+<meta name="twitter:title" content="다중 턴 대화가 왜 점점 비싸지나요?">
+<meta name="twitter:description" content="LLM은 입력 Token 수 기준으로 과금됩니다. 매 턴마다 전체 대화 히스토리를 모델에 재전송해야 합니다. 히스토리가 길수록 Token이 많아지고 비용이 높아집니다. 슬라이더를 드래그하여 비용 누적을 시뮬레이션해 보세요.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->

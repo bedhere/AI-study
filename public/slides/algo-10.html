@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="贪心一步错步步错，Beam Search 同时留几条候选路往前探。在 4 步词格上交互对比：贪心累计分 0.072，Beam=2 找到 0.098，Beam=3 找到 0.101——代价是算力翻倍。理解「先想再答」的直觉来源。">
+<meta name="description" content="上一课留了个坑：贪心每步拿眼前最大的，可能一步错、步步错。填坑的办法朴素得可爱——别急着定，多留几条候选路一起往前走，走完了比总分。这就是 Beam Search（束搜索）。下面这张「词格」，让三种走法同台竞技。">
 <meta name="keywords" content="Beam Search,束搜索,解码策略,贪心解码,机器翻译解码,语音识别,推理模型原理">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
 <meta property="og:title" content="Beam Search：往前多看几步再选">
-<meta property="og:description" content="贪心一步错步步错，Beam Search 同时留几条候选路往前探，走完再比总分。词格交互一跑就懂。">
+<meta property="og:description" content="上一课留了个坑：贪心每步拿眼前最大的，可能一步错、步步错。填坑的办法朴素得可爱——别急着定，多留几条候选路一起往前走，走完了比总分。这就是 Beam Search（束搜索）。下面这张「词格」，让三种走法同台竞技。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Beam Search：往前多看几步再选">
-<meta name="twitter:description" content="不把鸡蛋放一个篮子：同时探几条路，走完再比总分。beam 宽度 = 算力换质量的旋钮。">
+<meta name="twitter:description" content="上一课留了个坑：贪心每步拿眼前最大的，可能一步错、步步错。填坑的办法朴素得可爱——别急着定，多留几条候选路一起往前走，走完了比总分。这就是 Beam Search（束搜索）。下面这张「词格」，让三种走法同台竞技。">
 
 <!-- SEO End -->
 <style>

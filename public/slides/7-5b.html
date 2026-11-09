@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>解剖一个真实 Skill：Alice 发版助手 | 方片学堂</title>
+<title>解剖一个示例 Skill | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
@@ -108,7 +108,7 @@
 /* 管线播放态 */
 .pipeline-play .pipe-step .pipe-icon{transition:all .4s ease}
 </style>
-<meta name="description" content="解剖 Alice 发版助手 Skill：元信息、触发条件、执行步骤、工具权限、安全约束。理解 Skill 就是给 Agent 写 SOP。">
+<meta name="description" content="以一个虚构的发版助手为例：点击每个区域展开详情，看 Agent 如何读取并执行一个 Skill。">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 
@@ -121,21 +121,21 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
-<meta property="og:title" content="解剖一个真实 Skill：Alice 发版助手">
+<meta property="og:title" content="解剖一个示例 Skill">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:description" content="解剖 Alice 发版助手 Skill：元信息、触发条件、执行步骤、工具权限、安全约束。理解 Skill 就是给 Agent 写 SOP。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="以一个虚构的发版助手为例：点击每个区域展开详情，看 Agent 如何读取并执行一个 Skill。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Agent 工程</div>
-    <h1>解剖一个真实 Skill</h1>
-    <p class="subtitle">以 Alice 发版助手为例：点击每个区域展开详情，看 Agent 如何读取并执行一个 Skill。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从真实源码学 SKILL.md 的结构设计</p></aside><!--seo:end-->  <div class="body-grid paywall-locked xa-peek">
+    <h1>解剖一个示例 Skill</h1>
+    <p class="subtitle">以一个虚构的发版助手为例：点击每个区域展开详情，看 Agent 如何读取并执行一个 Skill。</p>
+  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从真实源码学 SKILL.md 的结构设计</p></aside><!--seo:end-->  <div class="body-grid paywall-locked xa-peek">
     <!-- 左区：Skill 解剖 -->
     <div class="main-col">
       <div class="sec-label" style="margin-top:0">SKILL.md 逐段解剖</div>
@@ -144,7 +144,7 @@
         <div style="display:flex;align-items:center;gap:10px;padding:4px 0;flex-shrink:0">
           <div style="padding:5px 12px;border-radius:8px;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.15);font-size:13px;font-weight:800;color:var(--purple)">SKILL.md</div>
           <div style="font-size:15px;font-weight:800;color:var(--text)">alice-release</div>
-          <div style="font-size:13px;color:var(--muted);margin-left:auto">Alice 项目发版助手</div>
+          <div style="font-size:13px;color:var(--muted);margin-left:auto">示例助手 项目发版助手</div>
         </div>
 
         <!-- Section 1: 元信息 -->
@@ -163,7 +163,7 @@
                 <div class="meta-label">技能名称</div>
                 <div class="meta-val">alice-release</div>
                 <div class="meta-label">描述</div>
-                <div class="meta-val" style="font-weight:400;font-size:13px">Alice 项目发版助手。负责打包、更新 RELEASE_NOTES、上传 COS、同步落地页的完整发版流程。</div>
+                <div class="meta-val" style="font-weight:400;font-size:13px">示例助手 项目发版助手。负责打包、更新 RELEASE_NOTES、上传 COS、同步落地页的完整发版流程。</div>
                 <div class="meta-label">触发词</div>
                 <div>
                   <div class="trigger-chips">
@@ -199,7 +199,7 @@
                 <span class="flow-arrow">→</span>
                 <span class="flow-node flow-yes">YES</span>
                 <span class="flow-arrow">→</span>
-                <span class="flow-node flow-q">当前在 Alice 项目目录？</span>
+                <span class="flow-node flow-q">当前在 示例助手 项目目录？</span>
                 <span class="flow-arrow">→</span>
                 <span class="flow-node flow-yes">YES</span>
                 <span class="flow-arrow">→</span>
@@ -215,10 +215,10 @@
                 <span class="flow-end flow-end-skip">使用通用能力处理</span>
               </div>
               <div style="font-size:13px;color:var(--sub);margin-top:8px;line-height:1.5;padding:6px 10px;border-radius:8px;background:var(--surface2)">
-                同理，第二个判断节点如果为 NO（不在 Alice 目录），也走「通用能力处理」。<br>条件不满足时 Skill 静默退出，不会干扰正常对话。
+                同理，第二个判断节点如果为 NO（不在 示例助手 目录），也走「通用能力处理」。<br>条件不满足时 Skill 静默退出，不会干扰正常对话。
               </div>
               <div class="decision-card" style="margin-top:8px">
-                <b>📌 设计决策：</b>适用条件 = 防止误触的保险。没有适用条件，用户在任何项目里说「发版」都会触发 Alice 的发版流程，这是灾难级 Bug。
+                <b>📌 设计决策：</b>适用条件 = 防止误触的保险。没有适用条件，用户在任何项目里说「发版」都会触发 示例助手 的发版流程，这是灾难级 Bug。
               </div>
             </div>
           </div>

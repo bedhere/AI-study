@@ -103,7 +103,7 @@
 @media(prefers-reduced-motion:reduce){.demo,.demo *{transition-duration:0s!important;animation-duration:0s!important}}
 @media(max-width:760px){.lesson{overflow-x:hidden}.compare{grid-template-columns:1fr}.dm-cols{grid-template-columns:1fr}.objective{grid-template-columns:1fr}.lesson-header:after{display:none}.demo{padding:18px}.demo-ctrl{width:100%}.demo-ctrl button{flex:1}.dm-body{min-height:0}.visual{padding:14px}.dm-trace li{flex-direction:column;gap:4px}.dm-budget .dm-b-label{padding-top:0}.demo,.visual,.cmp-card{max-width:100%;min-width:0}.lesson code{overflow-wrap:anywhere;word-break:break-word}.dm-summary.on{max-height:520px}}
 </style>
-<meta name="description" content="模型還在流式吐字，工具呼叫就已經被認出來了。Codex 在 OutputItemDone 一到就先寫入歷史再掛起執行，流的每個出口都先 drain">
+<meta name="description" content="模型還在打字，讀檔案的聲音已經響了。取樣迴圈的時序是：流內建 future，流後統一 drain。先 persist，再等結果。">
 <meta name="author" content="方片">
 
 
@@ -115,7 +115,7 @@
 
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:locale" content="zh_TW">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="流還在走，工具已經開工"><meta property="og:description" content="模型還在流式吐字，工具呼叫就已經被認出來了。Codex 在 OutputItemDone 一到就先寫入歷史再掛起執行，流的每個出口都先 drain"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="流還在走，工具已經開工"><meta property="og:description" content="模型還在打字，讀檔案的聲音已經響了。取樣迴圈的時序是：流內建 future，流後統一 drain。先 persist，再等結果。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

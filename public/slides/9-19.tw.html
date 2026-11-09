@@ -46,7 +46,7 @@
 .takeaway{background:rgba(0,102,255,.04);border:1.5px solid rgba(0,102,255,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:20px}
 .takeaway b{color:var(--accent)}
 </style>
-<meta name="description" content="生產級 System Prompt 是分層管理的：身分層、環境層、工具層、行為層。各管各的，互不干擾。">
+<meta name="description" content="生產級的 System Prompt 不是想到什麼寫什麼。它是分層管理的：身分層、環境層、工具層、行為層，各管各的，改一層不影響其他層。">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 
@@ -64,7 +64,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:description" content="生產級 System Prompt 是分層管理的：身分層、環境層、工具層、行為層。各管各的，互不干擾。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="生產級的 System Prompt 不是想到什麼寫什麼。它是分層管理的：身分層、環境層、工具層、行為層，各管各的，改一層不影響其他層。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -74,12 +74,12 @@
     <div class="kicker">Prompt Harness</div>
     <h1>System Prompt 不是一坨文字</h1>
     <p class="subtitle">生產級的 System Prompt 不是想到什麼寫什麼。它是分層管理的：身分層、環境層、工具層、行為層，各管各的，改一層不影響其他層。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>分層管理的必要性：身分、環境、工具指引各自獨立，互不干擾</p></aside><!--seo:end-->  <div class="sec-label">「一坨文字」長什麼樣</div>
+  </header><aside class="xa-tldr company-example-note"><p>本頁的助手、角色與流程為教學示例，不代表方片已上線產品或真實專案業績。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>分層管理的必要性：身分、環境、工具指引各自獨立，互不干擾</p></aside><!--seo:end-->  <div class="sec-label">「一坨文字」長什麼樣</div>
 
   <div class="mess-demo reveal">
     <h4><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> 常見的混亂寫法</h4>
     <div class="mess-blob">
-<span class="hl-id">你是一個 AI 助手，名字叫 Alice。</span>你可以搜尋網頁、讀寫檔案、
+<span class="hl-id">你是一個 AI 助手，名字叫 示例助手。</span>你可以搜尋網頁、讀寫檔案、
 <span class="hl-env">現在是 2026 年，使用者在中國。</span><span class="hl-tool">當使用者讓你搜尋時用 web_search 工具，</span>
 <span class="hl-act">回答時先思考再回答，不要編造資訊。</span><span class="hl-id">你的性格溫暖友善，</span>
 <span class="hl-tool">檔案操作用 file_read 和 file_write，</span><span class="hl-env">使用者的語言偏好是中文，</span>

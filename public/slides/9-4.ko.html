@@ -55,7 +55,7 @@
 .takeaway{background:rgba(217,119,6,.04);border:1.5px solid rgba(217,119,6,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--amber)}
 </style>
-<meta name="description" content="이미지 생성 모델은 타임아웃, 속도 제한, 다운타임이 발생할 수 있습니다. 폴백 체인으로 사용자는 언제나 이미지를 받을 수 있습니다. Alice의 실제 상태로 오류 처리 제품 설계를 보여줍니다.">
+<meta name="description" content="예시 도우미에서 사용자가 「그림 하나 그려줘」라고 하면, 백엔드에서는 Gemini가 타임아웃되고, Seedream이 속도 제한에 걸리고, GPT Image도 오류가 발생할 수 있습니다. 사용자는 어떤 모델이 다운됐는지 신경 쓰지 않습니다. 그들이 신경 쓰는 건 단 하나: 이미지가 나오는가?">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 
@@ -72,7 +72,7 @@
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="이미지 생성 모델은 타임아웃, 속도 제한, 다운타임이 발생할 수 있습니다. 폴백 체인으로 사용자는 언제나 이미지를 받을 수 있습니다. Alice의 실제 상태로 오류 처리 제품 설계를 보여줍니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="예시 도우미에서 사용자가 「그림 하나 그려줘」라고 하면, 백엔드에서는 Gemini가 타임아웃되고, Seedream이 속도 제한에 걸리고, GPT Image도 오류가 발생할 수 있습니다. 사용자는 어떤 모델이 다운됐는지 신경 쓰지 않습니다. 그들이 신경 쓰는 건 단 하나: 이미지가 나오는가?"><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -82,30 +82,30 @@
   <header class="lesson-header">
     <div class="kicker">AI 이미지 생성</div>
     <h1>모델이 다운되면 어떻게 되나요?</h1>
-    <p class="subtitle">Alice에서 사용자가 「그림 하나 그려줘」라고 하면, 백엔드에서는 Gemini가 타임아웃되고, Seedream이 속도 제한에 걸리고, GPT Image도 오류가 발생할 수 있습니다. 사용자는 어떤 모델이 다운됐는지 신경 쓰지 않습니다. 그들이 신경 쓰는 건 단 하나: 이미지가 나오는가?</p>
-  </header>
+    <p class="subtitle">예시 도우미에서 사용자가 「그림 하나 그려줘」라고 하면, 백엔드에서는 Gemini가 타임아웃되고, Seedream이 속도 제한에 걸리고, GPT Image도 오류가 발생할 수 있습니다. 사용자는 어떤 모델이 다운됐는지 신경 쓰지 않습니다. 그들이 신경 쓰는 건 단 하나: 이미지가 나오는가?</p>
+  </header><aside class="xa-tldr company-example-note"><p>이 페이지의 도우미·캐릭터·흐름은 기술 원리를 설명하는 교육 예제이며 실제 출시 제품이나 실적을 뜻하지 않습니다.</p></aside>
 
-  <div class="sec-label">Alice의 세 가지 상태</div>
+  <div class="sec-label">예시 도우미의 세 가지 상태</div>
 
   <div class="state-imgs reveal">
     <div class="state-item">
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 생각 중">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="예시 도우미 생각 중">
       <div class="s-label">생각 중</div>
       <div class="s-desc">이미지 생성 중, 잠시만 기다려 주세요</div>
     </div>
     <div class="state-item">
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 오류 상태">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="예시 도우미 오류 상태">
       <div class="s-label">오류 발생</div>
       <div class="s-desc">모델에서 오류 반환, 폴백 전환 중</div>
     </div>
     <div class="state-item">
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 빈 상태">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="예시 도우미 빈 상태">
       <div class="s-label">전부 실패</div>
       <div class="s-desc">모든 모델 사용 불가, 우아한 강등</div>
     </div>
   </div>
 
-  <div class="sec-label">폴백 체인: Alice의 안전망</div>
+  <div class="sec-label">폴백 체인: 예시 도우미의 안전망</div>
 
   <div class="chain-wrap" id="chainWrap">
     <div class="chain-node fail" id="n1">
@@ -162,10 +162,10 @@
   <div class="sec-label paywall-locked">최종 결과: 사용자가 보는 것</div>
 
   <div class="result-demo reveal paywall-locked">
-    <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 비 오는 날 생각 중 - 최종 이미지 생성 결과">
+    <img src="assets/fangpian/tiger-ai-assistant.webp" alt="예시 도우미 비 오는 날 생각 중 - 최종 이미지 생성 결과">
     <div class="result-text">
       <h4>두 번의 모델 실패에도 불구하고 사용자는 여전히 이미지를 받았습니다</h4>
-      <p>사용자는 「Alice가 그리고 있습니다…」라는 대기 상태만 보고 결과를 받습니다. 백엔드에서 모델 A가 타임아웃되고, 모델 B가 속도 제한에 걸리고, 모델 C가 투입됩니다. 이 모든 것이 사용자에게 완전히 투명합니다. 이것이 폴백 체인의 가치입니다.</p>
+      <p>사용자는 「예시 도우미가 그리고 있습니다…」라는 대기 상태만 보고 결과를 받습니다. 백엔드에서 모델 A가 타임아웃되고, 모델 B가 속도 제한에 걸리고, 모델 C가 투입됩니다. 이 모든 것이 사용자에게 완전히 투명합니다. 이것이 폴백 체인의 가치입니다.</p>
     </div>
   </div>
 
@@ -191,7 +191,7 @@
 
   <div class="takeaway reveal paywall-locked">
     <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-    <span><b>사용자는 어떤 모델을 사용하는지 신경 쓰지 않습니다. 그들이 신경 쓰는 건 이미지가 나오는가입니다.</b> Alice에서 폴백 체인은 주력 모델이 전부 다운되더라도 최악의 경우 몇 초 더 기다리거나 친절한 메시지를 받을 뿐, 차가운 오류 페이지는 절대 만나지 않도록 보장합니다.</span>
+    <span><b>사용자는 어떤 모델을 사용하는지 신경 쓰지 않습니다. 그들이 신경 쓰는 건 이미지가 나오는가입니다.</b> 예시 도우미에서 폴백 체인은 주력 모델이 전부 다운되더라도 최악의 경우 몇 초 더 기다리거나 친절한 메시지를 받을 뿐, 차가운 오류 페이지는 절대 만나지 않도록 보장합니다.</span>
   </div>
 
 </article>

@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>실전 편에서 지금 할 수 있는 것: Agent에 첫 번째 진짜 도구를 연결하기 | 方片学堂</title>
+<title>「말하기」에서 「하기」로: 첫 도구를 연결하세요 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <link rel="stylesheet" href="build.css">
 <!-- SEO Start -->
-<meta name="description" content="실제 제품이 Demo에서 출시까지 가는 전 과정을 봤습니다. 이 페이지는 여러분의 Agent에 첫 도구를 연결하는 일입니다. 어떻게 고르고, 도구 설명을 어떻게 쓰며, 「요청-검증-실행-되먹임」 전체 루프를 어떻게 뚫는지. 세 단계 과제를 오늘 바로 시작할 수 있습니다.">
+<meta name="description" content="안정적인 초안 다음에는 확인·취소·수동 처리가 가능한 도구 작업 하나를 연결합니다.">
 <meta name="keywords" content="Agent 도구 호출,Function Calling,도구 설명,MCP,AI 프로덕트 매니저 실전">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -23,14 +23,14 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="실전 편에서 지금 할 수 있는 것: Agent에 첫 번째 진짜 도구를 연결하기">
-<meta property="og:description" content="첫 도구를 어떻게 고르고, 설명을 어떻게 쓰며, 전체 루프를 어떻게 뚫는지.">
+<meta property="og:title" content="「말하기」에서 「하기」로: 첫 도구를 연결하세요">
+<meta property="og:description" content="안정적인 초안 다음에는 확인·취소·수동 처리가 가능한 도구 작업 하나를 연결합니다.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="실전 편에서 지금 할 수 있는 것">
-<meta name="twitter:description" content="Agent에 첫 번째 진짜 도구를 연결하고, 전체 루프를 뚫으세요.">
+<meta name="twitter:title" content="「말하기」에서 「하기」로: 첫 도구를 연결하세요">
+<meta name="twitter:description" content="안정적인 초안 다음에는 확인·취소·수동 처리가 가능한 도구 작업 하나를 연결합니다.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
@@ -43,8 +43,8 @@
   <header class="lesson-header">
     <div class="kicker">실전 · 지금 할 수 있는 것</div>
     <h1>「말하기」에서 「하기」로: 첫 도구를 연결하세요</h1>
-    <p class="subtitle">M1을 세운 뒤, 손에 있는 건 말을 아주 잘하는 AI입니다. Alice의 도구 132개 이야기도 이미 봤고요. <b>Agent와 챗봇의 분수령은, 실제로 실행된 첫 번째 도구입니다</b>. 132개가 아니라, 1개면 됩니다.</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>도구 호출 루프 4단계 데모; 세 단계 과제: 도구 고르기, 세 줄 설명 쓰기, 루프를 뚫고 일부러 한 번 깨뜨리기</p></aside><!--seo:end-->  <!-- ── 主线定位 ── -->
+    <p class="subtitle">안정적인 초안 다음에는 확인·취소·수동 처리가 가능한 도구 작업 하나를 연결합니다.</p>
+  </header><aside class="xa-tldr company-example-note"><p>이 페이지의 도우미·캐릭터·흐름은 기술 원리를 설명하는 교육 예제이며 실제 출시 제품이나 실적을 뜻하지 않습니다.</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>도구 호출 루프 4단계 데모; 세 단계 과제: 도구 고르기, 세 줄 설명 쓰기, 루프를 뚫고 일부러 한 번 깨뜨리기</p></aside><!--seo:end-->  <!-- ── 主线定位 ── -->
   <div class="bd-here">
     <div class="bd-here-cap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>

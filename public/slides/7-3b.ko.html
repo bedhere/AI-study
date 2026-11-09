@@ -108,7 +108,7 @@
   .layer-card.active .lc-body{max-height:420px}
 }
 </style>
-<meta name="description" content="컨텍스트 압축 4단계 방어선: 60% Snip, 75% MicroCompact, 85% Collapse, 95% AutoCompact.">
+<meta name="description" content="슬라이더를 드래그하여 대화 증가를 시뮬레이션하고, 압축이 어떻게 컨텍스트 수명을 연장하는지 관찰합니다.">
 <meta name="author" content="팡피엔">
 
 
@@ -121,7 +121,7 @@
 
 
 
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="컨텍스트 압축: 4단계 방어선"><meta property="og:description" content="컨텍스트 압축 4단계 방어선: 60% Snip, 75% MicroCompact, 85% Collapse, 95% AutoCompact."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="컨텍스트 압축: 4단계 방어선"><meta property="og:description" content="슬라이더를 드래그하여 대화 증가를 시뮬레이션하고, 압축이 어떻게 컨텍스트 수명을 연장하는지 관찰합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -319,7 +319,7 @@ var DECISIONS = [
   '<b>📌 설계 결정:</b> Snip은 도구가 반환한 불필요한 데이터만 삭제하며 사용자는 전혀 모릅니다. 결정이 필요합니다: 어떤 도구 출력을 요약할 수 있나요? 어떤 것은 반드시 보존해야 하나요(예: 코드 실행 결과)?',
   '<b>📌 설계 결정:</b> MicroCompact가 초기 대화를 줄이기 시작합니다. 처음부터 압축하지 않는 이유는? 모델이 사용자 의도를 이해하려면 완전한 컨텍스트가 필요하기 때문입니다 — 너무 일찍 압축하면 기억 상실이 발생합니다.',
   '<b>📌 설계 결정:</b> Collapse가 여러 대화 턴을 하나의 요약으로 만듭니다. 누가 요약을 작성하나요? 모델 스스로 요약하도록 할까요? 전용 압축 Prompt를 사용할까요? 요약 품질이 이후 정확도에 직접 영향을 미칩니다.',
-  '<b>📌 설계 결정:</b> AutoCompact는 마지막 방어선입니다 — 정보 손실이 분명하지만 대화는 중단되지 않습니다. Alice의 4단계 전략 vs 단순한 "가득 차면 오류" 방식 — 어느 쪽 경험이 더 나을까요?',
+  '<b>📌 설계 결정:</b> AutoCompact는 마지막 방어선입니다 — 정보 손실이 분명하지만 대화는 중단되지 않습니다. 예시 도우미의 4단계 전략 vs 단순한 "가득 차면 오류" 방식 — 어느 쪽 경험이 더 나을까요?',
   '<b>📌 ⚠️ 초과!</b> 4단계 압축이 모두 소진되었고 컨텍스트가 안전 공간을 초과했습니다. 계속 증가하여 256K 모델 한도를 넘으면 API가 context_length_exceeded 오류를 반환합니다. 이것이 컨텍스트 응급 처치가 최후의 보루로 필요한 이유입니다.'
 ];
 

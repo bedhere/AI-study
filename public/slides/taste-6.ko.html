@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>일관성: 시스템감은 어디서 오나 | 미학 엔지니어링</title>
+<title>일관성: 시스템감은 어디서 오나 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <link rel="stylesheet" href="taste.css?v=20260810a">
 <!-- SEO Start -->
-<meta name="description" content="하나씩은 괜찮은데 합치면 제각각 — 빠진 건 함께 지키는 변수 세트예요. 이 사이트 상단바의 실제 CSS 변수로 디자인 토큰을 배웁니다: 변수 스위치로 제각각 느낌, 둥근 모서리 변수 하나로 컨트롤 다섯, 두 화면 App 찾기.">
+<meta name="description" content="어떤 UI는 하나씩은 괜찮은데, 합치면 제각각 냄새가 나요. 빠진 건 결국 하나: 모두가 지키는 변수 세트예요. 이번 레슨은 디자인 토큰 — 변수 먼저, 스타일은 따라가요.">
 <meta name="keywords" content="design token,디자인 변수,일관성,시스템감,CSS 변수,UI 감각">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -24,13 +24,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="일관성: 시스템감은 어디서 오나">
-<meta property="og:description" content="스타일은 변수의 값이고, 시스템감은 변수가 있다는 사실이에요.">
+<meta property="og:description" content="어떤 UI는 하나씩은 괜찮은데, 합치면 제각각 냄새가 나요. 빠진 건 결국 하나: 모두가 지키는 변수 세트예요. 이번 레슨은 디자인 토큰 — 변수 먼저, 스타일은 따라가요.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="일관성: 시스템감은 어디서 오나">
-<meta name="twitter:description" content="스타일은 변수의 값이고, 시스템감은 변수가 있다는 사실이에요.">
+<meta name="twitter:description" content="어떤 UI는 하나씩은 괜찮은데, 합치면 제각각 냄새가 나요. 빠진 건 결국 하나: 모두가 지키는 변수 세트예요. 이번 레슨은 디자인 토큰 — 변수 먼저, 스타일은 따라가요.">
 
 <!-- SEO End -->
 <style>
@@ -81,7 +81,7 @@
     <h1>일관성: 시스템감은 어디서 오나</h1>
     <p class="subtitle">어떤 UI는 하나씩은 괜찮은데, 합치면 제각각 냄새가 나요. 빠진 건 결국 하나: 모두가 지키는 변수 세트예요. 이번 레슨은 디자인 토큰 — 변수 먼저, 스타일은 따라가요.</p>
     <div class="chips"><span class="chip">design token</span><span class="chip">CSS 변수</span><span class="chip">시스템감</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>예쁜 사이트 뒤에는 디자인 변수가 있어요. 이 사이트의 실제 CSS를 열어 보세요: 컨트롤 높이·둥근 모서리·색이 왜 전 사이트 한 단계인지, 한곳만 바꿔도 전체가 따라가는지</p></aside><!--seo:end-->  <section class="reveal">
+  </header><aside class="xa-tldr company-source-case"><p>원본 강좌의 공개 웹사이트 사례를 교육 자료로 사용합니다. 프로젝트 이력·방문량·검색 수록 데이터는 팡피엔 내부 플랫폼의 실적이 아니며 예제 코드도 현재 학당 구현을 뜻하지 않습니다.</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>예쁜 사이트 뒤에는 디자인 변수가 있어요. 이 사이트의 실제 CSS를 열어 보세요: 컨트롤 높이·둥근 모서리·색이 왜 전 사이트 한 단계인지, 한곳만 바꿔도 전체가 따라가는지</p></aside><!--seo:end-->  <section class="reveal">
     <div class="sec-label">하나씩은 괜찮은데, 합치면 제각각</div>
     <p class="desc">제각각 느낌의 원인은 구체적이에요. 이 버튼 높이 36, 저건 40; 이 카드 둥근 모서리 8, 저건 16; 로즈는 여기 짙고 저기 옅어요. 그때그때 손으로 쓴 값이라 하나씩은 괜찮은데, 합치면 티가 나요. 해법은 「손맛 숫자」를 변수로 정리하는 것: <b>먼저 토큰을 정하고(주색·둥근 모서리·컨트롤 높이·간격 단계), 모든 스타일은 토큰에서 값을 읽어요</b>. 결정이 줄면 UI가 한 가족처럼 보여요.</p>
   </section>

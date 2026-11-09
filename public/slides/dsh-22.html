@@ -82,7 +82,7 @@ p.body{font-size:15px;line-height:2;color:var(--text);margin:0 0 20px}
   .d-btn{flex:1 1 auto;justify-content:center}
 }
 </style>
-<meta name="description" content="DSH 的 LLM 适配层：一次适配器调用就是一次提供方尝试，重试是持久日志里的显式事件，原始分片流与派生消息流分开落盘。基于 assembler.ts 与 agent.ts 真实源码讲解。">
+<meta name="description" content="推理流与正文流分开存，重试是显式事件。核心源码：packages/llm/llm/src/assembler.ts 与 packages/core/agent-loop/src/agent.ts。">
 <meta name="author" content="方片">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 
@@ -95,7 +95,7 @@ p.body{font-size:15px;line-height:2;color:var(--text);margin:0 0 20px}
 
 
 
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="LLM 适配层：单次尝试、显式重试、双流持久"><meta property="og:description" content="DSH 的 LLM 适配层：一次适配器调用就是一次提供方尝试，重试是持久日志里的显式事件，原始分片流与派生消息流分开落盘。基于 assembler.ts 与 agent.ts 真实源码讲解。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="LLM 适配层：单次尝试、显式重试、双流持久"><meta property="og:description" content="推理流与正文流分开存，重试是显式事件。核心源码：packages/llm/llm/src/assembler.ts 与 packages/core/agent-loop/src/agent.ts。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

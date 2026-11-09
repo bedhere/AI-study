@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>圖片 Token：畫素也要交稅 | Token 降本增效</title>
+<title>圖片 Token：畫素也要交稅 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="圖片是怎麼變成 Token 的？(h×w)/token_pixels+2 的核心公式、32 畫素對齊的跳檔陷阱、解析度詛咒與邊際效用遞減。輸入解析度即時計算 Token 的計算器和三條成本紅線。">
+<meta name="description" content="文字 BPE 是「合併字元」，圖片編碼是「切割畫素」。你以為傳的是原圖，其實模型按縮放對齊後的解析度計費——這裡面藏著和文字 32k 紅線一模一樣的跳檔陷阱。">
 <meta name="keywords" content="圖片 Token,視覺模型計費,Qwen-VL,解析度,畫素對齊,VLM 成本,多模態計費">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="圖片 Token：畫素也要交稅">
-<meta property="og:description" content="32 畫素對齊跳檔、解析度詛咒與圖片成本三條紅線。">
+<meta property="og:description" content="文字 BPE 是「合併字元」，圖片編碼是「切割畫素」。你以為傳的是原圖，其實模型按縮放對齊後的解析度計費——這裡面藏著和文字 32k 紅線一模一樣的跳檔陷阱。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="圖片 Token：畫素也要交稅">
-<meta name="twitter:description" content="32 畫素對齊跳檔、解析度詛咒與圖片成本三條紅線。">
+<meta name="twitter:description" content="文字 BPE 是「合併字元」，圖片編碼是「切割畫素」。你以為傳的是原圖，其實模型按縮放對齊後的解析度計費——這裡面藏著和文字 32k 紅線一模一樣的跳檔陷阱。">
 
 <!-- SEO End -->
 <style>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PromptContext: 실제 필드와 템플릿 오버라이드 | 方片学堂</title>
+<title>PromptContext: 검사 가능한 렌더링 입력 | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -21,7 +21,7 @@
 .exercise{padding:20px;border:1px dashed rgba(217,149,24,.48);border-radius:18px;background:linear-gradient(120deg,var(--soft),transparent)}.exercise h3{margin:0 0 6px}.exercise p{margin:0;color:var(--sub);line-height:1.7}.takeaway{display:flex;gap:12px}.takeaway svg{width:26px;flex:none;color:var(--accent)}
 @media(max-width:760px){.lesson-header{padding:30px 22px}.lesson-header:after{font-size:82px}.groups,.overrides,.source-grid{grid-template-columns:1fr}.flow{padding:10px}}
 </style>
-<meta name="description" content="PromptContext의 실제 필드, Serialize/Deserialize derive, 세 가지 TemplateOverride 변형 및 ToolBridge 렌더링 파이프라인을 확인합니다.">
+<meta name="description" content="PromptContext는 Agent 전용 템플릿 입력을 저장합니다. Serde derive를 통해 직렬화 능력을 얻고, ToolBridge::render_prompt()에 전달되어 렌더링됩니다.">
 <meta name="author" content="팡피엔">
 
 
@@ -34,7 +34,7 @@
 
 
 
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="PromptContext: 검사 가능한 렌더링 입력"><meta property="og:description" content="PromptContext의 실제 필드, Serialize/Deserialize derive, 세 가지 TemplateOverride 변형 및 ToolBridge 렌더링 파이프라인을 확인합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="PromptContext: 검사 가능한 렌더링 입력"><meta property="og:description" content="PromptContext는 Agent 전용 템플릿 입력을 저장합니다. Serde derive를 통해 직렬화 능력을 얻고, ToolBridge::render_prompt()에 전달되어 렌더링됩니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>多轮对话为什么越来越贵？Token 计费原理 | 方片学堂</title>
+<title>多轮对话为什么越来越贵？ | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -50,7 +50,7 @@ input[type=range]{width:100%;accent-color:var(--danger);height:6px;cursor:pointe
 .takeaway b{color:var(--danger)}
 </style>
 <!-- SEO Start -->
-<meta name="description" content="大模型 API 按 Token 计费，多轮对话中每轮都要发送完整历史，Token 消耗呈线性增长。用图示拆解多轮对话的 Token 计费逻辑，帮你理解成本爆炸的根本原因。">
+<meta name="description" content="LLM 按输入 Token 数计费。每一轮对话，都要把所有历史记录重新发给模型：历史越长，Token 越多，费用越高。拖动滑块模拟费用累积。">
 <meta name="keywords" content="大模型计费,Token计费,多轮对话成本,API成本,大模型省钱,上下文成本">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -65,8 +65,8 @@ input[type=range]{width:100%;accent-color:var(--danger);height:6px;cursor:pointe
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
-<meta property="og:title" content="多轮对话为什么越来越贵？Token 计费原理">
-<meta property="og:description" content="大模型 API 按 Token 计费，多轮对话中每轮都要发送完整历史，Token 消耗呈线性增长。用图示拆解多轮对话的 Token 计费逻辑，帮你理解成本爆炸的根本原因。">
+<meta property="og:title" content="多轮对话为什么越来越贵？">
+<meta property="og:description" content="LLM 按输入 Token 数计费。每一轮对话，都要把所有历史记录重新发给模型：历史越长，Token 越多，费用越高。拖动滑块模拟费用累积。">
 
 
 <meta property="og:image:width" content="1200">
@@ -74,8 +74,8 @@ input[type=range]{width:100%;accent-color:var(--danger);height:6px;cursor:pointe
 <meta property="og:locale" content="zh_CN">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="多轮对话为什么越来越贵？Token 计费原理">
-<meta name="twitter:description" content="大模型 API 按 Token 计费，多轮对话中每轮都要发送完整历史，Token 消耗呈线性增长。用图示拆解多轮对话的 Token 计费逻辑，帮你理解成本爆炸的根本原因。">
+<meta name="twitter:title" content="多轮对话为什么越来越贵？">
+<meta name="twitter:description" content="LLM 按输入 Token 数计费。每一轮对话，都要把所有历史记录重新发给模型：历史越长，Token 越多，费用越高。拖动滑块模拟费用累积。">
 
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">

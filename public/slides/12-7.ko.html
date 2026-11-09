@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>외부 Toolset Preset 레지스트리 | 方片学堂</title>
+<title>프로세스 수준 외부 Toolset Preset 레지스트리 | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -23,7 +23,7 @@
 .takeaway{margin-top:22px;padding:19px 22px;border-radius:14px;background:#241a0b;color:#f7ead2;display:flex;gap:13px;line-height:1.75}.takeaway svg{flex:0 0 auto;color:var(--gold)}.takeaway b{color:var(--gold)}
 @media(max-width:760px){.facts{grid-template-columns:1fr}.timing{grid-template-columns:1fr}.time-arrow{justify-content:center;transform:rotate(90deg)}.source-head{flex-direction:column}.registry-visual{padding:12px}.objective{grid-template-columns:1fr}.lesson-header:after{display:none}}
 </style>
-<meta name="description" content="config.rs 실제 소스 코드를 기반으로 프로세스 수준 외부 Toolset preset 레지스트리·가시성·등록 타이밍을 설명합니다.">
+<meta name="description" content="config.rs는 crate 외부의 확장 코드가 현재 프로세스 내에서 이름으로 해결되는 도구 집합 빌더 함수를 등록할 수 있도록 하며, Public과 Internal로 공개 열거 포함 여부를 제어합니다.">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 
@@ -36,10 +36,10 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="외부 Toolset Preset 레지스트리">
+<meta property="og:title" content="프로세스 수준 외부 Toolset Preset 레지스트리">
 
 <meta property="og:locale" content="ko_KR">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:description" content="config.rs 실제 소스 코드를 기반으로 프로세스 수준 외부 Toolset preset 레지스트리·가시성·등록 타이밍을 설명합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:description" content="config.rs는 crate 외부의 확장 코드가 현재 프로세스 내에서 이름으로 해결되는 도구 집합 빌더 함수를 등록할 수 있도록 하며, Public과 Internal로 공개 열거 포함 여부를 제어합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>

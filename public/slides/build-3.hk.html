@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>動手實戰篇你現在能做什麼：給你的 Agent 接上第一個真工具 | 方片学堂</title>
+<title>讓它從「會説」變成「會做」：接上第一個工具 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <link rel="stylesheet" href="build.css">
 <!-- SEO Start -->
-<meta name="description" content="看完一個真實產品從 Demo 到上綫的全過程，這一頁帶你給自己的 Agent 接上第一個工具：怎麼挑、工具描述怎麼寫、怎麼跑通「請求-校驗-執行-回喂」的完整閉環。三檔任務今天就能開工。">
+<meta name="description" content="提示詞能穩定產生草稿後，先接入一個可核驗、可撤銷或可人工接管的工具操作。">
 <meta name="keywords" content="Agent工具調用,Function Calling,工具描述,MCP,AI產品經理實戰">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,14 +23,14 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
-<meta property="og:title" content="動手實戰篇你現在能做什麼：給 Agent 接上第一個真工具">
-<meta property="og:description" content="怎麼挑第一個工具、描述怎麼寫、怎麼跑通完整閉環。">
+<meta property="og:title" content="讓它從「會説」變成「會做」：接上第一個工具">
+<meta property="og:description" content="提示詞能穩定產生草稿後，先接入一個可核驗、可撤銷或可人工接管的工具操作。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_HK">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="動手實戰篇你現在能做什麼">
-<meta name="twitter:description" content="給你的 Agent 接上第一個真工具，跑通完整閉環。">
+<meta name="twitter:title" content="讓它從「會説」變成「會做」：接上第一個工具">
+<meta name="twitter:description" content="提示詞能穩定產生草稿後，先接入一個可核驗、可撤銷或可人工接管的工具操作。">
 
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
@@ -43,8 +43,8 @@
   <header class="lesson-header">
     <div class="kicker">動手實戰 · 你現在能做什麼</div>
     <h1>讓它從「會説」變成「會做」：接上第一個工具</h1>
-    <p class="subtitle">M1 立住之後，你手上是一個很會説話的 AI。但 Alice 那 132 個工具的故事你也看完了。<b>Agent 和聊天機器人的分水嶺，就是第一個真正被執行的工具</b>。這一步不需要 132 個，需要 1 個。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>工具調用閉環四段演示；三檔任務：選定工具、寫三行描述、跑通閉環並故意搞一次破壞</p></aside><!--seo:end-->  <!-- ── 主线定位 ── -->
+    <p class="subtitle">提示詞能穩定產生草稿後，先接入一個可核驗、可撤銷或可人工接管的工具操作。</p>
+  </header><aside class="xa-tldr company-example-note"><p>本頁的助手、角色與流程為教學示例，不代表方片已上線產品或真實專案業績。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>工具調用閉環四段演示；三檔任務：選定工具、寫三行描述、跑通閉環並故意搞一次破壞</p></aside><!--seo:end-->  <!-- ── 主线定位 ── -->
   <div class="bd-here">
     <div class="bd-here-cap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>

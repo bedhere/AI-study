@@ -108,7 +108,7 @@
   .layer-card.active .lc-body{max-height:420px}
 }
 </style>
-<meta name="description" content="Context compression four-layer defense: 60% Snip, 75% MicroCompact, 85% Collapse, 95% AutoCompact.">
+<meta name="description" content="Drag the slider to simulate conversation growth and observe how compression extends context lifespan.">
 <meta name="author" content="Fangpian">
 
 
@@ -121,7 +121,7 @@
 
 
 
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="Context Compression: Four Defense Lines"><meta property="og:description" content="Context compression four-layer defense: 60% Snip, 75% MicroCompact, 85% Collapse, 95% AutoCompact."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="Context Compression: Four Layers of Defense"><meta property="og:description" content="Drag the slider to simulate conversation growth and observe how compression extends context lifespan."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -319,7 +319,7 @@ var DECISIONS = [
   '<b>📌 Design Decision:</b> Snip only removes redundant tool output data — users notice nothing. You need to decide: which tool outputs can be summarized? Which must be kept intact (e.g. code execution results)?',
   '<b>📌 Design Decision:</b> MicroCompact begins condensing early conversations. Why not compress from the start? Because the model needs a complete context to understand user intent — compressing too early causes amnesia.',
   '<b>📌 Design Decision:</b> Collapse turns multiple conversation turns into one summary. Who writes the summary? Let the model summarize itself? Or use a dedicated compression Prompt? Summary quality directly affects subsequent accuracy.',
-  '<b>📌 Design Decision:</b> AutoCompact is the last line of defense — significant information loss, but conversation continues uninterrupted. Alice\'s four-layer strategy vs. a simple "full = error" approach — which experience is better?',
+  '<b>📌 Design Decision:</b> AutoCompact is the last line of defense — significant information loss, but conversation continues uninterrupted. example assistant\'s four-layer strategy vs. a simple "full = error" approach — which experience is better?',
   '<b>📌 ⚠️ Overflow!</b> All four compression layers exhausted; context has exceeded safe headroom. If growth continues past the 256K model limit, the API will return a context_length_exceeded error. This is why emergency context rescue is needed as the final backstop.'
 ];
 

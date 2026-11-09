@@ -46,7 +46,7 @@
 }
 </style>
 <!-- SEO Start -->
-<meta name="description" content="그래픽카드나 Mac 모델을 선택하면 어떤 오픈소스 모델을 돌릴 수 있는지 실시간으로 계산합니다. VRAM 추정 공식, FP16과 INT4 양자화 구간 대조, NVIDIA 전용 VRAM과 Apple 통합 메모리의 차이, 그리고 MoE 모델에서 VRAM과 속도가 어긋나는 현상까지 다룹니다.">
+<meta name="description" content="앞에서는 개념을 다뤘고, 이번 절은 직접 해봅니다. 그래픽카드나 Mac 모델을 선택하고 결론을 바로 확인하세요. 보고 나면 로컬에서 모델을 돌리는 문턱이 대부분의 사람이 생각하는 것보다 낮다는 걸 알게 됩니다.">
 <meta name="keywords" content="로컬 배포 VRAM 요구,대규모 모델 VRAM 계산,INT4 양자화,Apple Silicon 대규모 모델,그래픽카드로 돌릴 모델,MoE VRAM">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -61,7 +61,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="내 컴퓨터는 얼마나 큰 모델을 돌릴 수 있나">
-<meta property="og:description" content="그래픽카드나 Mac 모델을 선택해 어떤 오픈소스 모델을 돌릴 수 있는지 실시간으로 계산하고, 그 뒤의 환산 공식까지 이해합니다.">
+<meta property="og:description" content="앞에서는 개념을 다뤘고, 이번 절은 직접 해봅니다. 그래픽카드나 Mac 모델을 선택하고 결론을 바로 확인하세요. 보고 나면 로컬에서 모델을 돌리는 문턱이 대부분의 사람이 생각하는 것보다 낮다는 걸 알게 됩니다.">
 
 
 <meta property="og:image:width" content="1200">
@@ -69,7 +69,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="내 컴퓨터는 얼마나 큰 모델을 돌릴 수 있나">
-<meta name="twitter:description" content="그래픽카드나 Mac 모델을 선택해 어떤 오픈소스 모델을 돌릴 수 있는지 실시간으로 계산하고, 그 뒤의 환산 공식까지 이해합니다.">
+<meta name="twitter:description" content="앞에서는 개념을 다뤘고, 이번 절은 직접 해봅니다. 그래픽카드나 Mac 모델을 선택하고 결론을 바로 확인하세요. 보고 나면 로컬에서 모델을 돌리는 문턱이 대부분의 사람이 생각하는 것보다 낮다는 걸 알게 됩니다.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->

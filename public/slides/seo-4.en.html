@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dissecting This Site: Google Indexes 693 Pages, Bing Only 50 | Get Found: SEO &amp; GEO</title>
+<title>Dissecting This Site: Google Indexes 693 Pages, Bing Only 50 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <link rel="stylesheet" href="taste.css?v=20260810a">
 <link rel="stylesheet" href="seo.css?v=20260811a">
 <!-- SEO Start -->
-<meta name="description" content="Fangpian Academy's real SEO/GEO audit in August 2026: what it means that Google indexes about 693 pages while Bing has only about 50, why the sitemap missed every English and Korean page, how Q&A pages marked only as Article threw away FAQ citations, and how dropping bot logs made GEO unmeasurable. For each gap: how we found it, what we changed, how we check.">
+<meta name="description" content="The checklists and levers from the last two lessons all land on one real patient this time: the case-study site itself. On 10 August 2026 we ran a full-site SEO / GEO audit, found ten gaps, and fixed a first round that same week. This lesson picks the five most representative ones. For each: how we found it, what we changed, how we check.">
 <meta name="keywords" content="SEO audit,GEO case study,Bing index,sitemap,llms-full.txt,FAQPage,soft paywall,isAccessibleForFree,crawler logs">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
@@ -23,15 +23,15 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
+<meta property="og:site_name" content="案例站点 · AI Product Manager Training">
 <meta property="og:title" content="Dissecting This Site: Google Indexes 693 Pages, Bing Only 50">
-<meta property="og:description" content="Use Fangpian Academy's own real rebuild as the dissection table. Five gaps, one by one.">
+<meta property="og:description" content="The checklists and levers from the last two lessons all land on one real patient this time: the case-study site itself. On 10 August 2026 we ran a full-site SEO / GEO audit, found ten gaps, and fixed a first round that same week. This lesson picks the five most representative ones. For each: how we found it, what we changed, how we check.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dissecting This Site: Google Indexes 693 Pages, Bing Only 50">
-<meta name="twitter:description" content="Use Fangpian Academy's own real rebuild as the dissection table. Five gaps, one by one.">
+<meta name="twitter:description" content="The checklists and levers from the last two lessons all land on one real patient this time: the case-study site itself. On 10 August 2026 we ran a full-site SEO / GEO audit, found ten gaps, and fixed a first round that same week. This lesson picks the five most representative ones. For each: how we found it, what we changed, how we check.">
 
 <!-- SEO End -->
 <style>
@@ -128,9 +128,9 @@
   <header class="lesson-header">
     <div class="kicker">Get Found · 4 / 6</div>
     <h1>Dissecting This Site: Google Indexes 693 Pages, Bing Only 50</h1>
-    <p class="subtitle">The checklists and levers from the last two lessons all land on one real patient this time: Fangpian Academy itself. On 10 August 2026 we ran a full-site SEO / GEO audit, found ten gaps, and fixed a first round that same week. <b>This lesson picks the five most representative ones. For each: how we found it, what we changed, how we check.</b></p>
+    <p class="subtitle">The checklists and levers from the last two lessons all land on one real patient this time: the case-study site itself. On 10 August 2026 we ran a full-site SEO / GEO audit, found ten gaps, and fixed a first round that same week. <b>This lesson picks the five most representative ones. For each: how we found it, what we changed, how we check.</b></p>
     <div class="chips"><span class="chip">Real case</span><span class="chip">Index comparison</span><span class="chip">Audit report</span><span class="chip">Soft-paywall teardown</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">In one sentence</span><p>Fangpian Academy's real August 2026 audit: the sitemap missed every English and Korean page, Q&amp;A pages threw away FAQ citations, and the logs dropped every crawler. For each gap: how we found it, what we changed, how we check</p></aside><!--seo:end-->  <section class="reveal">
+  </header><aside class="xa-tldr company-source-case"><p>This page uses the source course’s public-website case study as teaching material. Its project history, traffic and indexing data are not Fangpian internal-platform results; code examples do not describe the current school implementation.</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">In one sentence</span><p>the case-study site's real August 2026 audit: the sitemap missed every English and Korean page, Q&amp;A pages threw away FAQ citations, and the logs dropped every crawler. For each gap: how we found it, what we changed, how we check</p></aside><!--seo:end-->  <section class="reveal">
     <div class="sec-label">First, the patient's baseline</div>
     <p class="desc">On audit day the site looked like this: 759 HTML pages, Chinese / English / Korean, and almost all of them already had a description (743 pages) and JSON-LD (741 pages)<span class="data-note">2026-08-10 live check</span>. In other words, last lesson's minimum viable checklist mostly passed. By a lot of tutorials' standards, this already counted as "a site that does SEO well."</p>
     <p class="desc" style="margin-top:16px">Then we ran the live checks and the illness showed. That is why this chapter keeps saying "check it yourself": <b>passing the checklist does not mean you are healthy. The numbers are the diagnosis.</b> The first live check found the biggest disease in the room.</p>
@@ -138,11 +138,11 @@
 
   <section class="reveal">
     <div class="sec-label">Try it · First live check: index counts on both sides</div>
-    <p class="desc">Lesson 1's three-minute rough exam starts with a site: query. Run that step on this site and you get the following. <b>Tap the button to run it once.</b></p>
+    <p class="desc">Lesson 1's three-minute rough exam starts with a site: query. Run that step on the case-study site and you get the following. <b>Tap the button to run it once.</b></p>
     <div class="toy" id="i4Cmp">
       <div class="toy-head">
         <span class="toy-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h8"/><path d="M7 11h12"/><path d="M7 6h3"/></svg></span>
-        <span class="toy-t">site:方片学堂 index count, live</span>
+        <span class="toy-t">site:案例站点 index count, live</span>
         <span class="toy-badge">2026-08-10 snapshot</span>
       </div>
       <div class="toy-body">
@@ -173,7 +173,7 @@
           <div class="g4-item">
             <div class="g4-head"><span class="g4-no">1</span><span class="g4-t">Bing indexes about 50 pages; Google about 693</span></div>
             <div class="g4-body">
-              <div class="g4-row"><span class="g4-k find">Found</span><span class="g4-v">Run <code>site:方片学堂</code> once on each engine and compare the counts by eye. Thirty seconds.</span></div>
+              <div class="g4-row"><span class="g4-k find">Found</span><span class="g4-v">Run <code>site:案例站点</code> once on each engine and compare the counts by eye. Thirty seconds.</span></div>
               <div class="g4-row"><span class="g4-k fix">Fix</span><span class="g4-v">Register Bing Webmaster and submit the sitemap; hook up IndexNow so the deploy script pushes changed URLs to Bing automatically. The first push got a 403 because the key file was not on the site root yet. After key verification it recovered.</span></div>
               <div class="g4-row"><span class="g4-k chk">Check</span><span class="g4-v">Target: Bing index from 50 to 300+ within two weeks. Log the number in webmaster tools once a week.</span></div>
             </div>
@@ -191,7 +191,7 @@
             <div class="g4-body">
               <div class="g4-row"><span class="g4-k find">Found</span><span class="g4-v">This site's Beginner FAQ series is one question and one answer per page ("What is a token", "Why is AI customer service so dumb") — exactly the questions beginners type into AI as-is. The JSON-LD only had type Article. Last lesson's FAQPage lever was unused.</span></div>
               <div class="g4-row"><span class="g4-k fix">Fix</span><span class="g4-v">The build script injects an extra FAQPage on this batch: page title as Question, the opening answer-block text as acceptedAnswer. Fully automatic — no page-by-page writing.</span></div>
-              <div class="g4-row"><span class="g4-k chk">Check</span><span class="g4-v">Google rich-results test passes; once a month, ask Perplexity this batch of questions and log how often this site is cited.</span></div>
+              <div class="g4-row"><span class="g4-k chk">Check</span><span class="g4-v">Google rich-results test passes; once a month, ask Perplexity this batch of questions and log how often the case-study site is cited.</span></div>
             </div>
           </div>
           <div class="g4-item">
@@ -231,7 +231,7 @@
           <div class="w4-col">
             <span class="w4-colt">What a logged-out user sees</span>
             <div class="mockwin">
-              <div class="mockwin-bar"><i></i><i></i><i></i><span class="mockwin-url">方片学堂/slides/agent-3.html</span></div>
+              <div class="mockwin-bar"><i></i><i></i><i></i><span class="mockwin-url">案例站点/slides/agent-3.html</span></div>
               <div class="mock w4-page" id="w4User"></div>
             </div>
           </div>
@@ -272,17 +272,17 @@
   </section>
 
   <section class="reveal paywall-locked">
-    <div class="sec-label">Copy-this list · Run the same audit on your site</div>
+    <div class="sec-label">Copy-this list · Run the same audit on ythe case-study site</div>
     <p class="desc">Every move in this audit is copyable. An afternoon is enough. In order:</p>
     <ol class="desc" style="margin:12px 0 0;padding-left:22px;display:flex;flex-direction:column;gap:8px;">
       <li>Run a site: query on Google and on Bing. Log both numbers. A big gap tells you which one to fix first.</li>
-      <li>Open your sitemap.xml, count entries, and match them against the real page count. What is missing is what the engine does not know.</li>
+      <li>Open ythe case-study sitemap.xml, count entries, and match them against the real page count. What is missing is what the engine does not know.</li>
       <li>Pick five random pages and read the source: is the body there, is there a description, is canonical correct, does JSON-LD carry dates.</li>
       <li>Find every Q&amp;A-shaped page on the site and check whether they are marked FAQPage.</li>
       <li>Search the request logs for GPTBot. If you find nothing, check whether analytics or the firewall dropped it.</li>
       <li>If you have paid content, look at gated pages from a crawler's view (curl or the webmaster fetch test) and confirm the engine and the user get the same document.</li>
     </ol>
-    <p class="desc" style="margin-top:16px">Log one line per check: current state, impact, fix. When you are done, that is your site's audit report.</p>
+    <p class="desc" style="margin-top:16px">Log one line per check: current state, impact, fix. When you are done, that is ythe case-study site's audit report.</p>
   </section>
 
   <section class="reveal paywall-locked">
@@ -332,7 +332,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>Effects are counted by the week:</b> the action finishes that day; index counts and citation rates wait for the engine to digest. Write every check as a dated target. Do not trust same-day promises.</p></div>
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>Group the schedule by "which file changes":</b> when one person is optimizing, cram changes to the same script into the same week and ship them in one deploy.</p></div>
     </div>
-    <p class="src-note"><b>Sources:</b> First-hand record of this site's 10 August 2026 SEO / GEO audit and that week's rebuild. Every number in this lesson (Google ~693 / Bing ~50, sitemap ~330 → ~800, 743/759 pages with a description, 531 gated pages, 37 Q&amp;A pages, 317 lessons in llms.txt) is a 2026-08-10 live snapshot. Index counts will move with time; the method will not.</p>
+    <p class="src-note"><b>Sources:</b> First-hand record of the case-study site's 10 August 2026 SEO / GEO audit and that week's rebuild. Every number in this lesson (Google ~693 / Bing ~50, sitemap ~330 → ~800, 743/759 pages with a description, 531 gated pages, 37 Q&amp;A pages, 317 lessons in llms.txt) is a 2026-08-10 live snapshot. Index counts will move with time; the method will not.</p>
   </section>
 
 </main>

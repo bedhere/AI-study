@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Grok Build 소스 강좌 제19강: Hooks 이벤트, matcher, 차단 시맨틱, fail-open 경계.">
   <meta name="author" content="팡피엔">
-  <title>Hooks 차단 시맨틱과 실패 경계 | 方片学堂</title>
+  <title>Hooks: 명시적 deny만 차단합니다 | 方片学堂</title>
 
 
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
@@ -57,7 +57,7 @@
     .takeaway strong{display:block;margin-bottom:8px;color:var(--gold);font-size:25px}
     @media(max-width:760px){.lesson{padding:64px 18px 78px}.section-head{grid-template-columns:1fr;gap:8px}.card,.card.wide{grid-column:1/-1}.matrix{grid-template-columns:1fr}.matrix .cell.head:not(:first-child){display:none}.exercise{grid-template-columns:1fr}.visual{padding:8px}pre{font-size:11px}}
   </style>
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="Hooks: 명시적 deny만 차단한다"><meta property="og:description" content="Grok Build 소스 강좌 제19강: Hooks 이벤트, matcher, 차단 시맨틱, fail-open 경계."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="Hooks: 명시적 deny만 차단합니다"><meta property="og:description" content="Grok Build 소스 강좌 제19강: Hooks 이벤트, matcher, 차단 시맨틱, fail-open 경계."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>

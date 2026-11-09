@@ -62,7 +62,7 @@
 .demo-note{font-size:12px;color:var(--sub);margin-top:12px;line-height:1.7}
 @media(max-width:760px){.facts{grid-template-columns:1fr}.pipe-track{grid-template-columns:1fr}.objective{grid-template-columns:1fr}.lesson-header:after{display:none}.demo-bar{flex-direction:column;align-items:stretch}.demo button{flex:1}.source-head{flex-direction:column}}
 </style>
-<meta name="description" content="拆解 DeepSeek Harness 的工具執行流水線：pre-execute、execute、post-execute 三段瀑布各管什麼，單調 Guard 為什麼在型別上就沒有放行這個選項，拒絕的呼叫如何物化成模型可見的錯誤結果。">
+<meta name="description" content="pre-execute 到 post-execute 的三段管線，Guard 只能收緊不能放行。核心原始碼：packages/core/tools/src/index.ts。">
 <meta name="author" content="方片">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 
@@ -75,7 +75,7 @@
 
 
 
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="工具執行流水線：三段瀑布與單調 Guard"><meta property="og:description" content="拆解 DeepSeek Harness 的工具執行流水線：pre-execute、execute、post-execute 三段瀑布各管什麼，單調 Guard 為什麼在型別上就沒有放行這個選項，拒絕的呼叫如何物化成模型可見的錯誤結果。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="工具執行流水線：三段瀑布與單調 Guard"><meta property="og:description" content="pre-execute 到 post-execute 的三段管線，Guard 只能收緊不能放行。核心原始碼：packages/core/tools/src/index.ts。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

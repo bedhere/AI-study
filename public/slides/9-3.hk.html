@@ -53,7 +53,7 @@
 .takeaway{background:rgba(124,58,237,.04);border:1.5px solid rgba(124,58,237,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--purple)}
 </style>
-<meta name="description" content="用 Alice 的真實案例展示：沒有參考圖時角色每次都不同，有參考圖後角色在不同場景中保持一致。">
+<meta name="description" content="讓同一個虛構人物在不同場景和服裝中保持一致，對照參考圖檢查外貌特徵與生成偏差。">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 
@@ -71,7 +71,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_HK">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:description" content="用 Alice 的真實案例展示：沒有參考圖時角色每次都不同，有參考圖後角色在不同場景中保持一致。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="讓同一個虛構人物在不同場景和服裝中保持一致，對照參考圖檢查外貌特徵與生成偏差。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -80,18 +80,18 @@
   <header class="lesson-header">
     <div class="kicker">AI 生圖</div>
     <h1>角色一致性：最難的產品問題</h1>
-    <p class="subtitle">同一個描述「Alice 在不同場景中」，沒有參考圖時，每次生出來的 Alice 都長得不一樣。這是 AI 生圖產品最難的問題，也是 Alice 花了最多力氣解決的問題。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>同一個 IP 每次畫都長得唔一樣。點解難、產品上點樣思考呢個問題</p></aside><!--seo:end-->  <div class="sec-label">問題有多嚴重？</div>
+    <p class="subtitle">讓同一個虛構人物在不同場景和服裝中保持一致，對照參考圖檢查外貌特徵與生成偏差。</p>
+  </header><aside class="xa-tldr company-example-note"><p>本頁的助手、角色與流程為教學示例，不代表方片已上線產品或真實專案業績。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>同一個 IP 每次畫都長得唔一樣。點解難、產品上點樣思考呢個問題</p></aside><!--seo:end-->  <div class="sec-label">問題有多嚴重？</div>
 
   <div class="demo-toggle" id="demoToggle">
     <div class="demo-before">
       <div class="compare-section reveal">
         <div class="compare-box problem">
           <div class="box-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> 無參考圖：四次生成各不相同</div>
-          <img src="assets/fangpian/tiger-ai-assistant.webp" alt="四次生成不一致的 Alice">
+          <img src="assets/fangpian/tiger-ai-assistant.webp" alt="四次生成不一致的 示例角色">
         </div>
         <div style="display:flex;flex-direction:column;justify-content:center;gap:12px">
-          <p style="font-size:15px;color:var(--text);line-height:1.8">同樣的文字描述 "Alice, a young woman with dark hair"，連續生成四次：</p>
+          <p style="font-size:15px;color:var(--text);line-height:1.8">同樣的文字描述 "示例角色, a young woman with dark hair"，連續生成四次：</p>
           <ul style="font-size:14px;color:var(--sub);line-height:2;padding-left:20px">
             <li>臉型每次都不同</li>
             <li>髮型和長度在變</li>
@@ -107,10 +107,10 @@
       <div class="compare-section reveal">
         <div class="compare-box solution">
           <div class="box-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success,#16a34a)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:3px"><path d="M20 6L9 17l-5-5"/></svg> 有參考圖：四個場景保持一致</div>
-          <img src="assets/fangpian/tiger-ai-assistant.webp" alt="四個場景中一致的 Alice">
+          <img src="assets/fangpian/tiger-ai-assistant.webp" alt="四個場景中一致的 示例角色">
         </div>
         <div style="display:flex;flex-direction:column;justify-content:center;gap:12px">
-          <p style="font-size:15px;color:var(--text);line-height:1.8">同樣的 Alice，在四個不同場景中（書房、廚房、陽台、辦公）：</p>
+          <p style="font-size:15px;color:var(--text);line-height:1.8">同樣的 示例角色，在四個不同場景中（書房、廚房、陽台、辦公）：</p>
           <ul style="font-size:14px;color:var(--sub);line-height:2;padding-left:20px">
             <li>臉型始終一致</li>
             <li>髮型和顏色穩定</li>
@@ -128,8 +128,8 @@
   <div class="sec-label">關鍵武器：角色參考圖</div>
 
   <div class="ref-highlight reveal">
-    <div class="ref-title">Alice 的角色參考表（Character Reference Sheet）</div>
-    <img src="ref_sheet_alice.jpg" alt="Alice 角色參考圖">
+    <div class="ref-title">示例角色 的角色參考表（Character Reference Sheet）</div>
+    <img src="ref_sheet_alice.jpg" alt="示例角色 角色參考圖">
     <div class="ref-desc">一張標準化的角色參考圖，這就是保證一致性的錨定圖。<br>每次生圖時，這張圖會作為參考一起發給模型，讓模型看着畫。</div>
   </div>
 
@@ -155,22 +155,22 @@
 
   <div class="sec-label paywall-locked">換裝一致性演示</div>
 
-  <p style="font-size:14px;color:var(--sub);text-align:center;margin-top:4px" class="paywall-locked">同一個 Alice，不同穿搭：臉沒變，只是衣服變了</p>
+  <p style="font-size:14px;color:var(--sub);text-align:center;margin-top:4px" class="paywall-locked">同一個 示例角色，不同穿搭：臉沒變，只是衣服變了</p>
 
   <div class="wardrobe-grid reveal paywall-locked">
     <div class="wardrobe-item">
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 夏日清涼裝">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="示例角色 夏日清涼裝">
       <div class="w-label">夏日清涼裝</div>
     </div>
     <div class="wardrobe-item">
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 居家睡衣">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="示例角色 居家睡衣">
       <div class="w-label">居家睡衣</div>
     </div>
   </div>
 
   <div class="takeaway reveal paywall-locked">
     <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-    <span><b>角色一致性是產品設計問題，調參數解決不了。</b>Alice 的方案：用標準化的角色參考圖作為每次生圖的視覺錨點，鎖定五官、身材、髮型等核心特徵。這套參考圖錨定策略，是讓 AI 角色在無數場景中始終是同一個人的核心。</span>
+    <span><b>角色一致性是產品設計問題，調參數解決不了。</b>示例角色 的方案：用標準化的角色參考圖作為每次生圖的視覺錨點，鎖定五官、身材、髮型等核心特徵。這套參考圖錨定策略，是讓 AI 角色在無數場景中始終是同一個人的核心。</span>
   </div>
 
 </article>

@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="Embedding 把語義變成座標，相似度就是距離。在平面上拖動查詢點看最近鄰怎麼變，再看 HNSW 為什麼能在億級向量裡瞬間找到。">
+<meta name="description" content="學 RAG 時我們說過：Embedding 把一段話變成一串數字。這串數字到底是什麼？答案簡單得出奇——是座標。給每句話發一個「語義地圖」上的位置，意思越近、位置越近。於是「檢索資料」這件事，就變成了小學生都會的遊戲：在地圖上找離你最近的鄰居。">
 <meta name="keywords" content="向量資料庫,Embedding 原理,RAG 檢索,最近鄰搜尋,HNSW,語義搜尋,向量檢索">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="向量：RAG 檢索是在「找最近的鄰居」">
-<meta property="og:description" content="語義變座標、相似變距離、檢索變找鄰居。拖動查詢點玩語義地圖，再對比暴力遍歷和 HNSW 分層跳躍。">
+<meta property="og:description" content="學 RAG 時我們說過：Embedding 把一段話變成一串數字。這串數字到底是什麼？答案簡單得出奇——是座標。給每句話發一個「語義地圖」上的位置，意思越近、位置越近。於是「檢索資料」這件事，就變成了小學生都會的遊戲：在地圖上找離你最近的鄰居。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="向量：RAG 檢索是在「找最近的鄰居」">
-<meta name="twitter:description" content="語義變座標、相似變距離、檢索變找鄰居。拖動查詢點玩語義地圖，再對比暴力遍歷和 HNSW 分層跳躍。">
+<meta name="twitter:description" content="學 RAG 時我們說過：Embedding 把一段話變成一串數字。這串數字到底是什麼？答案簡單得出奇——是座標。給每句話發一個「語義地圖」上的位置，意思越近、位置越近。於是「檢索資料」這件事，就變成了小學生都會的遊戲：在地圖上找離你最近的鄰居。">
 
 <!-- SEO End -->
 <style>

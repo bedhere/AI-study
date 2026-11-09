@@ -97,7 +97,7 @@
 @media(prefers-reduced-motion:reduce){.demo,.demo *{transition-duration:0s!important;animation-duration:0s!important}}
 @media(max-width:760px){.lesson{overflow-x:hidden}.compare{grid-template-columns:1fr}.dm-cols{grid-template-columns:1fr}.objective{grid-template-columns:1fr}.lesson-header:after{display:none}.demo{padding:18px}.demo-ctrl{width:100%}.demo-ctrl button{flex:1}.dm-body{min-height:0}.visual{padding:14px}.dm-trace li{flex-direction:column;gap:4px}.demo,.visual,.cmp-card{max-width:100%;min-width:0}.lesson code{overflow-wrap:anywhere;word-break:break-word}.dm-summary.on{max-height:520px}}
 </style>
-<meta name="description" content="Codex 让模型写 JavaScript 来编排工具：能力做减法的 V8 isolate，以及跑不完就让出 cell、用 wait 续跑的长任务协议">
+<meta name="description" content="与其让模型发二十次工具调用，不如让它写一段 JavaScript。这段程序在哪跑、能干什么、十秒跑不完又怎么办，本课讲这三个问题背后的两个思路。">
 <meta name="author" content="方片">
 
 
@@ -109,7 +109,7 @@
 
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
 <meta property="og:locale" content="zh_CN">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="exec 与 wait：跑不完的程序怎么收场"><meta property="og:description" content="Codex 让模型写 JavaScript 来编排工具：能力做减法的 V8 isolate，以及跑不完就让出 cell、用 wait 续跑的长任务协议"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="exec 与 wait：跑不完的程序怎么收场"><meta property="og:description" content="与其让模型发二十次工具调用，不如让它写一段 JavaScript。这段程序在哪跑、能干什么、十秒跑不完又怎么办，本课讲这三个问题背后的两个思路。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

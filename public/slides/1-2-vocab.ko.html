@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Token과 어휘 사전: 말뭉치에서 단어 벡터 구축까지 | 方片学堂</title>
+<title>어휘와 훈련 | 方片学堂</title>
 <script>
 // 전역 Token 간 어텐션 가중치 행렬 (PMI + 의미 그룹화)
 // vocab: 116개의 고유 Token (중국어 문학 말뭉치 — 토큰화 시연을 위해 의도적으로 보존)
@@ -392,7 +392,7 @@ canvas#heatmap {
 }
 </style>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style><!-- SEO Start -->
-<meta name="description" content="대형 언어 모델의 어휘 사전 구축 원리 심층 분석: BPE 토크나이저 알고리즘, Token과 단어의 관계, 중·영문 Token 효율 차이, 단어 벡터 행렬의 의미 — LLM 생성 원리 이해를 위한 첫 번째 단계입니다.">
+<meta name="description" content="LLM 학습의 첫 번째 단계: 인간이 제공한 방대한 텍스트 데이터를 읽어들입니다.">
 <meta name="keywords" content="Token,어휘사전,BPE토큰화,단어벡터,LLM토크나이저,Tokenizer">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -407,8 +407,8 @@ canvas#heatmap {
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="말뭉치에서 단어 벡터까지: Token과 어휘 사전은 어떻게 만들어지는가">
-<meta property="og:description" content="대형 언어 모델의 어휘 사전 구축 원리 심층 분석: BPE 토크나이저 알고리즘, Token과 단어의 관계, 중·영문 Token 효율 차이, 단어 벡터 행렬의 의미.">
+<meta property="og:title" content="어휘와 훈련">
+<meta property="og:description" content="LLM 학습의 첫 번째 단계: 인간이 제공한 방대한 텍스트 데이터를 읽어들입니다.">
 
 
 <meta property="og:image:width" content="1200">
@@ -416,8 +416,8 @@ canvas#heatmap {
 <meta property="og:locale" content="ko_KR">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="말뭉치에서 단어 벡터까지: Token과 어휘 사전은 어떻게 만들어지는가">
-<meta name="twitter:description" content="대형 언어 모델의 어휘 사전 구축 원리 심층 분석: BPE 토크나이저 알고리즘, Token과 단어의 관계, 중·영문 Token 효율 차이, 단어 벡터 행렬의 의미.">
+<meta name="twitter:title" content="어휘와 훈련">
+<meta name="twitter:description" content="LLM 학습의 첫 번째 단계: 인간이 제공한 방대한 텍스트 데이터를 읽어들입니다.">
 
 <!-- SEO End -->
 <!--seo:begin--><!--seo:end-->

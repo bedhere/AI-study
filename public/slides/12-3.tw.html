@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>從真實 main 到會話取樣 | 方片学堂</title>
+<title>從真實 main() 到第一輪取樣 | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -21,7 +21,7 @@
 .takeaway{display:flex;gap:12px}.takeaway svg{width:26px;flex:none;color:var(--accent)}
 @media(max-width:760px){.lesson-header{padding:30px 22px}.lesson-header:after{font-size:48px}.modes,.source-grid{grid-template-columns:1fr}.handoff{grid-template-columns:1fr}.handoff div:not(:last-child):after{content:"⌄";right:50%;top:auto;bottom:-17px}.route{padding:10px}}
 </style>
-<meta name="description" content="沿真實入口 xai-grok-pager-bin/src/main.rs 跟蹤 headless、leader、stdio、TUI 到 SessionActor 與 SamplerActor。">
+<meta name="description" content="實際入口位於 xai-grok-pager-bin/src/main.rs。同一個組合入口解析命令與互動模式，再把工作交給 TUI 或 Shell Agent 宿主。">
 <meta name="author" content="方片">
 
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
@@ -34,7 +34,7 @@
 
 
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="從真實 main() 到第一輪取樣"><meta property="og:description" content="沿真實入口 xai-grok-pager-bin/src/main.rs 跟蹤 headless、leader、stdio、TUI 到 SessionActor 與 SamplerActor。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="從真實 main() 到第一輪取樣"><meta property="og:description" content="實際入口位於 xai-grok-pager-bin/src/main.rs。同一個組合入口解析命令與互動模式，再把工作交給 TUI 或 Shell Agent 宿主。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

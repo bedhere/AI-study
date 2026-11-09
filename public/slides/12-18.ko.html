@@ -22,7 +22,7 @@
 .takeaway{margin-top:18px;display:flex;gap:14px;padding:20px 22px;border-radius:16px;background:#1b160d;color:#f8ecd4;line-height:1.75}.takeaway svg{flex:0 0 auto;color:#f5b942}.takeaway b{color:#f5b942}
 @media(max-width:760px){.objective,.steps,.layers{grid-template-columns:1fr}.objective{gap:5px}.hero-copy{padding:22px 20px 8px}.source-head{flex-direction:column}}
 </style>
-<meta name="description" content="실제 Grok Build 소스 코드를 기반으로 hooks, 권한 해석, bash 분할, 사용자 확인, 샌드박스 실행을 설명합니다.">
+<meta name="description" content="하나의 도구 호출은 먼저 구체적인 접근 의도로 파싱된 후, plan gate, hooks, 정책 규칙, 세션 인가, Auto 모드, 사용자 확인 단계를 거칩니다. 실행이 허가된 후에도 샌드박스가 OS 수준 기능을 계속 제한합니다.">
 <meta name="author" content="팡피엔">
 
 
@@ -35,7 +35,7 @@
 
 
 
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="도구 요청에서 제한된 실행까지"><meta property="og:description" content="실제 Grok Build 소스 코드를 기반으로 hooks, 권한 해석, bash 분할, 사용자 확인, 샌드박스 실행을 설명합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="도구 요청에서 제한된 실행까지: 완전한 인가 체인"><meta property="og:description" content="하나의 도구 호출은 먼저 구체적인 접근 의도로 파싱된 후, plan gate, hooks, 정책 규칙, 세션 인가, Auto 모드, 사용자 확인 단계를 거칩니다. 실행이 허가된 후에도 샌드박스가 OS 수준 기능을 계속 제한합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>

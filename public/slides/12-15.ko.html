@@ -23,7 +23,7 @@
 .takeaway{margin-top:18px;display:flex;gap:14px;padding:20px 22px;border-radius:16px;background:#1b160d;color:#f8ecd4;line-height:1.75}.takeaway svg{flex:0 0 auto;color:#f5b942}.takeaway b{color:#f5b942}
 @media(max-width:760px){.objective{grid-template-columns:1fr;gap:5px}.grid2,.grid4{grid-template-columns:1fr}.hero-copy{padding:22px 20px 8px}.source-head{flex-direction:column}}
 </style>
-<meta name="description" content="ContextSource, ResumeSourceData, SubagentIsolationMode, worktree의 실제 의미를 명확히 이해합니다.">
+<meta name="description" content="컨텍스트 소스, 신원 연속성, 작업 디렉토리, 파일 변경 범위는 각각 서로 다른 경계를 제어합니다. 이것들을 단순히 하나의 &quot;격리 수준&quot;으로 합치면 재개(resumption)와 worktree의 실제 동작을 오해하기 쉽습니다.">
 <meta name="author" content="팡피엔">
 
 
@@ -36,7 +36,7 @@
 
 
 
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="서브 Agent의 4가지 격리 차원"><meta property="og:description" content="ContextSource, ResumeSourceData, SubagentIsolationMode, worktree의 실제 의미를 명확히 이해합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="서브 에이전트의 네 가지 격리 차원"><meta property="og:description" content="컨텍스트 소스, 신원 연속성, 작업 디렉토리, 파일 변경 범위는 각각 서로 다른 경계를 제어합니다. 이것들을 단순히 하나의 &quot;격리 수준&quot;으로 합치면 재개(resumption)와 worktree의 실제 동작을 오해하기 쉽습니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>

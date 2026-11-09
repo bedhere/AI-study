@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>실제 Skill 해부하기: Alice 릴리스 어시스턴트 | 方片学堂</title>
+<title>실제 Skill 해부하기 | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
@@ -108,7 +108,7 @@
 /* pipeline playing state */
 .pipeline-play .pipe-step .pipe-icon{transition:all .4s ease}
 </style>
-<meta name="description" content="Alice 릴리스 어시스턴트 Skill을 해부합니다: 메타데이터, 트리거 조건, 실행 단계, 도구 권한, 안전 제약 조건. Skill을 이해하는 것은 Agent에게 SOP를 작성하는 것입니다.">
+<meta name="description" content="예시 도우미 릴리스 어시스턴트를 예시로: 각 섹션을 클릭하여 세부 내용을 펼치고, Agent가 Skill을 어떻게 읽고 실행하는지 확인하세요.">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 
@@ -121,11 +121,11 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="실제 Skill 해부하기: Alice 릴리스 어시스턴트">
+<meta property="og:title" content="실제 Skill 해부하기">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="Alice 릴리스 어시스턴트 Skill을 해부합니다: 메타데이터, 트리거 조건, 실행 단계, 도구 권한, 안전 제약 조건. Skill을 이해하는 것은 Agent에게 SOP를 작성하는 것입니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="예시 도우미 릴리스 어시스턴트를 예시로: 각 섹션을 클릭하여 세부 내용을 펼치고, Agent가 Skill을 어떻게 읽고 실행하는지 확인하세요."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -134,8 +134,8 @@
   <header class="lesson-header">
     <div class="kicker">Agent 엔지니어링</div>
     <h1>실제 Skill 해부하기</h1>
-    <p class="subtitle">Alice 릴리스 어시스턴트를 예시로: 각 섹션을 클릭하여 세부 내용을 펼치고, Agent가 Skill을 어떻게 읽고 실행하는지 확인하세요.</p>
-  </header>
+    <p class="subtitle">예시 도우미 릴리스 어시스턴트를 예시로: 각 섹션을 클릭하여 세부 내용을 펼치고, Agent가 Skill을 어떻게 읽고 실행하는지 확인하세요.</p>
+  </header><aside class="xa-tldr company-example-note"><p>이 페이지의 도우미·캐릭터·흐름은 기술 원리를 설명하는 교육 예제이며 실제 출시 제품이나 실적을 뜻하지 않습니다.</p></aside>
 
   <div class="body-grid paywall-locked xa-peek">
     <!-- left area: Skill anatomy -->
@@ -146,7 +146,7 @@
         <div style="display:flex;align-items:center;gap:10px;padding:4px 0;flex-shrink:0">
           <div style="padding:5px 12px;border-radius:8px;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.15);font-size:13px;font-weight:800;color:var(--purple)">SKILL.md</div>
           <div style="font-size:15px;font-weight:800;color:var(--text)">alice-release</div>
-          <div style="font-size:13px;color:var(--muted);margin-left:auto">Alice 프로젝트 릴리스 어시스턴트</div>
+          <div style="font-size:13px;color:var(--muted);margin-left:auto">예시 도우미 프로젝트 릴리스 어시스턴트</div>
         </div>
 
         <!-- Section 1: meta-info -->
@@ -165,7 +165,7 @@
                 <div class="meta-label">Skill 이름</div>
                 <div class="meta-val">alice-release</div>
                 <div class="meta-label">설명</div>
-                <div class="meta-val" style="font-weight:400;font-size:13px">Alice 프로젝트 릴리스 어시스턴트. 빌드, RELEASE_NOTES 업데이트, COS 업로드, 랜딩 페이지 동기화의 전체 릴리스 워크플로우를 담당합니다.</div>
+                <div class="meta-val" style="font-weight:400;font-size:13px">예시 도우미 프로젝트 릴리스 어시스턴트. 빌드, RELEASE_NOTES 업데이트, COS 업로드, 랜딩 페이지 동기화의 전체 릴리스 워크플로우를 담당합니다.</div>
                 <div class="meta-label">트리거 구문</div>
                 <div>
                   <div class="trigger-chips">
@@ -201,7 +201,7 @@
                 <span class="flow-arrow">→</span>
                 <span class="flow-node flow-yes">YES</span>
                 <span class="flow-arrow">→</span>
-                <span class="flow-node flow-q">현재 Alice 프로젝트 디렉토리에 있나요?</span>
+                <span class="flow-node flow-q">현재 예시 도우미 프로젝트 디렉토리에 있나요?</span>
                 <span class="flow-arrow">→</span>
                 <span class="flow-node flow-yes">YES</span>
                 <span class="flow-arrow">→</span>
@@ -217,10 +217,10 @@
                 <span class="flow-end flow-end-skip">일반 기능으로 처리</span>
               </div>
               <div style="font-size:13px;color:var(--sub);margin-top:8px;line-height:1.5;padding:6px 10px;border-radius:8px;background:var(--surface2)">
-                마찬가지로, 두 번째 판단 노드가 NO(Alice 디렉토리가 아님)이면 "일반 기능으로 처리"로 이동합니다.<br>조건이 충족되지 않으면 Skill은 자동으로 종료되어 일반 대화를 방해하지 않습니다.
+                마찬가지로, 두 번째 판단 노드가 NO(예시 도우미 디렉토리가 아님)이면 "일반 기능으로 처리"로 이동합니다.<br>조건이 충족되지 않으면 Skill은 자동으로 종료되어 일반 대화를 방해하지 않습니다.
               </div>
               <div class="decision-card" style="margin-top:8px">
-                <b>📌 설계 결정:</b> 적용 조건 = 잘못된 트리거를 방지하는 안전장치입니다. 적용 조건이 없으면, 어떤 프로젝트에서든 "릴리스"라고 말하면 Alice의 릴리스 워크플로우가 실행됩니다 — 재앙적인 버그입니다.
+                <b>📌 설계 결정:</b> 적용 조건 = 잘못된 트리거를 방지하는 안전장치입니다. 적용 조건이 없으면, 어떤 프로젝트에서든 "릴리스"라고 말하면 예시 도우미의 릴리스 워크플로우가 실행됩니다 — 재앙적인 버그입니다.
               </div>
             </div>
           </div>

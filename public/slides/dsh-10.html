@@ -93,7 +93,7 @@
 @keyframes spshk{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}50%{transform:translateX(5px)}75%{transform:translateX(-2px)}}
 @media(max-width:760px){.facts{grid-template-columns:1fr}.compare{grid-template-columns:1fr}.demo-stage{grid-template-columns:1fr}.lanes{grid-template-columns:1fr}.objective{grid-template-columns:1fr}.lesson-header:after{display:none}.demo-bar{flex-direction:column;align-items:stretch}.demo button{flex:1}}
 </style>
-<meta name="description" content="基于 dsh-spill-policy 真实源码讲解 DSH 的大输出处理：超过 maxInlineBytes 的纯文本工具结果全文落盘，上下文里只留首尾预览加取回凭证，模型用 read/grep 随时捞回，与 Claude Code、Grok Build 的截断策略对比。">
+<meta name="description" content="超限输出落盘存档，给模型留一张取回凭证。核心源码：packages/spill/spill-policy/src/index.ts。">
 <meta name="author" content="方片">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 
@@ -106,7 +106,7 @@
 
 
 
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Spill：工具输出太大怎么办"><meta property="og:description" content="基于 dsh-spill-policy 真实源码讲解 DSH 的大输出处理：超过 maxInlineBytes 的纯文本工具结果全文落盘，上下文里只留首尾预览加取回凭证，模型用 read/grep 随时捞回，与 Claude Code、Grok Build 的截断策略对比。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Spill：工具输出太大怎么办"><meta property="og:description" content="超限输出落盘存档，给模型留一张取回凭证。核心源码：packages/spill/spill-policy/src/index.ts。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

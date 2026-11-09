@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="Embedding은 의미를 좌표로 바꾸고, 유사도는 거리예요. 평면에서 쿼리 점을 끌어 최근접 이웃이 어떻게 바뀌는지 보고, HNSW가 억 단위 벡터에서도 순식간에 찾는 이유를 살펴보세요.">
+<meta name="description" content="RAG를 배울 때 말했죠. Embedding은 한 구절을 숫자 나열로 바꿉니다. 그 숫자는 대체 뭘까요? 답이 놀라울 만큼 단순해요—좌표예요. 문장마다 「시맨틱 지도」 위 자리를 주고주고, 뜻이 가까울수록 위치도 가까워집니다. 그래서 「자료 검색」은 초등학생도 아는 게임이 돼요: 지도에서 가장 가까운 이웃을 찾기.">
 <meta name="keywords" content="벡터 데이터베이스,Embedding,RAG 검색,최근접 이웃 검색,HNSW,시맨틱 검색,벡터 검색">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="벡터: RAG 검색은 「가장 가까운 이웃 찾기」예요">
-<meta property="og:description" content="의미→좌표, 유사→거리, 검색→이웃 찾기. 쿼리 점을 끌어 시맨틱 지도를 쓰고, 브루트포스와 HNSW 계층 점프를 비교하세요.">
+<meta property="og:description" content="RAG를 배울 때 말했죠. Embedding은 한 구절을 숫자 나열로 바꿉니다. 그 숫자는 대체 뭘까요? 답이 놀라울 만큼 단순해요—좌표예요. 문장마다 「시맨틱 지도」 위 자리를 주고주고, 뜻이 가까울수록 위치도 가까워집니다. 그래서 「자료 검색」은 초등학생도 아는 게임이 돼요: 지도에서 가장 가까운 이웃을 찾기.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="벡터: RAG 검색은 「가장 가까운 이웃 찾기」예요">
-<meta name="twitter:description" content="의미→좌표, 유사→거리, 검색→이웃 찾기. 쿼리 점을 끌어 시맨틱 지도를 쓰고, 브루트포스와 HNSW 계층 점프를 비교하세요.">
+<meta name="twitter:description" content="RAG를 배울 때 말했죠. Embedding은 한 구절을 숫자 나열로 바꿉니다. 그 숫자는 대체 뭘까요? 답이 놀라울 만큼 단순해요—좌표예요. 문장마다 「시맨틱 지도」 위 자리를 주고주고, 뜻이 가까울수록 위치도 가까워집니다. 그래서 「자료 검색」은 초등학생도 아는 게임이 돼요: 지도에서 가장 가까운 이웃을 찾기.">
 
 <!-- SEO End -->
 <style>

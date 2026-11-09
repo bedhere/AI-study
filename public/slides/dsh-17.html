@@ -82,7 +82,7 @@
   .job-row{grid-template-columns:1fr;gap:4px}
 }
 </style>
-<meta name="description" content="别家没有的几个工具各解决什么问题：terminal 六件套保住 REPL 状态，lsp 闭合四类语义查询，jobs 把后台 bash、PTY 与 subagent 收进同一张任务列表。">
+<meta name="description" content="别家没有的几个工具各解决什么问题。核心源码：packages/terminal/、packages/lsp/ 与 packages/jobs/，工具描述全文见 docs/tool-catalog.zh.md。">
 <meta name="author" content="方片">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 
@@ -95,7 +95,7 @@
 
 
 
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="DSH 独有的工具面：terminal / lsp / jobs"><meta property="og:description" content="别家没有的几个工具各解决什么问题：terminal 六件套保住 REPL 状态，lsp 闭合四类语义查询，jobs 把后台 bash、PTY 与 subagent 收进同一张任务列表。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="DSH 独有的工具面：terminal / lsp / jobs"><meta property="og:description" content="别家没有的几个工具各解决什么问题。核心源码：packages/terminal/、packages/lsp/ 与 packages/jobs/，工具描述全文见 docs/tool-catalog.zh.md。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

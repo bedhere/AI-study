@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>문법 레이어 비용 최적화: 기계를 위한 프롬프트 | 方片学堂</title>
+<title>문법 레이어 최적화: 기계를 위한 프롬프트 — 레이아웃은 필요 없습니다 | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>
@@ -59,7 +59,7 @@ body{opacity:0;animation:_si .15s ease .08s forwards}
 }
 </style>
 <!-- SEO Start -->
-<meta name="description" content="Prompt의 문법 레이어에서 Token 소비를 어떻게 줄일까요? 자연어와 구조화된 지시문의 Token 효율을 비교하고, 중복 단어 제거, XML 태그 구분자 사용, Token 효율적인 형식 선택 등 실전 기법을 소개합니다.">
+<meta name="description" content="형식 Token은 프롬프트의 최대 13~20%를 차지할 수 있습니다. 프롬프트는 기계를 위한 명령어이지 사람이 보는 문서가 아닙니다. **굵기**, JSON 중괄호, 들여쓰기 줄바꿈… 이 모두 형식에 돈을 쓰는 것입니다.">
 <meta name="keywords" content="Prompt 최적화,Token 최적화,Prompt 압축,문법 레이어 최적화,AI 프롬프트 효율">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -74,8 +74,8 @@ body{opacity:0;animation:_si .15s ease .08s forwards}
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="문법 레이어 비용 최적화: 기계를 위한 프롬프트">
-<meta property="og:description" content="Prompt의 문법 레이어에서 Token 소비를 어떻게 줄일까요? 자연어와 구조화된 지시문의 Token 효율을 비교하고, 중복 단어 제거, XML 태그 구분자 사용, Token 효율적인 형식 선택 등 실전 기법을 소개합니다.">
+<meta property="og:title" content="문법 레이어 최적화: 기계를 위한 프롬프트 — 레이아웃은 필요 없습니다">
+<meta property="og:description" content="형식 Token은 프롬프트의 최대 13~20%를 차지할 수 있습니다. 프롬프트는 기계를 위한 명령어이지 사람이 보는 문서가 아닙니다. **굵기**, JSON 중괄호, 들여쓰기 줄바꿈… 이 모두 형식에 돈을 쓰는 것입니다.">
 
 
 <meta property="og:image:width" content="1200">
@@ -83,8 +83,8 @@ body{opacity:0;animation:_si .15s ease .08s forwards}
 <meta property="og:locale" content="ko_KR">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="문법 레이어 비용 최적화: 기계를 위한 프롬프트">
-<meta name="twitter:description" content="Prompt의 문법 레이어에서 Token 소비를 어떻게 줄일까요? 자연어와 구조화된 지시문의 Token 효율을 비교하고, 중복 단어 제거, XML 태그 구분자 사용, Token 효율적인 형식 선택 등 실전 기법을 소개합니다.">
+<meta name="twitter:title" content="문법 레이어 최적화: 기계를 위한 프롬프트 — 레이아웃은 필요 없습니다">
+<meta name="twitter:description" content="형식 Token은 프롬프트의 최대 13~20%를 차지할 수 있습니다. 프롬프트는 기계를 위한 명령어이지 사람이 보는 문서가 아닙니다. **굵기**, JSON 중괄호, 들여쓰기 줄바꿈… 이 모두 형식에 돈을 쓰는 것입니다.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
@@ -167,7 +167,7 @@ const STRATS = [
 `<span class="hl-cmt">// JSON 버전: 다수 기호 오버헤드</span>
 {
   <span class="hl-key">"user"</span>: {
-    <span class="hl-key">"name"</span>: <span class="hl-str">"Alice"</span>,
+    <span class="hl-key">"name"</span>: <span class="hl-str">"예시 도우미"</span>,
     <span class="hl-key">"role"</span>: <span class="hl-str">"admin"</span>,
     <span class="hl-key">"permissions"</span>: [
       <span class="hl-str">"read"</span>,
@@ -179,7 +179,7 @@ const STRATS = [
     good:
 `<span class="hl-cmt"># YAML 버전: 들여쓰기로 기호 대체</span>
 user:
-  name: <span class="hl-str">Alice</span>
+  name: <span class="hl-str">예시 도우미</span>
   role: <span class="hl-str">admin</span>
   permissions:
     - <span class="hl-str">read</span>
@@ -196,7 +196,7 @@ user:
     bad:
 `<span class="hl-cmt">// JSON 배열: 필드명 N번 반복</span>
 [
-  {<span class="hl-key">"id"</span>: 1, <span class="hl-key">"name"</span>: <span class="hl-str">"Alice"</span>, <span class="hl-key">"role"</span>: <span class="hl-str">"Admin"</span>},
+  {<span class="hl-key">"id"</span>: 1, <span class="hl-key">"name"</span>: <span class="hl-str">"예시 도우미"</span>, <span class="hl-key">"role"</span>: <span class="hl-str">"Admin"</span>},
   {<span class="hl-key">"id"</span>: 2, <span class="hl-key">"name"</span>: <span class="hl-str">"Bob"</span>,   <span class="hl-key">"role"</span>: <span class="hl-str">"User"</span>},
   {<span class="hl-key">"id"</span>: 3, <span class="hl-key">"name"</span>: <span class="hl-str">"Carol"</span>, <span class="hl-key">"role"</span>: <span class="hl-str">"Admin"</span>},
   <span class="hl-cmt">// ... 50개 레코드
@@ -205,7 +205,7 @@ user:
     good:
 `<span class="hl-cmt"># 헤더 포함 CSV: 필드명 한 번만 등장</span>
 id  name   role
-1   Alice  Admin
+1   예시 도우미  Admin
 2   Bob    User
 3   Carol  Admin
 <span class="hl-cmt">... (총 50개)</span>

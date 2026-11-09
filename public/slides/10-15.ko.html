@@ -87,7 +87,7 @@
 .takeaway{background:rgba(0,102,255,.04);border:1.5px solid rgba(0,102,255,.18);border-radius:var(--radius);padding:18px 22px;font-size:15px;color:var(--text);display:flex;gap:12px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--accent)}
 </style>
-<meta name="description" content="Agent이 직면하는 세 가지 핵심 위험 유형(사용자 오용, 모델 오작동, 외부 공격)과 모델 레이어 및 환경 레이어의 이중 Containment 전략을 이해합니다.">
+<meta name="description" content="보안은 Prompt 레이어 하나만 추가하는 것으로 충분하지 않으며, 아키텍처 레벨에서 구조적으로 설계해야 합니다. 여기서는 체계적인 보안 분류 프레임워크를 소개합니다.">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 
@@ -102,7 +102,7 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="3가지 리스크: 남용, 제어 불능, 외부 공격"><meta property="og:description" content="Agent이 직면하는 세 가지 핵심 위험 유형(사용자 오용, 모델 오작동, 외부 공격)과 모델 레이어 및 환경 레이어의 이중 Containment 전략을 이해합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="세 가지 위험 유형: 오용, 오작동, 외부 공격"><meta property="og:description" content="보안은 Prompt 레이어 하나만 추가하는 것으로 충분하지 않으며, 아키텍처 레벨에서 구조적으로 설계해야 합니다. 여기서는 체계적인 보안 분류 프레임워크를 소개합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>

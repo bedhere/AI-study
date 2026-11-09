@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>79 个 Workspace 成员的真实分工 | 方片学堂</title>
+<title>79 个 Workspace 成员如何组成产品 | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -28,7 +28,7 @@
 .takeaway{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--text)}
 @media(max-width:760px){.lesson-header{padding:30px 22px}.lesson-header:after{font-size:92px}.axis,.evidence{grid-template-columns:1fr}.arch{padding:12px;overflow-x:auto}.arch svg{min-width:650px}.goal-strip{grid-template-columns:1fr}.exercise{grid-template-columns:1fr}}
 </style>
-<meta name="description" content="按真实源码重建 Grok Build 的 Cargo workspace 地图，解释 79 个成员与组合入口、TUI、Agent 宿主、状态和推理层。">
+<meta name="description" content="根 Cargo.toml 列出 79 个成员，其中 crates/codegen/ 占 62 个。理解这套系统，要沿组合入口、交互界面、Agent 宿主、领域能力、推理状态五条主轴阅读。">
 <meta name="author" content="方片">
 
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
@@ -41,7 +41,7 @@
 
 
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="79 个 Workspace 成员如何组成产品"><meta property="og:description" content="按真实源码重建 Grok Build 的 Cargo workspace 地图，解释 79 个成员与组合入口、TUI、Agent 宿主、状态和推理层。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="79 个 Workspace 成员如何组成产品"><meta property="og:description" content="根 Cargo.toml 列出 79 个成员，其中 crates/codegen/ 占 62 个。理解这套系统，要沿组合入口、交互界面、Agent 宿主、领域能力、推理状态五条主轴阅读。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

@@ -49,7 +49,7 @@
 .takeaway{background:rgba(124,58,237,.04);border:1.5px solid rgba(124,58,237,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--purple)}
 </style>
-<meta name="description" content="MCP 프로토콜은 두 방향으로 작동합니다: AI가 Client로서 외부 도구를 호출하고, Server로서 Cursor 등에 의해 호출됩니다. 하나의 프로토콜, 양방향 통합.">
+<meta name="description" content="대부분의 사람들은 MCP를 단순히 「AI가 외부 도구를 호출하는 것」으로 이해합니다. 하지만 MCP 프로토콜은 양방향입니다: 예시 도우미가 다른 도구를 호출할 수 있을 뿐만 아니라, Cursor 같은 외부 클라이언트가 예시 도우미의 기능을 호출할 수도 있습니다.">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 
@@ -66,7 +66,7 @@
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="MCP 프로토콜은 두 방향으로 작동합니다: AI가 Client로서 외부 도구를 호출하고, Server로서 Cursor 등에 의해 호출됩니다. 하나의 프로토콜, 양방향 통합."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="대부분의 사람들은 MCP를 단순히 「AI가 외부 도구를 호출하는 것」으로 이해합니다. 하지만 MCP 프로토콜은 양방향입니다: 예시 도우미가 다른 도구를 호출할 수 있을 뿐만 아니라, Cursor 같은 외부 클라이언트가 예시 도우미의 기능을 호출할 수도 있습니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -76,8 +76,8 @@
   <header class="lesson-header">
     <div class="kicker">MCP 실전</div>
     <h1>MCP는 단순한 「도구 호출」 이상입니다</h1>
-    <p class="subtitle">대부분의 사람들은 MCP를 단순히 「AI가 외부 도구를 호출하는 것」으로 이해합니다. 하지만 MCP 프로토콜은 양방향입니다: Alice가 다른 도구를 호출할 수 있을 뿐만 아니라, Cursor 같은 외부 클라이언트가 Alice의 기능을 호출할 수도 있습니다.</p>
-  </header>
+    <p class="subtitle">대부분의 사람들은 MCP를 단순히 「AI가 외부 도구를 호출하는 것」으로 이해합니다. 하지만 MCP 프로토콜은 양방향입니다: 예시 도우미가 다른 도구를 호출할 수 있을 뿐만 아니라, Cursor 같은 외부 클라이언트가 예시 도우미의 기능을 호출할 수도 있습니다.</p>
+  </header><aside class="xa-tldr company-example-note"><p>이 페이지의 도우미·캐릭터·흐름은 기술 원리를 설명하는 교육 예제이며 실제 출시 제품이나 실적을 뜻하지 않습니다.</p></aside>
 
   <div class="sec-label">양방향 흐름도</div>
 
@@ -98,13 +98,13 @@
         <div class="arrow-line">
           <span class="arrow-r" style="color:var(--accent)">→</span>
           <span class="arrow-l" style="color:var(--success)">←</span>
-          <span class="arrow-label" style="color:var(--accent)">Alice가 도구 호출</span>
+          <span class="arrow-label" style="color:var(--accent)">예시 도우미가 도구 호출</span>
         </div>
       </div>
 
       <div class="flow-center">
         <div class="flow-alice">A</div>
-        <div class="flow-alice-label">Alice</div>
+        <div class="flow-alice-label">예시 도우미</div>
         <div class="flow-alice-sub">Client이자 Server</div>
       </div>
 
@@ -112,7 +112,7 @@
         <div class="arrow-line">
           <span class="arrow-l" style="color:var(--purple)">←</span>
           <span class="arrow-r" style="color:var(--amber)">→</span>
-          <span class="arrow-label" style="color:var(--purple)">외부에서 Alice 호출</span>
+          <span class="arrow-label" style="color:var(--purple)">외부에서 예시 도우미 호출</span>
         </div>
       </div>
 
@@ -129,24 +129,24 @@
   <div class="role-cards reveal paywall-locked xa-peek">
     <div class="role-card client">
       <h3><span style="font-size:20px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/></svg></span> Client로서 (소비자)</h3>
-      <p>Alice는 외부 MCP 서비스에 연결해 다른 곳이 제공하는 도구 기능을 호출합니다:</p>
+      <p>예시 도우미는 외부 MCP 서비스에 연결해 다른 곳이 제공하는 도구 기능을 호출합니다:</p>
       <ul>
         <li><b>캘린더 MCP</b> — 일정 조회 및 생성</li>
         <li><b>이메일 MCP</b> — 이메일 읽기 및 쓰기</li>
         <li><b>데이터베이스 MCP</b> — 데이터 쿼리</li>
         <li><b>브라우저 MCP</b> — 웹페이지 접근</li>
       </ul>
-      <p style="margin-top:10px"><b style="color:var(--accent)">핵심:</b> Alice가 능동적으로 요청을 시작해 외부 기능을 획득합니다.</p>
+      <p style="margin-top:10px"><b style="color:var(--accent)">핵심:</b> 예시 도우미가 능동적으로 요청을 시작해 외부 기능을 획득합니다.</p>
     </div>
     <div class="role-card server">
       <h3><span style="font-size:20px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 15 3 19 7 23"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span> Server로서 (제공자)</h3>
-      <p>Alice는 자신의 기능을 MCP 프로토콜을 통해 외부에 노출시켜 호출될 수 있게 합니다:</p>
+      <p>예시 도우미는 자신의 기능을 MCP 프로토콜을 통해 외부에 노출시켜 호출될 수 있게 합니다:</p>
       <ul>
-        <li><b>Cursor</b> — 코딩 중 Alice를 호출해 노트 검색</li>
-        <li><b>Claude Desktop</b> — Claude가 Alice에게 메시지 전송 가능</li>
-        <li><b>자동화 스크립트</b> — 정기적으로 Alice를 트리거해 작업 실행</li>
+        <li><b>Cursor</b> — 코딩 중 예시 도우미를 호출해 노트 검색</li>
+        <li><b>Claude Desktop</b> — Claude가 예시 도우미에게 메시지 전송 가능</li>
+        <li><b>자동화 스크립트</b> — 정기적으로 예시 도우미를 트리거해 작업 실행</li>
       </ul>
-      <p style="margin-top:10px"><b style="color:var(--purple)">핵심:</b> Alice는 수동적으로 요청을 받아 자신의 기능을 제공합니다.</p>
+      <p style="margin-top:10px"><b style="color:var(--purple)">핵심:</b> 예시 도우미는 수동적으로 요청을 받아 자신의 기능을 제공합니다.</p>
     </div>
   </div>
 

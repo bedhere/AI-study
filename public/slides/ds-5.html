@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="第一课里 Set 为什么能「直达」？亲手把名字塞进桶：看哈希函数怎么把名字变成数字、对 8 求余算出桶号；再看两个名字撞进同一个桶怎么收场，最后来一场「翻一遍 vs 直达」的百万数据赛跑。">
+<meta name="description" content="还记得第一课的伏笔吗？「查会员名单」的版本 B 用了一行 set.has(user)，名单从 100 人涨到 1000 万人，耗时纹丝不动。当时说好第五课揭底——今天就把这个「直达」的魔术拆给你看：它根本不翻，它是算出来的。">
 <meta name="keywords" content="哈希表,哈希函数,Set原理,字典原理,哈希碰撞,链地址法,数据结构入门">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
 <meta property="og:title" content="哈希表：为什么它找东西快到不讲理">
-<meta property="og:description" content="把 key 亲手塞进桶里，看哈希函数怎么把「翻一遍」变成「直达」；再看两个 key 撞进同一个桶时怎么收场。">
+<meta property="og:description" content="还记得第一课的伏笔吗？「查会员名单」的版本 B 用了一行 set.has(user)，名单从 100 人涨到 1000 万人，耗时纹丝不动。当时说好第五课揭底——今天就把这个「直达」的魔术拆给你看：它根本不翻，它是算出来的。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="哈希表：为什么它找东西快到不讲理">
-<meta name="twitter:description" content="把 key 亲手塞进桶里，看哈希函数怎么把「翻一遍」变成「直达」。">
+<meta name="twitter:description" content="还记得第一课的伏笔吗？「查会员名单」的版本 B 用了一行 set.has(user)，名单从 100 人涨到 1000 万人，耗时纹丝不动。当时说好第五课揭底——今天就把这个「直达」的魔术拆给你看：它根本不翻，它是算出来的。">
 
 <!-- SEO End -->
 <style>

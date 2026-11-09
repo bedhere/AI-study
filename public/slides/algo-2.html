@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="注意力机制要让每个 Token 看所有 Token：拖动上下文长度，看计算量和账单按平方往上蹿——长对话变卡变贵的根源。上一课的 O(n²) 尺子，量一量大模型本尊。">
+<meta name="description" content="上一课你拿到了 Big-O 这把尺子，还记得那条起飞的红线吗？今天带你去看大模型里最有名的一个 O(n²)——注意力机制。学完你会突然理解一堆老问题：为什么长对话越来越卡、为什么上下文窗口是「窗口」不是「仓库」、为什么大家拼命做上下文压缩。">
 <meta name="keywords" content="注意力机制,O(n²),上下文窗口,长上下文成本,KV Cache,上下文压缩,大模型原理">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
 <meta property="og:title" content="为什么上下文越长越贵？O(n²) 的账单">
-<meta property="og:description" content="每个 Token 都要回头看所有 Token，n×n 的矩阵拖给你看。上下文翻 10 倍，注意力计算翻 100 倍。">
+<meta property="og:description" content="上一课你拿到了 Big-O 这把尺子，还记得那条起飞的红线吗？今天带你去看大模型里最有名的一个 O(n²)——注意力机制。学完你会突然理解一堆老问题：为什么长对话越来越卡、为什么上下文窗口是「窗口」不是「仓库」、为什么大家拼命做上下文压缩。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="为什么上下文越长越贵？O(n²) 的账单">
-<meta name="twitter:description" content="每个 Token 都要回头看所有 Token，n×n 的矩阵拖给你看。上下文翻 10 倍，注意力计算翻 100 倍。">
+<meta name="twitter:description" content="上一课你拿到了 Big-O 这把尺子，还记得那条起飞的红线吗？今天带你去看大模型里最有名的一个 O(n²)——注意力机制。学完你会突然理解一堆老问题：为什么长对话越来越卡、为什么上下文窗口是「窗口」不是「仓库」、为什么大家拼命做上下文压缩。">
 
 <!-- SEO End -->
 <style>

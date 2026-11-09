@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="One greedy misstep cascades. Beam Search keeps several candidate paths and explores ahead. On a 4-step word lattice: greedy scores 0.072, Beam=2 finds 0.098, Beam=3 finds 0.101—at roughly 2–3× compute. Feel where “think first, then answer” comes from.">
+<meta name="description" content="Last lesson left a trap: greedy always grabs the biggest option in front of it, so one misstep can ruin the whole path. The fix is almost cutely simple—don’t lock in yet; keep several candidate paths walking forward together, then compare total scores at the end. That’s Beam Search. The word lattice below puts three strategies on the same stage.">
 <meta name="keywords" content="Beam Search,beam search,decoding strategy,greedy decoding,machine translation decoding,speech recognition,reasoning model intuition">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
 <meta property="og:title" content="Beam Search: Look a Few Steps Ahead Before Choosing">
-<meta property="og:description" content="One greedy misstep cascades. Beam Search keeps several candidate paths, finishes, then compares total scores. One run on the word lattice and it clicks.">
+<meta property="og:description" content="Last lesson left a trap: greedy always grabs the biggest option in front of it, so one misstep can ruin the whole path. The fix is almost cutely simple—don’t lock in yet; keep several candidate paths walking forward together, then compare total scores at the end. That’s Beam Search. The word lattice below puts three strategies on the same stage.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Beam Search: Look a Few Steps Ahead Before Choosing">
-<meta name="twitter:description" content="Don’t put all your eggs in one basket: explore several paths, then compare total scores. Beam width = the compute-for-quality knob.">
+<meta name="twitter:description" content="Last lesson left a trap: greedy always grabs the biggest option in front of it, so one misstep can ruin the whole path. The fix is almost cutely simple—don’t lock in yet; keep several candidate paths walking forward together, then compare total scores at the end. That’s Beam Search. The word lattice below puts three strategies on the same stage.">
 
 <!-- SEO End -->
 <style>

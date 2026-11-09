@@ -85,7 +85,7 @@
   .decisions{grid-template-columns:1fr}
 }
 </style>
-<meta name="description" content="可觀測性實戰：用事件流即時睇 Agent 喺度諗咩、做咩、花咗幾多錢。產品經理一定要掌握嘅營運基礎設施。">
+<meta name="description" content="事件流 + 統計面板 · 即時監控 Agent 全生命週期。點擊「模擬一次任務」，看一個真實任務的完整事件流。">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 
@@ -103,7 +103,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_HK">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:description" content="可觀測性實戰：用事件流即時睇 Agent 喺度諗咩、做咩、花咗幾多錢。產品經理一定要掌握嘅營運基礎設施。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="事件流 + 統計面板 · 即時監控 Agent 全生命週期。點擊「模擬一次任務」，看一個真實任務的完整事件流。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -113,7 +113,7 @@
     <div class="kicker">Agent 工程</div>
     <h1>可觀測性：Agent 喺度做緊咩、花咗幾多錢</h1>
     <p class="subtitle">事件流 + 統計面板 · 即時監控 Agent 全生命週期。點擊「模擬一次任務」，看一個真實任務的完整事件流。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>事件流可視化、Token 追蹤、OpenTelemetry 集成</p></aside><!--seo:end-->  <div class="sec-label">即時監控台</div>
+  </header><aside class="xa-tldr company-example-note"><p>本頁的助手、角色與流程為教學示例，不代表方片已上線產品或真實專案業績。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>事件流可視化、Token 追蹤、OpenTelemetry 集成</p></aside><!--seo:end-->  <div class="sec-label">即時監控台</div>
 
   <div class="ctrl">
     <button class="btn btn-p" id="btnRun" onclick="runTask()">▶ 模擬一次任務</button>
@@ -169,7 +169,7 @@
   <div class="decisions paywall-locked">
     <div class="dec-card"><div class="dec-idx">📌 設計決策 1</div><b>沒有可觀測性 = 黑箱。</b>當用戶問「Agent 點解咁慢」或「今次點解花咗咁多錢」，你需要數據來回答。</div>
     <div class="dec-card"><div class="dec-idx">📌 設計決策 2</div><b>每個事件類型都是一個產品決策點：</b>text 用於流式展示、tool_start/end 用於進度條、usage 用於計費、error 用於告警。</div>
-    <div class="dec-card"><div class="dec-idx">📌 設計決策 3</div><b>Alice 用 OpenTelemetry 標準</b>記錄所有 spans：agent.turn、llm.request、tool.execution、context.compress。這讓你可以用任何 APM 工具分析性能。</div>
+    <div class="dec-card"><div class="dec-idx">📌 設計決策 3</div><b>示例助手 用 OpenTelemetry 標準</b>記錄所有 spans：agent.turn、llm.request、tool.execution、context.compress。這讓你可以用任何 APM 工具分析性能。</div>
   </div>
 
   <div class="l-callout paywall-locked" style="margin-top:28px">

@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>一致性：系統感從哪來 | 審美工程</title>
+<title>一致性：系統感從哪來 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <link rel="stylesheet" href="taste.css?v=20260810a">
 <!-- SEO Start -->
-<meta name="description" content="單看每處都還行、合起來卻散裝，缺的是一套共同變數。用本站頂欄的真實 CSS 變數講 design token：變數開關看散裝感、一個圓角變數聯動五種控件、雙屏 App 找茬。">
+<meta name="description" content="有一種介面，單看每處都還行，合起來卻透着一股散裝味。它缺的説到底就一樣東西：一套大家共同遵守的變數。這一節講 design token，變數先行，樣式跟隨。">
 <meta name="keywords" content="design token,設計變數,一致性,系統感,CSS變數,介面審美">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -24,13 +24,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="一致性：系統感從哪來">
-<meta property="og:description" content="風格是變數的取值，系統感是變數的存在。">
+<meta property="og:description" content="有一種介面，單看每處都還行，合起來卻透着一股散裝味。它缺的説到底就一樣東西：一套大家共同遵守的變數。這一節講 design token，變數先行，樣式跟隨。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_HK">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="一致性：系統感從哪來">
-<meta name="twitter:description" content="風格是變數的取值，系統感是變數的存在。">
+<meta name="twitter:description" content="有一種介面，單看每處都還行，合起來卻透着一股散裝味。它缺的説到底就一樣東西：一套大家共同遵守的變數。這一節講 design token，變數先行，樣式跟隨。">
 
 <!-- SEO End -->
 <style>
@@ -81,7 +81,7 @@
     <h1>一致性：系統感從哪來</h1>
     <p class="subtitle">有一種介面，單看每處都還行，合起來卻透着一股散裝味。它缺的説到底就一樣東西：一套大家共同遵守的變數。這一節講 design token，變數先行，樣式跟隨。</p>
     <div class="chips"><span class="chip">design token</span><span class="chip">CSS 變數</span><span class="chip">系統感</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>好看的站點背後都有一套設計變數。拆開本站真實的 CSS：控件高度、圓角、配色為什麼全站只有一檔，改一處全站生效</p></aside><!--seo:end-->  <section class="reveal">
+  </header><aside class="xa-tldr company-source-case"><p>本頁保留課程來源專案的公開網站案例作為教學材料。案例經歷、流量與收錄資料不屬於方片內部平台，程式碼示例也不代表目前學堂的實際實作。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>好看的站點背後都有一套設計變數。拆開本站真實的 CSS：控件高度、圓角、配色為什麼全站只有一檔，改一處全站生效</p></aside><!--seo:end-->  <section class="reveal">
     <div class="sec-label">單看都還行，合起來就散裝</div>
     <p class="desc">散裝感的來路很具體：這個按鈕高 36，那個高 40；這張卡圓角 8，那張 16；這裏的玫紅深一點，那裏淺一點。每處都是當時隨手寫的，單看都説得過去，拼起來就露餡。解法是把這些「隨手寫」收編成變數：<b>先定 token（主色、圓角、控件高度、間距檔位），所有樣式從 token 取值</b>。寫樣式的人少做決定，介面自然長得像一家人。</p>
   </section>

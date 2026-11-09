@@ -52,7 +52,7 @@
 .takeaway{background:rgba(22,163,74,.04);border:1.5px solid rgba(22,163,74,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--success)}
 </style>
-<meta name="description" content="Registered 10 MCP services and connecting all of them on startup? Lazy connect philosophy: registration ≠ connection; connect only when first used.">
+<meta name="description" content="You registered 10 MCP services and connect them all on startup? If 3 of them go down, your startup will hang. The lazy connect philosophy is simple: registration ≠ connection — connect only when actually needed.">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
 
@@ -69,7 +69,7 @@
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="Registered 10 MCP services and connecting all of them on startup? Lazy connect philosophy: registration ≠ connection; connect only when first used."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="You registered 10 MCP services and connect them all on startup? If 3 of them go down, your startup will hang. The lazy connect philosophy is simple: registration ≠ connection — connect only when actually needed."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -80,7 +80,7 @@
     <div class="kicker">MCP in Practice</div>
     <h1>Lazy Connect: Don't Connect Until Needed</h1>
     <p class="subtitle">You registered 10 MCP services and connect them all on startup? If 3 of them go down, your startup will hang. The lazy connect philosophy is simple: registration ≠ connection — connect only when actually needed.</p>
-  </header>
+  </header><aside class="xa-tldr company-example-note"><p>Assistants, characters and workflows on this page are teaching examples, not launched Fangpian products or verified project results.</p></aside>
 
   <div class="sec-label">Startup Method Comparison</div>
 
@@ -133,7 +133,7 @@
   </div>
 
   <div class="l-callout reveal paywall-locked" style="margin-top:20px;font-size:14px;line-height:1.8">
-    <b>Real-world difference:</b> Alice has registered 10+ MCP services including Calendar, Email, WPS Notes, Browser, and Database. Connecting all on startup means any unavailable service slows down launch. With lazy connect, <b>startup dropped from 30 seconds to 0.2 seconds</b> — users experience an instant open.
+    <b>Real-world difference:</b> example assistant has registered 10+ MCP services including Calendar, Email, WPS Notes, Browser, and Database. Connecting all on startup means any unavailable service slows down launch. With lazy connect, <b>startup dropped from 30 seconds to 0.2 seconds</b> — users experience an instant open.
   </div>
 
   <div class="takeaway reveal paywall-locked">

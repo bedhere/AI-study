@@ -87,7 +87,7 @@
 @keyframes rcok{0%,100%{box-shadow:none}30%{box-shadow:0 0 0 3px rgba(22,163,74,.25)}}
 @media(max-width:760px){.facts{grid-template-columns:1fr}.compare{grid-template-columns:1fr}.rc-stage{grid-template-columns:1fr}.rc-twin{grid-template-columns:1fr}.objective{grid-template-columns:1fr}.lesson-header:after{display:none}.demo-bar{flex-direction:column;align-items:stretch}.demo button{flex:1}}
 </style>
-<meta name="description" content="基于 dsh-session-query 与 dsh-session-reference 真实源码讲解 DSH 的会话检索：FTS 全文搜索、current/shadowed/log-only 三态标注、跨会话引用的冻结快照与不可信标记，并与 Claude Code 提取式记忆、Grok Build 混合检索对比。">
+<meta name="description" content="旧会话是可检索的资料库，引用还能带出处。核心源码：packages/session-query/ 与 packages/context/session-reference/。">
 <meta name="author" content="方片">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 
@@ -100,7 +100,7 @@
 
 
 
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="会话检索与跨会话引用"><meta property="og:description" content="基于 dsh-session-query 与 dsh-session-reference 真实源码讲解 DSH 的会话检索：FTS 全文搜索、current/shadowed/log-only 三态标注、跨会话引用的冻结快照与不可信标记，并与 Claude Code 提取式记忆、Grok Build 混合检索对比。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="会话检索与跨会话引用"><meta property="og:description" content="旧会话是可检索的资料库，引用还能带出处。核心源码：packages/session-query/ 与 packages/context/session-reference/。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

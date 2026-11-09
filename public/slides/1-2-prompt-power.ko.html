@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>컨텍스트 윈도우가 핵심: Prompt가 중요한 이유 | 方片学堂</title>
+<title>왜 Prompt만으로 충분할까요? 답은 컨텍스트 윈도우에 있습니다 | 方片学堂</title>
 
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -168,7 +168,7 @@ input[type=range] { width: 100%; accent-color: var(--accent); cursor: pointer; h
 }
 </style>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style><!-- SEO Start -->
-<meta name="description" content="대형 언어 모델의 매 추론은 컨텍스트 윈도우 내의 내용만 볼 수 있습니다. 컨텍스트 윈도우의 작동 원리를 이해해야 잘 작성된 Prompt가 왜 모델 성능을 크게 바꾸는지 알 수 있습니다.">
+<meta name="description" content="PreTraining 이후: 재학습 없이 태스크 설명만 넣으면 됩니다. 하지만 왜 그럴까요?">
 <meta name="keywords" content="컨텍스트윈도우,Context Window,Prompt엔지니어링,대형언어모델,KV Cache">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -183,8 +183,8 @@ input[type=range] { width: 100%; accent-color: var(--accent); cursor: pointer; h
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="컨텍스트 윈도우가 핵심: Prompt가 중요한 이유">
-<meta property="og:description" content="대형 언어 모델의 매 추론은 컨텍스트 윈도우 내의 내용만 볼 수 있습니다. 컨텍스트 윈도우의 작동 원리를 이해해야 잘 작성된 Prompt가 왜 모델 성능을 크게 바꾸는지 알 수 있습니다.">
+<meta property="og:title" content="왜 Prompt만으로 충분할까요? 답은 컨텍스트 윈도우에 있습니다">
+<meta property="og:description" content="PreTraining 이후: 재학습 없이 태스크 설명만 넣으면 됩니다. 하지만 왜 그럴까요?">
 
 
 <meta property="og:image:width" content="1200">
@@ -192,8 +192,8 @@ input[type=range] { width: 100%; accent-color: var(--accent); cursor: pointer; h
 <meta property="og:locale" content="ko_KR">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="컨텍스트 윈도우가 핵심: Prompt가 중요한 이유">
-<meta name="twitter:description" content="대형 언어 모델의 매 추론은 컨텍스트 윈도우 내의 내용만 볼 수 있습니다. 컨텍스트 윈도우의 작동 원리를 이해해야 잘 작성된 Prompt가 왜 모델 성능을 크게 바꾸는지 알 수 있습니다.">
+<meta name="twitter:title" content="왜 Prompt만으로 충분할까요? 답은 컨텍스트 윈도우에 있습니다">
+<meta name="twitter:description" content="PreTraining 이후: 재학습 없이 태스크 설명만 넣으면 됩니다. 하지만 왜 그럴까요?">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->

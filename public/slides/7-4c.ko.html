@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>권한과 안전: Agent는 무엇을 할 수 있고, 무엇을 해서는 안 되는가 | 方片学堂</title>
+<title>권한과 안전 | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
@@ -97,7 +97,7 @@
   .decisions{grid-template-columns:1fr}
 }
 </style>
-<meta name="description" content="Agent 권한 및 안전 설계: 확인 모드, 자동 모드, 스마트 모드의 인터랙션 비교. 프로덕트 매니저는 안전과 효율 사이의 균형을 찾아야 합니다.">
+<meta name="description" content="Agent는 무엇을 할 수 있고, 무엇을 해서는 안 될까요? 세 가지 권한 모드를 전환하며 동일한 작업들이 각 모드에서 어떻게 처리되는지 관찰해보세요.">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
 
@@ -110,11 +110,11 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="권한과 안전: Agent는 무엇을 할 수 있고, 무엇을 해서는 안 되는가">
+<meta property="og:title" content="권한과 안전">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="Agent 권한 및 안전 설계: 확인 모드, 자동 모드, 스마트 모드의 인터랙션 비교. 프로덕트 매니저는 안전과 효율 사이의 균형을 찾아야 합니다."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="Agent는 무엇을 할 수 있고, 무엇을 해서는 안 될까요? 세 가지 권한 모드를 전환하며 동일한 작업들이 각 모드에서 어떻게 처리되는지 관찰해보세요."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -124,7 +124,7 @@
     <div class="kicker">Agent 엔지니어링</div>
     <h1>권한과 안전</h1>
     <p class="subtitle">Agent는 무엇을 할 수 있고, 무엇을 해서는 안 될까요? 세 가지 권한 모드를 전환하며 동일한 작업들이 각 모드에서 어떻게 처리되는지 관찰해보세요.</p>
-  </header>
+  </header><aside class="xa-tldr company-example-note"><p>이 페이지의 도우미·캐릭터·흐름은 기술 원리를 설명하는 교육 예제이며 실제 출시 제품이나 실적을 뜻하지 않습니다.</p></aside>
 
   <div class="sec-label">권한 모드 선택</div>
   <div class="mode-tabs" id="modeTabs">
@@ -137,7 +137,7 @@
       <div class="mt-desc">모든 작업이 확인 없이 자동으로 실행됩니다</div>
     </div>
     <div class="mode-tab" onclick="pickMode(2)">
-      <div class="mt-name">스마트 모드 <span class="mt-tag" style="background:rgba(22,163,74,.08);color:var(--green)">Alice</span></div>
+      <div class="mt-name">스마트 모드 <span class="mt-tag" style="background:rgba(22,163,74,.08);color:var(--green)">예시 도우미</span></div>
       <div class="mt-desc">LLM 분류기가 위험 등급을 평가하여 단계별로 처리합니다</div>
     </div>
   </div>
@@ -177,13 +177,13 @@
   <div class="sec-label paywall-locked">세 가지 설계 결정</div>
   <div class="decisions paywall-locked">
     <div class="dec-card"><b>📌 설계 결정 1:</b> 권한 설계의 핵심 갈등은 안전 vs 효율입니다. 확인 팝업은 사용자 흐름을 방해하지만, 확인하지 않으면 되돌릴 수 없는 피해가 발생할 수 있습니다. 당신의 제품은 어느 쪽을 선택하나요?</div>
-    <div class="dec-card"><b>📌 설계 결정 2:</b> Alice의 「스마트 모드」는 LLM으로 위험을 판단하지만, LLM도 틀릴 수 있습니다. 한 번의 오분류가 사용자 데이터를 삭제할 수 있습니다. 이 리스크를 받아들일 수 있나요?</div>
+    <div class="dec-card"><b>📌 설계 결정 2:</b> 예시 도우미의 「스마트 모드」는 LLM으로 위험을 판단하지만, LLM도 틀릴 수 있습니다. 한 번의 오분류가 사용자 데이터를 삭제할 수 있습니다. 이 리스크를 받아들일 수 있나요?</div>
     <div class="dec-card"><b>📌 설계 결정 3:</b> 「읽기 전용」과 「파괴적」은 도구 레벨의 플래그입니다. 각 도구가 어느 위험 등급에 속하는지는 PM이 결정해야 합니다. 이는 제품 결정이며 엔지니어링에 떠넘길 수 없습니다.</div>
   </div>
 
   <div class="sec-label paywall-locked">핵심 정리</div>
   <div class="l-callout paywall-locked">
-    <b>핵심 정리</b>&nbsp;Agent 권한 설계의 본질은 안전과 효율 사이에서 균형을 찾는 것입니다. 모두 확인하면 가장 안전하지만 가장 느리고, 모두 허용하면 가장 빠르지만 가장 위험합니다. Alice의 방식은 AI로 위험 등급을 판단해 저위험은 자동 허용, 고위험은 차단 후 확인합니다.
+    <b>핵심 정리</b>&nbsp;Agent 권한 설계의 본질은 안전과 효율 사이에서 균형을 찾는 것입니다. 모두 확인하면 가장 안전하지만 가장 느리고, 모두 허용하면 가장 빠르지만 가장 위험합니다. 예시 도우미의 방식은 AI로 위험 등급을 판단해 저위험은 자동 허용, 고위험은 차단 후 확인합니다.
   </div>
 </article>
 
@@ -240,7 +240,7 @@ var MODES = [
   },
   {
     name:'스마트 모드',
-    detail:'Alice의 방식: LLM 분류기가 각 작업의 위험 등급을 실시간으로 평가합니다. 저위험은 자동 허용, 중위험은 허용하되 사용자에게 알림, 고위험은 차단 후 확인 요청.',
+    detail:'예시 도우미의 방식: LLM 분류기가 각 작업의 위험 등급을 실시간으로 평가합니다. 저위험은 자동 허용, 중위험은 허용하되 사용자에게 알림, 고위험은 차단 후 확인 요청.',
     how:'LLM 분류기가 도구 메타데이터와 컨텍스트를 기반으로 위험을 판단합니다',
     pros:['안전과 효율의 균형','진짜 위험할 때만 사용자를 방해함','신뢰할 수 있는 어시스턴트와 가장 유사한 UX'],
     cons:['LLM 판단이 틀릴 수 있음 (오허용/오차단)','분류기 자체가 추가 Token을 소비함','위험 분류 규칙을 유지 관리해야 함'],

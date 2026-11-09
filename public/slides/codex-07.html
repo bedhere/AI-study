@@ -109,7 +109,7 @@
 @media(prefers-reduced-motion:reduce){.demo,.demo *{transition-duration:0s!important;animation-duration:0s!important}}
 @media(max-width:760px){.lesson{overflow-x:hidden}.compare{grid-template-columns:1fr}.dm-cols{grid-template-columns:1fr}.dm-lamps{grid-template-columns:1fr}.objective{grid-template-columns:1fr}.lesson-header:after{display:none}.demo{padding:18px}.demo-ctrl{width:100%}.demo-ctrl button{flex:1}.dm-body{min-height:0}.visual{padding:14px}.demo,.visual,.cmp-card{max-width:100%;min-width:0}.dm-trace li{flex-direction:column;gap:4px}}
 </style>
-<meta name="description" content="类型系统管不住上下文的长度、频率和前缀稳定。Codex 把六条禁令写进 AGENTS.md，再抄进 code review skill，用评审守住类型过了之后的成本">
+<meta name="description" content="上一章把往上下文里塞东西收成类型。类型过了，这段文字仍然可以合法地又长、又勤、又无界。挡这些后果的，是仓库根十行禁令，外加一份会把同一节再读一遍的评审 skill。">
 <meta name="author" content="方片">
 
 
@@ -121,7 +121,7 @@
 
 <meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
 <meta property="og:locale" content="zh_CN">
-<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="把上下文治理写进 code review"><meta property="og:description" content="类型系统管不住上下文的长度、频率和前缀稳定。Codex 把六条禁令写进 AGENTS.md，再抄进 code review skill，用评审守住类型过了之后的成本"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="把上下文治理写进 code review"><meta property="og:description" content="上一章把往上下文里塞东西收成类型。类型过了，这段文字仍然可以合法地又长、又勤、又无界。挡这些后果的，是仓库根十行禁令，外加一份会把同一节再读一遍的评审 skill。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

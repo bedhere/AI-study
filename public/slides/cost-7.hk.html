@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>輸入主導：62:1 的 I/O Ratio | Token 降本增效</title>
+<title>輸入主導：62:1 的 I/O Ratio | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="Chatbot 是一問一答，Agent 是循環執行：每一輪的 Input 都包含全部歷史，輪次越多成本累積膨脹。逐輪拆解一個 Excel 分析任務，看 I/O Ratio 怎麼變成 62:1。">
+<meta name="description" content="普通 Chatbot 是一問一答；Agent 是「思考 → 行動 → 觀察 → 再思考」的循環。關鍵認知：每一輪的 Input 都包含了全部歷史資訊——輪次越多，Input 越長，成本累積膨脹。">
 <meta name="keywords" content="Agent 成本,I/O Ratio,ReAct 循環,輸入主導,Token 膨脹,SWE-bench">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="輸入主導：62:1 的 I/O Ratio">
-<meta property="og:description" content="為了得到 270 個字的結果，你付了 16,790 個字的閲讀費。">
+<meta property="og:description" content="普通 Chatbot 是一問一答；Agent 是「思考 → 行動 → 觀察 → 再思考」的循環。關鍵認知：每一輪的 Input 都包含了全部歷史資訊——輪次越多，Input 越長，成本累積膨脹。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_HK">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="輸入主導：62:1 的 I/O Ratio">
-<meta name="twitter:description" content="為了得到 270 個字的結果，你付了 16,790 個字的閲讀費。">
+<meta name="twitter:description" content="普通 Chatbot 是一問一答；Agent 是「思考 → 行動 → 觀察 → 再思考」的循環。關鍵認知：每一輪的 Input 都包含了全部歷史資訊——輪次越多，Input 越長，成本累積膨脹。">
 
 <!-- SEO End -->
 <style>

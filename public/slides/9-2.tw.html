@@ -30,7 +30,7 @@
 .takeaway{background:rgba(124,58,237,.04);border:1.5px solid rgba(124,58,237,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--purple)}
 </style>
-<meta name="description" content="使用者說一句話，LLM 翻譯成生圖模型需要的詳細 Prompt，這個二次翻譯架構是生圖產品的核心設計。">
+<meta name="description" content="使用者說「示例角色 在陽臺發呆」。生圖模型需要的是一長段精確的視覺描述，光這句話遠遠不夠。中間有一個翻譯步驟：用 LLM 把人話翻譯成生圖語言。">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 
@@ -48,7 +48,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:description" content="使用者說一句話，LLM 翻譯成生圖模型需要的詳細 Prompt，這個二次翻譯架構是生圖產品的核心設計。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="使用者說「示例角色 在陽臺發呆」。生圖模型需要的是一長段精確的視覺描述，光這句話遠遠不夠。中間有一個翻譯步驟：用 LLM 把人話翻譯成生圖語言。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -57,23 +57,23 @@
   <header class="lesson-header">
     <div class="kicker">AI 生圖</div>
     <h1>用 AI 給 AI 寫 Prompt</h1>
-    <p class="subtitle">使用者說「Alice 在陽臺發呆」。生圖模型需要的是一長段精確的視覺描述，光這句話遠遠不夠。中間有一個翻譯步驟：用 LLM 把人話翻譯成生圖語言。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>使用者說「畫個夕陽下的貓」，生圖模型需要的是完全不同的描述，解法是用 LLM 做翻譯</p></aside><!--seo:end-->  <div class="sec-label">示例一：陽臺發呆</div>
+    <p class="subtitle">使用者說「示例角色 在陽臺發呆」。生圖模型需要的是一長段精確的視覺描述，光這句話遠遠不夠。中間有一個翻譯步驟：用 LLM 把人話翻譯成生圖語言。</p>
+  </header><aside class="xa-tldr company-example-note"><p>本頁的助手、角色與流程為教學示例，不代表方片已上線產品或真實專案業績。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>使用者說「畫個夕陽下的貓」，生圖模型需要的是完全不同的描述，解法是用 LLM 做翻譯</p></aside><!--seo:end-->  <div class="sec-label">示例一：陽臺發呆</div>
 
   <div class="translate-flow" id="flow1">
     <div class="flow-card" id="f1-step1">
       <div class="step-badge user">使用者說</div>
-      <div class="user-input">「Alice 在陽臺發呆」</div>
+      <div class="user-input">「示例角色 在陽臺發呆」</div>
     </div>
     <div class="flow-connector"></div>
     <div class="flow-card" id="f1-step2">
       <div class="step-badge llm">LLM 翻譯成生圖 Prompt</div>
-      <div class="translated-prompt">A young woman named Alice standing on a sunlit balcony, leaning against the railing, gazing into the distance with a dreamy expression. She has shoulder-length dark hair, wearing a white blouse with a small star necklace. Soft afternoon golden hour lighting, potted plants on the balcony, blurred city skyline in background. Illustration style, warm color palette, peaceful mood. Upper body to full body composition.</div>
+      <div class="translated-prompt">A young woman named 示例角色 standing on a sunlit balcony, leaning against the railing, gazing into the distance with a dreamy expression. She has shoulder-length dark hair, wearing a white blouse with a small star necklace. Soft afternoon golden hour lighting, potted plants on the balcony, blurred city skyline in background. Illustration style, warm color palette, peaceful mood. Upper body to full body composition.</div>
     </div>
     <div class="flow-connector"></div>
     <div class="flow-card" id="f1-step3">
       <div class="step-badge result">生圖模型輸出</div>
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 在陽臺發呆" class="flow-result-img">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="示例角色 在陽臺發呆" class="flow-result-img">
     </div>
   </div>
 
@@ -84,17 +84,17 @@
   <div class="translate-flow paywall-locked" id="flow2">
     <div class="flow-card" id="f2-step1">
       <div class="step-badge user">使用者說</div>
-      <div class="user-input">「Alice 在做飯」</div>
+      <div class="user-input">「示例角色 在做飯」</div>
     </div>
     <div class="flow-connector"></div>
     <div class="flow-card" id="f2-step2">
       <div class="step-badge llm">LLM 翻譯成生圖 Prompt</div>
-      <div class="translated-prompt">A young woman named Alice in a bright modern kitchen during morning time, cooking breakfast. She has shoulder-length dark hair, wearing a casual cardigan over a white top with a star necklace. Warm natural light streaming through windows, kitchen utensils and ingredients on counter, steam rising from pan. Illustration style, cozy domestic atmosphere, soft warm tones. Wide shot showing kitchen environment.</div>
+      <div class="translated-prompt">A young woman named 示例角色 in a bright modern kitchen during morning time, cooking breakfast. She has shoulder-length dark hair, wearing a casual cardigan over a white top with a star necklace. Warm natural light streaming through windows, kitchen utensils and ingredients on counter, steam rising from pan. Illustration style, cozy domestic atmosphere, soft warm tones. Wide shot showing kitchen environment.</div>
     </div>
     <div class="flow-connector"></div>
     <div class="flow-card" id="f2-step3">
       <div class="step-badge result">生圖模型輸出</div>
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice 在廚房做早餐" class="flow-result-img">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="示例角色 在廚房做早餐" class="flow-result-img">
     </div>
   </div>
 
@@ -109,7 +109,7 @@
 
   <div class="takeaway reveal paywall-locked">
     <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-    <span><b>使用者想的和生圖模型需要的是完全不同的語言。</b>在 Alice 裡，每一次出圖背後都有一個 LLM 在翻譯：把使用者的一句話擴展成幾百 token 的詳細視覺描述。這不是錦上添花，這是必要架構。</span>
+    <span><b>使用者想的和生圖模型需要的是完全不同的語言。</b>在 示例角色 裡，每一次出圖背後都有一個 LLM 在翻譯：把使用者的一句話擴展成幾百 token 的詳細視覺描述。這不是錦上添花，這是必要架構。</span>
   </div>
 
 </article>

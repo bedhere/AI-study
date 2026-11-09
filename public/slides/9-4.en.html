@@ -55,7 +55,7 @@
 .takeaway{background:rgba(217,119,6,.04);border:1.5px solid rgba(217,119,6,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--amber)}
 </style>
-<meta name="description" content="Image generation models can time out, rate-limit, or go down. A fallback chain ensures users always get their image. Product design for error handling illustrated with real Alice states.">
+<meta name="description" content="In example assistant, the user says &quot;draw me a picture,&quot; but behind the scenes Gemini may have timed out, Seedream rate-limited, and GPT Image errored. The user doesn't care which model failed — they only care: will the image come out?">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
 
@@ -72,7 +72,7 @@
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
-<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="Image generation models can time out, rate-limit, or go down. A fallback chain ensures users always get their image. Product design for error handling illustrated with real Alice states."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:description" content="In example assistant, the user says &quot;draw me a picture,&quot; but behind the scenes Gemini may have timed out, Seedream rate-limited, and GPT Image errored. The user doesn't care which model failed — they only care: will the image come out?"><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -82,30 +82,30 @@
   <header class="lesson-header">
     <div class="kicker">AI Image Generation</div>
     <h1>When the Model Goes Down, Then What?</h1>
-    <p class="subtitle">In Alice, the user says "draw me a picture," but behind the scenes Gemini may have timed out, Seedream rate-limited, and GPT Image errored. The user doesn't care which model failed — they only care: will the image come out?</p>
-  </header>
+    <p class="subtitle">In example assistant, the user says "draw me a picture," but behind the scenes Gemini may have timed out, Seedream rate-limited, and GPT Image errored. The user doesn't care which model failed — they only care: will the image come out?</p>
+  </header><aside class="xa-tldr company-example-note"><p>Assistants, characters and workflows on this page are teaching examples, not launched Fangpian products or verified project results.</p></aside>
 
-  <div class="sec-label">Alice's Three States</div>
+  <div class="sec-label">example assistant's Three States</div>
 
   <div class="state-imgs reveal">
     <div class="state-item">
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice thinking">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="example assistant thinking">
       <div class="s-label">Thinking</div>
       <div class="s-desc">Generating image, please wait</div>
     </div>
     <div class="state-item">
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice error state">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="example assistant error state">
       <div class="s-label">Error</div>
       <div class="s-desc">Model returned an error, switching to fallback</div>
     </div>
     <div class="state-item">
-      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice empty state">
+      <img src="assets/fangpian/tiger-ai-assistant.webp" alt="example assistant empty state">
       <div class="s-label">All Failed</div>
       <div class="s-desc">All models unavailable, graceful degradation</div>
     </div>
   </div>
 
-  <div class="sec-label">Fallback Chain: Alice's Safety Net</div>
+  <div class="sec-label">Fallback Chain: example assistant's Safety Net</div>
 
   <div class="chain-wrap" id="chainWrap">
     <div class="chain-node fail" id="n1">
@@ -162,10 +162,10 @@
   <div class="sec-label paywall-locked">Final Result: What the User Sees</div>
 
   <div class="result-demo reveal paywall-locked">
-    <img src="assets/fangpian/tiger-ai-assistant.webp" alt="Alice thinking in rain - final image generation result">
+    <img src="assets/fangpian/tiger-ai-assistant.webp" alt="example assistant thinking in rain - final image generation result">
     <div class="result-text">
       <h4>Despite two model failures, the user still got their image</h4>
-      <p>The user only sees the "Alice is drawing…" waiting state, then receives the result. Behind the scenes Model A timed out, Model B was rate-limited, Model C stepped in — all completely transparent to the user. This is the value of a fallback chain.</p>
+      <p>The user only sees the "example assistant is drawing…" waiting state, then receives the result. Behind the scenes Model A timed out, Model B was rate-limited, Model C stepped in — all completely transparent to the user. This is the value of a fallback chain.</p>
     </div>
   </div>
 
@@ -191,7 +191,7 @@
 
   <div class="takeaway reveal paywall-locked">
     <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-    <span><b>Users don't care which model you use — they only care whether the image comes out.</b> In Alice, the fallback chain ensures that even if the primary models all fail, the worst case is the user waits a few extra seconds or receives a friendly message. They will never hit a cold error page.</span>
+    <span><b>Users don't care which model you use — they only care whether the image comes out.</b> In example assistant, the fallback chain ensures that even if the primary models all fail, the worst case is the user waits a few extra seconds or receives a friendly message. They will never hit a cold error page.</span>
   </div>
 
 </article>

@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Token은 어떻게 세나: BPE와 숨은 Token 세금 | Token 비용 엔지니어링</title>
+<title>Token은 어떻게 세나: BPE와 숨은 「Token 세금」 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="Token은 글자도 단어도 아니라, 통계 규칙으로 만들어진 서브워드예요. 단어 단위·문자 단위에서 BPE로의 진화, 중·영 Token 계산의 정량 비교, 그리고 중국어 사용자가 왜 선천적으로 약 2배의 숨은 Token 세금을 내는지.">
+<meta name="description" content="청구서는 Token으로 정산되지만, Token은 도대체 어떻게 셀까요? 글자도 단어도 아니고, 통계 규칙으로 만들어진 「서브워드」예요. 이 규칙을 이해해야, 같은 한 문장이 중국어로는 왜 영어보다 선천적으로 2배 비싼지 알게 됩니다.">
 <meta name="keywords" content="Token,BPE,토큰화,tiktoken,cl100k_base,Token 세금,중국어 분절,LLM 과금">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -22,14 +22,14 @@
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="Token은 어떻게 세나: BPE와 숨은 Token 세금">
-<meta property="og:description" content="중국어가 왜 선천적으로 2배 비쌀까요? BPE 병합 규칙부터 숨은 Token 세금까지.">
+<meta property="og:title" content="Token은 어떻게 세나: BPE와 숨은 「Token 세금」">
+<meta property="og:description" content="청구서는 Token으로 정산되지만, Token은 도대체 어떻게 셀까요? 글자도 단어도 아니고, 통계 규칙으로 만들어진 「서브워드」예요. 이 규칙을 이해해야, 같은 한 문장이 중국어로는 왜 영어보다 선천적으로 2배 비싼지 알게 됩니다.">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Token은 어떻게 세나: BPE와 숨은 Token 세금">
-<meta name="twitter:description" content="중국어가 왜 선천적으로 2배 비쌀까요? BPE 병합 규칙부터 숨은 Token 세금까지.">
+<meta name="twitter:title" content="Token은 어떻게 세나: BPE와 숨은 「Token 세금」">
+<meta name="twitter:description" content="청구서는 Token으로 정산되지만, Token은 도대체 어떻게 셀까요? 글자도 단어도 아니고, 통계 규칙으로 만들어진 「서브워드」예요. 이 규칙을 이해해야, 같은 한 문장이 중국어로는 왜 영어보다 선천적으로 2배 비싼지 알게 됩니다.">
 
 <!-- SEO End -->
 <style>

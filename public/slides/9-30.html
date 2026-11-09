@@ -49,7 +49,7 @@
 .takeaway{background:rgba(124,58,237,.04);border:1.5px solid rgba(124,58,237,.18);border-radius:var(--radius);padding:16px 20px;font-size:15px;color:var(--text);display:flex;gap:10px;line-height:1.7;margin-top:24px}
 .takeaway b{color:var(--purple)}
 </style>
-<meta name="description" content="MCP 协议有两个方向：AI 作为 Client 调用外部工具，也作为 Server 被 Cursor 等调用。同一个协议，双向集成。">
+<meta name="description" content="大多数人理解 MCP 就是「让 AI 调外部工具」。但 MCP 协议是双向的：示例助手 不仅能调别人的工具，也能让 Cursor 等外部客户端来调用 示例助手 的能力。">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
 
@@ -67,7 +67,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><meta property="og:description" content="MCP 协议有两个方向：AI 作为 Client 调用外部工具，也作为 Server 被 Cursor 等调用。同一个协议，双向集成。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="大多数人理解 MCP 就是「让 AI 调外部工具」。但 MCP 协议是双向的：示例助手 不仅能调别人的工具，也能让 Cursor 等外部客户端来调用 示例助手 的能力。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -76,8 +76,8 @@
   <header class="lesson-header">
     <div class="kicker">MCP 实战</div>
     <h1>MCP 不只是「调工具」</h1>
-    <p class="subtitle">大多数人理解 MCP 就是「让 AI 调外部工具」。但 MCP 协议是双向的：Alice 不仅能调别人的工具，也能让 Cursor 等外部客户端来调用 Alice 的能力。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>同一个协议两个方向：消费别人的工具 vs 把自己暴露给别人</p></aside><!--seo:end-->  <div class="sec-label">双向流程图</div>
+    <p class="subtitle">大多数人理解 MCP 就是「让 AI 调外部工具」。但 MCP 协议是双向的：示例助手 不仅能调别人的工具，也能让 Cursor 等外部客户端来调用 示例助手 的能力。</p>
+  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>同一个协议两个方向：消费别人的工具 vs 把自己暴露给别人</p></aside><!--seo:end-->  <div class="sec-label">双向流程图</div>
 
   <div style="text-align:center;margin-bottom:12px">
     <button class="play-btn" id="playBtn" onclick="startAnim()"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align:-1px;margin-right:3px"><polygon points="5 3 19 12 5 21 5 3"/></svg> 播放双向流动</button>
@@ -96,13 +96,13 @@
         <div class="arrow-line">
           <span class="arrow-r" style="color:var(--accent)">→</span>
           <span class="arrow-l" style="color:var(--success)">←</span>
-          <span class="arrow-label" style="color:var(--accent)">Alice 调工具</span>
+          <span class="arrow-label" style="color:var(--accent)">示例助手 调工具</span>
         </div>
       </div>
 
       <div class="flow-center">
         <div class="flow-alice">A</div>
-        <div class="flow-alice-label">Alice</div>
+        <div class="flow-alice-label">示例助手</div>
         <div class="flow-alice-sub">既是 Client 也是 Server</div>
       </div>
 
@@ -110,7 +110,7 @@
         <div class="arrow-line">
           <span class="arrow-l" style="color:var(--purple)">←</span>
           <span class="arrow-r" style="color:var(--amber)">→</span>
-          <span class="arrow-label" style="color:var(--purple)">外部调 Alice</span>
+          <span class="arrow-label" style="color:var(--purple)">外部调 示例助手</span>
         </div>
       </div>
 
@@ -127,24 +127,24 @@
   <div class="role-cards reveal paywall-locked xa-peek">
     <div class="role-card client">
       <h3><span style="font-size:20px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/></svg></span> 作为 Client（消费者）</h3>
-      <p>Alice 连接外部 MCP 服务，调用别人提供的工具能力：</p>
+      <p>示例助手 连接外部 MCP 服务，调用别人提供的工具能力：</p>
       <ul>
         <li><b>日历 MCP</b> — 查看和创建日程</li>
         <li><b>邮件 MCP</b> — 读写邮件</li>
         <li><b>数据库 MCP</b> — 查询数据</li>
         <li><b>浏览器 MCP</b> — 访问网页</li>
       </ul>
-      <p style="margin-top:10px"><b style="color:var(--accent)">关键：</b>Alice 主动发起请求，获取外部能力。</p>
+      <p style="margin-top:10px"><b style="color:var(--accent)">关键：</b>示例助手 主动发起请求，获取外部能力。</p>
     </div>
     <div class="role-card server">
       <h3><span style="font-size:20px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 15 3 19 7 23"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span> 作为 Server（提供者）</h3>
-      <p>Alice 把自己的能力通过 MCP 协议暴露出去，被外部调用：</p>
+      <p>示例助手 把自己的能力通过 MCP 协议暴露出去，被外部调用：</p>
       <ul>
-        <li><b>Cursor</b> — 在编程时调用 Alice 搜索笔记</li>
-        <li><b>Claude Desktop</b> — 让 Claude 发消息给 Alice</li>
-        <li><b>自动化脚本</b> — 定时触发 Alice 执行任务</li>
+        <li><b>Cursor</b> — 在编程时调用 示例助手 搜索笔记</li>
+        <li><b>Claude Desktop</b> — 让 Claude 发消息给 示例助手</li>
+        <li><b>自动化脚本</b> — 定时触发 示例助手 执行任务</li>
       </ul>
-      <p style="margin-top:10px"><b style="color:var(--purple)">关键：</b>Alice 被动接收请求，提供自身能力。</p>
+      <p style="margin-top:10px"><b style="color:var(--purple)">关键：</b>示例助手 被动接收请求，提供自身能力。</p>
     </div>
   </div>
 

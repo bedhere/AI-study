@@ -8,7 +8,7 @@
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
-<meta name="description" content="大模型原理篇見過分詞，這次看底層：一棵前綴樹怎麼把「五花肉」整塊認出來。親手沿着 Trie 走一次分詞。">
+<meta name="description" content="還記得大模型原理篇那個細節嗎——分詞器把「五花肉」切成一整塊詞元，而不是三個字。當時我們説「常見組合當一個整體」，這次揭底層：分詞器係點樣喺幾萬個詞裏面，瞬間認到「五花肉」應該成塊攞走？答案是一種叫 Trie（前綴樹）的收納方式——把詞表按「共享開頭」掛成一棵樹。">
 <meta name="keywords" content="Trie 前綴樹,Tokenizer 分詞,詞表,BPE,詞元 token,最長匹配,大模型分詞原理">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
@@ -23,13 +23,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="詞表與 Trie：Tokenizer 的切詞秘密">
-<meta property="og:description" content="一棵前綴樹怎麼把「五花肉」整塊認出來？親手沿着 Trie 走一次分詞，看懂貪婪最長匹配。">
+<meta property="og:description" content="還記得大模型原理篇那個細節嗎——分詞器把「五花肉」切成一整塊詞元，而不是三個字。當時我們説「常見組合當一個整體」，這次揭底層：分詞器係點樣喺幾萬個詞裏面，瞬間認到「五花肉」應該成塊攞走？答案是一種叫 Trie（前綴樹）的收納方式——把詞表按「共享開頭」掛成一棵樹。">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_HK">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="詞表與 Trie：Tokenizer 的切詞秘密">
-<meta name="twitter:description" content="一棵前綴樹怎麼把「五花肉」整塊認出來？親手沿着 Trie 走一次分詞，看懂貪婪最長匹配。">
+<meta name="twitter:description" content="還記得大模型原理篇那個細節嗎——分詞器把「五花肉」切成一整塊詞元，而不是三個字。當時我們説「常見組合當一個整體」，這次揭底層：分詞器係點樣喺幾萬個詞裏面，瞬間認到「五花肉」應該成塊攞走？答案是一種叫 Trie（前綴樹）的收納方式——把詞表按「共享開頭」掛成一棵樹。">
 
 <!-- SEO End -->
 <style>

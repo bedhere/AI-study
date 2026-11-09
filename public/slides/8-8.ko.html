@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>출력 레이어 최적화 + KV Cache 심화: 비용 최적화의 마지막 1마일 | 方片学堂</title>
+<title>출력 레이어 + KV Cache 심화: 출력 제어 = 비용 제어 | 方片学堂</title>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <style>
@@ -136,7 +136,7 @@ pre.code .hl{color:#f38ba8}
 }
 </style>
 <!-- SEO Start -->
-<meta name="description" content="출력 Token은 보통 입력보다 2~3배 비쌉니다. 출력 길이 제한·간결한 응답 요구·형식 제약으로 출력 비용을 제어하는 방법과 KV Cache 심화 활용 시나리오 및 경계 조건을 설명합니다.">
+<meta name="description" content="출력 Token은 입력보다 3~5배 비쌉니다. 아래 기법을 클릭해 인터랙티브 데모를 전환하며 출력 레이어 기법 3가지와 KV Cache 심화 함정 2가지를 체험해 보세요.">
 <meta name="keywords" content="출력 Token 최적화,KV Cache 심화,LLM 출력 비용,max_tokens,AI 비용 세분화">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
@@ -151,8 +151,8 @@ pre.code .hl{color:#f38ba8}
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
-<meta property="og:title" content="출력 레이어 최적화 + KV Cache 심화: 비용 최적화의 마지막 1마일">
-<meta property="og:description" content="출력 Token은 보통 입력보다 2~3배 비쌉니다. 출력 길이 제한·간결한 응답 요구·형식 제약으로 출력 비용을 제어하는 방법과 KV Cache 심화 활용 시나리오 및 경계 조건을 설명합니다.">
+<meta property="og:title" content="출력 레이어 + KV Cache 심화: 출력 제어 = 비용 제어">
+<meta property="og:description" content="출력 Token은 입력보다 3~5배 비쌉니다. 아래 기법을 클릭해 인터랙티브 데모를 전환하며 출력 레이어 기법 3가지와 KV Cache 심화 함정 2가지를 체험해 보세요.">
 
 
 <meta property="og:image:width" content="1200">
@@ -160,8 +160,8 @@ pre.code .hl{color:#f38ba8}
 <meta property="og:locale" content="ko_KR">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="출력 레이어 최적화 + KV Cache 심화: 비용 최적화의 마지막 1마일">
-<meta name="twitter:description" content="출력 Token은 보통 입력보다 2~3배 비쌉니다. 출력 길이 제한·간결한 응답 요구·형식 제약으로 출력 비용을 제어하는 방법과 KV Cache 심화 활용 시나리오 및 경계 조건을 설명합니다.">
+<meta name="twitter:title" content="출력 레이어 + KV Cache 심화: 출력 제어 = 비용 제어">
+<meta name="twitter:description" content="출력 Token은 입력보다 3~5배 비쌉니다. 아래 기법을 클릭해 인터랙티브 데모를 전환하며 출력 레이어 기법 3가지와 KV Cache 심화 함정 2가지를 체험해 보세요.">
 
 <!-- SEO End -->
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
