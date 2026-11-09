@@ -37,7 +37,7 @@
     var popular = document.getElementById('sortPopular'); if (popular) { popular.disabled = true; popular.hidden = true; popular.style.display = 'none'; }
     var status = document.getElementById('topicSortStatus'); if (status) { status.classList.remove('error'); status.textContent = local.labels.note; }
     var finalNote = document.querySelector('.final > p'); if (finalNote) finalNote.textContent = local.labels.note;
-    var quizNote = document.querySelector('.tool-card .td');
+    var quizNote = document.querySelector('.tool-card.purple .td');
     if (quizNote) quizNote.textContent = local.lang === 'en' ? 'Practice and exams; results stay in this browser.' : local.lang === 'ko' ? '연습과 시험 결과는 이 브라우저에 저장됩니다.' : '篇章练习与自测，结果保存在当前浏览器。';
   }
   paint();
