@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>이 챕터는 어디서 왔나: Alice 개발 실록 | xueai.miyang.cn</title>
+<title>이 챕터는 어디서 왔나: Alice 개발 실록 | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}} body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -62,21 +62,21 @@
 <meta name="description" content="3부의 모든 내용은 저자가 AI Agent 데스크톱 앱 Alice를 개발하며 얻은 일차 경험에서 나왔습니다: 약 50만 줄의 코드, 132개 내장 도구, 이 챕터의 8개 소단원과 일대일로 대응하는 8개 모듈.">
 <meta name="author" content="팡피엔">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://xueai.miyang.cn/slides/9-0.ko.html">
-<link rel="alternate" hreflang="zh-CN" href="https://xueai.miyang.cn/slides/9-0.html">
-<link rel="alternate" hreflang="en" href="https://xueai.miyang.cn/slides/9-0.en.html">
-<link rel="alternate" hreflang="ko" href="https://xueai.miyang.cn/slides/9-0.ko.html">
-<link rel="alternate" hreflang="zh-TW" href="https://xueai.miyang.cn/slides/9-0.tw.html">
-<link rel="alternate" hreflang="zh-HK" href="https://xueai.miyang.cn/slides/9-0.hk.html">
-<link rel="alternate" hreflang="zh-MO" href="https://xueai.miyang.cn/slides/9-0.hk.html">
-<link rel="alternate" hreflang="x-default" href="https://xueai.miyang.cn/slides/9-0.html">
+
+
+
+
+
+
+
+
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="xueai.miyang.cn · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="이 챕터는 어디서 왔나: Alice 개발 실록">
-<meta property="og:url" content="https://xueai.miyang.cn/slides/9-0.ko.html">
-<meta property="og:image" content="https://xueai.miyang.cn/slides/og/9-0.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
-<!--seo:begin--><script type="application/ld+json">{"datePublished":"2026-08-07","dateModified":"2026-08-18","@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"이 챕터는 어디서 왔나: Alice 개발 실록","name":"이 챕터는 어디서 왔나: Alice 개발 실록","url":"https://xueai.miyang.cn/slides/9-0.ko.html","inLanguage":"ko","author":{"@type":"Person","name":"팡피엔"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"강좌","educationalLevel":"입문~중급","isPartOf":{"@type":"Course","name":"AI 실전 강좌 · 실전 · Demo에서 제품으로","url":"https://xueai.miyang.cn/slides/learn.ko.html"},"isAccessibleForFree":true,"description":"3부의 모든 내용은 저자가 AI Agent 데스크톱 앱 Alice를 개발하며 얻은 일차 경험에서 나왔습니다: 약 50만 줄의 코드, 132개 내장 도구, 이 챕터의 8개 소단원과 일대일로 대응하는 8개 모듈."}</script><meta property="og:description" content="3부의 모든 내용은 저자가 AI Agent 데스크톱 앱 Alice를 개발하며 얻은 일차 경험에서 나왔습니다: 약 50만 줄의 코드, 132개 내장 도구, 이 챕터의 8개 소단원과 일대일로 대응하는 8개 모듈."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="3부의 모든 내용은 저자가 AI Agent 데스크톱 앱 Alice를 개발하며 얻은 일차 경험에서 나왔습니다: 약 50만 줄의 코드, 132개 내장 도구, 이 챕터의 8개 소단원과 일대일로 대응하는 8개 모듈."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -89,20 +89,7 @@
     <p class="subtitle">이 챕터는 논문 리뷰도, 튜토리얼 재포장도 아닙니다 — 제가 AI Agent 데스크톱 앱 Alice를 개발하며 얻은 일차 경험의 총정리입니다. 앞으로 이어지는 모든 강의 뒤에는 실제로 밟아 본 함정이 있습니다.</p>
   </header>
 
-  <div class="alice-card reveal">
-    <div class="a-body">
-      <span class="a-badge">AI 어시스턴트</span>
-      <div class="a-wordmark">Alice</div>
-      <div class="a-tagline">일도 잘하고 당신도 아는 AI 어시스턴트</div>
-      <p class="a-desc">그녀는 당신의 취향을 기억하고, 일과 생활의 태스크를 처리해 줍니다. 필요하면 여러 분야의 전문 Agent들을 소집해 태스크를 완료까지 밀어붙입니다.</p>
-      <p class="a-meta">macOS · Windows · 무료</p>
-      <div class="a-cta">
-        
-        
-      </div>
-    </div>
-    <div class="a-visual"><img src="images/alice-hero-visual.webp" alt="Alice — 당신의 AI 어시스턴트" loading="lazy"></div>
-  </div>
+
 
   <div class="l-callout">
     <b>제품의 다른 한 면.</b>　「취향을 기억한다」「전문 Agent들을 소집한다」 — 공식 사이트의 모든 카피 뒤에는 실제 엔지니어링 시스템이 있습니다: 장기 기억, 다중 Agent 협업, 루프 제어, 컨텍스트 압축, 권한 승인, 양방향 MCP 생태계. 이 챕터는 그 시스템들을 하나씩 분해해 보여줍니다.

@@ -7,8 +7,8 @@ window.COURSE = {
     subtitle: '대규모 언어 모델 기초 원리부터 AI Agent Harness까지',
     brand: '팡피엔 아카데미',
     author: '팡피엔',
-    authorUrl: 'https://Fangpian.cn/',
-    github: 'https://github.com/itshen/learn-ai',
+    authorUrl: '',
+    github: 'https://github.com/bedhere/AI-study',
   },
   parts: [
     /* 시작 챕터: 과정의 첫 정거장 — 먼저 자신의 위치를 파악하고 학습법을 다룹니다.

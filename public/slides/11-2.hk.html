@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Harness 三大設計模式 | xueai.miyang.cn</title>
+<title>Harness 三大設計模式 | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}} body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -150,18 +150,18 @@
 </style>
 <meta name="description" content="深入 Harness 三大設計模式：工作流自動化、文件系統持久記憶、子 Agent 與後台任務，基於 Lilian Weng 的 Harness Engineering for Self-Improvement。">
 <meta name="author" content="方片">
-<link rel="canonical" href="https://xueai.miyang.cn/slides/11-2.hk.html">
-<meta property="og:site_name" content="xueai.miyang.cn · AI 產品經理培訓">
+
+<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:locale" content="zh_HK">
-<link rel="alternate" hreflang="zh-CN" href="https://xueai.miyang.cn/slides/11-2.html">
-<link rel="alternate" hreflang="en" href="https://xueai.miyang.cn/slides/11-2.en.html">
-<link rel="alternate" hreflang="ko" href="https://xueai.miyang.cn/slides/11-2.ko.html">
-<link rel="alternate" hreflang="zh-TW" href="https://xueai.miyang.cn/slides/11-2.tw.html">
-<link rel="alternate" hreflang="zh-HK" href="https://xueai.miyang.cn/slides/11-2.hk.html">
-<link rel="alternate" hreflang="zh-MO" href="https://xueai.miyang.cn/slides/11-2.hk.html">
-<link rel="alternate" hreflang="x-default" href="https://xueai.miyang.cn/slides/11-2.html">
+
+
+
+
+
+
+
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"Harness 三大設計模式","name":"Harness 三大設計模式","url":"https://xueai.miyang.cn/slides/11-2.hk.html","inLanguage":"zh-Hant-HK","author":{"@type":"Person","name":"方片"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"課程","educationalLevel":"入門到進階","isPartOf":{"@type":"Course","name":"AI 實戰課 · Harness 概論","url":"https://xueai.miyang.cn/slides/learn.html"},"isAccessibleForFree":true,"description":"深入 Harness 三大設計模式：工作流自動化、文件系統持久記憶、子 Agent 與後台任務，基於 Lilian Weng 的 Harness Engineering for Self-Improvement。","datePublished":"2026-07-11","dateModified":"2026-08-27"}</script><meta property="og:type" content="article"><meta property="og:title" content="Harness 三大設計模式"><meta property="og:description" content="深入 Harness 三大設計模式：工作流自動化、文件系統持久記憶、子 Agent 與後台任務，基於 Lilian Weng 的 Harness Engineering for Self-Improvement。"><meta property="og:url" content="https://xueai.miyang.cn/slides/11-2.hk.html"><meta property="og:image" content="https://xueai.miyang.cn/slides/og/11-2.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Harness 三大設計模式"><meta property="og:description" content="深入 Harness 三大設計模式：工作流自動化、文件系統持久記憶、子 Agent 與後台任務，基於 Lilian Weng 的 Harness Engineering for Self-Improvement。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -370,7 +370,7 @@
       <button class="arch-tab" data-arch="mem">模式 B · 循環 + 記憶</button>
       <button class="arch-tab" data-arch="par">模式 C · 循環 + 記憶 + 並行</button>
     </div>
-    
+
     <div class="sim-controls">
       <button id="btn-play" class="sim-btn">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -524,7 +524,7 @@ document.querySelectorAll('.reveal').forEach(function(el){
   var btnPlay = document.getElementById('btn-play');
   var btnReset = document.getElementById('btn-reset');
   var statusTxt = document.getElementById('sim-status');
-  
+
   var currentArch = 'seq';
   var isPlaying = false;
   var timer = null;
@@ -547,7 +547,7 @@ document.querySelectorAll('.reveal').forEach(function(el){
       if(d){ fill.style.width=d[0]; fill.className='ctx-fill '+d[1]; fill.style.background=''; pct.textContent=d[2]; pct.className='ctx-pct '+d[3]; pct.style.color=''; }
     }
   }
-  
+
   function resetSim() {
     clearTimeout(timer);
     isPlaying = false;
@@ -565,10 +565,10 @@ document.querySelectorAll('.reveal').forEach(function(el){
     var pct = p.querySelector('.ctx-pct');
     var verdict = p.querySelector('.arch-verdict');
     var loopArrow = p.querySelector('.af-loop-arrow');
-    
+
     var round = 1;
     var ctx = 0;
-    
+
     function step() {
       if(round > 4) {
         verdict.classList.add('sim-show');
@@ -579,21 +579,21 @@ document.querySelectorAll('.reveal').forEach(function(el){
         return;
       }
       statusTxt.textContent = '第 ' + round + ' 輪運行中...';
-      
+
       var seqIdx = 0;
       function nextNode() {
         if(seqIdx > 0) nodes[seqIdx-1].classList.remove('sim-highlight');
         if(seqIdx < nodes.length) {
           nodes[seqIdx].classList.add('sim-show', 'sim-highlight');
           if(seqIdx > 0) arrows[seqIdx-1].classList.add('sim-show');
-          
+
           ctx += 6;
           fill.style.width = ctx + '%';
           pct.textContent = ctx + '%';
           if(ctx > 80) { fill.className='ctx-fill danger-fill'; pct.className='ctx-pct danger-text'; }
           else if(ctx > 50) { fill.className='ctx-fill'; fill.style.background='#f59e0b'; pct.className='ctx-pct'; pct.style.color='#f59e0b'; }
           else { fill.className='ctx-fill good-fill'; pct.className='ctx-pct good-text'; }
-          
+
           seqIdx++;
           timer = setTimeout(nextNode, 600);
         } else {
@@ -615,10 +615,10 @@ document.querySelectorAll('.reveal').forEach(function(el){
     var fill = p.querySelector('.ctx-fill');
     var pct = p.querySelector('.ctx-pct');
     var verdict = p.querySelector('.arch-verdict');
-    
+
     var round = 1;
     var ctx = 10;
-    
+
     function step() {
       if(round > 3) {
         verdict.classList.add('sim-show');
@@ -629,25 +629,25 @@ document.querySelectorAll('.reveal').forEach(function(el){
         return;
       }
       statusTxt.textContent = '第 ' + round + ' 輪運行中...';
-      
+
       var seqIdx = 0;
       function nextNode() {
         if(seqIdx > 0) nodes[seqIdx-1].classList.remove('sim-highlight');
         if(seqIdx < nodes.length) {
           nodes[seqIdx].classList.add('sim-show', 'sim-highlight');
           if(seqIdx > 0) arrows[seqIdx-1].classList.add('sim-show');
-          
+
           if(seqIdx === 3) { // Write File
             if(round <= files.length) files[round-1].classList.add('sim-show');
             ctx = 10; // flush context
           } else {
             ctx += 8;
           }
-          
+
           fill.style.width = ctx + '%';
           pct.textContent = ctx + '%';
           fill.className='ctx-fill good-fill'; pct.className='ctx-pct good-text';
-          
+
           seqIdx++;
           timer = setTimeout(nextNode, 600);
         } else {
@@ -671,33 +671,33 @@ document.querySelectorAll('.reveal').forEach(function(el){
     var fill = p.querySelector('.ctx-fill');
     var pct = p.querySelector('.ctx-pct');
     var verdict = p.querySelector('.arch-verdict');
-    
+
     statusTxt.textContent = '並行任務分發中...';
-    
+
     // 1. Plan
     mainNodes[0].classList.add('sim-show', 'sim-highlight');
     fill.style.width = '15%'; pct.textContent = '15%'; fill.className='ctx-fill good-fill'; pct.className='ctx-pct good-text';
-    
+
     timer = setTimeout(function(){
       mainNodes[0].classList.remove('sim-highlight');
       arrowsDown[0].classList.add('sim-show');
       fork.classList.add('sim-show');
-      
+
       // 2. Parallel Exec
       subNodes.forEach(function(n){ n.classList.add('sim-show', 'sim-highlight'); });
       statusTxt.textContent = '子 Agent 並行執行...';
-      
+
       timer = setTimeout(function(){
         subNodes.forEach(function(n){ n.classList.remove('sim-highlight'); });
         subFiles.forEach(function(f){ f.classList.add('sim-show'); });
         statusTxt.textContent = '子 Agent 寫入檔案...';
-        
+
         timer = setTimeout(function(){
           arrowsUp[0].classList.add('sim-show');
           mainNodes[1].classList.add('sim-show', 'sim-highlight');
           fill.style.width = '28%'; pct.textContent = '28%';
           statusTxt.textContent = '主 Agent 合併結果...';
-          
+
           timer = setTimeout(function(){
             mainNodes[1].classList.remove('sim-highlight');
             verdict.classList.add('sim-show');
@@ -749,7 +749,7 @@ document.querySelectorAll('.reveal').forEach(function(el){
       resetSim();
     });
   });
-  
+
   // 初始狀態
   resetSim();
 })();

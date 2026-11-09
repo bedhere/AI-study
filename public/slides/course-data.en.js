@@ -12,8 +12,8 @@ window.COURSE = {
     subtitle: 'From LLM Fundamentals to AI Agent Harness',
     brand: 'Fangpian Academy',
     author: 'Fangpian',
-    authorUrl: 'https://Fangpian.cn/',
-    github: 'https://github.com/itshen/learn-ai',
+    authorUrl: '',
+    github: 'https://github.com/bedhere/AI-study',
   },
   parts: [
     /* Opening chapter: the first stop of the course — locate yourself, then learn how to

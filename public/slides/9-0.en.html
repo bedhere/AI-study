@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Where This Chapter Comes From: Building Alice | xueai.miyang.cn</title>
+<title>Where This Chapter Comes From: Building Alice | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}} body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -62,21 +62,21 @@
 <meta name="description" content="Everything in Part 3 comes from the author's first-hand experience building Alice, an AI Agent desktop app: ~500,000 lines of code, 132 built-in tools, and 8 modules that map one-to-one to this chapter's 8 sections.">
 <meta name="author" content="Fangpian">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://xueai.miyang.cn/slides/9-0.en.html">
-<link rel="alternate" hreflang="zh-CN" href="https://xueai.miyang.cn/slides/9-0.html">
-<link rel="alternate" hreflang="en" href="https://xueai.miyang.cn/slides/9-0.en.html">
-<link rel="alternate" hreflang="ko" href="https://xueai.miyang.cn/slides/9-0.ko.html">
-<link rel="alternate" hreflang="zh-TW" href="https://xueai.miyang.cn/slides/9-0.tw.html">
-<link rel="alternate" hreflang="zh-HK" href="https://xueai.miyang.cn/slides/9-0.hk.html">
-<link rel="alternate" hreflang="zh-MO" href="https://xueai.miyang.cn/slides/9-0.hk.html">
-<link rel="alternate" hreflang="x-default" href="https://xueai.miyang.cn/slides/9-0.html">
+
+
+
+
+
+
+
+
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="xueai.miyang.cn · AI Product Manager Training">
+<meta property="og:site_name" content="方片学堂 · AI Product Manager Training">
 <meta property="og:title" content="Where This Chapter Comes From: Building Alice">
-<meta property="og:url" content="https://xueai.miyang.cn/slides/9-0.en.html">
-<meta property="og:image" content="https://xueai.miyang.cn/slides/og/9-0.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
-<!--seo:begin--><script type="application/ld+json">{"datePublished":"2026-08-07","dateModified":"2026-08-18","@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"Where This Chapter Comes From: Building Alice","name":"Where This Chapter Comes From: Building Alice","url":"https://xueai.miyang.cn/slides/9-0.en.html","inLanguage":"en","author":{"@type":"Person","name":"Fangpian"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"Course","educationalLevel":"Beginner to Intermediate","isPartOf":{"@type":"Course","name":"AI Practitioner Course · Practice · From Demo to Product","url":"https://xueai.miyang.cn/slides/learn.en.html"},"isAccessibleForFree":true,"description":"Everything in Part 3 comes from the author's first-hand experience building Alice, an AI Agent desktop app: ~500,000 lines of code, 132 built-in tools, and 8 modules that map one-to-one to this chapter's 8 sections."}</script><meta property="og:description" content="Everything in Part 3 comes from the author's first-hand experience building Alice, an AI Agent desktop app: ~500,000 lines of code, 132 built-in tools, and 8 modules that map one-to-one to this chapter's 8 sections."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="Everything in Part 3 comes from the author's first-hand experience building Alice, an AI Agent desktop app: ~500,000 lines of code, 132 built-in tools, and 8 modules that map one-to-one to this chapter's 8 sections."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
 </head>
@@ -89,20 +89,7 @@
     <p class="subtitle">This chapter is not a literature review or a repackaged tutorial — it is a first-hand summary of my experience building Alice, an AI Agent desktop app. Behind every lesson that follows is a real pitfall I actually hit.</p>
   </header>
 
-  <div class="alice-card reveal">
-    <div class="a-body">
-      <span class="a-badge">AI Assistant</span>
-      <div class="a-wordmark">Alice</div>
-      <div class="a-tagline">An AI assistant who knows the ropes — and knows you</div>
-      <p class="a-desc">She remembers your preferences and handles tasks across work and life. When needed, she assembles specialist Agents from different domains and drives the task through to completion.</p>
-      <p class="a-meta">macOS · Windows · Free</p>
-      <div class="a-cta">
-        
-        
-      </div>
-    </div>
-    <div class="a-visual"><img src="images/alice-hero-visual.webp" alt="Alice — your AI assistant" loading="lazy"></div>
-  </div>
+
 
   <div class="l-callout">
     <b>The other side of the product.</b>　"Remembers your preferences," "assembles specialist Agents" — every line of marketing copy on the official site is backed by a real engineering system: long-term memory, multi-Agent collaboration, loop control, context compression, permission approvals, and a two-way MCP ecosystem. This chapter takes those systems apart, one by one.

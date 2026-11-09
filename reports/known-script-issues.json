@@ -1,0 +1,106 @@
+{
+  "baselineCommit": "612564f",
+  "source": "Read-only original slides snapshot; recorded before course content edits.",
+  "issues": [
+    {
+      "file": "algo-1.en.html",
+      "error": "Unexpected identifier 's'"
+    },
+    {
+      "file": "codex-07.en.html",
+      "error": "Unexpected identifier 's'"
+    },
+    {
+      "file": "codex-08.en.html",
+      "error": "Unexpected identifier 's'"
+    },
+    {
+      "file": "codex-17.ko.html",
+      "error": "Unexpected identifier 'vKind'"
+    },
+    {
+      "file": "codex-19.ko.html",
+      "error": "Unexpected token ')'"
+    },
+    {
+      "file": "cost-1.en.html",
+      "error": "Unexpected identifier 's'"
+    },
+    {
+      "file": "cost-10.en.html",
+      "error": "Unexpected identifier 't'"
+    },
+    {
+      "file": "ds-5.en.html",
+      "error": "Unexpected identifier 's'"
+    },
+    {
+      "file": "ds-6.en.html",
+      "error": "Unexpected identifier 's'"
+    },
+    {
+      "file": "ds-8.en.html",
+      "error": "Invalid or unexpected token"
+    },
+    {
+      "file": "dsh-10.en.html",
+      "error": "Unexpected identifier 's'"
+    },
+    {
+      "file": "dsh-11.en.html",
+      "error": "Unexpected identifier 's'"
+    },
+    {
+      "file": "dsh-12.en.html",
+      "error": "Unexpected identifier 's'"
+    },
+    {
+      "file": "dsh-28.ko.html",
+      "error": "Unexpected number"
+    },
+    {
+      "file": "dsh-6.ko.html",
+      "error": "Unexpected token ';'"
+    },
+    {
+      "file": "dsh-7.en.html",
+      "error": "Unexpected identifier 's'"
+    },
+    {
+      "file": "dsh-8.en.html",
+      "error": "Unexpected identifier 't'"
+    },
+    {
+      "file": "dsh-9.en.html",
+      "error": "Unexpected identifier 't'"
+    },
+    {
+      "file": "learn-21.en.html",
+      "error": "Unexpected token ','"
+    },
+    {
+      "file": "learn-21.ko.html",
+      "error": "Unexpected token ','"
+    },
+    {
+      "file": "learn-25.en.html",
+      "error": "missing ) after argument list"
+    },
+    {
+      "file": "learn-4.en.html",
+      "error": "Unexpected identifier 't'"
+    },
+    {
+      "file": "opc-10.en.html",
+      "error": "Unexpected identifier 't'"
+    },
+    {
+      "file": "opc-11.en.html",
+      "error": "Unexpected identifier 't'"
+    },
+    {
+      "file": "psy-2.en.html",
+      "error": "Unexpected identifier 't'"
+    }
+  ]
+}

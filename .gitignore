@@ -36,3 +36,9 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local archives and working notes
+*.tar.gz
+*.zip
+/*项目提示词.md
+__pycache__/

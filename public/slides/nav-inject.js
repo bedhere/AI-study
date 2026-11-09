@@ -608,7 +608,7 @@ const I18N = window.XUEAI_I18N || {
   (function injectTopBar() {
     if (EMBED_MODE) {
       // 嵌入模式下仅静默上报 PV，不渲染浮条
-      fetch('/pv').catch(() => {});
+      Promise.reject(new Error('Legacy statistics retired')).catch(() => {});
       return;
     }
     const style = document.createElement('style');
@@ -715,7 +715,7 @@ const I18N = window.XUEAI_I18N || {
       <div class="nav-top-sep"></div>
       
       <div class="nav-top-sep"></div>
-      <div id="nav-pv-badge">
+      <div id="nav-pv-badge" style="display:none">
         <span class="nav-pv-label">${I18N.t('today')}</span>
         <span class="nav-pv-num-today" id="nav-pv-today">—</span>
         <div class="nav-pv-sep"></div>
@@ -725,7 +725,7 @@ const I18N = window.XUEAI_I18N || {
     `;
     document.body.appendChild(topBar);
 
-    fetch('/pv')
+    Promise.reject(new Error('Legacy statistics retired'))
       .then(r => r.json())
       .then(d => {
         function fmt(n) {
@@ -1118,40 +1118,20 @@ const I18N = window.XUEAI_I18N || {
 // 嵌入模式（Wiki iframe 内）不弹。
 // 脚本名不得含 ad：旧名 interstitial-ad.js 命中广告拦截插件的 `-ad.js` 规则，
 // 当天 23,039 次页面加载里只有 141 次真正请求到它，详见 splash.js 头部注释。
-(function () {
-  if (EMBED_MODE) return;
-  var s = document.createElement('script');
-  s.src = 'splash.js?v=20260807';
-  s.async = true;
-  document.head.appendChild(s);
-})();
+// Legacy marketing/analytics loader removed.
 
 // ── 行为埋点（管理后台用户画像；带 xueai_sess Cookie 自动关联登录用户） ──
 // 原先此处直接一发 /api/visit（只记路径，且 EMBED 模式不上报，阅读器内
 // 行为全丢）。现由 track.js 接管：会话 + 行为链路 + 每页停留时长上报到
 // /api/track，服务端同步写回 legacy visits/users 表，旧统计口径不断档。
 // EMBED 模式（learn.html iframe 内）也照常加载，学习行为不再丢失。
-(function () {
-  try {
-    var s = document.createElement('script');
-    s.src = 'track.js?v=20260806';
-    s.async = true;
-    document.head.appendChild(s);
-  } catch (e) { /* 埋点加载失败不影响浏览 */ }
-})();
+// Legacy marketing/analytics loader removed.
 
 // ── 问问 Alice：划词提问/吐槽 + Alice 悬浮窗（独立脚本，下架删除此段即可）──
 // 「我要吐槽」也在这个脚本里：由 Alice 对话式引导后转交 /api/feedback，
 // 独立的 feedback.js 表单面板已于 2026-08-08 下线。
 // EMBED 模式（learn.html iframe 内）也照常加载：阅读器里同样可以划词提问。
-(function () {
-  try {
-    var s = document.createElement('script');
-    s.src = 'ask-alice.js?v=20260822a';
-    s.async = true;
-    document.head.appendChild(s);
-  } catch (e) { /* 加载失败不影响浏览 */ }
-})();
+// Legacy marketing/analytics loader removed.
 
 // ── 嵌入模式下的站内跳页：交给外壳换 hash，别让 iframe 自己跳 ──
 // 课件正文里的站内链接（如 interview-* 的「用这些课程页组织答案」）写的是相对

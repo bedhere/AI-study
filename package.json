@@ -10,7 +10,9 @@
     "build": "vinext build",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
-    "format": "oxfmt"
+    "format": "oxfmt",
+    "check:cleanup": "python scripts/cleanup_legacy.py --check",
+    "verify:content": "node scripts/verify-content.mjs"
   },
   "dependencies": {
     "react": "19.2.6",

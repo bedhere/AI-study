@@ -12,8 +12,8 @@ window.COURSE = {
     subtitle: '從大模型底層原理到 AI Agent Harness',
     brand: '方片學堂',
     author: '方片',
-    authorUrl: 'https://Fangpian.cn/',
-    github: 'https://github.com/itshen/learn-ai',
+    authorUrl: '',
+    github: 'https://github.com/bedhere/AI-study',
   },
   parts: [
     /* 开篇：课程的第一站，先定位自己再讲怎么学。放在零基础入门篇之前，新访客默认落地

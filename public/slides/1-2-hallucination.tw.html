@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>大模型幻覺：為什麼 AI 會編造事實 | xueai.miyang.cn</title>
+<title>大模型幻覺：為什麼 AI 會編造事實 | 方片学堂</title>
 <script>
 // 內嵌詞表與注意力權重（自包含，不依賴外部 global-attn.js）
 // 為幻覺演示提供合理的候選詞權重資料
@@ -341,21 +341,21 @@ window.GLOBAL_ATTN = (function() {
 <meta name="keywords" content="大模型幻覺,Hallucination,AI胡說,幻覺緩解,RAG,Prompt約束">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://xueai.miyang.cn/slides/1-2-hallucination.tw.html">
-<link rel="alternate" hreflang="zh-CN" href="https://xueai.miyang.cn/slides/1-2-hallucination.html">
-<link rel="alternate" hreflang="en" href="https://xueai.miyang.cn/slides/1-2-hallucination.en.html">
-<link rel="alternate" hreflang="ko" href="https://xueai.miyang.cn/slides/1-2-hallucination.ko.html">
-<link rel="alternate" hreflang="zh-TW" href="https://xueai.miyang.cn/slides/1-2-hallucination.tw.html">
-<link rel="alternate" hreflang="zh-HK" href="https://xueai.miyang.cn/slides/1-2-hallucination.hk.html">
-<link rel="alternate" hreflang="zh-MO" href="https://xueai.miyang.cn/slides/1-2-hallucination.hk.html">
-<link rel="alternate" hreflang="x-default" href="https://xueai.miyang.cn/slides/1-2-hallucination.html">
+
+
+
+
+
+
+
+
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="xueai.miyang.cn · AI 產品經理培訓">
+<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="大模型幻覺：為什麼 AI 會編造事實">
 <meta property="og:description" content="大模型幻覺（Hallucination）是什麼、為什麼產生？從 Token 預測的統計本質出發，解析幻覺的根本成因，以及四種緩解方案：Prompt 約束、RAG、Temperature 調節、人工評測。">
-<meta property="og:url" content="https://xueai.miyang.cn/slides/1-2-hallucination.tw.html">
-<meta property="og:image" content="https://xueai.miyang.cn/slides/og/1-2-hallucination.jpg">
+
+
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
@@ -363,10 +363,10 @@ window.GLOBAL_ATTN = (function() {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="大模型幻覺：為什麼 AI 會編造事實">
 <meta name="twitter:description" content="大模型幻覺（Hallucination）是什麼、為什麼產生？從 Token 預測的統計本質出發，解析幻覺的根本成因，以及四種緩解方案：Prompt 約束、RAG、Temperature 調節、人工評測。">
-<meta name="twitter:image" content="https://xueai.miyang.cn/og-cover.jpg">
+
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"大模型幻覺演示","name":"大模型幻覺演示","url":"https://xueai.miyang.cn/slides/1-2-hallucination.tw.html","inLanguage":"zh-Hant-TW","author":{"@type":"Person","name":"方片"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"課程","educationalLevel":"入門到進階","isPartOf":{"@type":"Course","name":"AI 實戰課 · 幻覺與四種應對","url":"https://xueai.miyang.cn/slides/learn.html"},"isAccessibleForFree":false,"description":"大模型幻覺（Hallucination）是什麼、為什麼產生？從 Token 預測的統計本質出發，解析幻覺的根本成因，以及四種緩解方案：Prompt 約束、RAG、Temperature 調節、人工評測。","datePublished":"2026-04-12","dateModified":"2026-08-27","hasPart":{"@type":"WebPageElement","isAccessibleForFree":false,"cssSelector":".paywall-locked"}}</script><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
+<!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

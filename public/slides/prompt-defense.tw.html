@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Prompt 防禦實戰：多層防禦策略解析 | xueai.miyang.cn</title>
+<title>Prompt 防禦實戰：多層防禦策略解析 | 方片学堂</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -122,21 +122,21 @@
 <meta name="keywords" content="Prompt防禦,AI安全防禦,System Prompt安全,輸入過濾,AI產品安全">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://xueai.miyang.cn/slides/prompt-defense.tw.html">
-<link rel="alternate" hreflang="zh-CN" href="https://xueai.miyang.cn/slides/prompt-defense.html">
-<link rel="alternate" hreflang="en" href="https://xueai.miyang.cn/slides/prompt-defense.en.html">
-<link rel="alternate" hreflang="ko" href="https://xueai.miyang.cn/slides/prompt-defense.ko.html">
-<link rel="alternate" hreflang="zh-TW" href="https://xueai.miyang.cn/slides/prompt-defense.tw.html">
-<link rel="alternate" hreflang="zh-HK" href="https://xueai.miyang.cn/slides/prompt-defense.hk.html">
-<link rel="alternate" hreflang="zh-MO" href="https://xueai.miyang.cn/slides/prompt-defense.hk.html">
-<link rel="alternate" hreflang="x-default" href="https://xueai.miyang.cn/slides/prompt-defense.html">
+
+
+
+
+
+
+
+
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="xueai.miyang.cn · AI 產品經理培訓">
+<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="Prompt 防禦實戰：多層防禦策略解析">
 <meta property="og:description" content="如何在真實產品中防禦 Prompt 注入攻擊？講解輸入過濾、指令分離、防禦性 System Prompt 設計、輸出檢測等多層防禦策略，以 MoodVerse 案例為基礎展開。">
-<meta property="og:url" content="https://xueai.miyang.cn/slides/prompt-defense.tw.html">
-<meta property="og:image" content="https://xueai.miyang.cn/slides/og/prompt-defense.jpg">
+
+
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
@@ -144,10 +144,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Prompt 防禦實戰：多層防禦策略解析">
 <meta name="twitter:description" content="如何在真實產品中防禦 Prompt 注入攻擊？講解輸入過濾、指令分離、防禦性 System Prompt 設計、輸出檢測等多層防禦策略，以 MoodVerse 案例為基礎展開。">
-<meta name="twitter:image" content="https://xueai.miyang.cn/og-cover.jpg">
+
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"Prompt 防禦：三層攔截實戰","name":"Prompt 防禦：三層攔截實戰","url":"https://xueai.miyang.cn/slides/prompt-defense.tw.html","inLanguage":"zh-Hant-TW","author":{"@type":"Person","name":"方片"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"課程","educationalLevel":"入門到進階","isPartOf":{"@type":"Course","name":"AI 實戰課 · Prompt 安全","url":"https://xueai.miyang.cn/slides/learn.html"},"isAccessibleForFree":false,"description":"如何在真實產品中防禦 Prompt 注入攻擊？講解輸入過濾、指令分離、防禦性 System Prompt 設計、輸出檢測等多層防禦策略，以 MoodVerse 案例為基礎展開。","datePublished":"2026-04-12","dateModified":"2026-08-27","hasPart":{"@type":"WebPageElement","isAccessibleForFree":false,"cssSelector":".paywall-locked"}}</script><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
+<!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><script>try{if(localStorage.getItem('xa_auth')!=='1')document.documentElement.classList.add('xa-locked')}catch(e){document.documentElement.classList.add('xa-locked')}</script><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>

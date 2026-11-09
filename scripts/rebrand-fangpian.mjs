@@ -9,7 +9,6 @@ if (!assetRoot || !fs.existsSync(assetRoot)) {
 
 const projectRoot = process.cwd();
 const trees = [
-  path.resolve(projectRoot, '..', 'slides'),
   path.resolve(projectRoot, 'public', 'slides'),
 ];
 const extensions = /\.(?:html|js|css)$/i;

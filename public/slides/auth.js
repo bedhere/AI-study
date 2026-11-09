@@ -1,5 +1,5 @@
 /**
- * auth.js — xueai.miyang.cn 登录状态与登录 UI（home.html / learn.html 共用）
+ * auth.js — 方片学堂 登录状态与登录 UI（home.html / learn.html 共用）
  *
  * 依赖后端 /auth/* 接口（方片 OAuth）。
  * 本地预览没有该接口时静默降级为「未登录」，不影响页面其他功能。
@@ -53,26 +53,26 @@
       /* 交流群弹窗 */
       groupModalTitle:    '欢迎交流与关注',
       groupHint:          '微信扫一扫入群，或关注公众号与 X 获取更新',
-      chan0Name:          '交流群',
-      chan0Desc:          '微信扫码入群<br>聊课程与 AI 实战',
-      chan0Alt:           '方片学堂 交流群二维码',
-      chan1Name:          '公众号',
-      chan1Desc:          '方片<br>文章与课程更新',
-      chan1Alt:           '方片公众号二维码',
-      chan2Name:          '推特',
-      chan2Desc:          '@Fangpian_ai<br>点击直达主页',
-      chan2Alt:           'X 主页二维码',
+
+
+
+
+
+
+
+
+
       btnClose:           '关闭',
       /* 郑重声明弹窗 */
-      noticeAriaLabel:    '郑重声明',
-      noticeHeroTitle:    '永久免费',
-      noticeHeroSub:      '知识应该被更多人看到',
-      noticeHeading:      '郑重声明',
-      noticePara1:        'xueai.miyang.cn 是免费公益的 AI 学习网站，全部内容<span class="xa-red">永久免费</span>。<br>本站从未授权任何机构或个人将站内内容用于收费课程、付费社群或任何形式的销售。',
-      noticePara2a:       '如果你是在培训机构、付费课程或课包里拿到本网站的，说明你为免费内容付了钱。<br>请尽快向对方申请退款，并保留付款凭证。',
-      noticePara2b:       '你也可以访问方片官网 ，或邮件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我们举报。</span>',
-      noticePara3:        '登录只用于同步学习进度、防止内容被恶意贩卖，不收取任何费用。<br>欢迎关注公众号「方片」，我们也会录制教学视频，免费开放给你学习！',
-      noticeVision:       '方片科技的愿景，是让<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我们愿意做一件不那么聪明的事：把我们掌握的知识开源出来。<br>但开源精神，绝不是商业化倒卖的理由。',
+
+
+
+
+
+
+
+
+
       btnX:               '到 X 支持一下小山！',
       btnAck:             '我明白了！'
     },
@@ -108,26 +108,26 @@
       /* 交流群弹窗 */
       groupModalTitle:    '歡迎交流與關注',
       groupHint:          '微信掃一掃入羣，或關注公眾號與 X 獲取更新',
-      chan0Name:          '交流羣',
-      chan0Desc:          '微信掃碼入羣<br>聊課程與 AI 實戰',
-      chan0Alt:           '方片學堂 交流羣QR Code',
-      chan1Name:          '公眾號',
-      chan1Desc:          '方片<br>文章與課程更新',
-      chan1Alt:           '方片公眾號QR Code',
-      chan2Name:          '推特',
-      chan2Desc:          '@Fangpian_ai<br>按一下直達主頁',
-      chan2Alt:           'X 主頁QR Code',
+
+
+
+
+
+
+
+
+
       btnClose:           '關閉',
       /* 郑重声明弹窗 */
-      noticeAriaLabel:    '鄭重聲明',
-      noticeHeroTitle:    '永久免費',
-      noticeHeroSub:      '知識應該被更多人看到',
-      noticeHeading:      '鄭重聲明',
-      noticePara1:        'xueai.miyang.cn 是免費公益的 AI 學習網站，全部內容<span class="xa-red">永久免費</span>。<br>本站從未授權任何機構或個人將站內內容用於收費課程、付費社羣或任何形式的銷售。',
-      noticePara2a:       '如果你是在培訓機構、付費課程或課包裏拿到本網站的，説明你為免費內容付了錢。<br>請儘快向對方申請退款，並保留付款憑證。',
-      noticePara2b:       '你也可以訪問方片官網 ，或郵件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我們舉報。</span>',
-      noticePara3:        '登入只用於同步學習進度、防止內容被惡意販賣，不收取任何費用。<br>歡迎關注公眾號「方片」，我們也會錄製教學影片，免費開放給你學習！',
-      noticeVision:       '方片科技的願景，是讓<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我們願意做一件不那麼聰明的事：把我們掌握的知識開源出來。<br>但開源精神，絕不是商業化倒賣的理由。',
+
+
+
+
+
+
+
+
+
       btnX:               '到 X 支持一下小山！',
       btnAck:             '我明白了！'
     },
@@ -163,26 +163,26 @@
       /* 交流群弹窗 */
       groupModalTitle:    '歡迎交流與關注',
       groupHint:          '微信掃一掃入群，或關注公眾號與 X 獲取更新',
-      chan0Name:          '交流群',
-      chan0Desc:          '微信掃碼入群<br>聊課程與 AI 實戰',
-      chan0Alt:           '方片學堂 交流群二維碼',
-      chan1Name:          '公眾號',
-      chan1Desc:          '方片<br>文章與課程更新',
-      chan1Alt:           '方片公眾號二維碼',
-      chan2Name:          '推特',
-      chan2Desc:          '@Fangpian_ai<br>點選直達主頁',
-      chan2Alt:           'X 主頁二維碼',
+
+
+
+
+
+
+
+
+
       btnClose:           '關閉',
       /* 郑重声明弹窗 */
-      noticeAriaLabel:    '鄭重聲明',
-      noticeHeroTitle:    '永久免費',
-      noticeHeroSub:      '知識應該被更多人看到',
-      noticeHeading:      '鄭重聲明',
-      noticePara1:        'xueai.miyang.cn 是免費公益的 AI 學習網站，全部內容<span class="xa-red">永久免費</span>。<br>本站從未授權任何機構或個人將站內內容用於收費課程、付費社群或任何形式的銷售。',
-      noticePara2a:       '如果你是在培訓機構、付費課程或課包裡拿到本網站的，說明你為免費內容付了錢。<br>請儘快向對方申請退款，並保留付款憑證。',
-      noticePara2b:       '你也可以訪問方片官網 ，或郵件 <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">向我們舉報。</span>',
-      noticePara3:        '登入只用於同步學習進度、防止內容被惡意販賣，不收取任何費用。<br>歡迎關注公眾號「方片」，我們也會錄製教學影片，免費開放給你學習！',
-      noticeVision:       '方片科技的願景，是讓<span class="xa-red">更多人享受到 AI 的便利</span>。<br>我們願意做一件不那麼聰明的事：把我們掌握的知識開源出來。<br>但開源精神，絕不是商業化倒賣的理由。',
+
+
+
+
+
+
+
+
+
       btnX:               '到 X 支持一下小山！',
       btnAck:             '我明白了！'
     },
@@ -215,25 +215,25 @@
       benefit3Desc:       'We connect you with companies hiring for AI roles',
       groupModalTitle:    'Connect with us',
       groupHint:          'Scan to join the group, or follow us on WeChat Official Account & X for updates',
-      chan0Name:          'Study Group',
-      chan0Desc:          'Scan with WeChat to join<br>Discuss courses & AI practice',
-      chan0Alt:           'Fangpian Academy study group QR code',
-      chan1Name:          'WeChat Official Account',
-      chan1Desc:          'Fangpian<br>Articles & course updates',
-      chan1Alt:           'Fangpian WeChat Official Account QR code',
-      chan2Name:          'X (Twitter)',
-      chan2Desc:          '@Fangpian_ai<br>Click to visit profile',
-      chan2Alt:           'X profile QR code',
+
+
+
+
+
+
+
+
+
       btnClose:           'Close',
-      noticeAriaLabel:    'Important Notice',
-      noticeHeroTitle:    'Always Free',
-      noticeHeroSub:      'Knowledge should be accessible to all',
-      noticeHeading:      'Important Notice',
-      noticePara1:        'xueai.miyang.cn is a free, public-benefit AI learning site. All content is <span class="xa-red">permanently free</span>.<br>Miyang has never authorized any individual or organization to resell the content here in paid courses, paid communities, or any other commercial form.',
-      noticePara2a:       'If you received this site through a training program, paid course, or course bundle, you paid for something that should be free.<br>Please request a refund immediately and keep your payment records.',
-      noticePara2b:       'You can also visit the Miyang website at  or email <a href="mailto:connect@miyang.cn">connect@miyang.cn</a> <span class="xa-nb">to report the issue.</span>',
-      noticePara3:        'Login is only used to sync your learning progress and prevent content from being resold. We charge nothing.<br>Follow "Fangpian" on WeChat Official Account — we also publish free tutorial videos there!',
-      noticeVision:       'Miyang\'s mission is to <span class="xa-red">make AI accessible to more people</span>.<br>We choose to open-source what we know, even if it\'s not the smartest business move.<br>But open source is never a license for commercial resale.',
+
+
+
+
+
+
+
+
+
       btnX:               'Support Fangpian on X!',
       btnAck:             'Got it!'
     },
@@ -266,25 +266,25 @@
       benefit3Desc:       'AI 직무 채용 기업과 연결해 드립니다',
       groupModalTitle:    '함께 교류하고 팔로우하세요',
       groupHint:          '위챗으로 스캔하여 그룹에 참여하거나, 위챗 공식 계정과 X를 팔로우하여 업데이트를 받으세요',
-      chan0Name:          '스터디 그룹',
-      chan0Desc:          '위챗으로 스캔하여 참여<br>강의와 AI 실전 토론',
-      chan0Alt:           '팡피엔 아카데미 스터디 그룹 QR코드',
-      chan1Name:          '위챗 공식 계정',
-      chan1Desc:          '팡피엔<br>아티클 및 강의 업데이트',
-      chan1Alt:           '팡피엔 위챗 공식 계정 QR코드',
-      chan2Name:          'X (트위터)',
-      chan2Desc:          '@Fangpian_ai<br>클릭하여 프로필 방문',
-      chan2Alt:           'X 프로필 QR코드',
+
+
+
+
+
+
+
+
+
       btnClose:           '닫기',
-      noticeAriaLabel:    '중요 공지',
-      noticeHeroTitle:    '영구 무료',
-      noticeHeroSub:      '지식은 더 많은 사람들에게 닿아야 합니다',
-      noticeHeading:      '중요 공지',
-      noticePara1:        'xueai.miyang.cn은 무료 공익 AI 학습 사이트로, 모든 콘텐츠는 <span class="xa-red">영구 무료</span>입니다.<br>미양은 어떠한 기관이나 개인에게도 사이트 콘텐츠를 유료 강의, 유료 커뮤니티 또는 기타 상업적 형태로 판매하도록 허가한 적이 없습니다.',
-      noticePara2a:       '교육 기관, 유료 강의 또는 강의 패키지를 통해 이 사이트를 접하셨다면, 무료 콘텐츠에 비용을 지불하신 것입니다.<br>즉시 환불을 요청하시고 결제 증빙을 보관하시기 바랍니다.',
-      noticePara2b:       '미양 공식 웹사이트 을 방문하시거나, <a href="mailto:connect@miyang.cn">connect@miyang.cn</a>으로 이메일을 보내 <span class="xa-nb">신고하실 수 있습니다.</span>',
-      noticePara3:        '로그인은 학습 진도 동기화와 콘텐츠 무단 판매 방지를 위한 것으로, 어떠한 비용도 청구하지 않습니다.<br>위챗 공식 계정 「팡피엔」을 팔로우하세요. 무료 강의 영상도 제공합니다!',
-      noticeVision:       '미양의 비전은 <span class="xa-red">더 많은 사람들이 AI의 편리함을 누리는 것</span>입니다.<br>우리가 알고 있는 지식을 오픈소스로 공개하는 일을 기꺼이 합니다.<br>하지만 오픈소스 정신은 결코 상업적 재판매의 구실이 될 수 없습니다.',
+
+
+
+
+
+
+
+
+
       btnX:               'X에서 팡피엔 응원하기!',
       btnAck:             '알겠습니다!'
     }
@@ -301,10 +301,10 @@
     '1-2-vocab', 'ai-safety-governance', 'ai-tips-context', 'ai-tips-iterate',
     'ai-tips-scenarios', 'ai-tips-verify', 'prompt-attack-cases'];
   /* 三个联系渠道。二维码都放本地 assets，不走 CDN，弹窗才不会因为外域挂掉而开天窗 */
-  var GROUP_QR = 'assets/group-qrcode.png?v=20260817a';
-  var GZH_QR = 'assets/qrcode.jpg';
-  var X_QR = 'assets/x-qrcode.png';
-  var X_URL = 'https://x.com/Fangpian_ai';
+  var GROUP_QR = '';
+  var GZH_QR = '';
+  var X_QR = '';
+  var X_URL = '';
   var X_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
     + '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68'
     + 'l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>';
@@ -647,38 +647,7 @@
       + '</div></' + tag + '>';
   }
 
-  function openGroupModal(){
-    if(document.querySelector('.xa-scrim')) return;
-    var scrim = document.createElement('div');
-    scrim.className = 'xa-scrim';
-    scrim.innerHTML =
-      '<div class="xa-modal xa-qr-modal" role="dialog" aria-modal="true">'
-      + '<h3>' + T.groupModalTitle + '</h3>'
-      + '<div class="xa-qr-hint">' + T.groupHint + '</div>'
-      + '<div class="xa-chan">'
-      + channel({
-          img: GROUP_QR, alt: T.chan0Alt,
-          name: T.chan0Name, desc: T.chan0Desc
-        })
-      + channel({
-          img: GZH_QR, alt: T.chan1Alt,
-          name: T.chan1Name, desc: T.chan1Desc
-        })
-      + channel({
-          href: X_URL, img: X_QR, alt: T.chan2Alt,
-          name: T.chan2Name, icon: X_ICON, desc: T.chan2Desc
-        })
-      + '</div>'
-      + '<div class="xa-actions">'
-      + '<button class="xa-btn ghost" data-xa="cancel">' + T.btnClose + '</button>'
-      + '</div></div>';
-    document.body.appendChild(scrim);
-    scrim.addEventListener('click', function(e){
-      if(e.target === scrim || e.target.getAttribute('data-xa') === 'cancel'){
-        scrim.remove();
-      }
-    });
-  }
+  function openGroupModal(){}
 
   /* 页面里的 .xa-group 按钮统一改为弹出二维码 */
   document.addEventListener('click', function(e){
@@ -695,39 +664,7 @@
   var NOTICE_KEY = 'xa_notice_v1';
   var SVG_SHIELD = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>';
 
-  function maybeShowNotice(){
-    try{ if(localStorage.getItem(NOTICE_KEY)) return; }catch(e){ return; }
-    if(document.querySelector('.xa-scrim')) return;
-    var scrim = document.createElement('div');
-    scrim.className = 'xa-scrim';
-    scrim.innerHTML =
-      '<div class="xa-modal xa-notice" role="dialog" aria-modal="true" aria-label="' + T.noticeAriaLabel + '">'
-      + '<div class="xa-notice-art"><div class="xa-notice-art-overlay">'
-      + '<p class="xa-left-big">' + T.noticeHeroTitle + '</p>'
-      + '<p>' + T.noticeHeroSub + '</p>'
-      + '</div></div>'
-      + '<div class="xa-notice-main">'
-      + '<div class="xa-notice-head">' + SVG_SHIELD + '<h3>' + T.noticeHeading + '</h3></div>'
-      + '<p>' + T.noticePara1 + '</p>'
-      + '<p class="xa-refund"><strong>' + T.noticePara2a + '</strong><br>'
-      /* 末尾整句不许断开，否则窄一点就甩出「报。」这种两字孤行 */
-      + T.noticePara2b + '</p>'
-      + '<p>' + T.noticePara3 + '</p>'
-      + '<p class="xa-vision">' + T.noticeVision + '</p>'
-      + '<div class="xa-actions">'
-      + '<a class="xa-btn xa-x" href="' + X_URL + '" target="_blank" rel="noopener noreferrer">'
-      + X_ICON + T.btnX + '</a>'
-      + '<button class="xa-btn primary" data-xa="ack">' + T.btnAck + '</button>'
-      + '</div></div></div>';
-    document.body.appendChild(scrim);
-    scrim.addEventListener('click', function(e){
-      if(e.target.getAttribute && e.target.getAttribute('data-xa') === 'ack'){
-        try{ localStorage.setItem(NOTICE_KEY, String(Date.now())); }catch(err){}
-        scrim.remove();
-      }
-    });
-  }
-  maybeShowNotice();
+
 
   function renderSlot(el){
     if(state.loggedIn){

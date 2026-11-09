@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Token 与词表：从语料到词向量的建立 | xueai.miyang.cn</title>
+<title>Token 与词表：从语料到词向量的建立 | 方片学堂</title>
 <script>
 // 全局词间注意力权重矩阵 (PMI + 语义分组)
 // vocab: 116 个不重复 token
@@ -18,7 +18,7 @@ window.GLOBAL_ATTN = {"vocab": ["紫霞", "捧着", "月光", "宝盒", "，", "
   --text-main: #1c1c1e;
   --text-sub: #8e8e93;
   --accent: #0066ff;   /* 亮蓝色 */
-  
+
   --tk-bg: transparent;
   --tk-border: transparent;
   --tk-pad: 0 1px;
@@ -395,21 +395,21 @@ canvas#heatmap {
 <meta name="keywords" content="Token,词表,BPE分词,词向量,大模型分词器,Tokenizer">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://xueai.miyang.cn/slides/1-2-vocab.html">
-<link rel="alternate" hreflang="zh-CN" href="https://xueai.miyang.cn/slides/1-2-vocab.html">
-<link rel="alternate" hreflang="en" href="https://xueai.miyang.cn/slides/1-2-vocab.en.html">
-<link rel="alternate" hreflang="ko" href="https://xueai.miyang.cn/slides/1-2-vocab.ko.html">
-<link rel="alternate" hreflang="zh-TW" href="https://xueai.miyang.cn/slides/1-2-vocab.tw.html">
-<link rel="alternate" hreflang="zh-HK" href="https://xueai.miyang.cn/slides/1-2-vocab.hk.html">
-<link rel="alternate" hreflang="zh-MO" href="https://xueai.miyang.cn/slides/1-2-vocab.hk.html">
-<link rel="alternate" hreflang="x-default" href="https://xueai.miyang.cn/slides/1-2-vocab.html">
+
+
+
+
+
+
+
+
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="xueai.miyang.cn · AI 产品经理培训">
+<meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
 <meta property="og:title" content="从语料到词向量：Token 与词表是怎么建立的">
 <meta property="og:description" content="深入解析大模型的词表构建原理：BPE 分词算法、Token 与词的关系、中英文 Token 效率差异、词向量矩阵的含义，是理解大模型生成机制的第一步。">
-<meta property="og:url" content="https://xueai.miyang.cn/slides/1-2-vocab.html">
-<meta property="og:image" content="https://xueai.miyang.cn/slides/og/1-2-vocab.jpg">
+
+
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_CN">
@@ -417,10 +417,10 @@ canvas#heatmap {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="从语料到词向量：Token 与词表是怎么建立的">
 <meta name="twitter:description" content="深入解析大模型的词表构建原理：BPE 分词算法、Token 与词的关系、中英文 Token 效率差异、词向量矩阵的含义，是理解大模型生成机制的第一步。">
-<meta name="twitter:image" content="https://xueai.miyang.cn/og-cover.jpg">
+
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"词表与训练","name":"词表与训练","url":"https://xueai.miyang.cn/slides/1-2-vocab.html","inLanguage":"zh-CN","author":{"@type":"Person","name":"方片"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"课程","educationalLevel":"入门到进阶","isPartOf":{"@type":"Course","name":"AI 实战课 · 基础原理","url":"https://xueai.miyang.cn/slides/learn.html"},"isAccessibleForFree":true,"description":"深入解析大模型的词表构建原理：BPE 分词算法、Token 与词的关系、中英文 Token 效率差异、词向量矩阵的含义，是理解大模型生成机制的第一步。","datePublished":"2026-04-12","dateModified":"2026-08-27"}</script><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
+<!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -443,7 +443,7 @@ canvas#heatmap {
         <!-- Tokens injected here -->
       </div>
     </div>
-    
+
     <div class="right-panel">
       <div class="matrix-header">
         <h3><span id="matrix-title">全局词间关联权重矩阵</span> (<span id="matrix-dim"></span>)</h3>
@@ -557,11 +557,11 @@ parsedSentences.forEach((toks, sId) => {
     span.dataset.vid = t.vId;
     span.dataset.sid = sId;
     span.dataset.tid = tId;
-    
+
     if(t.vId >= 0) {
       span.onclick = () => handleTokenClick(t.vId);
     }
-    
+
     p.appendChild(span);
     allTokens.push({ el: span, vId: t.vId, sId });
   });
@@ -591,7 +591,7 @@ titleEl.textContent = stages[0].title;
 function nextStage() {
   currentStage++;
   if(currentStage > 3) currentStage = 0;
-  
+
   app.className = 'slide-container ' + stages[currentStage].class;
   titleEl.textContent = stages[currentStage].title;
   descEl.textContent = stages[currentStage].desc;
@@ -628,16 +628,16 @@ function startScanningAnimation() {
   revealedRows.clear();
   scanHighlightRow = -1;
   btn.disabled = false;
-  
+
   // Draw the empty matrix grid first
   requestAnimationFrame(() => drawMatrix(-1));
-  
+
   let idx = 0;
   let needsMatrixRedraw = false;
-  
+
   function tick() {
     if(currentStage !== 2) return;
-    
+
     for(let f=0; f<3; f++) {
       if(idx >= allTokens.length) {
         for(let v=0; v<n; v++) revealedRows.add(v);
@@ -646,14 +646,14 @@ function startScanningAnimation() {
         nextStage(); // advance to stage 3
         return;
       }
-      
+
       const prev = document.querySelector('.scan-active');
       if(prev) prev.classList.remove('scan-active');
       document.querySelectorAll('.scan-ctx-strong, .scan-ctx-weak').forEach(el => el.classList.remove('scan-ctx-strong', 'scan-ctx-weak'));
-      
+
       const current = allTokens[idx];
       current.el.classList.add('scan-active');
-      
+
       if(current.vId >= 0) {
         // Mark this vocab row as revealed in the matrix
         if(!revealedRows.has(current.vId)) {
@@ -661,7 +661,7 @@ function startScanningAnimation() {
           needsMatrixRedraw = true;
         }
         scanHighlightRow = current.vId;
-        
+
         allTokens.forEach(t => {
           if(t.sId === current.sId && t !== current && t.vId >= 0) {
             const w = matrix[current.vId][t.vId];
@@ -670,25 +670,25 @@ function startScanningAnimation() {
           }
         });
       }
-      
+
       document.querySelectorAll('.sentence').forEach((sent, sId) => {
         if(sId !== current.sId) sent.style.opacity = '0.3';
         else sent.style.opacity = '1';
       });
-      
+
       if(f === 0) {
         current.el.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
-      
+
       idx++;
     }
-    
+
     // Update matrix progress and redraw
     const pct = Math.round(revealedRows.size / n * 100);
     document.getElementById('matrix-title').textContent = `学习中… 已掌握 ${revealedRows.size}/${n} 个词`;
     document.getElementById('matrix-dim').textContent = `${pct}%`;
     drawMatrix(-1);
-    
+
     scanAnimId = setTimeout(tick, 100);
   }
   tick();
@@ -744,14 +744,14 @@ function drawMatrix(hlId) {
   const size = Math.min(container.clientWidth, container.clientHeight) - 20;
   if(size <= 0) return;
   const cell = size / n;
-  
+
   const dpr = window.devicePixelRatio || 1;
   canvas.width = size * dpr;
   canvas.height = size * dpr;
   canvas.style.width = size + 'px';
   canvas.style.height = size + 'px';
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  
+
   let maxW = 0;
   for(let i=0;i<n;i++) for(let j=0;j<n;j++) if(i!==j && matrix[i][j]>maxW) maxW = matrix[i][j];
   if(maxW===0) maxW=1;
@@ -765,14 +765,14 @@ function drawMatrix(hlId) {
   for(let i=0; i<n; i++) {
     // During scanning, only show revealed rows; in stage 3 show all
     const rowVisible = isComplete || revealedRows.has(i);
-    
+
     for(let j=0; j<n; j++) {
       const colVisible = isComplete || revealedRows.has(j);
       const cellRevealed = rowVisible || colVisible;
-      
+
       const isHl = hlId >= 0 && (i === hlId || j === hlId);
       const isAnyHl = hlId >= 0;
-      
+
       if(!cellRevealed) {
         // Unrevealed: very faint grid
         ctx.fillStyle = dark ? '#1B221E' : '#F9FAFB';
@@ -784,12 +784,12 @@ function drawMatrix(hlId) {
         const val = matrix[i][j] / maxW;
         ctx.fillStyle = getHeatColor(val, isHl, isAnyHl);
       }
-      
+
       const gap = cell > 4 ? 0.5 : 0;
       ctx.fillRect(j*cell + gap, i*cell + gap, cell - gap*2, cell - gap*2);
     }
   }
-  
+
   // During scanning: highlight the currently-being-scanned row
   if(isScanning && scanHighlightRow >= 0) {
     ctx.fillStyle = `rgba(${accentRgb},0.15)`;
@@ -799,7 +799,7 @@ function drawMatrix(hlId) {
     ctx.fillStyle = `rgba(${accentRgb},0.6)`;
     ctx.fillRect(scanHighlightRow*cell, scanHighlightRow*cell, cell, cell);
   }
-  
+
   // Stage 3: interactive highlight axis markers
   if(isComplete && hlId >= 0) {
     ctx.fillStyle = `rgba(${accentRgb},0.1)`;
@@ -824,11 +824,11 @@ canvas.addEventListener('click', (e) => {
   const cell = size / n;
   const col = Math.floor((e.clientX - rect.left) / cell);
   const row = Math.floor((e.clientY - rect.top) / cell);
-  
+
   let picked = -1;
   if (row >= 0 && row < n) picked = row;
   else if (col >= 0 && col < n) picked = col;
-  
+
   if(picked >= 0) {
     activeVId = (activeVId === picked) ? -1 : picked;
     updateHighlights();
@@ -839,15 +839,15 @@ function updateHighlights() {
   drawMatrix(activeVId);
   clearAllHighlights();
   showSamplePanel(activeVId);
-  
+
   if(activeVId >= 0) {
     const weights = matrix[activeVId];
     let maxW = 0;
     for(let k=0; k<n; k++) if(k!==activeVId && weights[k]>maxW) maxW = weights[k];
-    
+
     allTokens.forEach(t => {
       if(t.vId < 0) { t.el.classList.add('mat-dim'); return; }
-      
+
       if(t.vId === activeVId) {
         t.el.classList.add('mat-active');
       } else {
@@ -857,7 +857,7 @@ function updateHighlights() {
         else t.el.classList.add('mat-dim');
       }
     });
-    
+
   }
 }
 
@@ -869,7 +869,7 @@ canvas.addEventListener('mousemove', (e) => {
   const cell = rect.width / n;
   const col = Math.floor((e.clientX - rect.left) / cell);
   const row = Math.floor((e.clientY - rect.top) / cell);
-  
+
   if(row >= 0 && row < n && col >= 0 && col < n) {
     const val = matrix[row][col];
     tip.innerHTML = `<span class="tt-word">${vocab[row]}</span> 关注 <span class="tt-word">${vocab[col]}</span>：${(val*100).toFixed(1)}%`;
@@ -933,22 +933,22 @@ let lastCandData = null;
 
 function computeCandidates(vId) {
   if (vId < 0) return null;
-  
+
   const freq = nextFreq[vId];
   const weights = matrix[vId];
-  
+
   // Two-tier candidate system:
   // Tier 1: tokens that actually follow this token in corpus (high base score)
   // Tier 2: other tokens with matrix weight (low base score, for diversity)
   const candidates = [];
   const hasFreq = freq && freq.size > 0;
-  
+
   for (let j = 0; j < n; j++) {
     if (j === vId) continue;
     const w = weights[j];
     const isNextInCorpus = hasFreq && freq.has(j);
     const count = isNextInCorpus ? freq.get(j) : 0;
-    
+
     if (isNextInCorpus) {
       // Corpus next-token: strong base + frequency + matrix weight
       const logit = 3.0 + Math.log(count + 1) * 2 + (w || 0) * 2;
@@ -959,9 +959,9 @@ function computeCandidates(vId) {
       candidates.push({ i: j, logit, word: vocab[j] });
     }
   }
-  
+
   if (candidates.length === 0) return null;
-  
+
   const temperature = getTemp();
   const t = Math.max(temperature, 0.01);
   const scaled = candidates.map(c => c.logit / t);
@@ -969,10 +969,10 @@ function computeCandidates(vId) {
   const exps = scaled.map(s => Math.exp(s - maxS));
   const sum = exps.reduce((a, b) => a + b, 0);
   candidates.forEach((c, idx) => { c.p = exps[idx] / sum; });
-  
+
   candidates.sort((a, b) => b.p - a.p);
   const top10 = candidates.slice(0, 10);
-  
+
   // Apply Top-P filtering for sampling
   const topP = getTopP();
   let cumul = 0;
@@ -984,7 +984,7 @@ function computeCandidates(vId) {
   }
   const keptSum = kept.reduce((a, b) => a + b.p, 0);
   kept.forEach(k => k.p = k.p / keptSum);
-  
+
   const keptIndices = new Set(kept.map(k => k.i));
   return { top10, kept, keptIndices };
 }
@@ -996,17 +996,17 @@ function renderCandidates() {
   const titleEl = candListEl.querySelector('.sample-candidates-title');
   candListEl.innerHTML = '';
   candListEl.appendChild(titleEl);
-  
+
   const maxP = top10[0] ? top10[0].p : 1;
   top10.forEach(item => {
     const row = document.createElement('div');
     row.className = 'cand-row';
     if (!keptIndices.has(item.i)) row.classList.add('cutoff');
-    
+
     const wEl = document.createElement('span');
     wEl.className = 'cand-word';
     wEl.textContent = item.word;
-    
+
     const barBg = document.createElement('div');
     barBg.className = 'cand-bar-bg';
     const bar = document.createElement('div');
@@ -1019,11 +1019,11 @@ function renderCandidates() {
       : 'rgba(0,0,0,0.08)';
     bar.style.background = hue;
     barBg.appendChild(bar);
-    
+
     const pctEl = document.createElement('span');
     pctEl.className = 'cand-pct';
     pctEl.textContent = (item.p * 100).toFixed(1) + '%';
-    
+
     row.appendChild(wEl);
     row.appendChild(barBg);
     row.appendChild(pctEl);
@@ -1040,14 +1040,14 @@ function refreshCandidates() {
 
 function doSample() {
   if (!lastCandData || !lastCandData.kept || lastCandData.kept.length === 0) return;
-  
+
   const picked = sampleFrom(lastCandData.kept);
   if (!picked) return;
-  
+
   sampleResultEl.textContent = picked.word;
   sampleResultEl.style.transform = 'scale(1.15)';
   setTimeout(() => sampleResultEl.style.transform = 'scale(1)', 200);
-  
+
   const rows = candListEl.querySelectorAll('.cand-row');
   rows.forEach(r => r.classList.remove('picked'));
   rows.forEach(r => {

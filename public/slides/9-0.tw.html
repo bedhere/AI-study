@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>本章從哪來：Alice 開發實錄 | xueai.miyang.cn</title>
+<title>本章從哪來：Alice 開發實錄 | 方片学堂</title>
 <style>@keyframes _si{to{opacity:1}} body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -62,22 +62,22 @@
 <meta name="description" content="動手實戰篇的所有內容，都來自作者開發 AI Agent 桌面應用 Alice 的一手經驗：約 50 萬行程式碼、132 個內建工具、8 大模組與本章 8 個小節一一對應。">
 <meta name="author" content="方片">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://xueai.miyang.cn/slides/9-0.tw.html">
-<link rel="alternate" hreflang="zh-CN" href="https://xueai.miyang.cn/slides/9-0.html">
-<link rel="alternate" hreflang="en" href="https://xueai.miyang.cn/slides/9-0.en.html">
-<link rel="alternate" hreflang="ko" href="https://xueai.miyang.cn/slides/9-0.ko.html">
-<link rel="alternate" hreflang="zh-TW" href="https://xueai.miyang.cn/slides/9-0.tw.html">
-<link rel="alternate" hreflang="zh-HK" href="https://xueai.miyang.cn/slides/9-0.hk.html">
-<link rel="alternate" hreflang="zh-MO" href="https://xueai.miyang.cn/slides/9-0.hk.html">
-<link rel="alternate" hreflang="x-default" href="https://xueai.miyang.cn/slides/9-0.html">
+
+
+
+
+
+
+
+
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="xueai.miyang.cn · AI 產品經理培訓">
+<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
 <meta property="og:title" content="本章從哪來：Alice 開發實錄">
-<meta property="og:url" content="https://xueai.miyang.cn/slides/9-0.tw.html">
-<meta property="og:image" content="https://xueai.miyang.cn/slides/og/9-0.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-<!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":["Article","LearningResource"],"headline":"本章從哪來：Alice 開發實錄","name":"本章從哪來：Alice 開發實錄","url":"https://xueai.miyang.cn/slides/9-0.tw.html","inLanguage":"zh-Hant-TW","author":{"@type":"Person","name":"方片"},"publisher":{"@type":"Organization","name":"xueai.miyang.cn","url":"https://xueai.miyang.cn"},"learningResourceType":"課程","educationalLevel":"入門到進階","isPartOf":{"@type":"Course","name":"AI 實戰課 · 開篇","url":"https://xueai.miyang.cn/slides/learn.html"},"isAccessibleForFree":true,"description":"動手實戰篇的所有內容，都來自作者開發 AI Agent 桌面應用 Alice 的一手經驗：約 50 萬行程式碼、132 個內建工具、8 大模組與本章 8 個小節一一對應。","datePublished":"2026-08-07","dateModified":"2026-08-27"}</script><meta property="og:description" content="動手實戰篇的所有內容，都來自作者開發 AI Agent 桌面應用 Alice 的一手經驗：約 50 萬行程式碼、132 個內建工具、8 大模組與本章 8 個小節一一對應。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
+<!--seo:begin--><meta property="og:description" content="動手實戰篇的所有內容，都來自作者開發 AI Agent 桌面應用 Alice 的一手經驗：約 50 萬行程式碼、132 個內建工具、8 大模組與本章 8 個小節一一對應。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
 </head>
 <body>
@@ -87,20 +87,7 @@
     <div class="kicker">實戰 · 從 Demo 到產品</div>
     <h1>本章從哪來：Alice 開發實錄</h1>
     <p class="subtitle">這一章不是論文綜述，也不是教程搬運——它是我開發 AI Agent 桌面應用 Alice 的一手經驗總結。接下來每一節課的背後，都有一段真實踩過的坑。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>本章是作者開發 AI Agent 桌面應用 Alice 的經驗總結：約 50 萬行程式碼、132 個工具、8 大模組與本章 8 個小節一一對應</p></aside><!--seo:end-->  <div class="alice-card reveal">
-    <div class="a-body">
-      <span class="a-badge">AI 助理</span>
-      <div class="a-wordmark">Alice</div>
-      <div class="a-tagline">一個既懂行又懂你的 AI 助理</div>
-      <p class="a-desc">她會記住你的偏好，幫你處理工作與生活中的任務。需要時，她會召集不同領域的專業 Agent，一起把任務推進到完成。</p>
-      <p class="a-meta">macOS · Windows · 免費</p>
-      <div class="a-cta">
-        
-        
-      </div>
-    </div>
-    <div class="a-visual"><img src="images/alice-hero-visual.webp" alt="Alice — 你的 AI 助理" loading="lazy"></div>
-  </div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>本章是作者開發 AI Agent 桌面應用 Alice 的經驗總結：約 50 萬行程式碼、132 個工具、8 大模組與本章 8 個小節一一對應</p></aside><!--seo:end-->
 
   <div class="l-callout">
     <b>產品的另一面。</b>　「記住你的偏好」「召集不同領域的專業 Agent」——官網上的每一句宣傳語，背後都是一套真實的工程系統：長期記憶、多 Agent 協作、迴圈控制、上下文壓縮、權限審批、MCP 雙向生態。本章就是把這些系統逐一拆開給你看。
