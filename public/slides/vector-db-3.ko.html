@@ -31,7 +31,7 @@
 
     <style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:170px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(#000 20%,transparent);mask-image:linear-gradient(#000 20%,transparent)}</style>
 
-    <script src="/slides/external-platform-policy.js"></script>
+    <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
   <body>
@@ -42,7 +42,7 @@
         <p class="subtitle">삽입부터 삭제까지 동일한 Collection 이름과 실제 텍스트 Embedding을 사용합니다. 로컬 Milvus가 19530 포트에서 실행 중이라고 가정합니다.</p>
       </header>
       <div class="vdb-note vdb-ok">
-        <a href="https://milvus.io/docs/install_standalone-docker.md" target="_blank" rel="noopener">공식 Docker Standalone 안내서</a>로 서비스를 시작한 뒤 <code>pymilvus</code>와 <code>sentence-transformers</code>를 설치하세요. 실제 모델 출력에서 차원을 구하며, 랜덤 벡터로 시맨틱 검색을 흉내 내지 않습니다.</div>
+        <a rel="noopener" data-source-reference="true">공식 Docker Standalone 안내서</a>로 서비스를 시작한 뒤 <code>pymilvus</code>와 <code>sentence-transformers</code>를 설치하세요. 실제 모델 출력에서 차원을 구하며, 랜덤 벡터로 시맨틱 검색을 흉내 내지 않습니다.</div>
       <div class="sec-label">연결, 정의, 배치 삽입</div>
       <pre class="vdb-code paywall-locked xa-peek"><span class="k">from</span> pymilvus <span class="k">import</span> MilvusClient, DataType
 <span class="k">from</span> sentence_transformers <span class="k">import</span> SentenceTransformer

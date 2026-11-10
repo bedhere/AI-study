@@ -107,7 +107,7 @@ code{color:var(--vibe-deep);background:rgba(13,148,136,.08)}
 </style>
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="Why You Need to Set Rules for AI"><meta property="og:description" content="Vibe Coding is a development approach where you use natural language to have AI directly generate code. Its problem lies in quality: AI without rules will rework, miss edits, silently delete code, and leave permanent technical debt. This lesson first looks at what failures look like, then examines how to inject constraints most reliably."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -194,7 +194,7 @@ The following are important user constraints. Please follow them strictly.</code
         <h3><span>itshen/xs_vibe_rules</span> · Open-source repo for this series</h3>
         <p>The complete rule set is fully open source (MIT License). Fork it, place it in your project's <code>.cursor/rules/</code> directory, then trim and adjust it to your own tech stack — and you've got your first version of an AI collaboration standard.</p>
       </div>
-      <a class="repo-btn" href="https://github.com/itshen/xs_vibe_rules" target="_blank" rel="noopener">Fork on GitHub</a>
+      <a class="repo-btn" rel="noopener" data-source-reference="true">Fork on GitHub</a>
     </div>
   </section>
 
@@ -203,7 +203,7 @@ The following are important user constraints. Please follow them strictly.</code
     <div class="vibe-callout">
       <p style="line-height:1.8"><b>The value of rules lies not in quantity but in each one solving a real problem.</b> Every time AI makes the same mistake again, turn it into a rule — that's the foundational method of this entire series. Whether constraints hold is determined by the injection mechanism: writing "you must" ten times still loses to a Rule file that auto-loads every turn.</p>
     </div>
-    <p class="src-note">Source material: This series is based on the author's open-source repository <a href="https://github.com/itshen/xs_vibe_rules">itshen/xs_vibe_rules</a>, containing Cursor Rules and design thinking distilled from multiple real projects.</p>
+    <p class="src-note">Source material: This series is based on the author's open-source repository <a data-source-reference="true">itshen/xs_vibe_rules</a>, containing Cursor Rules and design thinking distilled from multiple real projects.</p>
   </section>
 
 </article>

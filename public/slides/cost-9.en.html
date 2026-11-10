@@ -71,7 +71,7 @@
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -84,7 +84,7 @@
     <div class="chips"><span class="chip">lexical tax</span><span class="chip">YAML</span><span class="chip">CSV</span><span class="chip">Minified JSON</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">In one sentence</span><p>Bold ** alone eats 8.5% of Tokens; YAML for complex objects, CSV for flat lists, force Minified JSON on backend output</p></aside><!--seo:end-->  <section class="reveal">
     <div class="sec-label">How heavy is this tax: 13% is formatting</div>
-    <p class="desc">The author built a Token visualization tool (<a href="https://yusuan.ai/analyzer" target="_blank" rel="noopener">yusuan.ai/analyzer</a>) and dropped in a slim Lyra prompt: <b>bold ** alone ate 8.5% of Tokens</b>. Add list markers, heading symbols, JSON indentation and newlines, and 13% of that prompt is formatting. In typical product Prompts, 10%–20% is this kind of decorative Token.</p>
+    <p class="desc">The author built a Token visualization tool (<a rel="noopener" data-source-reference="true">yusuan.ai/analyzer</a>) and dropped in a slim Lyra prompt: <b>bold ** alone ate 8.5% of Tokens</b>. Add list markers, heading symbols, JSON indentation and newlines, and 13% of that prompt is formatting. In typical product Prompts, 10%–20% is this kind of decorative Token.</p>
     <div class="fig-wrap">
       <img src="images/cost/analyzer.webp" alt="Token visualization: ** appears 33 times at 4.16%" loading="lazy">
       <div class="fig-cap">Token visualization (yusuan.ai/analyzer): ** appears 33 times in one prompt—that single symbol is 4.16%. (Figure: from the author's internal share deck)</div>
@@ -114,7 +114,7 @@
 
   <section class="reveal paywall-locked">
     <div class="sec-label">Three rules of thumb</div>
-    <p class="desc"><b>1. Complex objects: YAML (or TOON), not JSON.</b> JSON's signal-to-noise is awful: every key wrapped in quotes, every nesting level closed with braces—and those symbols often bill as their own Tokens. YAML uses indentation instead of closers and a colon instead of “quotes+colon,” usually saving 10%–15%, sometimes up to 40%. <a href="https://github.com/toon-format/toon" target="_blank" rel="noopener">TOON</a> is a new format built to save Tokens, but LLMs may not support it well yet—so the steadier combo is <b>YAML + CSV</b>.</p>
+    <p class="desc"><b>1. Complex objects: YAML (or TOON), not JSON.</b> JSON's signal-to-noise is awful: every key wrapped in quotes, every nesting level closed with braces—and those symbols often bill as their own Tokens. YAML uses indentation instead of closers and a colon instead of “quotes+colon,” usually saving 10%–15%, sometimes up to 40%. <a rel="noopener" data-source-reference="true">TOON</a> is a new format built to save Tokens, but LLMs may not support it well yet—so the steadier combo is <b>YAML + CSV</b>.</p>
     <p class="desc" style="margin-top:12px"><b>2. Flat lists: CSV, not JSON arrays.</b> A headered table kills repeated key names. Long-list scenarios cut 30%–60%, and the same context window holds more data.</p>
     <div class="fig-wrap">
       <img src="images/cost/csv-vs-json.webp" alt="JSON array vs CSV table" loading="lazy">
@@ -134,7 +134,7 @@ Example: {"id":1,"status":"ok"}</div>
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>Output costs more than input,</b> so locking output format saves money and latency (lesson 12 has three more moves).</p></div>
     </div>
     <p class="src-note">
-      <b>Source:</b> Adapted from the author's internal team share “AI Token Cost Engineering Strategies,” hands-on section “01｜Syntax Layer.” Tool: <a href="https://yusuan.ai/analyzer" target="_blank" rel="noopener">yusuan.ai/analyzer</a>; YAML spec at <a href="https://yaml.org" target="_blank" rel="noopener">yaml.org</a>.
+      <b>Source:</b> Adapted from the author's internal team share “AI Token Cost Engineering Strategies,” hands-on section “01｜Syntax Layer.” Tool: <a rel="noopener" data-source-reference="true">yusuan.ai/analyzer</a>; YAML spec at <a rel="noopener" data-source-reference="true">yaml.org</a>.
     </p>
   </section>
 

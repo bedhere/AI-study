@@ -83,7 +83,7 @@
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -136,7 +136,7 @@
   <section class="reveal paywall-locked">
     <div class="sec-label">Strategy 2 · Compress long docs before you feed them</div>
     <p class="desc">Financial research, meeting notes—docs packed with “correct filler”: disclaimers, repeated background, spoken padding. Feed that to the AI and you're paying PhD rates to read spam.</p>
-    <p class="desc" style="margin-top:10px">Fix: after RAG retrieval and before inference, insert an <a href="https://llmlingua.com/" target="_blank" rel="noopener">LLMLingua-2</a> middleware. It doesn't chop words blindly: BERT bidirectional attention sees both sides of context, pinpoints core semantics (entities, numbers, key verbs), and strips redundant noise. <b>Compress 5–20×; Prefill that took 1 second drops to 50 ms</b>—high-concurrency throughput jumps a full order of magnitude.</p>
+    <p class="desc" style="margin-top:10px">Fix: after RAG retrieval and before inference, insert an <a rel="noopener" data-source-reference="true">LLMLingua-2</a> middleware. It doesn't chop words blindly: BERT bidirectional attention sees both sides of context, pinpoints core semantics (entities, numbers, key verbs), and strips redundant noise. <b>Compress 5–20×; Prefill that took 1 second drops to 50 ms</b>—high-concurrency throughput jumps a full order of magnitude.</p>
     <div class="fig-wrap">
       <img src="images/cost/double-distill.webp" alt="Double distillation: only a high-density Prompt earns high-quality Attention" loading="lazy">
       <div class="fig-cap">Dynamic Few-Shot + document compression: two funnels filter noise. Only a high-density Prompt earns high-quality Attention. (Figure: from the author's original share deck)</div>
@@ -157,7 +157,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>Run long docs through LLMLingua-2 before inference:</b> high-density Prompt for high-quality Attention—don't lose users while they wait.</p></div>
     </div>
     <p class="src-note">
-      <b>Source:</b> Adapted from the author's internal team share “AI Token Cost Engineering Strategy” hands-on section “02｜Semantic Layer.” For lost-in-the-middle, see Chroma's <a href="https://research.trychroma.com/context-rot" target="_blank" rel="noopener">Context Rot research</a>; compression benchmarks at <a href="https://llmlingua.com/" target="_blank" rel="noopener">LLMLingua</a>. Review context-window basics in <a href="5-1.html">Harness Core · Context Window</a>.
+      <b>Source:</b> Adapted from the author's internal team share “AI Token Cost Engineering Strategy” hands-on section “02｜Semantic Layer.” For lost-in-the-middle, see Chroma's <a rel="noopener" data-source-reference="true">Context Rot research</a>; compression benchmarks at <a rel="noopener" data-source-reference="true">LLMLingua</a>. Review context-window basics in <a href="5-1.html">Harness Core · Context Window</a>.
     </p>
   </section>
 

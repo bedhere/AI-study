@@ -121,7 +121,8 @@ test('entry resources are local and present, while existing AITI and legacy rout
   for (const match of page.matchAll(/(?:src|href)="([^"#]+)"/g)) {
     const value = match[1];
     if (/^https?:/.test(value)) continue;
-    assert.ok(fs.existsSync(path.join(root, value.split('?')[0])), value);
+    const resource = value.split('?')[0];
+    assert.ok(fs.existsSync(resource.startsWith('/') ? path.join('public', resource) : path.join(root, resource)), value);
   }
   assert.match(page, /src="personality-data\.js/);
   assert.match(page, /src="personality\.js/);

@@ -83,7 +83,7 @@
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -136,7 +136,7 @@
   <section class="reveal paywall-locked">
     <div class="sec-label">전략 2 · 긴 문서는 압축한 뒤 먹이세요</div>
     <p class="desc">금융 리서치, 회의록 같은 문서는 「맞는 잡담」으로 가득해요: 면책 조항, 반복 배경, 구어체 군소리. 그대로 AI에 넣으면, 박사생에게 스팸 메일을 읽히며 큰돈을 쓰는 셈이에요.</p>
-    <p class="desc" style="margin-top:10px">해법은 RAG 검색 뒤, 추론 전에 <a href="https://llmlingua.com/" target="_blank" rel="noopener">LLMLingua-2</a> 미들웨어를 끼우는 거예요. 단어를 막 자르지 않아요: BERT 양방향 어텐션으로 앞뒤를 동시에 보고, 핵심 의미(개체, 수치, 핵심 동사)를 정확히 집어 내고 잉여 노이즈를 걷어내요. <b>5–20배 압축, Prefill 1초가 50ms로</b>—고동시성 시나리오 처리량이 한 단계 올라가요.</p>
+    <p class="desc" style="margin-top:10px">해법은 RAG 검색 뒤, 추론 전에 <a rel="noopener" data-source-reference="true">LLMLingua-2</a> 미들웨어를 끼우는 거예요. 단어를 막 자르지 않아요: BERT 양방향 어텐션으로 앞뒤를 동시에 보고, 핵심 의미(개체, 수치, 핵심 동사)를 정확히 집어 내고 잉여 노이즈를 걷어내요. <b>5–20배 압축, Prefill 1초가 50ms로</b>—고동시성 시나리오 처리량이 한 단계 올라가요.</p>
     <div class="fig-wrap">
       <img src="images/cost/double-distill.webp" alt="이중 증류: 고밀도 Prompt만이 고품질 Attention을 사요" loading="lazy">
       <div class="fig-cap">동적 Few-Shot + 문서 압축, 두 단계 깔때기로 노이즈를 걸러요: 고밀도 Prompt만이 고품질 Attention을 사요. (도: 저자 공유 원본)</div>
@@ -157,7 +157,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>긴 문서는 LLMLingua-2를 거친 뒤 추론:</b> 고밀도 Prompt로 고품질 Attention—사용자를 기다림 속에 잃지 마세요.</p></div>
     </div>
     <p class="src-note">
-      <b>출처:</b> 저자 팀 내부 공유 《AI Token 비용 엔지니어링 전략 공유》 실전편 「02｜시맨틱 계층」에서 정리했어요. 중간 소실은 Chroma의 <a href="https://research.trychroma.com/context-rot" target="_blank" rel="noopener">컨텍스트 부패(Context Rot) 연구</a>로 이어 읽을 수 있고, 압축 벤치마크는 <a href="https://llmlingua.com/" target="_blank" rel="noopener">LLMLingua</a>를 보세요. 컨텍스트 윈도우 원리는 <a href="5-1.html">Harness 핵심 · 컨텍스트 윈도우</a>에서 복습하세요.
+      <b>출처:</b> 저자 팀 내부 공유 《AI Token 비용 엔지니어링 전략 공유》 실전편 「02｜시맨틱 계층」에서 정리했어요. 중간 소실은 Chroma의 <a rel="noopener" data-source-reference="true">컨텍스트 부패(Context Rot) 연구</a>로 이어 읽을 수 있고, 압축 벤치마크는 <a rel="noopener" data-source-reference="true">LLMLingua</a>를 보세요. 컨텍스트 윈도우 원리는 <a href="5-1.html">Harness 핵심 · 컨텍스트 윈도우</a>에서 복습하세요.
     </p>
   </section>
 

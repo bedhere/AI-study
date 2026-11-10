@@ -113,7 +113,7 @@
 </style>
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="디버깅 철칙：먼저 Log, 그 다음 수정"><meta property="og:description" content="AI가 오류를 만나면 첫 번째 반응은 원인을 추측하고 고쳐보는 것이고, 안 되면 다른 추측을 합니다. 이 절은 가장 핵심적인 규칙을 세웁니다：추측성 수정 금지. 아래 두 가지 데모로 두 가지 버그 수정 경로를 직접 비교해 보세요."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -239,7 +239,7 @@
     <div class="l-callout" style="background:var(--vibe-soft);border-color:rgba(13,148,136,.3)">
       <p><b style="color:var(--vibe-deep)">증거 먼저.</b>Log를 추가하는 2분이 세 라운드의 추측성 재작업과 숨겨진 근본 원인을 방지합니다. 수정 후 <code>⚡ 영향 범위：XXX, YYY, ZZZ</code> 형식으로 영향 범위를 선언하고, 납품 전에 실제 인터페이스와 단위 테스트 두 가지 기준을 통과하세요.</p>
     </div>
-    <div class="l-card src-note">출처：이 절의 내용은 오픈소스 저장소 <a href="https://github.com/itshen/xs_vibe_rules" target="_blank" rel="noopener">itshen/xs_vibe_rules</a>의 rule-opensource.mdc 제8장 「디버깅 및 로깅 표준」에서 정리했습니다.</div>
+    <div class="l-card src-note">출처：이 절의 내용은 오픈소스 저장소 <a rel="noopener" data-source-reference="true">itshen/xs_vibe_rules</a>의 rule-opensource.mdc 제8장 「디버깅 및 로깅 표준」에서 정리했습니다.</div>
   </section>
 </article>
 <script src="i18n.js?v=20260903a"></script>

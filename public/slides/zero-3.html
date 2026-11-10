@@ -143,17 +143,19 @@
 <!-- SEO End -->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261110a" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">零基础入门 · AI 是个什么东西</div>
-    <h1>它会一本正经地胡说八道</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>它会一本正经地胡说八道</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>它会一本正经地胡说八道</h1>
     <p class="subtitle">前两课你知道了：它在接话茬，而且凭的是「消化后的记忆」。现在到了最关键的一课——<b>接得像，不等于接得对</b>。下面三段 AI 的回答里，每段都藏着一句编造的话。来，亲手抓一次。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>三个找茬游戏：亲手从 AI 的回答里抓出编造的句子，再带走三个实用的小习惯</p></aside><!--seo:end-->  <div class="sec-label">找茬游戏 · 每段回答里有一句是编的，点出来</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>三个找茬游戏：亲手从 AI 的回答里抓出编造的句子，再带走三个实用的小习惯</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="zero-3.html"><noscript><img src="assets/comics/verify-ai.webp" width="2172" height="724" style="width:100%;height:auto" alt="方片小虎四格知识漫画"><p>四格漫画概括本节知识；详细解释与练习见下方正文。</p></noscript></section>  <div class="sec-label">找茬游戏 · 每段回答里有一句是编的，点出来</div>
 
   <div id="huntArea"></div>
 
@@ -172,14 +174,14 @@
       </div>
       <div class="likely-opt honest">
         <span class="opt-tag">很别扭 · 很难被选中</span>
-        <span>「呃，这个我记不太清，不敢乱说。」——在它读过的几亿本书里，作者们<b>很少这样写</b>，所以这种接法天生就「不像人话」，很难被选中。</span>
+        <span>「这个我不确定，需要核对来源。」——模型可以这样回答，但是否表达不确定会受到训练、任务与提示方式影响，不能保证每次都可靠。</span>
       </div>
     </div>
-    <div class="likely-note">看明白了吗？它挑的是「<b>哪句更像会出现在这里的话</b>」，不是「哪句是真的」。人类的书面语里，流畅自信的陈述远多于「我不知道」，于是<b>顺口的编造，天然赢过诚实的犹豫</b>。这不是它学坏了，是接话茬这个机制的副作用——行话叫「幻觉」。</div>
+    <div class="likely-note">这里用「接话茬」帮助理解：<b>生成流畅文字，不等于逐项核实事实</b>。训练目标、评测方式、可用信息等因素都可能影响模型是否猜测或承认不确定。看似可信、实际不准确的生成内容，常被称为「幻觉」。</div>
   </div>
 
   <div class="l-callout" style="margin-top:18px;">
-    最关键的一点：<b>它不知道自己不知道</b>。人说谎时心里有数，它没有——在它那里，说对和说错是同一个动作：挑一个像的接上去。所以它也没办法主动提醒你「这句我是编的」。
+    最关键的一点：<b>不要把模型的自信或自述当成核验依据</b>。它可以表达「我不确定」，也可能自信地回答错误。重要结论仍需查阅原始资料、交叉验证，并由使用者判断。
   </div>
 
   <div class="sec-label">三个小习惯 · 今天就能用上</div>
@@ -211,9 +213,9 @@
   <div class="takeaway-box">
     <h3>✅ 这一课想和你分享的</h3>
     <ul>
-      <li><b>接得像 ≠ 接得对</b>：顺口的编造，天然赢过诚实的犹豫</li>
+      <li><b>接得像 ≠ 接得对</b>：流畅生成不能替代事实核验</li>
       <li><b>它胡说时不心虚</b>：语气、流畅度和说真话完全一样，凭感觉分不出来</li>
-      <li><b>它不知道自己不知道</b>：它也没法主动告诉你「这句是编的」</li>
+      <li><b>可以表达不确定，也可能自信地出错</b>：需要独立检查重要事实</li>
       <li><b>三个小习惯</b>：事实顺手核实、请它给出处、重要的事多找一个信息源</li>
     </ul>
   </div>

@@ -101,7 +101,7 @@ code{color:var(--vibe-deep);background:rgba(13,148,136,.08)}
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="样式收敛：一个按钮不要八套 CSS"><meta property="og:description" content="让 AI 连着做十个功能，你会攒出八个长得差不多的按钮类。它不是不会复用，是每轮对话都不知道你已经有什么。这一节讲样式为什么会增殖、怎么收干净，以及哪些差异该留着。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -235,7 +235,7 @@ code{color:var(--vibe-deep);background:rgba(13,148,136,.08)}
     <div class="vibe-callout">
       <p><b>AI 不会复用你没告诉它存在的东西。</b>样式增殖的根因是它每轮都失忆，所以解法有两半：已经乱的按控件分批收进 token，往后的用一条规则挡住——先搜再写。顶上那份 Skill 就是这两半的可执行版本，复制给你的 Agent，它会先给你一张欠债清单，而不是直接开始改。</p>
     </div>
-    <p class="src-note">配套规则可参考仓库 <a href="https://github.com/itshen/xs_vibe_rules">itshen/xs_vibe_rules</a> 中「新功能先查重」一条，本节把它从功能层面延伸到样式层面。</p>
+    <p class="src-note">配套规则可参考仓库 <a data-source-reference="true">itshen/xs_vibe_rules</a> 中「新功能先查重」一条，本节把它从功能层面延伸到样式层面。</p>
   </section>
 
 </article>

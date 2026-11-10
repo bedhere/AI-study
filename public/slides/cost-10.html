@@ -83,7 +83,7 @@
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -136,7 +136,7 @@
   <section class="reveal paywall-locked">
     <div class="sec-label">策略二 · 长文档先压缩再喂</div>
     <p class="desc">金融研报、会议纪要这类文档充满「正确的废话」：免责声明、重复的背景介绍、口语化垫话。直接喂给 AI，等于花大成本请博士生帮你读垃圾邮件。</p>
-    <p class="desc" style="margin-top:10px">解法是在 RAG 检索后、送去推理之前，插一层 <a href="https://llmlingua.com/" target="_blank" rel="noopener">LLMLingua-2</a> 中间件。它不是粗暴砍词：用 BERT 的双向注意力同时看到上下文前后，精准识别核心语义（实体、数据、关键动词），剔掉冗余噪音。<b>压缩 5–20 倍，原本 1 秒的预填充压完 50 毫秒搞定</b>——高并发场景吞吐量直接上一个量级。</p>
+    <p class="desc" style="margin-top:10px">解法是在 RAG 检索后、送去推理之前，插一层 <a rel="noopener" data-source-reference="true">LLMLingua-2</a> 中间件。它不是粗暴砍词：用 BERT 的双向注意力同时看到上下文前后，精准识别核心语义（实体、数据、关键动词），剔掉冗余噪音。<b>压缩 5–20 倍，原本 1 秒的预填充压完 50 毫秒搞定</b>——高并发场景吞吐量直接上一个量级。</p>
     <div class="fig-wrap">
       <img src="images/cost/double-distill.webp" alt="双重蒸馏：高密度的 Prompt 才能带来高质量的 Attention" loading="lazy">
       <div class="fig-cap">动态 Few-Shot + 文档压缩，两道漏斗滤掉噪音：高密度的 Prompt 才能换来高质量的 Attention。（图：作者分享原稿）</div>
@@ -157,7 +157,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>长文档先过 LLMLingua-2 再推理：</b>高密度 Prompt 换高质量 Attention，别让用户在等待里流失。</p></div>
     </div>
     <p class="src-note">
-      <b>内容来源：</b>整理自作者团队内部分享《AI Token 降本增效策略分享》实战篇「02｜语义层」。中段迷失可延伸阅读 Chroma 的<a href="https://research.trychroma.com/context-rot" target="_blank" rel="noopener">上下文腐烂（Context Rot）研究</a>；压缩基准见 <a href="https://llmlingua.com/" target="_blank" rel="noopener">LLMLingua</a>。上下文窗口原理复习<a href="5-1.html">Harness 核心 · 上下文窗口</a>。
+      <b>内容来源：</b>整理自作者团队内部分享《AI Token 降本增效策略分享》实战篇「02｜语义层」。中段迷失可延伸阅读 Chroma 的<a rel="noopener" data-source-reference="true">上下文腐烂（Context Rot）研究</a>；压缩基准见 <a rel="noopener" data-source-reference="true">LLMLingua</a>。上下文窗口原理复习<a href="5-1.html">Harness 核心 · 上下文窗口</a>。
     </p>
   </section>
 

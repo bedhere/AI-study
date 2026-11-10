@@ -71,7 +71,7 @@
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -84,7 +84,7 @@
     <div class="chips"><span class="chip">어휘 세금</span><span class="chip">YAML</span><span class="chip">CSV</span><span class="chip">Minified JSON</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>굵은 **만으로 Token 8.5%를 먹어요; 복잡한 객체는 YAML, 평평한 리스트는 CSV, 백엔드 출력은 Minified JSON 강제</p></aside><!--seo:end-->  <section class="reveal">
     <div class="sec-label">이 세금은 얼마나 무거울까: 13%가 형식</div>
-    <p class="desc">저자가 Token 시각화 분석 도구(<a href="https://yusuan.ai/analyzer" target="_blank" rel="noopener">yusuan.ai/analyzer</a>)를 만들어 축약판 Lyra 프롬프트를 넣었더니: <b>굵게 쓰는 ** 기호만으로 Token의 8.5%를 먹었어요</b>. 목록·제목 기호·JSON 들여쓰기와 줄바꿈까지 합치면 이 프롬프트의 13%가 형식 내용이에요. 일반 제품 Prompt에서는 장식성 Token이 보통 10%–20%예요.</p>
+    <p class="desc">저자가 Token 시각화 분석 도구(<a rel="noopener" data-source-reference="true">yusuan.ai/analyzer</a>)를 만들어 축약판 Lyra 프롬프트를 넣었더니: <b>굵게 쓰는 ** 기호만으로 Token의 8.5%를 먹었어요</b>. 목록·제목 기호·JSON 들여쓰기와 줄바꿈까지 합치면 이 프롬프트의 13%가 형식 내용이에요. 일반 제품 Prompt에서는 장식성 Token이 보통 10%–20%예요.</p>
     <div class="fig-wrap">
       <img src="images/cost/analyzer.webp" alt="Token 시각화 분석: ** 기호 33회, 비중 4.16%" loading="lazy">
       <div class="fig-cap">Token 시각화 분석(yusuan.ai/analyzer): 한 프롬프트에서 **가 33번 나오고, 이 기호만 4.16%예요. (그림: 저자 공유 원본)</div>
@@ -114,7 +114,7 @@
 
   <section class="reveal paywall-locked">
     <div class="sec-label">경험 세 가지</div>
-    <p class="desc"><b>1. 복잡한 객체는 YAML(또는 TOON), JSON 말고.</b> JSON의 신호 대 잡음비는 너무 낮아요: 키마다 큰따옴표, 중첩마다 중괄호 닫기—그리고 그 기호들이 종종 독립 과금돼요. YAML은 들여쓰기로 닫기 기호를 대체하고, 콜론으로 「따옴표+콜론」을 대체해 Token을 보통 10%–15%, 많으면 40%까지 아껴요. <a href="https://github.com/toon-format/toon" target="_blank" rel="noopener">TOON</a>은 Token 절약용 새 포맷이지만 신생이라 LLM 지원이 불안정할 수 있어요—그래서 더 안전한 조합은 <b>YAML + CSV</b>예요.</p>
+    <p class="desc"><b>1. 복잡한 객체는 YAML(또는 TOON), JSON 말고.</b> JSON의 신호 대 잡음비는 너무 낮아요: 키마다 큰따옴표, 중첩마다 중괄호 닫기—그리고 그 기호들이 종종 독립 과금돼요. YAML은 들여쓰기로 닫기 기호를 대체하고, 콜론으로 「따옴표+콜론」을 대체해 Token을 보통 10%–15%, 많으면 40%까지 아껴요. <a rel="noopener" data-source-reference="true">TOON</a>은 Token 절약용 새 포맷이지만 신생이라 LLM 지원이 불안정할 수 있어요—그래서 더 안전한 조합은 <b>YAML + CSV</b>예요.</p>
     <p class="desc" style="margin-top:12px"><b>2. 평평한 리스트는 CSV, JSON 배열 말고.</b> 헤더 있는 표가 반복 키 이름을 전부 없애요. 긴 리스트 장면에서 30%–60%를 깎고, 같은 컨텍스트 윈도우에 더 많은 데이터를 넣을 수 있어요.</p>
     <div class="fig-wrap">
       <img src="images/cost/csv-vs-json.webp" alt="JSON 배열과 CSV 표 비교" loading="lazy">
@@ -134,7 +134,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>출력이 입력보다 비싸니,</b> 출력 형식을 단속하면 절약과 속도가 함께 와요(12절에 수법 세 가지 더).</p></div>
     </div>
     <p class="src-note">
-      <b>출처:</b> 저자 팀 내부 공유 《AI Token 비용 엔지니어링 전략 공유》 실전편 「01｜문법 계층」에서 정리했어요. 도구: <a href="https://yusuan.ai/analyzer" target="_blank" rel="noopener">yusuan.ai/analyzer</a>; YAML 규격은 <a href="https://yaml.org" target="_blank" rel="noopener">yaml.org</a>.
+      <b>출처:</b> 저자 팀 내부 공유 《AI Token 비용 엔지니어링 전략 공유》 실전편 「01｜문법 계층」에서 정리했어요. 도구: <a rel="noopener" data-source-reference="true">yusuan.ai/analyzer</a>; YAML 규격은 <a rel="noopener" data-source-reference="true">yaml.org</a>.
     </p>
   </section>
 

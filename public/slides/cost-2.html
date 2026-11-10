@@ -86,7 +86,7 @@
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -141,7 +141,7 @@
 
   <section class="reveal">
     <div class="sec-label">交互演示 · 同一句话的中英文账单</div>
-    <p class="desc">点选一句话，对比它的中英文版本各要消耗多少 Token（按典型比率估算）。想看精确切分，去 <a href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener">OpenAI Tokenizer</a> 亲手试。</p>
+    <p class="desc">点选一句话，对比它的中英文版本各要消耗多少 Token（按典型比率估算）。想看精确切分，去 <a rel="noopener" data-source-reference="true">OpenAI Tokenizer</a> 亲手试。</p>
     <div class="tk-demo" id="tkDemo">
       <div class="tk-row" id="tkRow"></div>
       <div class="tk-stage">
@@ -173,7 +173,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>词表决定压缩率。</b>cl100k_base 十万词表 + 空格合并优化，是 GPT-4 代码效率高的直接原因。选模型时 Tokenizer 效率也是成本参数。</p></div>
     </div>
     <p class="src-note">
-      <b>内容来源：</b>整理自作者团队内部分享《AI Token 降本增效策略分享》第一部分「Token 的构成」。BPE 细节可参考 <a href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener">OpenAI Tokenizer</a> 与 tiktoken 开源库。想复习分词和词表的底层原理，回看<a href="1-2-vocab.html">大模型原理 · 词表与训练</a>。
+      <b>内容来源：</b>整理自作者团队内部分享《AI Token 降本增效策略分享》第一部分「Token 的构成」。BPE 细节可参考 <a rel="noopener" data-source-reference="true">OpenAI Tokenizer</a> 与 tiktoken 开源库。想复习分词和词表的底层原理，回看<a href="1-2-vocab.html">大模型原理 · 词表与训练</a>。
     </p>
   </section>
 

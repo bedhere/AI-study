@@ -106,7 +106,7 @@ code{color:var(--vibe-deep);background:rgba(13,148,136,.08)}
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="為什麼要給 AI 立規矩"><meta property="og:description" content="Vibe Coding 指靠自然語言讓 AI 直接產出程式碼的開發方式。它的問題出在質素：沒有規矩的 AI 會返工、漏改、悄悄刪程式碼、留下永久技術債。這一節先看事故長什麼樣，再看約束怎麼注入才最穩。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -191,7 +191,7 @@ alwaysApply: true   # 所有對話自動生效
         <h3><span>itshen/xs_vibe_rules</span> · 本專題的開源倉庫</h3>
         <p>整套規則原文全部開源（MIT License）。Fork 一份，放進你項目的 <code>.cursor/rules/</code> 目錄，再按自己的技術棧刪改，就是你的第一版 AI 協作規範。</p>
       </div>
-      <a class="repo-btn" href="https://github.com/itshen/xs_vibe_rules" target="_blank" rel="noopener">去 GitHub Fork</a>
+      <a class="repo-btn" rel="noopener" data-source-reference="true">去 GitHub Fork</a>
     </div>
   </section>
 
@@ -200,7 +200,7 @@ alwaysApply: true   # 所有對話自動生效
     <div class="vibe-callout">
       <p style="line-height:1.8"><b>規則的價值不在於多，每條都解決一個真實問題。</b>AI 每反覆犯一次錯，就把它變成一條規則，這是整個專題的底層方法。約束靠不靠得住，看的是注入機制：寫十遍「務必」，都比不過一個每輪自動載入的 Rule 文件。</p>
     </div>
-    <p class="src-note">素材來源：本專題基於作者開源倉庫 <a href="https://github.com/itshen/xs_vibe_rules">itshen/xs_vibe_rules</a>，內容為多個真實項目沉澱出的 Cursor Rules 與設計思考。</p>
+    <p class="src-note">素材來源：本專題基於作者開源倉庫 <a data-source-reference="true">itshen/xs_vibe_rules</a>，內容為多個真實項目沉澱出的 Cursor Rules 與設計思考。</p>
   </section>
 
 </article>

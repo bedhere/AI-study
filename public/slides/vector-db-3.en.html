@@ -31,7 +31,7 @@
 
     <style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:170px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(#000 20%,transparent);mask-image:linear-gradient(#000 20%,transparent)}</style>
 
-    <script src="/slides/external-platform-policy.js"></script>
+    <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
   <body>
@@ -41,7 +41,7 @@
         <h1>Hands-on Milvus</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Hands-on Milvus</strong><p>AI Academy · Fangpian learning</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
         <p class="subtitle">Use one collection name and real text embeddings from insert through delete. This example assumes local Milvus is already listening on port 19530.</p>
       </header>
-      <div class="vdb-note vdb-ok">Start the service with the <a href="https://milvus.io/docs/install_standalone-docker.md" target="_blank" rel="noopener">official Docker Standalone guide</a>, then install <code>pymilvus</code> and <code>sentence-transformers</code>. The dimension is derived from actual model output—no random vectors posing as semantic search.</div>
+      <div class="vdb-note vdb-ok">Start the service with the <a rel="noopener" data-source-reference="true">official Docker Standalone guide</a>, then install <code>pymilvus</code> and <code>sentence-transformers</code>. The dimension is derived from actual model output—no random vectors posing as semantic search.</div>
       <div class="sec-label">Connect, define, and batch insert</div>
       <pre class="vdb-code paywall-locked xa-peek"><span class="k">from</span> pymilvus <span class="k">import</span> MilvusClient, DataType
 <span class="k">from</span> sentence_transformers <span class="k">import</span> SentenceTransformer

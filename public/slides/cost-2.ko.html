@@ -86,7 +86,7 @@
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -141,7 +141,7 @@
 
   <section class="reveal">
     <div class="sec-label">인터랙티브 데모 · 같은 문장의 중·영 청구서</div>
-    <p class="desc">문장 하나를 골라 중·영 버전이 각각 몇 Token인지 비교해 보세요(전형 비율로 추정). 정확한 절단이 궁금하면 <a href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener">OpenAI Tokenizer</a>에서 직접 시험하세요.</p>
+    <p class="desc">문장 하나를 골라 중·영 버전이 각각 몇 Token인지 비교해 보세요(전형 비율로 추정). 정확한 절단이 궁금하면 <a rel="noopener" data-source-reference="true">OpenAI Tokenizer</a>에서 직접 시험하세요.</p>
     <div class="tk-demo" id="tkDemo">
       <div class="tk-row" id="tkRow"></div>
       <div class="tk-stage">
@@ -173,7 +173,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>어휘가 압축률을 정합니다.</b> cl100k_base 10만 어휘 + 공백 병합 최적화가 GPT-4 코드 효율의 직접 원인이에요. 모델 고를 때 Tokenizer 효율도 비용 파라미터입니다.</p></div>
     </div>
     <p class="src-note">
-      <b>출처:</b> 저자 팀 내부 공유 《AI Token 비용 엔지니어링 전략 공유》 제1부 「Token의 구성」에서 정리. BPE 세부사항은 <a href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener">OpenAI Tokenizer</a>와 tiktoken 오픈소스 라이브러리를 참고하세요. 분절과 어휘 사전의 하부 원리를 복습하려면 <a href="1-2-vocab.html">대규모 언어 모델 원리 · 어휘 사전과 학습</a>으로 돌아가세요.
+      <b>출처:</b> 저자 팀 내부 공유 《AI Token 비용 엔지니어링 전략 공유》 제1부 「Token의 구성」에서 정리. BPE 세부사항은 <a rel="noopener" data-source-reference="true">OpenAI Tokenizer</a>와 tiktoken 오픈소스 라이브러리를 참고하세요. 분절과 어휘 사전의 하부 원리를 복습하려면 <a href="1-2-vocab.html">대규모 언어 모델 원리 · 어휘 사전과 학습</a>으로 돌아가세요.
     </p>
   </section>
 

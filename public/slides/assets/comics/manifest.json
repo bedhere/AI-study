@@ -1,0 +1,23 @@
+{
+  "generator": "built-in image_gen",
+  "assets": [
+    {
+      "slug": "personal-explanation",
+      "sourceSha256": "31048d4dacc73bc98432c29d438a56022422eeacd983eff311a9858002579dc7",
+      "width": 2172,
+      "height": 724,
+      "panelCount": 4,
+      "panelBytes": 205074,
+      "fullBytes": 204240
+    },
+    {
+      "slug": "verify-ai",
+      "sourceSha256": "2d49eeff5ae7a1803953b306bb387595b0f09ef66f22476fac60275113511a29",
+      "width": 2172,
+      "height": 724,
+      "panelCount": 4,
+      "panelBytes": 194428,
+      "fullBytes": 192698
+    }
+  ]
+}

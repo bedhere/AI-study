@@ -111,7 +111,7 @@ pre code{background:none;padding:0;color:#d9f2ec}
 </style>
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="Three Safety Gates for Destructive Operations"><meta property="og:description" content="During a release you think you only changed feature A, but the actual diff contains a temporary change from last week's debugging of feature B, and half-finished code makes it into production. Irreversible operations like database migrations, config changes, and deployments must have gates set before execution. Both exercises below are interactive."><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -233,7 +233,7 @@ cp database.db backups/database_$(date +%Y%m%d_%H%M%S).db</code></pre>
   </section>
 
   <div class="l-card reveal paywall-locked" style="margin-top:28px">
-    <p style="font-size:12.5px;color:var(--sub);line-height:1.8;margin:0">Source material: open-source repository <a href="https://github.com/itshen/xs_vibe_rules">itshen/xs_vibe_rules</a>, <code>rule-opensource.mdc</code> Chapter 6, sections 6.4/6.5 "Database Backup & Rollback Plans," and Chapter 10 "Deployment & Environment."</p>
+    <p style="font-size:12.5px;color:var(--sub);line-height:1.8;margin:0">Source material: open-source repository <a data-source-reference="true">itshen/xs_vibe_rules</a>, <code>rule-opensource.mdc</code> Chapter 6, sections 6.4/6.5 "Database Backup & Rollback Plans," and Chapter 10 "Deployment & Environment."</p>
   </div>
 
 </article>

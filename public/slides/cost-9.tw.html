@@ -71,7 +71,7 @@
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -84,7 +84,7 @@
     <div class="chips"><span class="chip">詞法稅</span><span class="chip">YAML</span><span class="chip">CSV</span><span class="chip">Minified JSON</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>加粗的 ** 就吃掉 8.5% Token；複雜物件用 YAML、扁平列表用 CSV、後臺輸出強制 Minified JSON</p></aside><!--seo:end-->  <section class="reveal">
     <div class="sec-label">這筆稅有多重：13% 都是格式</div>
-    <p class="desc">作者做了一個 Token 視覺化分析工具（<a href="https://yusuan.ai/analyzer" target="_blank" rel="noopener">yusuan.ai/analyzer</a>），把一段精簡版 Lyra 提示詞丟進去分析：<b>光是加粗用的 ** 符號，就吃掉了 8.5% 的 Token</b>。算上列表、標題符號、JSON 縮排換行，這份提示詞 13% 都是格式性內容。一般產品的 Prompt 裡，10%–20% 都是這種裝飾性 Token。</p>
+    <p class="desc">作者做了一個 Token 視覺化分析工具（<a rel="noopener" data-source-reference="true">yusuan.ai/analyzer</a>），把一段精簡版 Lyra 提示詞丟進去分析：<b>光是加粗用的 ** 符號，就吃掉了 8.5% 的 Token</b>。算上列表、標題符號、JSON 縮排換行，這份提示詞 13% 都是格式性內容。一般產品的 Prompt 裡，10%–20% 都是這種裝飾性 Token。</p>
     <div class="fig-wrap">
       <img src="images/cost/analyzer.webp" alt="Token 視覺化分析：** 符號出現 33 次佔比 4.16%" loading="lazy">
       <div class="fig-cap">Token 視覺化分析（yusuan.ai/analyzer）：一段提示詞裡 ** 出現 33 次，僅這一個符號就佔 4.16%。（圖：作者分享原稿）</div>
@@ -114,7 +114,7 @@
 
   <section class="reveal paywall-locked">
     <div class="sec-label">三條經驗</div>
-    <p class="desc"><b>1、複雜物件用 YAML（或 TOON），別用 JSON。</b>JSON 的訊雜比太低：每個 Key 雙引號包裹、每層巢狀花括號閉合，而這些符號往往獨立計費。YAML 用縮排代替閉合符號、冒號代替「引號+冒號」，Token 通常省 10%–15%，多的能到 40%。<a href="https://github.com/toon-format/toon" target="_blank" rel="noopener">TOON</a> 是專為省 Token 設計的新格式，但作為新格式 LLM 不一定支援得好——所以更穩的組合是 <b>YAML + CSV</b>。</p>
+    <p class="desc"><b>1、複雜物件用 YAML（或 TOON），別用 JSON。</b>JSON 的訊雜比太低：每個 Key 雙引號包裹、每層巢狀花括號閉合，而這些符號往往獨立計費。YAML 用縮排代替閉合符號、冒號代替「引號+冒號」，Token 通常省 10%–15%，多的能到 40%。<a rel="noopener" data-source-reference="true">TOON</a> 是專為省 Token 設計的新格式，但作為新格式 LLM 不一定支援得好——所以更穩的組合是 <b>YAML + CSV</b>。</p>
     <p class="desc" style="margin-top:12px"><b>2、扁平列表用 CSV，別用 JSON 陣列。</b>帶表頭的表格把重複鍵名全幹掉，長列表場景砍 30%–60%，同樣的上下文視窗還能塞更多資料。</p>
     <div class="fig-wrap">
       <img src="images/cost/csv-vs-json.webp" alt="JSON 陣列與 CSV 表格的對比" loading="lazy">
@@ -134,7 +134,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>輸出比輸入貴，</b>管住輸出格式既省錢又提速（第 12 節還有三招）。</p></div>
     </div>
     <p class="src-note">
-      <b>內容來源：</b>整理自作者團隊內部分享《AI Token 降本增效策略分享》實戰篇「01｜語法層」。工具：<a href="https://yusuan.ai/analyzer" target="_blank" rel="noopener">yusuan.ai/analyzer</a>；YAML 規範見 <a href="https://yaml.org" target="_blank" rel="noopener">yaml.org</a>。
+      <b>內容來源：</b>整理自作者團隊內部分享《AI Token 降本增效策略分享》實戰篇「01｜語法層」。工具：<a rel="noopener" data-source-reference="true">yusuan.ai/analyzer</a>；YAML 規範見 <a rel="noopener" data-source-reference="true">yaml.org</a>。
     </p>
   </section>
 

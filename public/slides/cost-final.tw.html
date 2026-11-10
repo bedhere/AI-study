@@ -79,7 +79,7 @@
 </style>
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
-  <script src="/slides/external-platform-policy.js"></script>
+  <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
@@ -118,83 +118,83 @@
     <p class="desc">原分享附帶了一份按主題分類的閱讀材料，從上下文工程、推理框架核心到經濟學模型，覆蓋本專題所有關鍵論斷的原始出處。按需展開。</p>
     <div class="rd">
       <details><summary>一、閉源生態的「上下文工程」與顯存優化</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://medium.com/@pur4v/why-manus-agents-dont-break-the-cache-and-yours-probably-do-0654543fe834" target="_blank" rel="noopener">Why Manus Agents Don't Break the Cache</a></div><div class="r">拆解 Manus 如何用 "Mask, Don't Remove" 策略把 KV Cache 命中率從 20% 提到 95%——理解閉源模型為何在 Agent 場景成本更低的核心文獻。</div></div>
-        <div class="it"><div class="t"><a href="https://llm-d.ai/blog/kvcache-wins-you-can-see" target="_blank" rel="noopener">KV-Cache Wins You Can See</a></div><div class="r">生產環境中 KV Cache 對成本的決定性影響，以及 vLLM 分散式部署下的快取失效問題與解法。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Why Manus Agents Don't Break the Cache</a></div><div class="r">拆解 Manus 如何用 "Mask, Don't Remove" 策略把 KV Cache 命中率從 20% 提到 95%——理解閉源模型為何在 Agent 場景成本更低的核心文獻。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">KV-Cache Wins You Can See</a></div><div class="r">生產環境中 KV Cache 對成本的決定性影響，以及 vLLM 分散式部署下的快取失效問題與解法。</div></div>
       </div></details>
       <details><summary>二、推理框架核心：vLLM vs SGLang</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://blog.sugiv.fyi/inside-sglang-anatomy-high-performance-structured-llm-inference-system" target="_blank" rel="noopener">Inside SGLang</a></div><div class="r">深度解析 SGLang 的 RadixAttention 如何用樹狀結構管理顯存，以及多輪對話場景為何比 vLLM 更有優勢。</div></div>
-        <div class="it"><div class="t"><a href="https://www.gpu-mart.com/blog/sglang-vs-vllm" target="_blank" rel="noopener">SGLang vs vLLM: Benchmark &amp; Comparison</a></div><div class="r">針對多輪對話和共享前綴場景的基準測試，量化兩種框架在吞吐量和顯存利用率上的差異。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Inside SGLang</a></div><div class="r">深度解析 SGLang 的 RadixAttention 如何用樹狀結構管理顯存，以及多輪對話場景為何比 vLLM 更有優勢。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">SGLang vs vLLM: Benchmark &amp; Comparison</a></div><div class="r">針對多輪對話和共享前綴場景的基準測試，量化兩種框架在吞吐量和顯存利用率上的差異。</div></div>
       </div></details>
       <details><summary>三、硬體底層：華為昇騰 910B vs NVIDIA</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="http://arthurchiao.art/blog/gpu-data-sheets/" target="_blank" rel="noopener">GPU Data Sheets（Arthur Chiao）</a></div><div class="r">極詳盡的 GPU 規格資料庫：H20、H100 與昇騰 910B 的顯存頻寬、互聯速度對比，分析「顯存牆」最權威的資料來源之一。</div></div>
-        <div class="it"><div class="t"><a href="https://cset.georgetown.edu/publication/pushing-the-limits-huaweis-ai-chip-tests-u-s-export-controls/" target="_blank" rel="noopener">Pushing the Limits（CSET 報告）</a></div><div class="r">910B 相比 910A 的架構權衡，解釋理論算力與實際效能的差距。</div></div>
-        <div class="it"><div class="t"><a href="https://docs.vllm.ai/projects/ascend/en/latest/faqs.html" target="_blank" rel="noopener">vLLM on Ascend NPU 文件</a></div><div class="r">MLA 架構模型在 910B 上無法開圖模式的具體原因，運算元適配的軟肋。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">GPU Data Sheets（Arthur Chiao）</a></div><div class="r">極詳盡的 GPU 規格資料庫：H20、H100 與昇騰 910B 的顯存頻寬、互聯速度對比，分析「顯存牆」最權威的資料來源之一。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Pushing the Limits（CSET 報告）</a></div><div class="r">910B 相比 910A 的架構權衡，解釋理論算力與實際效能的差距。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">vLLM on Ascend NPU 文件</a></div><div class="r">MLA 架構模型在 910B 上無法開圖模式的具體原因，運算元適配的軟肋。</div></div>
       </div></details>
       <details><summary>四、理論原理：注意力匯聚</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://www.emergentmind.com/topics/attention-sink-phenomenon" target="_blank" rel="noopener">The Attention Sink Phenomenon</a></div><div class="r">為什麼前幾個 Token 會吸附大量注意力權重——理解 Prefix Caching 為何會固化生成路徑、降低多樣性的理論基礎。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">The Attention Sink Phenomenon</a></div><div class="r">為什麼前幾個 Token 會吸附大量注意力權重——理解 Prefix Caching 為何會固化生成路徑、降低多樣性的理論基礎。</div></div>
       </div></details>
       <details><summary>五、VLM 視覺經濟學與解析度研究</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://arxiv.org/abs/2510.19496" target="_blank" rel="noopener">CARES: Context-Aware Resolution Selector for VLMs</a></div><div class="r">「解析度詛咒」和視覺 Token 冗餘高達 85% 的核心來源：動態解析度選擇如何降本不降精度。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">CARES: Context-Aware Resolution Selector for VLMs</a></div><div class="r">「解析度詛咒」和視覺 Token 冗餘高達 85% 的核心來源：動態解析度選擇如何降本不降精度。</div></div>
         <div class="it"><div class="t">How LLMs See Images and What It Really Costs You（Medium）</div><div class="r">GPT-4o 的 Patching 機制（512×512 圖塊與 85/170 Token 計費），理解 OpenAI 階梯式成本結構。</div></div>
         <div class="it"><div class="t">Google Gemini API Pricing &amp; Tokenization（Google Cloud 官方文件）</div><div class="r">Gemini 的 258 Token 固定費率與 768px 大圖分塊機制，對比 GPT-4o 成本效益的關鍵依據。</div></div>
       </div></details>
       <details><summary>六、Agent 成本陷阱與 SWE-bench 實證</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://scalingintelligence.stanford.edu/blogs/codemonkeys/" target="_blank" rel="noopener">CodeMonkeys: Scaling Test-Time Compute</a></div><div class="r">史丹佛團隊的 SWE-bench 回顧：「單題成本 $4.60」「生成編輯階段佔 60% 成本」的資料出處。</div></div>
-        <div class="it"><div class="t"><a href="https://openreview.net/forum?id=1bUeVB3fov" target="_blank" rel="noopener">Empirical Analysis of Agent Token Consumption on SWE-bench</a></div><div class="r">揭示 Agent 任務「輸入主導」現象（輸入 Token 佔 95%）與「逆縮放」悖論。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">CodeMonkeys: Scaling Test-Time Compute</a></div><div class="r">史丹佛團隊的 SWE-bench 回顧：「單題成本 $4.60」「生成編輯階段佔 60% 成本」的資料出處。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Empirical Analysis of Agent Token Consumption on SWE-bench</a></div><div class="r">揭示 Agent 任務「輸入主導」現象（輸入 Token 佔 95%）與「逆縮放」悖論。</div></div>
       </div></details>
       <details><summary>七、Prompt 壓縮、RAG 與幻覺</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://llmlingua.com/" target="_blank" rel="noopener">LLMLingua: Compressing Prompts</a></div><div class="r">微軟的 Prompt 壓縮經典研究：壓縮率（5x vs 20x）與精度下降的量化基準，為何過度壓縮會丟邏輯。</div></div>
-        <div class="it"><div class="t"><a href="https://medium.com/@chinmayd49/rag-production-optimizations-and-trade-offs-a623e5834e65" target="_blank" rel="noopener">RAG Production Optimizations and Trade-offs</a></div><div class="r">RAG 系統的成本權衡：Re-Ranking 成本可高達向量檢索 5000 倍的經濟學分析。</div></div>
-        <div class="it"><div class="t"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12318031/" target="_blank" rel="noopener">Adversarial Hallucination Evaluation in LLMs</a></div><div class="r">長上下文和對抗性輸入下模型幻覺率的基準測試。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">LLMLingua: Compressing Prompts</a></div><div class="r">微軟的 Prompt 壓縮經典研究：壓縮率（5x vs 20x）與精度下降的量化基準，為何過度壓縮會丟邏輯。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">RAG Production Optimizations and Trade-offs</a></div><div class="r">RAG 系統的成本權衡：Re-Ranking 成本可高達向量檢索 5000 倍的經濟學分析。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Adversarial Hallucination Evaluation in LLMs</a></div><div class="r">長上下文和對抗性輸入下模型幻覺率的基準測試。</div></div>
       </div></details>
       <details><summary>八、核心理論與架構：模型路由</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://arxiv.org/abs/2406.18665" target="_blank" rel="noopener">RouteLLM: Learning to Route LLMs with Preference Data</a></div><div class="r">「模型路由」領域最基礎的研究之一：用偏好資料訓練路由模型，降本的同時保持高效能。</div></div>
-        <div class="it"><div class="t"><a href="https://arxiv.org/abs/2502.15964" target="_blank" rel="noopener">Minions: The Edge-Cloud Collaborative Architecture</a></div><div class="r">「任務分解」讓端側小模型與雲端大模型協同工作，端雲混合架構必讀。</div></div>
-        <div class="it"><div class="t"><a href="https://arxiv.org/abs/2505.15154" target="_blank" rel="noopener">Certainty-based Adaptive Reasoning (CAR)</a></div><div class="r">用困惑度作為動態閾值，自動判斷何時進入「深思」模式——路由觸發機制的解法。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">RouteLLM: Learning to Route LLMs with Preference Data</a></div><div class="r">「模型路由」領域最基礎的研究之一：用偏好資料訓練路由模型，降本的同時保持高效能。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Minions: The Edge-Cloud Collaborative Architecture</a></div><div class="r">「任務分解」讓端側小模型與雲端大模型協同工作，端雲混合架構必讀。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Certainty-based Adaptive Reasoning (CAR)</a></div><div class="r">用困惑度作為動態閾值，自動判斷何時進入「深思」模式——路由觸發機制的解法。</div></div>
       </div></details>
       <details><summary>九、企業級實戰案例</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://www.notion.com/blog/speed-structure-and-smarts-the-notion-ai-way" target="_blank" rel="noopener">Notion AI: Speed, Structure, and Smarts</a></div><div class="r">Notion 如何按任務型別（寫作 vs 問答）把請求路由到不同後端模型——「產品架構即路由」。</div></div>
-        <div class="it"><div class="t"><a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noopener">Klarna AI Assistant Case Study</a></div><div class="r">AI 客服處理 2/3 使用者對話的商業資料：平均處理時長 11 分鐘降到 2 分鐘。</div></div>
-        <div class="it"><div class="t"><a href="https://sourcegraph.com/blog/cody-better-faster-stronger" target="_blank" rel="noopener">Sourcegraph Cody: Context Fetching &amp; Routing</a></div><div class="r">程式碼補全這個延遲最敏感的場景，如何結合本地上下文和雲端模型做毫秒級路由。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Notion AI: Speed, Structure, and Smarts</a></div><div class="r">Notion 如何按任務型別（寫作 vs 問答）把請求路由到不同後端模型——「產品架構即路由」。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Klarna AI Assistant Case Study</a></div><div class="r">AI 客服處理 2/3 使用者對話的商業資料：平均處理時長 11 分鐘降到 2 分鐘。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Sourcegraph Cody: Context Fetching &amp; Routing</a></div><div class="r">程式碼補全這個延遲最敏感的場景，如何結合本地上下文和雲端模型做毫秒級路由。</div></div>
       </div></details>
       <details><summary>十、端側與分類器技術</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://machinelearning.apple.com/research/introducing-apple-foundation-models" target="_blank" rel="noopener">Apple Intelligence Foundation Language Models</a></div><div class="r">端側 3B 模型的設計權衡、4k 上下文限制、LoRA adapter 微調。</div></div>
-        <div class="it"><div class="t"><a href="https://arxiv.org/abs/2402.14905" target="_blank" rel="noopener">MobileLLM: Optimizing Sub-billion Parameter Models</a></div><div class="r">1B 以下參數模型的極限與「Deep and Thin」架構優化。</div></div>
-        <div class="it"><div class="t"><a href="https://blog.vllm.ai/2025/11/19/signal-decision.html" target="_blank" rel="noopener">vLLM Blog: Signal Decision</a></div><div class="r">為什麼有時最簡單的正則匹配和關鍵詞檢測反而是最高效的路由手段。</div></div>
-        <div class="it"><div class="t"><a href="https://moshewasserblat.medium.com/new-results-on-setfit-modernbert-for-text-classification-with-few-shot-training-53c154df7c0e" target="_blank" rel="noopener">SetFit with ModernBERT</a></div><div class="r">用極少樣本訓練高效意圖分類器——低成本路由器的核心元件。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Apple Intelligence Foundation Language Models</a></div><div class="r">端側 3B 模型的設計權衡、4k 上下文限制、LoRA adapter 微調。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">MobileLLM: Optimizing Sub-billion Parameter Models</a></div><div class="r">1B 以下參數模型的極限與「Deep and Thin」架構優化。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">vLLM Blog: Signal Decision</a></div><div class="r">為什麼有時最簡單的正則匹配和關鍵詞檢測反而是最高效的路由手段。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">SetFit with ModernBERT</a></div><div class="r">用極少樣本訓練高效意圖分類器——低成本路由器的核心元件。</div></div>
       </div></details>
       <details><summary>十一、MCP 協議核心與架構哲學</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://modelcontextprotocol.io/specification/2025-03-26" target="_blank" rel="noopener">Model Context Protocol (MCP) 核心規範</a></div><div class="r">MCP「資源-工具-提示」三大原語的官方定義與設計哲學。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Model Context Protocol (MCP) 核心規範</a></div><div class="r">MCP「資源-工具-提示」三大原語的官方定義與設計哲學。</div></div>
         <div class="it"><div class="t">Code Execution vs. Tool Calling（Anthropic 工程部落格）</div><div class="r">「透過程式碼執行減少 98% Token 消耗」的原始研究，兩種模式的詳細對比。</div></div>
       </div></details>
       <details><summary>十二、巨頭博弈與戰略分歧</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://devblogs.microsoft.com/semantic-kernel/integrating-model-context-protocol-tools-with-semantic-kernel-a-step-by-step-guide/" target="_blank" rel="noopener">Semantic Kernel 與 MCP 的整合</a></div><div class="r">微軟如何把 MCP「降級」為 Semantic Kernel 的一個外掛源——「擁抱與擴充」戰略。</div></div>
-        <div class="it"><div class="t"><a href="https://learn.microsoft.com/en-us/graph/mcp-server/overview" target="_blank" rel="noopener">企業級 MCP 伺服器的「只讀」限制</a></div><div class="r">官方文件明確目前僅支援只讀操作：微軟對 AI 代理寫操作的謹慎與責任規避。</div></div>
-        <div class="it"><div class="t"><a href="https://research.aimultiple.com/agents-md/" target="_blank" rel="noopener">AGENTS.md 規範詳解</a></div><div class="r">OpenAI 如何透過定義「AI 的 README」控制智慧體的指令互動層。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Semantic Kernel 與 MCP 的整合</a></div><div class="r">微軟如何把 MCP「降級」為 Semantic Kernel 的一個外掛源——「擁抱與擴充」戰略。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">企業級 MCP 伺服器的「只讀」限制</a></div><div class="r">官方文件明確目前僅支援只讀操作：微軟對 AI 代理寫操作的謹慎與責任規避。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">AGENTS.md 規範詳解</a></div><div class="r">OpenAI 如何透過定義「AI 的 README」控制智慧體的指令互動層。</div></div>
       </div></details>
       <details><summary>十三、安全風險與企業治理</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://www.harmonic.security/blog-posts/mcp-security-risks-and-how-to-regain-control-of-agentic-ai-workflows" target="_blank" rel="noopener">MCP 的陰暗面：企業安全風險</a></div><div class="r">「影子智慧體」、資料洩露，以及 MCP 如何繞過傳統 DLP 系統。</div></div>
-        <div class="it"><div class="t"><a href="https://www.legitsecurity.com/aspm-knowledge-base/model-context-protocol-security" target="_blank" rel="noopener">MCP 安全風險與供應鏈攻擊</a></div><div class="r">拼寫錯誤攻擊（Typosquatting）和惡意 MCP 包的案例分析。</div></div>
-        <div class="it"><div class="t"><a href="https://noma.security/blog/top-five-mcp-security-blindspots-putting-your-organization-at-risk/" target="_blank" rel="noopener">五大 MCP 安全盲點</a></div><div class="r">企業內網穿透風險與缺乏細粒度鑑權（Confused Deputy）的技術細節。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">MCP 的陰暗面：企業安全風險</a></div><div class="r">「影子智慧體」、資料洩露，以及 MCP 如何繞過傳統 DLP 系統。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">MCP 安全風險與供應鏈攻擊</a></div><div class="r">拼寫錯誤攻擊（Typosquatting）和惡意 MCP 包的案例分析。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">五大 MCP 安全盲點</a></div><div class="r">企業內網穿透風險與缺乏細粒度鑑權（Confused Deputy）的技術細節。</div></div>
       </div></details>
       <details><summary>十四、未來架構：智慧體閘道</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://www.solo.io/resources/white-paper/intro-best-practices-to-ai-gateways" target="_blank" rel="noopener">AI 閘道與 Agentic Mesh 的興起</a></div><div class="r">「閘道優先」架構解決 MCP 安全問題的最新實踐，Agent Gateway 與傳統 API Gateway 的區別。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">AI 閘道與 Agentic Mesh 的興起</a></div><div class="r">「閘道優先」架構解決 MCP 安全問題的最新實踐，Agent Gateway 與傳統 API Gateway 的區別。</div></div>
       </div></details>
       <details><summary>十五、核心框架與方法論</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://dspy.ai/learn/optimization/optimizers/" target="_blank" rel="noopener">DSPy 官方文件與優化器指南</a></div><div class="r">BootstrapFewShot、MIPROv2 等優化器的工作原理：用程式設計方式優化 Prompt。</div></div>
-        <div class="it"><div class="t"><a href="https://www.qodo.ai/blog/qodoflow-state-of-the-art-code-generation-for-code-contests/" target="_blank" rel="noopener">AlphaCodium: 從 Prompt Engineering 到 Flow Engineering</a></div><div class="r">程式碼生成任務中迭代式測試與自我修正流程的開創性工作。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">DSPy 官方文件與優化器指南</a></div><div class="r">BootstrapFewShot、MIPROv2 等優化器的工作原理：用程式設計方式優化 Prompt。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">AlphaCodium: 從 Prompt Engineering 到 Flow Engineering</a></div><div class="r">程式碼生成任務中迭代式測試與自我修正流程的開創性工作。</div></div>
       </div></details>
       <details><summary>十六、前沿演算法</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://arxiv.org/abs/2510.03748" target="_blank" rel="noopener">TreePrompt: 基於樹狀結構的動態樣本選擇</a></div><div class="r">如何透過 LLM 自我評估過濾「相似但有害」的 Few-Shot 樣本。</div></div>
-        <div class="it"><div class="t"><a href="https://dspy.ai/learn/programming/7-assertions/" target="_blank" rel="noopener">DSPy Assertions（斷言機制）</a></div><div class="r">在 LLM 管道中實施斷言來自動糾錯和回溯——Flow Engineering 穩定性的關鍵。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">TreePrompt: 基於樹狀結構的動態樣本選擇</a></div><div class="r">如何透過 LLM 自我評估過濾「相似但有害」的 Few-Shot 樣本。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">DSPy Assertions（斷言機制）</a></div><div class="r">在 LLM 管道中實施斷言來自動糾錯和回溯——Flow Engineering 穩定性的關鍵。</div></div>
       </div></details>
       <details><summary>十七、經濟學模型與 ROI 分析</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://dev.to/remojansen/rag-vs-fine-tuning-which-one-wins-the-cost-game-long-term-12dg" target="_blank" rel="noopener">RAG vs. Fine-Tuning 的長期成本博弈</a></div><div class="r">反直覺的結論：大規模場景下 RAG 可能比微調更貴的臨界點在哪裡。</div></div>
-        <div class="it"><div class="t"><a href="https://www.promptrefine.com/calculator" target="_blank" rel="noopener">Fine-Tuning 盈虧平衡計算器</a></div><div class="r">根據 Token 價格和呼叫量估算 SFT 回本週期的實用工具。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">RAG vs. Fine-Tuning 的長期成本博弈</a></div><div class="r">反直覺的結論：大規模場景下 RAG 可能比微調更貴的臨界點在哪裡。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">Fine-Tuning 盈虧平衡計算器</a></div><div class="r">根據 Token 價格和呼叫量估算 SFT 回本週期的實用工具。</div></div>
       </div></details>
       <details><summary>十八、企業級監控與基礎設施</summary><div class="rd-body">
-        <div class="it"><div class="t"><a href="https://www.helicone.ai/blog/llm-observability" target="_blank" rel="noopener">LLM 可觀測性與核心指標</a></div><div class="r">如何監控 TTFT、Token 效率以及識別異常查詢模式的深度指南。</div></div>
-        <div class="it"><div class="t"><a href="https://redis.io/blog/10-techniques-for-semantic-cache-optimization/" target="_blank" rel="noopener">語義快取的優化技巧（Redis）</a></div><div class="r">如何設定相似度閾值來平衡快取命中率與準確性。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">LLM 可觀測性與核心指標</a></div><div class="r">如何監控 TTFT、Token 效率以及識別異常查詢模式的深度指南。</div></div>
+        <div class="it"><div class="t"><a rel="noopener" data-source-reference="true">語義快取的優化技巧（Redis）</a></div><div class="r">如何設定相似度閾值來平衡快取命中率與準確性。</div></div>
       </div></details>
     </div>
   </section>
