@@ -1,0 +1,63 @@
+{
+  "library": "three",
+  "version": "0.160.0",
+  "registryTarball": "https://registry.npmjs.org/three/-/three-0.160.0.tgz",
+  "registryIntegrity": "sha512-DLU8lc0zNIPkM7rH5/e1Ks1Z8tWCGRq6g8mPowdDJpw1CFBJMU7UoJjC6PefXW7z//SSl0b2+GCw14LB+uDhng==",
+  "integrityVerified": true,
+  "license": "MIT",
+  "librarySource": "https://github.com/mrdoob/three.js/tree/r160",
+  "originalModel": "Fangpian original code-native robot, derived from the user’s visual brief, not extracted from the reference website.",
+  "bundle": {
+    "file": "../../robot-scene.js",
+    "bytes": 515306,
+    "gzipBytes": 135167,
+    "sha256": "fb55313101afeb1833260f51b3ef99d92e894056f44dcd49a8b2c703e7481fc6"
+  },
+  "build": {
+    "bundler": "esbuild",
+    "format": "iife",
+    "target": "es2020",
+    "minify": true,
+    "entry": "robot-scene-source.mjs"
+  },
+  "runtimeNetworkRequests": [
+    "assets/fangpian/logo-yellow-square.webp (relative to the homepage; same-origin company artwork shared with navigation)"
+  ],
+  "rendererRevision": 4,
+  "performance": {
+    "desktopDprCap": 1.5,
+    "mobileDprCap": 1,
+    "drawingPixelBudget": 2500000,
+    "desktopShadowSize": 512,
+    "mobileShadowSize": 256,
+    "shadowAutoUpdate": false,
+    "minimumShadowRefreshSeconds": 0.12,
+    "idleFrameRate": 30,
+    "unchangedReducedMotionFrames": "skipped",
+    "faceRepresentation": "geometry; no per-frame canvas texture upload"
+  },
+  "pointerFollow": {
+    "fineHoverOnly": true,
+    "activeWorldYawRangeRadians": [
+      -0.95,
+      0.95
+    ],
+    "activePitchRangeRadians": [
+      -0.42,
+      0.42
+    ],
+    "bodyAdditionalYawRangeRadians": [
+      -0.1,
+      0.1
+    ],
+    "localHeadYawLimitRadians": 1.35,
+    "worldYawLimitRadians": 1.08,
+    "pitchLimitRadians": 0.44,
+    "pointerDampingStiffness": 8,
+    "entryExitDampingStiffness": 7,
+    "diagnosticPrecision": 3,
+    "diagnostics": "changed values from rendered poses only",
+    "headRotationOrder": "YXZ",
+    "facingDiagnostics": "actual head.getWorldDirection; world unit normal and azimuth/elevation in radians"
+  }
+}

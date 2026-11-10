@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="方片 MBTI 趣味性格测试：32道题，探索交流、信息、决策与节奏偏好，生成属于你的方片虎格卡。方片趣味体验，非官方标准测评。">
+<meta name="theme-color" content="#fff000">
+<title>MBTI 趣味性格测试 · 方片 AI 学堂</title>
+<link rel="icon" href="assets/fangpian/logo-yellow-square.webp" type="image/webp">
+<link rel="stylesheet" href="personality.css?v=20261109">
+<script id="mbtiEntryRoute">
+(function () {
+  'use strict';
+  function normalizeRoute() {
+    const hash = location.hash;
+    if (/^#disc(?:-result)?$/.test(hash)) {
+      location.replace('disc.html' + hash);
+      return;
+    }
+    if (hash !== '#mbti' && hash !== '#mbti-result') {
+      history.replaceState(null, '', location.pathname + location.search + '#mbti');
+    }
+  }
+  normalizeRoute();
+  window.addEventListener('hashchange', normalizeRoute, true);
+})();
+</script>
+<script src="personality-data.js?v=20261109" defer></script>
+<script src="personality.js?v=aiti-disc-20261109" defer></script>
+<style>
+.mbti-entry-note{max-width:1200px;margin:0 auto 6px;padding:0 40px;color:#686957;font-size:13px;line-height:1.8}.mbti-entry-note strong{color:#303124;font-weight:650}.mbti-entry-note p{margin:0}.mbti-entry-note a{color:inherit;text-underline-offset:3px}@media(max-width:760px){.mbti-entry-note{padding:0 22px;margin-bottom:10px;font-size:12px}.fp-brand{font-size:15px}.fp-header{gap:12px}}
+</style>
+</head>
+<body data-test="mbti">
+<header class="fp-header"><a class="fp-brand" href="home.html"><img src="assets/fangpian/logo-yellow-square.webp" width="38" height="38" alt="方片"><span>MBTI 趣味性格测试<span class="brand-sub">方片 AI 学堂</span></span></a><a class="back-school" href="home.html">返回学堂 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></header>
+<aside class="mbti-entry-note" aria-label="测评说明"><p><strong>方片趣味体验，非官方标准测评。</strong>32 道题，约 5 分钟；依据最近三个月的真实状态作答，认识自己的偏好与协作节奏。答案和结果仅保存在当前浏览器。</p></aside>
+<div id="storageNotice" class="storage-notice" role="status" hidden></div>
+<main id="assessmentApp" tabindex="-1"><noscript><h1>MBTI 趣味性格测试</h1><p>请开启 JavaScript 后开始测试。32 道题与方片虎格结果仅保存在本机浏览器。</p></noscript></main>
+<footer class="fp-footer"><span>方片新媒体 · 每一种风格，都有自己的光。</span><details><summary>关于这份测试与题目来源</summary><div class="source-info"><p>这是一份用于自我探索与团队交流的方片趣味体验，非官方 MBTI® 标准测评，不用于招聘筛选、能力判断或心理诊断。类型不是固定标签。</p><p>题目参考 <a href="https://ipip.ori.org/newBigFive5broadKey.htm" target="_blank" rel="noopener noreferrer">IPIP 公开题项</a>与<a href="https://www.themyersbriggs.com/en-US/Support/MBTI-Facts" target="_blank" rel="noopener noreferrer">四维偏好定义</a>，独立改写为内容创作与协作场景。IPIP <a href="https://ipip.ori.org/newPermission.htm" target="_blank" rel="noopener noreferrer">允许商业使用</a>；本题集、计分与中文角色解读未经常模与信效度验证，分数不代表人口百分位或准确率。</p><p>答案和结果只存于当前浏览器，无需姓名或账号。更换设备或清理浏览器数据后不会保留。也可以体验独立的<a href="disc.html">DISC 协作风格测试</a>。</p></div></details></footer>
+<script id="mbtiEntryUi">
+(function () {
+  'use strict';
+  const label = 'MBTI 趣味性格测试';
+  function alignLabels() {
+    const heading = document.querySelector('.quiz-name');
+    if (heading && heading.textContent !== label) heading.textContent = label;
+    const back = document.getElementById('backHub');
+    if (back && back.textContent !== '‹ 返回学堂') back.textContent = '‹ 返回学堂';
+    const baseTitle = document.title.replace('MBTI 风格探索', label).replace('方片虎格测试', '方片 AI 学堂');
+    const title = baseTitle.includes(label) ? baseTitle : label + ' · ' + baseTitle;
+    if (document.title !== title) document.title = title;
+  }
+  document.addEventListener('click', function (event) {
+    const button = event.target && event.target.closest ? event.target.closest('button') : null;
+    if (!button || (button.id !== 'backHub' && button.id !== 'otherTest')) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    location.href = button.id === 'backHub' ? 'home.html' : 'disc.html';
+  }, true);
+  document.addEventListener('DOMContentLoaded', function () {
+    alignLabels();
+    const app = document.getElementById('assessmentApp');
+    if (app && typeof MutationObserver === 'function') new MutationObserver(alignLabels).observe(app, { childList: true, subtree: true });
+  }, { once: true });
+})();
+</script>
+</body>
+</html>

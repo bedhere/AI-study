@@ -1176,8 +1176,12 @@ footer a:hover{color:var(--text-h);}
   <script src="/slides/external-platform-policy.js"></script>
 <link rel="stylesheet" href="personality-entry.css?v=20261109">
 <link rel="stylesheet" href="company-paths.css?v=20261109b">
+<link rel="stylesheet" href="home-motion.css?v=20261110polish1">
+<script src="aiti-data.js?v=20261110collection1" defer></script>
+<script src="home-motion.js?v=20261110polish1" defer></script>
 </head>
-<body>
+<body class="fp-motion-home">
+<a class="fp-skip" href="#topics">跳转到课程内容</a>
 
 <nav class="nav">
   <div class="wrap nav-inner">
@@ -1185,7 +1189,7 @@ footer a:hover{color:var(--text-h);}
       <span class="mark"><img src="assets/fangpian/logo-yellow-square.webp" alt="方片学堂"></span>
       <span>方片学堂</span>
     </a>
-    <div class="nav-spacer"></div>
+    <div class="fp-top-links"><a href="#who">员工学习路线</a><a href="#topics">课程内容</a><a href="#aiPersonality">人格测试</a></div><div class="nav-spacer"></div>
 
 
 
@@ -1211,21 +1215,15 @@ footer a:hover{color:var(--text-h);}
   </div>
 </nav>
 
-<header class="hero">
-  <div class="glow-bg glow1"></div>
-  <div class="glow-bg glow2"></div>
-  <div class="wrap" style="position:relative;z-index:1;">
-   <div class="hero-grid">
-    <div class="hero-copy">
+<section class="fp-story" id="fpStory" aria-label="人格测试" data-renderer="loading">
+<div class="hero fp-stage" aria-hidden="true"><i class="fp-guide g1"></i><i class="fp-guide g3"></i><div class="fp-scene"><img class="fp-robot-fallback" src="assets/robot/robot-poster.svg" width="700" height="900" alt=""><canvas id="fpRobotCanvas" aria-hidden="true"></canvas></div></div>
+<header class="fp-panel fp-panel-intro"><div class="hero-copy fp-intro-copy">
     <h1>打好 AI 基础<br>做出能商业化的 <em>AI 产品<svg class="u-arc" viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path class="a-main" d="M3 13.8C58 7.2 142 6.8 197 13.2"/></svg></em></h1>
     <p class="hero-kicker">用 AI 提升内容创作与工作效率</p>
     <p class="sub">
       系统掌握 AI 产品的设计、开发与商业化方法，用 AI 创造真正的价值。
     </p>
-    <div class="hero-cta">
-      <a class="btn-primary" id="heroStart" href="learn.html" target="_top"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span id="heroStartTxt">从第一章开始</span></a>
-      <a class="btn-outline" href="#topics" target="_top">浏览课程内容</a>
-    </div>
+    <div class="hero-cta"><a class="btn-outline fp-browse" id="fpBrowseCourses" href="#topics" target="_top">浏览课程内容<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a><a class="btn-primary" id="heroStart" href="learn.html" target="_top"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span id="heroStartTxt">从第一章开始</span></a></div>
     <div class="hero-stats">
       <div class="st"><span class="n">158</span><span class="l">核心主题</span></div>
       <span class="sd"></span>
@@ -1233,11 +1231,35 @@ footer a:hover{color:var(--text-h);}
       <span class="sd"></span>
       <div class="st"><span class="n">240+</span><span class="l">交互演示</span></div>
     </div>
-    </div>
+    </div><a class="fp-scroll-link" href="#aiPersonality">向下，发现你的方片 AI 人格<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></header>
+<section class="fp-panel fp-panel-personality" id="aiPersonality" aria-labelledby="fpPersonalityTitle">
+<div class="fp-personality-copy"><span class="fp-test-eyebrow">方片 AI 人格测试 · MBTI 式趣味体验</span><h2 id="fpPersonalityTitle">你和 AI 之间，<br>藏着哪只小老虎？</h2><p>面对新工具，你会先试试还是先观察？AI 说得很肯定，你会直接用还是再查一遍？16 个选择，遇见和 AI 一起成长的自己。</p><ul class="fp-test-facts"><li>16道题</li><li>3—5分钟</li><li>16种AI人格</li></ul><ul class="fp-aiti-dimensions" aria-label="AITI"><li><b>A</b><span>AI认可度</span></li><li><b>U</b><span>AI使用度</span></li><li><b>K</b><span>AI了解度</span></li><li><b>V</b><span>正向价值度</span></li></ul><div class="fp-aiti-actions"><a class="fp-test-start" id="fpStartAiti" href="aiti.html#quiz">领取我的 AI 人格<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a><a class="fp-gallery-link" href="aiti.html#gallery">认识16只虎<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div><p class="fp-test-note">AITI = AI Tiger Type Indicator，方片的 AI 小老虎人格测试。</p></div>
+<div class="fp-personality-art"><img class="fp-persona-peek peek-left" src="assets/aiti/09_反幻觉侦探.png" width="112" height="126" alt="" loading="lazy"><img class="fp-persona-peek peek-right" src="assets/aiti/01_赛博诸葛.png" width="112" height="126" alt="" loading="lazy"><article class="fp-persona-card"><div class="fp-card-caption"><span>方片 AI 人格图鉴</span><b id="fpDeclarationNumber">02 / 16</b></div><img id="fpDeclarationImage" src="assets/aiti/02_Prompt法师.png" width="768" height="768" alt="Prompt法师专属方片AI小老虎" loading="lazy"><h3 id="fpDeclarationName">Prompt法师</h3><p class="fp-persona-title" id="fpDeclarationTitle">「一句咒语就能让AI开始加班的那只虎」</p><div class="fp-persona-tags" id="fpDeclarationTags"><span>Prompt</span><span>表达</span><span>调试</span><span>迭代</span></div><blockquote id="fpDeclarationQuote">“不是AI不行，可能只是咒语还没念对。”</blockquote><div class="fp-preview-controls"><button id="fpQuotePrevious" type="button" aria-label="上一只AI虎">←</button><span>16种人格，没有高低</span><button id="fpQuoteNext" type="button" aria-label="下一只AI虎">→</button></div></article></div>
+</section></section>
 
-    <!-- 课程进度卡：篇章列表、节数与环内数字全部由页面底部脚本从 COURSE /
-         本地进度填充，HTML 里不留示意数字，JS 没跑起来时整卡不显示 -->
-    <div class="hero-visual" id="heroVisual" hidden>
+<div class="divider"></div>
+
+<section class="section company-paths-section" id="who"><div class="wrap"><div class="sec-head"><div class="label">员工学习路线</div><h2>从你的工作目标开始学 AI</h2><p>方片正在从 MCN 向科技方向转型。无论你在哪个岗位，都可以从适合自己的起点开始，把 AI 用进真实工作。</p></div><div class="company-paths-grid"><a class="company-path-card" data-company-role="use" href="learn.html?route=use#zero-0.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>AI 起步者</h3><p>刚开始接触 AI 的每一位同事</p></div><img src="assets/fangpian/tiger-teacher-pointer.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">先认识 AI 能做什么、哪些结果需要核验，再学会把需求说清楚。用一个日常小任务，迈出拥抱 AI 的第一步。</p><ul class="company-path-tags"><li>认识 AI</li><li>清楚提问</li><li>核验结果</li></ul><span class="company-path-action">从 AI 能做什么开始<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+<a class="company-path-card" data-company-role="pro" href="learn.html?route=pro#ai-tips-context.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>业务提效者</h3><p>内容、运营、设计、商务与职能岗位</p></div><img src="assets/fangpian/tiger-reading-seated.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">把 AI 用进选题、文案、资料整理和方案分析。练习提供背景、持续迭代与检查结果，让一次好回答变成可复用的方法。</p><ul class="company-path-tags"><li>业务场景</li><li>提示词迭代</li><li>工作流</li></ul><span class="company-path-action">从工作中的好提问开始<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+<a class="company-path-card" data-company-role="build" href="learn.html?route=build#1-2-api.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>技术共创者</h3><p>研发、产品与希望动手搭建工具的同事</p></div><img src="assets/fangpian/tiger-ai-assistant.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">从模型接口进入工具调用、Agent 与评测。把业务需求拆成可验证的小工具，与业务同事一起推进原型、试用和交付。</p><ul class="company-path-tags"><li>模型接口</li><li>工具与 Agent</li><li>评测交付</li></ul><span class="company-path-action">从模型接口与对话开始<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></div><p class="company-path-note">角色按当前学习目标选择，不绑定岗位；随时可以切换，学习进度会保留。 <a class="company-path-all" href="learn.html?route=all" target="_top">浏览完整课程</a></p></div></section>
+<section class="fp-learning-hub" id="myLearning"><div class="wrap fp-hub-grid"><div class="fp-hub-tools"><h2>课程进度</h2><div class="hero-tools">
+<a class="tiger-entry" id="tigerTestEntry" href="aiti.html" target="_top"><img src="assets/aiti/02_Prompt法师.png" width="66" height="72" loading="lazy" decoding="async" alt="方片 AITI Prompt法师"><span class="tiger-entry-text"><span class="tiger-entry-title">方片 AI 人格测试</span><span class="tiger-entry-description">16题 · 四维画像 · 16种方片AI人格</span></span><span class="tiger-entry-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <!-- 「选学习路线」入口撤了：进 learn.html 第一屏会直接问路线，这里再放一张卡是重复
+           动作，还把首页 CTA 冲淡了。roadmap.html 留作详细对比页，从第一屏和目录里进。 -->
+
+      <a class="tool-card purple" href="learn.html#exam.html" target="_top">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </span>
+        <span class="tx">
+          <span class="tt">测测掌握度</span>
+          <span class="td">七套篇章卷 350 题，登录后测出你的薄弱点</span>
+        </span>
+        <span class="go">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>
+    </div></div><div class="hero-visual" id="heroVisual" hidden>
       <span class="hv-dot d1" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16.01"/><line x1="16" y1="16" x2="16" y2="16.01"/></svg>
       </span>
@@ -1272,39 +1294,7 @@ footer a:hover{color:var(--text-h);}
         </div>
       </div>
 
-    </div>
-   </div>
-
-   <div class="hero-foot">
-    <div class="hero-tools">
-<a class="tiger-entry" id="tigerTestEntry" href="aiti.html" target="_top"><img src="assets/aiti/02_Prompt法师.png" width="66" height="72" loading="lazy" decoding="async" alt="方片 AITI Prompt法师"><span class="tiger-entry-text"><span class="tiger-entry-title">你是哪只方片 AI 小老虎？</span><span class="tiger-entry-description">16题 · 四维画像 · 16种AI人格</span></span><span class="tiger-entry-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <!-- 「选学习路线」入口撤了：进 learn.html 第一屏会直接问路线，这里再放一张卡是重复
-           动作，还把首页 CTA 冲淡了。roadmap.html 留作详细对比页，从第一屏和目录里进。 -->
-
-      <a class="tool-card purple" href="learn.html#exam.html" target="_top">
-        <span class="ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </span>
-        <span class="tx">
-          <span class="tt">测测掌握度</span>
-          <span class="td">七套篇章卷 350 题，登录后测出你的薄弱点</span>
-        </span>
-        <span class="go">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </span>
-      </a>
-    </div>
-
-
-   </div>
-  </div>
-</header>
-
-<div class="divider"></div>
-
-<section class="section company-paths-section" id="who"><div class="wrap"><div class="sec-head"><div class="label">员工学习路线</div><h2>从你的工作目标开始学 AI</h2><p>方片正在从 MCN 向科技方向转型。无论你在哪个岗位，都可以从适合自己的起点开始，把 AI 用进真实工作。</p></div><div class="company-paths-grid"><a class="company-path-card" data-company-role="use" href="learn.html?route=use#zero-0.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>AI 起步者</h3><p>刚开始接触 AI 的每一位同事</p></div><img src="assets/fangpian/tiger-teacher-pointer.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">先认识 AI 能做什么、哪些结果需要核验，再学会把需求说清楚。用一个日常小任务，迈出拥抱 AI 的第一步。</p><ul class="company-path-tags"><li>认识 AI</li><li>清楚提问</li><li>核验结果</li></ul><span class="company-path-action">从 AI 能做什么开始<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
-<a class="company-path-card" data-company-role="pro" href="learn.html?route=pro#ai-tips-context.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>业务提效者</h3><p>内容、运营、设计、商务与职能岗位</p></div><img src="assets/fangpian/tiger-reading-seated.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">把 AI 用进选题、文案、资料整理和方案分析。练习提供背景、持续迭代与检查结果，让一次好回答变成可复用的方法。</p><ul class="company-path-tags"><li>业务场景</li><li>提示词迭代</li><li>工作流</li></ul><span class="company-path-action">从工作中的好提问开始<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
-<a class="company-path-card" data-company-role="build" href="learn.html?route=build#1-2-api.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>技术共创者</h3><p>研发、产品与希望动手搭建工具的同事</p></div><img src="assets/fangpian/tiger-ai-assistant.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">从模型接口进入工具调用、Agent 与评测。把业务需求拆成可验证的小工具，与业务同事一起推进原型、试用和交付。</p><ul class="company-path-tags"><li>模型接口</li><li>工具与 Agent</li><li>评测交付</li></ul><span class="company-path-action">从模型接口与对话开始<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></div><p class="company-path-note">角色按当前学习目标选择，不绑定岗位；随时可以切换，学习进度会保留。 <a class="company-path-all" href="learn.html?route=all" target="_top">浏览完整课程</a></p></div></section>
+    </div></div></section>
 
 <style>
 /* ── 用户评价（观猹） ──

@@ -62,4 +62,6 @@ npm test
 
 ## 源码来源
 
+自有服务器的静态 Nginx 部署与打包方法见 [服务器部署说明](deploy/README.md)，本次发布信息见 [部署记录](docs/server-deployment.md)。
+
 当前代码从本地已有版本 `612564f` 继续开发，保留原 Git 历史。课件来源与许可见 `THIRD_PARTY_NOTICES.md` 和 `LICENSE`。公司提供的品牌素材单独管理，不作为原作者素材署名。

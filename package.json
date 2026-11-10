@@ -19,7 +19,7 @@
     "check:resources": "python scripts/check-local-resources.py",
     "check:consistency": "node scripts/sync-course-content.mjs",
     "pretest": "node scripts/build-search-index.mjs",
-    "test": "node --test tests/local-learning.test.mjs tests/personality.test.mjs tests/aiti.test.mjs tests/company-paths.test.mjs"
+    "test": "node --test tests/local-learning.test.mjs tests/personality.test.mjs tests/aiti.test.mjs tests/company-paths.test.mjs tests/home-motion.test.mjs tests/robot-scene.test.mjs tests/mbti-entry.test.mjs tests/aiti-collection.test.mjs"
   },
   "dependencies": {
     "react": "19.2.6",

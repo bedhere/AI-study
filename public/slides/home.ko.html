@@ -1186,8 +1186,12 @@ footer a:hover{color:var(--text-h);}
   <script src="/slides/external-platform-policy.js"></script>
 <link rel="stylesheet" href="personality-entry.css?v=20261109">
 <link rel="stylesheet" href="company-paths.css?v=20261109b">
+<link rel="stylesheet" href="home-motion.css?v=20261110polish1">
+<script src="aiti-data.js?v=20261110collection1" defer></script>
+<script src="home-motion.js?v=20261110polish1" defer></script>
 </head>
-<body>
+<body class="fp-motion-home">
+<a class="fp-skip" href="#topics">강좌로 건너뛰기</a>
 
 <nav class="nav">
   <div class="wrap nav-inner">
@@ -1195,9 +1199,7 @@ footer a:hover{color:var(--text-h);}
       <span class="mark"><img src="assets/fangpian/logo-yellow-square.webp" alt="方片学堂"></span>
       <span>팡피엔 아카데미</span>
     </a>
-    <div class="nav-spacer"></div>
-    <a class="nl hide-sm" href="#who">수강 대상</a>
-    <a class="nl hide-sm" href="#topics">강좌 주제</a>
+    <div class="fp-top-links"><a href="#who">직원 학습 경로</a><a href="#topics">강좌</a><a href="#aiPersonality">성격 테스트</a></div><div class="nav-spacer"></div>
 
 
 
@@ -1221,21 +1223,15 @@ footer a:hover{color:var(--text-h);}
   </div>
 </nav>
 
-<header class="hero">
-  <div class="glow-bg glow1"></div>
-  <div class="glow-bg glow2"></div>
-  <div class="wrap" style="position:relative;z-index:1;">
-   <div class="hero-grid">
-    <div class="hero-copy">
+<section class="fp-story" id="fpStory" aria-label="성격 테스트" data-renderer="loading">
+<div class="hero fp-stage" aria-hidden="true"><i class="fp-guide g1"></i><i class="fp-guide g3"></i><div class="fp-scene"><img class="fp-robot-fallback" src="assets/robot/robot-poster.svg" width="700" height="900" alt=""><canvas id="fpRobotCanvas" aria-hidden="true"></canvas></div></div>
+<header class="fp-panel fp-panel-intro"><div class="hero-copy fp-intro-copy">
     <h1>AI의 핵심 원리를 이해하고<br>나만의 <em>AI 제품<svg class="u-arc" viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path class="a-main" d="M3 13.8C58 7.2 142 6.8 197 13.2"/></svg></em>을 만드세요</h1>
     <p class="hero-kicker">AI로 콘텐츠 제작과 업무 효율을 높이세요.</p>
     <p class="sub">
       AI 제품의 설계·개발·사업화 방법을 체계적으로 익히고, AI로 진짜 가치를 만드세요.
     </p>
-    <div class="hero-cta">
-      <a class="btn-primary" id="heroStart" href="learn.ko.html" target="_top"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span id="heroStartTxt">첫 번째 챕터부터 시작</span></a>
-      <a class="btn-outline" href="#topics" target="_top">강좌 내용 둘러보기</a>
-    </div>
+    <div class="hero-cta"><a class="btn-outline fp-browse" id="fpBrowseCourses" href="#topics" target="_top">강좌 내용 둘러보기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a><a class="btn-primary" id="heroStart" href="learn.ko.html" target="_top"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span id="heroStartTxt">첫 번째 챕터부터 시작</span></a></div>
     <div class="hero-stats">
       <div class="st"><span class="n">158</span><span class="l">핵심 주제</span></div>
       <span class="sd"></span>
@@ -1243,9 +1239,33 @@ footer a:hover{color:var(--text-h);}
       <span class="sd"></span>
       <div class="st"><span class="n">240+</span><span class="l">인터랙티브 데모</span></div>
     </div>
-    </div>
+    </div><a class="fp-scroll-link" href="#aiPersonality">나의 AI 성격 찾기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></header>
+<section class="fp-panel fp-panel-personality" id="aiPersonality" aria-labelledby="fpPersonalityTitle">
+<div class="fp-personality-copy"><span class="fp-test-eyebrow">팡피엔 AI 성격 테스트 · MBTI 방식의 재미있는 체험</span><h2 id="fpPersonalityTitle">나와 AI 사이에는<br>어떤 호랑이가 있을까요?</h2><p>새로운 도구를 먼저 써 보나요? 확신에 찬 AI 답변을 다시 확인하나요? 16번의 선택으로 나의 AI 호랑이를 만나세요.</p><ul class="fp-test-facts"><li>16문항</li><li>3–5분</li><li>16가지 AI 성격</li></ul><ul class="fp-aiti-dimensions" aria-label="AITI"><li><b>A</b><span>AI 수용도</span></li><li><b>U</b><span>AI 사용도</span></li><li><b>K</b><span>AI 이해도</span></li><li><b>V</b><span>긍정적 가치</span></li></ul><div class="fp-aiti-actions"><a class="fp-test-start" id="fpStartAiti" href="aiti.html#quiz">나의 AI 호랑이 만나기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a><a class="fp-gallery-link" href="aiti.html#gallery">16마리 호랑이 만나기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div><p class="fp-test-note">AITI는 AI Tiger Type Indicator의 약자로 팡피엔의 AI 성격 체험입니다.</p></div>
+<div class="fp-personality-art"><img class="fp-persona-peek peek-left" src="assets/aiti/09_反幻觉侦探.png" width="112" height="126" alt="" loading="lazy"><img class="fp-persona-peek peek-right" src="assets/aiti/01_赛博诸葛.png" width="112" height="126" alt="" loading="lazy"><article class="fp-persona-card"><div class="fp-card-caption"><span>팡피엔 AI 성격 도감</span><b id="fpDeclarationNumber">02 / 16</b></div><img id="fpDeclarationImage" src="assets/aiti/02_Prompt法师.png" width="768" height="768" alt="Prompt法师专属方片AI小老虎" loading="lazy"><h3 id="fpDeclarationName">Prompt法师</h3><p class="fp-persona-title" id="fpDeclarationTitle">「一句咒语就能让AI开始加班的那只虎」</p><div class="fp-persona-tags" id="fpDeclarationTags"><span>Prompt</span><span>表达</span><span>调试</span><span>迭代</span></div><blockquote id="fpDeclarationQuote">“不是AI不行，可能只是咒语还没念对。”</blockquote><div class="fp-preview-controls"><button id="fpQuotePrevious" type="button" aria-label="이전 AI 호랑이">←</button><span>모든 성격에는 장점이 있어요</span><button id="fpQuoteNext" type="button" aria-label="다음 AI 호랑이">→</button></div></article></div>
+</section></section>
 
-    <div class="hero-visual" id="heroVisual" hidden>
+<div class="divider"></div>
+
+<section class="section company-paths-section" id="who"><div class="wrap"><div class="sec-head"><div class="label">직원 학습 경로</div><h2>지금 하는 일에서 AI 학습을 시작하세요</h2><p>팡피엔은 MCN에서 기술 중심 기업으로 전환하고 있습니다. 모든 동료가 자신의 출발점을 찾아 AI를 실제 업무에 활용할 수 있습니다.</p></div><div class="company-paths-grid"><a class="company-path-card" data-company-role="use" href="learn.ko.html?route=use#zero-0.ko.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>AI 입문자</h3><p>AI를 처음 접하는 모든 동료</p></div><img src="assets/fangpian/tiger-teacher-pointer.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">AI가 할 수 있는 일과 검증이 필요한 결과를 알아보고, 일상적인 작은 과제로 명확하게 요청하는 법을 연습합니다.</p><ul class="company-path-tags"><li>AI 기초</li><li>명확한 질문</li><li>결과 검증</li></ul><span class="company-path-action">AI가 할 수 있는 일부터<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+<a class="company-path-card" data-company-role="pro" href="learn.ko.html?route=pro#ai-tips-context.ko.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>업무 효율 실천자</h3><p>콘텐츠·운영·디자인·비즈니스·지원 부서</p></div><img src="assets/fangpian/tiger-reading-seated.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">기획, 글쓰기, 자료 정리와 분석에 AI를 적용합니다. 배경 전달, 반복 개선, 결과 확인을 통해 재사용할 업무 방식을 만듭니다.</p><ul class="company-path-tags"><li>업무 활용</li><li>질문 개선</li><li>워크플로</li></ul><span class="company-path-action">좋은 업무 질문부터<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+<a class="company-path-card" data-company-role="build" href="learn.ko.html?route=build#1-2-api.ko.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>기술 공동 제작자</h3><p>개발·제품 담당자와 도구를 만들고 싶은 동료</p></div><img src="assets/fangpian/tiger-ai-assistant.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">모델 API에서 도구 호출, Agent, 평가까지 배웁니다. 현업 동료와 함께 업무 요구를 검증 가능한 작은 도구로 만듭니다.</p><ul class="company-path-tags"><li>모델 API</li><li>도구와 Agent</li><li>평가와 전달</li></ul><span class="company-path-action">모델 API와 대화부터<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></div><p class="company-path-note">직급이 아닌 현재 학습 목표로 선택하세요. 경로를 바꿔도 학습 진도는 유지됩니다. <a class="company-path-all" href="learn.ko.html?route=all" target="_top">전체 강좌 보기</a></p></div></section>
+<section class="fp-learning-hub" id="myLearning"><div class="wrap fp-hub-grid"><div class="fp-hub-tools"><h2>학습 진도</h2><div class="hero-tools">
+<a class="tiger-entry" id="tigerTestEntry" href="aiti.html" target="_top"><img src="assets/aiti/02_Prompt法师.png" width="66" height="72" loading="lazy" decoding="async" alt="方片 AITI Prompt法师"><span class="tiger-entry-text"><span class="tiger-entry-title">팡피엔 AI 성격 테스트</span><span class="tiger-entry-description">16문항 · 네 가지 차원 · 16가지 AI 성격</span></span><span class="tiger-entry-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+
+      <a class="tool-card purple" href="learn.ko.html#exam.html" target="_top">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </span>
+        <span class="tx">
+          <span class="tt">실력 테스트</span>
+          <span class="td">7개 챕터별 시험 350문항, 로그인 후 취약점을 파악하세요</span>
+        </span>
+        <span class="go">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>
+    </div></div><div class="hero-visual" id="heroVisual" hidden>
       <span class="hv-dot d1" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16.01"/><line x1="16" y1="16" x2="16" y2="16.01"/></svg>
       </span>
@@ -1280,37 +1300,7 @@ footer a:hover{color:var(--text-h);}
         </div>
       </div>
 
-    </div>
-   </div>
-
-   <div class="hero-foot">
-    <div class="hero-tools">
-<a class="tiger-entry" id="tigerTestEntry" href="aiti.html" target="_top"><img src="assets/aiti/02_Prompt法师.png" width="66" height="72" loading="lazy" decoding="async" alt="方片 AITI Prompt法师"><span class="tiger-entry-text"><span class="tiger-entry-title">나의 AITI 호랑이는?</span><span class="tiger-entry-description">16문항 · AI 성향 테스트 · 中文</span></span><span class="tiger-entry-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-
-      <a class="tool-card purple" href="learn.ko.html#exam.html" target="_top">
-        <span class="ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </span>
-        <span class="tx">
-          <span class="tt">실력 테스트</span>
-          <span class="td">7개 챕터별 시험 350문항, 로그인 후 취약점을 파악하세요</span>
-        </span>
-        <span class="go">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </span>
-      </a>
-    </div>
-
-
-   </div>
-  </div>
-</header>
-
-<div class="divider"></div>
-
-<section class="section company-paths-section" id="who"><div class="wrap"><div class="sec-head"><div class="label">직원 학습 경로</div><h2>지금 하는 일에서 AI 학습을 시작하세요</h2><p>팡피엔은 MCN에서 기술 중심 기업으로 전환하고 있습니다. 모든 동료가 자신의 출발점을 찾아 AI를 실제 업무에 활용할 수 있습니다.</p></div><div class="company-paths-grid"><a class="company-path-card" data-company-role="use" href="learn.ko.html?route=use#zero-0.ko.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>AI 입문자</h3><p>AI를 처음 접하는 모든 동료</p></div><img src="assets/fangpian/tiger-teacher-pointer.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">AI가 할 수 있는 일과 검증이 필요한 결과를 알아보고, 일상적인 작은 과제로 명확하게 요청하는 법을 연습합니다.</p><ul class="company-path-tags"><li>AI 기초</li><li>명확한 질문</li><li>결과 검증</li></ul><span class="company-path-action">AI가 할 수 있는 일부터<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
-<a class="company-path-card" data-company-role="pro" href="learn.ko.html?route=pro#ai-tips-context.ko.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>업무 효율 실천자</h3><p>콘텐츠·운영·디자인·비즈니스·지원 부서</p></div><img src="assets/fangpian/tiger-reading-seated.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">기획, 글쓰기, 자료 정리와 분석에 AI를 적용합니다. 배경 전달, 반복 개선, 결과 확인을 통해 재사용할 업무 방식을 만듭니다.</p><ul class="company-path-tags"><li>업무 활용</li><li>질문 개선</li><li>워크플로</li></ul><span class="company-path-action">좋은 업무 질문부터<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
-<a class="company-path-card" data-company-role="build" href="learn.ko.html?route=build#1-2-api.ko.html" target="_top"><div class="company-path-top"><div class="company-path-name"><h3>기술 공동 제작자</h3><p>개발·제품 담당자와 도구를 만들고 싶은 동료</p></div><img src="assets/fangpian/tiger-ai-assistant.webp" alt="" width="112" height="108" loading="lazy" decoding="async"></div><p class="company-path-desc">모델 API에서 도구 호출, Agent, 평가까지 배웁니다. 현업 동료와 함께 업무 요구를 검증 가능한 작은 도구로 만듭니다.</p><ul class="company-path-tags"><li>모델 API</li><li>도구와 Agent</li><li>평가와 전달</li></ul><span class="company-path-action">모델 API와 대화부터<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></div><p class="company-path-note">직급이 아닌 현재 학습 목표로 선택하세요. 경로를 바꿔도 학습 진도는 유지됩니다. <a class="company-path-all" href="learn.ko.html?route=all" target="_top">전체 강좌 보기</a></p></div></section>
+    </div></div></section>
 
 <style>
 /* 관차 후기: CSS columns. 후기 길이가 들쭉날쭉해서 grid는 한 행을 가장 긴 카드에 맞춰 빈 공간을 남긴다. */
