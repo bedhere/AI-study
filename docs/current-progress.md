@@ -23,6 +23,6 @@
 
 GitHub 使用 `bedhere/AI-study` 的 `main` 分支；服务器沿用 `111.228.5.133` 与 `/var/www/fangpian-xuetang/current`。
 
-本轮 95 项回归测试和生产构建全部通过。2548 个 HTML、96 个 JS 与 2235 段内联脚本检查通过；2175 条课程记录结构一致性检查通过。本地资源缺失、已识别推广残留、静态外站导航和直接脚本外跳候选均为 0。功能提交 `348eec7` 已同步 GitHub 和服务器，发布与校验详情见 [本次同步发布记录](server-sync-20261110.md)。
+最新交互调整的 96 项回归测试、生产构建、2548 个 HTML、96 个 JS 与 2235 段内联脚本检查均通过，本地资源缺失为 0。功能提交 `3d6a535` 已同步 GitHub 和服务器，详情见 [证书与机器人交互发布记录](viewport-interaction.md)。上一轮 2175 条课程结构一致性、推广及外跳审计结果见 [漫画与外跳清理发布记录](server-sync-20261110.md)。
 
 进一步说明见 [漫画与外跳清理](comic-rollout-and-outbound-audit.md)、[上一轮服务器发布](server-release-20261110.md)及 [部署方法](../deploy/README.md)。
