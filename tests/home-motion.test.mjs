@@ -6,6 +6,17 @@ const root = new URL('../public/slides/', import.meta.url);
 const read = name => fs.readFileSync(new URL(name, root), 'utf8');
 function model() { const context = {}; vm.runInNewContext(read('home-motion.js'), context); return context.FangpianHomeMotion; }
 
+test('pointer tracking maps the whole viewport, including the nav and both sides of the certificate', () => {
+  const motion = model();
+  for (const [x, y, expectedX, expectedY] of [[0,0,-1,-1],[1920,1080,1,1],[960,540,0,0],[480,270,-.5,-.5],[1440,810,.5,.5]]) {
+    const pointer = motion.pointerAt(x, y, 1920, 1080);
+    assert.equal(pointer.x, expectedX); assert.equal(pointer.y, expectedY);
+  }
+  assert.equal(motion.pointerAt(-100, 5000, 1920, 1080).x, -1);
+  assert.equal(motion.pointerAt(-100, 5000, 1920, 1080).y, 1);
+  assert.ok(Number.isFinite(motion.pointerAt(0, 0, 0, 0).x));
+});
+
 test('the short scroll path fades the robot continuously without an empty pinned slide', () => {
   const motion = model();
   assert.equal(motion.stateAt(0).robot, 1);

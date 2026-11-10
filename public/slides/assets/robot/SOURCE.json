@@ -63,8 +63,8 @@
   "sharedRuntime": {
     "file": "../../three-shared.js",
     "version": "0.160.0",
-    "bytes": 507709,
-    "gzipBytes": 131071,
-    "sha256": "ad17493385a1511a57b584f4b273bf3ae94b7aff2056d7591ede32145d6ed24a"
+    "bytes": 507718,
+    "gzipBytes": 131072,
+    "sha256": "b49a026e1479da6ca91415804c29f54284b58a2842b8746bf373ef026a38aece"
   }
 }

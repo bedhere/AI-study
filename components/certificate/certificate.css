@@ -1,5 +1,12 @@
 /* A hanging learning keepsake on the same warm-paper surface as the robot. */
-.fp-certificate-slot { position:absolute; top:max(32px,5vh); right:clamp(48px,6vw,160px); width:clamp(280px,19vw,360px); z-index:4; }
+.fp-certificate-slot { position:absolute; top:max(32px,5vh); right:clamp(48px,6vw,160px); width:clamp(280px,19vw,360px); z-index:2; }
+.fp-cert-lanyard.lanyard--viewport { position:fixed; inset:0; width:100%; height:100%; z-index:0; pointer-events:none; opacity:0; transition:opacity .2s; }
+.fp-cert-lanyard.lanyard--viewport[data-ready=true] { opacity:1; }
+.fp-cert-lanyard.lanyard--viewport canvas { pointer-events:none; }
+body.fp-motion-home { isolation:isolate; }
+.fp-motion-home > :is(section,header,main,footer,.divider) { position:relative; z-index:1; }
+html.fp-certificate-hover,html.fp-certificate-hover * { cursor:grab!important; }
+html.fp-certificate-dragging,html.fp-certificate-dragging * { cursor:grabbing!important; user-select:none!important; }
 .fp-cert-widget { color:var(--fp-ink,#303030); font-family:Arial,"Microsoft YaHei",sans-serif; }
 .fp-cert-stage { height:clamp(340px,41vh,430px); position:relative; isolation:isolate; margin:0; }
 .fp-cert-stage .fp-cert-lanyard { position:absolute; inset:0; opacity:0; transition:opacity .2s; }

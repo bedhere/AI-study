@@ -7,7 +7,10 @@
     const p = clamp(progress);
     return { progress: p, camera: Math.min(p * 1.2, 1), robot: 1 - ease((p - .08) / .68), phase: p < .5 ? 0 : 1 };
   }
-  root.FangpianHomeMotion = { clamp, smooth, stateAt };
+  function pointerAt(x, y, width, height) {
+    return { x: clamp(x / Math.max(1, width) * 2 - 1, -1, 1), y: clamp(y / Math.max(1, height) * 2 - 1, -1, 1) };
+  }
+  root.FangpianHomeMotion = { clamp, smooth, stateAt, pointerAt };
   if (!root.document) return;
   const story = document.getElementById('fpStory');
   const canvas = document.getElementById('fpRobotCanvas');
@@ -52,7 +55,7 @@
     resizeFrame = 0;
     const headerHeight = document.querySelector('.nav')?.offsetHeight || 64;
     const box = story.getBoundingClientRect();
-    layout = { start: box.top + scrollY - headerHeight, distance: Math.max(1, intro.offsetHeight), width: stage.clientWidth, height: stage.clientHeight, top: headerHeight };
+    layout = { start: box.top + scrollY - headerHeight, distance: Math.max(1, intro.offsetHeight), width: window.innerWidth, height: window.innerHeight, top: 0 };
     const wide = window.innerWidth >= 1440;
     robotLayout.anchorX = wide ? .59 : .62;
     robotLayout.scale = wide ? .9 : 1;
@@ -84,15 +87,17 @@
     if (active && !reduce.matches && ((visible && robot && !contextLost) || visual !== target)) frame = requestAnimationFrame(tick);
   }
   function wake() { if (!frame && !disposed && !document.hidden && active) frame = requestAnimationFrame(tick); }
-  intro.addEventListener('pointerenter', () => { pointerActive = fine.matches && !reduce.matches; wake(); });
-  intro.addEventListener('pointermove', event => {
+  function followPointer(event) {
     if (!fine.matches || reduce.matches) return;
     pointerActive = true;
-    px = clamp(event.clientX / layout.width * 2 - 1, -1, 1);
-    py = clamp((event.clientY - layout.top) / layout.height * 2 - 1, -1, 1);
+    const pointer = pointerAt(event.clientX, event.clientY, layout.width, layout.height);
+    px = pointer.x; py = pointer.y;
     wake();
-  }, { passive: true });
-  intro.addEventListener('pointerleave', () => { px = py = 0; pointerActive = false; wake(); });
+  }
+  function resetPointer() { px = py = 0; pointerActive = false; wake(); }
+  document.addEventListener('pointermove', followPointer, { passive: true, capture: true });
+  document.documentElement.addEventListener('pointerleave', resetPointer);
+  addEventListener('blur', resetPointer);
   addEventListener('scroll', () => { updateTarget(); wake(); }, { passive: true });
   addEventListener('resize', queueMeasure, { passive: true });
   addEventListener('pageshow', () => { previous = 0; queueMeasure(); });
@@ -118,7 +123,7 @@
   });
   canvas.addEventListener('webglcontextrestored', () => { contextLost = false; robot?.resize(); wake(); });
   canvas.addEventListener('fangpian:robot-asset', wake);
-  import('./robot-scene.js?v=20261110space3').then(() => {
+  import('./robot-scene.js?v=20261110viewport1').then(() => {
     if (disposed) return;
     robot = root.FangpianRobot?.mount(canvas, robotLayout) || null;
     if (robot) { canvas.dataset.meshes = String(robot.statistics.meshes); canvas.dataset.triangles = String(robot.statistics.triangles); }
@@ -127,6 +132,9 @@
   addEventListener('pagehide', event => {
     if (event.persisted) return;
     disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(resizeFrame);
+    document.removeEventListener('pointermove', followPointer, true);
+    document.documentElement.removeEventListener('pointerleave', resetPointer);
+    removeEventListener('blur', resetPointer);
     observer.disconnect(); sizeObserver?.disconnect(); robot?.dispose();
   });
   measure();

@@ -1,6 +1,7 @@
 /* oxlint-disable next/no-img-element -- Static HTML islands use local SVGs and generated PNG data URLs outside the Next image pipeline. */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { createPortal } from 'react-dom';
 import Lanyard from '../Lanyard/Lanyard.jsx';
 import './certificate.css';
 
@@ -92,12 +93,12 @@ function CertificateWidget() {
   return <div className="fp-cert-widget" data-mode={state.record ? 'issued' : state.eligible ? 'eligible' : 'preview'}>
     <figure ref={stage} className="fp-cert-stage" data-ready={ready} aria-label="可翻面的结业证书挂绳卡片">
       <div className={'fp-cert-still' + (ready ? ' is-hidden' : '')} aria-hidden="true"><img src={side === 'front' ? art.front : art.back} alt="" width="960" height="682" /></div>
-      {seen && <Lanyard className="fp-cert-lanyard" frontImage={art.front} backImage={art.back}
+      {seen && createPortal(<Lanyard className="fp-cert-lanyard" viewportOrigin={stage} frontImage={art.front} backImage={art.back}
         strapImage="assets/certificate/strap.svg" orientation="landscape" imageFit="contain"
         cardColor="#fbf8f0" finish="matte" size={0.6} anchor="center" strapLength={0.46}
         strapColor="#ffd85f" strapWidth={0.55} metal="gold" gravity={1} damping={0.72}
-        elasticity={0.38} breeze={0} intro={false} overscan={96} controlsRef={controls}
-        onReady={onReady} onError={onError} onFaceChange={setSide} />}
+        elasticity={0.38} breeze={0} intro={false} controlsRef={controls}
+        onReady={onReady} onError={onError} onFaceChange={setSide} />, document.body)}
     </figure>
     <div className="fp-cert-caption">
       <div className="fp-cert-invitation"><span>{copy.drag}</span><button type="button" className="fp-cert-flip" onClick={flip}>{side === 'front' ? copy.back : copy.front}<span aria-hidden="true"> ↻</span></button></div>

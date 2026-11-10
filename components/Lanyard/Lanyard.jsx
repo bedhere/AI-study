@@ -726,6 +726,7 @@ const Lanyard = ({
   interactive = true,
   intro = true,
   overscan = 0,
+  viewportOrigin,
   className = '',
   style,
   controlsRef,
@@ -880,7 +881,8 @@ const Lanyard = ({
     const mouth = new THREE.Vector3();
     const tuck = new THREE.Vector3();
     const curve = new THREE.CatmullRomCurve3(controls, false, 'centripetal');
-    const view = { width: 1, height: 1, padding: 0, renderWidth: 1, renderHeight: 1 };
+    const view = { width: 1, height: 1, padding: 0, renderWidth: 1, renderHeight: 1, offsetX: 0, offsetY: 0 };
+    let restingLength = 0, activePointer = null, resizeFrame = 0;
     let layout = cardLayout('portrait', 0.3);
     let applied = {};
     let strapScale = STRAP_WIDTH;
@@ -939,8 +941,11 @@ const Lanyard = ({
       // and hang position. CSS overflow alone cannot reveal pixels outside WebGL.
       const renderHeight = viewHeight * view.renderHeight / view.height;
       camera.aspect = view.renderWidth / view.renderHeight;
-      camera.position.set(0, 0, renderHeight / 2 / Math.tan((FOV * Math.PI) / 360));
-      camera.lookAt(0, 0, 0);
+      const unitsPerPixel = viewHeight / view.height;
+      const cameraX = view.offsetX * unitsPerPixel;
+      const cameraY = view.offsetY * unitsPerPixel;
+      camera.position.set(cameraX, cameraY, renderHeight / 2 / Math.tan((FOV * Math.PI) / 360));
+      camera.lookAt(cameraX, cameraY, 0);
       camera.updateProjectionMatrix();
       camera.updateMatrixWorld();
       foilUniforms.foilKey.value.set(-2.5, 4, 6).normalize().transformDirection(camera.matrixWorldInverse);
@@ -952,6 +957,7 @@ const Lanyard = ({
       const hangTop = cardTop + (layout.hangY - layout.height / 2);
       sim.anchor.set(anchorX, anchorY, 0);
       configureSimulation(sim, layout, anchorY - hangTop);
+      restingLength = sim.rest;
       sim.nodes[0].copy(sim.anchor);
       sim.previous[0].copy(sim.anchor);
     };
@@ -974,7 +980,7 @@ const Lanyard = ({
         ring.position.set(0, layout.ringY, 0);
         applied.framingKey = '';
       }
-      const framingKey = `${layoutKey}|${s.size}|${s.anchor}|${s.strapLength}|${view.width}|${view.height}|${view.padding}`;
+      const framingKey = `${layoutKey}|${s.size}|${s.anchor}|${s.strapLength}|${view.width}|${view.height}|${view.padding}|${view.offsetX}|${view.offsetY}|${view.renderWidth}|${view.renderHeight}`;
       if (framingKey !== applied.framingKey) {
         frameView();
         if (!placed) {
@@ -1123,7 +1129,7 @@ const Lanyard = ({
       const side = faceDirection.z >= 0 ? 'front' : 'back';
       canvas.dataset.lanyardSide = side;
       if (side !== lastFace) { lastFace = side; settingsRef.current.onFaceChange?.(side); }
-      if (!ready && images.front && images.back) { ready = true; settingsRef.current.onReady?.(); }
+      if (!ready && images.front && images.back) { ready = true; container.dataset.ready = 'true'; settingsRef.current.onReady?.(); }
     };
 
     const physics = () => {
@@ -1160,6 +1166,10 @@ const Lanyard = ({
       last = now;
       time += dt;
       const current = physics();
+      if (viewportOrigin) {
+        const length = sim.grab ? Math.max(restingLength, sim.anchor.distanceTo(sim.grab.target) * 1.08 / JOINTS) : restingLength;
+        sim.rest += (length - sim.rest) * (1 - Math.exp(-(sim.grab ? 30 : 3) * dt));
+      }
       stepSimulation(sim, dt, current, time);
       const body = sim.body;
       if (!Number.isFinite(body.position.x + body.position.y + body.position.z + body.quaternion.w)) {
@@ -1167,7 +1177,7 @@ const Lanyard = ({
         placeHanging(sim, layout, false);
       }
       render();
-      const resting = sim.calm > 1.2 && !sim.grab && current.breeze === 0;
+      const resting = sim.calm > 1.2 && !sim.grab && current.breeze === 0 && Math.abs(sim.rest - restingLength) < 0.001;
       if (visible && !resting) raf = requestAnimationFrame(tick);
     };
 
@@ -1180,6 +1190,8 @@ const Lanyard = ({
 
     const raycaster = new THREE.Raycaster();
     const pointer = new THREE.Vector2();
+    const dragPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
+    const foreground = event => viewportOrigin && event.target?.closest?.('a,button,input,select,textarea,summary,label,[contenteditable],nav,dialog,h1,h2,h3,p,.fp-persona-card,.tool-card,.company-path-card');
 
     const toPointer = event => {
       const rect = canvas.getBoundingClientRect();
@@ -1198,6 +1210,10 @@ const Lanyard = ({
 
     const setCursor = value => {
       if (canvas.style.cursor !== value) canvas.style.cursor = value;
+      if (viewportOrigin) {
+        document.documentElement.classList.toggle('fp-certificate-hover', value === 'grab');
+        document.documentElement.classList.toggle('fp-certificate-dragging', value === 'grabbing');
+      }
     };
 
     const flip = point => {
@@ -1220,7 +1236,7 @@ const Lanyard = ({
     };
 
     const onPointerDown = event => {
-      if (!settingsRef.current.interactive || event.button > 0) return;
+      if (!settingsRef.current.interactive || event.button > 0 || activePointer !== null || foreground(event)) return;
       toPointer(event);
       const hit = pickCard();
       if (!hit) return;
@@ -1232,6 +1248,8 @@ const Lanyard = ({
         from: hit.point.clone(),
         target: hit.point.clone()
       };
+      activePointer = event.pointerId;
+      dragPlane.constant = -hit.point.z;
       press = { x: event.clientX, y: event.clientY, time: performance.now(), point: hit.point.clone() };
       canvas.setPointerCapture?.(event.pointerId);
       setCursor('grabbing');
@@ -1241,76 +1259,111 @@ const Lanyard = ({
 
     const onPointerMove = event => {
       if (!settingsRef.current.interactive) return;
+      if (activePointer !== null && event.pointerId !== activePointer) return;
       toPointer(event);
       if (sim.grab) {
         if (press && Math.hypot(event.clientX - press.x, event.clientY - press.y) > 6) press = null;
-        raycaster.ray.at(sim.grab.reach, sim.grab.target);
+        if (viewportOrigin) raycaster.ray.intersectPlane(dragPlane, sim.grab.target);
+        else raycaster.ray.at(sim.grab.reach, sim.grab.target);
         start();
         return;
       }
       if (event.pointerType === 'touch') return;
-      hovering = !!pickCard();
+      hovering = !foreground(event) && !!pickCard();
       setCursor(hovering ? 'grab' : '');
     };
 
     const onPointerUp = event => {
-      if (!sim.grab) return;
+      if (!sim.grab || (event.pointerId !== undefined && event.pointerId !== activePointer)) return;
+      // Pointer-up can arrive before the next physics frame on a fast long drag.
+      // Commit its final point before releasing the grip so no movement is lost.
+      if (viewportOrigin && event.type === 'pointerup') {
+        toPointer(event);
+        raycaster.ray.intersectPlane(dragPlane, sim.grab.target);
+        sim.rest = Math.max(restingLength, sim.anchor.distanceTo(sim.grab.target) * 1.08 / JOINTS);
+        for (let i = 0; i < ITERATIONS; i++) solvePin(sim.body, sim.grab, sim.grab.target);
+        render();
+        const point = sim.grab.local.clone().applyQuaternion(sim.body.quaternion).add(sim.body.position).project(camera);
+        canvas.dataset.lanyardDrop = JSON.stringify({ x: (point.x + 1) * view.renderWidth / 2, y: (1 - point.y) * view.renderHeight / 2, pointerX: event.clientX, pointerY: event.clientY });
+      }
       sim.grab = null;
       if (press && event.type === 'pointerup' && performance.now() - press.time < 450) flip(press.point);
       press = null;
-      canvas.releasePointerCapture?.(event.pointerId);
+      const captured = activePointer;
+      activePointer = null;
+      if (canvas.hasPointerCapture?.(captured)) canvas.releasePointerCapture(captured);
       setCursor(hovering && event.pointerType !== 'touch' ? 'grab' : '');
       start();
     };
 
     const onTouchStart = event => {
-      if (!settingsRef.current.interactive || event.touches.length !== 1) return;
+      if (!settingsRef.current.interactive || event.touches.length !== 1 || foreground(event)) return;
       toPointer(event.touches[0]);
       if (pickCard()) event.preventDefault();
     };
 
-    canvas.addEventListener('pointerdown', onPointerDown);
-    canvas.addEventListener('pointermove', onPointerMove);
-    canvas.addEventListener('pointerup', onPointerUp);
-    canvas.addEventListener('pointercancel', onPointerUp);
+    const input = viewportOrigin ? document : canvas;
+    input.addEventListener('pointerdown', onPointerDown, true);
+    input.addEventListener('pointermove', onPointerMove, true);
+    input.addEventListener('pointerup', onPointerUp, true);
+    input.addEventListener('pointercancel', onPointerUp, true);
     canvas.addEventListener('lostpointercapture', onPointerUp);
-    canvas.addEventListener('touchstart', onTouchStart, { passive: false });
+    input.addEventListener('touchstart', onTouchStart, { passive: false, capture: true });
+    const cancelDrag = () => { onPointerUp({ type: 'pointercancel' }); hovering = false; setCursor(''); };
+    window.addEventListener('blur', cancelDrag);
 
     const resize = () => {
-      view.width = Math.max(1, container.clientWidth);
-      view.height = Math.max(1, container.clientHeight);
-      const bounds = container.getBoundingClientRect();
+      resizeFrame = 0;
+      const origin = viewportOrigin?.current || container;
+      view.width = Math.max(1, origin.clientWidth);
+      view.height = Math.max(1, origin.clientHeight);
+      const bounds = origin.getBoundingClientRect();
       view.padding = Math.max(0, Math.min(clamp(settingsRef.current.overscan, 0, 160), bounds.left - 16, window.innerWidth - bounds.right - 16));
       view.renderWidth = view.width + view.padding * 2;
       view.renderHeight = view.height + view.padding * 2;
+      if (viewportOrigin) {
+        view.padding = 0;
+        view.renderWidth = window.innerWidth;
+        view.renderHeight = window.innerHeight;
+        view.offsetX = window.innerWidth / 2 - bounds.left - view.width / 2;
+        view.offsetY = bounds.top + view.height / 2 - window.innerHeight / 2;
+      }
       canvas.style.position = 'absolute';
       canvas.style.left = canvas.style.top = `${-view.padding}px`;
       canvas.style.width = `${view.renderWidth}px`;
       canvas.style.height = `${view.renderHeight}px`;
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, view.width < 600 ? 1.25 : 1.5, Math.sqrt(600000 / (view.renderWidth * view.renderHeight))));
-      renderer.setSize(view.renderWidth, view.renderHeight, false);
+      const ratio = Math.min(window.devicePixelRatio || 1, view.width < 600 ? 1.25 : 1.5, Math.sqrt((viewportOrigin ? 1600000 : 600000) / (view.renderWidth * view.renderHeight)));
+      if (canvas.width !== Math.floor(view.renderWidth * ratio) || canvas.height !== Math.floor(view.renderHeight * ratio)) {
+        renderer.setPixelRatio(ratio);
+        renderer.setSize(view.renderWidth, view.renderHeight, false);
+      }
       apply();
       render();
     };
 
     const resizeObserver = new ResizeObserver(resize);
-    resizeObserver.observe(container);
+    resizeObserver.observe(viewportOrigin?.current || container);
+    const queueResize = () => { if (!resizeFrame) resizeFrame = requestAnimationFrame(resize); };
+    if (viewportOrigin) {
+      window.addEventListener('resize', queueResize, { passive: true });
+      window.addEventListener('scroll', queueResize, { passive: true });
+    }
     const intersectionObserver = new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting;
       if (visible) start();
-      else { cancelAnimationFrame(raf); raf = 0; }
+      else { cancelDrag(); cancelAnimationFrame(raf); raf = 0; }
     });
     intersectionObserver.observe(container);
     const onVisibility = () => {
       if (!document.hidden) start();
-      else { cancelAnimationFrame(raf); raf = 0; }
+      else { cancelDrag(); cancelAnimationFrame(raf); raf = 0; }
     };
     const onReducedMotion = () => {
       reducedMotion = reduceQuery.matches;
-      if (reducedMotion) { sim.grab = null; placeHanging(sim, layout, false); }
+      if (reducedMotion) { cancelDrag(); placeHanging(sim, layout, false); }
       start();
     };
-    const onLost = event => { event.preventDefault(); ready = false; cancelAnimationFrame(raf); raf = 0; settingsRef.current.onError?.(); };
+    const onLost = event => { event.preventDefault(); cancelDrag(); ready = false; container.dataset.ready = 'false'; cancelAnimationFrame(raf); raf = 0; settingsRef.current.onError?.(); };
     const onRestored = () => { resize(); start(); };
     canvas.addEventListener('webglcontextlost', onLost);
     canvas.addEventListener('webglcontextrestored', onRestored);
@@ -1324,6 +1377,7 @@ const Lanyard = ({
     return () => {
       alive = false;
       cancelAnimationFrame(raf);
+      cancelAnimationFrame(resizeFrame);
       applyRef.current = null;
       if (controlsRef) controlsRef.current = null;
       canvas.removeEventListener('webglcontextlost', onLost);
@@ -1332,12 +1386,16 @@ const Lanyard = ({
       resizeObserver.disconnect();
       intersectionObserver.disconnect();
       document.removeEventListener('visibilitychange', onVisibility);
-      canvas.removeEventListener('pointerdown', onPointerDown);
-      canvas.removeEventListener('pointermove', onPointerMove);
-      canvas.removeEventListener('pointerup', onPointerUp);
-      canvas.removeEventListener('pointercancel', onPointerUp);
+      input.removeEventListener('pointerdown', onPointerDown, true);
+      input.removeEventListener('pointermove', onPointerMove, true);
+      input.removeEventListener('pointerup', onPointerUp, true);
+      input.removeEventListener('pointercancel', onPointerUp, true);
       canvas.removeEventListener('lostpointercapture', onPointerUp);
-      canvas.removeEventListener('touchstart', onTouchStart);
+      input.removeEventListener('touchstart', onTouchStart, true);
+      window.removeEventListener('blur', cancelDrag);
+      window.removeEventListener('resize', queueResize);
+      window.removeEventListener('scroll', queueResize);
+      if (viewportOrigin) setCursor('');
       [bodyMesh, frontMesh, backMesh, ring, clampMesh, eyelet, band].forEach(mesh => mesh.geometry?.dispose());
       [frontMaterial, backMaterial, edgeMaterial, metalMaterial, bandMaterial].forEach(material => material.dispose());
       [frontTexture, backTexture, strapTexture, grain, weave].forEach(texture => texture.dispose());
@@ -1345,9 +1403,9 @@ const Lanyard = ({
       renderer.dispose();
       if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
     };
-  }, [controlsRef]);
+  }, [controlsRef, viewportOrigin]);
 
-  return <div ref={containerRef} className={`lanyard ${overscan > 0 ? 'lanyard--overscan' : ''} ${className}`.trim()} style={style} />;
+  return <div ref={containerRef} data-ready="false" className={`lanyard ${viewportOrigin ? 'lanyard--viewport' : overscan > 0 ? 'lanyard--overscan' : ''} ${className}`.trim()} style={style} />;
 };
 
 export default Lanyard;

@@ -13,14 +13,14 @@
   "three": "0.160.0",
   "sharedRuntime": {
     "file": "../../public/slides/three-shared.js",
-    "bytes": 507709,
-    "gzipBytes": 131071,
-    "sha256": "ad17493385a1511a57b584f4b273bf3ae94b7aff2056d7591ede32145d6ed24a"
+    "bytes": 507718,
+    "gzipBytes": 131072,
+    "sha256": "b49a026e1479da6ca91415804c29f54284b58a2842b8746bf373ef026a38aece"
   },
   "bundle": {
     "file": "../../public/slides/certificate-experience.js",
-    "bytes": 238503,
-    "gzipBytes": 77344,
-    "sha256": "8d90507a6e75104e434bd5c58ebb8f8dc51e27ad552a2c879c8f60c20e3496d0"
+    "bytes": 240784,
+    "gzipBytes": 78081,
+    "sha256": "1f2aa1f003888221204259092b2baf255385eaa3320ae85f2df9afdea1409ea6"
   }
 }
