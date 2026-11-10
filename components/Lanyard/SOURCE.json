@@ -1,0 +1,26 @@
+{
+  "component": "React Bits Lanyard JS-CSS",
+  "registry": "https://reactbits.dev/r/Lanyard-JS-CSS.json",
+  "documentation": "https://reactbits.dev/components/lanyard",
+  "source": "User-supplied complete JSX/CSS attachment; adapted for this repository after reading the registry and docs.",
+  "license": "MIT + Commons Clause License Condition v1.0; see LICENSE.react-bits.md",
+  "adaptations": [
+    "Fangpian local completion certificate faces and logo",
+    "keyboard flip controls and static fallback",
+    "reduced motion and context recovery",
+    "offscreen/hidden pause and bounded pixel ratio"
+  ],
+  "three": "0.160.0",
+  "sharedRuntime": {
+    "file": "../../public/slides/three-shared.js",
+    "bytes": 507709,
+    "gzipBytes": 131071,
+    "sha256": "ad17493385a1511a57b584f4b273bf3ae94b7aff2056d7591ede32145d6ed24a"
+  },
+  "bundle": {
+    "file": "../../public/slides/certificate-experience.js",
+    "bytes": 236304,
+    "gzipBytes": 76591,
+    "sha256": "b8a9230da9623555bbfc79c0f843455dcd1a31cd1bff9d6ed0ec8bb6e3f9df09"
+  }
+}

@@ -7,6 +7,7 @@ import { createHash } from 'node:crypto';
 const root = new URL('../public/slides/', import.meta.url);
 function loadModel() {
   const context = { window: {}, console };
+  vm.runInNewContext(fs.readFileSync(new URL('three-shared.js', root), 'utf8'), context, { timeout: 3000 });
   vm.runInNewContext(fs.readFileSync(new URL('robot-scene.js', root), 'utf8'), context, { timeout: 3000 });
   return context.window.FangpianRobot;
 }

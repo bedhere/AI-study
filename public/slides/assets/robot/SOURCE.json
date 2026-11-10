@@ -9,9 +9,9 @@
   "originalModel": "Fangpian original code-native robot, derived from the user’s visual brief, not extracted from the reference website.",
   "bundle": {
     "file": "../../robot-scene.js",
-    "bytes": 515306,
-    "gzipBytes": 135167,
-    "sha256": "fb55313101afeb1833260f51b3ef99d92e894056f44dcd49a8b2c703e7481fc6"
+    "bytes": 15797,
+    "gzipBytes": 6675,
+    "sha256": "da07b7e832554908f6ce0463b0251bf0f1c2367961b49935e3612ba15cd310b0"
   },
   "build": {
     "bundler": "esbuild",
@@ -59,5 +59,12 @@
     "diagnostics": "changed values from rendered poses only",
     "headRotationOrder": "YXZ",
     "facingDiagnostics": "actual head.getWorldDirection; world unit normal and azimuth/elevation in radians"
+  },
+  "sharedRuntime": {
+    "file": "../../three-shared.js",
+    "version": "0.160.0",
+    "bytes": 507709,
+    "gzipBytes": 131071,
+    "sha256": "ad17493385a1511a57b584f4b273bf3ae94b7aff2056d7591ede32145d6ed24a"
   }
 }

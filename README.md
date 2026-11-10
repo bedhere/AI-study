@@ -48,7 +48,7 @@ npm test
 
 课程搜索同时匹配标题与正文，包括课件脚本中的动态教学文字。正文索引按语言在首次搜索时加载，支持加载提示、无结果提示和失败重试。`predev`、`prebuild` 与 `pretest` 自动生成索引；修改课件后可运行 `npm run build:search` 单独刷新。
 
-练习与自测继续可用，最近 50 次成绩保存在本浏览器。账号、云端同步、证书签发、社区投稿和问题反馈尚未接入公司服务；旧入口已移除或改为准备中说明。缺少原始素材的爸妈版不纳入本期开放课程。详情见 `docs/phase-2-local-learning.md`。
+练习与自测继续可用，最近 50 次成绩保存在本浏览器。结业证书已支持依据本机学习记录领取和下载。账号、云端同步、公司证书签发服务、社区投稿和问题反馈尚未接入；其他旧入口已移除或改为准备中说明。缺少原始素材的爸妈版不纳入本期开放课程。详情见 `docs/phase-2-local-learning.md`。
 
 `verify:content` 检查所有课件脚本语法，任何错误均会失败。原版记录的 25 处英文、韩文错误已全部修复。`check:resources` 检查 HTML 与 CSS 的静态本地资源引用，不包含远程链接可用性检测。
 
@@ -56,7 +56,7 @@ npm test
 
 首页原 JD 位置现在进入 `/slides/aiti.html`。方片 AITI 使用项目方提供的 16 道正式题目，分别观察 AI认可度 A、AI使用度 U、AI了解度 K、正向价值度 V；匹配 16 种方片AI人格，并生成含插画、四维雷达图、关键词、宣言、解读与成长建议的完整 PNG 人格卡。支持本机续答、修改答案、重测、人格图鉴和揭晓动画。
 
-图片按用户确认沿用参考站的 16 张原图与配色，保存在本地，不依赖参考站在线提供图片。DISC 保留在 `/slides/disc.html`；旧 `/slides/personality.html` 自动引导到对应新入口。AITI 不复用旧版 32 题 MBTI 答案，DISC 原记录保持独立。
+图片按用户确认沿用参考站的 16 张原图与配色，保存在本地，不依赖参考站在线提供图片。DISC 仅保留 `/slides/disc.html` 的旧链接与答卷兼容，已从首页和 AITI 展示入口移除；旧 `/slides/personality.html` 自动引导到对应新入口。AITI 不复用旧版 32 题 MBTI 答案，DISC 原记录保持独立。
 
 当前测试与报告为中文，五语言首页都有入口。AITI 是趣味自我观察体验，不用于能力、品德或绩效评价；答案不上传公司后台。题目、计分、角色映射和素材来源见 [AITI 开发说明](docs/aiti-development.md)。[旧版测试记录](docs/personality-tests.md)保留用于追溯。
 
@@ -65,3 +65,9 @@ npm test
 自有服务器的静态 Nginx 部署与打包方法见 [服务器部署说明](deploy/README.md)，本次发布信息见 [部署记录](docs/server-deployment.md)。
 
 当前代码从本地已有版本 `612564f` 继续开发，保留原 Git 历史。课件来源与许可见 `THIRD_PARTY_NOTICES.md` 和 `LICENSE`。公司提供的品牌素材单独管理，不作为原作者素材署名。
+
+## 结业证书与挂绳展示
+
+首页右侧新增可拖拽、翻面的结业证书卡片，正面为方片证书，背面为公司 Logo；手机端排在首屏下方。`certificate.html` 及对应语言入口读取真实课程目录与本浏览器的学习进度，学完全部课程后可填写姓名、生成本地编号、保存与下载 PNG。证书与学习进度同为浏览器本地记录，不冒充公司账号签发或云端验证。
+
+组件可读源码在 `components/Lanyard`、`components/certificate`。`npm run build:certificate` 构建共享 Three.js、机器人和证书区域；`predev` 与 `prebuild` 自动执行。`public/slides/certificate-data.js` 与 `certificate-art.js` 分别负责领取规则和三处共用的证书画面。详细规则与验证边界见 [结业证书开发记录](docs/certificate-lanyard.md)。

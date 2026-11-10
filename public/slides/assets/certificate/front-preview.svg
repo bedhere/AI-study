@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="682" viewBox="0 0 960 682">
+ <rect width="960" height="682" fill="#fbf8f0"/><path fill="#ffd85f" d="M0 0h13v682H0z"/>
+ <rect x="27" y="27" width="906" height="628" fill="none" stroke="#d9c68c"/>
+ <g font-family="Arial,Microsoft YaHei,sans-serif" fill="#303030">
+  <text x="54" y="82" font-size="27" font-weight="700">方片学堂</text><text x="54" y="105" font-size="12" fill="#746d5e">方片新媒体 · 全员拥抱 AI</text>
+  <text x="907" y="81" text-anchor="end" fill="#8a6c20" font-size="14">证书样张</text>
+  <path stroke="#ded8c9" d="M54 122H907M54 527H907"/>
+  <text x="480" y="217" font-size="64" font-weight="700" text-anchor="middle">结业证书</text><text x="480" y="248" font-size="14" fill="#8a6c20" text-anchor="middle">CERTIFICATE OF COMPLETION</text>
+  <text x="480" y="301" font-size="15" fill="#746d5e" text-anchor="middle">致每一位持续学习、拥抱 AI 的方片同学</text>
+  <text x="480" y="367" font-size="44" font-weight="700" text-anchor="middle">你的名字</text><path stroke="#b99b48" d="M326 385H634"/>
+  <text x="480" y="427" font-size="19" text-anchor="middle">完成全部课程，即可领取专属证书</text><text x="480" y="459" font-size="14" text-anchor="middle" fill="#746d5e">把所学用进真实工作，让技术与善意一起成长。</text>
+  <text x="54" y="565" font-size="11" fill="#746d5e">证书编号</text><text x="54" y="592" font-size="14" font-weight="700">FP · 等待你来点亮</text>
+  <text x="480" y="565" text-anchor="middle" font-size="11" fill="#746d5e">领取日期</text><text x="480" y="592" text-anchor="middle" font-size="14">完成学习后生成</text>
+  <text x="907" y="565" text-anchor="end" font-size="16" font-weight="700" fill="#8a6c20">正心正念</text><text x="907" y="592" text-anchor="end" font-size="16" font-weight="700" fill="#8a6c20">利他向善</text>
+  <text x="480" y="639" text-anchor="middle" font-size="11" fill="#8b8476">方片内部学习纪念 · 依据本浏览器的学习记录生成</text>
+ </g>
+</svg>

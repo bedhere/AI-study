@@ -1,0 +1,91 @@
+/* A hanging learning keepsake on the same warm-paper surface as the robot. */
+.fp-certificate-slot { position:absolute; top:4%; right:var(--fp-edge,32px); width:clamp(220px,17vw,320px); z-index:4; }
+.fp-cert-widget { color:var(--fp-ink,#303030); font-family:Arial,"Microsoft YaHei",sans-serif; }
+.fp-cert-stage { height:370px; position:relative; isolation:isolate; margin:0; }
+.fp-cert-stage .fp-cert-lanyard { position:absolute; inset:0; opacity:0; transition:opacity .2s; }
+.fp-cert-stage[data-ready=true] .fp-cert-lanyard { opacity:1; }
+.fp-cert-still { position:absolute; width:78%; top:29%; left:11%; transform:rotate(-5deg); transition:opacity .2s; }
+.fp-cert-still:before { content:""; position:absolute; width:14px; height:145px; left:50%; bottom:99%; background:#ffd85f; border-left:1px solid #c7a44b; border-right:1px solid #c7a44b; transform:rotate(5deg); transform-origin:bottom; }
+.fp-cert-still img { display:block; width:100%; height:auto; max-height:220px; object-fit:contain; background:#fbf8f0; border-radius:8px; box-shadow:1px 8px 18px #30303016; }
+.fp-cert-still.is-hidden { opacity:0; pointer-events:none; }
+.fp-cert-caption { padding:0 12px; }
+.fp-cert-invitation { display:flex; justify-content:space-between; align-items:center; gap:8px; color:var(--fp-muted,#746d5e); font-size:10px; padding-bottom:16px; border-bottom:1px solid var(--fp-line,#ded8c9); }
+.fp-cert-flip { appearance:none; padding:7px 0 7px 7px; border:0; background:transparent; color:inherit; font:inherit; cursor:pointer; white-space:nowrap; }
+.fp-cert-flip:hover { color:var(--fp-ink,#303030); }
+.fp-cert-caption h2 { margin:19px 0 9px; font-size:23px; line-height:1.3; letter-spacing:-.04em; }
+.fp-cert-caption p { margin:0 0 19px; font-size:12px; line-height:1.7; color:var(--fp-muted,#746d5e); }
+.fp-cert-progress-label { display:flex; justify-content:space-between; align-items:baseline; gap:16px; margin-bottom:9px; font-size:11px; color:var(--fp-muted,#746d5e); }
+.fp-cert-progress-label strong { font-size:19px; color:var(--fp-ink,#303030); }
+.fp-cert-progress-label strong span { font-size:12px; font-weight:400; color:var(--fp-muted,#746d5e); }
+.fp-cert-progress { appearance:none; display:block; width:100%; height:4px; border:0; border-radius:0; background:var(--fp-line,#e5dfd0); overflow:hidden; }
+.fp-cert-progress::-webkit-progress-bar { background:var(--fp-line,#e5dfd0); }
+.fp-cert-progress::-webkit-progress-value { background:#c49a26; }
+.fp-cert-progress::-moz-progress-bar { background:#c49a26; }
+.fp-cert-open { display:flex; justify-content:space-between; align-items:center; min-height:45px; margin-top:17px; font-size:12px; font-weight:700; color:var(--fp-ink,#303030); text-decoration:none; border-bottom:1px solid var(--fp-line,#ded8c9); }
+.fp-cert-open:hover { border-color:#b8890c; }
+.fp-cert-open span { font-size:20px; }
+.fp-cert-caption>small { display:block; margin-top:9px; color:var(--fp-muted,#746d5e); font-size:10px; line-height:1.6; }
+.fp-certificate-page { margin:0; color:#303030; background:#f5f1e8; font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif; }
+.fp-certificate-page * { box-sizing:border-box; }
+.fp-certificate-page a { color:inherit; }
+.fp-certificate-page button,.fp-certificate-page input { font:inherit; }
+.fp-certificate-page button,.fp-certificate-page a,.fp-certificate-slot button,.fp-certificate-slot a { -webkit-tap-highlight-color:transparent; }
+.fp-certificate-page :is(a,button,input):focus-visible,.fp-certificate-slot :is(button,a):focus-visible { outline:3px solid #b8890c; outline-offset:5px; }
+.fp-cert-page-header { height:80px; padding:0 max(28px,calc((100vw - 1440px)/2)); display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #3030301c; }
+.fp-cert-page-header>a { font-size:13px; text-decoration:none; }
+.fp-cert-brand { display:flex; gap:12px; align-items:center; }
+.fp-cert-brand img { border-radius:10px; }
+.fp-cert-brand strong { font-size:22px; letter-spacing:-.04em; }
+.fp-cert-page-main { max-width:1440px; margin:auto; padding:72px 28px 65px; }
+.fp-cert-page-kicker { display:flex; align-items:center; gap:12px; color:#8a6c20; font-size:13px; }
+.fp-cert-page-kicker:before { content:""; width:28px; height:2px; background:#b8890c; }
+.fp-cert-page-heading h1 { font-size:clamp(34px,4vw,58px); letter-spacing:-.05em; line-height:1.22; margin:18px 0; }
+.fp-cert-page-heading p { color:#746d5e; font-size:15px; line-height:1.8; margin:0; }
+.fp-cert-page-grid { display:grid; grid-template-columns:minmax(0,1.8fr) minmax(285px,.8fr); gap:65px; align-items:start; margin-top:48px; }
+.fp-cert-document { padding:18px; background:#eee8db; border:1px solid #dfd7c6; transform:rotate(-1deg); }
+.fp-cert-document img { display:block; width:100%; height:auto; }
+.fp-cert-document>p { margin:18px 0 2px; font-size:11px; line-height:1.6; color:#746d5e; text-align:center; overflow-wrap:anywhere; }
+.fp-cert-panel h2 { font-size:21px; line-height:1.5; margin:0 0 22px; }
+.fp-cert-page-count { margin-bottom:16px; }
+.fp-cert-page-count strong { font-size:48px; letter-spacing:-.05em; }
+.fp-cert-page-count span { color:#746d5e; font-size:14px; }
+.fp-cert-rule { font-size:13px; line-height:1.8; color:#746d5e; margin:22px 0 25px; }
+.fp-cert-form label { display:block; font-size:13px; font-weight:700; margin-bottom:10px; }
+.fp-cert-form input { width:100%; min-height:48px; padding:11px 13px; border:1px solid #cec5b2; border-radius:8px; color:#303030; background:#fffdf7; }
+.fp-cert-form>small { display:block; margin-top:8px; font-size:11px; color:#746d5e; }
+.fp-cert-error { min-height:20px; margin:7px 0 11px; font-size:12px; line-height:1.6; color:#a32d24; }
+.fp-cert-primary,.fp-cert-download { display:block; min-height:48px; width:100%; padding:12px 16px; border:1px solid #c7a44b; border-radius:8px; font-weight:700; font-size:14px; cursor:pointer; }
+.fp-cert-primary { color:#303030; background:#ffd85f; }
+.fp-cert-download { margin-top:12px; background:#fffdf7; color:#303030; border-color:#d8d0bf; text-decoration:none; text-align:center; }
+.fp-certificate-page button:disabled { opacity:.5; cursor:not-allowed; }
+.fp-certificate-page button:enabled:active { transform:translateY(1px); }
+.fp-cert-continue { display:block; width:fit-content; margin:22px auto 0; text-underline-offset:5px; font-size:13px; }
+.fp-cert-message { display:block; color:#4d6c36; font-size:12px; line-height:1.7; margin-top:12px; }
+.fp-cert-local-note { border-top:1px solid #ded8c9; padding-top:17px; color:#8b8476; font-size:11px; line-height:1.8; margin-top:24px; }
+.fp-cert-page-footer { max-width:1384px; margin:auto; padding:25px 28px 40px; border-top:1px solid #3030301c; color:#8b8476; font-size:12px; }
+@media(min-width:1051px) { .fp-certificate-slot .fp-cert-caption p { max-width:240px; } }
+@media(max-height:760px) and (min-width:1051px) { .fp-cert-stage { height:260px; } .fp-cert-caption h2 { margin-top:12px;font-size:20px; } .fp-cert-caption p { margin-bottom:13px; } .fp-cert-invitation { padding-bottom:8px; } .fp-cert-open { margin-top:10px; } }
+@media(max-width:1050px) {
+  .fp-certificate-slot { position:relative; top:auto; right:auto; width:auto; margin:25px var(--fp-edge,24px) 0; padding:0 12px 25px; border-top:1px solid var(--fp-line,#ded8c9); border-bottom:1px solid var(--fp-line,#ded8c9); }
+  .fp-cert-widget { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:center; max-width:650px; gap:24px; margin:auto; }
+  .fp-cert-stage { height:300px; }
+  .fp-cert-page-grid { gap:30px; grid-template-columns:minmax(0,1.5fr) minmax(270px,1fr); }
+}
+@media(max-width:700px) {
+  .fp-cert-page-header { height:68px; padding:0 22px; }
+  .fp-cert-page-main { padding:42px 22px 50px; }
+  .fp-cert-page-grid { grid-template-columns:1fr; gap:38px; margin-top:32px; }
+  .fp-cert-document { padding:10px; }
+  .fp-cert-page-count strong { font-size:40px; }
+  .fp-cert-page-heading p { font-size:13px; }
+}
+@media(max-width:600px) {
+  .fp-certificate-slot { padding:0 0 30px; margin-top:12px; }
+  .fp-cert-widget { display:block; max-width:340px; }
+  .fp-cert-stage { height:300px; }
+  .fp-cert-caption { padding:0 8px; }
+  .fp-cert-caption h2 { font-size:24px; }
+  .fp-cert-caption p { font-size:13px; }
+  .fp-cert-invitation { font-size:11px; }
+}
+@media(prefers-reduced-motion:reduce) { .fp-cert-still { transition:none; } .fp-certificate-page button:enabled:active { transform:none; } }

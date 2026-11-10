@@ -9,3 +9,6 @@
 - 方片虎格测试的题目与报告为独立编写，参考 IPIP 公共领域题项的主题、MBTI 四维偏好及 DISC 模型定义。未复制官方付费题库，也未采用带非商业限制的 OEJTS 题目。来源、授权链接和自定义计分边界见 `docs/personality-tests.md`。
 - 后续 AITI 版本使用用户提供的 16 道正式题目与人格设定。`public/slides/assets/aiti/` 的 16 张 PNG 按用户明确选择，来自其指定的参考项目 `https://fangpian-aiti-tigers.jmeng1376.chatgpt.site/`，沿用原始配色。逐图来源、字节数和 SHA-256 保存在该目录的 `manifest.json`；该记录不改变原图的权利归属。
 - 首页机器人为按用户参考图和几何提示重新编写的代码场景，使用本地打包的 Three.js 0.160.0 及同版本 RoundedBoxGeometry，许可为 MIT。官方包校验记录、可读场景源码与许可见 `public/slides/assets/robot/`。运行时不从 CDN 加载模型、库或字体。首页配色与组件材质参考用户指定的 `https://todo.fangpiankeji.cn/`，方片品牌图片继续使用原有本地素材。
+
+- 结业证书挂绳交互改造自 React Bits 的 Lanyard JS-CSS（https://reactbits.dev/components/lanyard），源码由用户附件提供，已读取官方注册描述并安装依赖。按本项目的静态 HTML 结构接入为 React 区域，重新设计证书正面、公司 Logo 背面及挂绳纹理；未使用原站证书图片或原账号服务。组件原作者为 David Haz，许可为 MIT + Commons Clause License Condition v1.0，完整许可保存在 `components/Lanyard/LICENSE.react-bits.md`，同时嵌入发布脚本的许可注释。
+- 机器人与证书挂绳共用一次加载的 Three.js 0.160.0 运行时 `public/slides/three-shared.js`，可读源码与构建脚本保留在仓库；版本、体积和哈希见对应 SOURCE.json。

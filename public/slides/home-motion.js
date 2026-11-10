@@ -114,7 +114,7 @@
   });
   canvas.addEventListener('webglcontextrestored', () => { contextLost = false; robot?.resize(); wake(); });
   canvas.addEventListener('fangpian:robot-asset', wake);
-  import('./robot-scene.js?v=20261110polish1').then(() => {
+  import('./robot-scene.js?v=20261110cert2').then(() => {
     if (disposed) return;
     robot = root.FangpianRobot?.mount(canvas) || null;
     if (robot) { canvas.dataset.meshes = String(robot.statistics.meshes); canvas.dataset.triangles = String(robot.statistics.triangles); }

@@ -4,7 +4,7 @@
 
 ## 接入
 
-在首页通过同源脚本载入 `../../robot-scene.js`，载入后：
+先通过同源脚本载入 `../../three-shared.js`，再载入 `../../robot-scene.js`。共享运行时也供证书挂绳使用，避免重复下载和创建两份 Three.js 实例。载入后：
 
 ```js
 const scene = window.FangpianRobot.mount(canvas, { anchorX: .62 });
@@ -52,8 +52,8 @@ WebGL2 不可用时 mount 返回 null；context lost 会发送 `fangpian:robot-c
 
 - Three.js **0.160.0**，从 `https://registry.npmjs.org/three/-/three-0.160.0.tgz` 获取，校验通过 `SOURCE.json` 所记 SHA-512。
 - `RoundedBoxGeometry.mjs` 为同一版本官方 addon；许可见 `LICENSE.three.txt`。
-- 可读主源码：`robot-scene-source.mjs`；发布文件：`../../robot-scene.js`，已包含所用库，运行时无需 CDN 或模型文件。胸前贴图使用与导航相同的本地 `../fangpian/logo-yellow-square.webp`，由浏览器复用缓存，加载完成后触发一次绘制；不逐帧上传贴图。
-- 使用项目已有 esbuild 构建：入口为本目录主源码，`three` alias 指向解包后官方 `build/three.module.js`，`bundle:true, format:'iife', platform:'browser', target:'es2020', minify:true, legalComments:'inline'`。
+- 可读主源码：`robot-scene-source.mjs`；发布文件：`../../robot-scene.js`，所用库由 `../../three-shared.js` 共享提供，运行时无需 CDN 或模型文件。胸前贴图使用与导航相同的本地 `../fangpian/logo-yellow-square.webp`，由浏览器复用缓存，加载完成后触发一次绘制；不逐帧上传贴图。
+- 使用 `npm run build:certificate` 统一构建：先按两个场景所需导出构建 `three-shared.js`，再将机器人与挂绳的 `three` 引用映射到同一个共享对象；使用 esbuild 的 IIFE / ES2020 / minify 配置。
 - 重建发布文件后同步更新 `SOURCE.json` 的字节数、gzip 大小与 SHA-256。
 
 姿态和眨眼节奏使用确定性数学，无渲染路径随机值；已有转头范围、真实 Three 世界矩阵四角朝向和俯仰对称、全过渡态正面可见性、粗指针与减少动态效果、中心进入逐帧响应、阴影预算、30/60/120 fps 阻尼一致性回归测试。场景实际网格和三角形数量由返回对象的 `statistics` 提供。

@@ -80,7 +80,7 @@ def ancestor(node, tag):
     return node
 
 def clean_html(source, name, counts):
-    if re.fullmatch(r'certificate(?:\.(?:en|ko|tw|hk))?\.html',name):
+    if re.fullmatch(r'certificate(?:\.(?:en|ko|tw|hk))?\.html',name) and 'data-fangpian-certificate' not in source:
         lang='en' if '.en.' in name else 'ko' if '.ko.' in name else 'zh-Hant' if ('.tw.' in name or '.hk.' in name) else 'zh-CN'
         title='Certificate service is not connected yet' if lang=='en' else '수료증 서비스는 준비 중입니다' if lang=='ko' else '學習證書服務待接入' if lang=='zh-Hant' else '学习证书服务待接入'
         body='Company accounts and certificate issuing will be connected in a later release. Continue learning from the course directory.' if lang=='en' else '회사 계정과 수료증 발급은 추후 연결됩니다. 강좌 목록에서 학습을 계속할 수 있습니다.' if lang=='ko' else '公司帳號與證書發放服務將在後續版本接入。你可以返回課程目錄繼續學習。' if lang=='zh-Hant' else '公司账号与证书发放服务将在后续版本接入。你可以返回课程目录继续学习。'
