@@ -5,6 +5,7 @@
 
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import { stepStrapSpring, strapSag } from './spring-strap.mjs';
 
 import './Lanyard.css';
 
@@ -883,6 +884,7 @@ const Lanyard = ({
     const curve = new THREE.CatmullRomCurve3(controls, false, 'centripetal');
     const view = { width: 1, height: 1, padding: 0, renderWidth: 1, renderHeight: 1, offsetX: 0, offsetY: 0 };
     let restingLength = 0, activePointer = null, resizeFrame = 0;
+    const lengthSpring = { value: 0, velocity: 0 };
     let layout = cardLayout('portrait', 0.3);
     let applied = {};
     let strapScale = STRAP_WIDTH;
@@ -958,6 +960,7 @@ const Lanyard = ({
       sim.anchor.set(anchorX, anchorY, 0);
       configureSimulation(sim, layout, anchorY - hangTop);
       restingLength = sim.rest;
+      if (!lengthSpring.value) lengthSpring.value = restingLength;
       sim.nodes[0].copy(sim.anchor);
       sim.previous[0].copy(sim.anchor);
     };
@@ -1043,6 +1046,7 @@ const Lanyard = ({
 
     const points = Array.from({ length: SAMPLES }, () => new THREE.Vector3());
     const sides = Array.from({ length: SAMPLES }, () => new THREE.Vector3());
+    const springControls = Array.from({ length: JOINTS }, () => new THREE.Vector3());
     const bends = BAND_BEND.map(angle => [Math.cos(angle), Math.sin(angle)]);
     const work = {
       tangent: new THREE.Vector3(),
@@ -1051,7 +1055,8 @@ const Lanyard = ({
       up: new THREE.Vector3(),
       across: new THREE.Vector3(),
       facing: new THREE.Vector3(),
-      end: new THREE.Vector3()
+      end: new THREE.Vector3(),
+      bend: new THREE.Vector3()
     };
 
     const updateBand = () => {
@@ -1059,17 +1064,39 @@ const Lanyard = ({
       const reach = EYELET_RADIUS + CLAMP_BODY + 0.05;
       let guide = JOINTS - 1;
       while (guide > 0 && sim.nodes[guide].distanceTo(hang) < reach * 1.1) guide--;
-      const axis = work.up.subVectors(sim.nodes[guide], hang);
+      const axis = work.up.subVectors(viewportOrigin ? sim.anchor : sim.nodes[guide], hang);
       if (axis.lengthSq() < 1e-8) axis.set(0, 1, 0).applyQuaternion(sim.body.quaternion);
       axis.normalize();
       mouth.copy(hang).addScaledVector(axis, reach);
       tuck.copy(hang).addScaledVector(axis, EYELET_RADIUS + CLAMP_BODY * 0.35);
       controls.length = 0;
-      for (let i = 0; i <= guide; i++) controls.push(sim.nodes[i]);
+      if (viewportOrigin) {
+        // Keep a supported bow while the spring changes length; no loose rope loop.
+        const span = sim.anchor.distanceTo(mouth);
+        const bow = strapSag(span, layout.height, lengthSpring.velocity);
+        const direction = work.tangent.subVectors(mouth, sim.anchor).normalize();
+        work.bend.set(.32, -1, .08).addScaledVector(direction, -work.bend.dot(direction));
+        for (let i = 0; i < JOINTS; i++) {
+          const t = i / JOINTS;
+          controls.push(springControls[i].lerpVectors(sim.anchor, mouth, t).addScaledVector(work.bend, bow * 4 * t * (1 - t)));
+        }
+      } else for (let i = 0; i <= guide; i++) controls.push(sim.nodes[i]);
       controls.push(mouth, tuck);
       curve.updateArcLengths();
       for (let i = 0; i < SAMPLES; i++) curve.getPointAt(i / (SAMPLES - 1), points[i]);
       const length = curve.getLength();
+      if (viewportOrigin) {
+        const chord = scratch.a.subVectors(points[SAMPLES - 1], points[0]);
+        const span = chord.length();
+        chord.normalize();
+        let deviation = 0;
+        for (const p of points) {
+          const delta = scratch.b.subVectors(p, points[0]);
+          delta.addScaledVector(chord, -delta.dot(chord));
+          deviation = Math.max(deviation, delta.length());
+        }
+        canvas.dataset.lanyardSpring = JSON.stringify({ span, length, deviation, extension: sim.rest / restingLength, velocity: lengthSpring.velocity });
+      }
       const held = 1 - mouth.distanceTo(tuck) / Math.max(length, 0.001);
       const position = bandGeometry.getAttribute('position');
       const normal = bandGeometry.getAttribute('normal');
@@ -1167,8 +1194,13 @@ const Lanyard = ({
       time += dt;
       const current = physics();
       if (viewportOrigin) {
-        const length = sim.grab ? Math.max(restingLength, sim.anchor.distanceTo(sim.grab.target) * 1.08 / JOINTS) : restingLength;
-        sim.rest += (length - sim.rest) * (1 - Math.exp(-(sim.grab ? 30 : 3) * dt));
+        const length = sim.grab ? Math.max(restingLength, sim.anchor.distanceTo(sim.grab.target) * 1.015 / JOINTS) : restingLength;
+        stepStrapSpring(lengthSpring, length, dt, sim.grab ? 30 : 8, sim.grab ? .92 : .72);
+        if (lengthSpring.value < restingLength * .97) {
+          lengthSpring.value = restingLength * .97;
+          lengthSpring.velocity = Math.max(0, lengthSpring.velocity);
+        }
+        sim.rest = lengthSpring.value;
       }
       stepSimulation(sim, dt, current, time);
       const body = sim.body;
@@ -1177,7 +1209,7 @@ const Lanyard = ({
         placeHanging(sim, layout, false);
       }
       render();
-      const resting = sim.calm > 1.2 && !sim.grab && current.breeze === 0 && Math.abs(sim.rest - restingLength) < 0.001;
+      const resting = sim.calm > 1.2 && !sim.grab && current.breeze === 0 && Math.abs(sim.rest - restingLength) < 0.001 && (!viewportOrigin || Math.abs(lengthSpring.velocity) < .005);
       if (visible && !resting) raf = requestAnimationFrame(tick);
     };
 
@@ -1191,7 +1223,7 @@ const Lanyard = ({
     const raycaster = new THREE.Raycaster();
     const pointer = new THREE.Vector2();
     const dragPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
-    const foreground = event => viewportOrigin && event.target?.closest?.('a,button,input,select,textarea,summary,label,[contenteditable],nav,dialog,h1,h2,h3,p,.fp-persona-card,.tool-card,.company-path-card');
+    const foreground = event => viewportOrigin && !event.target?.closest?.('.fp-intro-copy .hero-kicker,.fp-intro-copy .sub') && event.target?.closest?.('a,button,input,select,textarea,summary,label,[contenteditable],nav,dialog,h1,h2,h3,p,.fp-persona-card,.tool-card,.company-path-card');
 
     const toPointer = event => {
       const rect = canvas.getBoundingClientRect();
@@ -1280,7 +1312,9 @@ const Lanyard = ({
       if (viewportOrigin && event.type === 'pointerup') {
         toPointer(event);
         raycaster.ray.intersectPlane(dragPlane, sim.grab.target);
-        sim.rest = Math.max(restingLength, sim.anchor.distanceTo(sim.grab.target) * 1.08 / JOINTS);
+        sim.rest = Math.max(restingLength, sim.anchor.distanceTo(sim.grab.target) * 1.015 / JOINTS);
+        lengthSpring.value = sim.rest;
+        lengthSpring.velocity = 0;
         for (let i = 0; i < ITERATIONS; i++) solvePin(sim.body, sim.grab, sim.grab.target);
         render();
         const point = sim.grab.local.clone().applyQuaternion(sim.body.quaternion).add(sim.body.position).project(camera);

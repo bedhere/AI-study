@@ -16,10 +16,10 @@ const homeUrl = 'home' + suffix + '.html';
 const preview = 'assets/certificate/front-preview.svg';
 const logo = 'assets/fangpian/logo-yellow-square.webp';
 const labels = {
-  zh: { title: '你的结业证书', note: '把每一次「学会了」，变成看得见的成长。', drag: '拖动摆动 · 点击翻面', front: '看看正面', back: '看看背面', progress: '查看证书进度', claim: '领取结业证书', view: '查看我的证书', completed: '已完成', unit: '节课程', issued: '这份坚持，已经有了名字。', sample: '完成所选方向的必修课程，即可领取。' },
-  en: { title: 'Your completion certificate', note: 'Turn each completed lesson into visible growth.', drag: 'Drag to swing · Click to flip', front: 'Show front', back: 'Show back', progress: 'View certificate progress', claim: 'Claim my certificate', view: 'View my certificate', completed: 'Completed', unit: 'lessons', issued: 'A record of your learning journey.', sample: 'Complete your selected learning plan to claim yours.' },
+  zh: { title: '你的结业证书', note: '把每一次「学会了」，变成看得见的成长。', drag: '拖动回弹 · 点击翻面', front: '看看正面', back: '看看背面', progress: '查看证书进度', claim: '领取结业证书', view: '查看我的证书', completed: '已完成', unit: '节课程', issued: '这份坚持，已经有了名字。', sample: '完成所选方向的必修课程，即可领取。' },
+  en: { title: 'Your completion certificate', note: 'Turn each completed lesson into visible growth.', drag: 'Drag to stretch · Click to flip', front: 'Show front', back: 'Show back', progress: 'View certificate progress', claim: 'Claim my certificate', view: 'View my certificate', completed: 'Completed', unit: 'lessons', issued: 'A record of your learning journey.', sample: 'Complete your selected learning plan to claim yours.' },
   ko: { title: '나의 수료증', note: '배움의 한 걸음마다 성장을 기록하세요.', drag: '드래그하여 흔들기 · 클릭하여 뒤집기', front: '앞면 보기', back: '뒷면 보기', progress: '수료 진행 상황', claim: '수료증 받기', view: '나의 수료증 보기', completed: '완료', unit: '강좌', issued: '꾸준한 배움의 기록입니다.', sample: '모든 강좌를 마치면 받을 수 있어요.' },
-  tw: { title: '你的結業證書', note: '把每一次「學會了」，變成看得見的成長。', drag: '拖動擺動 · 點擊翻面', front: '看看正面', back: '看看背面', progress: '查看證書進度', claim: '領取結業證書', view: '查看我的證書', completed: '已完成', unit: '節課程', issued: '這份堅持，已經有了名字。', sample: '完成所選方向的必修課程，即可領取。' }
+  tw: { title: '你的結業證書', note: '把每一次「學會了」，變成看得見的成長。', drag: '拖動回彈 · 點擊翻面', front: '看看正面', back: '看看背面', progress: '查看證書進度', claim: '領取結業證書', view: '查看我的證書', completed: '已完成', unit: '節課程', issued: '這份堅持，已經有了名字。', sample: '完成所選方向的必修課程，即可領取。' }
 };
 const copy = labels[language === 'hk' ? 'tw' : language] || labels.zh;
 let backArtwork;
@@ -98,7 +98,7 @@ function CertificateWidget() {
         cardColor="#fbf8f0" finish="matte" size={0.6} anchor="center" strapLength={0.46}
         strapColor="#ffd85f" strapWidth={0.55} metal="gold" gravity={1} damping={0.72}
         elasticity={0.38} breeze={0} intro={false} controlsRef={controls}
-        onReady={onReady} onError={onError} onFaceChange={setSide} />, document.body)}
+        onReady={onReady} onError={onError} onFaceChange={setSide} />, document.getElementById('fpStory') || document.body)}
     </figure>
     <div className="fp-cert-caption">
       <div className="fp-cert-invitation"><span>{copy.drag}</span><button type="button" className="fp-cert-flip" onClick={flip}>{side === 'front' ? copy.back : copy.front}<span aria-hidden="true"> ↻</span></button></div>

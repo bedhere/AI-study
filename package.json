@@ -20,7 +20,7 @@
     "check:outbound": "python scripts/audit-outbound.py --check",
     "check:consistency": "node scripts/sync-course-content.mjs",
     "pretest": "node scripts/build-search-index.mjs",
-    "test": "node --test tests/local-learning.test.mjs tests/personality.test.mjs tests/aiti.test.mjs tests/company-paths.test.mjs tests/home-motion.test.mjs tests/robot-scene.test.mjs tests/mbti-entry.test.mjs tests/aiti-collection.test.mjs tests/certificate.test.mjs tests/employee-feedback.test.mjs tests/comics-and-navigation.test.mjs",
+    "test": "node --test tests/local-learning.test.mjs tests/personality.test.mjs tests/aiti.test.mjs tests/company-paths.test.mjs tests/home-motion.test.mjs tests/robot-scene.test.mjs tests/mbti-entry.test.mjs tests/aiti-collection.test.mjs tests/certificate.test.mjs tests/employee-feedback.test.mjs tests/comics-and-navigation.test.mjs tests/spring-strap.test.mjs",
     "build:certificate": "node scripts/build-certificate.mjs"
   },
   "dependencies": {
