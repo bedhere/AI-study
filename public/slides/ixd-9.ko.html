@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>상태 기계와 경계를 프롬프트에 넣기 | 方片学堂</title>
+<title>상태 기계와 경계를 프롬프트에 넣기 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -23,7 +23,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="AI学院 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="상태 기계와 경계를 프롬프트에 넣기">
 <meta property="og:description" content="지난 레슨에서 「무엇을」을 목표와 장면으로 옮겼다면, 이번엔 「대충 넘기지 마」를 보완해요. 규칙은 단순해요: AI는 당신이 말한 상태만 진지하게 쓰고, 안 말한 건 전부 맑은 날로 상상해요. 그러니 상태를 빠짐없이 적고, 엣지 케이스를 못 박고, 오류 방지를 분명히 쓰세요. 이 셋이 합쳐지면 인터랙션 스펙이에요.">
 
@@ -97,13 +97,14 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">인터랙션 엔지니어링 · 9 / 10</div>
-    <h1>상태 기계와 경계를 프롬프트에 넣기</h1>
+    <h1>상태 기계와 경계를 프롬프트에 넣기</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>상태 기계와 경계를 프롬프트에 넣기</strong><p>AI学院 · 함께 배우는 AI</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">지난 레슨에서 「무엇을」을 목표와 장면으로 옮겼다면, 이번엔 「대충 넘기지 마」를 보완해요. 규칙은 단순해요: <b>AI는 당신이 말한 상태만 진지하게 쓰고, 안 말한 건 전부 맑은 날로 상상해요</b>. 그러니 상태를 빠짐없이 적고, 엣지 케이스를 못 박고, 오류 방지를 분명히 쓰세요. 이 셋이 합쳐지면 인터랙션 스펙이에요.</p>
     <div class="chips"><span class="chip">상태 5종</span><span class="chip">엣지 케이스 룰렛</span><span class="chip">인터페이스 자세</span><span class="chip">스펙 블록 빌더</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>화면마다 상태를 빠짐없이 적고, 엣지 케이스를 못 박고, 오류 방지 요구를 분명히 쓰세요. 상태 기계 보완기 + 엣지 케이스 룰렛, 복사 가능한 검수 문구 템플릿까지</p></aside><!--seo:end-->  <section class="reveal">

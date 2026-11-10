@@ -19,8 +19,8 @@
   },
   "bundle": {
     "file": "../../public/slides/certificate-experience.js",
-    "bytes": 236304,
-    "gzipBytes": 76591,
-    "sha256": "b8a9230da9623555bbfc79c0f843455dcd1a31cd1bff9d6ed0ec8bb6e3f9df09"
+    "bytes": 238503,
+    "gzipBytes": 77344,
+    "sha256": "8d90507a6e75104e434bd5c58ebb8f8dc51e27ad552a2c879c8f60c20e3496d0"
   }
 }

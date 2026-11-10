@@ -56,7 +56,7 @@ for lang, copy in COPY.items():
     source = re.sub(r'(<div class="fp-top-links">[\s\S]*?)<a href="(?:aiti.html|#aiPersonality)">[^<]+</a>', lambda m:m[1]+'<a href="#aiPersonality">'+q('nav')+'</a>', source, count=1)
     source = re.sub(r'<script src="(?:aiti-data|personality-data)\.js\?v=[^"]+" defer></script>', '<script src="aiti-data.js?v=20261110collection1" defer></script>', source)
     source = source.replace('20261109motion1','20261110collection1').replace('20261109motion2','20261110collection1')
-    source = re.sub(r'(home-motion\.(?:css|js)\?v=)[^"\s]+', r'\g<1>20261110cert2', source)
+    source = re.sub(r'(home-motion\.(?:css|js)\?v=)[^"\s]+', r'\g<1>20261110space3', source)
     source = re.sub(r'(<a class="tiger-entry" id="tigerTestEntry"[\s\S]*?<span class="tiger-entry-title">)[^<]+', lambda m:m[1]+('方片 AI 人格测试' if lang=='zh' else '方片 AI 人格測試' if lang in ('tw','hk') else 'Fangpian AI personality' if lang=='en' else '팡피엔 AI 성격 테스트'), source, count=1)
     source = re.sub(r'(<a class="tiger-entry" id="tigerTestEntry"[\s\S]*?<span class="tiger-entry-description">)[^<]+', lambda m:m[1]+q('hub'), source, count=1)
     file.write_text(source,encoding='utf-8')

@@ -725,6 +725,7 @@ const Lanyard = ({
   breeze = 0.5,
   interactive = true,
   intro = true,
+  overscan = 0,
   className = '',
   style,
   controlsRef,
@@ -757,6 +758,7 @@ const Lanyard = ({
     breeze,
     interactive,
     intro,
+    overscan,
     onReady,
     onError,
     onFaceChange
@@ -878,7 +880,7 @@ const Lanyard = ({
     const mouth = new THREE.Vector3();
     const tuck = new THREE.Vector3();
     const curve = new THREE.CatmullRomCurve3(controls, false, 'centripetal');
-    const view = { width: 1, height: 1 };
+    const view = { width: 1, height: 1, padding: 0, renderWidth: 1, renderHeight: 1 };
     let layout = cardLayout('portrait', 0.3);
     let applied = {};
     let strapScale = STRAP_WIDTH;
@@ -928,13 +930,16 @@ const Lanyard = ({
 
     const frameView = () => {
       const s = settingsRef.current;
-      const aspect = view.width / view.height;
+      const logicalAspect = view.width / view.height;
       let viewHeight = layout.height / clamp(s.size, 0.15, 0.9);
       const minimumWidth = layout.width / 0.86;
-      if (viewHeight * aspect < minimumWidth) viewHeight = minimumWidth / aspect;
-      const viewWidth = viewHeight * aspect;
-      camera.aspect = aspect;
-      camera.position.set(0, 0, viewHeight / 2 / Math.tan((FOV * Math.PI) / 360));
+      if (viewHeight * logicalAspect < minimumWidth) viewHeight = minimumWidth / logicalAspect;
+      const viewWidth = viewHeight * logicalAspect;
+      // Expand the frustum with the canvas, retaining the card's original pixel size
+      // and hang position. CSS overflow alone cannot reveal pixels outside WebGL.
+      const renderHeight = viewHeight * view.renderHeight / view.height;
+      camera.aspect = view.renderWidth / view.renderHeight;
+      camera.position.set(0, 0, renderHeight / 2 / Math.tan((FOV * Math.PI) / 360));
       camera.lookAt(0, 0, 0);
       camera.updateProjectionMatrix();
       camera.updateMatrixWorld();
@@ -969,7 +974,7 @@ const Lanyard = ({
         ring.position.set(0, layout.ringY, 0);
         applied.framingKey = '';
       }
-      const framingKey = `${layoutKey}|${s.size}|${s.anchor}|${s.strapLength}|${view.width}|${view.height}`;
+      const framingKey = `${layoutKey}|${s.size}|${s.anchor}|${s.strapLength}|${view.width}|${view.height}|${view.padding}`;
       if (framingKey !== applied.framingKey) {
         frameView();
         if (!placed) {
@@ -1274,8 +1279,16 @@ const Lanyard = ({
     const resize = () => {
       view.width = Math.max(1, container.clientWidth);
       view.height = Math.max(1, container.clientHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, view.width < 600 ? 1.25 : 1.5, Math.sqrt(600000 / (view.width * view.height))));
-      renderer.setSize(view.width, view.height, false);
+      const bounds = container.getBoundingClientRect();
+      view.padding = Math.max(0, Math.min(clamp(settingsRef.current.overscan, 0, 160), bounds.left - 16, window.innerWidth - bounds.right - 16));
+      view.renderWidth = view.width + view.padding * 2;
+      view.renderHeight = view.height + view.padding * 2;
+      canvas.style.position = 'absolute';
+      canvas.style.left = canvas.style.top = `${-view.padding}px`;
+      canvas.style.width = `${view.renderWidth}px`;
+      canvas.style.height = `${view.renderHeight}px`;
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, view.width < 600 ? 1.25 : 1.5, Math.sqrt(600000 / (view.renderWidth * view.renderHeight))));
+      renderer.setSize(view.renderWidth, view.renderHeight, false);
       apply();
       render();
     };
@@ -1334,7 +1347,7 @@ const Lanyard = ({
     };
   }, [controlsRef]);
 
-  return <div ref={containerRef} className={`lanyard ${className}`.trim()} style={style} />;
+  return <div ref={containerRef} className={`lanyard ${overscan > 0 ? 'lanyard--overscan' : ''} ${className}`.trim()} style={style} />;
 };
 
 export default Lanyard;

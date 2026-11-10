@@ -7,7 +7,7 @@
 先通过同源脚本载入 `../../three-shared.js`，再载入 `../../robot-scene.js`。共享运行时也供证书挂绳使用，避免重复下载和创建两份 Three.js 实例。载入后：
 
 ```js
-const scene = window.FangpianRobot.mount(canvas, { anchorX: .62 });
+const scene = window.FangpianRobot.mount(canvas, { anchorX: .62, scale: 1 });
 // scene 为 null 时显示 robot-poster.svg。
 scene?.update({ progress, pointerX, pointerY, pointerActive, dt, active: true, reducedMotion });
 // progress: 0 全身、1 头部近景、1.55–1.73 双眼切换引号、2 引号近景。
@@ -57,3 +57,5 @@ WebGL2 不可用时 mount 返回 null；context lost 会发送 `fangpian:robot-c
 - 重建发布文件后同步更新 `SOURCE.json` 的字节数、gzip 大小与 SHA-256。
 
 姿态和眨眼节奏使用确定性数学，无渲染路径随机值；已有转头范围、真实 Three 世界矩阵四角朝向和俯仰对称、全过渡态正面可见性、粗指针与减少动态效果、中心进入逐帧响应、阴影预算、30/60/120 fps 阻尼一致性回归测试。场景实际网格和三角形数量由返回对象的 `statistics` 提供。
+
+首页在 1440px 及以上通过可变 options 使用 `anchorX:.59, scale:.9`，给右侧证书保留独立间距。较窄屏幕恢复 `.62 / 1`。scale 只调整相机缩放，不改变转头姿态与鼠标角度边界。

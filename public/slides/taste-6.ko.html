@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>일관성: 시스템감은 어디서 오나 | 方片学堂</title>
+<title>일관성: 시스템감은 어디서 오나 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -22,7 +22,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="AI学院 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="일관성: 시스템감은 어디서 오나">
 <meta property="og:description" content="어떤 UI는 하나씩은 괜찮은데, 합치면 제각각 냄새가 나요. 빠진 건 결국 하나: 모두가 지키는 변수 세트예요. 이번 레슨은 디자인 토큰 — 변수 먼저, 스타일은 따라가요.">
 
@@ -72,13 +72,14 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">미학 엔지니어링 · 6 / 12</div>
-    <h1>일관성: 시스템감은 어디서 오나</h1>
+    <h1>일관성: 시스템감은 어디서 오나</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>일관성: 시스템감은 어디서 오나</strong><p>AI学院 · 함께 배우는 AI</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">어떤 UI는 하나씩은 괜찮은데, 합치면 제각각 냄새가 나요. 빠진 건 결국 하나: 모두가 지키는 변수 세트예요. 이번 레슨은 디자인 토큰 — 변수 먼저, 스타일은 따라가요.</p>
     <div class="chips"><span class="chip">design token</span><span class="chip">CSS 변수</span><span class="chip">시스템감</span></div>
   </header><aside class="xa-tldr company-source-case"><p>원본 강좌의 공개 웹사이트 사례를 교육 자료로 사용합니다. 프로젝트 이력·방문량·검색 수록 데이터는 팡피엔 내부 플랫폼의 실적이 아니며 예제 코드도 현재 학당 구현을 뜻하지 않습니다.</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>예쁜 사이트 뒤에는 디자인 변수가 있어요. 이 사이트의 실제 CSS를 열어 보세요: 컨트롤 높이·둥근 모서리·색이 왜 전 사이트 한 단계인지, 한곳만 바꿔도 전체가 따라가는지</p></aside><!--seo:end-->  <section class="reveal">
@@ -121,7 +122,7 @@
       <div class="toy-body">
         <div class="toy-hint">같은 상단바 버튼 줄에서 「각자 쓰기」로 바꿔 보세요.</div>
         <div class="mockwin">
-          <div class="mockwin-bar"><i></i><i></i><i></i><span class="mockwin-url">方片学堂/slides/learn.html</span></div>
+          <div class="mockwin-bar"><i></i><i></i><i></i><span class="mockwin-url">AI学院/slides/learn.html</span></div>
           <div class="mock" style="padding:24px;display:flex;align-items:center;justify-content:center">
             <div id="t6bar" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center">
               <span class="t6-ctlbtn">공유</span>

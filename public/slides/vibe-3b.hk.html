@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="讓 AI 連着做十個功能，你會攢出八個長得差不多的按鈕類。它不是不會複用，是每輪對話都不知道你已經有什麼。這一節講樣式為什麼會增殖、怎麼收乾淨，以及哪些差異該留着。">
 <meta name="keywords" content="CSS 收斂,重複造輪子,design token,樣式複用,技術債,Vibe Coding">
-<meta name="author" content="方片">
-<title>樣式收斂：一個按鈕不要八套 CSS | 方片学堂</title>
 
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<title>樣式收斂：一個按鈕不要八套 CSS | AI学院</title>
+
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:locale" content="zh_HK">
 
 
@@ -102,13 +102,14 @@ code{color:var(--vibe-deep);background:rgba(13,148,136,.08)}
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="樣式收斂：一個按鈕不要八套 CSS"><meta property="og:description" content="讓 AI 連着做十個功能，你會攢出八個長得差不多的按鈕類。它不是不會複用，是每輪對話都不知道你已經有什麼。這一節講樣式為什麼會增殖、怎麼收乾淨，以及哪些差異該留着。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">Vibe Coding 方法論 · 質素底綫</div>
-    <h1>樣式收斂：一個按鈕不要八套 CSS</h1>
+    <h1>樣式收斂：一個按鈕不要八套 CSS</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>樣式收斂：一個按鈕不要八套 CSS</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">讓 AI 連着做十個功能，你會攢出八個長得差不多的按鈕類。它不是不會複用，是每輪對話都不知道你已經有什麼。這一節講樣式為什麼會增殖、怎麼收乾淨，以及哪些差異該留着。</p>
     <div class="chips"><span class="chip">複用優先</span><span class="chip">design token</span><span class="chip">技術債</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>樣式為什麼會增殖、怎麼分批收進 token，以及哪些差異該留着</p></aside><!--seo:end-->  <section class="reveal">

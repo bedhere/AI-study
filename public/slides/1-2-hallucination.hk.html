@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>大模型幻覺 (Hallucination) | 方片学堂</title>
+<title>大模型幻覺 (Hallucination) | AI学院</title>
 <script>
 // 內嵌詞表與注意力權重（自包含，不依賴外部 global-attn.js）
 // 為幻覺演示提供合理的候選詞權重數據
@@ -339,7 +339,7 @@ window.GLOBAL_ATTN = (function() {
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style><!-- SEO Start -->
 <meta name="description" content="模型不知道事實，只是在做概率採樣。看它如何自信地編造：選擇一個案例，點擊「開始生成」，觀察幻覺如何在逐詞生成中產生。">
 <meta name="keywords" content="大模型幻覺,Hallucination,AI胡説,幻覺緩解,RAG,Prompt約束">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -351,7 +351,7 @@ window.GLOBAL_ATTN = (function() {
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:title" content="大模型幻覺 (Hallucination)">
 <meta property="og:description" content="模型不知道事實，只是在做概率採樣。看它如何自信地編造：選擇一個案例，點擊「開始生成」，觀察幻覺如何在逐詞生成中產生。">
 
@@ -368,12 +368,13 @@ window.GLOBAL_ATTN = (function() {
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">幻覺與應對</div>
-    <h1>大模型幻覺 (Hallucination)</h1>
+    <h1>大模型幻覺 (Hallucination)</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>大模型幻覺 (Hallucination)</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
     <p class="subtitle">模型不知道事實，只是在做概率採樣。看它如何自信地編造：選擇一個案例，點擊「開始生成」，觀察幻覺如何在逐詞生成中產生。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>三類典型幻覺：事實錯誤 / 自信編造 / 知識截止</p></aside><!--seo:end-->  <div class="main-area paywall-locked xa-peek">
     <div class="left-panel">

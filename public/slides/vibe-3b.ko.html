@@ -6,9 +6,9 @@
 <meta name="description" content="AI에게 기능을 열 개 연달아 시키면, 거의 똑같이 생긴 버튼 클래스가 여덟 개 쌓입니다. 재사용을 못하는 게 아니라, 대화가 새로 열릴 때마다 이미 있는 걸 모르는 거예요. 이 레슨에서는 스타일이 왜 증식하는지, 어떻게 깔끔히 걷어내는지, 어떤 차이는 남겨야 하는지 이야기합니다.">
 <meta name="keywords" content="CSS 수렴,중복 스타일,design token,스타일 재사용,기술 부채,Vibe Coding">
 <meta name="author" content="팡피엔">
-<title>스타일 수렴: 버튼 하나에 CSS 여덟 벌은 그만 | 方片学堂</title>
+<title>스타일 수렴: 버튼 하나에 CSS 여덟 벌은 그만 | AI学院</title>
 
-<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="AI学院 · AI 프로덕트 매니저 교육">
 <meta property="og:locale" content="ko_KR">
 
 
@@ -102,13 +102,14 @@ code{color:var(--vibe-deep);background:rgba(13,148,136,.08)}
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="스타일 수렴: 버튼 하나에 CSS 여덟 벌은 그만"><meta property="og:description" content="AI에게 기능을 열 개 연달아 시키면, 거의 똑같이 생긴 버튼 클래스가 여덟 개 쌓입니다. 재사용을 못하는 게 아니라, 대화가 새로 열릴 때마다 이미 있는 걸 모르는 거예요. 이 레슨에서는 스타일이 왜 증식하는지, 어떻게 깔끔히 걷어내는지, 어떤 차이는 남겨야 하는지 이야기합니다."><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">Vibe Coding 방법론 · 품질 기준선</div>
-    <h1>스타일 수렴: 버튼 하나에 CSS 여덟 벌은 그만</h1>
+    <h1>스타일 수렴: 버튼 하나에 CSS 여덟 벌은 그만</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>스타일 수렴: 버튼 하나에 CSS 여덟 벌은 그만</strong><p>AI学院 · 함께 배우는 AI</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">AI에게 기능을 열 개 연달아 시키면, 거의 똑같이 생긴 버튼 클래스가 여덟 개 쌓입니다. 재사용을 못하는 게 아니라, 대화가 새로 열릴 때마다 이미 있는 걸 모르는 거예요. 이 레슨에서는 스타일이 왜 증식하는지, 어떻게 깔끔히 걷어내는지, 어떤 차이는 남겨야 하는지 이야기합니다.</p>
     <div class="chips"><span class="chip">재사용 우선</span><span class="chip">design token</span><span class="chip">기술 부채</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>스타일이 왜 증식하는지, token으로 어떻게 나눠 걷어내는지, 어떤 차이는 남겨야 하는지</p></aside><!--seo:end-->  <section class="reveal">

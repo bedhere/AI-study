@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>防錯與可逆：讓用戶敢點 | 方片学堂</title>
+<title>防錯與可逆：讓用戶敢點 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -12,7 +12,7 @@
 <!-- SEO Start -->
 <meta name="description" content="上一節教錯誤怎麼説，這一節往前挪一步：讓錯誤壓根發生不了，發生了也能一鍵回頭。AI 生成的應用最愛用確認彈窗當保險，但那是最弱的一道防綫，你自己動手刪兩條數據就明白了。">
 <meta name="keywords" content="交互工程,防錯設計,撤銷,確認彈窗,可逆性,About Face,危險操作">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -23,7 +23,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:title" content="防錯與可逆：讓用戶敢點">
 <meta property="og:description" content="上一節教錯誤怎麼説，這一節往前挪一步：讓錯誤壓根發生不了，發生了也能一鍵回頭。AI 生成的應用最愛用確認彈窗當保險，但那是最弱的一道防綫，你自己動手刪兩條數據就明白了。">
 
@@ -130,13 +130,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">交互工程 · 3 / 10</div>
-    <h1>防錯與可逆：讓用戶敢點</h1>
+    <h1>防錯與可逆：讓用戶敢點</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>防錯與可逆：讓用戶敢點</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">上一節教錯誤怎麼説，這一節往前挪一步：<b>讓錯誤壓根發生不了，發生了也能一鍵回頭</b>。AI 生成的應用最愛用確認彈窗當保險，但那是最弱的一道防綫，你自己動手刪兩條數據就明白了。</p>
     <div class="chips"><span class="chip">防錯三板斧</span><span class="chip">撤銷 toast</span><span class="chip">狼來了實驗</span><span class="chip">改造演練</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>與其事後報錯，先讓錯誤發生不了；撤銷讓探索變安全，確認彈窗是最弱的防錯。親手改造三個危險按鈕</p></aside><!--seo:end-->  <section class="reveal">
@@ -341,7 +342,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>確認彈窗是最弱的防綫：</b>狼來了效應，常規彈窗被無腦點掉，真危險來時它早已失效。做，唔好問，然後備好撤銷。</p></div>
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>給 AI 提需求的話術：</b>「刪除立即生效，彈出可撤銷的 toast，保留 5 秒」比「刪除要有確認」產出好一個檔次。流程裏的多餘步驟怎麼砍，下一節講。</p></div>
     </div>
-    <p class="src-note"><b>內容來源：</b>方片學堂「交互工程」專題原創；部分交互原則整理自《About Face 4：交互設計精髓》。</p>
+    <p class="src-note"><b>內容來源：</b>AI学院「交互工程」專題原創；部分交互原則整理自《About Face 4：交互設計精髓》。</p>
   </section>
 
 </main>

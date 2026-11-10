@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>缓存：AI 账单的隐形折扣 | 方片学堂</title>
+<title>缓存：AI 账单的隐形折扣 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
 <meta name="description" content="上一课的哈希表解决了「怎么瞬间找到」，这一课解决另一个问题：算过的东西，别再算第二遍。你在模型价格表上见过的「缓存命中五折甚至一折」，账单上省下的每一分钱，背后都是同一种收纳方式——把算过的结果存起来，下次直接取。">
 <meta name="keywords" content="KV Cache,语义缓存,提示词缓存,prompt caching,AI成本优化,缓存失效,数据结构入门">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
+<meta property="og:site_name" content="AI学院 · 全员 AI 学习">
 <meta property="og:title" content="缓存：AI 账单的隐形折扣">
 <meta property="og:description" content="上一课的哈希表解决了「怎么瞬间找到」，这一课解决另一个问题：算过的东西，别再算第二遍。你在模型价格表上见过的「缓存命中五折甚至一折」，账单上省下的每一分钱，背后都是同一种收纳方式——把算过的结果存起来，下次直接取。">
 
@@ -125,13 +125,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">编程基础篇 · 哈希与缓存：空间换时间</div>
-    <h1>缓存：AI 账单的隐形折扣</h1>
+    <h1>缓存：AI 账单的隐形折扣</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>缓存：AI 账单的隐形折扣</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">上一课的哈希表解决了「怎么瞬间找到」，这一课解决另一个问题：<b>算过的东西，别再算第二遍</b>。你在模型价格表上见过的「缓存命中五折甚至一折」，账单上省下的每一分钱，背后都是同一种收纳方式——把算过的结果存起来，下次直接取。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>KV Cache 和语义缓存都是同一招：算过的别再算。拖动命中率滑块实时看账单变化——Harness 核心篇成本优化的底层原理</p></aside><!--seo:end-->  <div class="sec-label">先想一个日常场景</div>
 

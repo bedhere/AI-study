@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Grok Build 소스코드 강의 20강: MCP 클라이언트, OAuth, 도구 가시성 및 연결 복구">
   <meta name="author" content="팡피엔">
-  <title>MCP: 연결은 시작일 뿐입니다 | 方片学堂</title>
+  <title>MCP: 연결은 시작일 뿐입니다 | AI学院</title>
 
 
-<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="AI学院 · AI 프로덕트 매니저 교육">
 <meta property="og:locale" content="ko_KR">
 
 
@@ -57,12 +57,13 @@
 <!--seo:begin--><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><meta property="og:type" content="article"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:title" content="MCP: 연결은 시작일 뿐입니다"><meta property="og:description" content="Grok Build 소스코드 강의 20강: MCP 클라이언트, OAuth, 도구 가시성 및 연결 복구"><meta name="twitter:card" content="summary_large_image"><!--seo:end-->
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
   <main class="lesson">
     <header>
       <div class="eyebrow">Grok Build 소스코드 강의 · 12 / 20</div>
-      <h1>MCP: <span>연결은 시작일 뿐입니다</span></h1>
+      <h1>MCP: <span>연결은 시작일 뿐입니다</span></h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>MCP: 연결은 시작일 뿐입니다</strong><p>AI学院 · 함께 배우는 AI</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
       <p class="lead">실제 클라이언트는 설정 병합, OAuth, 기능 탐색, 네임스페이스 격리, 모델 가시성 제어, 상태 푸시, 연결 복구까지 처리해야 합니다. 소스코드는 이 책임을 MCP crate와 Session Actor 주변에 분산시킵니다.</p>
       <div class="chips"><span class="tag">Client Role</span><span class="tag">stdio / Streamable HTTP</span><span class="tag">OAuth</span><span class="tag">server__tool</span><span class="tag">50ms 상태 병합</span></div>
     </header>

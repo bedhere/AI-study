@@ -89,7 +89,11 @@ if ! $ready; then
     false
 fi
 
-for path in /slides/home.html /slides/learn.html /slides/aiti.html /slides/disc.html /slides/local-learning.js /slides/search-index.zh.json; do
+for path in /slides/home.html /slides/learn.html /slides/aiti.html /slides/certificate.html \
+    /slides/local-learning.js /slides/certificate-data.js /slides/certificate-art.js \
+    /slides/academy-brand.css /slides/academy-knowledge.html /slides/academy-practice.html /slides/academy-review.html \
+    /slides/employee-feedback.js /slides/employee-feedback-store.js /slides/employee-feedback-data.js /slides/employee-feedback.css \
+    /slides/assets/fangpian/employee-xiaoduan.webp /slides/search-index.zh.json; do
     code=$(curl --noproxy '*' -sS -o /dev/null -w '%{http_code}' -H 'Host: 111.228.5.133' "http://127.0.0.1$path")
     if [[ "$code" != 200 ]]; then
         echo "Health check failed: $path returned $code" >&2

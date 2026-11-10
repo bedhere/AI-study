@@ -10,7 +10,7 @@ window.COURSE = {
   meta: {
     title: '学 AI 产品，从入门到精通',
     subtitle: '从大模型底层原理到 AI Agent Harness',
-    brand: '方片学堂',
+    brand: 'AI学院',
     author: '方片',
     authorUrl: '',
     github: 'https://github.com/bedhere/AI-study',
@@ -29,6 +29,7 @@ window.COURSE = {
       routes: ['use', 'pro', 'pm', 'build'],
       prologue: true,
       topics: [
+      {id: 't-academy', title: '把 AI 用进工作', desc: '先理解，再实操，最后复盘。三节通用教学样板。', lessons: [{"file":"academy-knowledge.html","title":"AI 能帮忙，也需要你来判断","desc":"理解 AI 草稿、事实核验与人工判断的分工，用一次分享资料整理练习建立基础。","tag":"概念"},{"file":"academy-practice.html","title":"用 AI 把学习资料整理成三版分享通知","desc":"围绕一份虚构活动简报，完成材料输入、提示词、三版草稿和人工验收，不依赖付费工具。","tag":"实战"},{"file":"academy-review.html","title":"交付前的核验：三道练习与一次复盘","desc":"用三道情境题练习核验、资料边界和责任判断，再检查自己的实操结果。","tag":"概念"}]},
         {
           id: 't-intro',
           title: '入门与定位',
@@ -37,7 +38,7 @@ window.COURSE = {
             /* 路线选择放在全课第一节：五条路线最后都汇到「入门与定位」，
                所有人必经此处。注册成课时它才有阅读器外壳，也才进得了翻页序列。 */
             { file: 'roadmap.html', title: "从你的工作目标开始学 AI", desc: "方片正在从 MCN 向科技方向转型。无论你在哪个岗位，都可以从适合自己的起点开始，把 AI 用进真实工作。", tag: '开篇' , navTitle: "从你的工作目标开始学 AI"},
-            { file: '0-intro.html', title: "我们在哪里？达克效应", desc: "达克鲁宁效应 · Dunning-Kruger Effect：AI 产品经理训练营，正式开始之前先定位自己。", tag: '开篇' , navTitle: "我们在哪里？达克效应"},
+            { file: '0-intro.html', title: "我们在哪里？达克效应", desc: "达克鲁宁效应 · Dunning-Kruger Effect：全员 AI 学习课程，正式开始之前先定位自己。", tag: '开篇' , navTitle: "我们在哪里？达克效应"},
             { file: '0-how.html', title: "怎样学，知识才能过脑子？", desc: "这门课不缺内容，缺的是你停下来想一想的 30 秒。", tag: '开篇' , navTitle: "怎样学，知识才能过脑子？"},
             { file: '0-why.html', title: "为什么花这么多时间讲原理？", desc: "磨刀不误砍柴工 · 打好基础才能真正做工程化", tag: '开篇' , navTitle: "为什么花这么多时间讲原理？"},
           ],

@@ -2,7 +2,31 @@
 (function (root) {
   'use strict';
   const KEY = 'fangpian_certificate_v1';
+  const PLAN_KEY = 'fangpian_certificate_plan_v1';
+  // Explicit, versioned required lists: unrelated electives never affect graduation.
+  const core = ['zero-1.html', 'zero-3.html', 'zero-4.html', 'zero-5.html', 'ai-tips-verify.html', 'ai-tips-context.html'];
+  const plans = [
+    { id: 'core', label: 'AI 核心课程', files: core },
+    { id: 'use', label: 'AI 起步者', files: [...core, 'zero-0.html', 'zero-2.html', 'zero-6.html'] },
+    { id: 'pro', label: '业务提效者', files: [...core, 'ai-tips-iterate.html', 'ai-tips-boundary.html', 'ai-tips-scenarios.html', 'zero-q-privacy.html'] },
+    { id: 'build', label: '技术共创者', files: [...core, '1-2-api.html', 'training-data.html', 'train-vs-infer.html', '1-2-vocab.html', '1-2-base.html'] }
+  ];
   const canonical = file => typeof file === 'string' && /^[a-z0-9][a-z0-9_.-]*\.html$/i.test(file) ? file.replace(/\.(en|ko|tw|hk)(?=\.html$)/, '') : '';
+  function plan(lessons, id = 'core') {
+    const selected = plans.find(item => item.id === id) || plans[0];
+    const available = new Map((lessons || []).map(lesson => [canonical(lesson.file), lesson]));
+    return { ...selected, lessons: selected.files.map(file => available.get(file)).filter(Boolean), missing: selected.files.filter(file => !available.has(file)) };
+  }
+  function selectedPlan(storage) {
+    try {
+      storage = storage || root.localStorage;
+      const explicit = storage?.getItem(PLAN_KEY);
+      if (plans.some(item => item.id === explicit)) return explicit;
+      const route = JSON.parse(storage?.getItem('ai_build_route_v1') || '"all"');
+      if (plans.some(item => item.id === route)) return route;
+    } catch { /* A blocked store simply starts with the core plan. */ }
+    return 'core';
+  }
   function catalog(lessons) {
     return [...new Set((Array.isArray(lessons) ? lessons : []).map(lesson => canonical(lesson?.file)).filter(Boolean))].sort();
   }
@@ -41,26 +65,33 @@
         try {
           const saved = JSON.parse(storage.getItem(KEY) || '{}'), records = {};
           if (saved && saved.version === 1 && saved.records && typeof saved.records === 'object' && !Array.isArray(saved.records)) {
-            for (const [scope, record] of Object.entries(saved.records).slice(-30)) if (/^(zh|en|ko|tw|hk)-[a-z0-9]+$/.test(scope) && validRecord(record, scope)) records[scope] = { ...record };
+            for (const [scope, record] of Object.entries(saved.records).slice(-12)) if (/^(zh|en|ko|tw|hk)-[a-z0-9]+$/.test(scope) && validRecord(record, scope)) records[scope] = { version: 1, courseKey: scope, id: record.id, name: record.name, issuedAt: record.issuedAt, lessonCount: record.lessonCount, language: scope.split('-')[0], ...(plans.some(p => p.id === record.planId) ? { planId: record.planId, planLabel: plans.find(p => p.id === record.planId).label } : {}) };
           }
           memory = records;
         } catch { /* Malformed records do not become an issued certificate. */ }
       }
       return memory;
     }
-    function status(lessons, progress, language = 'zh') {
-      const scope = courseKey(lessons, language), record = read()[scope];
-      return { ...completion(lessons, progress), scope, record: record ? { ...record } : null, persistent };
+    function status(lessons, progress, language = 'zh', planId) {
+      const training = planId ? plan(lessons, planId) : null;
+      const required = training ? training.lessons : lessons;
+      const scope = courseKey(required, language), record = read()[scope];
+      const result = completion(required, progress);
+      if (training?.missing.length) result.eligible = false;
+      return { ...result, scope, record: record ? { ...record } : null, persistent, plan: training };
     }
-    function claim(lessons, progress, name, language = 'zh') {
-      const current = status(lessons, progress, language), normalized = cleanName(name);
+    function claim(lessons, progress, name, language = 'zh', planId) {
+      const current = status(lessons, progress, language, planId), normalized = cleanName(name);
       if (!normalized) throw new Error('请输入 1—24 个字的证书姓名。');
+      if (current.plan?.missing.length) throw new Error('当前语言的结业课程不完整，请切换简体中文后查看。');
       if (!current.total || (!current.record && !current.eligible)) throw new Error('学完全部课程后，即可领取结业证书。');
       const date = now(), stamp = [date.getFullYear(), String(date.getMonth() + 1).padStart(2, '0'), String(date.getDate()).padStart(2, '0')].join('');
       const record = current.record ? { ...current.record, name: normalized } : { version: 1, courseKey: current.scope, id: 'FP-' + stamp + '-' + nonce(), name: normalized, issuedAt: date.toISOString(), lessonCount: current.total, language };
+      if (current.plan) { record.planId = current.plan.id; record.planLabel = current.plan.label; }
       memory[current.scope] = record;
+      memory = Object.fromEntries(Object.entries(memory).slice(-12));
       if (persistent) {
-        try { storage.setItem(KEY, JSON.stringify({ version: 1, records: memory })); }
+        try { const raw = JSON.stringify({ version: 1, records: memory }); if (raw.length * 2 > 8192) throw new Error('Certificate storage budget'); storage.setItem(KEY, raw); }
         catch { persistent = false; }
       }
       return { ...record };
@@ -71,5 +102,5 @@
   }
   let storage;
   try { storage = root.localStorage; } catch { /* Keep this page usable without persistence. */ }
-  root.FangpianCertificate = { key: KEY, catalog, courseKey, completion, cleanName, createStore, store: createStore(storage) };
+  root.FangpianCertificate = { key: KEY, planKey: PLAN_KEY, plans, plan, selectedPlan, catalog, courseKey, completion, cleanName, createStore, store: createStore(storage) };
 })(typeof window === 'undefined' ? globalThis : window);

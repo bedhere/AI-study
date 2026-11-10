@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>用 AI 给 AI 写 Prompt | 方片学堂</title>
+<title>用 AI 给 AI 写 Prompt | AI学院</title>
 <style>@keyframes _si{to{opacity:1}} body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -31,7 +31,7 @@
 .takeaway b{color:var(--purple)}
 </style>
 <meta name="description" content="用户说「示例角色 在阳台发呆」。生图模型需要的是一长段精确的视觉描述，光这句话远远不够。中间有一个翻译步骤：用 LLM 把人话翻译成生图语言。">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -42,7 +42,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
+<meta property="og:site_name" content="AI学院 · 全员 AI 学习">
 <meta property="og:title" content="用 AI 给 AI 写 Prompt">
 
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -50,13 +50,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><meta property="og:description" content="用户说「示例角色 在阳台发呆」。生图模型需要的是一长段精确的视觉描述，光这句话远远不够。中间有一个翻译步骤：用 LLM 把人话翻译成生图语言。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">AI 生图</div>
-    <h1>用 AI 给 AI 写 Prompt</h1>
+    <h1>用 AI 给 AI 写 Prompt</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>用 AI 给 AI 写 Prompt</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
     <p class="subtitle">用户说「示例角色 在阳台发呆」。生图模型需要的是一长段精确的视觉描述，光这句话远远不够。中间有一个翻译步骤：用 LLM 把人话翻译成生图语言。</p>
   </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>用户说「画个夕阳下的猫」，生图模型需要的是完全不同的描述，解法是用 LLM 做翻译</p></aside><!--seo:end-->  <div class="sec-label">示例一：阳台发呆</div>
 

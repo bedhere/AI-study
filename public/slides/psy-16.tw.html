@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>回饋心理：使用者為什麼不點踩 | 方片学堂</title>
+<title>回饋心理：使用者為什麼不點踩 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -12,7 +12,7 @@
 <!-- SEO Start -->
 <meta name="description" content="你在回答旁邊放了 👍 和 👎，指望使用者幫你標資料。一個月後一看：點踩率 0.4%，但流失率在漲。不是產品沒問題，是不滿的使用者根本不點踩，他們直接走。這一課講回饋的心理成本，和不靠使用者開口也能聽見的辦法。">
 <meta name="keywords" content="使用者回饋,沉默偏差,點踩,隱性訊號,RLHF,回饋漏斗,AI產品迭代">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -23,7 +23,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:title" content="回饋心理：使用者為什麼不點踩">
 <meta property="og:description" content="你在回答旁邊放了 👍 和 👎，指望使用者幫你標資料。一個月後一看：點踩率 0.4%，但流失率在漲。不是產品沒問題，是不滿的使用者根本不點踩，他們直接走。這一課講回饋的心理成本，和不靠使用者開口也能聽見的辦法。">
 
@@ -86,13 +86,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">專題篇章 · AI 產品心理學</div>
-    <h1>回饋心理：使用者為什麼不點踩</h1>
+    <h1>回饋心理：使用者為什麼不點踩</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>回饋心理：使用者為什麼不點踩</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">你在回答旁邊放了 👍 和 👎，指望使用者幫你標資料。一個月後一看：點踩率 0.4%，但流失率在漲。不是產品沒問題，是<b>不滿的使用者根本不點踩，他們直接走</b>。這一課講回饋的心理成本，和不靠使用者開口也能聽見的辦法。</p>
     <div class="chips"><span class="chip">回饋漏斗模擬器</span><span class="chip">沉默偏差</span><span class="chip">隱性訊號判讀</span><span class="chip">回饋的即時回報</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>一千個不滿意的使用者，點踩的只有十幾個。回饋漏斗模擬器看沉默偏差怎麼層層吃掉訊號，六種使用者行為判讀隱性訊號（重新生成、複製、編輯），點踩後的體驗對決：回饋要有即時回報</p></aside><!--seo:end-->  <section class="reveal">
@@ -202,7 +203,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>回饋要有即時回報：</b>點踩後立刻給一版更好的，使用者才知道這個按鈕通電。「感謝回饋」等於告訴他別再點了。</p></div>
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>行為比按鈕誠實：</b>重新生成、編輯距離、複製率是樣本量大幾百倍的免費訊號。讀行為改產品，但別拿行為對付使用者。</p></div>
     </div>
-    <p class="src-note"><b>內容來源：</b>方片學堂「AI 產品心理學」專題原創；沉默偏差出自 TARP 客戶投訴行為研究（1970s–80s）；禮貌效應出自 Reeves &amp; Nass, <i>The Media Equation</i>（1996）。</p>
+    <p class="src-note"><b>內容來源：</b>AI学院「AI 產品心理學」專題原創；沉默偏差出自 TARP 客戶投訴行為研究（1970s–80s）；禮貌效應出自 Reeves &amp; Nass, <i>The Media Equation</i>（1996）。</p>
   </section>
 
 </main>

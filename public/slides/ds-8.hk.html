@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>圖：從知識圖譜到多 Agent 協作 | 方片学堂</title>
+<title>圖：從知識圖譜到多 Agent 協作 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
 <meta name="description" content="上一課的樹規矩得很：每個節點只有一個爹，永遠不繞圈。可現實世界的關係亂多了——你的朋友互相也是朋友，公司和學校和人攪在一起。把「每個節點只能有一個爹」這條規矩撕掉，樹就升級成了圖：節點 + 關係，想怎麼連怎麼連。這一課看圖在 AI 世界的兩大主場。">
 <meta name="keywords" content="圖 數據結構,知識圖譜,DAG 有向無環圖,多 Agent 協作,工作流依賴,圖遍歷">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:title" content="圖：從知識圖譜到多 Agent 協作">
 <meta property="og:description" content="上一課的樹規矩得很：每個節點只有一個爹，永遠不繞圈。可現實世界的關係亂多了——你的朋友互相也是朋友，公司和學校和人攪在一起。把「每個節點只能有一個爹」這條規矩撕掉，樹就升級成了圖：節點 + 關係，想怎麼連怎麼連。這一課看圖在 AI 世界的兩大主場。">
 
@@ -112,13 +112,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">編程基礎篇 · 樹與圖：AI 的主場</div>
-    <h1>圖：從知識圖譜到多 Agent 協作</h1>
+    <h1>圖：從知識圖譜到多 Agent 協作</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>圖：從知識圖譜到多 Agent 協作</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">上一課的樹規矩得很：每個節點只有一個爹，永遠不繞圈。可現實世界的關係亂多了——你的朋友互相也是朋友，公司和學校和人攪在一起。把「每個節點只能有一個爹」這條規矩撕掉，樹就升級成了<b>圖：節點 + 關係，想怎麼連怎麼連</b>。這一課看圖在 AI 世界的兩大主場。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>節點加關係就是圖：社交網絡、知識圖譜、Agent 工作流 DAG。點一個節點，看關係怎麼一層層擴散出去</p></aside><!--seo:end-->  <div class="sec-label">主場一 · 知識圖譜：點一下，看知識擴散</div>
 

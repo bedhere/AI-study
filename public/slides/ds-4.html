@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>队列：Agent 的活是排着队干的 | 方片学堂</title>
+<title>队列：Agent 的活是排着队干的 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
 <meta name="description" content="上一课的栈是「后进先出」，这一课把方向掉个头：先进先出，一头进、另一头出——就是食堂打饭的那条队。别嫌它朴素，AI 服务能扛住一万个人同时提问、Agent 能有条不紊地干完一串任务，靠的都是这条队。这一课你来当调度员：亲手开动一条流水线，把它玩到积压、再救回来。">
 <meta name="keywords" content="队列是什么,先进先出,FIFO,消息队列,生产者消费者,削峰填谷,任务队列,API限流,数据结构队列">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
+<meta property="og:site_name" content="AI学院 · 全员 AI 学习">
 <meta property="og:title" content="队列：Agent 的活是排着队干的">
 <meta property="og:description" content="上一课的栈是「后进先出」，这一课把方向掉个头：先进先出，一头进、另一头出——就是食堂打饭的那条队。别嫌它朴素，AI 服务能扛住一万个人同时提问、Agent 能有条不紊地干完一串任务，靠的都是这条队。这一课你来当调度员：亲手开动一条流水线，把它玩到积压、再救回来。">
 
@@ -131,13 +131,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">编程基础篇 · 线性结构：你天天在用</div>
-    <h1>队列：Agent 的活是排着队干的</h1>
+    <h1>队列：Agent 的活是排着队干的</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>队列：Agent 的活是排着队干的</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">上一课的栈是「后进先出」，这一课把方向掉个头：<b>先进先出</b>，一头进、另一头出——就是食堂打饭的那条队。别嫌它朴素，AI 服务能扛住一万个人同时提问、Agent 能有条不紊地干完一串任务，靠的都是这条队。这一课你来当调度员：<b>亲手开动一条流水线，把它玩到积压、再救回来</b>。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>先进先出：任务队列、消息队列、生产者消费者。拖动生产和消费的速度，看队列什么时候积压、什么时候空转</p></aside><!--seo:end-->  <div class="sec-label">上手 · 你来当调度员</div>
 

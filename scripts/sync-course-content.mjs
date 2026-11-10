@@ -160,7 +160,7 @@ for (const lang of langs) {
 // Align browser/share metadata to the same canonical heading and synopsis.
 for (const [name, info] of pageInfo) {
   let source = fs.readFileSync(path.join(root, name), 'utf8');
-  source = source.replace(/<title>[\s\S]*?<\/title>/i, () => '<title>' + attr(info.title) + ' | 方片学堂</title>');
+  source = source.replace(/<title>[\s\S]*?<\/title>/i, () => '<title>' + attr(info.title) + ' | AI学院</title>');
   if (!/<meta\b[^>]*name=["']description["']/i.test(source)) source = source.replace('</head>', () => '<meta name="description" content="' + attr(info.description) + '"></head>');
   source = source.replace(/<meta\b[^>]*(?:name|property)=["'](?:description|og:description|twitter:description|og:title|twitter:title)["'][^>]*>/gi, tag => {
     const title = /(?:og:title|twitter:title)/.test(tag);

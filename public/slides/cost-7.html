@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>输入主导：62:1 的 I/O Ratio | 方片学堂</title>
+<title>输入主导：62:1 的 I/O Ratio | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
 <meta name="description" content="普通 Chatbot 是一问一答；Agent 是「思考 → 行动 → 观察 → 再思考」的循环。关键认知：每一轮的 Input 都包含了全部历史信息——轮次越多，Input 越长，成本累积膨胀。">
 <meta name="keywords" content="Agent 成本,I/O Ratio,ReAct 循环,输入主导,Token 膨胀,SWE-bench">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
+<meta property="og:site_name" content="AI学院 · 全员 AI 学习">
 <meta property="og:title" content="输入主导：62:1 的 I/O Ratio">
 <meta property="og:description" content="普通 Chatbot 是一问一答；Agent 是「思考 → 行动 → 观察 → 再思考」的循环。关键认知：每一轮的 Input 都包含了全部历史信息——轮次越多，Input 越长，成本累积膨胀。">
 
@@ -80,13 +80,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 降本增效 · 7 / 13</div>
-    <h1>输入主导：62:1 的 I/O Ratio</h1>
+    <h1>输入主导：62:1 的 I/O Ratio</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>输入主导：62:1 的 I/O Ratio</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">普通 Chatbot 是一问一答；Agent 是「思考 → 行动 → 观察 → 再思考」的循环。关键认知：每一轮的 Input 都包含了全部历史信息——轮次越多，Input 越长，成本累积膨胀。</p>
     <div class="chips"><span class="chip">ReAct 循环</span><span class="chip">输入主导</span><span class="chip">I/O Ratio</span><span class="chip">累积膨胀</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Agent 每一轮都要重读全部历史。逐轮点开一个 Excel 任务，看 Input 怎么滚到 31,460 Token</p></aside><!--seo:end-->  <section class="reveal">

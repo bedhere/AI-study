@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="方片 MBTI 趣味性格测试：32道题，探索交流、信息、决策与节奏偏好，生成属于你的方片虎格卡。方片趣味体验，非官方标准测评。">
 <meta name="theme-color" content="#fff000">
-<title>MBTI 趣味性格测试 · 方片 AI 学堂</title>
+<title>MBTI 趣味性格测试 · AI学院</title>
 <link rel="icon" href="assets/fangpian/logo-yellow-square.webp" type="image/webp">
 <link rel="stylesheet" href="personality.css?v=20261109">
 <script id="mbtiEntryRoute">
@@ -30,9 +30,10 @@
 <style>
 .mbti-entry-note{max-width:1200px;margin:0 auto 6px;padding:0 40px;color:#686957;font-size:13px;line-height:1.8}.mbti-entry-note strong{color:#303124;font-weight:650}.mbti-entry-note p{margin:0}.mbti-entry-note a{color:inherit;text-underline-offset:3px}@media(max-width:760px){.mbti-entry-note{padding:0 22px;margin-bottom:10px;font-size:12px}.fp-brand{font-size:15px}.fp-header{gap:12px}}
 </style>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body data-test="mbti">
-<header class="fp-header"><a class="fp-brand" href="home.html"><img src="assets/fangpian/logo-yellow-square.webp" width="38" height="38" alt="方片"><span>MBTI 趣味性格测试<span class="brand-sub">方片 AI 学堂</span></span></a><a class="back-school" href="home.html">返回学堂 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></header>
+<header class="fp-header"><a class="fp-brand" href="home.html"><img src="assets/fangpian/logo-yellow-square.webp" width="38" height="38" alt="方片"><span>MBTI 趣味性格测试<span class="brand-sub">AI学院</span></span></a><a class="back-school" href="home.html">返回学堂 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></header>
 <aside class="mbti-entry-note" aria-label="测评说明"><p><strong>方片趣味体验，非官方标准测评。</strong>32 道题，约 5 分钟；依据最近三个月的真实状态作答，认识自己的偏好与协作节奏。答案和结果仅保存在当前浏览器。</p></aside>
 <div id="storageNotice" class="storage-notice" role="status" hidden></div>
 <main id="assessmentApp" tabindex="-1"><noscript><h1>MBTI 趣味性格测试</h1><p>请开启 JavaScript 后开始测试。32 道题与方片虎格结果仅保存在本机浏览器。</p></noscript></main>
@@ -46,7 +47,7 @@
     if (heading && heading.textContent !== label) heading.textContent = label;
     const back = document.getElementById('backHub');
     if (back && back.textContent !== '‹ 返回学堂') back.textContent = '‹ 返回学堂';
-    const baseTitle = document.title.replace('MBTI 风格探索', label).replace('方片虎格测试', '方片 AI 学堂');
+    const baseTitle = document.title.replace('MBTI 风格探索', label).replace('方片虎格测试', 'AI学院');
     const title = baseTitle.includes(label) ? baseTitle : label + ' · ' + baseTitle;
     if (document.title !== title) document.title = title;
   }

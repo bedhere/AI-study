@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Big-O：一眼看穿代码要跑多久 | 方片学堂</title>
+<title>Big-O：一眼看穿代码要跑多久 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
 <meta name="description" content="姊妹篇讲完了「数据结构 = 收纳方式」，这一章讲另一半：算法 = 做事的套路。评价一个套路好不好，程序员有一把统一的尺子，叫 Big-O。别被数学符号吓到——它回答的问题只有一个：数据变多的时候，你的代码会慢多少？今天用三个交互把这把尺子装进你脑子里。">
 <meta name="keywords" content="Big-O,时间复杂度,算法复杂度入门,O(n²),零基础算法,代码性能">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
+<meta property="og:site_name" content="AI学院 · 全员 AI 学习">
 <meta property="og:title" content="Big-O：一眼看穿代码要跑多久">
 <meta property="og:description" content="姊妹篇讲完了「数据结构 = 收纳方式」，这一章讲另一半：算法 = 做事的套路。评价一个套路好不好，程序员有一把统一的尺子，叫 Big-O。别被数学符号吓到——它回答的问题只有一个：数据变多的时候，你的代码会慢多少？今天用三个交互把这把尺子装进你脑子里。">
 
@@ -118,13 +118,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">编程基础篇 · 复杂度：一眼看穿代码值不值</div>
-    <h1>Big-O：一眼看穿代码要跑多久</h1>
+    <h1>Big-O：一眼看穿代码要跑多久</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Big-O：一眼看穿代码要跑多久</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">姊妹篇讲完了「数据结构 = 收纳方式」，这一章讲另一半：<b>算法 = 做事的套路</b>。评价一个套路好不好，程序员有一把统一的尺子，叫 Big-O。别被数学符号吓到——它回答的问题只有一个：<b>数据变多的时候，你的代码会慢多少？</b>今天用三个交互把这把尺子装进你脑子里。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>拖动数据量滑块，看 O(1)、O(log n)、O(n)、O(n²) 四条曲线怎么分道扬镳；数据翻十倍，谁不动声色、谁当场爆炸</p></aside><!--seo:end-->  <div class="sec-label">交互一 · 四条曲线分道扬镳</div>
 

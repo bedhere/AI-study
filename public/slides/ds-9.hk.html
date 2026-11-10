@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>詞表與 Trie：Tokenizer 的切詞秘密 | 方片学堂</title>
+<title>詞表與 Trie：Tokenizer 的切詞秘密 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
 <meta name="description" content="還記得大模型原理篇那個細節嗎——分詞器把「五花肉」切成一整塊詞元，而不是三個字。當時我們説「常見組合當一個整體」，這次揭底層：分詞器係點樣喺幾萬個詞裏面，瞬間認到「五花肉」應該成塊攞走？答案是一種叫 Trie（前綴樹）的收納方式——把詞表按「共享開頭」掛成一棵樹。">
 <meta name="keywords" content="Trie 前綴樹,Tokenizer 分詞,詞表,BPE,詞元 token,最長匹配,大模型分詞原理">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:title" content="詞表與 Trie：Tokenizer 的切詞秘密">
 <meta property="og:description" content="還記得大模型原理篇那個細節嗎——分詞器把「五花肉」切成一整塊詞元，而不是三個字。當時我們説「常見組合當一個整體」，這次揭底層：分詞器係點樣喺幾萬個詞裏面，瞬間認到「五花肉」應該成塊攞走？答案是一種叫 Trie（前綴樹）的收納方式——把詞表按「共享開頭」掛成一棵樹。">
 
@@ -101,13 +101,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">編程基礎篇 · 大模型肚子裏的數據結構</div>
-    <h1>詞表與 Trie：Tokenizer 的切詞秘密</h1>
+    <h1>詞表與 Trie：Tokenizer 的切詞秘密</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>詞表與 Trie：Tokenizer 的切詞秘密</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">還記得大模型原理篇那個細節嗎——分詞器把「五花肉」切成<b>一整塊詞元</b>，而不是三個字。當時我們説「常見組合當一個整體」，這次揭底層：分詞器係點樣喺幾萬個詞裏面，瞬間認到「五花肉」應該成塊攞走？答案是一種叫 <b>Trie（前綴樹）</b>的收納方式——把詞表按「共享開頭」掛成一棵樹。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>大模型原理篇見過分詞，這次看底層：一棵前綴樹怎麼把「五花肉」整塊認出來。親手沿着 Trie 走一次分詞</p></aside><!--seo:end-->  <div class="sec-label">先看收納 · 詞表怎麼掛成一棵樹</div>
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ollama 与 LM Studio 怎么上手 | 方片学堂</title>
+<title>Ollama 与 LM Studio 怎么上手 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -75,7 +75,7 @@
 <!-- SEO Start -->
 <meta name="description" content="上一节算出了你能跑什么，这一节把它装起来。两个工具，一个命令行一个图形界面，第一次用十分钟能跑通。">
 <meta name="keywords" content="Ollama 教程,LM Studio 使用,本地部署大模型,ollama pull,量化档位选择,GGUF,本地大模型 API">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -86,7 +86,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
+<meta property="og:site_name" content="AI学院 · 全员 AI 学习">
 <meta property="og:title" content="Ollama 与 LM Studio 怎么上手">
 <meta property="og:description" content="上一节算出了你能跑什么，这一节把它装起来。两个工具，一个命令行一个图形界面，第一次用十分钟能跑通。">
 
@@ -102,13 +102,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">开源专题 · 在自己的机器上跑起来</div>
-    <h1>Ollama 与 LM Studio 怎么上手</h1>
+    <h1>Ollama 与 LM Studio 怎么上手</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>Ollama 与 LM Studio 怎么上手</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
     <p class="subtitle">上一节算出了你能跑什么，这一节把它装起来。两个工具，一个命令行一个图形界面，第一次用十分钟能跑通。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从安装到跑通的完整命令、模型标签的读法、量化档位怎么选，以及三个最常见的坑</p></aside><!--seo:end-->  <div class="sec-label">先选工具</div>
 

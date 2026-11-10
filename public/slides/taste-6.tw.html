@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>一致性：系統感從哪來 | 方片学堂</title>
+<title>一致性：系統感從哪來 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -11,7 +11,7 @@
 <!-- SEO Start -->
 <meta name="description" content="有一種介面，單看每處都還行，合起來卻透著一股散裝味。它缺的說到底就一樣東西：一套大家共同遵守的變數。這一節講 design token，變數先行，樣式跟隨。">
 <meta name="keywords" content="design token,設計變數,一致性,系統感,CSS變數,介面審美">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -22,7 +22,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:title" content="一致性：系統感從哪來">
 <meta property="og:description" content="有一種介面，單看每處都還行，合起來卻透著一股散裝味。它缺的說到底就一樣東西：一套大家共同遵守的變數。這一節講 design token，變數先行，樣式跟隨。">
 
@@ -72,13 +72,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">審美工程 · 6 / 12</div>
-    <h1>一致性：系統感從哪來</h1>
+    <h1>一致性：系統感從哪來</h1><aside class="academy-review-note" data-academy-review="reference">本課保留技術教學內容。來源專案的經歷與數據不代表方片實績；涉及模型版本、服務價格及供應情況，使用前請核對官方資料。</aside><div class="academy-cover" data-academy-cover="practice"><div><strong>一致性：系統感從哪來</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
     <p class="subtitle">有一種介面，單看每處都還行，合起來卻透著一股散裝味。它缺的說到底就一樣東西：一套大家共同遵守的變數。這一節講 design token，變數先行，樣式跟隨。</p>
     <div class="chips"><span class="chip">design token</span><span class="chip">CSS 變數</span><span class="chip">系統感</span></div>
   </header><aside class="xa-tldr company-source-case"><p>本頁保留課程來源專案的公開網站案例作為教學材料。案例經歷、流量與收錄資料不屬於方片內部平台，程式碼示例也不代表目前學堂的實際實作。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>好看的站點背後都有一套設計變數。拆開本站真實的 CSS：控制項高度、圓角、配色為什麼全站只有一檔，改一處全站生效</p></aside><!--seo:end-->  <section class="reveal">
@@ -121,7 +122,7 @@
       <div class="toy-body">
         <div class="toy-hint">同一排頂欄按鈕，切到「各寫各的」看看會發生什麼。</div>
         <div class="mockwin">
-          <div class="mockwin-bar"><i></i><i></i><i></i><span class="mockwin-url">方片学堂/slides/learn.html</span></div>
+          <div class="mockwin-bar"><i></i><i></i><i></i><span class="mockwin-url">AI学院/slides/learn.html</span></div>
           <div class="mock" style="padding:24px;display:flex;align-items:center;justify-content:center">
             <div id="t6bar" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center">
               <span class="t6-ctlbtn">分享</span>
@@ -331,7 +332,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>讓 AI 做介面時，先交變數表：</b>把主色、圓角、控制項高度寫進 Prompt，再讓它動手，產出的一致性立刻不同。</p></div>
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>裁判標準兩句話：</b>任何元素的存在要有理由，任何差異的存在也要有理由。刪除按鈕的紅留下，說不出理由的圓角收編。</p></div>
     </div>
-    <p class="src-note"><b>內容來源：</b>方片學堂「審美工程」專題原創；一致性與標準的價值、「差異要有理由」等原則整理自《About Face 4：互動設計精髓》第 17 章（Alan Cooper 等）。</p>
+    <p class="src-note"><b>內容來源：</b>AI学院「審美工程」專題原創；一致性與標準的價值、「差異要有理由」等原則整理自《About Face 4：互動設計精髓》第 17 章（Alan Cooper 等）。</p>
   </section>
 
 </main>

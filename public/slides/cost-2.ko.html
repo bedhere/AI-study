@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Token은 어떻게 세나: BPE와 숨은 「Token 세금」 | 方片学堂</title>
+<title>Token은 어떻게 세나: BPE와 숨은 「Token 세금」 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="AI学院 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="Token은 어떻게 세나: BPE와 숨은 「Token 세금」">
 <meta property="og:description" content="청구서는 Token으로 정산되지만, Token은 도대체 어떻게 셀까요? 글자도 단어도 아니고, 통계 규칙으로 만들어진 「서브워드」예요. 이 규칙을 이해해야, 같은 한 문장이 중국어로는 왜 영어보다 선천적으로 2배 비싼지 알게 됩니다.">
 
@@ -87,13 +87,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 비용 엔지니어링 · 2 / 13</div>
-    <h1>Token은 어떻게 세나: BPE와 숨은 「Token 세금」</h1>
+    <h1>Token은 어떻게 세나: BPE와 숨은 「Token 세금」</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Token은 어떻게 세나: BPE와 숨은 「Token 세금」</strong><p>AI学院 · 함께 배우는 AI</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">청구서는 Token으로 정산되지만, Token은 도대체 어떻게 셀까요? 글자도 단어도 아니고, 통계 규칙으로 만들어진 「서브워드」예요. 이 규칙을 이해해야, 같은 한 문장이 중국어로는 왜 영어보다 선천적으로 2배 비싼지 알게 됩니다.</p>
     <div class="chips"><span class="chip">BPE</span><span class="chip">서브워드 토큰화</span><span class="chip">tiktoken</span><span class="chip">Token 세금</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>문자에서 서브워드로의 진화, BPE 병합 규칙, 중국어가 왜 선천적으로 2배 비싼지; 「주인에게 뭘 남기세요」의 기묘한 병합</p></aside><!--seo:end-->  <section class="reveal">

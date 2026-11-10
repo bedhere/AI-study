@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>陣列：你聊的每句話都躺在裏面 | 方片学堂</title>
+<title>陣列：你聊的每句話都躺在裏面 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
 <!-- SEO Start -->
 <meta name="description" content="上一課説好了：數據結構 = 收納方式。第一種收納方式你其實天天在餵它數據——你和 AI 的每一段對話，在程式眼裏就是一個 message list，而 message list 的真身，是最樸素的收納方式：一排編了號的格子，叫陣列。這一課先把你的對話攤開來看，再順手回答一個老疑問：為什麼聊久了它會忘事。">
 <meta name="keywords" content="陣列是什麼,message list,上下文窗口,上下文截斷,陣列插入,append-only,數據結構陣列,零基礎數據結構">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:title" content="陣列：你聊的每句話都躺在裏面">
 <meta property="og:description" content="上一課説好了：數據結構 = 收納方式。第一種收納方式你其實天天在餵它數據——你和 AI 的每一段對話，在程式眼裏就是一個 message list，而 message list 的真身，是最樸素的收納方式：一排編了號的格子，叫陣列。這一課先把你的對話攤開來看，再順手回答一個老疑問：為什麼聊久了它會忘事。">
 
@@ -112,13 +112,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">編程基礎篇 · 綫性結構：你天天在用</div>
-    <h1>陣列：你聊的每句話都躺在裏面</h1>
+    <h1>陣列：你聊的每句話都躺在裏面</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>陣列：你聊的每句話都躺在裏面</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">上一課説好了：數據結構 = 收納方式。第一種收納方式你其實天天在餵它數據——你和 AI 的每一段對話，在程式眼裏就是一個 <b>message list</b>，而 message list 的真身，是最樸素的收納方式：<b>一排編了號的格子，叫陣列</b>。這一課先把你的對話攤開來看，再順手回答一個老疑問：為什麼聊久了它會忘事。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>message list 就是一個陣列：對話歷史怎麼排隊、上下文截斷為什麼掐頭不掐尾；順便看陣列中間插一條數據有多貴</p></aside><!--seo:end-->  <div class="sec-label">先玩 · 你的對話正躺在一排格子裏</div>
 

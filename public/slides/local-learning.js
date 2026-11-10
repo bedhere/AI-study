@@ -3,6 +3,7 @@
   'use strict';
   if (global.FangpianLearning) return;
   var KEY = 'ai_course_progress_v1';
+  var MAX_PROGRESS_BYTES = 24576, MAX_EXAM_BYTES = 16384;
   var memory = Object.create(null);
   var persistent = true;
   var langMatch = (global.location && global.location.pathname || '').match(/\.(en|ko|tw|hk)\.html$/);
@@ -18,7 +19,7 @@
   function canonical(file) {
     if (typeof file !== 'string') return '';
     file = file.replace(/\.(en|ko|tw|hk)(?=\.html$)/, '');
-    return /^[a-z0-9][a-z0-9_.-]*\.html$/i.test(file) ? file : '';
+    return file.length <= 96 && /^[a-z0-9][a-z0-9_.-]*\.html$/i.test(file) ? file : '';
   }
   function sanitize(input) {
     var result = Object.create(null);
@@ -69,7 +70,7 @@
     memory = sanitize(value);
     var serialized = JSON.stringify(memory);
     if (persistent) {
-      try { global.localStorage.setItem(KEY, serialized); }
+      try { if (serialized.length * 2 > MAX_PROGRESS_BYTES) throw Error('Progress storage budget'); global.localStorage.setItem(KEY, serialized); }
       catch (error) { persistent = false; showStorageWarning(); }
     }
     if (before !== serialized) notify();
@@ -102,10 +103,17 @@
   function saveExam(result) {
     var records = [];
     try { records = JSON.parse(global.localStorage.getItem('fangpian_exam_results_v1') || '[]'); if (!Array.isArray(records)) records = []; } catch (error) {}
-    records.push({exam:String(result.exam || ''),score:Number(result.score),right:Number(result.right),total:Number(result.total),mode:String(result.mode || ''),completedAt:new Date().toISOString()});
-    try { global.localStorage.setItem('fangpian_exam_results_v1', JSON.stringify(records.slice(-50))); return true; }
+    function clean(record) {
+      function number(value) { return Number.isFinite(Number(value)) ? Math.max(0, Math.min(1000000, Number(value))) : 0; }
+      return {exam:String(record.exam || '').slice(0,48),score:number(record.score),right:number(record.right),total:number(record.total),mode:String(record.mode || '').slice(0,8),completedAt:typeof record.completedAt==='string' && Number.isFinite(Date.parse(record.completedAt)) ? new Date(record.completedAt).toISOString() : new Date().toISOString()};
+    }
+    records = records.filter(record => record && typeof record === 'object').slice(-49).map(clean);
+    records.push(clean(result));
+    var serialized = JSON.stringify(records);
+    while (serialized.length * 2 > MAX_EXAM_BYTES && records.length > 1) { records.shift(); serialized = JSON.stringify(records); }
+    try { global.localStorage.setItem('fangpian_exam_results_v1', serialized); return true; }
     catch (error) { persistent = false; showStorageWarning(); return false; }
   }
-  global.FangpianLearning = {key:KEY,lang:lang,labels:labels,canonical:canonical,route:route,read:read,write:write,forLessons:forLessons,saveLessons:saveLessons,completed:completed,lastFor:lastFor,saveExam:saveExam,get persistent(){return persistent;}};
+  global.FangpianLearning = {key:KEY,limits:{progressBytes:MAX_PROGRESS_BYTES,examBytes:MAX_EXAM_BYTES},lang:lang,labels:labels,canonical:canonical,route:route,read:read,write:write,forLessons:forLessons,saveLessons:saveLessons,completed:completed,lastFor:lastFor,saveExam:saveExam,get persistent(){return persistent;}};
   if (global.addEventListener) global.addEventListener('storage', function (event) { if (event.key === KEY || event.key === null) { read(); notify(); } });
 })(typeof window === 'undefined' ? globalThis : window);

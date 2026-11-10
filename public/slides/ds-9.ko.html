@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>어휘 사전과 Trie: Tokenizer가 단어를 자르는 비밀 | 方片学堂</title>
+<title>어휘 사전과 Trie: Tokenizer가 단어를 자르는 비밀 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="AI学院 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="어휘 사전과 Trie: Tokenizer가 단어를 자르는 비밀">
 <meta property="og:description" content="대규모 모델 원리 편의 그 디테일, 기억나세요?—Tokenizer가 「五花肉」을 토큰 한 덩어리로 자르고, 글자 셋이 아니었죠. 그때 「자주 나오는 조합은 한 덩어리」라고 했어요. 이번엔 바닥을 엽니다: 수만 개 단어 속에서 「五花肉」을 통째로 가져가야 한다고 어떻게 순간 알아보나요? 답은 Trie(접두사 트리)라는 수납 방식—어휘 사전을 「공유하는 앞부분」으로 트리에 걸어 두는 거예요.">
 
@@ -101,13 +101,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">프로그래밍 기초 · 대규모 모델 속의 자료구조</div>
-    <h1>어휘 사전과 Trie: Tokenizer가 단어를 자르는 비밀</h1>
+    <h1>어휘 사전과 Trie: Tokenizer가 단어를 자르는 비밀</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>어휘 사전과 Trie: Tokenizer가 단어를 자르는 비밀</strong><p>AI学院 · 함께 배우는 AI</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">대규모 모델 원리 편의 그 디테일, 기억나세요?—Tokenizer가 「五花肉」을 <b>토큰 한 덩어리</b>로 자르고, 글자 셋이 아니었죠. 그때 「자주 나오는 조합은 한 덩어리」라고 했어요. 이번엔 바닥을 엽니다: 수만 개 단어 속에서 「五花肉」을 통째로 가져가야 한다고 어떻게 순간 알아보나요? 답은 <b>Trie(접두사 트리)</b>라는 수납 방식—어휘 사전을 「공유하는 앞부분」으로 트리에 걸어 두는 거예요.</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>대규모 모델 원리 편에서 토큰화를 봤어요. 이번엔 바닥: 접두사 트리가 「五花肉」(삼겹살 부위 이름)을 한 덩어리로 어떻게 알아보는지. Trie를 따라 직접 토큰화해 보세요</p></aside><!--seo:end-->  <div class="sec-label">먼저 수납 · 어휘 사전을 트리로 거는 법</div>
 

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="每次新開對話，AI 都不知道該調哪個模型、超時設多少、項目用什麼框架。把這些環境事實一次性寫死在 Rule 裏，相當於給 AI 一份預填好的 .env 説明書，每輪對話自動帶入。本頁兩個演示都可以真實操作。">
-<meta name="author" content="方片">
-<title>把環境事實寫進 Rule | 方片学堂</title>
 
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<title>把環境事實寫進 Rule | AI学院</title>
+
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:locale" content="zh_HK">
 
 
@@ -96,13 +96,14 @@ pre code{background:none;padding:0;color:#d9f2ec}
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="把環境事實寫進 Rule"><meta property="og:description" content="每次新開對話，AI 都不知道該調哪個模型、超時設多少、項目用什麼框架。把這些環境事實一次性寫死在 Rule 裏，相當於給 AI 一份預填好的 .env 説明書，每輪對話自動帶入。本頁兩個演示都可以真實操作。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">VIBE CODING 方法論 · 第 8 節</div>
-    <h1>把環境事實寫進 Rule</h1>
+    <h1>把環境事實寫進 Rule</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>把環境事實寫進 Rule</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">每次新開對話，AI 都不知道該調哪個模型、超時設多少、項目用什麼框架。把這些環境事實一次性寫死在 Rule 裏，相當於給 AI 一份預填好的 .env 説明書，每輪對話自動帶入。本頁兩個演示都可以真實操作。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>模型配置、技術棧鎖定、數據格式三分法與 isComposing 這類必踩的坑</p></aside><!--seo:end-->  <div class="l-callout reveal">
     <p style="font-size:14.5px;line-height:1.8"><b>為什麼是 Rule：</b>把配置寫在 .env 裏讓 AI 自己讀，它不一定每次都主動讀；寫在對話裏，對話一長就被截斷遺忘。Rule 在每輪對話開始前就被載入進上下文，是最穩的注入方式。</p>

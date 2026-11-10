@@ -19,6 +19,7 @@
   const poster = story.querySelector('.fp-robot-fallback');
   const scene = story.querySelector('.fp-scene');
   let robot = null, frame = 0, previous = 0, active = true, disposed = false, contextLost = false;
+  const robotLayout = { anchorX: .62, scale: 1 };
   let px = 0, py = 0, pointerActive = false, target = 0, visual = 0, lastOpacity = '', lastPhase = -1;
   let layout = { start: 0, distance: 1, width: 1, height: 1, top: 64 };
   let previewIndex = 0, resizeFrame = 0;
@@ -52,6 +53,9 @@
     const headerHeight = document.querySelector('.nav')?.offsetHeight || 64;
     const box = story.getBoundingClientRect();
     layout = { start: box.top + scrollY - headerHeight, distance: Math.max(1, intro.offsetHeight), width: stage.clientWidth, height: stage.clientHeight, top: headerHeight };
+    const wide = window.innerWidth >= 1440;
+    robotLayout.anchorX = wide ? .59 : .62;
+    robotLayout.scale = wide ? .9 : 1;
     updateTarget(); robot?.resize(); wake();
   }
   function queueMeasure() { if (!resizeFrame && !disposed) resizeFrame = requestAnimationFrame(measure); }
@@ -114,9 +118,9 @@
   });
   canvas.addEventListener('webglcontextrestored', () => { contextLost = false; robot?.resize(); wake(); });
   canvas.addEventListener('fangpian:robot-asset', wake);
-  import('./robot-scene.js?v=20261110cert2').then(() => {
+  import('./robot-scene.js?v=20261110space3').then(() => {
     if (disposed) return;
-    robot = root.FangpianRobot?.mount(canvas) || null;
+    robot = root.FangpianRobot?.mount(canvas, robotLayout) || null;
     if (robot) { canvas.dataset.meshes = String(robot.statistics.meshes); canvas.dataset.triangles = String(robot.statistics.triangles); }
     story.dataset.renderer = robot ? 'webgl' : 'fallback'; measure();
   }).catch(() => { story.dataset.renderer = 'fallback'; poster.hidden = false; });

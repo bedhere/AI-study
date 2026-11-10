@@ -9,9 +9,9 @@
   "originalModel": "Fangpian original code-native robot, derived from the user’s visual brief, not extracted from the reference website.",
   "bundle": {
     "file": "../../robot-scene.js",
-    "bytes": 15797,
-    "gzipBytes": 6675,
-    "sha256": "da07b7e832554908f6ce0463b0251bf0f1c2367961b49935e3612ba15cd310b0"
+    "bytes": 15825,
+    "gzipBytes": 6696,
+    "sha256": "badb7828055cf50f98f9aa3694d3e1120a44f6e238bb74d973c0fa7b6b3d71b5"
   },
   "build": {
     "bundler": "esbuild",

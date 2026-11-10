@@ -1,0 +1,15 @@
+/* AI学院 shared UI. Diagram semantic colours and AITI persona colours stay intact. */
+:root,[data-theme="light"]{--bg:#f4f1e9;--bg-dim:#eee9dd;--card:#fffef9;--card-2:#f7f3e8;--text:#292824;--sub:#69665d;--accent:#926200;--accent-soft:#fff1b8;--border:rgba(58,49,25,.13);--ex:#926200;--ex-deep:#725000;--ex-soft:#fff1b8;--academy-yellow:#ffda58;--academy-danger:#bd3434}
+[data-theme="dark"]{--bg:#1b1a17;--bg-dim:#24221c;--card:#26241e;--card-2:#302c21;--text:#f4efdf;--sub:#bfb7a3;--accent:#ffda58;--accent-soft:#3b331d;--border:rgba(255,218,88,.18);--ex:#ffda58;--ex-deep:#ffe899;--ex-soft:#3b331d;--academy-danger:#ff9b90}
+body{font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.academy-cover{display:grid;grid-template-columns:1fr 96px;align-items:center;gap:24px;margin:24px 0 32px;padding:24px 28px;border:1px solid var(--border);border-left:5px solid var(--academy-yellow);border-radius:16px;background:var(--card);color:var(--text)}
+.academy-cover p{margin:6px 0 0;color:var(--sub);font-size:14px;line-height:1.7}.academy-cover strong{font-size:18px}.academy-cover svg{width:88px;height:88px;color:var(--accent)}
+.academy-important{border-left:4px solid var(--academy-danger);padding:14px 18px;background:var(--card-2);margin:24px 0;color:var(--text)}.academy-important strong{color:var(--academy-danger)}
+.academy-sample-links{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}.academy-sample-links a{padding:10px 16px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);font-weight:600}
+.academy-step{border-bottom:1px solid var(--border);padding:22px 0}.academy-step h2{margin-top:0}.academy-check{padding:20px;background:var(--card);border:1px solid var(--border);border-radius:14px}.academy-check label{display:block;padding:12px 0;cursor:pointer}.academy-check input{accent-color:#926200;width:18px;height:18px;vertical-align:middle;margin-right:10px}
+.academy-button{display:inline-flex;padding:12px 20px;border:1px solid #b49129;border-radius:10px;background:var(--academy-yellow);color:#292824;font:600 15px inherit;cursor:pointer}.academy-feedback{min-height:28px;line-height:1.8}
+.academy-review-note{padding:14px 18px;border:1px solid var(--border);border-radius:10px;color:var(--sub);font-size:13px;line-height:1.8;background:var(--card-2);margin:24px 0}
+.aiti-brand .brand-mark img{width:32px;height:32px;display:block;border-radius:8px}
+@media(max-width:600px){.academy-cover{padding:18px;grid-template-columns:1fr 64px;gap:12px}.academy-cover svg{width:64px;height:64px}.academy-cover strong{font-size:16px}}
+@media(prefers-reduced-motion:no-preference){.academy-cover{animation:academy-in .35s ease-out}@keyframes academy-in{from{opacity:.5;transform:translateY(6px)}to{opacity:1;transform:none}}.academy-button{transition:transform .15s}.academy-button:active{transform:translateY(2px)}}

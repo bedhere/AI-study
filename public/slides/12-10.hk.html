@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Canonical input 是穩定投影 | 方片学堂</title>
+<title>Canonical input 是穩定投影 | AI学院</title>
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -21,7 +21,7 @@
 @media(max-width:760px){.fields{grid-template-columns:1fr 1fr}.contract{grid-template-columns:1fr}.projection{padding:9px}}@media(max-width:430px){.fields{grid-template-columns:1fr}.objective{flex-direction:column}}
 </style>
 <meta name="description" content="不同 harness 可以使用不同原始參數名。Grok Build 把少量穩定語義投影到 x.ai/tool 元數據中，讓展示、遙測和跨工具分析擁有共同詞彙。">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -32,19 +32,20 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:title" content="Canonical input 是穩定投影">
 
 <meta property="og:locale" content="zh_HK">
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><meta property="og:description" content="不同 harness 可以使用不同原始參數名。Grok Build 把少量穩定語義投影到 x.ai/tool 元數據中，讓展示、遙測和跨工具分析擁有共同詞彙。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Grok Build · 跨工具歸一化</div>
-    <h1>Canonical input 是穩定投影</h1>
+    <h1>Canonical input 是穩定投影</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>Canonical input 是穩定投影</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
     <p class="subtitle">不同 harness 可以使用不同原始參數名。Grok Build 把少量穩定語義投影到 <code>x.ai/tool</code> 元數據中，讓展示、遙測和跨工具分析擁有共同詞彙。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>用 CanonicalToolMeta 和輸入投影解釋跨工具實現的穩定合約</p></aside><!--seo:end-->  <div class="objective reveal">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v5H4zM7 9v5h10V9M10 14v6h4v-6"/></svg>

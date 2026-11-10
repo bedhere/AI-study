@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>스택: Cmd+Z와 「스택 오버플로」의 비밀 | 方片学堂</title>
+<title>스택: Cmd+Z와 「스택 오버플로」의 비밀 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="AI学院 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="스택: Cmd+Z와 「스택 오버플로」의 비밀">
 <meta property="og:description" content="두 번째 수납 방식은 접시 더미처럼 생겼어요: 맨 위에서만 넣고, 맨 위에서만 꺼낼 수 있어요 — 이게 스택이에요. 제약이 커 보이죠? 그런데 매일 누르는 실행 취소 키, 프로그램의 함수 호출마다, 전부 이것에 기대고 있어요. 이 강의는 문서를 마음껏 망가뜨린 뒤 한 번에 되돌리고, 마지막으로 「스택 오버플로」 사고를 구경해요 — 세계 최대 프로그래머 Q&amp;A 사이트 Stack Overflow의 이름은 그 사고에서 왔어요.">
 
@@ -128,13 +128,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">프로그래밍 기초 · 선형 구조: 매일 쓰는 것들</div>
-    <h1>스택: Cmd+Z와 「스택 오버플로」의 비밀</h1>
+    <h1>스택: Cmd+Z와 「스택 오버플로」의 비밀</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>스택: Cmd+Z와 「스택 오버플로」의 비밀</strong><p>AI学院 · 함께 배우는 AI</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">두 번째 수납 방식은 접시 더미처럼 생겼어요: <b>맨 위에서만 넣고, 맨 위에서만 꺼낼 수 있어요</b> — 이게 스택이에요. 제약이 커 보이죠? 그런데 매일 누르는 실행 취소 키, 프로그램의 함수 호출마다, 전부 이것에 기대고 있어요. 이 강의는 문서를 마음껏 망가뜨린 뒤 한 번에 되돌리고, 마지막으로 「스택 오버플로」 사고를 구경해요 — 세계 최대 프로그래머 Q&A 사이트 Stack Overflow의 이름은 그 사고에서 왔어요.</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>후입선출: 실행 취소, 함수 호출, Agent의 하위 작업이 전부 이것에 기대요. 직접 푸시·팝 해 보고, 종료 조건 없는 재귀가 스택을 어떻게 터뜨리는지 한 번 더 봐요</p></aside><!--seo:end-->  <div class="sec-label">먼저 해보기 · 실행 취소 키의 진짜 모습</div>
 

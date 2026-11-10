@@ -59,8 +59,8 @@
       copyFail: '复制失败，请手动复制地址栏链接',
       downloading: '已开始下载，如未响应请长按图片保存',
       posterCta: '扫码继续学这一节',
-      posterBrand: '方片学堂 · 方片学堂',
-      fileTag: '方片学堂'
+      posterBrand: 'AI学院 · AI学院',
+      fileTag: 'AI学院'
     },
     hk: {
       page: 'learn.hk.html',
@@ -77,8 +77,8 @@
       copyFail: '複製失敗，請手動複製地址欄連結',
       downloading: '已開始下載，如未響應請長按圖片保存',
       posterCta: '掃碼繼續學這一節',
-      posterBrand: '方片学堂 · 方片學堂',
-      fileTag: '方片學堂'
+      posterBrand: 'AI学院 · AI学院',
+      fileTag: 'AI学院'
     },
     tw: {
       page: 'learn.tw.html',
@@ -95,8 +95,8 @@
       copyFail: '複製失敗，請手動複製網址列連結',
       downloading: '已開始下載，如未響應請長按圖片儲存',
       posterCta: '掃碼繼續學這一節',
-      posterBrand: '方片学堂 · 方片學堂',
-      fileTag: '方片學堂'
+      posterBrand: 'AI学院 · AI学院',
+      fileTag: 'AI学院'
     },
     en: {
       page: 'learn.en.html',
@@ -113,7 +113,7 @@
       copyFail: 'Copy failed — please copy the URL manually.',
       downloading: 'Download started — long-press the image if nothing happens',
       posterCta: 'Scan to keep learning',
-      posterBrand: '方片学堂 · Fangpian Academy',
+      posterBrand: 'AI学院 · Fangpian Academy',
       fileTag: 'xueai'
     },
     ko: {
@@ -131,7 +131,7 @@
       copyFail: '복사 실패. 주소창 링크를 직접 복사해 주세요.',
       downloading: '저장을 시작했습니다. 반응이 없으면 이미지를 길게 눌러 저장하세요',
       posterCta: '스캔해서 이어서 학습하기',
-      posterBrand: '方片学堂 · 팡피엔 아카데미',
+      posterBrand: 'AI学院 · 팡피엔 아카데미',
       fileTag: 'xueai'
     }
   };

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="發版時以為只改了 A 功能，實際 diff 裏混進了上週調試 B 的臨時改動，半成品程式碼進了生產環境。數據庫、配置、部署這些不可逆操作，必須在執行前設閘。下面兩個演練都可以動手操作。">
-<meta name="author" content="方片">
-<title>破壞性操作的三道閘 | 方片学堂</title>
 
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<title>破壞性操作的三道閘 | AI学院</title>
+
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:locale" content="zh_HK">
 
 
@@ -111,13 +111,14 @@ pre code{background:none;padding:0;color:#d9f2ec}
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="破壞性操作的三道閘"><meta property="og:description" content="發版時以為只改了 A 功能，實際 diff 裏混進了上週調試 B 的臨時改動，半成品程式碼進了生產環境。數據庫、配置、部署這些不可逆操作，必須在執行前設閘。下面兩個演練都可以動手操作。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">VIBE CODING 方法論 · 第 9 節</div>
-    <h1>破壞性操作的三道閘</h1>
+    <h1>破壞性操作的三道閘</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>破壞性操作的三道閘</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">發版時以為只改了 A 功能，實際 diff 裏混進了上週調試 B 的臨時改動，半成品程式碼進了生產環境。數據庫、配置、部署這些不可逆操作，必須在執行前設閘。下面兩個演練都可以動手操作。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>數據庫先備份、不可逆操作先給回退方案、發版前做 diff 審查</p></aside><!--seo:end-->  <div class="l-callout reveal">
     <p style="font-size:14.5px;line-height:1.8"><b>核心原則：</b>不可逆操作的安全感來自閘門。備份攔數據損失，回退方案攔無法恢復，diff 審查攔帶病發版，三道閘都設在執行之前。</p>

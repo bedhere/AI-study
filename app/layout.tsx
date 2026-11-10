@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: '方片学堂｜AI 产品从入门到精通',
-  description: '方片学堂提供面向 AI 产品经理的完整培训课程，从大模型原理到 AI 工程化落地。',
+  title: 'AI学院｜全员拥抱 AI',
+  description: '方片全员 AI 学习平台，从基础认知、清楚提问到实践与核验，让 AI 融入真实工作。',
 };
 
 export default function RootLayout({

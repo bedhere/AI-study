@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>算法厌恶：AI 犯一次错，就被永久拉黑 | 方片学堂</title>
+<title>算法厌恶：AI 犯一次错，就被永久拉黑 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -12,7 +12,7 @@
 <!-- SEO Start -->
 <meta name="description" content="上一课讲信任要校准。这一课讲校准路上最大的一块石头：人对 AI 的容错率，远低于对人。同样犯一次错，人类同事会被原谅，AI 会被弃用。这个不对称有实验、有数据、也有解药。">
 <meta name="keywords" content="算法厌恶,Algorithm Aversion,Dietvorst,AI信任,用户流失,AI产品设计,自动化偏见">
-<meta name="author" content="方片">
+
 <meta name="robots" content="index, follow">
 
 
@@ -23,7 +23,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
+<meta property="og:site_name" content="AI学院 · 全员 AI 学习">
 <meta property="og:title" content="算法厌恶：AI 犯一次错，就被永久拉黑">
 <meta property="og:description" content="上一课讲信任要校准。这一课讲校准路上最大的一块石头：人对 AI 的容错率，远低于对人。同样犯一次错，人类同事会被原谅，AI 会被弃用。这个不对称有实验、有数据、也有解药。">
 
@@ -94,13 +94,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">专题篇章 · AI 产品心理学</div>
-    <h1>算法厌恶：AI 犯一次错，就被永久拉黑</h1>
+    <h1>算法厌恶：AI 犯一次错，就被永久拉黑</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>算法厌恶：AI 犯一次错，就被永久拉黑</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">上一课讲信任要校准。这一课讲校准路上最大的一块石头：<b>人对 AI 的容错率，远低于对人</b>。同样犯一次错，人类同事会被原谅，AI 会被弃用。这个不对称有实验、有数据、也有解药。</p>
     <div class="chips"><span class="chip">先投一票</span><span class="chip">归因翻译器</span><span class="chip">微调权实验</span><span class="chip">弃用率仪表盘</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Dietvorst 实验：人看到算法犯一次错就弃用，哪怕它整体比人准。先投票亲测自己的偏心，再玩归因翻译器和微调权开关，看弃用率仪表怎么被四个杠杆拉回来</p></aside><!--seo:end-->  <section class="reveal">
@@ -262,7 +263,7 @@
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>首错的位置决定生死：</b>新手期犯错触发弃用，老用户期犯错只触发吐槽。新用户走最稳的链路，实验性功能只对老用户开。</p></div>
       <div class="tk-item"><span class="tk-ic">✓</span><p><b>同一个坑只能掉一次：</b>用户纠正过的错误要进记忆并展示「已记住」，第二次在原地翻车，厌恶叠加失望，基本救不回来。</p></div>
     </div>
-    <p class="src-note"><b>内容来源：</b>方片学堂「AI 产品心理学」专题原创；算法厌恶实验出自 Dietvorst, Simmons &amp; Massey, <i>Algorithm Aversion</i>（2015）与 <i>Overcoming Algorithm Aversion</i>（2018）。</p>
+    <p class="src-note"><b>内容来源：</b>AI学院「AI 产品心理学」专题原创；算法厌恶实验出自 Dietvorst, Simmons &amp; Massey, <i>Algorithm Aversion</i>（2015）与 <i>Overcoming Algorithm Aversion</i>（2018）。</p>
   </section>
 
 </main>

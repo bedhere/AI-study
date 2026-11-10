@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>79 个 Workspace 成员如何组成产品 | 方片学堂</title>
+<title>79 个 Workspace 成员如何组成产品 | AI学院</title>
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -29,9 +29,9 @@
 @media(max-width:760px){.lesson-header{padding:30px 22px}.lesson-header:after{font-size:92px}.axis,.evidence{grid-template-columns:1fr}.arch{padding:12px;overflow-x:auto}.arch svg{min-width:650px}.goal-strip{grid-template-columns:1fr}.exercise{grid-template-columns:1fr}}
 </style>
 <meta name="description" content="根 Cargo.toml 列出 79 个成员，其中 crates/codegen/ 占 62 个。理解这套系统，要沿组合入口、交互界面、Agent 宿主、领域能力、推理状态五条主轴阅读。">
-<meta name="author" content="方片">
 
-<meta property="og:site_name" content="方片学堂 · AI 产品经理培训">
+
+<meta property="og:site_name" content="AI学院 · 全员 AI 学习">
 <meta property="og:locale" content="zh_CN">
 
 
@@ -43,12 +43,13 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="79 个 Workspace 成员如何组成产品"><meta property="og:description" content="根 Cargo.toml 列出 79 个成员，其中 crates/codegen/ 占 62 个。理解这套系统，要沿组合入口、交互界面、Agent 宿主、领域能力、推理状态五条主轴阅读。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">CHAPTER 12 · SOURCE MAP</div>
-    <h1>79 个 Workspace 成员如何组成产品</h1>
+    <h1>79 个 Workspace 成员如何组成产品</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>79 个 Workspace 成员如何组成产品</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">根 <code>Cargo.toml</code> 列出 79 个成员，其中 <code>crates/codegen/</code> 占 62 个。理解这套系统，要沿组合入口、交互界面、Agent 宿主、领域能力、推理状态五条主轴阅读。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>按入口、Agent 运行时、工具和基础设施还原 Cargo Workspace 的真实分层</p></aside><!--seo:end-->  <div class="goal-strip reveal">
     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M21 12h-3M12 21v-3M3 12h3"/></svg>

@@ -66,6 +66,27 @@ test('exam results remain local and keep the most recent 50 attempts',()=>{
   assert.ok(records.every(record=>record.completedAt));
   assert.equal(setup({blocked:true}).api.saveExam({exam:'test',score:0,right:0,total:5}),false);
 });
+
+test('full current curriculum progress and bounded scores stay within small storage budgets',()=>{
+  const {api,store}=setup(),context={window:{}};
+  vm.runInNewContext(fs.readFileSync('public/slides/course-data.js','utf8'),context);
+  const lessons=context.window.COURSE_FLAT;
+  api.saveLessons(Object.fromEntries(lessons.map(lesson=>[lesson.file,1])),lessons);
+  assert.equal(api.completed(lessons),lessons.length);
+  assert.ok(store.get(api.key).length*2<16384); // All 445 lessons, under 16 KiB.
+  for(let i=0;i<60;i++)api.saveExam({exam:'x'.repeat(50000),mode:'x'.repeat(50000),score:Infinity,right:-2,total:NaN});
+  const raw=store.get('fangpian_exam_results_v1');assert.ok(raw.length*2<=api.limits.examBytes);
+  const records=JSON.parse(raw);assert.ok(records.every(record=>record.exam.length<=48&&record.mode.length<=8));
+  assert.ok(records.every(record=>Number.isFinite(record.score)&&record.right>=0));
+  assert.ok(!raw.includes('data:image'));
+});
+
+test('oversized progress stays usable in memory without overwriting the previous small saved record',()=>{
+  const {api,store}=setup();api.write({'one.html':1});const before=store.get(api.key);
+  const huge=Object.fromEntries(Array.from({length:2000},(_,i)=>['large-progress-'+i+'.html',1]));
+  assert.equal(api.write(huge),false);assert.equal(store.get(api.key),before);
+  assert.equal(api.read()['large-progress-0.html'],1);assert.equal(api.persistent,false);
+});
 test('local full-text search normalizes queries, supports terms and caches one index load',async()=>{
   let requests=0;
   const window={};

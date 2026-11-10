@@ -351,7 +351,8 @@ export function mount(canvas, options = {}) {
     eyeMaterial.opacity = 1 - quote; eyeHalo.opacity = .07 * (1 - quote);
     for (let i = 0; i < arms.length; i++) arms[i].rotation.z = (i ? 1 : -1) * .1 + (reduced ? 0 : Math.sin(clock * .9 + i * 1.5) * .008);
     camera.position.set(pose.camera[0] + pointerX * .08, pose.camera[1] - pointerY * .055, pose.camera[2]);
-    if (camera.zoom !== pose.zoom) { camera.zoom = pose.zoom; camera.updateProjectionMatrix(); }
+    const zoom = pose.zoom * clamp(options.scale ?? 1, .75, 1.1);
+    if (camera.zoom !== zoom) { camera.zoom = zoom; camera.updateProjectionMatrix(); }
     target.set(pose.target[0], pose.target[1], pose.target[2]); camera.lookAt(target);
     const angularChange = Math.max(Number.isFinite(shadowWorldYaw) ? Math.abs(follow.worldYaw - shadowWorldYaw) : 0, Number.isFinite(shadowPitch) ? Math.abs(follow.headPitch - shadowPitch) : 0);
     const refreshShadow = shouldRefreshShadow(frameState.phase, lastShadowPhase, (now - lastShadowAt) / 1000, shadowDirty, angularChange);

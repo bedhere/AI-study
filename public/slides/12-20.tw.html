@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Grok Build 原始碼課第 20 節：MCP 客戶端、OAuth、工具可見性與連線恢復">
-  <meta name="author" content="方片">
-  <title>MCP：連線只是起點 | 方片学堂</title>
+  
+  <title>MCP：連線只是起點 | AI学院</title>
 
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:locale" content="zh_TW">
 
 
@@ -56,12 +56,13 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="MCP：連線只是起點"><meta property="og:description" content="Grok Build 原始碼課第 20 節：MCP 客戶端、OAuth、工具可見性與連線恢復"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
   <main class="lesson">
     <header>
       <div class="eyebrow">Grok Build Source Course · 12 / 20</div>
-      <h1>MCP：<span>連線只是起點</span></h1>
+      <h1>MCP：<span>連線只是起點</span></h1><aside class="academy-review-note" data-academy-review="reference">本課保留技術教學內容。來源專案的經歷與數據不代表方片實績；涉及模型版本、服務價格及供應情況，使用前請核對官方資料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>MCP：連線只是起點</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
       <p class="lead">真正的客戶端還要完成配置合併、OAuth、能力發現、命名隔離、模型可見性控制、狀態推送和斷線恢復。原始碼將這些責任拆在 MCP crate 與 Session Actor 周邊。</p>
       <div class="chips"><span class="tag">Client Role</span><span class="tag">stdio / Streamable HTTP</span><span class="tag">OAuth</span><span class="tag">server__tool</span><span class="tag">50 ms 狀態合併</span></div>
     </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>確認客戶端角色，拆解 OAuth、工具命名、能力發現、狀態合併與重連</p></aside><!--seo:end-->    <section>

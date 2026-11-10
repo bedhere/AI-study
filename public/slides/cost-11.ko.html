@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>아키텍처 계층: KV Cache 주의사항 | 方片学堂</title>
+<title>아키텍처 계층: KV Cache 주의사항 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="AI学院 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="아키텍처 계층: KV Cache 주의사항">
 <meta property="og:description" content="상용화 제품의 비용 엔지니어링에서 KV Cache는 가장 과소평가된 기술 포인트 중 하나예요. 캐시 히트와 미스의 비용 차이는 최대 90%—하지만 안에 숨은 함정이 몇 개 있어요. 누가 말해주기 전엔 모를 수 있어요.">
 
@@ -81,13 +81,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 비용 엔지니어링 · 11 / 13</div>
-    <h1>아키텍처 계층: KV Cache 주의사항</h1>
+    <h1>아키텍처 계층: KV Cache 주의사항</h1><aside class="academy-review-note" data-academy-review="reference">교육 예제와 원본 프로젝트 경험은 팡피엔의 실적을 뜻하지 않습니다. 모델 버전, 이용 가능 여부와 가격은 공식 문서에서 확인하세요.</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>아키텍처 계층: KV Cache 주의사항</strong><p>AI学院 · 함께 배우는 AI</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">상용화 제품의 비용 엔지니어링에서 KV Cache는 가장 과소평가된 기술 포인트 중 하나예요. 캐시 히트와 미스의 비용 차이는 최대 90%—하지만 안에 숨은 함정이 몇 개 있어요. 누가 말해주기 전엔 모를 수 있어요.</p>
     <div class="chips"><span class="chip">접두사 매칭</span><span class="chip">공간으로 시간을 사다</span><span class="chip">tools 함정</span><span class="chip">챕터 캐시</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>접두사 매칭으로 최대 90% 절약; 도구를 동적으로 바꾸면 왜 캐시 전체가 무효가 되는지, 슬라이딩 윈도우 vs 챕터 캐시</p></aside><!--seo:end-->  <section class="reveal">

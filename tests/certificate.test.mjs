@@ -74,3 +74,41 @@ test('five home and certificate pages load the shared runtime and their own real
     }
   }
 });
+
+test('every graduation plan resolves completely in all five language catalogs', () => {
+  for (const lang of ['zh','en','ko','tw','hk']) {
+    const context = {window:{}};
+    vm.runInNewContext(fs.readFileSync('public/slides/course-data'+(lang==='zh'?'':'.'+lang)+'.js','utf8'),context);
+    const catalog = context.window.COURSE_FLAT;
+    for (const item of api.plans) {
+      const plan = api.plan(catalog,item.id);
+      assert.equal(plan.missing.length,0,lang+':'+item.id);
+      assert.equal(plan.lessons.length,item.files.length);
+      const done = Object.fromEntries(plan.files.map(file=>[file,1]));
+      const {store} = setup();
+      assert.equal(store.status(catalog,done,lang,item.id).eligible,true);
+      const record = store.claim(catalog,done,'测试同学',lang,item.id);
+      assert.equal(record.planId,item.id); assert.equal(record.lessonCount,plan.files.length);
+      assert.equal(store.status(catalog,{[plan.files[0]]:1},lang,item.id).record.id,record.id);
+      assert.equal(store.status([...catalog,{file:'unrelated-elective.html'}],done,lang,item.id).record.id,record.id);
+    }
+  }
+});
+
+test('different routes cannot inherit a certificate and missing required content blocks claiming', () => {
+  const catalog=api.plans.flatMap(plan=>plan.files.map(file=>({file})));
+  const done=Object.fromEntries(api.plans[0].files.map(file=>[file,1]));
+  const {store}=setup(); store.claim(catalog,done,'测试同学','zh','core');
+  assert.equal(store.status(catalog,done,'zh','use').record,null);
+  assert.equal(store.status(catalog,done,'zh','use').eligible,false);
+  assert.throws(()=>store.claim(catalog,done,'测试同学','zh','use'),/学完/);
+  assert.throws(()=>store.claim([],done,'测试同学','zh','core'),/不完整/);
+});
+
+test('certificate records have a bounded history and never persist rendered images', () => {
+  const {store,backing}=setup();
+  for(let i=0;i<25;i++)store.claim([{file:'sample-'+i+'.html'}],{['sample-'+i+'.html']:1},'测试同学');
+  const raw=backing.get(api.key), records=JSON.parse(raw).records;
+  assert.equal(Object.keys(records).length,12);assert.ok(raw.length*2<=8192);
+  assert.ok(!raw.includes('data:image'));assert.equal(api.selectedPlan({getItem:()=>null}),'core');
+});

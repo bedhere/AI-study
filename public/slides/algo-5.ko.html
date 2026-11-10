@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AI 속 정렬의 진짜 모습: Rerank | 方片学堂</title>
+<title>AI 속 정렬의 진짜 모습: Rerank | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="AI学院 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="AI 속 정렬의 진짜 모습: Rerank">
 <meta property="og:description" content="지난 강의의 정렬은 숫자 크기를 겨뤘지만, AI 세계에서는 “관련성”을 줄 세웁니다: RAG가 지식 베이스에서 문단을 잔뜩 건져 오면, 앞에 선 쪽이 컨텍스트에 끼어들 수 있어요—줄이 틀리면 모델이 틀린 자료를 진지하게 인용합니다. 이 “점수 + 재정렬” 단계가 Rerank예요. 오늘은 직접 투입되어 Rerank 모델을 해 봅니다.">
 
@@ -121,13 +121,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">프로그래밍 기초편 · 탐색과 정렬</div>
-    <h1>AI 속 정렬의 진짜 모습: Rerank</h1>
+    <h1>AI 속 정렬의 진짜 모습: Rerank</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>AI 속 정렬의 진짜 모습: Rerank</strong><p>AI学院 · 함께 배우는 AI</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">지난 강의의 정렬은 숫자 크기를 겨뤘지만, AI 세계에서는 “관련성”을 줄 세웁니다: RAG가 지식 베이스에서 문단을 잔뜩 건져 오면, <b>앞에 선 쪽이 컨텍스트에 끼어들 수 있어요</b>—줄이 틀리면 모델이 틀린 자료를 진지하게 인용합니다. 이 “점수 + 재정렬” 단계가 Rerank예요. 오늘은 직접 투입되어 Rerank 모델을 해 봅니다.</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>RAG가 가져온 문단은 그대로 쓸 수 없어요: 먼저 조검색, 그다음 정밀 랭킹. 가중치를 직접 조절하며 후보 문단이 어떻게 다시 섞이는지 보세요—추천 피드와 검색 결과도 마찬가지</p></aside><!--seo:end-->  <div class="sec-label">인터랙티브 · Rerank 모델을 직접 해 보기</div>
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Big-O: 코드가 얼마나 걸릴지 한눈에 | 方片学堂</title>
+<title>Big-O: 코드가 얼마나 걸릴지 한눈에 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="AI学院 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="Big-O: 코드가 얼마나 걸릴지 한눈에">
 <meta property="og:description" content="자매편에서 「자료구조 = 정리하는 방식」을 다뤘다면, 이번 장은 나머지 절반입니다: 알고리즘 = 일을 처리하는 루틴. 루틴이 좋은지 나쁜지 평가할 때 프로그래머가 쓰는 공통 자, 그게 Big-O예요. 수학 기호에 겁먹지 마세요—답이 필요한 질문은 하나뿐입니다: 데이터가 늘어날 때, 코드는 얼마나 느려질까? 오늘 세 개의 인터랙티브로 이 자를 머릿속에 넣어요.">
 
@@ -118,13 +118,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">프로그래밍 기초편 · 복잡도: 이 코드, 쓸 만한가?</div>
-    <h1>Big-O: 코드가 얼마나 걸릴지 한눈에</h1>
+    <h1>Big-O: 코드가 얼마나 걸릴지 한눈에</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Big-O: 코드가 얼마나 걸릴지 한눈에</strong><p>AI学院 · 함께 배우는 AI</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">자매편에서 「자료구조 = 정리하는 방식」을 다뤘다면, 이번 장은 나머지 절반입니다: <b>알고리즘 = 일을 처리하는 루틴</b>. 루틴이 좋은지 나쁜지 평가할 때 프로그래머가 쓰는 공통 자, 그게 Big-O예요. 수학 기호에 겁먹지 마세요—답이 필요한 질문은 하나뿐입니다: <b>데이터가 늘어날 때, 코드는 얼마나 느려질까?</b> 오늘 세 개의 인터랙티브로 이 자를 머릿속에 넣어요.</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>데이터량 슬라이더를 끌어 O(1), O(log n), O(n), O(n²) 네 곡선이 어떻게 갈라지는지 보고, 데이터가 10배가 되면 누가 태연하고 누가 바로 폭발하는지</p></aside><!--seo:end-->  <div class="sec-label">인터랙티브 1 · 네 곡선이 갈라지다</div>
 

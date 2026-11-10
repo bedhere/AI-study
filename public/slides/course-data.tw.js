@@ -10,7 +10,7 @@ window.COURSE = {
   meta: {
     title: '學 AI 產品，從入門到精通',
     subtitle: '從大模型底層原理到 AI Agent Harness',
-    brand: '方片學堂',
+    brand: 'AI学院',
     author: '方片',
     authorUrl: '',
     github: 'https://github.com/bedhere/AI-study',

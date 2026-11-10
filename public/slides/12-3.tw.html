@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>從真實 main() 到第一輪取樣 | 方片学堂</title>
+<title>從真實 main() 到第一輪取樣 | AI学院</title>
 <style>@keyframes _si{to{opacity:1}}body{opacity:0;animation:_si .15s ease .08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -22,9 +22,9 @@
 @media(max-width:760px){.lesson-header{padding:30px 22px}.lesson-header:after{font-size:48px}.modes,.source-grid{grid-template-columns:1fr}.handoff{grid-template-columns:1fr}.handoff div:not(:last-child):after{content:"⌄";right:50%;top:auto;bottom:-17px}.route{padding:10px}}
 </style>
 <meta name="description" content="實際入口位於 xai-grok-pager-bin/src/main.rs。同一個組合入口解析命令與互動模式，再把工作交給 TUI 或 Shell Agent 宿主。">
-<meta name="author" content="方片">
 
-<meta property="og:site_name" content="方片学堂 · AI 產品經理培訓">
+
+<meta property="og:site_name" content="AI学院 · AI 產品經理培訓">
 <meta property="og:locale" content="zh_TW">
 
 
@@ -36,12 +36,13 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="從真實 main() 到第一輪取樣"><meta property="og:description" content="實際入口位於 xai-grok-pager-bin/src/main.rs。同一個組合入口解析命令與互動模式，再把工作交給 TUI 或 Shell Agent 宿主。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">CHAPTER 12 · CALL PATH</div>
-    <h1>從真實 main() 到第一輪取樣</h1>
+    <h1>從真實 main() 到第一輪取樣</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>從真實 main() 到第一輪取樣</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">實際入口位於 <code>xai-grok-pager-bin/src/main.rs</code>。同一個組合入口解析命令與互動模式，再把工作交給 TUI 或 Shell Agent 宿主。</p>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句話速覽</span><p>追蹤入口、會話建立、提示詞渲染、模型取樣與流式返回的完整呼叫鏈</p></aside><!--seo:end-->  <div class="goal reveal"><b>課程目標</b><br>能準確說出四種執行分支，並沿 <code>connect_or_spawn</code>、<code>MvpAgent</code>、<code>spawn_session_on_thread</code>、<code>SessionActor</code>、<code>SamplerActor</code> 定位第一輪對話。</div>
 

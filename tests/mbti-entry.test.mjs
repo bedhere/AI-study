@@ -112,7 +112,7 @@ test('the page keeps its MBTI label as the shared renderer replaces questions an
   document.title = 'MBTI 风格探索 · 第 2 题 · 方片虎格测试';
   observerCallback();
   assert.equal(heading.textContent, 'MBTI 趣味性格测试');
-  assert.equal(document.title, 'MBTI 趣味性格测试 · 第 2 题 · 方片 AI 学堂');
+  assert.equal(document.title, 'MBTI 趣味性格测试 · 第 2 题 · AI学院');
   observerCallback();
   assert.equal((document.title.match(/MBTI 趣味性格测试/g) || []).length, 1);
 });

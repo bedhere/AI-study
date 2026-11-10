@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>출력 계층: 모델의 입을 단속해요 | 方片学堂</title>
+<title>출력 계층: 모델의 입을 단속해요 | AI学院</title>
 <style>@keyframes _si{from{opacity:0}to{opacity:1}}body{opacity:0;animation:_si 0.15s ease 0.08s forwards}</style>
 <script id="xueaiThemeBridge" src="theme-bridge.js?v=20260816k"></script>
 <link rel="stylesheet" href="lesson.css?v=20260827a">
@@ -21,7 +21,7 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="方片学堂 · AI 프로덕트 매니저 교육">
+<meta property="og:site_name" content="AI学院 · AI 프로덕트 매니저 교육">
 <meta property="og:title" content="출력 계층: 모델의 입을 단속해요">
 <meta property="og:description" content="실전 4계층의 마지막. 출력 Token은 입력보다 몇 배 비싸요(3절 요금표 다시 보기), 그리고 API 반환 속도를 직접 정해요. 모델의 입을 단속하는 적합한 조작은 세 종류: 지시 계층, 코드 계층, 엔지니어링 계층.">
 
@@ -74,13 +74,14 @@
 <link rel="stylesheet" href="lesson-dark-compat.css?v=20260816k">
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js"></script>
+<link rel="stylesheet" href="academy-brand.css?v=20261110p0">
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 비용 엔지니어링 · 12 / 13</div>
-    <h1>출력 계층: 모델의 입을 단속해요</h1>
+    <h1>출력 계층: 모델의 입을 단속해요</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>출력 계층: 모델의 입을 단속해요</strong><p>AI学院 · 함께 배우는 AI</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
     <p class="subtitle">실전 4계층의 마지막. 출력 Token은 입력보다 몇 배 비싸요(3절 요금표 다시 보기), 그리고 API 반환 속도를 직접 정해요. 모델의 입을 단속하는 적합한 조작은 세 종류: 지시 계층, 코드 계층, 엔지니어링 계층.</p>
     <div class="chips"><span class="chip">네거티브 제약</span><span class="chip">Diff 출력</span><span class="chip">정지 시퀀스</span></div>
   </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">한 줄 요약</span><p>명확한 네거티브 제약으로 잡담 약 30% 절감; 윤문은 Diff로, 전문 재작성 금지; 정지 시퀀스로 물리 절단</p></aside><!--seo:end-->  <section class="reveal">
