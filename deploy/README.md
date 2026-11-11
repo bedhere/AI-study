@@ -42,3 +42,10 @@ bash deploy/deploy.sh
 ## 手动回滚
 
 每次运行会打印上一版路径和备份目录；备份中的 `previous-release.txt` 也保存上一版路径。将 `current` 符号链接切回该路径，恢复同一备份目录中的 `nginx.conf`，执行 `nginx -t` 后 reload。首次部署没有上一版本时，移除本项目的站点配置即可撤销站点。
+
+
+## 同 IP 的 HTTPS 路由
+
+当同一 IP 的 443 端口由其他应用使用时，浏览器可能自动将 HTTP 升级为 HTTPS。可将 `deploy/nginx-slides.conf` 复制到 `/etc/nginx/snippets/fangpian-xuetang-slides.conf`，仅在该 IP 的 HTTPS server 块内 include 此文件，再执行 `nginx -t` 和 reload。此配置仅接管 `/slides/`，保留其他应用的根路由，学堂入口使用 `https://111.228.5.133/slides/home.html`。
+
+片段为课件设置 SAMEORIGIN，保证同源课程阅读器可以嵌入课件；不会沿用其他应用可能设置的 X-Frame-Options DENY。修改前应备份现有配置，首次请求失败时回退并重新检查配置。

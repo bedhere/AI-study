@@ -1,0 +1,273 @@
+{
+  "base": "https://111.228.5.133",
+  "verifiedFiles": 53,
+  "tlsCertificateVerified": true,
+  "readerEmbedding": "SAMEORIGIN",
+  "results": [
+    {
+      "path": "slides/home.html",
+      "sha256": "8a9f139dae33ee405b7a27bfcef7c1abc39270158c6976a79bcd38816686e402",
+      "status": 200
+    },
+    {
+      "path": "slides/learn.html",
+      "sha256": "eeaebc572b8d98ae9394be08952e0c57567039ae69e60b74909a338d0cdb138d",
+      "status": 200
+    },
+    {
+      "path": "slides/aiti.html",
+      "sha256": "b4f91b313ce9cc2eff3c2ba543bb4a42bd813c6bd0bf7d9a3c468c38e8d60ad5",
+      "status": 200
+    },
+    {
+      "path": "slides/certificate.html",
+      "sha256": "f08f7370addb61f065ce58efb5dbda2e785d8f17359a6aff0c8814e415ebf78c",
+      "status": 200
+    },
+    {
+      "path": "slides/course-data.js",
+      "sha256": "19b32a08a45b3f08937924614edb153244ecbb4d203dfdb8e4cbfd6ce6aa8ee2",
+      "status": 200
+    },
+    {
+      "path": "slides/local-learning.js",
+      "sha256": "d3475cb800a5395ea821b4b7f80c4d0c84a6ca53cf987b2da9fc8e33fc5b9623",
+      "status": 200
+    },
+    {
+      "path": "slides/comic-data.js",
+      "sha256": "51cbfa42370c47bb679b44de499e171bb42902d8404d4178a76d9540ed05d52c",
+      "status": 200
+    },
+    {
+      "path": "slides/lesson-comic.js",
+      "sha256": "8ee7ffa6452869a6065213a27ad3806411289a78ebdb3d51fd99141329635e03",
+      "status": 200
+    },
+    {
+      "path": "slides/lesson-comic.css",
+      "sha256": "d2c3e2407c07847fd69aee97c8125246a434c0a4c04a362196ce9e612285bc8f",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/manifest.json",
+      "sha256": "a2a8131cb3676046db63298ac4895b9b905ecd5a5b05120ed90446cee35f32e7",
+      "status": 200
+    },
+    {
+      "path": "slides/search-index.zh.json",
+      "sha256": "a039539b814ab4d27cfc1578c446b6d4cb01a7dff6e7b6adcb2753fc58ae03eb",
+      "status": 200
+    },
+    {
+      "path": "slides/academy-knowledge.html",
+      "sha256": "1dd4e366b083e5e03f426e1ddae34dd73cb0aebbda53e022e2ad39602b2099aa",
+      "status": 200
+    },
+    {
+      "path": "slides/roadmap.html",
+      "sha256": "040ca9a9b5e2ef9567b9fb42a1f4ef4649369bb6b39ac3bf1a475ebfa4e17803",
+      "status": 200
+    },
+    {
+      "path": "slides/learn-3.html",
+      "sha256": "6ec1671a7325b8478b757c302620f98799967b490c6f2aa361240edd063f340b",
+      "status": 200
+    },
+    {
+      "path": "slides/zero-3.html",
+      "sha256": "ebe4a8b8f842e2c0b3291396899ac00eb3e27337eb7664589d87c4543d13b18a",
+      "status": 200
+    },
+    {
+      "path": "slides/7-2c.html",
+      "sha256": "b918342e5e5c3e8e14d4485decfe793c7f2ab8244da2b13a2b5b851c57177eda",
+      "status": 200
+    },
+    {
+      "path": "slides/9-0.html",
+      "sha256": "d9fcf26963aa181e5612e6ad50593cbd69f5eb2112545ac5818cb4f1e120a803",
+      "status": 200
+    },
+    {
+      "path": "slides/9-25.html",
+      "sha256": "ad789e50f6569cc965581d69fc65062b830e7996e3028fc69193c6a22c2a50ad",
+      "status": 200
+    },
+    {
+      "path": "slides/9-32.html",
+      "sha256": "e7381b6e7f7b1c112d6fe535028d34c29a6e18d1aa17afaa4693f54e3220db08",
+      "status": 200
+    },
+    {
+      "path": "slides/10-1.html",
+      "sha256": "14b9794bd7e8196b9f9835eee8968c1a931a169076d51e2f064dffee93220f5e",
+      "status": 200
+    },
+    {
+      "path": "slides/10-14.html",
+      "sha256": "2237d1ce41d26ef92964790034f43f49bf6b3a3b9ad194cae925fe0fad722bdf",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/academy-evidence-1.webp",
+      "sha256": "f65e08a04b3c7febaf77f0c9cdffa0807a0594b697aaf3ae33ca3c26a3358c2d",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/academy-evidence-2.webp",
+      "sha256": "6fb2f6004566affa10b9ad243af749a0e20bc1922e6e001ee27415e5148c363c",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/academy-evidence-3.webp",
+      "sha256": "3984e6cbedc1644c4cf93a8934a9791d43cbf313b7718890504a3f9e6caaf480",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/academy-evidence-4.webp",
+      "sha256": "20a3fd1347702b2b627f964c2dd2f901d3e9689772d61bb4207455996d77a386",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/academy-learning-routes-1.webp",
+      "sha256": "586b0ccb116eab997976ceefeacf5cbfe57d633573f09e375976314888b1c4b9",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/academy-learning-routes-2.webp",
+      "sha256": "7cbc5636e5243d201ba322dbac6f0eacdfcda5caac146f620d7c510145621579",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/academy-learning-routes-3.webp",
+      "sha256": "df3a0f59fcc566131d79423f0fc3f53949706d15723036baff5187b321d4be88",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/academy-learning-routes-4.webp",
+      "sha256": "98ef38c985fb7033d86788db0e0271477b342f3007d471c5b3863e7e1f83d54a",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/personal-explanation-1.webp",
+      "sha256": "294cff5e355e8f8d8d384bb645c9eb6b2a128d168d956b52427bdba51addff87",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/personal-explanation-2.webp",
+      "sha256": "93a144a0face88ca011049a2e3b30b3c76aa175d3949015b8cb883d677b41448",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/personal-explanation-3.webp",
+      "sha256": "e9f49c82bfc92ef2071b629016ddac1117306e462577cac4d69d69223736ef29",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/personal-explanation-4.webp",
+      "sha256": "92493086ecc98f902b785e00acf9d33198cdfdbc85412616b1aef0a3a1d6c287",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/verify-ai-1.webp",
+      "sha256": "6b766df730523e1e216544c6b7b6df810a926e7240b57cb8a4df00eba7112723",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/verify-ai-2.webp",
+      "sha256": "ee3741f47944e24c116eda931a4b28ccd65e8e5bbeb3547b7f8cb8c030d6bc7a",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/verify-ai-3.webp",
+      "sha256": "bb974299575b2676b44a9215694c0fb66e32f3f993091fc5545f90cc6f040729",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/verify-ai-4.webp",
+      "sha256": "552e792094338dfd7c2ff4777df4c29e7643847dbdcf07d0c5387356db660db0",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/practice-business-loop-1.webp",
+      "sha256": "a507b58784176960da0d33f4877016d9293e62ff644c18cc54effe5822c3e97f",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/practice-business-loop-2.webp",
+      "sha256": "e980da6080feefbef114b15a338991adf668ed97c8d1ff788874bfa4e249ca42",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/practice-business-loop-3.webp",
+      "sha256": "4c3134d3d744a4b43412211357f5151b4ed230d5d6a2a38aaa08744673505fee",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/practice-business-loop-4.webp",
+      "sha256": "ba72f66e030c25ad1e7397382049fcb234092a73bddbad24313d713c1abe788e",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/practice-independent-brainstorm-1.webp",
+      "sha256": "fcb7d011f774153887db6ee12a519059ef1e6b566928aacc24cddf10699a4eec",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/practice-independent-brainstorm-2.webp",
+      "sha256": "8d0da8d0268584979327d3c831aa324c18fdb54047c336984320395349b70ef5",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/practice-independent-brainstorm-3.webp",
+      "sha256": "ad1cc4e15e28d7c36d9be90bcbfc61b4217cf67cea2a5271eb2ddfebb860a2e5",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/practice-independent-brainstorm-4.webp",
+      "sha256": "7d1b22d782aea64adcd37e394e90f83c308d04a16639584cab64249af0d9c8f8",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/engineering-workflow-or-agent-1.webp",
+      "sha256": "b3b3e758b6458ff72d6f7b42f8a303bb0b09ffe6a847745a2ab3e1c43d523898",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/engineering-workflow-or-agent-2.webp",
+      "sha256": "1f7afaf16132e51d14ec22d0a933a51e9951912d45b4295f8673887c27a91b45",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/engineering-workflow-or-agent-3.webp",
+      "sha256": "c1958944417de74a1afe039a951378b2b4ddc43af7f669c347e6d4c117f7276f",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/engineering-workflow-or-agent-4.webp",
+      "sha256": "ca2f2e5ffe76875a630b505107cc7dcfb8cbf995a268119b5676bc74ab998a05",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/engineering-session-context-1.webp",
+      "sha256": "70a27a69f138824e59d92db717eaf4c7b810ff217e3e542b62aa48c2a4f10c0e",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/engineering-session-context-2.webp",
+      "sha256": "e2d69422eb1289617d55e3e4c882813ff36f16e10e68bf50a29f9c86e7cc9fc4",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/engineering-session-context-3.webp",
+      "sha256": "83285f6b096b91f0a7ed4e5e2af7396347d2487e2780a073af44c553248916ad",
+      "status": 200
+    },
+    {
+      "path": "slides/assets/comics/engineering-session-context-4.webp",
+      "sha256": "0a7192d5174399d9e7d677d99c38a023ffe4a4a823f2ec9d181f73ffb81c9553",
+      "status": 200
+    }
+  ]
+}

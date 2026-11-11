@@ -1,6 +1,6 @@
 # 2026-11-09 自有服务器部署记录
 
-最新发布见 [2026-11-10 证书全屏拖拽与机器人跟踪](viewport-interaction.md)，此前见 [漫画与外跳清理同步记录](server-sync-20261110.md)及 [AI学院部署记录](server-release-20261110.md)。下文保留首次部署历史。
+最新发布见 [2026-11-11 193 篇漫画与 HTTPS 课件路由](server-comics-193-20261111.md)，此前见 [2026-11-10 证书全屏拖拽与机器人跟踪](viewport-interaction.md)、 [漫画与外跳清理同步记录](server-sync-20261110.md)及 [AI学院部署记录](server-release-20261110.md)。下文保留首次部署历史。
 
 访问地址：<http://111.228.5.133/>，首页重定向到 `/slides/home.html`。
 

@@ -179,5 +179,1582 @@
       "total": 14,
       "comics": 0
     }
-  ]
+  ],
+  "lessons": [
+    {
+      "file": "academy-knowledge.html",
+      "title": "AI 能帮忙，也需要你来判断",
+      "part": "开始之前",
+      "slug": "academy-evidence",
+      "panels": 4,
+      "panelBytes": 127828
+    },
+    {
+      "file": "academy-practice.html",
+      "title": "用 AI 把学习资料整理成三版分享通知",
+      "part": "开始之前",
+      "slug": "academy-three-drafts",
+      "panels": 4,
+      "panelBytes": 133564
+    },
+    {
+      "file": "academy-review.html",
+      "title": "交付前的核验：三道练习与一次复盘",
+      "part": "开始之前",
+      "slug": "academy-review-loop",
+      "panels": 4,
+      "panelBytes": 128632
+    },
+    {
+      "file": "roadmap.html",
+      "title": "从你的工作目标开始学 AI",
+      "part": "开始之前",
+      "slug": "academy-learning-routes",
+      "panels": 4,
+      "panelBytes": 134876
+    },
+    {
+      "file": "0-intro.html",
+      "title": "我们在哪里？达克效应",
+      "part": "开始之前",
+      "slug": "academy-learning-humility",
+      "panels": 4,
+      "panelBytes": 206500
+    },
+    {
+      "file": "0-how.html",
+      "title": "怎样学，知识才能过脑子？",
+      "part": "开始之前",
+      "slug": "academy-study-transfer",
+      "panels": 4,
+      "panelBytes": 118382
+    },
+    {
+      "file": "0-why.html",
+      "title": "为什么花这么多时间讲原理？",
+      "part": "开始之前",
+      "slug": "academy-context-foundation",
+      "panels": 4,
+      "panelBytes": 135256
+    },
+    {
+      "file": "learn-1.html",
+      "title": "让 AI 帮我判断：这个建议适合我吗",
+      "part": "AI 教我学习：把它当老师用",
+      "slug": "advice-fit",
+      "panels": 4,
+      "panelBytes": 154494
+    },
+    {
+      "file": "learn-2.html",
+      "title": "让 AI 帮我找到下一步该问什么",
+      "part": "AI 教我学习：把它当老师用",
+      "slug": "next-question",
+      "panels": 4,
+      "panelBytes": 161864
+    },
+    {
+      "file": "learn-3.html",
+      "title": "让 AI 按我的情况讲清楚",
+      "part": "AI 教我学习：把它当老师用",
+      "slug": "personal-explanation",
+      "panels": 4,
+      "panelBytes": 205074
+    },
+    {
+      "file": "learn-11.html",
+      "title": "让 AI 只根据我贴出的原文回答",
+      "part": "AI 教我学习：把它当老师用",
+      "slug": "source-only",
+      "panels": 4,
+      "panelBytes": 132082
+    },
+    {
+      "file": "learn-4.html",
+      "title": "让 AI 用我熟悉的东西打比方",
+      "part": "AI 教我学习：把它当老师用",
+      "slug": "familiar-analogy",
+      "panels": 4,
+      "panelBytes": 141568
+    },
+    {
+      "file": "learn-5.html",
+      "title": "让 AI 一次只问我一个问题",
+      "part": "AI 教我学习：把它当老师用",
+      "slug": "one-question",
+      "panels": 4,
+      "panelBytes": 134670
+    },
+    {
+      "file": "learn-6.html",
+      "title": "让 AI 标出最可能编错的五类信息",
+      "part": "AI 教我学习：把它当老师用",
+      "slug": "five-risk-types",
+      "panels": 4,
+      "panelBytes": 172214
+    },
+    {
+      "file": "learn-7.html",
+      "title": "让 AI 的回答先过三道检查",
+      "part": "AI 教我学习：把它当老师用",
+      "slug": "three-checks",
+      "panels": 4,
+      "panelBytes": 157312
+    },
+    {
+      "file": "learn-8.html",
+      "title": "这次回答，我要不要去查原文",
+      "part": "AI 教我学习：把它当老师用",
+      "slug": "check-original",
+      "panels": 4,
+      "panelBytes": 163434
+    },
+    {
+      "file": "learn-9.html",
+      "title": "让 AI 帮我拆开一段看不懂的条款",
+      "part": "AI 教我学习：把它当老师用",
+      "slug": "unpack-clause",
+      "panels": 4,
+      "panelBytes": 159896
+    },
+    {
+      "file": "learn-10.html",
+      "title": "让 AI 先告诉我必须懂哪五个概念",
+      "part": "AI 教我学习：把它当老师用",
+      "slug": "prerequisite-map",
+      "panels": 4,
+      "panelBytes": 144740
+    },
+    {
+      "file": "zero-0.html",
+      "title": "先别学原理，看看它能干哪些神奇的活",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-showcase",
+      "panels": 4,
+      "panelBytes": 162724
+    },
+    {
+      "file": "zero-1.html",
+      "title": "AI 到底是什么？它其实在玩「接话茬」",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-token-chain",
+      "panels": 4,
+      "panelBytes": 126106
+    },
+    {
+      "file": "zero-2.html",
+      "title": "它不是在网上帮你搜答案",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-search-generation",
+      "panels": 4,
+      "panelBytes": 159382
+    },
+    {
+      "file": "zero-3.html",
+      "title": "它会一本正经地胡说八道",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "verify-ai",
+      "panels": 4,
+      "panelBytes": 194428
+    },
+    {
+      "file": "zero-4.html",
+      "title": "把它当一个聪明、但完全不了解你的新同事",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-new-colleague",
+      "panels": 4,
+      "panelBytes": 159490
+    },
+    {
+      "file": "zero-5.html",
+      "title": "万能开场白：「先问我几个问题，再开始」",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-ask-first",
+      "panels": 4,
+      "panelBytes": 146440
+    },
+    {
+      "file": "zero-q-prompt.html",
+      "title": "提示词到底怎么写才好？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-prompt-blocks",
+      "panels": 4,
+      "panelBytes": 176112
+    },
+    {
+      "file": "zero-q-prompt-engineering.html",
+      "title": "「提示词工程」是工程师才需要学的吗？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-prompt-engineering",
+      "panels": 4,
+      "panelBytes": 145896
+    },
+    {
+      "file": "zero-q-model-agent-app.html",
+      "title": "模型、Agent、AI 应用是什么关系？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-model-agent-app",
+      "panels": 4,
+      "panelBytes": 176094
+    },
+    {
+      "file": "zero-q-agent.html",
+      "title": "Agent 到底强在哪？为什么大家都在说它",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-agent-delivery",
+      "panels": 4,
+      "panelBytes": 136816
+    },
+    {
+      "file": "zero-q-skill.html",
+      "title": "最近很火的 Skill 到底是什么？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-skill-checklist",
+      "panels": 4,
+      "panelBytes": 160022
+    },
+    {
+      "file": "zero-q-vibe-coding.html",
+      "title": "Vibe Coding 是什么？不会写代码也能做软件吗？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-vibe-coding",
+      "panels": 4,
+      "panelBytes": 153544
+    },
+    {
+      "file": "zero-q-china-models.html",
+      "title": "国产大模型有哪些？该怎么选？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-choose-domestic",
+      "panels": 4,
+      "panelBytes": 127480
+    },
+    {
+      "file": "zero-q-companies.html",
+      "title": "除了 OpenAI，还有哪些重要的 AI 公司？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-company-map",
+      "panels": 4,
+      "panelBytes": 155960
+    },
+    {
+      "file": "zero-q-token.html",
+      "title": "Token 是什么？为什么 AI 按它收费？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-token-meter",
+      "panels": 4,
+      "panelBytes": 133666
+    },
+    {
+      "file": "zero-q-context-window.html",
+      "title": "为什么聊久了它会「忘事」？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-context-desk",
+      "panels": 4,
+      "panelBytes": 141388
+    },
+    {
+      "file": "zero-q-reasoning.html",
+      "title": "「推理模型」「深度思考」是什么？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-reasoning-draft",
+      "panels": 4,
+      "panelBytes": 144642
+    },
+    {
+      "file": "zero-q-parameters.html",
+      "title": "参数越多越聪明吗？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-parameter-dials",
+      "panels": 4,
+      "panelBytes": 182064
+    },
+    {
+      "file": "zero-q-multimodal.html",
+      "title": "为什么有的 AI「看不懂」图片？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-multimodal-tools",
+      "panels": 4,
+      "panelBytes": 154752
+    },
+    {
+      "file": "zero-q-finetune-vs-rag.html",
+      "title": "微调是什么？和「喂资料」有什么区别？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-finetune-rag",
+      "panels": 4,
+      "panelBytes": 143668
+    },
+    {
+      "file": "zero-q-knowledge-base.html",
+      "title": "企业都在建的「知识库」是什么？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-knowledge-shelf",
+      "panels": 4,
+      "panelBytes": 133086
+    },
+    {
+      "file": "zero-q-acronyms.html",
+      "title": "GPT、LLM、AIGC…这些缩写怎么分？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-acronym-map",
+      "panels": 4,
+      "panelBytes": 142034
+    },
+    {
+      "file": "zero-q-nvidia-gpu.html",
+      "title": "英伟达为什么那么值钱？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-gpu-parallel",
+      "panels": 4,
+      "panelBytes": 149570
+    },
+    {
+      "file": "zero-q-train-or-prompt.html",
+      "title": "『我训了个模型』到底训了什么？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-training-ladder",
+      "panels": 4,
+      "panelBytes": 131284
+    },
+    {
+      "file": "zero-q-jargon-translator.html",
+      "title": "AI 圈黑话翻译器",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-jargon-evidence",
+      "panels": 4,
+      "panelBytes": 134526
+    },
+    {
+      "file": "zero-q-opensource-free.html",
+      "title": "『开源模型』等于免费吗？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-open-weights",
+      "panels": 4,
+      "panelBytes": 197458
+    },
+    {
+      "file": "zero-q-benchmark.html",
+      "title": "『跑分第一』的模型，为什么用起来不行？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-private-benchmark",
+      "panels": 4,
+      "panelBytes": 159610
+    },
+    {
+      "file": "zero-q-ai-learning.html",
+      "title": "AI 越聊越懂我，是它在学习吗？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-memory-not-training",
+      "panels": 4,
+      "panelBytes": 153868
+    },
+    {
+      "file": "zero-q-ai-detector.html",
+      "title": "AI 检测器说「这是 AI 写的」，可信吗？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-detector-evidence",
+      "panels": 4,
+      "panelBytes": 142610
+    },
+    {
+      "file": "zero-q-prompt-course.html",
+      "title": "「提示词秘籍」值得买吗？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-course-value",
+      "panels": 4,
+      "panelBytes": 136042
+    },
+    {
+      "file": "zero-q-randomness.html",
+      "title": "同一个问题，为什么每次答案不一样？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-weighted-sampling",
+      "panels": 4,
+      "panelBytes": 138276
+    },
+    {
+      "file": "zero-q-ai-customer-service.html",
+      "title": "AI 客服为什么那么蠢？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-support-escalation",
+      "panels": 4,
+      "panelBytes": 127656
+    },
+    {
+      "file": "zero-q-siri-vs-chatgpt.html",
+      "title": "Siri 和 ChatGPT 是一种东西吗？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-assistant-routes",
+      "panels": 4,
+      "panelBytes": 138392
+    },
+    {
+      "file": "zero-q-free-vs-paid.html",
+      "title": "免费的 AI 够用吗？什么时候值得付费？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-upgrade-decision",
+      "panels": 4,
+      "panelBytes": 133588
+    },
+    {
+      "file": "zero-q-api-vs-membership.html",
+      "title": "API 是什么？和开会员有什么区别？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-api-membership",
+      "panels": 4,
+      "panelBytes": 137816
+    },
+    {
+      "file": "zero-q-image-cost.html",
+      "title": "生成一张图，为什么比聊一次天贵几十倍？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-image-budget",
+      "panels": 4,
+      "panelBytes": 142288
+    },
+    {
+      "file": "zero-q-video-cost.html",
+      "title": "AI 生成视频为什么这么贵？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-video-budget",
+      "panels": 4,
+      "panelBytes": 159594
+    },
+    {
+      "file": "zero-q-relay.html",
+      "title": "什么是 API 中转站？为什么我们不太推荐？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-relay-path",
+      "panels": 4,
+      "panelBytes": 136432
+    },
+    {
+      "file": "zero-q-reverse-proxy.html",
+      "title": "「反代账号」「共享号」是什么？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-shared-account",
+      "panels": 4,
+      "panelBytes": 130994
+    },
+    {
+      "file": "zero-q-privacy.html",
+      "title": "我的聊天记录会被拿去训练吗？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-data-controls",
+      "panels": 4,
+      "panelBytes": 119968
+    },
+    {
+      "file": "zero-6.html",
+      "title": "哪些活能放心交给它，哪些最好多确认一步",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-trust-quadrants",
+      "panels": 4,
+      "panelBytes": 149344
+    },
+    {
+      "file": "zero-final.html",
+      "title": "六个直觉都在了，接下来去哪？",
+      "part": "写给第一次接触 AI 的你",
+      "slug": "intro-next-route",
+      "panels": 4,
+      "panelBytes": 204126
+    },
+    {
+      "file": "training-data.html",
+      "title": "AI 的食物：训练数据",
+      "part": "大模型是怎么来的",
+      "slug": "core-training-data",
+      "panels": 4,
+      "panelBytes": 146972
+    },
+    {
+      "file": "train-vs-infer.html",
+      "title": "训练 vs 推理：两个完全不同的过程",
+      "part": "大模型是怎么来的",
+      "slug": "core-train-infer",
+      "panels": 4,
+      "panelBytes": 130112
+    },
+    {
+      "file": "1-2-vocab.html",
+      "title": "词表与训练",
+      "part": "大模型是怎么来的",
+      "slug": "core-vocabulary",
+      "panels": 4,
+      "panelBytes": 134234
+    },
+    {
+      "file": "1-2-base.html",
+      "title": "Base 模型：Token 推 Token 机器",
+      "part": "大模型是怎么来的",
+      "slug": "core-base-loop",
+      "panels": 4,
+      "panelBytes": 131358
+    },
+    {
+      "file": "1-2-gpt.html",
+      "title": "GPT 的跃进",
+      "part": "大模型是怎么来的",
+      "slug": "core-pretraining-transfer",
+      "panels": 4,
+      "panelBytes": 119310
+    },
+    {
+      "file": "1-2-api.html",
+      "title": "chat/completions 之谜",
+      "part": "大模型是怎么来的",
+      "slug": "core-chat-completion",
+      "panels": 4,
+      "panelBytes": 114734
+    },
+    {
+      "file": "1-2-fake-chat.html",
+      "title": "大模型的本质是补全，那如果我伪造一段聊天记录让它补全呢？",
+      "part": "大模型是怎么来的",
+      "slug": "core-dialogue-frame",
+      "panels": 4,
+      "panelBytes": 141044
+    },
+    {
+      "file": "1-2-sft.html",
+      "title": "Chat Template + SFT：大模型终于学会「说话」",
+      "part": "大模型是怎么来的",
+      "slug": "core-chat-sft",
+      "panels": 4,
+      "panelBytes": 150316
+    },
+    {
+      "file": "1-2-prompt-power.html",
+      "title": "为什么用提示词就够了？答案在上下文窗口",
+      "part": "大模型是怎么来的",
+      "slug": "core-prompt-context",
+      "panels": 4,
+      "panelBytes": 120776
+    },
+    {
+      "file": "1-2-hallucination.html",
+      "title": "大模型幻觉 (Hallucination)",
+      "part": "大模型是怎么来的",
+      "slug": "core-hallucination",
+      "panels": 4,
+      "panelBytes": 135850
+    },
+    {
+      "file": "1-2-mitigation-prompt.html",
+      "title": "Prompt 工程：用指令约束幻觉",
+      "part": "大模型是怎么来的",
+      "slug": "core-prompt-grounding",
+      "panels": 4,
+      "panelBytes": 147762
+    },
+    {
+      "file": "1-2-mitigation-rag.html",
+      "title": "RAG 检索增强生成：让模型「开卷答题」",
+      "part": "大模型是怎么来的",
+      "slug": "core-rag-open-book",
+      "panels": 4,
+      "panelBytes": 146188
+    },
+    {
+      "file": "rag-advanced.html",
+      "title": "RAG 的代价与优化策略",
+      "part": "大模型是怎么来的",
+      "slug": "core-rag-tradeoffs",
+      "panels": 4,
+      "panelBytes": 149488
+    },
+    {
+      "file": "1-2-mitigation-temp.html",
+      "title": "应对 3：Temperature & Top-P",
+      "part": "大模型是怎么来的",
+      "slug": "core-sampling-controls",
+      "panels": 4,
+      "panelBytes": 132014
+    },
+    {
+      "file": "1-2-mitigation-eval.html",
+      "title": "应对 4：评测 + 人工审核",
+      "part": "大模型是怎么来的",
+      "slug": "core-eval-human-review",
+      "panels": 4,
+      "panelBytes": 134350
+    },
+    {
+      "file": "summary-1.html",
+      "title": "汇总（上）· 大模型是什么 + 幻觉",
+      "part": "大模型是怎么来的",
+      "slug": "core-foundation-recap",
+      "panels": 4,
+      "panelBytes": 114886
+    },
+    {
+      "file": "summary-1b.html",
+      "title": "汇总（下）· 缓解策略 + 决策框架",
+      "part": "大模型是怎么来的",
+      "slug": "core-mitigation-recap",
+      "panels": 4,
+      "panelBytes": 189914
+    },
+    {
+      "file": "build-1.html",
+      "title": "别停在「我懂了」，先把那件事定下来",
+      "part": "大模型是怎么来的",
+      "slug": "core-first-deliverable",
+      "panels": 4,
+      "panelBytes": 132342
+    },
+    {
+      "file": "interview-1.html",
+      "title": "大模型基础 · 30 道灵魂拷问",
+      "part": "大模型是怎么来的",
+      "slug": "core-explain-foundations",
+      "panels": 4,
+      "panelBytes": 123536
+    },
+    {
+      "file": "5-1.html",
+      "title": "上下文窗口：AI 的工作记忆",
+      "part": "AI Harness",
+      "slug": "harness-context-desk",
+      "panels": 4,
+      "panelBytes": 151308
+    },
+    {
+      "file": "5-2.html",
+      "title": "上下文溢出：三种处理策略",
+      "part": "AI Harness",
+      "slug": "harness-overflow-strategies",
+      "panels": 4,
+      "panelBytes": 124466
+    },
+    {
+      "file": "6-0a.html",
+      "title": "为什么大模型选择 Markdown",
+      "part": "AI Harness",
+      "slug": "harness-lightweight-format",
+      "panels": 4,
+      "panelBytes": 138000
+    },
+    {
+      "file": "6-0b.html",
+      "title": "Markdown 语法与工程化渲染",
+      "part": "AI Harness",
+      "slug": "harness-markdown-rendering",
+      "panels": 4,
+      "panelBytes": 124684
+    },
+    {
+      "file": "6-1.html",
+      "title": "你说什么，它就变什么",
+      "part": "AI Harness",
+      "slug": "harness-role-and-format",
+      "panels": 4,
+      "panelBytes": 136170
+    },
+    {
+      "file": "6-2.html",
+      "title": "Prompt 进阶技巧",
+      "part": "AI Harness",
+      "slug": "harness-prompt-techniques",
+      "panels": 4,
+      "panelBytes": 134740
+    },
+    {
+      "file": "6-3.html",
+      "title": "输出格式取舍",
+      "part": "AI Harness",
+      "slug": "harness-output-format",
+      "panels": 4,
+      "panelBytes": 139296
+    },
+    {
+      "file": "6-4.html",
+      "title": "流式返回与格式配合",
+      "part": "AI Harness",
+      "slug": "harness-streaming-format",
+      "panels": 4,
+      "panelBytes": 130054
+    },
+    {
+      "file": "prompt-attack.html",
+      "title": "Prompt Injection：为什么会被攻击",
+      "part": "AI Harness",
+      "slug": "harness-untrusted-instructions",
+      "panels": 4,
+      "panelBytes": 137480
+    },
+    {
+      "file": "prompt-attack-cases.html",
+      "title": "Prompt Injection：12 个攻击案例",
+      "part": "AI Harness",
+      "slug": "harness-injection-casebook",
+      "panels": 4,
+      "panelBytes": 152048
+    },
+    {
+      "file": "prompt-defense.html",
+      "title": "Prompt 防御：三层拦截实战",
+      "part": "AI Harness",
+      "slug": "harness-layered-defense",
+      "panels": 4,
+      "panelBytes": 133256
+    },
+    {
+      "file": "ai-safety-redlines.html",
+      "title": "AI 安全红线：四条底线",
+      "part": "AI Harness",
+      "slug": "harness-safety-boundaries",
+      "panels": 4,
+      "panelBytes": 138914
+    },
+    {
+      "file": "ai-safety-governance.html",
+      "title": "风险分级与责任",
+      "part": "AI Harness",
+      "slug": "harness-risk-responsibility",
+      "panels": 4,
+      "panelBytes": 130858
+    },
+    {
+      "file": "7-1.html",
+      "title": "Agent：能干活的 AI",
+      "part": "AI Harness",
+      "slug": "harness-agent-loop",
+      "panels": 4,
+      "panelBytes": 198924
+    },
+    {
+      "file": "7-2.html",
+      "title": "工具调用的秘密",
+      "part": "AI Harness",
+      "slug": "harness-tool-execution",
+      "panels": 4,
+      "panelBytes": 162850
+    },
+    {
+      "file": "7-2a.html",
+      "title": "一次对话背后的 5 条消息",
+      "part": "AI Harness",
+      "slug": "harness-message-roundtrip",
+      "panels": 4,
+      "panelBytes": 133674
+    },
+    {
+      "file": "7-2b.html",
+      "title": "工具描述的学问",
+      "part": "AI Harness",
+      "slug": "harness-tool-descriptions",
+      "panels": 4,
+      "panelBytes": 140074
+    },
+    {
+      "file": "7-2c.html",
+      "title": "多工具编排：并发 vs 串行",
+      "part": "AI Harness",
+      "slug": "harness-safe-tool-scheduling",
+      "panels": 4,
+      "panelBytes": 156436
+    },
+    {
+      "file": "7-2d.html",
+      "title": "MCP 协议：工具的 USB 接口",
+      "part": "AI Harness",
+      "slug": "harness-mcp-adapter",
+      "panels": 4,
+      "panelBytes": 145210
+    },
+    {
+      "file": "7-3.html",
+      "title": "ReAct 实战：当 Agent 卡住了",
+      "part": "AI Harness",
+      "slug": "harness-react-stuck",
+      "panels": 4,
+      "panelBytes": 144710
+    },
+    {
+      "file": "7-3a.html",
+      "title": "短期记忆 = 上下文窗口",
+      "part": "AI Harness",
+      "slug": "harness-short-memory",
+      "panels": 4,
+      "panelBytes": 152806
+    },
+    {
+      "file": "7-3b.html",
+      "title": "上下文压缩：四层防线",
+      "part": "AI Harness",
+      "slug": "harness-compression-layers",
+      "panels": 4,
+      "panelBytes": 154294
+    },
+    {
+      "file": "7-3c.html",
+      "title": "长期记忆：向量检索",
+      "part": "AI Harness",
+      "slug": "harness-long-memory",
+      "panels": 4,
+      "panelBytes": 131888
+    },
+    {
+      "file": "vector-db-1.html",
+      "title": "从 Embedding 到 Milvus",
+      "part": "AI Harness",
+      "slug": "harness-vector-search",
+      "panels": 4,
+      "panelBytes": 152310
+    },
+    {
+      "file": "vector-db-2.html",
+      "title": "Milvus 心智模型",
+      "part": "AI Harness",
+      "slug": "harness-vector-collection",
+      "panels": 4,
+      "panelBytes": 141928
+    },
+    {
+      "file": "vector-db-3.html",
+      "title": "Milvus 实操",
+      "part": "AI Harness",
+      "slug": "harness-vector-lab",
+      "panels": 4,
+      "panelBytes": 158468
+    },
+    {
+      "file": "vector-db-4.html",
+      "title": "从检索到 RAG",
+      "part": "AI Harness",
+      "slug": "harness-retrieval-to-answer",
+      "panels": 4,
+      "panelBytes": 141364
+    },
+    {
+      "file": "7-4a.html",
+      "title": "ReAct 循环：思考 → 行动 → 观察",
+      "part": "AI Harness",
+      "slug": "harness-react-observe",
+      "panels": 4,
+      "panelBytes": 194412
+    },
+    {
+      "file": "7-4b.html",
+      "title": "Agent 卡死的 5 种模式",
+      "part": "AI Harness",
+      "slug": "harness-failure-patterns",
+      "panels": 4,
+      "panelBytes": 142972
+    },
+    {
+      "file": "7-4c.html",
+      "title": "权限与安全",
+      "part": "AI Harness",
+      "slug": "harness-permission-boundary",
+      "panels": 4,
+      "panelBytes": 145278
+    },
+    {
+      "file": "7-5.html",
+      "title": "Skill：让 Agent 少走弯路",
+      "part": "AI Harness",
+      "slug": "harness-skill-laundry",
+      "panels": 4,
+      "panelBytes": 169276
+    },
+    {
+      "file": "7-5a.html",
+      "title": "Skill 的本质",
+      "part": "AI Harness",
+      "slug": "harness-skill-release",
+      "panels": 4,
+      "panelBytes": 152408
+    },
+    {
+      "file": "7-5b.html",
+      "title": "解剖一个示例 Skill",
+      "part": "AI Harness",
+      "slug": "harness-skill-structure",
+      "panels": 4,
+      "panelBytes": 162308
+    },
+    {
+      "file": "7-4.html",
+      "title": "脚手架工程：从试验品到产品",
+      "part": "AI Harness",
+      "slug": "harness-production-scaffold",
+      "panels": 4,
+      "panelBytes": 162400
+    },
+    {
+      "file": "7-6a.html",
+      "title": "5 道工程护栏",
+      "part": "AI Harness",
+      "slug": "harness-engineering-guardrails",
+      "panels": 4,
+      "panelBytes": 153638
+    },
+    {
+      "file": "7-6b.html",
+      "title": "多 Agent 协作：一个人干不完，就派团队",
+      "part": "AI Harness",
+      "slug": "harness-agent-team",
+      "panels": 4,
+      "panelBytes": 179104
+    },
+    {
+      "file": "7-6c.html",
+      "title": "可观测性：Agent 在干什么、花了多少钱",
+      "part": "AI Harness",
+      "slug": "harness-observability",
+      "panels": 4,
+      "panelBytes": 122990
+    },
+    {
+      "file": "7-summary.html",
+      "title": "Agent 工程全景图",
+      "part": "AI Harness",
+      "slug": "harness-agent-map",
+      "panels": 4,
+      "panelBytes": 133150
+    },
+    {
+      "file": "8-1.html",
+      "title": "多轮对话为什么越来越贵？",
+      "part": "AI Harness",
+      "slug": "harness-history-cost",
+      "panels": 4,
+      "panelBytes": 131786
+    },
+    {
+      "file": "8-2.html",
+      "title": "KV Cache：用空间换时间",
+      "part": "AI Harness",
+      "slug": "harness-kv-cache",
+      "panels": 4,
+      "panelBytes": 130120
+    },
+    {
+      "file": "8-2b.html",
+      "title": "显式缓存：实战对比",
+      "part": "AI Harness",
+      "slug": "harness-cache-measurement",
+      "panels": 4,
+      "panelBytes": 135878
+    },
+    {
+      "file": "8-3.html",
+      "title": "动态时间戳：最贵的 System Prompt",
+      "part": "AI Harness",
+      "slug": "harness-stable-prefix",
+      "panels": 4,
+      "panelBytes": 128054
+    },
+    {
+      "file": "8-4.html",
+      "title": "综合成本优化",
+      "part": "AI Harness",
+      "slug": "harness-layered-cost",
+      "panels": 4,
+      "panelBytes": 136756
+    },
+    {
+      "file": "8-5.html",
+      "title": "图片 Token：像素也在烧钱",
+      "part": "AI Harness",
+      "slug": "harness-vision-meter",
+      "panels": 4,
+      "panelBytes": 155952
+    },
+    {
+      "file": "8-5b.html",
+      "title": "图片 Token：按任务匹配分辨率",
+      "part": "AI Harness",
+      "slug": "harness-task-resolution",
+      "panels": 4,
+      "panelBytes": 119214
+    },
+    {
+      "file": "8-6.html",
+      "title": "语法层优化：写给机器的提示词，不要排版",
+      "part": "AI Harness",
+      "slug": "harness-format-efficiency",
+      "panels": 4,
+      "panelBytes": 151436
+    },
+    {
+      "file": "8-7.html",
+      "title": "语义层优化：不要把上下文窗口当垃圾桶",
+      "part": "AI Harness",
+      "slug": "harness-semantic-density",
+      "panels": 4,
+      "panelBytes": 146872
+    },
+    {
+      "file": "8-8.html",
+      "title": "输出层 + KV Cache 进阶：控制输出 = 控制成本",
+      "part": "AI Harness",
+      "slug": "harness-output-budget",
+      "panels": 4,
+      "panelBytes": 132158
+    },
+    {
+      "file": "cost-eval.html",
+      "title": "模型选型：能力 vs 成本的权衡",
+      "part": "AI Harness",
+      "slug": "harness-model-choice",
+      "panels": 4,
+      "panelBytes": 132858
+    },
+    {
+      "file": "engineering-philosophy.html",
+      "title": "大道至简：坚守第一性原理",
+      "part": "AI Harness",
+      "slug": "harness-simple-engineering",
+      "panels": 4,
+      "panelBytes": 149442
+    },
+    {
+      "file": "ai-tips-boundary.html",
+      "title": "人机知识边界：四象限策略",
+      "part": "AI Harness",
+      "slug": "harness-knowledge-quadrants",
+      "panels": 4,
+      "panelBytes": 139184
+    },
+    {
+      "file": "ai-tips-context.html",
+      "title": "好提问 vs 坏提问：上下文决定一切",
+      "part": "AI Harness",
+      "slug": "harness-business-context",
+      "panels": 4,
+      "panelBytes": 125028
+    },
+    {
+      "file": "ai-tips-verify.html",
+      "title": "AI 说的能信吗？",
+      "part": "AI Harness",
+      "slug": "harness-check-claims",
+      "panels": 4,
+      "panelBytes": 136704
+    },
+    {
+      "file": "ai-tips-iterate.html",
+      "title": "迭代的艺术：知道何时收手",
+      "part": "AI Harness",
+      "slug": "harness-iteration-stop",
+      "panels": 4,
+      "panelBytes": 138344
+    },
+    {
+      "file": "ai-tips-scenarios.html",
+      "title": "场景速查：什么时候放心用",
+      "part": "AI Harness",
+      "slug": "harness-task-risk",
+      "panels": 4,
+      "panelBytes": 154690
+    },
+    {
+      "file": "summary-2.html",
+      "title": "汇总（上）· Prompt 工程 + Agent",
+      "part": "AI Harness",
+      "slug": "harness-context-agent-recap",
+      "panels": 4,
+      "panelBytes": 115304
+    },
+    {
+      "file": "summary-2b.html",
+      "title": "汇总（下）· 成本优化 + PM 视角",
+      "part": "AI Harness",
+      "slug": "harness-cost-pm-recap",
+      "panels": 4,
+      "panelBytes": 129908
+    },
+    {
+      "file": "summary-final.html",
+      "title": "课程总结 · 产品经理的第一节 AI 课",
+      "part": "AI Harness",
+      "slug": "harness-course-four-pillars",
+      "panels": 4,
+      "panelBytes": 145806
+    },
+    {
+      "file": "summary-final-1.html",
+      "title": "总结（上）· 原理 + Harness",
+      "part": "AI Harness",
+      "slug": "harness-foundations-to-system",
+      "panels": 4,
+      "panelBytes": 111620
+    },
+    {
+      "file": "summary-final-2.html",
+      "title": "总结（下）· 实战 + 成本",
+      "part": "AI Harness",
+      "slug": "harness-delivery-cost-safety",
+      "panels": 4,
+      "panelBytes": 140640
+    },
+    {
+      "file": "build-2.html",
+      "title": "写一版提示词，让它连跑五次都能用",
+      "part": "AI Harness",
+      "slug": "harness-repeatable-prompt",
+      "panels": 4,
+      "panelBytes": 140682
+    },
+    {
+      "file": "interview-2.html",
+      "title": "AI Harness · 30 道灵魂拷问",
+      "part": "AI Harness",
+      "slug": "harness-explain-tradeoffs",
+      "panels": 4,
+      "panelBytes": 141838
+    },
+    {
+      "file": "9-0.html",
+      "title": "从业务任务到可交付的 AI 工具",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-business-loop",
+      "panels": 4,
+      "panelBytes": 135944
+    },
+    {
+      "file": "9-1.html",
+      "title": "文生图 vs 垫图：两种完全不同的事",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-image-inputs",
+      "panels": 4,
+      "panelBytes": 144506
+    },
+    {
+      "file": "9-2.html",
+      "title": "用 AI 给 AI 写 Prompt",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-prompt-translation",
+      "panels": 4,
+      "panelBytes": 140672
+    },
+    {
+      "file": "9-3.html",
+      "title": "角色一致性：最难的产品问题",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-character-reference",
+      "panels": 4,
+      "panelBytes": 172924
+    },
+    {
+      "file": "9-4.html",
+      "title": "模型会挂，然后呢？",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-generation-recovery",
+      "panels": 4,
+      "panelBytes": 116958
+    },
+    {
+      "file": "9-5.html",
+      "title": "生图的产品化清单",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-image-product-checklist",
+      "panels": 4,
+      "panelBytes": 133030
+    },
+    {
+      "file": "9-6.html",
+      "title": "教科书的 3 步 vs 真实的 N 步",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-production-turn",
+      "panels": 4,
+      "panelBytes": 149306
+    },
+    {
+      "file": "9-7.html",
+      "title": "为什么 Agent 会卡死",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-stuck-signals",
+      "panels": 4,
+      "panelBytes": 134654
+    },
+    {
+      "file": "9-8.html",
+      "title": "防呆设计：怎么让循环自己停下来",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-loop-stop",
+      "panels": 4,
+      "panelBytes": 148868
+    },
+    {
+      "file": "9-9.html",
+      "title": "流式体验：别让用户干等",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-visible-progress",
+      "panels": 4,
+      "panelBytes": 126742
+    },
+    {
+      "file": "9-10.html",
+      "title": "一条消息背后的真实成本",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-message-total-cost",
+      "panels": 4,
+      "panelBytes": 124354
+    },
+    {
+      "file": "9-11.html",
+      "title": "对话越长越贵、越长越笨",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-context-pressure",
+      "panels": 4,
+      "panelBytes": 123138
+    },
+    {
+      "file": "9-12.html",
+      "title": "压缩是一门取舍的艺术",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-compression-tradeoffs",
+      "panels": 4,
+      "panelBytes": 149070
+    },
+    {
+      "file": "9-13.html",
+      "title": "用户说的话能不能删？",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-preserve-user-intent",
+      "panels": 4,
+      "panelBytes": 148110
+    },
+    {
+      "file": "9-14.html",
+      "title": "本地压缩 vs LLM 压缩",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-compression-methods",
+      "panels": 4,
+      "panelBytes": 123808
+    },
+    {
+      "file": "9-15.html",
+      "title": "上下文 ≠ 记忆",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-context-versus-memory",
+      "panels": 4,
+      "panelBytes": 143382
+    },
+    {
+      "file": "9-16.html",
+      "title": "什么值得记、什么不值得记",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-memory-gatekeeper",
+      "panels": 4,
+      "panelBytes": 129232
+    },
+    {
+      "file": "9-17.html",
+      "title": "记忆冲突：用户改了主意怎么办",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-memory-conflict",
+      "panels": 4,
+      "panelBytes": 119006
+    },
+    {
+      "file": "9-18.html",
+      "title": "记忆注入的成本问题",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-memory-retrieval-budget",
+      "panels": 4,
+      "panelBytes": 128772
+    },
+    {
+      "file": "9-19.html",
+      "title": "System Prompt 不是一坨文本",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-prompt-layers",
+      "panels": 4,
+      "panelBytes": 116654
+    },
+    {
+      "file": "9-20.html",
+      "title": "不用的东西别给 AI 看",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-tool-discovery",
+      "panels": 4,
+      "panelBytes": 153130
+    },
+    {
+      "file": "9-21.html",
+      "title": "Skill：可运营的 Prompt 模块",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-versioned-skills",
+      "panels": 4,
+      "panelBytes": 132112
+    },
+    {
+      "file": "9-22.html",
+      "title": "提示词和缓存的微妙关系",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-prompt-cache-layout",
+      "panels": 4,
+      "panelBytes": 144538
+    },
+    {
+      "file": "9-23.html",
+      "title": "什么时候需要多个 Agent",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-when-team-helps",
+      "panels": 4,
+      "panelBytes": 175240
+    },
+    {
+      "file": "9-24.html",
+      "title": "并发的代价：谁能同时跑",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-concurrency-dependencies",
+      "panels": 4,
+      "panelBytes": 143852
+    },
+    {
+      "file": "9-25.html",
+      "title": "脑暴：让多个 AI 吵架",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-independent-brainstorm",
+      "panels": 4,
+      "panelBytes": 172136
+    },
+    {
+      "file": "9-26.html",
+      "title": "定时任务的成本陷阱",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-recurring-job-context",
+      "panels": 4,
+      "panelBytes": 127742
+    },
+    {
+      "file": "9-27.html",
+      "title": "AI 该有多大的自由",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-autonomy-scope",
+      "panels": 4,
+      "panelBytes": 134192
+    },
+    {
+      "file": "9-28.html",
+      "title": "弹窗太多用户烦，不弹又不安全",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-meaningful-confirmation",
+      "panels": 4,
+      "panelBytes": 123570
+    },
+    {
+      "file": "9-29.html",
+      "title": "Agent 干了什么你知道吗",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-task-telemetry",
+      "panels": 4,
+      "panelBytes": 124800
+    },
+    {
+      "file": "9-30.html",
+      "title": "MCP 不只是「调工具」",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-mcp-client-server",
+      "panels": 4,
+      "panelBytes": 130906
+    },
+    {
+      "file": "9-31.html",
+      "title": "懒连接：不用别连",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-lazy-connection",
+      "panels": 4,
+      "panelBytes": 133448
+    },
+    {
+      "file": "9-32.html",
+      "title": "AI 自己加工具",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-authorized-tool-setup",
+      "panels": 4,
+      "panelBytes": 142102
+    },
+    {
+      "file": "9-summary.html",
+      "title": "实战全景图",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-system-map",
+      "panels": 4,
+      "panelBytes": 137406
+    },
+    {
+      "file": "9-final.html",
+      "title": "聊天套壳 vs 真正的 Agent 产品",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-product-iceberg",
+      "panels": 4,
+      "panelBytes": 196596
+    },
+    {
+      "file": "build-3.html",
+      "title": "让它从「会说」变成「会做」：接上第一个工具",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-first-tool-loop",
+      "panels": 4,
+      "panelBytes": 132430
+    },
+    {
+      "file": "interview-3.html",
+      "title": "实战 · 从 Demo 到产品 · 30 道灵魂拷问",
+      "part": "实战 · 从 Demo 到产品",
+      "slug": "practice-explain-product-work",
+      "panels": 4,
+      "panelBytes": 152412
+    },
+    {
+      "file": "10-1.html",
+      "title": "Workflow vs Agent：先搞清楚你要什么",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-workflow-or-agent",
+      "panels": 4,
+      "panelBytes": 124686
+    },
+    {
+      "file": "10-2.html",
+      "title": "五种 Workflow 模式",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-five-workflows",
+      "panels": 4,
+      "panelBytes": 130514
+    },
+    {
+      "file": "10-3.html",
+      "title": "从 Prompt 工程到上下文工程",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-context-whole-input",
+      "panels": 4,
+      "panelBytes": 137026
+    },
+    {
+      "file": "10-4.html",
+      "title": "上下文的三板斧",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-context-three-methods",
+      "panels": 4,
+      "panelBytes": 147534
+    },
+    {
+      "file": "10-5.html",
+      "title": "ACI：Agent-Computer Interface",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-tool-contract",
+      "panels": 4,
+      "panelBytes": 128260
+    },
+    {
+      "file": "vector-db-5.html",
+      "title": "Milvus 作为 Agent 知识库工具",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-knowledge-tool",
+      "panels": 4,
+      "panelBytes": 133120
+    },
+    {
+      "file": "10-6.html",
+      "title": "Think Tool：让 AI 先想后做",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-think-checkpoint",
+      "panels": 4,
+      "panelBytes": 118584
+    },
+    {
+      "file": "10-7.html",
+      "title": "用 Agent 优化 Agent 的工具",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-tool-improvement-loop",
+      "panels": 4,
+      "panelBytes": 160966
+    },
+    {
+      "file": "10-8.html",
+      "title": "为什么评测比训练更重要",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-eval-baseline",
+      "panels": 4,
+      "panelBytes": 126426
+    },
+    {
+      "file": "10-9.html",
+      "title": "三种 Grader：代码、模型、人工",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-three-graders",
+      "panels": 4,
+      "panelBytes": 150282
+    },
+    {
+      "file": "10-10.html",
+      "title": "评测的坑：噪音、作弊与退化",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-eval-pitfalls",
+      "panels": 4,
+      "panelBytes": 119196
+    },
+    {
+      "file": "10-11.html",
+      "title": "为什么 Agent 跑不了长任务",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-long-task-handoff",
+      "panels": 4,
+      "panelBytes": 123996
+    },
+    {
+      "file": "10-12.html",
+      "title": "Initializer + Coding Agent",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-initialize-and-build",
+      "panels": 4,
+      "panelBytes": 154670
+    },
+    {
+      "file": "10-13.html",
+      "title": "Managed Agent：脑手分离",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-brain-hands-session",
+      "panels": 4,
+      "panelBytes": 143330
+    },
+    {
+      "file": "10-14.html",
+      "title": "Session 不等于 Context Window",
+      "part": "进阶 · AI 工程设计模式",
+      "slug": "engineering-session-context",
+      "panels": 4,
+      "panelBytes": 126476
+    }
+  ],
+  "deployment": {
+    "entry": "https://111.228.5.133/slides/home.html",
+    "readerExample": "https://111.228.5.133/slides/learn.html#10-14.html",
+    "release": "/var/www/fangpian-xuetang/releases/20261111T095148Z-222278",
+    "previous": "/var/www/fangpian-xuetang/releases/20261110T151015Z-137981",
+    "backup": "/var/www/fangpian-xuetang/backups/20261111T095148Z-222278",
+    "sourceCommit": "87e81de42d88eae2917687a5d65fbfe383470dc3",
+    "archiveSha256": "4f959aa14d9fb0167cf10acb54c7a9eaa8ac82e6521c7e7dd348568e2d7dd04d",
+    "publicFilesVerified": 4300,
+    "httpVerifiedFiles": 53,
+    "httpsVerifiedFiles": 53,
+    "httpsRoutingBackup": "/var/www/fangpian-xuetang/backups/https-slides-20261111T095515Z.conf",
+    "otherApplicationRootPreserved": true
+  },
+  "browserVerification": {
+    "browser": "Edge",
+    "url": "https://111.228.5.133/slides/learn.html#10-14.html",
+    "desktopWidth": 1912,
+    "comicColumns": 4,
+    "comicImagesLoaded": 4,
+    "imageWidths": [
+      543,
+      543,
+      543,
+      543
+    ],
+    "horizontalOverflow": false,
+    "playbackTestPassed": true,
+    "embeddedLessonLoaded": true,
+    "consoleWarningsAndErrors": []
+  }
 }
