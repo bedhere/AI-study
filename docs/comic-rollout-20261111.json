@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-11",
+  "generator": "built-in image_gen",
+  "useCase": "illustration-story",
+  "referenceImages": ["E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp", "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp", "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness.",
+  "lessons": [
+    {
+      "file": "learn-1.html", "slug": "advice-fit", "sourceArtifact":"exec-10ad4689-e609-4789-955b-7333f716421e.png", "role": "通勤职场虎：橙色运动外套、头带、斜挎包",
+      "title": "四格看懂：建议得放回你的生活", "takeaway": "把时间、距离、真实习惯和底线交代清楚，再核对判断依据。",
+      "panels": [
+        {"label":"先别被划算打动","text":"健身年卡看起来便宜，先别把通用优点当成自己的结论。","alt":"穿橙色运动外套的小虎站在健身房柜台前，拿着年卡犹豫。"},
+        {"label":"补上真实约束","text":"告诉 AI 下班时间、单程距离、过去的锻炼次数和退卡底线。","alt":"小虎把时钟、通勤路线、运动记录和合同摆在桌上。"},
+        {"label":"逐条对照条件","text":"请 AI 先对照这些条件；信息不足就追问，不急着给结论。","alt":"小虎向白色机器人展示自己的日程，机器人逐项对照条件卡。"},
+        {"label":"自己核实再决定","text":"查真实记录、营业时间和合同；没有依据的判断先留待确认。","alt":"小虎打开手机记录并核对合同，年卡仍放在一旁。"}
+      ],
+      "scenePrompt": "Protagonist: commuter tiger in orange zip-up sports jacket, terracotta sweatband and cross-body gym bag. P1 medium shot at a gym reception with dumbbell pictogram and tempting membership card; tiger pauses skeptically before paying. P2 overhead/three-quarter desk view tiger lays out clock, winding commute map, exercise log and folded contract. P3 standing side shot tiger shows its own calendar to the AI companion who compares separate constraint cards, thoughtful faces, no approval seal. P4 close three-quarter tiger checks phone history against the physical contract at home; membership card rests untouched to one side, calm independent decision."
+    },
+    {
+      "file":"learn-2.html", "slug":"next-question", "sourceArtifact":"exec-321c0c45-22f3-4131-a58d-58931cb245e5.png", "role":"行政虎与厨师虎：薄荷绿马甲、橙色围巾；白厨师帽搭档",
+      "title":"四格看懂：把可疑处写成下一问", "takeaway":"答案 → 未知条件 → 下一问 → 找到该确认的人。",
+      "panels":[
+        {"label":"先拿到方案","text":"午餐菜单满足人数、预算和时间，仍可能漏掉关键条件。","alt":"穿薄荷绿马甲的小虎在会议桌前查看午餐菜单与餐盒。"},
+        {"label":"圈出未知条件","text":"请 AI 找出方案依赖却尚未确认的条件，先别替人做假设。","alt":"小虎用放大镜查看菜单旁尚未填写的条件卡。"},
+        {"label":"写成具体下一问","text":"先逐人确认：有没有食物过敏或其他忌口？","alt":"行政虎拿着空白餐盘图卡，向两位同事逐一询问饮食限制。"},
+        {"label":"回到现场核实","text":"再向餐厅核实配料和后厨处理；条件没确认，就先别下单。","alt":"行政虎与戴白帽的厨师虎对照食材和核对清单，订单放在旁边等待。"}
+      ],
+      "scenePrompt":"Protagonist administrative tiger in mint waistcoat and orange neck scarf. P1 in office meeting room tiger surveys lunch boxes and a menu card with plate icons. P2 tiger with AI companion magnifies an EMPTY condition card beside the menu, discovering missing information. P3 tiger stands talking to two coworker tigers in distinct casual clothes, holding a plain plate pictogram card, listening carefully about dietary restrictions. P4 restaurant counter: same protagonist consults a chef tiger in white toque and apron, comparing ingredient bowls and checklist; pending order is set aside, no safety guarantee/checkmark badge."
+    },
+    {
+      "file":"learn-4.html", "slug":"familiar-analogy", "sourceArtifact":"exec-29be4535-2a0a-4a91-828a-96e4a0736e12.png", "role":"配送虎：青色头盔、黄色配送马甲、纸箱",
+      "correctionPrompt":"Preserve the four-panel composition; remove the extra helmet-scratching arm in panel 1 and chin-touching arm in panel 4. Both paws hold the two cards/boards, exactly two arms per tiger. Keep panels 2 and 3 unchanged; no text.",
+      "title":"四格看懂：用熟悉的经验搭桥", "takeaway":"指定熟悉的事物，逐项对应，再说清比喻的边界。",
+      "panels":[
+        {"label":"说出陌生概念","text":"同一笔付款提交两次，为什么系统只该记一次？先说清疑问。","alt":"戴青色头盔的配送虎双手拿着两张相似的付款请求卡，表情困惑。"},
+        {"label":"指定熟悉经验","text":"告诉 AI：我熟悉配送，请用同一张配送单被派两次来讲。","alt":"配送虎指着自己熟悉的纸箱和两张带相同图形标记的配送单。"},
+        {"label":"逐项检查对应","text":"把请求、识别编号、重复处理逐项对应，看看自己能否解释。","alt":"配送虎和机器人用三组图卡连接付款请求与配送单的对应关系。"},
+        {"label":"守住比喻边界","text":"类比只搬运相关结构；不对应的细节要说明，不能照搬。","alt":"配送虎在两组图卡之间保留一段未连接的空隙，提醒两种场景并不完全相同。"}
+      ],
+      "scenePrompt":"Protagonist courier tiger in teal bicycle helmet and yellow delivery vest. P1 confused frontal close shot beside two duplicate payment request cards with identical simple circle pictograms, no numbers. P2 lively standing pose tiger points to familiar parcel and two delivery slips with matching triangular identity tokens. P3 side view tiger and AI companion connect three pairs of pictogram cards (request/envelope, identity tokens, duplicate barrier) across a desk. P4 tiger thoughtfully holds two comparison boards; some corresponding icon pairs are connected, one pair deliberately separated with a visible gap, indicating analogy boundary; no claim real payment architecture equals delivery."
+    },
+    {
+      "file":"learn-5.html", "slug":"one-question", "sourceArtifact":"exec-b027a332-6983-4754-8cf7-78a2abc3e33f.png", "role":"学生虎：紫色连帽衫、黄色铅笔、蓝色书包",
+      "title":"四格看懂：一次一问，找到卡点", "takeaway":"先问一题 → 等你回答 → 卡住给提示 → 再由你作答。",
+      "panels":[
+        {"label":"整段读完不等于会","text":"解释和题目一起涌来，看着熟悉，未必能独立推下一步。","alt":"紫色连帽衫学生虎拿着一叠问题卡，机器人展示长篇解释，学生虎显得困惑。"},
+        {"label":"一次只问一个","text":"请 AI 先问一个问题，等我回答后再继续，先不要给结论。","alt":"机器人收起其余卡片，桌面只留一张日历图卡，学生虎开始思考。"},
+        {"label":"自己先答一次","text":"合上完整解释，自己说出下一步，让答不出的地方显出来。","alt":"学生虎放下平板，用铅笔独立比较两张日历图卡，露出犹豫的表情。"},
+        {"label":"提示后再试","text":"卡住时只给一个提示，再让我答一次；后续问题跟着回答走。","alt":"机器人指向日历上的一个小提示，学生虎重新拿笔尝试。"}
+      ],
+      "scenePrompt":"Student tiger in lavender hoodie with yellow pencil and blue backpack beside desk, same outfit throughout. P1 medium shot overwhelmed by a fan of blank question cards and long screen lines offered by AI, no floating paper touching face. P2 AI puts all but ONE calendar pictogram card in a tray and patiently waits while tiger looks up. P3 tiger sets closed tablet aside and independently compares two blank calendar sheets, hesitant pencil paused. P4 AI points to one small highlighted calendar cell as a hint, tiger leans forward to retry with own pencil; no revealed answer, no automatic success stamp."
+    },
+    {
+      "file":"learn-6.html", "slug":"five-risk-types", "sourceArtifact":"exec-989798c5-284b-4c5a-bb7b-68e358ea2f96.png", "role":"研究员虎：白实验服、青色护目镜、橙色记号笔",
+      "title":"四格看懂：先圈出五类风险", "takeaway":"风险标注只是核查入口，不能保证找全，也不代表圈出的都错了。",
+      "panels":[
+        {"label":"细节像资料也要查","text":"扫地机器人答复里的数字、设置和功能，说得具体也未必有依据。","alt":"白实验服研究员虎查看机器人旁一份排得整齐的答复。"},
+        {"label":"原样圈出五类","text":"数字、时间线、设置与参数、冷门资料细节、有没有某功能。","alt":"研究员虎圈出五张图卡，分别画着数值图、时钟、齿轮、旧手册和云图标。"},
+        {"label":"写清后果与核法","text":"按原句、类别、写错后果列清单；再写该查哪份原始材料。","alt":"研究员虎把风险图卡与对应的手册页、设置界面逐项排列。"},
+        {"label":"缺依据就待核对","text":"找不到依据就留空，别补答案；标注可能漏项，仍要自己核实。","alt":"研究员虎打开原始说明书，云功能卡旁保留空白便签。"}
+      ],
+      "scenePrompt":"Researcher tiger in white lab coat with teal safety goggles above forehead, orange marker. Small generic floor-cleaning robot as tabletop prop, different from AI companion. P1 skeptical researcher studies neatly ruled answer beside floor-cleaner. P2 tiger arranges EXACTLY FIVE illustrated risk cards: tiny bar plot with dots, clock, gear, worn manual book, cloud pictogram; NO numbers/letters. P3 overhead view tiger aligns these cards with manual pages and a plain settings screen, orange highlights only, no verified stamp. P4 close view tiger physically opens source manual with magnifier; cloud card has an adjacent blank sticky note because evidence is missing, thoughtful unfinished verification."
+    },
+    {
+      "file":"learn-7.html", "slug":"three-checks", "sourceArtifact":"exec-29ebf9b9-9905-4bfe-800e-56cf9abb200e.png", "role":"程序员虎：深蓝工装背心、圆眼镜、笔记本电脑",
+      "title":"四格看懂：三道检查仍需核原文", "takeaway":"要原句、比差异、分推测；一致和自查都不能保证正确。",
+      "panels":[
+        {"label":"每条要对应原句","text":"请 AI 指回所给材料并引用原句；找不到就写未找到依据。","alt":"戴圆眼镜的程序员虎举起答复图卡，与机器人讨论桌上的原始资料。"},
+        {"label":"换问法找不一致","text":"换个问法重答并比差异；两次一致也可能一起写错。","alt":"程序员虎比较两列分别画着圆形和三角形的答复图卡，露出疑惑表情。"},
+        {"label":"把推测单独放","text":"分开材料直接写明与根据材料推测，写清还缺什么信息。","alt":"程序员虎将直接依据卡与带思考云图标的推测卡分放两个托盘。"},
+        {"label":"关键项亲自核实","text":"三道检查只缩小范围；出处名称看着完整，也得打开原文核对。","alt":"程序员虎合上聊天窗口，拿起实体协议逐句对照。"}
+      ],
+      "scenePrompt":"Programmer tiger in navy utility vest and round brown glasses with laptop. P1 tiger asks AI companion to connect an answer card to a real source page on desk, source page has plain gray lines only. P2 tiger leans over two columns of answer cards, visibly different circle/triangle pictograms highlighted in coral; thoughtful no checkmark. P3 tiger sorts source-page pictogram cards and thought-cloud pictogram cards into two separate shallow trays, no written labels. P4 tiger turns away from closed laptop and personally opens physical contract, uses finger to trace a line, calm scrutiny."
+    },
+    {
+      "file":"learn-8.html", "slug":"check-original", "sourceArtifact":"exec-c0a62c92-a885-4a88-86b7-dc9100198a9a.png", "role":"创作者虎：珊瑚色贝雷帽、蓝色围裙、相机与电脑",
+      "title":"四格看懂：按使用后果决定核查", "takeaway":"算得对、说得顺都不是规则的证据；要影响付款和签字，就核关键原句。",
+      "panels":[
+        {"label":"算对不等于规则对","text":"分期金额能算对，提前结清怎么收费仍要看当前协议。","alt":"戴珊瑚色贝雷帽的创作者虎举着计算器和电脑购物图卡，桌上还有未打开的协议。"},
+        {"label":"先看用错的后果","text":"只是了解，还是准备付款、签字、公开转述或替人做决定？","alt":"创作者虎将轻松学习的书卡与付款、签字图卡放在天平两侧比较。"},
+        {"label":"缩成最短核查单","text":"摘出会改变决定的句子，让 AI 指出原始材料和搜索关键词。","alt":"小虎与机器人从长答复中抽出一条关键卡，指向协议中的放大镜图标。"},
+        {"label":"打开原文再行动","text":"亲眼核对当前协议的对应句；没有支持就保留待核对、暂停确认。","alt":"创作者虎翻开原始协议查看相关段落，付款设备暂时放在一旁。"}
+      ],
+      "scenePrompt":"Creator tiger with coral beret, denim artist apron, camera strap and laptop in cozy creative studio. P1 curious tiger compares calculator pictogram and laptop purchase card; rolled contract untouched next to them. P2 tiger thoughtfully weighs a book pictogram card against payment wallet and pen/signature pictogram cards on a small balance, showing stakes not numerical accuracy. P3 AI companion helps tiger extract ONE key claim strip from long answer pages and points toward a source agreement with magnifier bookmark. P4 same creator personally reads open agreement under desk light, payment phone set face down and pen resting unused, no assurance that fee rule is universal."
+    },
+    {
+      "file":"learn-9.html", "slug":"unpack-clause", "sourceArtifact":"exec-9fa98d82-9ce6-40d9-a7e7-25fb65c915d8.png", "role":"老师虎与学员虎：棕眼镜、米色开衫；绿色背带裤搭档",
+      "title":"四格看懂：把条款拆到能复述", "takeaway":"先要地图 → 找卡词 → 一次补一个 → 回原文复述。解释不能代替专业结论。",
+      "caseNote":"虚构简化条款：借用期从首次启用日或再次启用日中较晚的一天起算。只用于理解阅读方法。",
+      "panels":[
+        {"label":"先画材料地图","text":"虚构例：“从首次或再次启用日中较晚的一天起算。”先问这段讲几件事。","alt":"米色开衫老师虎与绿色背带裤学员虎查看一页条款及简单结构图。"},
+        {"label":"定位卡住的词","text":"挑出读不懂的句子，列出前置概念，例如“再次启用”“较晚”。","alt":"学员虎用放大镜找出条款中的两处标记，老师虎指向对应概念卡。"},
+        {"label":"一次只补一个","text":"只解释一个概念，配熟悉例子并出一题；答不出就先停在这里。","alt":"老师虎用前后两张日历图卡提示学员，等待学员自己选择。"},
+        {"label":"回原文自己说","text":"合上解释，用自己的话复述，再对照原句；实际权利责任需专业核对。","alt":"学员虎合上讲解笔记，指着原条款独立复述，老师虎在一旁倾听。"}
+      ],
+      "scenePrompt":"Two coherent tiger characters throughout: teacher tiger with brown round glasses and beige cardigan; learner tiger in green overalls. Fictional simple equipment-loan clause reading exercise, no insurance/medical/legal verdict. P1 both view single blank-lined clause page and a small branching map; teacher points to structure. P2 learner uses magnifier on two colored word-length highlights on same paper, teacher presents two concept pictogram cards. P3 teacher offers one pair of earlier/later blank calendar cards and waits for learner to reason, no answer shown. P4 learner closes explanatory notebook and independently gestures at original clause page, teacher listens, confident but thoughtful."
+    },
+    {
+      "file":"learn-10.html", "slug":"prerequisite-map", "sourceArtifact":"exec-b2b1b951-3c7a-49f6-8e6e-cb34a21a59b4.png", "role":"跑者虎：蓝头带、橙白运动服、号码布无文字",
+      "correctionPrompt":"In panel 2 swap only the bottom table/open-book pictograms: top-left structure -> summary -> conclusion -> bottom-right table -> bottom-left open book. In panel 4 replace loose branching card with stopwatch pictogram. Preserve all characters and other props, no text.",
+      "title":"四格看懂：先找入口，再补概念", "takeaway":"目录、摘要、结论、图表、正文；五个是开工清单，先补真正不会的。",
+      "panels":[
+        {"label":"别只按页码硬读","text":"参赛手册很厚，先说自己要找存包、出发和关门规则。","alt":"戴蓝头带的跑者虎面对厚手册翻到一半，旁边摆着背包与跑鞋。"},
+        {"label":"先看结构找入口","text":"让 AI 先看目录、摘要、结论和图表，定位相关章节，再读正文。","alt":"跑者虎与机器人把手册结构、摘要卡、结论卡和路线表排成阅读路径。"},
+        {"label":"列概念逐个自测","text":"先列约五个前置概念，按依赖排序，逐个出题，不急着全解释。","alt":"机器人展示五张计时和赛道概念图卡，跑者虎先独立思考第一张。"},
+        {"label":"只补真正缺的","text":"能解释的先划掉，不会的一次补一个，再回到相关正文核规则。","alt":"跑者虎把已会的图卡收起，只留一个卡点，并打开手册相关页面。"}
+      ],
+      "scenePrompt":"Runner tiger in orange-and-white athletic shirt and blue headband, blank white bib absolutely no numerals. P1 frustrated tiger with thick race manual, backpack and running shoes. P2 AI companion and runner lay out five different reading-stage cards linked as a path: contents branching diagram, abstract short lines, conclusion arrow, route table, open body page. P3 AI lays EXACTLY FIVE concept pictogram cards (stopwatch, starting flag clock, finish barrier clock, start corrals, shuttle bus); runner thinks about just first one. P4 tiger puts known cards into side envelope, keeps one unknown card on desk and opens relevant source page, not guaranteed complete list."
+    },
+    {
+      "file":"learn-11.html", "slug":"source-only", "sourceArtifact":"exec-9e2b7ff9-ab3c-4afd-944c-015dc69c7b69.png", "role":"陶艺虎：青色围裙、卷袖衬衣、陶土工具",
+      "correctionPrompt":"In panel 3 replace the dashed coral-to-yellow connector on the LONG original page with one continuous line, retaining all four condition dots. Keep shortened two-dot note unchanged; preserve all other pixels, no text.",
+      "title":"四格看懂：让限定条件都在场", "takeaway":"贴完整原文、核对转述、引用关键句；原文没写明，就说无法判断。",
+      "panels":[
+        {"label":"转述可能删条件","text":"只记“提前申请能全退”，可能漏掉“且材料包尚未寄出”。","alt":"陶艺虎拿着短便签，对照退款规则长页和已经封好的材料包。"},
+        {"label":"贴完整原文","text":"把条件、例外和时间口径一起贴出，要求只依据这段原文回答。","alt":"青围裙陶艺虎向机器人递交完整规则页，长页上的连接条件被保留。"},
+        {"label":"逐句核对转述","text":"让 AI 列出转述删掉、合并或改弱的条件，并引用决定结论的原句。","alt":"陶艺虎与机器人并排比对短便签和原文，找出缺失的一段连接条件。"},
+        {"label":"缺的信息别补造","text":"材料包是否已寄出若未说明，就说无法判断，再回原文和记录核对。","alt":"陶艺虎把尚未填写的寄送记录放在规则旁，保持待确认状态。"}
+      ],
+      "scenePrompt":"Pottery-maker tiger in teal apron over rolled-sleeve cream shirt, with small clay pot and sculpting tools. P1 tiger puzzled comparing short sticky note and long original refund-rule page, sealed materials parcel nearby but no shipping status label. P2 tiger hands full original page to AI companion; connected colored line segments show all conditions kept, no letters. P3 overhead view same tiger and AI compare short note against full original page and highlight a missing middle connecting segment, distinct shortened/full document lengths. P4 tiger puts EMPTY shipping-status record beside original page, pauses with pencil rather than inventing delivery status; pottery parcel remains at edge, calm unresolved question."
+    }
+  ]
+}

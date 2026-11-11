@@ -28,9 +28,22 @@ test('scripted popups and late external links cannot bypass the navigation guard
   assert.equal(prevented,true);assert.equal(stopped,true);assert.equal(attrs.href,undefined);assert.equal(attrs.onclick,undefined);
   assert.equal(link.hasAttribute('data-source-reference'),true);
 });
-test('two illustrated lessons have exactly four accessible panels with small local assets',()=>{
+test('twelve illustrated lessons have exactly four accessible panels with small local assets',()=>{
   const context={window:{}};vm.runInNewContext(fs.readFileSync('public/slides/comic-data.js','utf8'),context);
-  const stories=context.window.AcademyComics;assert.equal(Object.keys(stories).length,2);
+  const stories=context.window.AcademyComics;assert.equal(Object.keys(stories).length,12);
+  const manifest=JSON.parse(fs.readFileSync('public/slides/assets/comics/manifest.json','utf8'));
+  assert.equal(new Set(manifest.assets.map(x=>x.slug)).size,12);
+  assert.equal(manifest.assets.length,12);
+  const plan=JSON.parse(fs.readFileSync('docs/comic-rollout-20261111.json','utf8'));
+  assert.deepEqual(plan.lessons.map(x=>x.file),[1,2,4,5,6,7,8,9,10,11].map(n=>`learn-${n}.html`));
+  for(const lesson of plan.lessons){
+    const story=stories[lesson.file];assert.ok(story,lesson.file);
+    assert.equal(story.slug,lesson.slug);
+    assert.equal(JSON.stringify(story.panels),JSON.stringify(lesson.panels));
+    const entry=manifest.assets.find(x=>x.slug===story.slug);
+    assert.equal(entry.lesson,lesson.file);assert.equal(entry.panelCount,4);
+    assert.ok(entry.sourceSha256.match(/^[a-f0-9]{64}$/));
+  }
   for(const [file,story] of Object.entries(stories)){
     assert.equal(story.panels.length,4);let bytes=0;
     story.panels.forEach((panel,index)=>{assert.ok(panel.alt&&panel.text&&panel.label);bytes+=fs.statSync(`public/slides/assets/comics/${story.slug}-${index+1}.webp`).size;});
@@ -41,6 +54,9 @@ test('two illustrated lessons have exactly four accessible panels with small loc
     assert.ok(container);
     assert.ok(position>page.indexOf('</head>')&&position>container.index);
     assert.ok(position<page.indexOf('</'+container[1]+'>'));
+    assert.equal((page.match(/data-lesson-comic=/g)||[]).length,1);
+    assert.ok(position>page.indexOf('</aside><!--seo:end-->'));
+    assert.ok(page.includes('comic-data.js?v=20261111batch1'));
   }
 });
 test('the hallucination sample does not claim models can never express uncertainty',()=>{
