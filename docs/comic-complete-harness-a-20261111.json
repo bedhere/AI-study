@@ -1,0 +1,609 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners.",
+  "generator": "built-in image_gen",
+  "date": "2026-11-11",
+  "batchId": "20261111-complete-harness-a",
+  "cacheVersion": "20261111complete",
+  "status": "accepted; 18 integrated stories, total 97",
+  "lessons": [
+    {
+      "file": "5-1.html",
+      "sourceArtifact": "exec-e7b423b0-040f-45fc-a1b0-07109fd33540.png",
+      "slug": "harness-context-desk",
+      "lessonTitle": "上下文窗口：AI 的工作记忆",
+      "role": "档案虎：青绿马甲、圆眼镜",
+      "title": "四格看懂：上下文窗口：AI 的工作记忆",
+      "takeaway": "上下文像有限的工作桌；安排输入时，也要给输出留出空间。",
+      "originalHtmlSha256": "9cded1a98755f84a4cfb8237a912048cc4ffc7958349bf77cfd5265041345691",
+      "panels": [
+        {
+          "label": "先摆任务",
+          "text": "指令、问题、历史与资料都会占用本次上下文。",
+          "alt": "档案虎把不同颜色的文件卡放上有边框的小工作桌。"
+        },
+        {
+          "label": "桌面有上限",
+          "text": "材料太多时，请求可能被拒绝或由应用裁剪。",
+          "alt": "档案虎面对已经放满的桌面，怀里还抱着一摞资料，神情疑惑。"
+        },
+        {
+          "label": "留出输出空间",
+          "text": "按模型与接口限制，给回答预留容量。",
+          "alt": "档案虎用分隔板划出一块空桌面，机器人在旁等待放下答案卡。"
+        },
+        {
+          "label": "只放必要材料",
+          "text": "整理相关资料，并检查关键信息是否仍在。",
+          "alt": "档案虎将无关卡放回柜子，核对桌上留下的任务卡与资料卡。"
+        }
+      ],
+      "scenePrompt": "角色：档案虎：青绿马甲、圆眼镜。四格动作依次是：第1格：档案虎把不同颜色的文件卡放上有边框的小工作桌。 第2格：档案虎面对已经放满的桌面，怀里还抱着一摞资料，神情疑惑。 第3格：档案虎用分隔板划出一块空桌面，机器人在旁等待放下答案卡。 第4格：档案虎将无关卡放回柜子，核对桌上留下的任务卡与资料卡。"
+    },
+    {
+      "file": "5-2.html",
+      "sourceArtifact": "exec-b223584f-57d7-4a84-b969-bced48e41844.png",
+      "slug": "harness-overflow-strategies",
+      "lessonTitle": "上下文溢出：三种处理策略",
+      "role": "整理虎：紫围裙、橙发带",
+      "title": "四格看懂：上下文溢出：三种处理策略",
+      "takeaway": "截断、摘要和选择保留各有代价；用任务结果检查是否丢失关键信息。",
+      "originalHtmlSha256": "9fd1b5c5fef903673ba47d1047521b5faeed8d38ea7225f2df710bf9c8250a90",
+      "panels": [
+        {
+          "label": "发现放不下",
+          "text": "长对话会让可用上下文越来越紧。",
+          "alt": "整理虎面对堆满彩色卡片的小桌，手中还有一张待放入的卡。"
+        },
+        {
+          "label": "截断最简单",
+          "text": "丢弃部分历史可以省空间，也可能丢掉早先约定。",
+          "alt": "整理虎把最早的一排卡移到桌外，发现其中夹着一张星形目标卡。"
+        },
+        {
+          "label": "摘要做压缩",
+          "text": "把历史压成要点，仍要检查遗漏和误写。",
+          "alt": "整理虎对照一叠长稿写一张短摘要，旁边保留原始稿纸。"
+        },
+        {
+          "label": "按需选择保留",
+          "text": "取回相关历史与固定约定，再用真实问题验证。",
+          "alt": "整理虎将星形目标卡与相关资料卡放回桌面，与机器人共同核对。"
+        }
+      ],
+      "scenePrompt": "角色：整理虎：紫围裙、橙发带。四格动作依次是：第1格：整理虎面对堆满彩色卡片的小桌，手中还有一张待放入的卡。 第2格：整理虎把最早的一排卡移到桌外，发现其中夹着一张星形目标卡。 第3格：整理虎对照一叠长稿写一张短摘要，旁边保留原始稿纸。 第4格：整理虎将星形目标卡与相关资料卡放回桌面，与机器人共同核对。"
+    },
+    {
+      "file": "6-0a.html",
+      "sourceArtifact": "exec-2bd96a0b-d973-4c5c-907c-d94f585db1ee.png",
+      "slug": "harness-lightweight-format",
+      "lessonTitle": "为什么大模型选择 Markdown",
+      "role": "排版虎：蓝衬衫、米色围裙",
+      "title": "四格看懂：为什么大模型选择 Markdown",
+      "takeaway": "Markdown 用轻量文本标记表达结构，前端再把它渲染成易读内容。",
+      "originalHtmlSha256": "d989821da84619337b4ee09d3d7fd5c175ccfa61860e26be0bc808f9633d39a4",
+      "panels": [
+        {
+          "label": "先有纯文本",
+          "text": "生成内容先以文本片段到达。",
+          "alt": "排版虎接过机器人送来的一条长纸带，纸带上只有无字横线。"
+        },
+        {
+          "label": "补上阅读结构",
+          "text": "读者需要分清标题、列表与引用等层次。",
+          "alt": "排版虎把长纸带分成大小不同的卡，排出标题与列表布局。"
+        },
+        {
+          "label": "标记保持轻量",
+          "text": "用少量文本标记描述结构，便于传输与编辑。",
+          "alt": "排版虎将几枚小色签夹到纸带边缘，旁边是笨重的多层空白装订夹作对比。"
+        },
+        {
+          "label": "交给前端渲染",
+          "text": "渲染器将标记变成可阅读的页面，仍需处理安全与兼容。",
+          "alt": "排版虎将带色签纸带送入排版小机，另一侧出现层次清晰的页面。"
+        }
+      ],
+      "scenePrompt": "角色：排版虎：蓝衬衫、米色围裙。四格动作依次是：第1格：排版虎接过机器人送来的一条长纸带，纸带上只有无字横线。 第2格：排版虎把长纸带分成大小不同的卡，排出标题与列表布局。 第3格：排版虎将几枚小色签夹到纸带边缘，旁边是笨重的多层空白装订夹作对比。 第4格：排版虎将带色签纸带送入排版小机，另一侧出现层次清晰的页面。"
+    },
+    {
+      "file": "6-0b.html",
+      "sourceArtifact": "exec-8a772c00-223b-46e9-bdff-0fef812ed7b3.png",
+      "slug": "harness-markdown-rendering",
+      "lessonTitle": "Markdown 语法与工程化渲染",
+      "role": "网页虎：海军蓝工装、青色帽子",
+      "title": "四格看懂：Markdown 语法与工程化渲染",
+      "takeaway": "写法、渲染与安全处理是不同环节；用实际内容测试显示效果。",
+      "originalHtmlSha256": "a55232c6f30162443e67aabb39c2dbee06568253e0c7280ceded4df40a83d557",
+      "panels": [
+        {
+          "label": "认识结构标记",
+          "text": "标题、列表、代码与引用有各自写法。",
+          "alt": "网页虎在桌上摆放大标题卡、圆点列表卡、代码色块卡和引用边条卡。"
+        },
+        {
+          "label": "对照显示效果",
+          "text": "比较源码与渲染结果，发现结构是否正确。",
+          "alt": "网页虎观察左右两块屏幕，一边是无字线条标记，一边是排好版的卡片。"
+        },
+        {
+          "label": "选合适渲染器",
+          "text": "按项目栈、扩展需求和内容来源选择实现。",
+          "alt": "网页虎比较三块不同形状的渲染模块，将一块接入页面框架。"
+        },
+        {
+          "label": "验证边界情况",
+          "text": "检查长内容、未闭合标记和不可信 HTML 的处理。",
+          "alt": "网页虎用放大镜查看一张折断边框的卡，旁边有盾牌形防护板和长纸带。"
+        }
+      ],
+      "scenePrompt": "角色：网页虎：海军蓝工装、青色帽子。四格动作依次是：第1格：网页虎在桌上摆放大标题卡、圆点列表卡、代码色块卡和引用边条卡。 第2格：网页虎观察左右两块屏幕，一边是无字线条标记，一边是排好版的卡片。 第3格：网页虎比较三块不同形状的渲染模块，将一块接入页面框架。 第4格：网页虎用放大镜查看一张折断边框的卡，旁边有盾牌形防护板和长纸带。"
+    },
+    {
+      "file": "6-1.html",
+      "sourceArtifact": "exec-6742f99e-2dc2-4872-ae04-1625a53431b4.png",
+      "slug": "harness-role-and-format",
+      "lessonTitle": "你说什么，它就变什么",
+      "role": "导演虎：黑色马甲、红领结",
+      "title": "四格看懂：你说什么，它就变什么",
+      "takeaway": "角色设定能调整表达方式；具体任务、边界与格式仍须写清。",
+      "originalHtmlSha256": "ef4c12c0e43b4b8c7c5d768064efc088172150115176bc5af7418b247e81f034",
+      "panels": [
+        {
+          "label": "任务先说清",
+          "text": "同一问题也需要交代受众、目标与背景。",
+          "alt": "导演虎将目标靶、群组和问题卡排在机器人面前。"
+        },
+        {
+          "label": "角色改变表达",
+          "text": "角色指令会影响语气、视角和回答重点。",
+          "alt": "导演虎给机器人展示教师帽、画笔与扳手三张图标卡。"
+        },
+        {
+          "label": "指定交付形式",
+          "text": "需要列表、表格或结构化字段时明确说明。",
+          "alt": "导演虎将列表卡、网格卡和分格盒摆到同一工作台。"
+        },
+        {
+          "label": "核验真实能力",
+          "text": "扮演专家不等于具备资质，输出仍要按任务检查。",
+          "alt": "导演虎对照原始资料检查机器人输出的卡片，专家帽图标卡放在一边。"
+        }
+      ],
+      "scenePrompt": "角色：导演虎：黑色马甲、红领结。四格动作依次是：第1格：导演虎将目标靶、群组和问题卡排在机器人面前。 第2格：导演虎给机器人展示教师帽、画笔与扳手三张图标卡。 第3格：导演虎将列表卡、网格卡和分格盒摆到同一工作台。 第4格：导演虎对照原始资料检查机器人输出的卡片，专家帽图标卡放在一边。"
+    },
+    {
+      "file": "6-2.html",
+      "sourceArtifact": "exec-7adcd330-bc8e-48c4-8bd2-c7a00cbe4376.png",
+      "slug": "harness-prompt-techniques",
+      "lessonTitle": "Prompt 进阶技巧",
+      "role": "木工虎：棕围裙、蓝工作帽",
+      "title": "四格看懂：Prompt 进阶技巧",
+      "takeaway": "用示例、约束和任务拆解减少歧义，再用样例检查效果。",
+      "originalHtmlSha256": "390943607eca5505228b288795a58be92b07d1be48e27a42e1e0938eca5f6696",
+      "panels": [
+        {
+          "label": "给出合格示例",
+          "text": "用代表性样例说明你希望的内容与格式。",
+          "alt": "木工虎向机器人展示一件完整的小木架样品。"
+        },
+        {
+          "label": "列出约束",
+          "text": "说清尺寸、范围、格式与不能省略的条件。",
+          "alt": "木工虎用直尺测量木架，旁边放着边界框形卡片。"
+        },
+        {
+          "label": "拆成可检验步骤",
+          "text": "复杂任务分成有输入输出的小步骤。",
+          "alt": "木工虎把木架拆成三组零件，按箭头排出加工顺序。"
+        },
+        {
+          "label": "试过再调整",
+          "text": "用真实任务检查遗漏，把具体问题反馈回去。",
+          "alt": "木工虎与机器人测试新做的小木架，发现一处歪斜并用铅笔标出。"
+        }
+      ],
+      "scenePrompt": "角色：木工虎：棕围裙、蓝工作帽。四格动作依次是：第1格：木工虎向机器人展示一件完整的小木架样品。 第2格：木工虎用直尺测量木架，旁边放着边界框形卡片。 第3格：木工虎把木架拆成三组零件，按箭头排出加工顺序。 第4格：木工虎与机器人测试新做的小木架，发现一处歪斜并用铅笔标出。"
+    },
+    {
+      "file": "6-3.html",
+      "sourceArtifact": "exec-bb06f623-6dbf-4132-b31b-f45569925bd1.png",
+      "slug": "harness-output-format",
+      "lessonTitle": "输出格式取舍",
+      "role": "包装虎：橙围裙、绿袖口",
+      "title": "四格看懂：输出格式取舍",
+      "takeaway": "格式应服务阅读与程序处理；同时考虑校验、流式呈现和错误恢复。",
+      "originalHtmlSha256": "4ab0af4935f8024c1439fec4df91b0595b3901bcf849bf59a6eb0046bd059d77",
+      "panels": [
+        {
+          "label": "先看使用者",
+          "text": "确定结果是给人阅读，还是交给程序处理。",
+          "alt": "包装虎面对一本打开的阅读册与一台带齿轮的小机器。"
+        },
+        {
+          "label": "阅读讲究层次",
+          "text": "纯文本和 Markdown 便于呈现，但结构约定仍需一致。",
+          "alt": "包装虎把大标题卡和段落卡装订成一本层次清楚的小册。"
+        },
+        {
+          "label": "程序需要结构",
+          "text": "JSON 等格式便于字段校验，但生成结果仍可能不合法。",
+          "alt": "包装虎将不同形状的卡放入对应格子的盒子，手边有一张放错格的卡。"
+        },
+        {
+          "label": "按场景测试取舍",
+          "text": "比较完整解析、流式显示和异常处理后再选择。",
+          "alt": "包装虎用三种包装容器分别测试同一组卡，旁边放着沙漏和校验尺。"
+        }
+      ],
+      "scenePrompt": "角色：包装虎：橙围裙、绿袖口。四格动作依次是：第1格：包装虎面对一本打开的阅读册与一台带齿轮的小机器。 第2格：包装虎把大标题卡和段落卡装订成一本层次清楚的小册。 第3格：包装虎将不同形状的卡放入对应格子的盒子，手边有一张放错格的卡。 第4格：包装虎用三种包装容器分别测试同一组卡，旁边放着沙漏和校验尺。"
+    },
+    {
+      "file": "6-4.html",
+      "sourceArtifact": "exec-876d00f6-1100-4f7b-82c4-c0dee9ecff29.png",
+      "slug": "harness-streaming-format",
+      "lessonTitle": "流式返回与格式配合",
+      "role": "装配虎：青绿工装、橙帽子",
+      "title": "四格看懂：流式返回与格式配合",
+      "takeaway": "内容逐步到达时，先设计可解析的边界与等待状态，再安全更新界面。",
+      "originalHtmlSha256": "9f4e6d30bec1bb00ea1dc77a0862a63d519f13613513681b6acfa3e1482b5a2b",
+      "panels": [
+        {
+          "label": "片段陆续到达",
+          "text": "流式输出分批返回，早到的片段未必完整。",
+          "alt": "装配虎看着传送带上陆续送来的半张和彩色完整卡片。"
+        },
+        {
+          "label": "完整后再校验",
+          "text": "普通 JSON 解析通常需要完整结构，别把残片当成成品。",
+          "alt": "装配虎把缺角卡留在透明等待盒，完整卡放到测量框里。"
+        },
+        {
+          "label": "增量呈现要有边界",
+          "text": "文本可逐步显示，结构化内容需要明确字段或事件边界。",
+          "alt": "装配虎沿着带分隔槽的轨道把片段拼成一组独立的小卡。"
+        },
+        {
+          "label": "处理异常与重试",
+          "text": "考虑中断、未闭合结构和失败提示，避免展示误导结果。",
+          "alt": "装配虎在断开的传送带边保留半成品，放下橙色暂停牌并查看修复工具。"
+        }
+      ],
+      "scenePrompt": "角色：装配虎：青绿工装、橙帽子。四格动作依次是：第1格：装配虎看着传送带上陆续送来的半张和彩色完整卡片。 第2格：装配虎把缺角卡留在透明等待盒，完整卡放到测量框里。 第3格：装配虎沿着带分隔槽的轨道把片段拼成一组独立的小卡。 第4格：装配虎在断开的传送带边保留半成品，放下橙色暂停牌并查看修复工具。"
+    },
+    {
+      "file": "prompt-attack.html",
+      "sourceArtifact": "exec-b896cb0c-24c2-4f76-9440-855f90cb462a.png",
+      "slug": "harness-untrusted-instructions",
+      "lessonTitle": "Prompt Injection：为什么会被攻击",
+      "role": "守门虎：深蓝制服、青色帽子",
+      "title": "四格看懂：Prompt Injection：为什么会被攻击",
+      "takeaway": "外部内容可能夹带指令；把不可信资料与授权边界分开处理。",
+      "originalHtmlSha256": "90fedc7337c95087792993d14ef0556662e01c6b08afcec47fff78826285d27e",
+      "panels": [
+        {
+          "label": "任务本来很明确",
+          "text": "用户授权的是具体任务与有限的工具范围。",
+          "alt": "守门虎拿着任务卡，站在有文件窗与上锁工具柜的工作台前。"
+        },
+        {
+          "label": "资料夹带要求",
+          "text": "网页、文件或输入可能混入与任务无关的恶意指令。",
+          "alt": "机器人读到一张资料卡，卡片夹层露出一支红色绕行箭头。"
+        },
+        {
+          "label": "识别越界诱导",
+          "text": "伪装身份或要求泄露秘密，并不会产生真实授权。",
+          "alt": "守门虎把带假面具图标的卡与真实钥匙分开放在两个托盘。"
+        },
+        {
+          "label": "用权限限制后果",
+          "text": "结合内容隔离、最小权限与实际校验，持续测试残余风险。",
+          "alt": "守门虎将钥匙收回上锁柜，检查机器人面前只留下获准任务卡。"
+        }
+      ],
+      "scenePrompt": "角色：守门虎：深蓝制服、青色帽子。四格动作依次是：第1格：守门虎拿着任务卡，站在有文件窗与上锁工具柜的工作台前。 第2格：机器人读到一张资料卡，卡片夹层露出一支红色绕行箭头。 第3格：守门虎把带假面具图标的卡与真实钥匙分开放在两个托盘。 第4格：守门虎将钥匙收回上锁柜，检查机器人面前只留下获准任务卡。"
+    },
+    {
+      "file": "prompt-attack-cases.html",
+      "sourceArtifact": "exec-0f02e642-01d0-47eb-b92c-eb082441dc95.png",
+      "slug": "harness-injection-casebook",
+      "lessonTitle": "Prompt Injection：12 个攻击案例",
+      "role": "研究虎：白实验服、紫领结",
+      "title": "四格看懂：Prompt Injection：12 个攻击案例",
+      "takeaway": "识别攻击想改变的任务、身份和输出，再对照防护前后行为。",
+      "originalHtmlSha256": "5db0fa9eee1e22220c6c511fe2384337b2385e3f7bf30bbff3d1e5ec44e6920c",
+      "panels": [
+        {
+          "label": "先看正常任务",
+          "text": "先明确输入应该触发什么行为、不能触发什么。",
+          "alt": "研究虎在桌上摆出一张目标卡和一条正常箭头路线。"
+        },
+        {
+          "label": "比较不同伪装",
+          "text": "越权、角色扮演或结构包装都可能承载注入内容。",
+          "alt": "研究虎比较三张分别带假面具、戏剧帽和嵌套盒图标的资料卡。"
+        },
+        {
+          "label": "观察是否越界",
+          "text": "判断模型有没有偏离任务、泄露内容或调用越权工具。",
+          "alt": "研究虎查看分岔的轨道，一张红色卡试图通向上锁工具柜。"
+        },
+        {
+          "label": "把案例纳入测试",
+          "text": "同一案例对照改动前后的行为，持续补充新变体。",
+          "alt": "研究虎把案例卡加入测试档案，机器人在旁重新走正常路线。"
+        }
+      ],
+      "scenePrompt": "角色：研究虎：白实验服、紫领结。四格动作依次是：第1格：研究虎在桌上摆出一张目标卡和一条正常箭头路线。 第2格：研究虎比较三张分别带假面具、戏剧帽和嵌套盒图标的资料卡。 第3格：研究虎查看分岔的轨道，一张红色卡试图通向上锁工具柜。 第4格：研究虎把案例卡加入测试档案，机器人在旁重新走正常路线。"
+    },
+    {
+      "file": "prompt-defense.html",
+      "sourceArtifact": "exec-4e4da1bf-3921-4e95-87c5-12cfaf4f532b.png",
+      "slug": "harness-layered-defense",
+      "lessonTitle": "Prompt 防御：三层拦截实战",
+      "role": "巡检虎：蓝制服、黄色安全背心",
+      "title": "四格看懂：Prompt 防御：三层拦截实战",
+      "takeaway": "输入、模型约束与输出检查共同降低风险，授权与校验应由程序落实。",
+      "originalHtmlSha256": "781aa0adb4076c690c57edba37ec6ad191350120c712d67a7bba80de93766fc9",
+      "panels": [
+        {
+          "label": "检查不可信输入",
+          "text": "识别可疑内容，但不要把关键词过滤当成唯一防线。",
+          "alt": "巡检虎在资料入口筛查带异常红箭头的文件卡。"
+        },
+        {
+          "label": "明确模型边界",
+          "text": "说明任务范围、资料身份和不能执行的越界要求。",
+          "alt": "巡检虎向机器人展示边界框卡，将外部资料放进独立托盘。"
+        },
+        {
+          "label": "核验输出与权限",
+          "text": "结构、内容和工具权限分别由程序检查。",
+          "alt": "巡检虎在输出口用测量框检查卡片，旁边的工具柜保持上锁。"
+        },
+        {
+          "label": "持续攻防回归",
+          "text": "发现漏拦就补测试与修复，并保留人工处理途径。",
+          "alt": "巡检虎与同伴检查一张新异常卡，将它加入回归测试盒。"
+        }
+      ],
+      "scenePrompt": "角色：巡检虎：蓝制服、黄色安全背心。四格动作依次是：第1格：巡检虎在资料入口筛查带异常红箭头的文件卡。 第2格：巡检虎向机器人展示边界框卡，将外部资料放进独立托盘。 第3格：巡检虎在输出口用测量框检查卡片，旁边的工具柜保持上锁。 第4格：巡检虎与同伴检查一张新异常卡，将它加入回归测试盒。"
+    },
+    {
+      "file": "ai-safety-redlines.html",
+      "sourceArtifact": "exec-78a3ed0e-4757-4bcd-a1db-356d15d596e4.png",
+      "slug": "harness-safety-boundaries",
+      "lessonTitle": "AI 安全红线：四条底线",
+      "role": "保管虎：深绿制服、橙袖章",
+      "title": "四格看懂：AI 安全红线：四条底线",
+      "takeaway": "按企业实际制度保护资料与凭证，重要操作先确认授权。",
+      "originalHtmlSha256": "87b8ba8ed9935034f780e97ccf772caca534c1c4ca9608473c3f9b65829d86a4",
+      "panels": [
+        {
+          "label": "保护敏感资料",
+          "text": "只使用获准的工具和资料，不擅自上传敏感信息。",
+          "alt": "保管虎将带锁图标的资料放进保险柜，只把普通卡放到机器人桌上。"
+        },
+        {
+          "label": "单独管理凭证",
+          "text": "密码和密钥放入专用凭证管理机制，避免混入聊天与文档。",
+          "alt": "保管虎把一把钥匙放进专用小锁盒，远离机器人面前的空白便笺。"
+        },
+        {
+          "label": "重要操作确认授权",
+          "text": "删除、转账或改权限等操作应有明确授权与检查点。",
+          "alt": "保管虎在带红色按钮的控制台前停下，与负责人共同查看授权卡。"
+        },
+        {
+          "label": "遵循使用制度",
+          "text": "按适用流程审批工具、核验发布内容并记录使用情况。",
+          "alt": "保管虎整理工具登记册与发布稿，向同伴展示检查清单。"
+        }
+      ],
+      "scenePrompt": "角色：保管虎：深绿制服、橙袖章。四格动作依次是：第1格：保管虎将带锁图标的资料放进保险柜，只把普通卡放到机器人桌上。 第2格：保管虎把一把钥匙放进专用小锁盒，远离机器人面前的空白便笺。 第3格：保管虎在带红色按钮的控制台前停下，与负责人共同查看授权卡。 第4格：保管虎整理工具登记册与发布稿，向同伴展示检查清单。"
+    },
+    {
+      "file": "ai-safety-governance.html",
+      "sourceArtifact": "exec-6c428c7d-ab9a-4dcc-8a12-66e922573299.png",
+      "slug": "harness-risk-responsibility",
+      "lessonTitle": "风险分级与责任",
+      "role": "调度虎：紫色外套、青色领带",
+      "title": "四格看懂：风险分级与责任",
+      "takeaway": "按影响与风险安排检查强度，并明确使用者、审批者和管理者的职责。",
+      "originalHtmlSha256": "06b4752340120d7ac249cb730ba5b7e9ceed523861efe0de6729038d0f759943",
+      "panels": [
+        {
+          "label": "先判断影响",
+          "text": "识别数据敏感性、操作后果与结果使用范围。",
+          "alt": "调度虎把便笺、带锁文件和重要操作卡放到三级不同高度的平台。"
+        },
+        {
+          "label": "匹配管控强度",
+          "text": "风险越高，越需要明确权限、检查与升级途径。",
+          "alt": "调度虎在三个流程出口分别摆上轻便检查台、复核台与上锁闸门。"
+        },
+        {
+          "label": "责任落实到人",
+          "text": "说清谁发起、谁确认、谁维护规则与处理异常。",
+          "alt": "调度虎与两位不同服装的同伴按流程传递同一份资料夹。"
+        },
+        {
+          "label": "记录并改进",
+          "text": "留下必要的操作与审核记录，出错后可以追查和修复。",
+          "alt": "调度虎对照流程记录找到一处异常卡，与同伴共同做修订。"
+        }
+      ],
+      "scenePrompt": "角色：调度虎：紫色外套、青色领带。四格动作依次是：第1格：调度虎把便笺、带锁文件和重要操作卡放到三级不同高度的平台。 第2格：调度虎在三个流程出口分别摆上轻便检查台、复核台与上锁闸门。 第3格：调度虎与两位不同服装的同伴按流程传递同一份资料夹。 第4格：调度虎对照流程记录找到一处异常卡，与同伴共同做修订。"
+    },
+    {
+      "file": "7-1.html",
+      "sourceArtifact": "exec-7bd76d05-d1b6-4bc2-83e7-7b5539bf1b36.png",
+      "slug": "harness-agent-loop",
+      "lessonTitle": "Agent：能干活的 AI",
+      "role": "探险虎：卡其背心、蓝背包",
+      "title": "四格看懂：Agent：能干活的 AI",
+      "takeaway": "Agent 把模型、工具与循环结合起来；执行后观察结果，再决定下一步。",
+      "originalHtmlSha256": "6e51c520760b3be89d2eb8fcf4ff4e375265ac20a8eb1205e876af57d38293fa",
+      "panels": [
+        {
+          "label": "把目标拆成计划",
+          "text": "先识别任务、步骤与完成条件。",
+          "alt": "探险虎在营地把目标卡与三张步骤卡排成路线。"
+        },
+        {
+          "label": "调用合适工具",
+          "text": "程序按授权执行检索、计算或其他工具。",
+          "alt": "探险虎从工具架选出望远镜和计算器，机器人递来一张工具请求卡。"
+        },
+        {
+          "label": "观察真实结果",
+          "text": "把工具结果送回流程，检查是否接近目标。",
+          "alt": "探险虎将工具返回的地图片段与原始目标卡对照。"
+        },
+        {
+          "label": "继续或停止",
+          "text": "根据结果调整计划，遇到失败或边界时停下求助。",
+          "alt": "探险虎发现路线断桥，在桥前放下暂停牌并向同伴展示地图。"
+        }
+      ],
+      "scenePrompt": "角色：探险虎：卡其背心、蓝背包。四格动作依次是：第1格：探险虎在营地把目标卡与三张步骤卡排成路线。 第2格：探险虎从工具架选出望远镜和计算器，机器人递来一张工具请求卡。 第3格：探险虎将工具返回的地图片段与原始目标卡对照。 第4格：探险虎发现路线断桥，在桥前放下暂停牌并向同伴展示地图。"
+    },
+    {
+      "file": "7-2.html",
+      "sourceArtifact": "exec-6c55ed86-69b3-412a-ab3d-d54d926f66fe.png",
+      "slug": "harness-tool-execution",
+      "lessonTitle": "工具调用的秘密",
+      "role": "机械虎：蓝工装、橙护目镜",
+      "title": "四格看懂：工具调用的秘密",
+      "takeaway": "模型提出工具请求，程序校验并执行，再把实际结果交回模型。",
+      "originalHtmlSha256": "f530c94e31ff432ceb01458971461e5dd5e7acd3f392ca6bfba16efd85225838",
+      "panels": [
+        {
+          "label": "告知可用工具",
+          "text": "提供工具用途、参数与适用范围。",
+          "alt": "机械虎向机器人展示带扳手、计算器与资料书图标的工具说明板。"
+        },
+        {
+          "label": "生成调用请求",
+          "text": "模型输出工具名称和参数等结构化请求。",
+          "alt": "机器人把一张带计算器图标的分格请求卡递给机械虎。"
+        },
+        {
+          "label": "由程序执行",
+          "text": "程序核验权限与参数，再调用真实工具。",
+          "alt": "机械虎把请求卡放入校验槽，旁边的计算器开始运转。"
+        },
+        {
+          "label": "返回实际结果",
+          "text": "工具结果加入后续上下文，模型据此继续回答。",
+          "alt": "机械虎把计算器吐出的结果卡送回机器人，机器人整理成最终稿。"
+        }
+      ],
+      "scenePrompt": "角色：机械虎：蓝工装、橙护目镜。四格动作依次是：第1格：机械虎向机器人展示带扳手、计算器与资料书图标的工具说明板。 第2格：机器人把一张带计算器图标的分格请求卡递给机械虎。 第3格：机械虎把请求卡放入校验槽，旁边的计算器开始运转。 第4格：机械虎把计算器吐出的结果卡送回机器人，机器人整理成最终稿。"
+    },
+    {
+      "file": "7-2a.html",
+      "sourceArtifact": "exec-a656a538-ab82-4898-97b0-cda967224476.png",
+      "slug": "harness-message-roundtrip",
+      "lessonTitle": "一次对话背后的 5 条消息",
+      "role": "邮递虎：绿色邮差服、橙邮包",
+      "title": "四格看懂：一次对话背后的 5 条消息",
+      "takeaway": "一次工具问答包含多种消息；区分用户可见内容与后台调用记录。",
+      "originalHtmlSha256": "d229c4d020b15b0d82f362d40087072deff5e4490d419127f532e60ec11739d0",
+      "panels": [
+        {
+          "label": "指令和问题",
+          "text": "系统说明任务边界，用户提出具体问题。",
+          "alt": "邮递虎把边界框卡和天气问题卡一起放进机器人收件托盘。"
+        },
+        {
+          "label": "助手请求工具",
+          "text": "模型生成工具调用请求，程序接手执行。",
+          "alt": "机器人把带云朵图标的请求卡交给邮递虎，旁边是一台天气工具装置。"
+        },
+        {
+          "label": "工具送回结果",
+          "text": "结果以工具消息返回，保留与请求的对应关系。",
+          "alt": "邮递虎从天气装置取出太阳图标结果卡，与同形书签的请求卡配对。"
+        },
+        {
+          "label": "助手组织回答",
+          "text": "模型结合工具结果，生成给用户看的回复。",
+          "alt": "邮递虎将机器人整理好的太阳图标答复卡递到用户虎手中。"
+        }
+      ],
+      "scenePrompt": "角色：邮递虎：绿色邮差服、橙邮包。四格动作依次是：第1格：邮递虎把边界框卡和天气问题卡一起放进机器人收件托盘。 第2格：机器人把带云朵图标的请求卡交给邮递虎，旁边是一台天气工具装置。 第3格：邮递虎从天气装置取出太阳图标结果卡，与同形书签的请求卡配对。 第4格：邮递虎将机器人整理好的太阳图标答复卡递到用户虎手中。"
+    },
+    {
+      "file": "7-2b.html",
+      "sourceArtifact": "exec-3d2199c8-b026-4bf1-bda5-5a3b46024048.png",
+      "slug": "harness-tool-descriptions",
+      "lessonTitle": "工具描述的学问",
+      "role": "说明书虎：米色开衫、蓝领结",
+      "title": "四格看懂：工具描述的学问",
+      "takeaway": "工具说明应明确用途、参数、限制与返回值；用真实任务检验可理解性。",
+      "originalHtmlSha256": "669e2f9e10655137d2860da4d9f0a6729cd6f65cb6b80fddb2874499d9163051",
+      "panels": [
+        {
+          "label": "含糊容易选错",
+          "text": "只写一个宽泛名称，模型难以判断何时使用。",
+          "alt": "说明书虎与机器人面对三个外观相同的无标识工具盒，表情疑惑。"
+        },
+        {
+          "label": "说明用途与边界",
+          "text": "写清工具能做什么、不能做什么、何时调用。",
+          "alt": "说明书虎为工具盒放上地图、计算器与文件图标卡，并加上边界框。"
+        },
+        {
+          "label": "明确参数和结果",
+          "text": "参数类型、必填项、示例与错误行为要可检查。",
+          "alt": "说明书虎将不同形状的参数块放入对应插槽，旁边展示结果卡与异常卡。"
+        },
+        {
+          "label": "用样例反复试",
+          "text": "比较误选、参数错误和任务完成情况后再改描述。",
+          "alt": "说明书虎记录机器人选工具的测试结果，圈出一处错放的参数块。"
+        }
+      ],
+      "scenePrompt": "角色：说明书虎：米色开衫、蓝领结。四格动作依次是：第1格：说明书虎与机器人面对三个外观相同的无标识工具盒，表情疑惑。 第2格：说明书虎为工具盒放上地图、计算器与文件图标卡，并加上边界框。 第3格：说明书虎将不同形状的参数块放入对应插槽，旁边展示结果卡与异常卡。 第4格：说明书虎记录机器人选工具的测试结果，圈出一处错放的参数块。"
+    },
+    {
+      "file": "7-2c.html",
+      "sourceArtifact": "exec-b2667bfc-25e0-45ce-bbdc-1b8b3304d18d.png",
+      "slug": "harness-safe-tool-scheduling",
+      "lessonTitle": "多工具编排：并发 vs 串行",
+      "role": "交通虎：蓝制服、橙色反光背心",
+      "title": "四格看懂：多工具编排：并发 vs 串行",
+      "takeaway": "独立且安全的工具可并发；有依赖、共享状态或副作用时按顺序执行。",
+      "originalHtmlSha256": "5963ca40e8d346168d478ab33c4cfa88bfd264f0b48e4f991331860ba1863116",
+      "panels": [
+        {
+          "label": "先看依赖关系",
+          "text": "判断多个调用能否独立完成。",
+          "alt": "交通虎把三条工具小车轨道画在无字路线板上，一条轨道与另一条相接。"
+        },
+        {
+          "label": "独立查询可并行",
+          "text": "互不依赖的只读查询可同时运行，缩短等待。",
+          "alt": "交通虎放行三辆分别带飞机、天气和床铺图标的小车沿平行轨道前进。"
+        },
+        {
+          "label": "有依赖先后跑",
+          "text": "后一步需要前一步结果时，按顺序交接。",
+          "alt": "交通虎引导前一辆小车把结果卡交给后一辆小车，再打开后段闸门。"
+        },
+        {
+          "label": "副作用单独控制",
+          "text": "写入、下单等操作检查权限与共享状态，避免重复执行。",
+          "alt": "交通虎在带包裹付款图标的轨道前停下小车，与同伴查看确认卡。"
+        }
+      ],
+      "scenePrompt": "角色：交通虎：蓝制服、橙色反光背心。四格动作依次是：第1格：交通虎把三条工具小车轨道画在无字路线板上，一条轨道与另一条相接。 第2格：交通虎放行三辆分别带飞机、天气和床铺图标的小车沿平行轨道前进。 第3格：交通虎引导前一辆小车把结果卡交给后一辆小车，再打开后段闸门。 第4格：交通虎在带包裹付款图标的轨道前停下小车，与同伴查看确认卡。"
+    }
+  ]
+}

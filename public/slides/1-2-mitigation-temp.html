@@ -205,14 +205,16 @@ input[type=range]::-webkit-slider-thumb {
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">幻觉与应对</div>
-    <h1>应对 3：Temperature &amp; Top-P</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>应对 3：Temperature &amp; Top-P</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>应对 3：Temperature &amp; Top-P</h1>
     <p class="subtitle">PM 视角：API 接入时如何配置采样参数，不同业务场景的推荐值与风险边界。手段 03 / 04 · 预防。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>拖动滑块，实时看概率分布和输出变化</p></aside><!--seo:end-->  <section>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>拖动滑块，实时看概率分布和输出变化</p></aside><section class="lesson-comic" data-lesson-comic="1-2-mitigation-temp.html"><noscript><h2>四格看懂：应对 3：Temperature &amp; Top-P</h2><img src="assets/comics/core-sampling-controls.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：应对 3：Temperature &amp; Top-P"><ol><li><b>看到多个候选</b>：模型为下一步输出提供不同概率的候选。</li><li><b>调节随机程度</b>：Temperature 改变候选分布的集中程度。</li><li><b>控制候选范围</b>：Top-P 限制采样候选集合，实际支持因模型而异。</li><li><b>事实仍要核对</b>：低随机性也可能稳定出错，不能代替资料核验。</li></ol><p>采样参数影响输出的随机性与多样性，不能补上缺失的事实。</p></noscript></section><!--seo:end-->  <section>
     <div class="sec-label">业务场景推荐参数</div>
     <div class="scene-grid">
           <div class="scene-card active" onclick="selectScene(0)">

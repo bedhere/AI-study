@@ -129,14 +129,16 @@
 <!--seo:begin--><meta property="og:description" content="以一个虚构的发版助手为例：点击每个区域展开详情，看 Agent 如何读取并执行一个 Skill。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Agent 工程</div>
-    <h1>解剖一个示例 Skill</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>解剖一个示例 Skill</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>解剖一个示例 Skill</h1>
     <p class="subtitle">以一个虚构的发版助手为例：点击每个区域展开详情，看 Agent 如何读取并执行一个 Skill。</p>
-  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从真实源码学 SKILL.md 的结构设计</p></aside><!--seo:end-->  <div class="body-grid paywall-locked xa-peek">
+  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从真实源码学 SKILL.md 的结构设计</p></aside><section class="lesson-comic" data-lesson-comic="7-5b.html"><noscript><h2>四格看懂：解剖一个示例 Skill</h2><img src="assets/comics/harness-skill-structure.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：解剖一个示例 Skill"><ol><li><b>名称描述要准确</b>：说明技能做什么，让匹配任务容易被识别。</li><li><b>写清适用条件</b>：限制项目、环境与前提，避免错误触发。</li><li><b>步骤工具有边界</b>：写明顺序、输入输出及允许使用的工具。</li><li><b>失败也有路径</b>：定义检查点、错误处理和完成标准。</li></ol><p>一份可执行手册需要准确描述、适用条件、工具范围与可验证步骤。</p></noscript></section><!--seo:end-->  <div class="body-grid paywall-locked xa-peek">
     <!-- 左区：Skill 解剖 -->
     <div class="main-col">
       <div class="sec-label" style="margin-top:0">SKILL.md 逐段解剖</div>

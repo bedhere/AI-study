@@ -34,14 +34,16 @@
   <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
   <body>
     <article class="lesson wide">
       <header class="lesson-header">
         <div class="kicker">Agent 工程</div>
-        <h1>从检索到 RAG</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>从检索到 RAG</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+        <h1>从检索到 RAG</h1>
         <p class="subtitle">Search 返回“可能相关的片段”，RAG 还要把它们变成有来源、有边界、能被评测的回答依据。</p>
-      </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>切分、过滤、混合检索、RRF、重排与评测</p></aside><!--seo:end-->      <div class="vdb-note">
+      </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>切分、过滤、混合检索、RRF、重排与评测</p></aside><section class="lesson-comic" data-lesson-comic="vector-db-4.html"><noscript><h2>四格看懂：从检索到 RAG</h2><img src="assets/comics/harness-retrieval-to-answer.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：从检索到 RAG"><ol><li><b>摄取保留来源</b>：切分文档时保存版本、章节与权限等元数据。</li><li><b>检索先守权限</b>：用一致的编码检索，并按租户与访问权限过滤。</li><li><b>整理检索候选</b>：去重、融合或重排，控制送入模型的片段数量。</li><li><b>答案回查证据</b>：分别评测检索质量与答案忠实度，核对引用是否支持结论。</li></ol><p>可靠的 RAG 需要来源、权限过滤、候选整理与分层评测。</p></noscript></section><!--seo:end-->      <div class="vdb-note">
         <b>本课在哪一层：</b>向量检索的入门在本主题前面的<a href="7-3c.html">长期记忆：向量检索</a>，RAG 的产品视角在第一篇章的<a href="1-2-mitigation-rag.html">RAG 检索增强生成</a>与<a href="rag-advanced.html">RAG 的代价与优化策略</a>。本课不重复这些基础，只讲 Milvus 检索如何进入可靠的 RAG 链路；把检索封成 Agent 工具则在第四篇章的<a href="vector-db-5.html">Milvus 作为 Agent 知识库工具</a>。
       </div>
       <div class="sec-label">在线链路</div>

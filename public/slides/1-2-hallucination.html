@@ -369,14 +369,16 @@ window.GLOBAL_ATTN = (function() {
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">幻觉与应对</div>
-    <h1>大模型幻觉 (Hallucination)</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>大模型幻觉 (Hallucination)</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>大模型幻觉 (Hallucination)</h1>
     <p class="subtitle">模型不知道事实，只是在做概率采样。看它如何自信地编造：选择一个案例，点击「开始生成」，观察幻觉如何在逐词生成中产生。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>三类典型幻觉：事实错误 / 自信编造 / 知识截止</p></aside><!--seo:end-->  <div class="main-area paywall-locked xa-peek">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>三类典型幻觉：事实错误 / 自信编造 / 知识截止</p></aside><section class="lesson-comic" data-lesson-comic="1-2-hallucination.html"><noscript><h2>四格看懂：大模型幻觉 (Hallucination)</h2><img src="assets/comics/core-hallucination.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：大模型幻觉 (Hallucination)"><ol><li><b>答案看起来很真</b>：模型可能给出流畅但错误的内容。</li><li><b>追查具体依据</b>：对照原始材料，检查人名、数据和来源。</li><li><b>没有依据先停</b>：缺失的信息标为待确认，不补造来源。</li><li><b>核实后再使用</b>：补充可靠材料、实际运行或请人审核。</li></ol><p>回答流畅也可能没有依据；重要事实、引用和代码都要核验。</p></noscript></section><!--seo:end-->  <div class="main-area paywall-locked xa-peek">
     <div class="left-panel">
       <div>
         <div class="section-title">选择一个 Prompt</div>

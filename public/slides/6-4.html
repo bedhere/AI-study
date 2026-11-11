@@ -162,15 +162,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">Prompt 工程</div>
-    <h1>流式返回与格式配合</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>流式返回与格式配合</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>流式返回与格式配合</h1>
     <p class="subtitle">LLM 是<b>逐 Token 输出</b>的。同一个响应内容，格式不同，流式体验完全不同。选择场景后点击播放，观察三种格式的渲染差异。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>JSON 全文才能解析 / MD 逐字显示 / XML 捕获标签即渲染，动态演示</p></aside><!--seo:end-->  <div class="sec-label">选择演示场景</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>JSON 全文才能解析 / MD 逐字显示 / XML 捕获标签即渲染，动态演示</p></aside><section class="lesson-comic" data-lesson-comic="6-4.html"><noscript><h2>四格看懂：流式返回与格式配合</h2><img src="assets/comics/harness-streaming-format.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：流式返回与格式配合"><ol><li><b>片段陆续到达</b>：流式输出分批返回，早到的片段未必完整。</li><li><b>完整后再校验</b>：普通 JSON 解析通常需要完整结构，别把残片当成成品。</li><li><b>增量呈现要有边界</b>：文本可逐步显示，结构化内容需要明确字段或事件边界。</li><li><b>处理异常与重试</b>：考虑中断、未闭合结构和失败提示，避免展示误导结果。</li></ol><p>内容逐步到达时，先设计可解析的边界与等待状态，再安全更新界面。</p></noscript></section><!--seo:end-->  <div class="sec-label">选择演示场景</div>
 
   <div class="mode-tabs">
     <button class="mode-btn active" onclick="selectMode(this,0)">

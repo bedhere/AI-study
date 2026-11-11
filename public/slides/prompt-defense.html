@@ -150,14 +150,16 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Prompt 安全</div>
-    <h1>Prompt 防御：三层拦截实战</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>Prompt 防御：三层拦截实战</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>Prompt 防御：三层拦截实战</h1>
     <p class="subtitle">以真实产品 MoodVerse 为例，看输入过滤、System Prompt 安全约束、输出泄漏检测三层如何层层拦截 Prompt 注入。点击标签页逐步了解，第三个标签可亲手模拟攻击全链路。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>输入层正则 → 提示词层约束 → 输出层泄漏检测 → 二次审核，可模拟攻击全链路</p></aside><!--seo:end-->  <!-- 标签栏 -->
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>输入层正则 → 提示词层约束 → 输出层泄漏检测 → 二次审核，可模拟攻击全链路</p></aside><section class="lesson-comic" data-lesson-comic="prompt-defense.html"><noscript><h2>四格看懂：Prompt 防御：三层拦截实战</h2><img src="assets/comics/harness-layered-defense.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Prompt 防御：三层拦截实战"><ol><li><b>检查不可信输入</b>：识别可疑内容，但不要把关键词过滤当成唯一防线。</li><li><b>明确模型边界</b>：说明任务范围、资料身份和不能执行的越界要求。</li><li><b>核验输出与权限</b>：结构、内容和工具权限分别由程序检查。</li><li><b>持续攻防回归</b>：发现漏拦就补测试与修复，并保留人工处理途径。</li></ol><p>输入、模型约束与输出检查共同降低风险，授权与校验应由程序落实。</p></noscript></section><!--seo:end-->  <!-- 标签栏 -->
   <div class="tabs">
     <button class="tab active" onclick="switchTab('scene')">① 产品背景</button>
     <button class="tab" onclick="switchTab('prompt')">② System Prompt</button>

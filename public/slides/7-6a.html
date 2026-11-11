@@ -80,14 +80,16 @@
 <!--seo:begin--><meta property="og:description" content="没有护栏的 Agent = 没有刹车的跑车。点击左侧每道护栏，查看场景还原与有无护栏的对比。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Agent 工程</div>
-    <h1>5 道工程护栏</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>5 道工程护栏</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>5 道工程护栏</h1>
     <p class="subtitle">没有护栏的 Agent = 没有刹车的跑车。点击左侧每道护栏，查看场景还原与有无护栏的对比。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>迭代上限、输出截断、超时控制、中断恢复、上下文急救</p></aside><!--seo:end-->  <div class="detail-wrap paywall-locked xa-peek">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>迭代上限、输出截断、超时控制、中断恢复、上下文急救</p></aside><section class="lesson-comic" data-lesson-comic="7-6a.html"><noscript><h2>四格看懂：5 道工程护栏</h2><img src="assets/comics/harness-engineering-guardrails.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：5 道工程护栏"><ol><li><b>限制无限循环</b>：设置迭代或预算上限，识别重复无进展。</li><li><b>控制输出与等待</b>：约束超长结果，并给工具设置超时。</li><li><b>中断后能接续</b>：保存必要状态，核对已完成动作再恢复。</li><li><b>容量紧张先整理</b>：压缩或归档上下文时，检查目标与关键状态是否保留。</li></ol><p>限制循环、输出与等待，保留中断恢复和上下文整理的处理路径。</p></noscript></section><!--seo:end-->  <div class="detail-wrap paywall-locked xa-peek">
     <div>
       <div class="sec-label" style="margin-top:0">点击查看每道护栏</div>
       <div class="g-list" id="gList"></div>

@@ -102,14 +102,16 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Agent 工程</div>
-    <h1>ReAct 实战：当 Agent 卡住了</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>ReAct 实战：当 Agent 卡住了</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>ReAct 实战：当 Agent 卡住了</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">ReAct 循环：思考 → 行动 → 观察，循环往复。但如果模型对参数格式不了解，它会反复猜测，卡在同一个地方打转。向下滚动，自动追踪真实失败过程。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Thought / Action / Observation 逐步演示，7 步完整 Agent 链路</p></aside><!--seo:end-->  <div class="react-layout reveal paywall-locked xa-peek" id="reactDemo">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Thought / Action / Observation 逐步演示，7 步完整 Agent 链路</p></aside><section class="lesson-comic" data-lesson-comic="7-3.html"><noscript><h2>四格看懂：ReAct 实战：当 Agent 卡住了</h2><img src="assets/comics/harness-react-stuck.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：ReAct 实战：当 Agent 卡住了"><ol><li><b>循环本可推进</b>：计划、行动和观察共同推动任务。</li><li><b>重复错误会打转</b>：错误格式不断重试，工具仍会失败。</li><li><b>先查接口要求</b>：阅读说明，校验参数，再决定是否重试。</li><li><b>设置停止条件</b>：达到重试或时间上限后，报告问题并求助。</li></ol><p>反复猜参数不会自动解决问题；观察错误，查清约束，并限制重试。</p></noscript></section><!--seo:end-->  <div class="react-layout reveal paywall-locked xa-peek" id="reactDemo">
     <!-- 左：状态面板 -->
     <aside class="side-panel">
       <div class="loop-counter">

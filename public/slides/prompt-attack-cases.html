@@ -113,15 +113,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">Prompt 安全</div>
-    <h1>Prompt Injection：12 个攻击案例</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Prompt Injection：12 个攻击案例</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Prompt Injection：12 个攻击案例</h1>
     <p class="subtitle">12 个经过真实验证的攻击案例，分为 5 大类型。选一个案例，切换「中招版 vs 防御版」，观察同样的攻击在有无防护下的两种结局。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>越权指令 / 角色扮演 / Few-Shot / 结构注入 / 隐喻伪装，中招版 vs 防御版</p></aside><!--seo:end-->  <div class="sec-label">选择案例</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>越权指令 / 角色扮演 / Few-Shot / 结构注入 / 隐喻伪装，中招版 vs 防御版</p></aside><section class="lesson-comic" data-lesson-comic="prompt-attack-cases.html"><noscript><h2>四格看懂：Prompt Injection：12 个攻击案例</h2><img src="assets/comics/harness-injection-casebook.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Prompt Injection：12 个攻击案例"><ol><li><b>先看正常任务</b>：先明确输入应该触发什么行为、不能触发什么。</li><li><b>比较不同伪装</b>：越权、角色扮演或结构包装都可能承载注入内容。</li><li><b>观察是否越界</b>：判断模型有没有偏离任务、泄露内容或调用越权工具。</li><li><b>把案例纳入测试</b>：同一案例对照改动前后的行为，持续补充新变体。</li></ol><p>识别攻击想改变的任务、身份和输出，再对照防护前后行为。</p></noscript></section><!--seo:end-->  <div class="sec-label">选择案例</div>
 
   <div class="nav-groups" id="navList"></div>
 

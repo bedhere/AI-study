@@ -1,0 +1,581 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners.",
+  "generator": "built-in image_gen",
+  "date": "2026-11-11",
+  "batchId": "20261111-complete-opening",
+  "cacheVersion": "20261111complete",
+  "status": "accepted; 17 integrated stories, total 79",
+  "lessons": [
+    {
+      "file": "academy-knowledge.html",
+      "sourceArtifact": "exec-3f91fe36-1729-43b9-adde-192503f01912.png",
+      "slug": "academy-evidence",
+      "lessonTitle": "AI 能帮忙，也需要你来判断",
+      "role": "编辑虎：墨绿围裙、圆眼镜",
+      "title": "四格看懂：AI 能帮忙，也需要你来判断",
+      "takeaway": "AI 起草以后，用原始材料核对事实，再由使用者判断。",
+      "originalHtmlSha256": "820789ac4bda1ca989af548841eb42ffb86efd9b958f9cf830fd65fd8f36edf0",
+      "panels": [
+        {
+          "label": "备好材料",
+          "text": "提供获准使用的材料、目标和格式。",
+          "alt": "编辑虎将几份空白资料整齐摆在桌上，旁边放着目标靶图标。"
+        },
+        {
+          "label": "拿到草稿",
+          "text": "让 AI 整理信息，并标出资料不足之处。",
+          "alt": "编辑虎接过机器人递来的草稿，稿纸留有一处空白橙色框。"
+        },
+        {
+          "label": "逐项核验",
+          "text": "流畅的表述和看似真实的引用都需要核对。",
+          "alt": "编辑虎把草稿与原始资料并排，用放大镜仔细比较一处圆形图标。"
+        },
+        {
+          "label": "由人判断",
+          "text": "确认事实、表达与用途，保留修改原因。",
+          "alt": "编辑虎用铅笔修改草稿，机器人在旁等候，桌上保留原稿。"
+        }
+      ],
+      "scenePrompt": "角色：编辑虎：墨绿围裙、圆眼镜。四格动作依次是：第1格：编辑虎将几份空白资料整齐摆在桌上，旁边放着目标靶图标。 第2格：编辑虎接过机器人递来的草稿，稿纸留有一处空白橙色框。 第3格：编辑虎把草稿与原始资料并排，用放大镜仔细比较一处圆形图标。 第4格：编辑虎用铅笔修改草稿，机器人在旁等候，桌上保留原稿。",
+      "insertionAnchor": "first-header-end"
+    },
+    {
+      "file": "academy-practice.html",
+      "sourceArtifact": "exec-11d5166b-e20a-4388-b4ad-e51f526308a1.png",
+      "slug": "academy-three-drafts",
+      "lessonTitle": "用 AI 把学习资料整理成三版分享通知",
+      "role": "策划虎：珊瑚色针织衫、蓝色发带",
+      "title": "四格看懂：用 AI 把学习资料整理成三版分享通知",
+      "takeaway": "从明确材料和交付标准开始，写出草稿后逐项验收。",
+      "originalHtmlSha256": "70e6b0f1cd5b0f60082493f6c28a35e8889d7d3f8788facc29f08f969225ba09",
+      "panels": [
+        {
+          "label": "先读简报",
+          "text": "找出时间、对象与主题，缺失信息记为待确认。",
+          "alt": "策划虎查看一张带日历、群组和文件图标的简报，角落有空白框。"
+        },
+        {
+          "label": "定好标准",
+          "text": "三种表达都必须遵守同一份事实与格式要求。",
+          "alt": "策划虎把三张不同颜色的空白卡排好，并放下一把直尺。"
+        },
+        {
+          "label": "生成三稿",
+          "text": "问题、场景、直接通知，各写一版供比较。",
+          "alt": "机器人递出三张分别带问号、舞台和铃铛图标的卡，策划虎逐一接看。"
+        },
+        {
+          "label": "核验再交付",
+          "text": "检查字数、事实和受众，不编造报名方式。",
+          "alt": "策划虎将一张草稿和简报对照，圈出未填的链接图标。"
+        }
+      ],
+      "scenePrompt": "角色：策划虎：珊瑚色针织衫、蓝色发带。四格动作依次是：第1格：策划虎查看一张带日历、群组和文件图标的简报，角落有空白框。 第2格：策划虎把三张不同颜色的空白卡排好，并放下一把直尺。 第3格：机器人递出三张分别带问号、舞台和铃铛图标的卡，策划虎逐一接看。 第4格：策划虎将一张草稿和简报对照，圈出未填的链接图标。",
+      "insertionAnchor": "first-header-end"
+    },
+    {
+      "file": "academy-review.html",
+      "sourceArtifact": "exec-f4abdfaa-b03e-4454-a2d5-75fa7984f3e2.png",
+      "slug": "academy-review-loop",
+      "lessonTitle": "交付前的核验：三道练习与一次复盘",
+      "role": "复盘虎：浅紫马甲、黄色领结",
+      "title": "四格看懂：交付前的核验：三道练习与一次复盘",
+      "takeaway": "先独立判断，再对照材料与验收清单，说明修改的理由。",
+      "originalHtmlSha256": "46bfd2c41bb948846caf001d521f498c27d2cb6795ec73015fe5ae08789b6d6a",
+      "panels": [
+        {
+          "label": "独立作答",
+          "text": "先做情境判断，再展开解析。",
+          "alt": "复盘虎独自比较两张不同方向箭头卡，解析卡扣在桌面。"
+        },
+        {
+          "label": "回查材料",
+          "text": "判断受众与缺失信息时，回到原始简报。",
+          "alt": "复盘虎打开资料夹，将群组图标卡与原始材料对应。"
+        },
+        {
+          "label": "检查交付",
+          "text": "逐项检查事实依据、格式和待确认事项。",
+          "alt": "复盘虎把三张稿纸铺开，用铅笔检查旁边的圆点清单。"
+        },
+        {
+          "label": "说出改法",
+          "text": "写下一处修改及原因，再迁移到自己的工作。",
+          "alt": "复盘虎向同伴展示有修改圈痕的稿纸，旁边摆着工作资料篮。"
+        }
+      ],
+      "scenePrompt": "角色：复盘虎：浅紫马甲、黄色领结。四格动作依次是：第1格：复盘虎独自比较两张不同方向箭头卡，解析卡扣在桌面。 第2格：复盘虎打开资料夹，将群组图标卡与原始材料对应。 第3格：复盘虎把三张稿纸铺开，用铅笔检查旁边的圆点清单。 第4格：复盘虎向同伴展示有修改圈痕的稿纸，旁边摆着工作资料篮。",
+      "insertionAnchor": "first-header-end"
+    },
+    {
+      "file": "roadmap.html",
+      "sourceArtifact": "exec-68ccd59e-1c91-4d07-86d2-a0e2ad1b608e.png",
+      "slug": "academy-learning-routes",
+      "lessonTitle": "从你的工作目标开始学 AI",
+      "role": "领航虎：蓝夹克、橙色斜挎包",
+      "title": "四格看懂：从你的工作目标开始学 AI",
+      "takeaway": "按当前目标选择路线，先完成一个真实小任务，随时可以切换。",
+      "originalHtmlSha256": "00768b6dfeb76c8e56b9b57cf4b4e9032c8088d06a0656b3137e84d8c54968f9",
+      "panels": [
+        {
+          "label": "从目标出发",
+          "text": "先说清你希望 AI 帮你完成哪件事。",
+          "alt": "领航虎站在三条不同颜色的小路起点，手拿一个目标靶图标卡。"
+        },
+        {
+          "label": "迈出第一步",
+          "text": "初学者先练清楚提问与结果核验。",
+          "alt": "领航虎沿黄色小路向机器人递出任务卡，再对照一本参考资料。"
+        },
+        {
+          "label": "形成工作流",
+          "text": "业务同事整理输入、提示词、检查与交付标准。",
+          "alt": "领航虎沿绿色小路把资料、机器人和交付盒连接成一条流程。"
+        },
+        {
+          "label": "动手做原型",
+          "text": "技术共创从有输入、输出和检查点的小工具开始。",
+          "alt": "领航虎在蓝色小路尽头搭建带输入托盘、输出盒与人工检查台的小机器。"
+        }
+      ],
+      "scenePrompt": "角色：领航虎：蓝夹克、橙色斜挎包。四格动作依次是：第1格：领航虎站在三条不同颜色的小路起点，手拿一个目标靶图标卡。 第2格：领航虎沿黄色小路向机器人递出任务卡，再对照一本参考资料。 第3格：领航虎沿绿色小路把资料、机器人和交付盒连接成一条流程。 第4格：领航虎在蓝色小路尽头搭建带输入托盘、输出盒与人工检查台的小机器。",
+      "insertionAnchor": "first-header-end"
+    },
+    {
+      "file": "0-intro.html",
+      "sourceArtifact": "exec-bf5f8a27-d8e7-44b5-9932-1d16ab16e512.png",
+      "slug": "academy-learning-humility",
+      "lessonTitle": "我们在哪里？达克效应",
+      "role": "登山虎：卡其外套、红背包",
+      "title": "四格看懂：我们在哪里？达克效应",
+      "takeaway": "保持开放，用动手与反馈校准理解；学习过程因人而异。",
+      "originalHtmlSha256": "eb44e967b55a628c1e119f4e3b30fcc9cce798e465caeec8555fc577e9b6fe8b",
+      "panels": [
+        {
+          "label": "觉得已经懂了",
+          "text": "刚接触概念时，容易高估自己的掌握程度。",
+          "alt": "登山虎站在低矮山丘顶，自信地举起一块拼图。"
+        },
+        {
+          "label": "动手发现缺口",
+          "text": "实际操作会暴露概念之间没有接通的地方。",
+          "alt": "登山虎在山谷帐篷边尝试拼接不匹配的两块拼图，表情疑惑。"
+        },
+        {
+          "label": "一处处补起来",
+          "text": "承认不懂，查资料、练习并请人反馈。",
+          "alt": "登山虎坐在山腰石凳上翻书，向教师虎展示未完成的拼图。"
+        },
+        {
+          "label": "用结果校准",
+          "text": "能解释、能实践，才更接近真正掌握。",
+          "alt": "登山虎在平缓山坡把完整拼图展示给同伴，旁边保留练习笔记。"
+        }
+      ],
+      "scenePrompt": "角色：登山虎：卡其外套、红背包。四格动作依次是：第1格：登山虎站在低矮山丘顶，自信地举起一块拼图。 第2格：登山虎在山谷帐篷边尝试拼接不匹配的两块拼图，表情疑惑。 第3格：登山虎坐在山腰石凳上翻书，向教师虎展示未完成的拼图。 第4格：登山虎在平缓山坡把完整拼图展示给同伴，旁边保留练习笔记。"
+    },
+    {
+      "file": "0-how.html",
+      "sourceArtifact": "exec-dd5a7450-4e06-46a7-a194-4f85fd4c9500.png",
+      "slug": "academy-study-transfer",
+      "lessonTitle": "怎样学，知识才能过脑子？",
+      "role": "学生虎：天蓝背带裤、红铅笔",
+      "title": "四格看懂：怎样学，知识才能过脑子？",
+      "takeaway": "带着问题看，停下来反思，再迁移到自己的任务并输出。",
+      "originalHtmlSha256": "e3c183b556a6cc86aec4563c5aa59a8488bf8a4bf2a9e30c03a69733171a2709",
+      "panels": [
+        {
+          "label": "带着问题看",
+          "text": "先想这个知识点与你的工作有什么关系。",
+          "alt": "学生虎对着课本举起带问号的小卡，桌上有工作资料夹。"
+        },
+        {
+          "label": "停下来反思",
+          "text": "用自己的话说清概念解决什么问题。",
+          "alt": "学生虎合上课本，思考拼图如何接入一条断开的流程。"
+        },
+        {
+          "label": "换到自己场景",
+          "text": "把案例翻译成自己的任务、数据和限制。",
+          "alt": "学生虎将课堂小模型移到自己工作桌上的资料与工具之间。"
+        },
+        {
+          "label": "讲出来再试",
+          "text": "复述、写下或做一次小练习，暴露理解缺口。",
+          "alt": "学生虎向同伴展示亲手搭好的流程，手边有修改过的练习纸。"
+        }
+      ],
+      "scenePrompt": "角色：学生虎：天蓝背带裤、红铅笔。四格动作依次是：第1格：学生虎对着课本举起带问号的小卡，桌上有工作资料夹。 第2格：学生虎合上课本，思考拼图如何接入一条断开的流程。 第3格：学生虎将课堂小模型移到自己工作桌上的资料与工具之间。 第4格：学生虎向同伴展示亲手搭好的流程，手边有修改过的练习纸。"
+    },
+    {
+      "file": "0-why.html",
+      "sourceArtifact": "exec-777fcaa6-7324-45be-bc13-5b9ecb9b6a36.png",
+      "slug": "academy-context-foundation",
+      "lessonTitle": "为什么花这么多时间讲原理？",
+      "role": "工程虎：海军蓝工装、护目镜",
+      "title": "四格看懂：为什么花这么多时间讲原理？",
+      "takeaway": "理解消息与上下文，有助于定位提示词、检索和工具链中的问题。",
+      "originalHtmlSha256": "9b60c07f4142e20bfbc05b2a6453d6889872299a6159e68103970f0f659fcbe2",
+      "panels": [
+        {
+          "label": "先看模型收到什么",
+          "text": "指令、资料和历史消息共同影响输出。",
+          "alt": "工程虎查看透明工作台里排好的三种颜色消息卡。"
+        },
+        {
+          "label": "检索补进资料",
+          "text": "RAG 把找到的相关片段放入本次上下文。",
+          "alt": "工程虎从书架抽出一张资料卡，放到消息卡队列旁。"
+        },
+        {
+          "label": "工具返回结果",
+          "text": "程序执行工具，再把结果送回后续调用。",
+          "alt": "工程虎接住计算器工具送出的结果卡，插入下一轮消息托盘。"
+        },
+        {
+          "label": "沿流程查问题",
+          "text": "检查信息是否完整、相关、过期或相互矛盾。",
+          "alt": "工程虎沿消息流程用手电筒检查一张折损的卡，机器人在旁等待。"
+        }
+      ],
+      "scenePrompt": "角色：工程虎：海军蓝工装、护目镜。四格动作依次是：第1格：工程虎查看透明工作台里排好的三种颜色消息卡。 第2格：工程虎从书架抽出一张资料卡，放到消息卡队列旁。 第3格：工程虎接住计算器工具送出的结果卡，插入下一轮消息托盘。 第4格：工程虎沿消息流程用手电筒检查一张折损的卡，机器人在旁等待。"
+    },
+    {
+      "file": "1-2-hallucination.html",
+      "sourceArtifact": "exec-be643e22-e2a6-436a-a2fc-5183a6a833eb.png",
+      "slug": "core-hallucination",
+      "lessonTitle": "大模型幻觉 (Hallucination)",
+      "role": "侦探虎：米色风衣、棕色侦探帽",
+      "title": "四格看懂：大模型幻觉 (Hallucination)",
+      "takeaway": "回答流畅也可能没有依据；重要事实、引用和代码都要核验。",
+      "originalHtmlSha256": "aa3764ab680e6d34afe2cc1957fd6d9e25a440ce880e62adec0d3b1928dbebae",
+      "panels": [
+        {
+          "label": "答案看起来很真",
+          "text": "模型可能给出流畅但错误的内容。",
+          "alt": "侦探虎接过机器人递来的整洁稿纸，稿纸上的一片拼图与周围不匹配。"
+        },
+        {
+          "label": "追查具体依据",
+          "text": "对照原始材料，检查人名、数据和来源。",
+          "alt": "侦探虎将稿纸与档案中的图案对照，用放大镜寻找错配。"
+        },
+        {
+          "label": "没有依据先停",
+          "text": "缺失的信息标为待确认，不补造来源。",
+          "alt": "侦探虎把一张只有空心问号图标的资料卡放到橙色待查托盘。"
+        },
+        {
+          "label": "核实后再使用",
+          "text": "补充可靠材料、实际运行或请人审核。",
+          "alt": "侦探虎与同伴共同检查修订稿，桌上有原始档案和运行中的测试装置。"
+        }
+      ],
+      "scenePrompt": "角色：侦探虎：米色风衣、棕色侦探帽。四格动作依次是：第1格：侦探虎接过机器人递来的整洁稿纸，稿纸上的一片拼图与周围不匹配。 第2格：侦探虎将稿纸与档案中的图案对照，用放大镜寻找错配。 第3格：侦探虎把一张只有空心问号图标的资料卡放到橙色待查托盘。 第4格：侦探虎与同伴共同检查修订稿，桌上有原始档案和运行中的测试装置。"
+    },
+    {
+      "file": "1-2-mitigation-prompt.html",
+      "sourceArtifact": "exec-7d089a38-a897-49cb-b9d8-ac50e1a938b9.png",
+      "slug": "core-prompt-grounding",
+      "lessonTitle": "Prompt 工程：用指令约束幻觉",
+      "role": "教师虎：墨绿开衫、圆眼镜",
+      "title": "四格看懂：Prompt 工程：用指令约束幻觉",
+      "takeaway": "约束与示例能帮助模型遵循要求，但仍需检查结果。",
+      "originalHtmlSha256": "f4af3db3a21271d8825f4fd69c7ce166b22e27f86dca3a0e462a201d3b46c4f2",
+      "panels": [
+        {
+          "label": "说明任务边界",
+          "text": "先交代对象、目标、资料范围与输出格式。",
+          "alt": "教师虎把目标靶、群组和文件三张图标卡放进任务框。"
+        },
+        {
+          "label": "给出依据与示例",
+          "text": "提供允许使用的资料和一个合格样例。",
+          "alt": "教师虎向机器人展示一本参考资料和一张布局清晰的示例卡。"
+        },
+        {
+          "label": "允许缺失留空",
+          "text": "要求资料不足时标明不确定，不自行编造。",
+          "alt": "机器人递回带空白橙框的稿纸，教师虎用铅笔标记待查位置。"
+        },
+        {
+          "label": "检查是否遵守",
+          "text": "约束不是保证，仍要核验事实与格式。",
+          "alt": "教师虎将输出与任务框、原始材料逐一对照。"
+        }
+      ],
+      "scenePrompt": "角色：教师虎：墨绿开衫、圆眼镜。四格动作依次是：第1格：教师虎把目标靶、群组和文件三张图标卡放进任务框。 第2格：教师虎向机器人展示一本参考资料和一张布局清晰的示例卡。 第3格：机器人递回带空白橙框的稿纸，教师虎用铅笔标记待查位置。 第4格：教师虎将输出与任务框、原始材料逐一对照。"
+    },
+    {
+      "file": "1-2-mitigation-rag.html",
+      "sourceArtifact": "exec-3fdc8a81-2c08-4355-bdfa-fd73660ed058.png",
+      "previousArtifact": "exec-9bf9a3e8-3cc8-49b2-beaa-32394494c658.png",
+      "slug": "core-rag-open-book",
+      "lessonTitle": "RAG 检索增强生成：让模型「开卷答题」",
+      "role": "图书馆虎：蓝马甲、圆眼镜",
+      "title": "四格看懂：RAG 检索增强生成：让模型「开卷答题」",
+      "takeaway": "先检索相关资料，再连同问题交给模型，最后核对引用是否支持答案。",
+      "originalHtmlSha256": "9da9a15d42ed10a7c30fb7c5010ed3e23b133f0f008289e753ba01d0baec4f15",
+      "panels": [
+        {
+          "label": "问题指向资料",
+          "text": "把待回答的问题转成可检索的需求。",
+          "alt": "图书馆虎拿着带退款包裹图标的问题卡，面对整齐书架。"
+        },
+        {
+          "label": "找相关片段",
+          "text": "检索与筛选资料，保留来源和必要上下文。",
+          "alt": "图书馆虎从书架挑出两张带不同形状书签的资料卡。"
+        },
+        {
+          "label": "带着资料生成",
+          "text": "把片段与问题一起放入模型本次输入。",
+          "alt": "图书馆虎将问题卡与两张资料卡放进机器人面前的同一托盘。"
+        },
+        {
+          "label": "核对答案依据",
+          "text": "检索可能漏找或找错，引用也要检查。",
+          "alt": "图书馆虎将答案纸与带书签的原始资料并排，圈出不相符的图案。"
+        }
+      ],
+      "scenePrompt": "角色：图书馆虎：蓝马甲、圆眼镜。四格动作依次是：第1格：图书馆虎拿着带退款包裹图标的问题卡，面对整齐书架。 第2格：图书馆虎从书架挑出两张带不同形状书签的资料卡。 第3格：图书馆虎将问题卡与两张资料卡放进机器人面前的同一托盘。 第4格：图书馆虎将答案纸与带书签的原始资料并排，圈出不相符的图案。"
+    },
+    {
+      "file": "rag-advanced.html",
+      "sourceArtifact": "exec-279450dc-bfd2-4798-94c5-05c697805418.png",
+      "slug": "core-rag-tradeoffs",
+      "lessonTitle": "RAG 的代价与优化策略",
+      "role": "仓管虎：橙工装、蓝帽子",
+      "title": "四格看懂：RAG 的代价与优化策略",
+      "takeaway": "从实际问题出发，分别测量检索质量、时延与费用，再优化链路。",
+      "originalHtmlSha256": "9e5dc4b33ee54f0b07e46d3da9f7d148266663ec5a9c4221f38c1b8ef1d12ea9",
+      "panels": [
+        {
+          "label": "看清整个链路",
+          "text": "切块、索引、检索和生成都有维护成本。",
+          "alt": "仓管虎查看由切纸台、卡片柜、筛网和机器人组成的小流水线。"
+        },
+        {
+          "label": "先定位瓶颈",
+          "text": "用测试问题观察漏找、错找和等待发生在哪。",
+          "alt": "仓管虎在筛网旁比较两张不同图案的卡，旁边放着沙漏。"
+        },
+        {
+          "label": "按需要优化",
+          "text": "比较切块、检索、路由与缓存的具体效果。",
+          "alt": "仓管虎调整卡片盒大小与分流挡板，并将匹配的卡放进缓存抽屉。"
+        },
+        {
+          "label": "测完再保留",
+          "text": "优化后重测答案依据、延迟、费用与资料更新。",
+          "alt": "仓管虎把新旧两条流水线结果并排，用硬币、沙漏和资料卡作比较。"
+        }
+      ],
+      "scenePrompt": "角色：仓管虎：橙工装、蓝帽子。四格动作依次是：第1格：仓管虎查看由切纸台、卡片柜、筛网和机器人组成的小流水线。 第2格：仓管虎在筛网旁比较两张不同图案的卡，旁边放着沙漏。 第3格：仓管虎调整卡片盒大小与分流挡板，并将匹配的卡放进缓存抽屉。 第4格：仓管虎把新旧两条流水线结果并排，用硬币、沙漏和资料卡作比较。"
+    },
+    {
+      "file": "1-2-mitigation-temp.html",
+      "sourceArtifact": "exec-73fe57dc-8f60-4f57-80c3-9544199496ca.png",
+      "slug": "core-sampling-controls",
+      "lessonTitle": "应对 3：Temperature & Top-P",
+      "role": "调音虎：紫色工作服、橙耳机",
+      "title": "四格看懂：应对 3：Temperature & Top-P",
+      "takeaway": "采样参数影响输出的随机性与多样性，不能补上缺失的事实。",
+      "originalHtmlSha256": "4903f1063a54d9194f87d29351232d966cd048cc3992fb92ca236f6a036a015f",
+      "panels": [
+        {
+          "label": "看到多个候选",
+          "text": "模型为下一步输出提供不同概率的候选。",
+          "alt": "调音虎面前有高低不同的三个彩色积木柱，机器人正在等待。"
+        },
+        {
+          "label": "调节随机程度",
+          "text": "Temperature 改变候选分布的集中程度。",
+          "alt": "调音虎转动一个无字旋钮，旁边两组积木柱一组陡峭一组平缓。"
+        },
+        {
+          "label": "控制候选范围",
+          "text": "Top-P 限制采样候选集合，实际支持因模型而异。",
+          "alt": "调音虎把透明圆罩移到一部分候选积木外，其余积木留在罩外。"
+        },
+        {
+          "label": "事实仍要核对",
+          "text": "低随机性也可能稳定出错，不能代替资料核验。",
+          "alt": "调音虎发现三张相同输出卡都有同一错配图案，回头查阅参考书。"
+        }
+      ],
+      "scenePrompt": "角色：调音虎：紫色工作服、橙耳机。四格动作依次是：第1格：调音虎面前有高低不同的三个彩色积木柱，机器人正在等待。 第2格：调音虎转动一个无字旋钮，旁边两组积木柱一组陡峭一组平缓。 第3格：调音虎把透明圆罩移到一部分候选积木外，其余积木留在罩外。 第4格：调音虎发现三张相同输出卡都有同一错配图案，回头查阅参考书。"
+    },
+    {
+      "file": "1-2-mitigation-eval.html",
+      "sourceArtifact": "exec-97a17b2c-862a-4fdb-a372-9899e85cfacc.png",
+      "slug": "core-eval-human-review",
+      "lessonTitle": "应对 4：评测 + 人工审核",
+      "role": "质检虎：白色工作服、蓝袖口",
+      "title": "四格看懂：应对 4：评测 + 人工审核",
+      "takeaway": "上线前设测试与门槛，使用中按风险审核，再把错误纳入回归。",
+      "originalHtmlSha256": "1c242a8c9e6a9a163ea5974db34cb2ed1233367f34bf87ae0af7ae78e961d774",
+      "panels": [
+        {
+          "label": "建立测试集",
+          "text": "收集有依据的典型问题与预期结果。",
+          "alt": "质检虎把问题卡和对应参考卡成对放入测试盒。"
+        },
+        {
+          "label": "按标准评测",
+          "text": "区分事实、格式与任务完成情况，记录错误。",
+          "alt": "质检虎对照参考卡检查机器人输出，用铅笔圈出一处错配。"
+        },
+        {
+          "label": "设置人工检查点",
+          "text": "按业务风险决定哪些结果需要人确认。",
+          "alt": "质检虎将重要文件引导到人工审核桌，普通草稿放入另一托盘。"
+        },
+        {
+          "label": "反馈再回归",
+          "text": "把真实错误加入测试集，复测后再更新。",
+          "alt": "质检虎把标出错误的卡加入测试盒，调整后的机器人再次开始测试。"
+        }
+      ],
+      "scenePrompt": "角色：质检虎：白色工作服、蓝袖口。四格动作依次是：第1格：质检虎把问题卡和对应参考卡成对放入测试盒。 第2格：质检虎对照参考卡检查机器人输出，用铅笔圈出一处错配。 第3格：质检虎将重要文件引导到人工审核桌，普通草稿放入另一托盘。 第4格：质检虎把标出错误的卡加入测试盒，调整后的机器人再次开始测试。"
+    },
+    {
+      "file": "summary-1.html",
+      "sourceArtifact": "exec-fda29951-a912-4745-962e-8f283eaf42ce.png",
+      "slug": "core-foundation-recap",
+      "lessonTitle": "汇总（上）· 大模型是什么 + 幻觉",
+      "role": "讲师虎：深蓝西装、黄色领结",
+      "title": "四格看懂：汇总（上）· 大模型是什么 + 幻觉",
+      "takeaway": "把生成机制、上下文与幻觉串起来，解释清楚再动手验证。",
+      "originalHtmlSha256": "d5baf68f7d10a606117c46b0e674bc9ba17fa169970c275edd4c65debaf1c631",
+      "panels": [
+        {
+          "label": "逐步生成",
+          "text": "模型根据已有输入逐词元生成输出。",
+          "alt": "讲师虎将一块彩色积木接到长链末端，旁边还有三个候选积木。"
+        },
+        {
+          "label": "本次看见什么",
+          "text": "上下文有容量限制，消息组织影响回答。",
+          "alt": "讲师虎把资料卡放到有限大小的桌面，桌外还有待选资料。"
+        },
+        {
+          "label": "流畅未必准确",
+          "text": "训练形成的知识与本次资料都可能有缺口。",
+          "alt": "讲师虎举起一张整洁稿纸，稿纸上的图案与参考卡不一致。"
+        },
+        {
+          "label": "用证据检查",
+          "text": "重要事实回查来源，代码与计算实际验证。",
+          "alt": "讲师虎把稿纸、原始书籍和计算器放在一起，边核对边做记录。"
+        }
+      ],
+      "scenePrompt": "角色：讲师虎：深蓝西装、黄色领结。四格动作依次是：第1格：讲师虎将一块彩色积木接到长链末端，旁边还有三个候选积木。 第2格：讲师虎把资料卡放到有限大小的桌面，桌外还有待选资料。 第3格：讲师虎举起一张整洁稿纸，稿纸上的图案与参考卡不一致。 第4格：讲师虎把稿纸、原始书籍和计算器放在一起，边核对边做记录。"
+    },
+    {
+      "file": "summary-1b.html",
+      "sourceArtifact": "exec-fdc3e976-8377-4acc-a253-5b1c015ff21e.png",
+      "slug": "core-mitigation-recap",
+      "lessonTitle": "汇总（下）· 缓解策略 + 决策框架",
+      "role": "园艺虎：绿色围裙、草帽",
+      "title": "四格看懂：汇总（下）· 缓解策略 + 决策框架",
+      "takeaway": "根据错误来源选择提示词、检索、采样与审核，并用评测检验组合效果。",
+      "originalHtmlSha256": "4769c6aaf6f5f4031ab966acdf8ecce48ff76a49f5f8f7783c22743ac5664d92",
+      "panels": [
+        {
+          "label": "先诊断问题",
+          "text": "分清需求不清、资料不足还是输出需要审核。",
+          "alt": "园艺虎检查三盆不同状态的小苗，旁边分别有目标、资料和放大镜图标。"
+        },
+        {
+          "label": "把要求说清楚",
+          "text": "提示词补充目标、格式、边界和示例。",
+          "alt": "园艺虎给机器人看一张种植示意卡和一盆参考苗。"
+        },
+        {
+          "label": "补资料与控制输出",
+          "text": "需要依据时检索资料，多样性问题再考虑采样设置。",
+          "alt": "园艺虎一手放下资料卡，另一手调节无字水阀，机器人在旁观察。"
+        },
+        {
+          "label": "评测与人工把关",
+          "text": "用真实任务评估效果，重要结果保留人工确认。",
+          "alt": "园艺虎与同伴一起检查新苗，对照记录卡圈出仍需改进的一盆。"
+        }
+      ],
+      "scenePrompt": "角色：园艺虎：绿色围裙、草帽。四格动作依次是：第1格：园艺虎检查三盆不同状态的小苗，旁边分别有目标、资料和放大镜图标。 第2格：园艺虎给机器人看一张种植示意卡和一盆参考苗。 第3格：园艺虎一手放下资料卡，另一手调节无字水阀，机器人在旁观察。 第4格：园艺虎与同伴一起检查新苗，对照记录卡圈出仍需改进的一盆。"
+    },
+    {
+      "file": "build-1.html",
+      "sourceArtifact": "exec-475aad45-aa8b-4d6c-b13b-04a8eb1df3c8.png",
+      "slug": "core-first-deliverable",
+      "lessonTitle": "别停在「我懂了」，先把那件事定下来",
+      "role": "产品虎：珊瑚色衬衫、蓝裤子",
+      "title": "四格看懂：别停在「我懂了」，先把那件事定下来",
+      "takeaway": "把一句愿望写成明确输入、输出、验收标准和人工边界。",
+      "originalHtmlSha256": "9a2c3307365dd088707100b34fb3a52cf9dc9cfeb95e52d15082e09ba6e61a95",
+      "panels": [
+        {
+          "label": "挑一项真实任务",
+          "text": "从重复出现、范围较小的工作开始。",
+          "alt": "产品虎从堆满杂物的桌面挑出一个周报资料篮。"
+        },
+        {
+          "label": "写清输入输出",
+          "text": "约定给什么材料、要什么格式的结果。",
+          "alt": "产品虎把散乱便笺放入左托盘，把三张整齐摘要卡放入右托盘。"
+        },
+        {
+          "label": "定下验收标准",
+          "text": "用真实样例检查事实、格式与完整性。",
+          "alt": "产品虎将三份样例与输出卡对照，用直尺和铅笔逐项查看。"
+        },
+        {
+          "label": "划清人机分工",
+          "text": "明确自动完成的部分，以及需要人核实或确认之处。",
+          "alt": "产品虎把整理后的草稿从机器人流水线接到自己的审核桌。"
+        }
+      ],
+      "scenePrompt": "角色：产品虎：珊瑚色衬衫、蓝裤子。四格动作依次是：第1格：产品虎从堆满杂物的桌面挑出一个周报资料篮。 第2格：产品虎把散乱便笺放入左托盘，把三张整齐摘要卡放入右托盘。 第3格：产品虎将三份样例与输出卡对照，用直尺和铅笔逐项查看。 第4格：产品虎把整理后的草稿从机器人流水线接到自己的审核桌。"
+    },
+    {
+      "file": "interview-1.html",
+      "sourceArtifact": "exec-dc1e242b-aec3-4a6e-ad11-288368f87331.png",
+      "slug": "core-explain-foundations",
+      "lessonTitle": "大模型基础 · 30 道灵魂拷问",
+      "role": "面试虎：浅灰西装、绿色领带",
+      "title": "四格看懂：大模型基础 · 30 道灵魂拷问",
+      "takeaway": "先独立解释机制与局限，再用例子和证据支撑自己的判断。",
+      "originalHtmlSha256": "f7a13acd584ed9963b593592084cfcdcd7a69396eb820af59f91c9025e11b9fa",
+      "panels": [
+        {
+          "label": "先自己回答",
+          "text": "先开口表达，别急着看答题框架。",
+          "alt": "面试虎坐在面试桌前思考，参考卡背面朝上扣在桌上。"
+        },
+        {
+          "label": "把机制讲清",
+          "text": "用简单例子说明逐词元生成与消息上下文。",
+          "alt": "面试虎用积木链与消息卡向对面的教师虎解释。"
+        },
+        {
+          "label": "说出边界",
+          "text": "解释幻觉与检索、采样、审核各自能解决什么。",
+          "alt": "面试虎展示一张错配答案卡和资料书、旋钮、放大镜三种工具。"
+        },
+        {
+          "label": "补齐薄弱处",
+          "text": "对照框架找缺口，回到相应课程练习后再复述。",
+          "alt": "面试虎翻书补充笔记，再向教师虎展示修订后的流程卡。"
+        }
+      ],
+      "scenePrompt": "角色：面试虎：浅灰西装、绿色领带。四格动作依次是：第1格：面试虎坐在面试桌前思考，参考卡背面朝上扣在桌上。 第2格：面试虎用积木链与消息卡向对面的教师虎解释。 第3格：面试虎展示一张错配答案卡和资料书、旋钮、放大镜三种工具。 第4格：面试虎翻书补充笔记，再向教师虎展示修订后的流程卡。"
+    }
+  ]
+}

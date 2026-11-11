@@ -119,15 +119,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Prompt 工程</div>
-    <h1>你说什么，它就变什么</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>你说什么，它就变什么</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>你说什么，它就变什么</h1>
     <p class="subtitle">通过 System Prompt 指定角色，同一个模型可以变成完全不同的助手。<strong>角色扮演是最基础也最有效的 Prompt 技巧。</strong>点击下面的角色和格式，观察输出如何变化。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>五种角色实时切换，输出格式控制，System Prompt 核心原理</p></aside><!--seo:end-->  <div class="sec-label">选择角色（切换 System Prompt）</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>五种角色实时切换，输出格式控制，System Prompt 核心原理</p></aside><section class="lesson-comic" data-lesson-comic="6-1.html"><noscript><h2>四格看懂：你说什么，它就变什么</h2><img src="assets/comics/harness-role-and-format.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：你说什么，它就变什么"><ol><li><b>任务先说清</b>：同一问题也需要交代受众、目标与背景。</li><li><b>角色改变表达</b>：角色指令会影响语气、视角和回答重点。</li><li><b>指定交付形式</b>：需要列表、表格或结构化字段时明确说明。</li><li><b>核验真实能力</b>：扮演专家不等于具备资质，输出仍要按任务检查。</li></ol><p>角色设定能调整表达方式；具体任务、边界与格式仍须写清。</p></noscript></section><!--seo:end-->  <div class="sec-label">选择角色（切换 System Prompt）</div>
 
   <div class="role-chips" id="roleChips">
     <button class="role-chip active" onclick="setRole(this,'writer')">资深文案</button>

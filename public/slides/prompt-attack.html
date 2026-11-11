@@ -152,15 +152,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Prompt 安全</div>
-    <h1>Prompt Injection：为什么会被攻击</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Prompt Injection：为什么会被攻击</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Prompt Injection：为什么会被攻击</h1>
     <p class="subtitle">Prompt 注入是大模型应用面临的最严重安全威胁之一。它和 SQL 注入同源：数据和指令混在同一个通道里。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>SQL 注入类比 → Message List 本质 → 缺乏参数化 → 5 大攻击类型概览</p></aside><!--seo:end-->  <div class="sec-label">攻击原理</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>SQL 注入类比 → Message List 本质 → 缺乏参数化 → 5 大攻击类型概览</p></aside><section class="lesson-comic" data-lesson-comic="prompt-attack.html"><noscript><h2>四格看懂：Prompt Injection：为什么会被攻击</h2><img src="assets/comics/harness-untrusted-instructions.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Prompt Injection：为什么会被攻击"><ol><li><b>任务本来很明确</b>：用户授权的是具体任务与有限的工具范围。</li><li><b>资料夹带要求</b>：网页、文件或输入可能混入与任务无关的恶意指令。</li><li><b>识别越界诱导</b>：伪装身份或要求泄露秘密，并不会产生真实授权。</li><li><b>用权限限制后果</b>：结合内容隔离、最小权限与实际校验，持续测试残余风险。</li></ol><p>外部内容可能夹带指令；把不可信资料与授权边界分开处理。</p></noscript></section><!--seo:end-->  <div class="sec-label">攻击原理</div>
 
   <div class="block compare-box reveal" id="b0">
     <div class="compare-title">SQL Injection vs Prompt Injection</div>

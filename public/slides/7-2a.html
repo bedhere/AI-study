@@ -119,14 +119,16 @@
 <!--seo:begin--><meta property="og:description" content="左边：用户看到的界面 ｜ 右边：API 里真正发生的。向下滚动，自动演示一次查天气背后发生了什么。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Agent 工程</div>
-    <h1>一次对话背后的 5 条消息</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>一次对话背后的 5 条消息</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>一次对话背后的 5 条消息</h1>
     <p class="subtitle">左边：用户看到的界面 ｜ 右边：API 里真正发生的。向下滚动，自动演示一次查天气背后发生了什么。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>拆解 Function Calling 真实链路：用户看到 1 条回复，背后是 5 条 API 消息</p></aside><!--seo:end-->  <div class="duo reveal" id="duoDemo">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>拆解 Function Calling 真实链路：用户看到 1 条回复，背后是 5 条 API 消息</p></aside><section class="lesson-comic" data-lesson-comic="7-2a.html"><noscript><h2>四格看懂：一次对话背后的 5 条消息</h2><img src="assets/comics/harness-message-roundtrip.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：一次对话背后的 5 条消息"><ol><li><b>指令和问题</b>：系统说明任务边界，用户提出具体问题。</li><li><b>助手请求工具</b>：模型生成工具调用请求，程序接手执行。</li><li><b>工具送回结果</b>：结果以工具消息返回，保留与请求的对应关系。</li><li><b>助手组织回答</b>：模型结合工具结果，生成给用户看的回复。</li></ol><p>一次工具问答包含多种消息；区分用户可见内容与后台调用记录。</p></noscript></section><!--seo:end-->  <div class="duo reveal" id="duoDemo">
     <!-- 左：用户视角 + 设计决策 -->
     <aside class="chat-panel">
       <div class="l-label">用户看到的界面</div>

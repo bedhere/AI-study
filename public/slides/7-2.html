@@ -98,14 +98,16 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Agent 工程</div>
-    <h1>工具调用的秘密</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>工具调用的秘密</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>工具调用的秘密</h1>
     <p class="subtitle">模型不会真的执行代码，它只是输出一段结构化文字，框架代码负责解析并执行。向下滚动，自动追踪完整调用链路。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>模型输出 JSON → 框架解析执行 → 结果注回，四步流程可视化</p></aside><!--seo:end-->  <div class="fc-layout reveal paywall-locked xa-peek" id="fcDemo">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>模型输出 JSON → 框架解析执行 → 结果注回，四步流程可视化</p></aside><section class="lesson-comic" data-lesson-comic="7-2.html"><noscript><h2>四格看懂：工具调用的秘密</h2><img src="assets/comics/harness-tool-execution.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：工具调用的秘密"><ol><li><b>告知可用工具</b>：提供工具用途、参数与适用范围。</li><li><b>生成调用请求</b>：模型输出工具名称和参数等结构化请求。</li><li><b>由程序执行</b>：程序核验权限与参数，再调用真实工具。</li><li><b>返回实际结果</b>：工具结果加入后续上下文，模型据此继续回答。</li></ol><p>模型提出工具请求，程序校验并执行，再把实际结果交回模型。</p></noscript></section><!--seo:end-->  <div class="fc-layout reveal paywall-locked xa-peek" id="fcDemo">
     <!-- 左：进度步骤条 -->
     <aside class="prog-panel">
       <div class="prog-list" id="progList">

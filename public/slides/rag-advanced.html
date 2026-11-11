@@ -169,15 +169,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">幻觉与应对</div>
-    <h1>RAG 的代价与优化策略</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>RAG 的代价与优化策略</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>RAG 的代价与优化策略</h1>
     <p class="subtitle">每次 RAG 查询都要额外花钱。不优化，成本会随用量快速失控。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>成本分析表 + 关键词触发 / 模型路由 / 语义缓存 / 精准切块四种策略</p></aside><!--seo:end-->  <!-- 成本分析 -->
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>成本分析表 + 关键词触发 / 模型路由 / 语义缓存 / 精准切块四种策略</p></aside><section class="lesson-comic" data-lesson-comic="rag-advanced.html"><noscript><h2>四格看懂：RAG 的代价与优化策略</h2><img src="assets/comics/core-rag-tradeoffs.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：RAG 的代价与优化策略"><ol><li><b>看清整个链路</b>：切块、索引、检索和生成都有维护成本。</li><li><b>先定位瓶颈</b>：用测试问题观察漏找、错找和等待发生在哪。</li><li><b>按需要优化</b>：比较切块、检索、路由与缓存的具体效果。</li><li><b>测完再保留</b>：优化后重测答案依据、延迟、费用与资料更新。</li></ol><p>从实际问题出发，分别测量检索质量、时延与费用，再优化链路。</p></noscript></section><!--seo:end-->  <!-- 成本分析 -->
   <div class="sec-label">额外成本来源</div>
 
   <div class="cost-rows">

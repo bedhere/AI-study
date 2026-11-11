@@ -37,7 +37,7 @@ stories = json.loads(result.stdout)
 assert len({x['file'] for x in lessons}) == len(lessons), 'Duplicate lesson keys'
 assert len({x['slug'] for x in lessons}) == len(lessons), 'Duplicate slugs'
 
-def summary_end(page):
+def summary_end(page, anchor=None):
     """Find the end of either summary format, preserving source bytes outside insertion."""
     class Summary(HTMLParser):
         def __init__(self):
@@ -47,7 +47,9 @@ def summary_end(page):
         def handle_starttag(self, tag, attrs):
             classes = dict(attrs).get('class', '').split()
             if self.end is not None: return
-            if self.tag is None and ('xa-tldr' in classes or 'qa-answer' in classes):
+            matches = tag == 'header' if anchor == 'first-header-end' else (
+                ('xa-tldr' in classes and 'company-example-note' not in classes) or 'qa-answer' in classes)
+            if self.tag is None and matches:
                 self.tag = tag; self.depth = 1
             elif tag == self.tag: self.depth += 1
         def handle_endtag(self, tag):
@@ -56,6 +58,7 @@ def summary_end(page):
             if self.depth == 0:
                 line, col = self.getpos()
                 self.end = page.index('>', self.lines[line - 1] + col) + 1
+    assert anchor in (None, 'first-header-end'), 'Unsupported insertion anchor'
     parser = Summary(); parser.feed(page)
     assert parser.end is not None, 'No supported summary insertion anchor'
     return parser.end
@@ -75,7 +78,7 @@ for story in lessons:
     if original.exists():
         assert original.read_bytes() == source.read_bytes(), 'Refusing to overwrite original'
     page = (slides / story['file']).read_text(encoding='utf-8')
-    summary_end(page)
+    summary_end(page, story.get('insertionAnchor'))
     if story.get('originalHtmlSha256') and story['file'] not in stories:
         assert hashlib.sha256((slides / story['file']).read_bytes()).hexdigest() == story['originalHtmlSha256'], 'Lesson changed since storyboard review: ' + story['file']
     assert story['file'] not in stories or stories[story['file']]['slug'] == story['slug'], 'Refusing to replace an unrelated story'
@@ -121,7 +124,7 @@ for story in lessons:
              f'<img src="assets/comics/{slug}.webp" width="2172" height="724" loading="lazy" '
              f'style="width:100%;height:auto" alt="{html.escape(story["title"])}">'
              f'<ol>{captions}</ol><p>{html.escape(story["takeaway"])}</p></noscript></section>')
-    anchor = summary_end(page)
+    anchor = summary_end(page, story.get('insertionAnchor'))
     page = page[:anchor] + block + page[anchor:]
     if story.get('layoutCss') and 'id="comic-layout-fix"' not in page:
         page = page.replace('</head>', '<style id="comic-layout-fix">' + story['layoutCss'] + '</style>\n</head>', 1)

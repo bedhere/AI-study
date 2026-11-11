@@ -106,14 +106,16 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Agent 工程</div>
-    <h1>脚手架工程：从试验品到产品</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>脚手架工程：从试验品到产品</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>脚手架工程：从试验品到产品</h1>
     <p class="subtitle">左侧模拟同一个「查机票 + 订酒店」任务在有无脚手架时的差距，滚动到演示区自动播放；右侧点击查看 5 大能力详解。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>模拟 Agent 查机票订酒店，无脚手架 vs 有脚手架完整对比，5 大能力详解</p></aside><!--seo:end-->  <div class="demo-grid reveal paywall-locked xa-peek" id="scafDemo">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>模拟 Agent 查机票订酒店，无脚手架 vs 有脚手架完整对比，5 大能力详解</p></aside><section class="lesson-comic" data-lesson-comic="7-4.html"><noscript><h2>四格看懂：脚手架工程：从试验品到产品</h2><img src="assets/comics/harness-production-scaffold.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：脚手架工程：从试验品到产品"><ol><li><b>调用有时限</b>：为工具配置超时与有限重试，防止一直等待。</li><li><b>输入输出要校验</b>：对请求参数与返回结构做程序检查。</li><li><b>状态可追踪恢复</b>：记录检查点，失败时按实际副作用决定补偿或回滚。</li><li><b>过程可观察</b>：用日志与指标定位耗时、错误和成本。</li></ol><p>可用的 Agent 还需要超时重试、校验、状态恢复与可观测性。</p></noscript></section><!--seo:end-->  <div class="demo-grid reveal paywall-locked xa-peek" id="scafDemo">
     <!-- 左栏：交互模拟 -->
     <div class="left-col">
       <div class="mode-row">

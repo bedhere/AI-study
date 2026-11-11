@@ -93,14 +93,16 @@
 <!--seo:begin--><meta property="og:description" content="USB 之前每台设备要专属数据线；MCP 之前每个 Agent 要专属对接代码。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Agent 工程</div>
-    <h1>MCP 协议：工具的 USB 接口</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>MCP 协议：工具的 USB 接口</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>MCP 协议：工具的 USB 接口</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">USB 之前每台设备要专属数据线；MCP 之前每个 Agent 要专属对接代码。</p>
-  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>stdio / SSE / Streamable HTTP 三种传输方式对比，数据流动画</p></aside><!--seo:end-->  <div class="sec-label">Before / After 对比</div>
+  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>stdio / SSE / Streamable HTTP 三种传输方式对比，数据流动画</p></aside><section class="lesson-comic" data-lesson-comic="7-2d.html"><noscript><h2>四格看懂：MCP 协议：工具的 USB 接口</h2><img src="assets/comics/harness-mcp-adapter.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：MCP 协议：工具的 USB 接口"><ol><li><b>专用连线很繁琐</b>：每个应用各接一套工具，维护容易重复。</li><li><b>约定共同接口</b>：客户端与服务端按协议交换能力和请求。</li><li><b>选择连接方式</b>：本地进程或远程服务按实际部署连接。</li><li><b>接入后仍要验证</b>：检查工具说明、认证、授权与失败处理。</li></ol><p>MCP 提供通用的接入方式，兼容性、权限与工具质量仍需检查。</p></noscript></section><!--seo:end-->  <div class="sec-label">Before / After 对比</div>
   <div class="compare" id="compareArea">
     <!-- LEFT: before MCP -->
     <div class="compare-col">
