@@ -257,15 +257,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111batch50" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">基础原理</div>
-    <h1>GPT 的跃进</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>GPT 的跃进</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>GPT 的跃进</h1>
     <p class="subtitle">PreTraining 为什么改变了一切：从 CNN/RNN/BERT 到 GPT，大模型史上最重要的一步。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>CNN / RNN / BERT / GPT 四种算法可交互对比，记忆衰减可视化</p></aside><!--seo:end-->  <div class="sec-label">大模型发展史</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>CNN / RNN / BERT / GPT 四种算法可交互对比，记忆衰减可视化</p></aside><section class="lesson-comic" data-lesson-comic="1-2-gpt.html"><noscript><h2>四格看懂：GPT 的跃进</h2><img src="assets/comics/core-pretraining-transfer.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：GPT 的跃进"><ol><li><b>先学广泛的模式</b>：用大量材料训练模型，学习语言及相关模式。</li><li><b>搭起通用底座</b>：预训练模型可支持多种后续任务，不必每次从零开始。</li><li><b>再做任务适配</b>：根据任务使用提示词、训练或其他工程方法。</li><li><b>迁移后还要验收</b>：数据、模型与适配方式影响效果，不能把预训练当万能保证。</li></ol><p>预训练帮助获得可迁移能力，任务适配仍有条件，不能承诺任意任务都做好。</p></noscript></section><!--seo:end-->  <div class="sec-label">大模型发展史</div>
 
   <div class="big-claim">
     在 GPT 之前，大家都在做<span class="em-amber">任务专用模型</span>。<br>

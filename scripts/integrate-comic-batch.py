@@ -6,6 +6,7 @@ The source plan records every final artifact, script, role and generation prompt
 import argparse
 import hashlib
 import html
+from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
@@ -22,7 +23,8 @@ plan = json.loads((ROOT / args.plan).read_text(encoding='utf-8'))
 lessons = plan['lessons']
 slides = ROOT / 'public/slides'
 target = slides / 'assets/comics'
-originals = ROOT / 'outputs/comic-originals' / plan['date'].replace('-', '')
+originals = ROOT / 'outputs/comic-originals' / plan.get('batchId', plan['date'].replace('-', ''))
+version = plan.get('cacheVersion', '20261111batch1')
 manifest_path = target / 'manifest.json'
 manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
 data_path = slides / 'comic-data.js'
@@ -35,9 +37,32 @@ stories = json.loads(result.stdout)
 assert len({x['file'] for x in lessons}) == len(lessons), 'Duplicate lesson keys'
 assert len({x['slug'] for x in lessons}) == len(lessons), 'Duplicate slugs'
 
+def summary_end(page):
+    """Find the end of either summary format, preserving source bytes outside insertion."""
+    class Summary(HTMLParser):
+        def __init__(self):
+            super().__init__(); self.tag = None; self.depth = 0; self.end = None
+            self.lines = [0]
+            self.lines.extend(m.end() for m in re.finditer('\n', page))
+        def handle_starttag(self, tag, attrs):
+            classes = dict(attrs).get('class', '').split()
+            if self.end is not None: return
+            if self.tag is None and ('xa-tldr' in classes or 'qa-answer' in classes):
+                self.tag = tag; self.depth = 1
+            elif tag == self.tag: self.depth += 1
+        def handle_endtag(self, tag):
+            if tag != self.tag or self.end is not None: return
+            self.depth -= 1
+            if self.depth == 0:
+                line, col = self.getpos()
+                self.end = page.index('>', self.lines[line - 1] + col) + 1
+    parser = Summary(); parser.feed(page)
+    assert parser.end is not None, 'No supported summary insertion anchor'
+    return parser.end
+
 # Check all inputs before making changes. Never import the historical slides tree.
 for story in lessons:
-    assert re.fullmatch(r'learn-\d+\.html', story['file'])
+    assert re.fullmatch(r'[a-zA-Z0-9][a-zA-Z0-9-]*\.html', story['file'])
     assert re.fullmatch(r'[a-z-]+', story['slug'])
     assert len(story['panels']) == 4
     for panel in story['panels']:
@@ -50,7 +75,10 @@ for story in lessons:
     if original.exists():
         assert original.read_bytes() == source.read_bytes(), 'Refusing to overwrite original'
     page = (slides / story['file']).read_text(encoding='utf-8')
-    assert page.count('</aside><!--seo:end-->') == 1, story['file']
+    summary_end(page)
+    if story.get('originalHtmlSha256') and story['file'] not in stories:
+        assert hashlib.sha256((slides / story['file']).read_bytes()).hexdigest() == story['originalHtmlSha256'], 'Lesson changed since storyboard review: ' + story['file']
+    assert story['file'] not in stories or stories[story['file']]['slug'] == story['slug'], 'Refusing to replace an unrelated story'
 
 originals.mkdir(parents=True, exist_ok=True)
 for story in lessons:
@@ -73,7 +101,7 @@ for story in lessons:
         'width': 2172, 'height': 724, 'panelCount': 4,
         'panelBytes': sum((target / f'{slug}-{i}.webp').stat().st_size for i in range(1, 5)),
         'fullBytes': (target / (slug + '.webp')).stat().st_size,
-        'textMode': 'HTML captions; no embedded text', 'batch': plan['date']
+        'textMode': 'HTML captions; no embedded text', 'batch': plan.get('batchId', plan['date'])
     }
     assert record['panelBytes'] < 250 * 1024, f'{slug}: over asset budget'
     manifest['assets'] = [x for x in manifest['assets'] if x['slug'] != slug] + [record]
@@ -83,7 +111,7 @@ for story in lessons:
     page = re.sub(r'<div class="academy-cover"[^>]*>[\s\S]*?</svg></div>', '', page, count=1)
     if 'lesson-comic.css' not in page:
         page = page.replace('</head>', '<link rel="stylesheet" href="lesson-comic.css?v=20261110a">\n'
-            '<script src="comic-data.js?v=20261111batch1" defer></script>'
+            f'<script src="comic-data.js?v={version}" defer></script>'
             '<script src="lesson-comic.js?v=20261110a" defer></script>\n</head>', 1)
     page = re.sub(r'<section class="lesson-comic" data-lesson-comic="[^"]+">[\s\S]*?</section>', '', page)
     captions = ''.join('<li><b>' + html.escape(p['label']) + '</b>：' + html.escape(p['text']) + '</li>'
@@ -93,16 +121,19 @@ for story in lessons:
              f'<img src="assets/comics/{slug}.webp" width="2172" height="724" loading="lazy" '
              f'style="width:100%;height:auto" alt="{html.escape(story["title"])}">'
              f'<ol>{captions}</ol><p>{html.escape(story["takeaway"])}</p></noscript></section>')
-    page = page.replace('</aside><!--seo:end-->', '</aside><!--seo:end-->' + block, 1)
+    anchor = summary_end(page)
+    page = page[:anchor] + block + page[anchor:]
+    if story.get('layoutCss') and 'id="comic-layout-fix"' not in page:
+        page = page.replace('</head>', '<style id="comic-layout-fix">' + story['layoutCss'] + '</style>\n</head>', 1)
     page_path.write_text(page, encoding='utf-8')
 
 # Update the shared data URL on both retained samples too, keeping old story data intact.
 for file in stories:
     page_path = slides / file
     page = page_path.read_text(encoding='utf-8')
-    page = re.sub(r'comic-data\.js\?v=[^"\s]+', 'comic-data.js?v=20261111batch1', page)
+    page = re.sub(r'comic-data\.js\?v=[^"\s]+', 'comic-data.js?v=' + version, page)
     page_path.write_text(page, encoding='utf-8')
-data_path.write_text('/* Story keys are lesson filenames. Scripts and art provenance: docs/comic-rollout-20261111.json. */\n'
+data_path.write_text('/* Story keys are lesson filenames. Scripts and art provenance: docs/comic-*.json. */\n'
                     + 'window.AcademyComics=' + json.dumps(stories, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
 manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print(json.dumps({'added': len(lessons), 'totalStories': len(stories), 'newPanels': len(lessons) * 4,

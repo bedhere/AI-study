@@ -169,15 +169,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111batch50" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">基础原理</div>
-    <h1>Base 模型：Token 推 Token 机器</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Base 模型：Token 推 Token 机器</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Base 模型：Token 推 Token 机器</h1>
     <p class="subtitle">训练结束后得到的原始模型，它只做一件事。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>训练结束后得到什么？逐步生成 + 概率分布实时更新</p></aside><!--seo:end-->  <div class="sec-label">训练结束后</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>训练结束后得到什么？逐步生成 + 概率分布实时更新</p></aside><section class="lesson-comic" data-lesson-comic="1-2-base.html"><noscript><h2>四格看懂：Base 模型：Token 推 Token 机器</h2><img src="assets/comics/core-base-loop.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Base 模型：Token 推 Token 机器"><ol><li><b>先给一段前文</b>：Base 模型接收序列，再估计后续词元的分布。</li><li><b>从分布中选下一块</b>：采样或解码策略决定怎么选择，不一定永远取最高概率。</li><li><b>追加以后再继续</b>：把新词元加入序列，重复生成，直到停止条件。</li><li><b>别默认它就是助手</b>：擅长续写的基础模型，还需要合适的对话格式与训练来适配助手任务。</li></ol><p>自回归语言模型逐词元生成；采样不一定总选概率最高项，基础模型也不等于助手。</p></noscript></section><!--seo:end-->  <div class="sec-label">训练结束后</div>
 
   <div class="big-claim">
     得到的就是一个

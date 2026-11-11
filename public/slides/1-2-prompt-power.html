@@ -199,15 +199,17 @@ input[type=range] { width: 100%; accent-color: var(--accent); cursor: pointer; h
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111batch50" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">从补全到对话</div>
-    <h1>为什么用提示词就够了？答案在上下文窗口</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>为什么用提示词就够了？答案在上下文窗口</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>为什么用提示词就够了？答案在上下文窗口</h1>
     <p class="subtitle">PreTraining 之后：不用重新训练，把任务描述喂进去就行。但为什么？</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>提示词为什么够用？Token 截断可视化，无需重新训练</p></aside><!--seo:end-->  <div class="sec-label">推理链：一步步想清楚</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>提示词为什么够用？Token 截断可视化，无需重新训练</p></aside><section class="lesson-comic" data-lesson-comic="1-2-prompt-power.html"><noscript><h2>四格看懂：为什么用提示词就够了？答案在上下文窗口</h2><img src="assets/comics/core-prompt-context.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：为什么用提示词就够了？答案在上下文窗口"><ol><li><b>先给任务说明</b>：把规则、材料和期望格式放进当前上下文。</li><li><b>样例帮助对齐</b>：提供少量相关示例，帮助说明你想要的风格和结构。</li><li><b>留意上下文预算</b>：关键规则要保留，减少无关内容，确认材料没有被遗漏。</li><li><b>仍按结果判断</b>：提示词并不更新参数，也不保证等同微调；输出仍需核对。</li></ol><p>提示词提供当前任务信息，不等同训练；更大窗口也不自动保证可靠理解。</p></noscript></section><!--seo:end-->  <div class="sec-label">推理链：一步步想清楚</div>
 
   <!-- 推理链（进入视野自动逐步播放） -->
   <div class="logic-chain" id="logicChain">

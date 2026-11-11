@@ -423,6 +423,9 @@ canvas#heatmap {
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111batch50" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
+<style id="comic-layout-fix">.slide-container>.header{flex-wrap:wrap}.header>.lesson-header{order:0;flex:1 1 280px}.header>.controls{order:1}.header>.xa-tldr{order:2;flex:0 0 100%;width:100%;margin:0}.header>.lesson-comic{order:3;flex:0 0 100%;width:100%;min-width:0}@media(max-width:768px){.header>.lesson-header,.header>.xa-tldr,.header>.lesson-comic{flex:0 0 auto}}</style>
 </head>
 <body>
 
@@ -430,9 +433,9 @@ canvas#heatmap {
   <div class="header">
     <header class="lesson-header" style="margin-bottom:0">
       <div class="kicker">基础原理</div>
-      <h1 id="stage-title">词表与训练</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>词表与训练</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+      <h1 id="stage-title">词表与训练</h1>
       <p class="subtitle" id="stage-desc">大模型学习的第一步：读取人类提供的海量文本数据。</p>
-    </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从语料到词间矩阵，Token 化 + 注意力权重交互演示</p></aside><!--seo:end-->    <div class="controls">
+    </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从语料到词间矩阵，Token 化 + 注意力权重交互演示</p></aside><section class="lesson-comic" data-lesson-comic="1-2-vocab.html"><noscript><h2>四格看懂：词表与训练</h2><img src="assets/comics/core-vocabulary.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：词表与训练"><ol><li><b>从文本切词元</b>：分词器把文字转换成词元序列，具体切法取决于词表和规则。</li><li><b>对照词表编码</b>：词元会对应编号等内部表示，不等于按中文词语逐字切。</li><li><b>结合上下文关联</b>：模型计算序列中的关系；页面矩阵只是帮助理解的示意。</li><li><b>再看下一步候选</b>：前文影响候选分布，重新采样可能产生不同后续。</li></ol><p>词表、分词和上下文关系是不同层次，示意图不等于真实模型全部运算。</p></noscript></section><!--seo:end-->    <div class="controls">
       <div class="stage-hint" id="stage-hint">本页演示 · 第 1/4 步</div>
       <button id="next-btn" onclick="nextStage()">▶ 播放下一步：文本分词</button>
     </div>

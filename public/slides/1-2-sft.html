@@ -156,15 +156,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111batch50" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">从补全到对话</div>
-    <h1>Chat Template + SFT：大模型终于学会「说话」</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Chat Template + SFT：大模型终于学会「说话」</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Chat Template + SFT：大模型终于学会「说话」</h1>
     <p class="subtitle">从补全机器到对话助手，差的就是这套训练范式。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Jinja 格式、指令微调，大模型终于学会说话</p></aside><!--seo:end-->  <div class="big-claim">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Jinja 格式、指令微调，大模型终于学会说话</p></aside><section class="lesson-comic" data-lesson-comic="1-2-sft.html"><noscript><h2>四格看懂：Chat Template + SFT：大模型终于学会「说话」</h2><img src="assets/comics/core-chat-sft.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Chat Template + SFT：大模型终于学会「说话」"><ol><li><b>先统一消息格式</b>：用与模型匹配的模板区分角色、内容和边界。</li><li><b>再准备合适示例</b>：训练样例包含问题和期望回答，质量与任务覆盖都重要。</li><li><b>通过训练适配助手</b>：监督微调利用样例调整参数，使输出更符合目标行为。</li><li><b>会聊天仍需核验</b>：回答形式更合适，不代表每个事实都经过验证。</li></ol><p>模板规定消息如何表示，SFT 用样例更新参数；两者都不保证事实正确。</p></noscript></section><!--seo:end-->  <div class="big-claim">
     OpenAI 约定好一套格式，然后<span class="em">专门针对这套格式</span>再训练模型，<span class="em-g">大模型就真的会说话了</span>
   </div>
 

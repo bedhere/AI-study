@@ -117,20 +117,22 @@
 <!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Token 是什么？为什么 AI 按它收费？","acceptedAnswer":{"@type":"Answer","text":"Token 是 AI 读写文字的最小单位，大约是一小块词。AI 每读一颗、每写一颗都要消耗算力，所以按颗收费，逻辑和出租车按里程计价一样：跑多远，付多少。"}}]}</script><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111batch50" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">零基础入门 · 小白三千问</div>
-    <h1>Token 是什么？为什么 AI 按它收费？</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Token 是什么？为什么 AI 按它收费？</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Token 是什么？为什么 AI 按它收费？</h1>
     <p class="subtitle">账单上写着「按 Token 计费」，新闻里动不动「百万 Token」，这颗「Token」到底是个什么东西？这一页带你亲手把一句话切开看看。</p>
   </header>
 
   <div class="qa-answer">
     <div class="qa-tag">一句话回答</div>
     <p>Token 是 <b>AI 读写文字的最小单位</b>，大约是一小块词。AI 每读一颗、每写一颗都要消耗算力，所以按颗收费，<b>逻辑和出租车按里程计价一样</b>：跑多远，付多少。</p>
-  </div>
+  </div><section class="lesson-comic" data-lesson-comic="zero-q-token.html"><noscript><h2>四格看懂：Token 是什么？为什么 AI 按它收费？</h2><img src="assets/comics/intro-token-meter.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Token 是什么？为什么 AI 按它收费？"><ol><li><b>先把文字切成块</b>：模型处理文字时会用词元，切法不总符合人的词语直觉。</li><li><b>字数不等于块数</b>：中文、英文、数字和符号的切分，会因分词器而不同。</li><li><b>输入输出都留意</b>：API 常按输入、输出等用量计费，具体费率不一定相同。</li><li><b>按真实用量估算</b>：用对应模型的工具测量，并查看缓存等计费规则。</li></ol><p>Token 不是字数；切分和收费规则要按具体模型核对。</p></noscript></section>
 
   <div class="sec-label">亲手切一句话</div>
 

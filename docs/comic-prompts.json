@@ -1,6 +1,7 @@
 {
   "generator": "built-in image_gen",
   "additionalBatch": "comic-rollout-20261111.json",
+  "expansionBatch": "comic-expansion-50-20261111.json",
   "referenceImages": [
     "素材库/tiger-teacher-pointer.webp",
     "素材库/tiger-thinking-seated.webp"

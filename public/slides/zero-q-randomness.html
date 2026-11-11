@@ -162,20 +162,22 @@
 <!--seo:begin--><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"同一个问题，为什么每次答案不一样？","acceptedAnswer":{"@type":"Answer","text":"因为 AI 生成每个字的时候都在掷骰子：从几个高概率的候选词里挑一个。这是有意的设计，让回答自然不死板。需要稳定输出的场合，可以把随机性调低。"}}]}</script><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111batch50" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">零基础入门 · 小白三千问</div>
-    <h1>同一个问题，为什么每次答案不一样？</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>同一个问题，为什么每次答案不一样？</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>同一个问题，为什么每次答案不一样？</h1>
     <p class="subtitle">昨天问它给奶茶店起名，回了三个文艺范；今天原封不动再问一遍，画风全变。它是记性差，还是在敷衍你？都没有。点几下按钮，你就能亲眼看到<b>它的每个字是怎么来的</b>。</p>
   </header>
 
   <div class="qa-answer">
     <div class="qa-tag">一句话回答</div>
     <p>因为 AI 生成每个字的时候都在<b>掷骰子</b>：从几个高概率的候选词里挑一个。这是<b>有意的设计</b>，让回答自然不死板。需要稳定输出的场合，可以把随机性调低。</p>
-  </div>
+  </div><section class="lesson-comic" data-lesson-comic="zero-q-randomness.html"><noscript><h2>四格看懂：同一个问题，为什么每次答案不一样？</h2><img src="assets/comics/intro-weighted-sampling.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：同一个问题，为什么每次答案不一样？"><ol><li><b>同题可能不同答</b>：同一个起名问题，多次生成可能走向不同结果。</li><li><b>候选带着不同权重</b>：模型对候选词元给出分布，采样方法影响如何挑选。</li><li><b>按任务调整设置</b>：创意可比较多个版本；稳定任务则控制设置并配合格式校验。</li><li><b>一致也可能一起错</b>：温度低不保证事实正确，重要结论仍要核对来源。</li></ol><p>生成差异可能来自采样和系统变化；低温和重复一致都不是正确性保证。</p></noscript></section>
 
   <div class="sec-label">先做个实验 · 同一个问题连问三次</div>
 

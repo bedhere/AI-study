@@ -1,0 +1,45 @@
+{
+  "newStories": 50,
+  "newPanelsDecoded": 200,
+  "originalSha256Matched": 50,
+  "originalLessonsPreserved": 50,
+  "uniqueLessonKeys": 62,
+  "totalComicStories": 62,
+  "panelKiBRange": [
+    112.0,
+    199.3
+  ],
+  "panelBytesTotal": 7273664,
+  "visualReview": {
+    "reviewedStories": 50,
+    "reviewedPanels": 200,
+    "targetedRegenerations": 1,
+    "textMode": "No embedded language; captions and alternative text in HTML",
+    "result": "All four-panel originals reviewed for story alignment, anatomy and quarter boundaries; corrected unverified checkmark and floating magnifier in core-dialogue-frame."
+  },
+  "retainedStoryDataUnchanged": 12,
+  "regressionTestsPassed": 99,
+  "missingLocalResources": 0,
+  "scriptErrors": 0,
+  "productionBuild": "passed before local static vocabulary CSS adjustment; no additional JS changes",
+  "focusedComicTestsPassedAfterLayoutFix": 4,
+  "browser": {
+    "desktopQaColumns": 4,
+    "mobileQaViewport": [
+      390,
+      844
+    ],
+    "mobileQaColumns": 2,
+    "mobileQaHorizontalOverflow": false,
+    "readerVocabularyDesktopGridWidth": 880,
+    "readerVocabularyColumns": 4,
+    "readerVocabularyMobileColumns": 2,
+    "readerVocabularyHeaderOverflow": false,
+    "readerVocabularyImagesLoaded": 4,
+    "originalVocabularyDemoAdvancedTo": "2/4",
+    "keyboardSelectedPanel": 2,
+    "pauseAriaPressed": "false",
+    "consoleWarningsOrErrors": []
+  },
+  "localLayoutFix": "1-2-vocab.html header flex wrapping and ordering; scoped CSS only"
+}
