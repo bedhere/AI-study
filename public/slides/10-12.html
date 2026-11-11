@@ -74,15 +74,17 @@
 <!--seo:begin--><meta property="og:title" content="Initializer + Coding Agent"><meta property="og:description" content="核心思路：把一个 Agent 拆成两个角色，一个负责规划，一个负责执行。每次交接都留下干净的状态。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">长运行 Agent</div>
-    <h1>Initializer + Coding Agent</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Initializer + Coding Agent</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Initializer + Coding Agent</h1>
     <p class="subtitle">核心思路：把一个 Agent 拆成两个角色，一个负责规划，一个负责执行。每次交接都留下干净的状态。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>初始化 Agent 搭环境、编码 Agent 增量推进，双角色 Harness 设计</p></aside><!--seo:end-->  <div class="sec-label">双角色解决方案</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>初始化 Agent 搭环境、编码 Agent 增量推进，双角色 Harness 设计</p></aside><section class="lesson-comic" data-lesson-comic="10-12.html"><noscript><h2>四格看懂：Initializer + Coding Agent</h2><img src="assets/comics/engineering-initialize-and-build.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Initializer + Coding Agent"><ol><li><b>初始化搭好底座</b>：建立环境、功能清单、启动方法与初始状态。</li><li><b>开工前读交接</b>：后续轮次先了解进度、约束和当前可运行状态。</li><li><b>增量实现并验证</b>：选择合适范围推进，用实际运行结果判断是否完成。</li><li><b>收工保持清楚</b>：更新记录，留下可接续成果和明确的下一步。</li></ol><p>初始化建立基础，后续轮次按清单增量交付。</p></noscript></section><!--seo:end-->  <div class="sec-label">双角色解决方案</div>
 
   <div class="arch-diagram reveal">
     <div class="arch-title">两个 Agent，明确分工</div>

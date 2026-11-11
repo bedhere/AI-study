@@ -1,0 +1,521 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners.",
+  "generator": "built-in image_gen",
+  "date": "2026-11-11",
+  "batchId": "20261111-complete-engineering-a",
+  "cacheVersion": "20261111complete",
+  "status": "accepted; 15 integrated stories, total 193",
+  "lessons": [
+    {
+      "file": "10-1.html",
+      "slug": "engineering-workflow-or-agent",
+      "lessonTitle": "Workflow vs Agent：先搞清楚你要什么",
+      "role": "架构虎：蓝西装、青绿领带",
+      "title": "四格看懂：Workflow vs Agent：先搞清楚你要什么",
+      "takeaway": "先用能满足目标的简单方案，再增加动态决策。",
+      "originalHtmlSha256": "fefe2890e66be5c761aa44596619b905170461553a8f281cc0c330cb96acf0e1",
+      "panels": [
+        {
+          "label": "先定义任务",
+          "text": "明确输入、输出和验收条件，再选实现方式。",
+          "alt": "架构虎在桌上摆出输入包裹、目标图和勾选清单。"
+        },
+        {
+          "label": "固定路径用工作流",
+          "text": "步骤可预先确定时，用代码编排处理顺序。",
+          "alt": "架构虎让包裹沿固定轨道经过三个工作站。"
+        },
+        {
+          "label": "动态路径用 Agent",
+          "text": "需要根据现场信息决定下一步时，再引入模型决策。",
+          "alt": "架构虎与机器人在岔路口根据新到的观察卡选择路线。"
+        },
+        {
+          "label": "用证据决定复杂度",
+          "text": "比较效果、耗时、成本和维护负担，选择足够有效的方案。",
+          "alt": "架构虎把简单轨道和复杂轨道的结果、沙漏与硬币放上比较台。"
+        }
+      ],
+      "scenePrompt": "角色：架构虎：蓝西装、青绿领带。四格动作依次是：第1格：架构虎在桌上摆出输入包裹、目标图和勾选清单。 第2格：架构虎让包裹沿固定轨道经过三个工作站。 第3格：架构虎与机器人在岔路口根据新到的观察卡选择路线。 第4格：架构虎把简单轨道和复杂轨道的结果、沙漏与硬币放上比较台。",
+      "sourceArtifact": "exec-10674627-0df3-4de4-91d2-e00fb6eb50bb.png"
+    },
+    {
+      "file": "10-2.html",
+      "slug": "engineering-five-workflows",
+      "lessonTitle": "五种 Workflow 模式",
+      "role": "调度虎：青绿制服、橙帽",
+      "title": "四格看懂：五种 Workflow 模式",
+      "takeaway": "五种工作流分别组织顺序、分流、并行、动态拆分与反馈迭代。",
+      "originalHtmlSha256": "c1f5b1e9ce1636c8516243a499737d0a264cdb54578c8007a6e27c506cb96f2e",
+      "panels": [
+        {
+          "label": "顺序串联与分类分流",
+          "text": "提示链逐步传递结果；路由把不同输入交给合适分支。",
+          "alt": "调度虎展示一条串联轨道和一处分色岔路，包裹按图标流动。"
+        },
+        {
+          "label": "独立任务并行",
+          "text": "把互不依赖的任务同时处理，再检查并汇总结果。",
+          "alt": "调度虎将三个独立包裹送上并行轨道，末端汇入一个托盘。"
+        },
+        {
+          "label": "按任务动态拆分",
+          "text": "编排者根据当前需求决定子任务，再整合各自输出。",
+          "alt": "调度虎读一张建筑图，把不同形状模块交给几位工装虎。"
+        },
+        {
+          "label": "评估后迭代",
+          "text": "生成结果，按明确标准评价，再修改并设置停止条件。",
+          "alt": "调度虎沿环形桌将作品、检查卡和修订稿依次传递，出口有停止挡板。"
+        }
+      ],
+      "scenePrompt": "角色：调度虎：青绿制服、橙帽。四格动作依次是：第1格：调度虎展示一条串联轨道和一处分色岔路，包裹按图标流动。 第2格：调度虎将三个独立包裹送上并行轨道，末端汇入一个托盘。 第3格：调度虎读一张建筑图，把不同形状模块交给几位工装虎。 第4格：调度虎沿环形桌将作品、检查卡和修订稿依次传递，出口有停止挡板。",
+      "sourceArtifact": "exec-aae9501d-6398-4e31-8908-ea1180fa5646.png"
+    },
+    {
+      "file": "10-3.html",
+      "slug": "engineering-context-whole-input",
+      "lessonTitle": "从 Prompt 工程到上下文工程",
+      "role": "编辑虎：紫马甲、圆眼镜",
+      "title": "四格看懂：从 Prompt 工程到上下文工程",
+      "takeaway": "上下文工程管理每轮输入的整体信息。",
+      "originalHtmlSha256": "31db1edd17606df43360d3b2ba6768c15de1f54ddbaa6ae4699fd46d5f4bfb48",
+      "panels": [
+        {
+          "label": "不只是一句提示",
+          "text": "系统规则、工具定义、历史和外部资料都会进入输入。",
+          "alt": "编辑虎把规则盾牌卡、扳手卡、对话卡和书页摆进同一浅盘。"
+        },
+        {
+          "label": "筛选相关内容",
+          "text": "围绕当前任务取用高信号信息，避免无关材料挤占空间。",
+          "alt": "编辑虎从拥挤资料堆挑出与目标拼图匹配的几张卡。"
+        },
+        {
+          "label": "保持规则清楚",
+          "text": "核心指令、工具职责与典型示例要清晰可辨。",
+          "alt": "编辑虎将盾牌卡放在前方，把工具卡和示例卡整齐分区。"
+        },
+        {
+          "label": "每轮维护输入",
+          "text": "任务变化后更新状态，按需补资料并验证效果。",
+          "alt": "编辑虎从资料柜取出新书页，替换托盘里过时的一页，机器人查看。"
+        }
+      ],
+      "scenePrompt": "角色：编辑虎：紫马甲、圆眼镜。四格动作依次是：第1格：编辑虎把规则盾牌卡、扳手卡、对话卡和书页摆进同一浅盘。 第2格：编辑虎从拥挤资料堆挑出与目标拼图匹配的几张卡。 第3格：编辑虎将盾牌卡放在前方，把工具卡和示例卡整齐分区。 第4格：编辑虎从资料柜取出新书页，替换托盘里过时的一页，机器人查看。",
+      "sourceArtifact": "exec-3ebff3ee-b2b6-442d-b578-90934a586711.png"
+    },
+    {
+      "file": "10-4.html",
+      "slug": "engineering-context-three-methods",
+      "lessonTitle": "上下文的三板斧",
+      "role": "笔记虎：蓝衬衫、橙背带",
+      "title": "四格看懂：上下文的三板斧",
+      "takeaway": "压缩、笔记和独立上下文分别减少冗余、延续状态和隔离探索。",
+      "originalHtmlSha256": "e157f32007426b4f9363bf5a743ae7f8c16492324ec5e504e8c0545ccc68c474",
+      "panels": [
+        {
+          "label": "压缩保留关键点",
+          "text": "摘要保留目标、约束、决策与未解决问题。",
+          "alt": "笔记虎将长卷资料收束成带目标、盾牌和问号图标的短卡。"
+        },
+        {
+          "label": "笔记跨窗口延续",
+          "text": "把进度与证据写入结构化记录，需要时重新读取。",
+          "alt": "笔记虎把勾选进度卡存进文件夹，又从新桌面打开它。"
+        },
+        {
+          "label": "独立探索再汇总",
+          "text": "子任务在各自上下文中工作，回传结论和证据。",
+          "alt": "笔记虎从两位同伴虎的独立工作台接收短报告和附件。"
+        },
+        {
+          "label": "混合取用信息",
+          "text": "常用约定提前载入，长尾资料按需检索。",
+          "alt": "笔记虎把小规则卡放在手边，从远处资料柜取一份指定档案。"
+        }
+      ],
+      "scenePrompt": "角色：笔记虎：蓝衬衫、橙背带。四格动作依次是：第1格：笔记虎将长卷资料收束成带目标、盾牌和问号图标的短卡。 第2格：笔记虎把勾选进度卡存进文件夹，又从新桌面打开它。 第3格：笔记虎从两位同伴虎的独立工作台接收短报告和附件。 第4格：笔记虎把小规则卡放在手边，从远处资料柜取一份指定档案。",
+      "sourceArtifact": "exec-b2cda7f3-b4cb-43f6-bdc4-52f9e045ed5f.png"
+    },
+    {
+      "file": "10-5.html",
+      "slug": "engineering-tool-contract",
+      "lessonTitle": "ACI：Agent-Computer Interface",
+      "role": "接口虎：青绿工装、橙护目镜",
+      "title": "四格看懂：ACI：Agent-Computer Interface",
+      "takeaway": "把工具定义当成模型使用的界面和契约。",
+      "originalHtmlSha256": "2dfa6096f1c128bb0faa2aee702450f4edd6c620bfc33340a4e4284048aed4c8",
+      "panels": [
+        {
+          "label": "名称说明用途",
+          "text": "工具职责清楚，减少功能重叠和模糊命名。",
+          "alt": "接口虎对比一堆相似灰色工具盒与三个图标清晰的分区盒。"
+        },
+        {
+          "label": "参数明确可填",
+          "text": "说明输入类型、范围、必填项与实际作用。",
+          "alt": "接口虎把形状匹配的参数积木放进工具面板对应插槽。"
+        },
+        {
+          "label": "结果便于理解",
+          "text": "返回有意义的字段、来源和可处理的错误。",
+          "alt": "接口虎向机器人展示结果卡、来源书签和一张异常提示卡。"
+        },
+        {
+          "label": "用任务验证接口",
+          "text": "测试选工具、填参数、读结果及失败后的行为。",
+          "alt": "接口虎拿检查板沿请求、工具、结果三个站逐一核对。"
+        }
+      ],
+      "scenePrompt": "角色：接口虎：青绿工装、橙护目镜。四格动作依次是：第1格：接口虎对比一堆相似灰色工具盒与三个图标清晰的分区盒。 第2格：接口虎把形状匹配的参数积木放进工具面板对应插槽。 第3格：接口虎向机器人展示结果卡、来源书签和一张异常提示卡。 第4格：接口虎拿检查板沿请求、工具、结果三个站逐一核对。",
+      "sourceArtifact": "exec-b7a5635b-8334-49ff-8d13-1fb7e59b6727.png"
+    },
+    {
+      "file": "vector-db-5.html",
+      "slug": "engineering-knowledge-tool",
+      "lessonTitle": "Milvus 作为 Agent 知识库工具",
+      "role": "资料虎：蓝马甲、青绿袖套",
+      "title": "四格看懂：Milvus 作为 Agent 知识库工具",
+      "takeaway": "知识库工具提供可核查的检索材料，再由 Agent 组织回答。",
+      "originalHtmlSha256": "7d509ae41ead28113fab3c179220a2d4d0cc7cdd44c87bf560c297c8d02ac9c5",
+      "panels": [
+        {
+          "label": "判断是否需要资料",
+          "text": "问题需要企业知识时，才调用知识库检索。",
+          "alt": "资料虎将公司文件问题卡引向档案柜，普通闲聊卡留在对话桌。"
+        },
+        {
+          "label": "查询先守边界",
+          "text": "查询、权限过滤和检索范围共同决定可返回的材料。",
+          "alt": "资料虎用钥匙卡开启档案柜中的一个授权抽屉，其他抽屉锁着。"
+        },
+        {
+          "label": "返回片段与来源",
+          "text": "工具返回匹配片段及来源信息，相关度并不保证答案正确。",
+          "alt": "资料虎把带书签的片段与相关度刻度放在结果托盘，机器人核对原书。"
+        },
+        {
+          "label": "测试调用与不调用",
+          "text": "检查需要检索、不需检索和无结果等情况。",
+          "alt": "资料虎将检索成功卡、直接对话卡和空托盘卡放入三个测试格。"
+        }
+      ],
+      "scenePrompt": "角色：资料虎：蓝马甲、青绿袖套。四格动作依次是：第1格：资料虎将公司文件问题卡引向档案柜，普通闲聊卡留在对话桌。 第2格：资料虎用钥匙卡开启档案柜中的一个授权抽屉，其他抽屉锁着。 第3格：资料虎把带书签的片段与相关度刻度放在结果托盘，机器人核对原书。 第4格：资料虎将检索成功卡、直接对话卡和空托盘卡放入三个测试格。",
+      "sourceArtifact": "exec-3e0c7f03-3964-4c37-8c89-c3e832a36d45.png"
+    },
+    {
+      "file": "10-6.html",
+      "slug": "engineering-think-checkpoint",
+      "lessonTitle": "Think Tool：让 AI 先想后做",
+      "role": "审慎虎：深蓝外套、橙领结",
+      "title": "四格看懂：Think Tool：让 AI 先想后做",
+      "takeaway": "暂停核对是设计思路，专用 Think Tool 是否仍有用需随模型能力评测。",
+      "originalHtmlSha256": "c03ea053f4c5eae8024789745f1fb9f78057ad8b1ae4122a8061bfd9e9a49066",
+      "panels": [
+        {
+          "label": "动作前先停一下",
+          "text": "多步骤任务中，先检查当前目标和已知状态。",
+          "alt": "审慎虎在工具流水线旁放下暂停牌，查看目标卡和进度卡。"
+        },
+        {
+          "label": "核对适用规则",
+          "text": "对照约束、权限和前一步结果，识别冲突或缺口。",
+          "alt": "审慎虎在桌上比对盾牌卡、钥匙卡和工具结果卡。"
+        },
+        {
+          "label": "给出可检查计划",
+          "text": "以简短计划或检查表核对下一步；当前模型也应评估原生推理能力。",
+          "alt": "审慎虎把三张行动图卡依次摆好，向机器人指出下一张。"
+        },
+        {
+          "label": "再按授权执行",
+          "text": "核对本身不改变外部状态，实际动作仍需通过工具和权限。",
+          "alt": "审慎虎将检查卡交给独立带锁工具台，机器人只操作获准按钮。"
+        }
+      ],
+      "scenePrompt": "角色：审慎虎：深蓝外套、橙领结。四格动作依次是：第1格：审慎虎在工具流水线旁放下暂停牌，查看目标卡和进度卡。 第2格：审慎虎在桌上比对盾牌卡、钥匙卡和工具结果卡。 第3格：审慎虎把三张行动图卡依次摆好，向机器人指出下一张。 第4格：审慎虎将检查卡交给独立带锁工具台，机器人只操作获准按钮。",
+      "sourceArtifact": "exec-00abbbd1-bf3b-47b6-ba51-6d60def93473.png"
+    },
+    {
+      "file": "10-7.html",
+      "slug": "engineering-tool-improvement-loop",
+      "lessonTitle": "用 Agent 优化 Agent 的工具",
+      "role": "改进虎：蓝工装、橙围裙",
+      "title": "四格看懂：用 Agent 优化 Agent 的工具",
+      "takeaway": "用原型、评测和失败分析迭代工具设计。",
+      "originalHtmlSha256": "7bb68848b5537eb2e2dc91fcdbff7e81915fa96d4c86d78f51a5bcf104d3331c",
+      "panels": [
+        {
+          "label": "先做小原型",
+          "text": "明确工具目标，建立最小可用的名称、参数和实现。",
+          "alt": "改进虎在工作台组装一个小工具盒，旁边放着目标图卡。"
+        },
+        {
+          "label": "用真实任务评测",
+          "text": "观察是否选对工具、参数有效、结果可理解且任务完成。",
+          "alt": "改进虎让机器人处理几张不同任务卡，并记录各步骤勾选。"
+        },
+        {
+          "label": "分析失败原因",
+          "text": "区分描述歧义、实现错误、返回过载和能力缺口。",
+          "alt": "改进虎用放大镜检查四张带不同异常图标的失败卡。"
+        },
+        {
+          "label": "修改后再比较",
+          "text": "在获准范围内迭代，并用保留用例检查泛化与退化。",
+          "alt": "改进虎将改进前后两个工具盒送入同一测试台，另有封存用例盒。"
+        }
+      ],
+      "scenePrompt": "角色：改进虎：蓝工装、橙围裙。四格动作依次是：第1格：改进虎在工作台组装一个小工具盒，旁边放着目标图卡。 第2格：改进虎让机器人处理几张不同任务卡，并记录各步骤勾选。 第3格：改进虎用放大镜检查四张带不同异常图标的失败卡。 第4格：改进虎将改进前后两个工具盒送入同一测试台，另有封存用例盒。",
+      "sourceArtifact": "exec-8b88710f-cba0-476d-a3cc-7f1a70112259.png"
+    },
+    {
+      "file": "10-8.html",
+      "slug": "engineering-eval-baseline",
+      "lessonTitle": "为什么评测比训练更重要",
+      "role": "评测虎：白外套、青绿领结",
+      "title": "四格看懂：为什么评测比训练更重要",
+      "takeaway": "评测先把成功说清，再持续比较系统变化。",
+      "originalHtmlSha256": "2efa46c649e98e80a4d2cdf9904e2e6ad417c4e0c468447017033fac2411d761",
+      "panels": [
+        {
+          "label": "先定义成功",
+          "text": "把模糊的好用转成任务、预期行为和可检查标准。",
+          "alt": "评测虎把一张模糊云团卡换成任务图、结果图和检查表。"
+        },
+        {
+          "label": "建立当前基线",
+          "text": "记录模型、提示、工具和环境配置对应的结果。",
+          "alt": "评测虎给一组测试结果与配置卡夹上同色书签。"
+        },
+        {
+          "label": "变更后对照",
+          "text": "修改提示、工具或模型时，用同一组任务比较。",
+          "alt": "评测虎在两个相同测试跑道前比较不同版本的输出。"
+        },
+        {
+          "label": "持续补充用例",
+          "text": "把实际失败转成回归用例，同时控制覆盖和评测成本。",
+          "alt": "评测虎把一张修复后的失败卡收入测试册，旁边摆着沙漏与硬币。"
+        }
+      ],
+      "scenePrompt": "角色：评测虎：白外套、青绿领结。四格动作依次是：第1格：评测虎把一张模糊云团卡换成任务图、结果图和检查表。 第2格：评测虎给一组测试结果与配置卡夹上同色书签。 第3格：评测虎在两个相同测试跑道前比较不同版本的输出。 第4格：评测虎把一张修复后的失败卡收入测试册，旁边摆着沙漏与硬币。",
+      "sourceArtifact": "exec-a2c452d9-81ef-4190-bafc-cb719f769cf2.png"
+    },
+    {
+      "file": "10-9.html",
+      "slug": "engineering-three-graders",
+      "lessonTitle": "三种 Grader：代码、模型、人工",
+      "role": "裁判虎：青绿外套、橙哨子",
+      "title": "四格看懂：三种 Grader：代码、模型、人工",
+      "takeaway": "代码、模型和人工评分各有适用范围。",
+      "originalHtmlSha256": "959a3345631ae4f2025197767e37fb18f4514aaa1e664455af14d4a1201b39ad",
+      "panels": [
+        {
+          "label": "代码检查硬条件",
+          "text": "格式、数值、权限和执行结果可用明确规则判断。",
+          "alt": "裁判虎将形状积木放入量规，合格的进入勾选托盘。"
+        },
+        {
+          "label": "模型评主观质量",
+          "text": "用具体量表评价表达等内容，并关注偏差与不稳定性。",
+          "alt": "裁判虎与机器人对照多维图示量表审阅两幅作品。"
+        },
+        {
+          "label": "人工校准标准",
+          "text": "让人检查难例与争议，校准量表和模型裁判。",
+          "alt": "裁判虎请两位同伴虎讨论一张分歧卡，对照样例册。"
+        },
+        {
+          "label": "按任务组合裁判",
+          "text": "先验证结果与硬约束，再补充所需质量判断。",
+          "alt": "裁判虎把量规、机器人评分卡和人工书签汇成一份完整报告。"
+        }
+      ],
+      "scenePrompt": "角色：裁判虎：青绿外套、橙哨子。四格动作依次是：第1格：裁判虎将形状积木放入量规，合格的进入勾选托盘。 第2格：裁判虎与机器人对照多维图示量表审阅两幅作品。 第3格：裁判虎请两位同伴虎讨论一张分歧卡，对照样例册。 第4格：裁判虎把量规、机器人评分卡和人工书签汇成一份完整报告。",
+      "sourceArtifact": "exec-be418567-72c5-4fc7-9e1e-7d071df44b3e.png"
+    },
+    {
+      "file": "10-10.html",
+      "slug": "engineering-eval-pitfalls",
+      "lessonTitle": "评测的坑：噪音、作弊与退化",
+      "role": "实验虎：白大褂、蓝护目镜",
+      "title": "四格看懂：评测的坑：噪音、作弊与退化",
+      "takeaway": "可信评测要控制噪音、避免泄漏，并检查多维退化。",
+      "originalHtmlSha256": "c07f6c47f39af3c2a3d21f796836b8921d821d9b29aebfa14ce7270c0a4d0363",
+      "panels": [
+        {
+          "label": "环境会影响分数",
+          "text": "固定并记录算力、网络、依赖和工具配置。",
+          "alt": "实验虎在两台测试箱旁对比不同大小齿轮和沙漏，调整到一致。"
+        },
+        {
+          "label": "防止答案泄漏",
+          "text": "区分开发用例与保留测试，检查外部资料和评测污染。",
+          "alt": "实验虎把练习册和封存题盒分开放置，拦住一张答案卡。"
+        },
+        {
+          "label": "变化要看多个维度",
+          "text": "一项改善可能伴随其他能力退化。",
+          "alt": "实验虎面对一升一降的两组图形柱条，检查对应结果卡。"
+        },
+        {
+          "label": "重复并分析失败",
+          "text": "对波动任务合理重复试验，报告分布和具体失败。",
+          "alt": "实验虎把多次跑出的结果点排列成一组，并圈出异常样本。"
+        }
+      ],
+      "scenePrompt": "角色：实验虎：白大褂、蓝护目镜。四格动作依次是：第1格：实验虎在两台测试箱旁对比不同大小齿轮和沙漏，调整到一致。 第2格：实验虎把练习册和封存题盒分开放置，拦住一张答案卡。 第3格：实验虎面对一升一降的两组图形柱条，检查对应结果卡。 第4格：实验虎把多次跑出的结果点排列成一组，并圈出异常样本。",
+      "sourceArtifact": "exec-14e5d565-b75d-485f-85fd-0cd245f96332.png"
+    },
+    {
+      "file": "10-11.html",
+      "slug": "engineering-long-task-handoff",
+      "lessonTitle": "为什么 Agent 跑不了长任务",
+      "role": "接力虎：蓝工装、橙背包",
+      "title": "四格看懂：为什么 Agent 跑不了长任务",
+      "takeaway": "长任务依靠增量推进、明确状态和实际验收。",
+      "originalHtmlSha256": "5a2e56ddbbad5ba32004e08bfe1b13719055d2f2c5ebf1b1ec9c9cf23a5d2103",
+      "panels": [
+        {
+          "label": "一次做太多会失序",
+          "text": "大任务缺少分解时，容易留下难以接续的半成品。",
+          "alt": "接力虎被一座未完成积木城和散落零件围住，拿着空白进度板。"
+        },
+        {
+          "label": "部分完成不等于结束",
+          "text": "看到几个成功结果，还要核对完整任务范围。",
+          "alt": "接力虎将少量完成模块与仍有许多空格的总图对照。"
+        },
+        {
+          "label": "逐项推进并验收",
+          "text": "拆成可检查步骤，完成一项就记录结果和证据。",
+          "alt": "接力虎安装一块模块，用小测试装置验证并在清单上打勾。"
+        },
+        {
+          "label": "留下可恢复的交接",
+          "text": "记录已完成、未完成、关键决定和环境状态。",
+          "alt": "接力虎将整齐工具、进度本和下一步图卡交给接班虎。"
+        }
+      ],
+      "scenePrompt": "角色：接力虎：蓝工装、橙背包。四格动作依次是：第1格：接力虎被一座未完成积木城和散落零件围住，拿着空白进度板。 第2格：接力虎将少量完成模块与仍有许多空格的总图对照。 第3格：接力虎安装一块模块，用小测试装置验证并在清单上打勾。 第4格：接力虎将整齐工具、进度本和下一步图卡交给接班虎。",
+      "sourceArtifact": "exec-877fb046-151e-4cb4-83a1-1c8169afc645.png"
+    },
+    {
+      "file": "10-12.html",
+      "slug": "engineering-initialize-and-build",
+      "lessonTitle": "Initializer + Coding Agent",
+      "role": "建造虎：青绿工装、黄色安全帽",
+      "title": "四格看懂：Initializer + Coding Agent",
+      "takeaway": "初始化建立基础，后续轮次按清单增量交付。",
+      "originalHtmlSha256": "3d34a5cdf5d76964da90b8b4a22bea00cdc666531a85036e1dd466e29759797b",
+      "panels": [
+        {
+          "label": "初始化搭好底座",
+          "text": "建立环境、功能清单、启动方法与初始状态。",
+          "alt": "建造虎铺好积木底板，摆上工具箱、功能图和启动按钮。"
+        },
+        {
+          "label": "开工前读交接",
+          "text": "后续轮次先了解进度、约束和当前可运行状态。",
+          "alt": "建造虎打开进度册，核对桌上已完成模型与剩余模块。"
+        },
+        {
+          "label": "增量实现并验证",
+          "text": "选择合适范围推进，用实际运行结果判断是否完成。",
+          "alt": "建造虎装上一块新模块后启动小车，检查它通过轨道。"
+        },
+        {
+          "label": "收工保持清楚",
+          "text": "更新记录，留下可接续成果和明确的下一步。",
+          "alt": "建造虎把新完成模块放好，给接班虎展示勾选清单和待办模块。"
+        }
+      ],
+      "scenePrompt": "角色：建造虎：青绿工装、黄色安全帽。四格动作依次是：第1格：建造虎铺好积木底板，摆上工具箱、功能图和启动按钮。 第2格：建造虎打开进度册，核对桌上已完成模型与剩余模块。 第3格：建造虎装上一块新模块后启动小车，检查它通过轨道。 第4格：建造虎把新完成模块放好，给接班虎展示勾选清单和待办模块。",
+      "sourceArtifact": "exec-af6bbe74-9de0-4efe-a53d-7222cb186b38.png"
+    },
+    {
+      "file": "10-13.html",
+      "slug": "engineering-brain-hands-session",
+      "lessonTitle": "Managed Agent：脑手分离",
+      "role": "系统虎：深蓝外套、青绿眼镜",
+      "title": "四格看懂：Managed Agent：脑手分离",
+      "takeaway": "会话、调度循环与执行环境分离，便于替换和恢复。",
+      "originalHtmlSha256": "c5558e4a25cf4592d07e97e0d092cf68e4cc691df7f9608c071d2ace29647836",
+      "panels": [
+        {
+          "label": "会话保存事件",
+          "text": "Session 持久保存任务过程中的可记录事件。",
+          "alt": "系统虎将连续事件卡送进独立的带锁档案柜。"
+        },
+        {
+          "label": "循环负责调度",
+          "text": "Harness 调用模型、安排工具并处理返回结果。",
+          "alt": "系统虎在中央环形调度台将任务卡分配给机器人和工具台。"
+        },
+        {
+          "label": "沙箱负责执行",
+          "text": "执行环境承载代码和文件操作，并限制可用资源。",
+          "alt": "系统虎指向透明边界内的工具工作间，边界上有盾牌图标。"
+        },
+        {
+          "label": "通过接口协作",
+          "text": "组件用稳定接口连接，恢复过程仍需核查状态和副作用。",
+          "alt": "系统虎替换一个工具工作间模块，再核对事件卡和包裹记录。"
+        }
+      ],
+      "scenePrompt": "角色：系统虎：深蓝外套、青绿眼镜。四格动作依次是：第1格：系统虎将连续事件卡送进独立的带锁档案柜。 第2格：系统虎在中央环形调度台将任务卡分配给机器人和工具台。 第3格：系统虎指向透明边界内的工具工作间，边界上有盾牌图标。 第4格：系统虎替换一个工具工作间模块，再核对事件卡和包裹记录。",
+      "sourceArtifact": "exec-a1b62d6c-c0e6-4c82-8847-4d381927e9a9.png"
+    },
+    {
+      "file": "10-14.html",
+      "slug": "engineering-session-context",
+      "lessonTitle": "Session 不等于 Context Window",
+      "role": "档案虎：紫马甲、青绿袖套",
+      "title": "四格看懂：Session 不等于 Context Window",
+      "takeaway": "持久事件记录与当前模型输入承担不同职责。",
+      "originalHtmlSha256": "b2a93f3a81ebdb344014cdb7145a7085480c3352a76f1f4535f92bfb958994c0",
+      "panels": [
+        {
+          "label": "日志记录过程",
+          "text": "会话事件保留可追溯的请求、工具结果和状态变化。",
+          "alt": "档案虎把一连串不同事件卡收进有顺序的档案抽屉。"
+        },
+        {
+          "label": "窗口选择当前所需",
+          "text": "上下文窗口是本轮模型能看到的有限输入。",
+          "alt": "档案虎从档案中挑几张相关卡放到小桌面，机器人正在查看。"
+        },
+        {
+          "label": "压缩可能丢细节",
+          "text": "摘要有取舍，需要时应能回查获准保留的原始记录。",
+          "alt": "档案虎对照短摘要卡，从原档案取回一张被省略的细节页。"
+        },
+        {
+          "label": "记录也需治理",
+          "text": "按权限、保留期限和隐私要求管理日志及重建过程。",
+          "alt": "档案虎在带锁柜旁检查钥匙卡、日历图标和遮盖敏感区域的记录。"
+        }
+      ],
+      "scenePrompt": "角色：档案虎：紫马甲、青绿袖套。四格动作依次是：第1格：档案虎把一连串不同事件卡收进有顺序的档案抽屉。 第2格：档案虎从档案中挑几张相关卡放到小桌面，机器人正在查看。 第3格：档案虎对照短摘要卡，从原档案取回一张被省略的细节页。 第4格：档案虎在带锁柜旁检查钥匙卡、日历图标和遮盖敏感区域的记录。",
+      "sourceArtifact": "exec-8b90a57a-b31b-46de-bfdf-5fcc3de6918b.png"
+    }
+  ],
+  "verificationSources": [
+    "https://www.anthropic.com/research/building-effective-agents",
+    "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+    "https://www.anthropic.com/research/writing-tools-for-agents",
+    "https://www.anthropic.com/research/claude-think-tool",
+    "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+    "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
+    "https://www.anthropic.com/research/managed-agents",
+    "https://www.anthropic.com/research/contextual-retrieval"
+  ],
+  "generationSuffix": "All living colleagues are yellow Fangpian tigers with brown stripes; no other animal species."
+}

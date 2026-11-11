@@ -34,14 +34,16 @@
   <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
   <body>
     <article class="lesson wide">
       <header class="lesson-header">
         <div class="kicker">工具设计的艺术</div>
-        <h1>Milvus 作为 Agent 知识库工具</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>Milvus 作为 Agent 知识库工具</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+        <h1>Milvus 作为 Agent 知识库工具</h1>
         <p class="subtitle">让 Agent 自己判断何时需要企业资料；工具负责检索，Agent 负责基于 ToolMessage 组织答案。</p>
-      </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>把向量检索封成 search_knowledge：ToolMessage、记忆分层与调用/不调用的测试</p></aside><!--seo:end-->      <div class="sec-label">一次工具调用</div>
+      </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>把向量检索封成 search_knowledge：ToolMessage、记忆分层与调用/不调用的测试</p></aside><section class="lesson-comic" data-lesson-comic="vector-db-5.html"><noscript><h2>四格看懂：Milvus 作为 Agent 知识库工具</h2><img src="assets/comics/engineering-knowledge-tool.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Milvus 作为 Agent 知识库工具"><ol><li><b>判断是否需要资料</b>：问题需要企业知识时，才调用知识库检索。</li><li><b>查询先守边界</b>：查询、权限过滤和检索范围共同决定可返回的材料。</li><li><b>返回片段与来源</b>：工具返回匹配片段及来源信息，相关度并不保证答案正确。</li><li><b>测试调用与不调用</b>：检查需要检索、不需检索和无结果等情况。</li></ol><p>知识库工具提供可核查的检索材料，再由 Agent 组织回答。</p></noscript></section><!--seo:end-->      <div class="sec-label">一次工具调用</div>
       <div class="vdb-flow">
         <div class="vdb-step">
           <span class="vdb-num">1</span>

@@ -61,15 +61,17 @@
 <!--seo:begin--><meta property="og:description" content="知道了 Agent 会怎么卡死，下一步就是设计防护。好的防呆是三层网，让系统既不会失控，又不会轻易放弃。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">Agent 实战</div>
-    <h1>防呆设计：怎么让循环自己停下来</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>防呆设计：怎么让循环自己停下来</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>防呆设计：怎么让循环自己停下来</h1>
     <p class="subtitle">知道了 Agent 会怎么卡死，下一步就是设计防护。好的防呆是三层网，让系统既不会失控，又不会轻易放弃。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>上限、检测、降级三类策略的思路，产品经理该在哪里画线</p></aside><!--seo:end-->  <div class="sec-label">三类防护策略</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>上限、检测、降级三类策略的思路，产品经理该在哪里画线</p></aside><section class="lesson-comic" data-lesson-comic="9-8.html"><noscript><h2>四格看懂：防呆设计：怎么让循环自己停下来</h2><img src="assets/comics/practice-loop-stop.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：防呆设计：怎么让循环自己停下来"><ol><li><b>先设硬边界</b>：为轮次、耗时、工具使用和费用设置合理上限。</li><li><b>识别异常模式</b>：观察重复参数、连续失败与长期没有进展。</li><li><b>尝试受控调整</b>：补资料、换合适方法或隔离故障工具，避免盲目重试。</li><li><b>带着状态退出</b>：达到边界或无法继续时，保留已完成内容并报告缺口。</li></ol><p>用上限、检测与降级控制循环，不能安全继续时停下并说明进度。</p></noscript></section><!--seo:end-->  <div class="sec-label">三类防护策略</div>
 
   <div class="three-cols">
     <div class="col-card hard reveal">

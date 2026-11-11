@@ -82,15 +82,17 @@
 <!--seo:begin--><meta property="og:description" content="Agent 在后台跑了 3 分钟：调了几个工具？花了多少 token？中间有没有出错？如果你回答不了这些问题，你的 Agent 就是个黑盒。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">权限与安全</div>
-    <h1>Agent 干了什么你知道吗</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Agent 干了什么你知道吗</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Agent 干了什么你知道吗</h1>
     <p class="subtitle">Agent 在后台跑了 3 分钟：调了几个工具？花了多少 token？中间有没有出错？如果你回答不了这些问题，你的 Agent 就是个黑盒。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>事件流与 Token 追踪。不看日志你永远不知道出了什么错</p></aside><!--seo:end-->  <div class="sec-label">模拟 Agent 仪表盘</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>事件流与 Token 追踪。不看日志你永远不知道出了什么错</p></aside><section class="lesson-comic" data-lesson-comic="9-29.html"><noscript><h2>四格看懂：Agent 干了什么你知道吗</h2><img src="assets/comics/practice-task-telemetry.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Agent 干了什么你知道吗"><ol><li><b>先关联整项任务</b>：让模型、工具和子步骤记录能对应到同一任务。</li><li><b>分段看时间与错误</b>：观察哪里等待、哪里重试、哪里没有推进。</li><li><b>统计实际资源</b>：输入输出、工具与缓存等用量共同构成任务成本。</li><li><b>记录适度且可用</b>：保留定位问题需要的信息，限制访问并处理敏感字段。</li></ol><p>关联任务事件、耗时、用量与失败，记录必要信息并保护敏感内容。</p></noscript></section><!--seo:end-->  <div class="sec-label">模拟 Agent 仪表盘</div>
 
   <div style="text-align:center;margin-bottom:12px">
     <button class="play-btn" id="playBtn" onclick="runSimulation()"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align:-1px;margin-right:3px"><polygon points="5 3 19 12 5 21 5 3"/></svg> 模拟一次任务执行</button>

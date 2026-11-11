@@ -31,6 +31,8 @@ python scripts/package-selfhost.py
 bash deploy/deploy.sh
 ```
 
+已有站点只更新静态内容、需要保留服务器上现有路由时，使用 `PRESERVE_NGINX_CONFIG=1 bash deploy/deploy.sh`。此模式要求现有项目 Nginx 配置文件存在，仍会备份配置、核验 Nginx 和 HTTP 健康检查；不覆盖服务器中追加的 ACME 等路由。
+
 脚本会验证文件 SHA-256，将静态文件复制到 `/var/www/fangpian-xuetang/releases/` 下的新版本目录，通过 `current` 符号链接切换版本，写入单独的 `/etc/nginx/conf.d/fangpian-xuetang.conf`，验证配置、启用 Nginx 开机启动并执行本机 HTTP 检查。切换后的配置或 HTTP 检查失败会恢复原来的符号链接和站点配置。旧版本和配置备份不会自动删除。
 
 本机检查通过后，还须从外部访问首页、课程、搜索索引和 AITI 图片，并验证浏览器中的课程阅读、搜索、学习进度与测试入口。若本机正常而外网不通，应检查云安全组和主机防火墙的 TCP 80 入站规则。

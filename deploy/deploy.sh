@@ -70,7 +70,13 @@ trap rollback ERR
 
 ln -s "$release" "$base/current.new-$release_id"
 mv -Tf "$base/current.new-$release_id" "$base/current"
-install -m 644 "$bundle/deploy/nginx.conf" "$config"
+if [[ ${PRESERVE_NGINX_CONFIG:-0} == 1 ]]; then
+    # Existing deployments may include routes maintained by other applications.
+    [[ -f "$config" ]]
+    printf 'Keeping existing Nginx configuration: %s\n' "$config"
+else
+    install -m 644 "$bundle/deploy/nginx.conf" "$config"
+fi
 nginx -t
 systemctl enable --now nginx
 systemctl reload nginx

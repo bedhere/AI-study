@@ -72,15 +72,17 @@
 <!--seo:begin--><meta property="og:description" content="如果你有 100 个工具，全部描述塞进 System Prompt，光工具描述就占几万 token。AI 和人一样：给太多信息反而找不到重点。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Prompt Harness</div>
-    <h1>不用的东西别给 AI 看</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>不用的东西别给 AI 看</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>不用的东西别给 AI 看</h1>
     <p class="subtitle">如果你有 100 个工具，全部描述塞进 System Prompt，光工具描述就占几万 token。AI 和人一样：给太多信息反而找不到重点。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>100 个工具全塞 system？Token 爆炸。这就需要按需加载的设计思路</p></aside><!--seo:end-->  <div class="sec-label">全量加载 vs 按需加载</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>100 个工具全塞 system？Token 爆炸。这就需要按需加载的设计思路</p></aside><section class="lesson-comic" data-lesson-comic="9-20.html"><noscript><h2>四格看懂：不用的东西别给 AI 看</h2><img src="assets/comics/practice-tool-discovery.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：不用的东西别给 AI 看"><ol><li><b>全量说明很拥挤</b>：大量工具描述会占用输入空间并增加选择负担。</li><li><b>先提供能力索引</b>：用清楚的名称和摘要帮助发现相关工具。</li><li><b>用到时展开说明</b>：加载所需工具的完整参数、权限和错误约定。</li><li><b>检查收益与漏选</b>：测试工具选择、用量和缓存变化，再决定加载策略。</li></ol><p>按需发现和加载工具说明，减少无关输入，同时确保所需能力能被正确找到。</p></noscript></section><!--seo:end-->  <div class="sec-label">全量加载 vs 按需加载</div>
 
   <div class="compare-wrap">
     <div class="panel bad reveal">

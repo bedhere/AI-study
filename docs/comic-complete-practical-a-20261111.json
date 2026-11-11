@@ -1,0 +1,643 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners.",
+  "generator": "built-in image_gen",
+  "date": "2026-11-11",
+  "batchId": "20261111-complete-practical-a",
+  "cacheVersion": "20261111complete",
+  "status": "accepted; 19 integrated stories, total 160",
+  "lessons": [
+    {
+      "file": "9-0.html",
+      "sourceArtifact": "exec-66647fe7-3605-431f-a15f-37218a8f9b99.png",
+      "slug": "practice-business-loop",
+      "lessonTitle": "从业务任务到可交付的 AI 工具",
+      "role": "策划虎：珊瑚衬衫、蓝马甲",
+      "title": "四格看懂：从业务任务到可交付的 AI 工具",
+      "takeaway": "先把真实任务拆成材料、草稿、核验与交付，再按需要增加能力。",
+      "originalHtmlSha256": "f0146cb8b5f105e20360858fa3e358d9495a5eeafab9f8d0e42218fc1998ba4e",
+      "panels": [
+        {
+          "label": "选一个小任务",
+          "text": "从明确范围的日常工作开始，写清输入和输出。",
+          "alt": "策划虎从工作篮挑出一份视频选题资料夹。"
+        },
+        {
+          "label": "画出交付流程",
+          "text": "材料输入、AI 草稿、人工核验与交付要彼此衔接。",
+          "alt": "策划虎将资料、机器人、放大镜和包裹四张图卡排成流程。"
+        },
+        {
+          "label": "按缺口补能力",
+          "text": "需要时再增加生图、工具、记忆和安全观测机制。",
+          "alt": "策划虎给小型工作台接上画架、工具盒与资料柜。"
+        },
+        {
+          "label": "先跑通再扩展",
+          "text": "验证一个步骤是否有用，再逐步完善整个闭环。",
+          "alt": "策划虎与同伴检查第一份交付稿，记录尚未完成的步骤。"
+        }
+      ],
+      "scenePrompt": "角色：策划虎：珊瑚衬衫、蓝马甲。四格动作依次是：第1格：策划虎从工作篮挑出一份视频选题资料夹。 第2格：策划虎将资料、机器人、放大镜和包裹四张图卡排成流程。 第3格：策划虎给小型工作台接上画架、工具盒与资料柜。 第4格：策划虎与同伴检查第一份交付稿，记录尚未完成的步骤。",
+      "insertionAnchor": "first-header-end"
+    },
+    {
+      "file": "9-1.html",
+      "sourceArtifact": "exec-d62882ae-04e5-43f4-996f-2a26bdee0ce9.png",
+      "slug": "practice-image-inputs",
+      "lessonTitle": "文生图 vs 垫图：两种完全不同的事",
+      "role": "画师虎：蓝围裙、珊瑚贝雷帽",
+      "title": "四格看懂：文生图 vs 垫图：两种完全不同的事",
+      "takeaway": "文字与参考图提供不同约束；按任务选择输入，再核对生成结果。",
+      "originalHtmlSha256": "5e70ca9167ebf3db41b1823754c695219b4dd22776639bc58c0182e86cba8268",
+      "panels": [
+        {
+          "label": "文字描述出发",
+          "text": "没有图像参考时，模型主要依据文字条件生成。",
+          "alt": "画师虎把场景、动作和光线图卡放到机器人画架旁。"
+        },
+        {
+          "label": "结果可能变化",
+          "text": "同样描述也可能产生不同外貌、细节与构图。",
+          "alt": "画师虎比较三张姿态相近但细节不同的黄色虎画像。"
+        },
+        {
+          "label": "参考图提供锚点",
+          "text": "需要固定形象时，提供清楚的角色参考与具体修改要求。",
+          "alt": "画师虎将一张标准虎画像与新的场景卡一起递给机器人。"
+        },
+        {
+          "label": "参考也要检查",
+          "text": "参考图不能保证完全一致，逐项检查外貌与动作。",
+          "alt": "画师虎把新场景作品与标准画像并排，用铅笔圈出偏差。"
+        }
+      ],
+      "scenePrompt": "角色：画师虎：蓝围裙、珊瑚贝雷帽。四格动作依次是：第1格：画师虎把场景、动作和光线图卡放到机器人画架旁。 第2格：画师虎比较三张姿态相近但细节不同的黄色虎画像。 第3格：画师虎将一张标准虎画像与新的场景卡一起递给机器人。 第4格：画师虎把新场景作品与标准画像并排，用铅笔圈出偏差。"
+    },
+    {
+      "file": "9-2.html",
+      "sourceArtifact": "exec-0835f7f9-6a35-4ad9-b484-6c7ed8103156.png",
+      "slug": "practice-prompt-translation",
+      "lessonTitle": "用 AI 给 AI 写 Prompt",
+      "role": "编导虎：紫马甲、橙领结",
+      "title": "四格看懂：用 AI 给 AI 写 Prompt",
+      "takeaway": "让文字模型整理视觉需求时，保留用户意图和明确限制，再检查图片。",
+      "originalHtmlSha256": "83276ca5fca892eaed7d1fcdca2b7e83f0b98910a39437d1f55b05db1721e710",
+      "panels": [
+        {
+          "label": "先收集原始意图",
+          "text": "说明主体、动作、环境与用途，不清楚的地方先澄清。",
+          "alt": "编导虎向机器人展示阳台、坐姿与夕阳三张图卡。"
+        },
+        {
+          "label": "整理成视觉说明",
+          "text": "将主体特征、构图、风格与光线组织成清楚描述。",
+          "alt": "机器人把零散图卡排成完整画面说明板，编导虎在旁查看。"
+        },
+        {
+          "label": "核对有没有加戏",
+          "text": "检查转换后的要求是否新增不需要的角色或细节。",
+          "alt": "编导虎圈出说明板上多余的道具卡，将它移到一旁。"
+        },
+        {
+          "label": "生成后对照修改",
+          "text": "把实际图片与原始需求比较，再做具体调整。",
+          "alt": "编导虎将阳台画作与原始三张图卡并排检查。"
+        }
+      ],
+      "scenePrompt": "角色：编导虎：紫马甲、橙领结。四格动作依次是：第1格：编导虎向机器人展示阳台、坐姿与夕阳三张图卡。 第2格：机器人把零散图卡排成完整画面说明板，编导虎在旁查看。 第3格：编导虎圈出说明板上多余的道具卡，将它移到一旁。 第4格：编导虎将阳台画作与原始三张图卡并排检查。"
+    },
+    {
+      "file": "9-3.html",
+      "sourceArtifact": "exec-cef0fe33-f3ae-4bfb-b5f7-27b92899ac7d.png",
+      "slug": "practice-character-reference",
+      "lessonTitle": "角色一致性：最难的产品问题",
+      "role": "造型虎：青绿工作服、蓝贝雷帽",
+      "title": "四格看懂：角色一致性：最难的产品问题",
+      "takeaway": "角色一致性需要明确特征、合适参考与逐图检查，不能只靠一句描述。",
+      "originalHtmlSha256": "e688d9a844be457a6ae5dd453a6fb639d5e18aafbcc293152a32eceba2412ab2",
+      "panels": [
+        {
+          "label": "记录核心特征",
+          "text": "确定脸型、条纹、比例和标志性装扮。",
+          "alt": "造型虎在角色参考板上展示同一黄色虎的正侧面头像。"
+        },
+        {
+          "label": "参考清晰可辨",
+          "text": "准备能看清外貌和表情范围的标准参考。",
+          "alt": "造型虎整理几张表情不同但五官一致的角色参考卡。"
+        },
+        {
+          "label": "只改变目标部分",
+          "text": "说明哪些特征固定，哪些场景或动作可以改变。",
+          "alt": "造型虎把固定头像卡与书房、厨房两张场景卡分别配对。"
+        },
+        {
+          "label": "逐张对照修正",
+          "text": "检查面部、身体、服装和画风，再修正偏差。",
+          "alt": "造型虎比较两张不同场景作品与参考板，圈出一处条纹差异。"
+        }
+      ],
+      "scenePrompt": "角色：造型虎：青绿工作服、蓝贝雷帽。四格动作依次是：第1格：造型虎在角色参考板上展示同一黄色虎的正侧面头像。 第2格：造型虎整理几张表情不同但五官一致的角色参考卡。 第3格：造型虎把固定头像卡与书房、厨房两张场景卡分别配对。 第4格：造型虎比较两张不同场景作品与参考板，圈出一处条纹差异。"
+    },
+    {
+      "file": "9-4.html",
+      "sourceArtifact": "exec-ed655e9e-a2ca-40da-a840-dd15cdab3080.png",
+      "slug": "practice-generation-recovery",
+      "lessonTitle": "模型会挂，然后呢？",
+      "role": "值班虎：蓝夹克、橙帽子",
+      "title": "四格看懂：模型会挂，然后呢？",
+      "takeaway": "为图像生成设置超时、有限重试和明确反馈；备用路径也要符合任务条件。",
+      "originalHtmlSha256": "a914c1e962deb03969c2ea123da5d3b21dd919a117f67806533ee7785feef68b",
+      "panels": [
+        {
+          "label": "识别失败原因",
+          "text": "区分超时、限流与输入错误，再决定处理方式。",
+          "alt": "值班虎检查停止工作的画图装置，旁边有沙漏与异常卡。"
+        },
+        {
+          "label": "重试有次数限制",
+          "text": "保留输入与状态，避免无限等待或重复扣费。",
+          "alt": "值班虎把原始参考图放入保存夹，在重试开关旁查看预算卡。"
+        },
+        {
+          "label": "备用能力要匹配",
+          "text": "切换前检查参考图支持、隐私、费用与质量要求。",
+          "alt": "值班虎对照两台画图装置的功能卡，将不匹配的插头放到一旁。"
+        },
+        {
+          "label": "不能完成就说明",
+          "text": "告知失败、保留任务材料，并提供可执行的后续选择。",
+          "alt": "值班虎向用户虎递出保存好的资料夹与暂停卡。"
+        }
+      ],
+      "scenePrompt": "角色：值班虎：蓝夹克、橙帽子。四格动作依次是：第1格：值班虎检查停止工作的画图装置，旁边有沙漏与异常卡。 第2格：值班虎把原始参考图放入保存夹，在重试开关旁查看预算卡。 第3格：值班虎对照两台画图装置的功能卡，将不匹配的插头放到一旁。 第4格：值班虎向用户虎递出保存好的资料夹与暂停卡。"
+    },
+    {
+      "file": "9-5.html",
+      "sourceArtifact": "exec-95c3c663-834f-4a02-98fe-1b3cba09cd0a.png",
+      "slug": "practice-image-product-checklist",
+      "lessonTitle": "生图的产品化清单",
+      "role": "验收虎：白工作服、青色袖口",
+      "title": "四格看懂：生图的产品化清单",
+      "takeaway": "生图上线要同时考虑体验、质量、工程与内容及资料保护。",
+      "originalHtmlSha256": "aeb201d8d251569edac6116d4c86388eb7cc3ed5c65087ae2659538311a309f0",
+      "panels": [
+        {
+          "label": "体验能看懂",
+          "text": "提供真实状态、预览、选择和失败后的恢复方式。",
+          "alt": "验收虎查看带沙漏状态图标的画架与几张可选草图。"
+        },
+        {
+          "label": "质量可检查",
+          "text": "检查角色、尺寸、清晰度与明显变形。",
+          "alt": "验收虎对照参考图，用测量框检查生成作品。"
+        },
+        {
+          "label": "运行有保障",
+          "text": "设置超时、限额、保存与异常处理。",
+          "alt": "验收虎检查画图流水线的暂停开关、硬币计量盒和图片档案柜。"
+        },
+        {
+          "label": "资料与内容守边界",
+          "text": "按实际要求处理上传资料、使用权限与发布检查。",
+          "alt": "验收虎在上锁参考图柜旁与同伴核对待发布作品。"
+        }
+      ],
+      "scenePrompt": "角色：验收虎：白工作服、青色袖口。四格动作依次是：第1格：验收虎查看带沙漏状态图标的画架与几张可选草图。 第2格：验收虎对照参考图，用测量框检查生成作品。 第3格：验收虎检查画图流水线的暂停开关、硬币计量盒和图片档案柜。 第4格：验收虎在上锁参考图柜旁与同伴核对待发布作品。"
+    },
+    {
+      "file": "9-6.html",
+      "sourceArtifact": "exec-e41bc4a5-7738-40ca-95d4-067eeafc7c01.png",
+      "slug": "practice-production-turn",
+      "lessonTitle": "教科书的 3 步 vs 真实的 N 步",
+      "role": "工程虎：青绿工装、橙护目镜",
+      "title": "四格看懂：教科书的 3 步 vs 真实的 N 步",
+      "takeaway": "真实循环还需要整理上下文、校验权限与参数、保存状态和记录结果。",
+      "originalHtmlSha256": "50d087b196df7452a9cc648a2008a39159234a6f337722f94b34b6bef8a6909c",
+      "panels": [
+        {
+          "label": "整理本轮输入",
+          "text": "读取任务与状态，控制上下文与预算。",
+          "alt": "工程虎在工作台上留下目标卡、状态卡与本轮资料。"
+        },
+        {
+          "label": "先校验再调用",
+          "text": "检查参数、权限与依赖，安排可安全执行的工具。",
+          "alt": "工程虎将工具请求卡放入测量槽，旁边放着权限钥匙盒。"
+        },
+        {
+          "label": "处理真实结果",
+          "text": "识别超时或异常，不把失败当成成功。",
+          "alt": "工程虎比较工具送回的正常结果卡与异常卡，机器人在旁等待。"
+        },
+        {
+          "label": "回写状态与记录",
+          "text": "更新必要状态、消息和日志，再决定继续或结束。",
+          "alt": "工程虎把结果卡接回流程板，并在检查点记录本上做标记。"
+        }
+      ],
+      "scenePrompt": "角色：工程虎：青绿工装、橙护目镜。四格动作依次是：第1格：工程虎在工作台上留下目标卡、状态卡与本轮资料。 第2格：工程虎将工具请求卡放入测量槽，旁边放着权限钥匙盒。 第3格：工程虎比较工具送回的正常结果卡与异常卡，机器人在旁等待。 第4格：工程虎把结果卡接回流程板，并在检查点记录本上做标记。"
+    },
+    {
+      "file": "9-7.html",
+      "sourceArtifact": "exec-aae6d998-2c50-4019-bdfe-aa6c3403af8a.png",
+      "slug": "practice-stuck-signals",
+      "lessonTitle": "为什么 Agent 会卡死",
+      "role": "排障虎：橙工装、蓝护目镜",
+      "title": "四格看懂：为什么 Agent 会卡死",
+      "takeaway": "从重复调用、无效推进、文本复读和连锁失败中识别卡住信号。",
+      "originalHtmlSha256": "9793187d04ac717cae6f022d7cf92206e0bf4871d6ab45e831cef8c5b9b0060a",
+      "panels": [
+        {
+          "label": "同样调用反复发生",
+          "text": "相同参数没有新结果时，检查是否陷入重复状态。",
+          "alt": "排障虎看着同一辆小车反复经过同一工具入口。"
+        },
+        {
+          "label": "忙却没有推进",
+          "text": "用任务目标衡量增量，识别无用的边缘操作。",
+          "alt": "排障虎发现工作台堆满整理好的空白卡，而目标拼图仍缺同一块。"
+        },
+        {
+          "label": "输出开始复读",
+          "text": "重复内容可能提示上下文或任务理解出了问题。",
+          "alt": "排障虎比较几张内容图案相同的重复稿纸。"
+        },
+        {
+          "label": "外部故障连锁放大",
+          "text": "连续失败要限流、隔离或暂停，避免不断放大影响。",
+          "alt": "排障虎关闭故障工具前的闸门，阻止后续小车继续拥堵。"
+        }
+      ],
+      "scenePrompt": "角色：排障虎：橙工装、蓝护目镜。四格动作依次是：第1格：排障虎看着同一辆小车反复经过同一工具入口。 第2格：排障虎发现工作台堆满整理好的空白卡，而目标拼图仍缺同一块。 第3格：排障虎比较几张内容图案相同的重复稿纸。 第4格：排障虎关闭故障工具前的闸门，阻止后续小车继续拥堵。"
+    },
+    {
+      "file": "9-8.html",
+      "sourceArtifact": "exec-612a4905-dc1c-4b5d-948e-c6c9bb18959b.png",
+      "slug": "practice-loop-stop",
+      "lessonTitle": "防呆设计：怎么让循环自己停下来",
+      "role": "守护虎：蓝制服、橙安全背心",
+      "title": "四格看懂：防呆设计：怎么让循环自己停下来",
+      "takeaway": "用上限、检测与降级控制循环，不能安全继续时停下并说明进度。",
+      "originalHtmlSha256": "2b69d09bcfbd44721394c186903c07c6b1007faf7dd5e0f8bcd55d4aed5069c4",
+      "panels": [
+        {
+          "label": "先设硬边界",
+          "text": "为轮次、耗时、工具使用和费用设置合理上限。",
+          "alt": "守护虎在环形轨道旁安装沙漏、预算盒与停止开关。"
+        },
+        {
+          "label": "识别异常模式",
+          "text": "观察重复参数、连续失败与长期没有进展。",
+          "alt": "守护虎在记录板上圈出一排重复工具图标。"
+        },
+        {
+          "label": "尝试受控调整",
+          "text": "补资料、换合适方法或隔离故障工具，避免盲目重试。",
+          "alt": "守护虎把故障工具移到隔离台，将新的资料卡放入任务托盘。"
+        },
+        {
+          "label": "带着状态退出",
+          "text": "达到边界或无法继续时，保留已完成内容并报告缺口。",
+          "alt": "守护虎向同伴递交阶段成果夹与未完成的拼图卡。"
+        }
+      ],
+      "scenePrompt": "角色：守护虎：蓝制服、橙安全背心。四格动作依次是：第1格：守护虎在环形轨道旁安装沙漏、预算盒与停止开关。 第2格：守护虎在记录板上圈出一排重复工具图标。 第3格：守护虎把故障工具移到隔离台，将新的资料卡放入任务托盘。 第4格：守护虎向同伴递交阶段成果夹与未完成的拼图卡。"
+    },
+    {
+      "file": "9-9.html",
+      "sourceArtifact": "exec-bfe8be66-1063-41ae-85e3-ba875da9406c.png",
+      "slug": "practice-visible-progress",
+      "lessonTitle": "流式体验：别让用户干等",
+      "role": "接待虎：紫外套、青色领结",
+      "title": "四格看懂：流式体验：别让用户干等",
+      "takeaway": "用真实阶段和中间结果解释等待，提供清晰的取消与失败反馈。",
+      "originalHtmlSha256": "6dbf2813384d628005b42b7c83a2faa0add6d5a2407360021e5a53c97ab372b5",
+      "panels": [
+        {
+          "label": "空白让等待难判断",
+          "text": "没有状态时，用户不知道任务是否仍在运行。",
+          "alt": "接待虎看着一块空白屏幕与静止沙漏，神情疑惑。"
+        },
+        {
+          "label": "展示当前阶段",
+          "text": "说明正在查找、分析还是整理，不伪造精确进度。",
+          "alt": "接待虎向用户虎展示搜索、放大镜和文件三段阶段卡。"
+        },
+        {
+          "label": "逐步呈现可用结果",
+          "text": "在适当边界显示草稿或已完成部分，避免误当最终结论。",
+          "alt": "接待虎把一份大纲卡放上工作台，未完成片段留在透明等待盒。"
+        },
+        {
+          "label": "允许停止与恢复",
+          "text": "让取消、超时和失败状态有明确后续。",
+          "alt": "接待虎指向暂停按钮，把用户资料保存在可恢复的档案夹中。"
+        }
+      ],
+      "scenePrompt": "角色：接待虎：紫外套、青色领结。四格动作依次是：第1格：接待虎看着一块空白屏幕与静止沙漏，神情疑惑。 第2格：接待虎向用户虎展示搜索、放大镜和文件三段阶段卡。 第3格：接待虎把一份大纲卡放上工作台，未完成片段留在透明等待盒。 第4格：接待虎指向暂停按钮，把用户资料保存在可恢复的档案夹中。"
+    },
+    {
+      "file": "9-10.html",
+      "sourceArtifact": "exec-44566a16-c0f7-428f-8e60-1a2b77c33a38.png",
+      "slug": "practice-message-total-cost",
+      "lessonTitle": "一条消息背后的真实成本",
+      "role": "记账虎：绿马甲、橙领结",
+      "title": "四格看懂：一条消息背后的真实成本",
+      "takeaway": "一次用户请求可能触发多次调用，按完整任务统计用量、时延与返工。",
+      "originalHtmlSha256": "f6de38b26f6e768ac833fc5a8b9d515569f05bc8c0bf73b384d9ecb20a4b47f4",
+      "panels": [
+        {
+          "label": "界面只有一句请求",
+          "text": "用户看到的消息数不等于后台调用次数。",
+          "alt": "记账虎拿着一张任务卡，机器人背后展开多段流程。"
+        },
+        {
+          "label": "任务触发多个环节",
+          "text": "模型、检索、工具与重试都可能产生开销。",
+          "alt": "记账虎沿流水线给机器人站、资料柜和工具台分别放下计量盒。"
+        },
+        {
+          "label": "历史与结果不断累积",
+          "text": "长工具输出和重复上下文可能推高后续用量。",
+          "alt": "记账虎比较前后两轮逐渐增多的消息托盘。"
+        },
+        {
+          "label": "按任务核算与优化",
+          "text": "关联实际用量、缓存和人工返工，定位主要成本。",
+          "alt": "记账虎把全部计量盒与阶段记录放到同一核算台。"
+        }
+      ],
+      "scenePrompt": "角色：记账虎：绿马甲、橙领结。四格动作依次是：第1格：记账虎拿着一张任务卡，机器人背后展开多段流程。 第2格：记账虎沿流水线给机器人站、资料柜和工具台分别放下计量盒。 第3格：记账虎比较前后两轮逐渐增多的消息托盘。 第4格：记账虎把全部计量盒与阶段记录放到同一核算台。"
+    },
+    {
+      "file": "9-11.html",
+      "sourceArtifact": "exec-ebe385fd-3b93-45c0-a857-a30b7008befe.png",
+      "slug": "practice-context-pressure",
+      "lessonTitle": "对话越长越贵、越长越笨",
+      "role": "整理虎：蓝围裙、青色发带",
+      "title": "四格看懂：对话越长越贵、越长越笨",
+      "takeaway": "上下文增长影响用量、可用容量与任务质量，需要持续组织和检查。",
+      "originalHtmlSha256": "2cc7d30ef4a51ba2fe2441363365f68244ada9321282859c5c268abeb6a892aa",
+      "panels": [
+        {
+          "label": "重复历史增加用量",
+          "text": "后续调用携带历史时，会反复处理相关内容。",
+          "alt": "整理虎在连续三个托盘中放入逐渐增多的消息卡。"
+        },
+        {
+          "label": "冗余可能淹没重点",
+          "text": "无关与重复材料会让关键要求更难被有效利用。",
+          "alt": "整理虎从杂乱桌面找出被压住的星形目标卡。"
+        },
+        {
+          "label": "可见范围有上限",
+          "text": "接近容量时，应用需要裁剪、压缩或归档。",
+          "alt": "整理虎看着放满资料的有边框工作台，手里还有一摞待放卡片。"
+        },
+        {
+          "label": "定期检查任务主线",
+          "text": "保留当前目标、有效约束与必要证据，再测试后续回答。",
+          "alt": "整理虎将目标卡、约束框和资料书整理到桌面中央。"
+        }
+      ],
+      "scenePrompt": "角色：整理虎：蓝围裙、青色发带。四格动作依次是：第1格：整理虎在连续三个托盘中放入逐渐增多的消息卡。 第2格：整理虎从杂乱桌面找出被压住的星形目标卡。 第3格：整理虎看着放满资料的有边框工作台，手里还有一摞待放卡片。 第4格：整理虎将目标卡、约束框和资料书整理到桌面中央。"
+    },
+    {
+      "file": "9-12.html",
+      "sourceArtifact": "exec-c589d6f8-c151-429b-8195-8ef620a57a16.png",
+      "slug": "practice-compression-tradeoffs",
+      "lessonTitle": "压缩是一门取舍的艺术",
+      "role": "编辑虎：米色开衫、圆眼镜",
+      "title": "四格看懂：压缩是一门取舍的艺术",
+      "takeaway": "按任务价值决定保留、归档或摘要，并验证压缩后还能完成任务。",
+      "originalHtmlSha256": "510a543d2b164f2abba073919287a5718df6cfa1e7a6fc50254b96ae505d6ba3",
+      "panels": [
+        {
+          "label": "先分清信息价值",
+          "text": "区分当前要求、关键事实与冗余中间内容。",
+          "alt": "编辑虎把星形目标卡、参考图卡和重复稿纸分进三个托盘。"
+        },
+        {
+          "label": "冗余可以移出窗口",
+          "text": "过时或重复的工具结果可按需归档并保留追查方式。",
+          "alt": "编辑虎将长工具纸带装入带书签的档案盒。"
+        },
+        {
+          "label": "重要长文谨慎摘要",
+          "text": "概括结论时保留依据、限制与未决事项。",
+          "alt": "编辑虎对照原稿写短摘要，在缺信息处留下橙色空框。"
+        },
+        {
+          "label": "用后续任务验证",
+          "text": "检查是否丢失需求或证据，必要时取回原文。",
+          "alt": "编辑虎发现目标拼图缺一块，从档案盒取回对应资料卡。"
+        }
+      ],
+      "scenePrompt": "角色：编辑虎：米色开衫、圆眼镜。四格动作依次是：第1格：编辑虎把星形目标卡、参考图卡和重复稿纸分进三个托盘。 第2格：编辑虎将长工具纸带装入带书签的档案盒。 第3格：编辑虎对照原稿写短摘要，在缺信息处留下橙色空框。 第4格：编辑虎发现目标拼图缺一块，从档案盒取回对应资料卡。"
+    },
+    {
+      "file": "9-13.html",
+      "sourceArtifact": "exec-0e133bee-47d7-490b-8701-2f603306ca09.png",
+      "slug": "practice-preserve-user-intent",
+      "lessonTitle": "用户说的话能不能删？",
+      "role": "秘书虎：紫针织衫、青色领结",
+      "title": "四格看懂：用户说的话能不能删？",
+      "takeaway": "保护当前有效的用户要求，并保留可追查原文，避免摘要改变原意。",
+      "originalHtmlSha256": "d01fded9c4f80f3acd3664bc7066a21f30f84106a85f0d60baeba71093faad10",
+      "panels": [
+        {
+          "label": "原话承载细节",
+          "text": "需求、偏好与明确边界常藏在具体表述里。",
+          "alt": "秘书虎把用户递来的原始任务卡放进专用资料夹。"
+        },
+        {
+          "label": "先处理重复内容",
+          "text": "整理上下文时，优先检查冗长工具结果与重复回复。",
+          "alt": "秘书虎移走重复纸带，让原始任务卡留在工作台。"
+        },
+        {
+          "label": "摘要核对原意",
+          "text": "特别检查否定、条件、数量与后来更新的要求。",
+          "alt": "秘书虎将摘要与原始卡对照，圈出一处方向相反的箭头。"
+        },
+        {
+          "label": "保留恢复与更新途径",
+          "text": "原文可归档追查，当前输入以仍有效的要求为准。",
+          "alt": "秘书虎从带版本书签的资料夹取出最新卡，旧卡留在归档层。"
+        }
+      ],
+      "scenePrompt": "角色：秘书虎：紫针织衫、青色领结。四格动作依次是：第1格：秘书虎把用户递来的原始任务卡放进专用资料夹。 第2格：秘书虎移走重复纸带，让原始任务卡留在工作台。 第3格：秘书虎将摘要与原始卡对照，圈出一处方向相反的箭头。 第4格：秘书虎从带版本书签的资料夹取出最新卡，旧卡留在归档层。"
+    },
+    {
+      "file": "9-14.html",
+      "sourceArtifact": "exec-1a2bd0b7-626b-4e47-a3d2-d6fe27df3b7b.png",
+      "slug": "practice-compression-methods",
+      "lessonTitle": "本地压缩 vs LLM 压缩",
+      "role": "加工虎：橙围裙、蓝工作帽",
+      "title": "四格看懂：本地压缩 vs LLM 压缩",
+      "takeaway": "规则整理与模型摘要各有代价；先识别可确定处理的内容，再验证摘要。",
+      "originalHtmlSha256": "d4bf7f952f85159489da253ef265dbe47da8f6c2e28a9229cfb181f53c36941c",
+      "panels": [
+        {
+          "label": "规则处理明确冗余",
+          "text": "去重、裁剪和模板替换适合结构清楚的内容。",
+          "alt": "加工虎用模板框整理一排重复图案卡。"
+        },
+        {
+          "label": "模型摘要概括语义",
+          "text": "复杂讨论可以概括，但可能漏掉或改写重要信息。",
+          "alt": "加工虎让机器人将长稿整理为短卡，原稿仍在旁边。"
+        },
+        {
+          "label": "按实际情况组合",
+          "text": "比较容量、时延、费用与信息价值后选择处理顺序。",
+          "alt": "加工虎在两条整理流水线前比较沙漏、硬币和资料卡。"
+        },
+        {
+          "label": "压缩后核验",
+          "text": "对照原文测试关键要求，不能只看变短了多少。",
+          "alt": "加工虎将短卡与原稿并排，用铅笔补回遗漏的星形约束。"
+        }
+      ],
+      "scenePrompt": "角色：加工虎：橙围裙、蓝工作帽。四格动作依次是：第1格：加工虎用模板框整理一排重复图案卡。 第2格：加工虎让机器人将长稿整理为短卡，原稿仍在旁边。 第3格：加工虎在两条整理流水线前比较沙漏、硬币和资料卡。 第4格：加工虎将短卡与原稿并排，用铅笔补回遗漏的星形约束。"
+    },
+    {
+      "file": "9-15.html",
+      "sourceArtifact": "exec-6d3c0b34-8945-41bb-8a19-7a9203f06704.png",
+      "slug": "practice-context-versus-memory",
+      "lessonTitle": "上下文 ≠ 记忆",
+      "role": "记录虎：青绿开衫、橙领结",
+      "title": "四格看懂：上下文 ≠ 记忆",
+      "takeaway": "本次上下文与跨会话存储是两层机制；需要应用保存、取回和更新信息。",
+      "originalHtmlSha256": "fa0e665c16fbdc3425bd4eeeaa3601216618b165a6442b96c18b23540f9385bd",
+      "panels": [
+        {
+          "label": "上下文是当前工作区",
+          "text": "模型本次使用的是送入调用的消息与资料。",
+          "alt": "记录虎在白板前摆好本次任务的资料卡。"
+        },
+        {
+          "label": "持久记录在外部",
+          "text": "跨会话信息由应用按规则存入笔记或数据库。",
+          "alt": "记录虎将经过确认的资料卡装进带书签的笔记本。"
+        },
+        {
+          "label": "需要时取回信息",
+          "text": "下一次任务挑选相关记录，重新加入可见上下文。",
+          "alt": "记录虎从笔记本取出一张相关卡，放回工作桌。"
+        },
+        {
+          "label": "两层都要管理",
+          "text": "处理容量、准确性、时效和访问范围，允许修订与删除。",
+          "alt": "记录虎对照白板与笔记本更新一张旧卡，旁边有上锁档案柜。"
+        }
+      ],
+      "scenePrompt": "角色：记录虎：青绿开衫、橙领结。四格动作依次是：第1格：记录虎在白板前摆好本次任务的资料卡。 第2格：记录虎将经过确认的资料卡装进带书签的笔记本。 第3格：记录虎从笔记本取出一张相关卡，放回工作桌。 第4格：记录虎对照白板与笔记本更新一张旧卡，旁边有上锁档案柜。"
+    },
+    {
+      "file": "9-16.html",
+      "sourceArtifact": "exec-491acb3e-1e3f-4339-b59d-2ceb525fa1c6.png",
+      "slug": "practice-memory-gatekeeper",
+      "lessonTitle": "什么值得记、什么不值得记",
+      "role": "守库虎：蓝马甲、圆眼镜",
+      "title": "四格看懂：什么值得记、什么不值得记",
+      "takeaway": "只保存获准且对后续任务有价值的信息，避免堆积无关、敏感或过期内容。",
+      "originalHtmlSha256": "1adb5a16e292b71a7bc5851808bd689fcf7fb701bdbb0eccaf798c3df76dd99d",
+      "panels": [
+        {
+          "label": "不是每条都值得存",
+          "text": "回应语、一次性问题与重复内容可能没有长期价值。",
+          "alt": "守库虎从多张空白闲聊卡中挑出一张有明确偏好图标的卡。"
+        },
+        {
+          "label": "确认价值与权限",
+          "text": "判断是否确实需要、是否获准保存及以后如何使用。",
+          "alt": "守库虎在档案入口对照偏好卡与授权框卡。"
+        },
+        {
+          "label": "保存来源和时间",
+          "text": "让事实能追查，避免把不确定推测当作用户偏好。",
+          "alt": "守库虎给资料卡加上来源书签与时钟图标标签。"
+        },
+        {
+          "label": "定期修订与清理",
+          "text": "提供查看、更正和删除途径，处理过期记录。",
+          "alt": "守库虎与用户虎共同检查档案，将一张过期卡移入待处理托盘。"
+        }
+      ],
+      "scenePrompt": "角色：守库虎：蓝马甲、圆眼镜。四格动作依次是：第1格：守库虎从多张空白闲聊卡中挑出一张有明确偏好图标的卡。 第2格：守库虎在档案入口对照偏好卡与授权框卡。 第3格：守库虎给资料卡加上来源书签与时钟图标标签。 第4格：守库虎与用户虎共同检查档案，将一张过期卡移入待处理托盘。"
+    },
+    {
+      "file": "9-17.html",
+      "sourceArtifact": "exec-fd3ddaa8-0954-45a3-a04b-a01257d2c53a.png",
+      "slug": "practice-memory-conflict",
+      "lessonTitle": "记忆冲突：用户改了主意怎么办",
+      "role": "调解虎：米色西装、青绿领带",
+      "title": "四格看懂：记忆冲突：用户改了主意怎么办",
+      "takeaway": "根据新旧关系选择更新、合并、标记冲突或暂不保存。",
+      "originalHtmlSha256": "3ce3c0196aba5c1fe5ddf95e37644dab759438deb921c926f3bcca534e09c246",
+      "panels": [
+        {
+          "label": "明确变化就更新",
+          "text": "用户清楚表达新的偏好时，更新当前有效记录。",
+          "alt": "调解虎把咖啡图标卡放入旧档案层，将茶杯图标卡放到当前层。"
+        },
+        {
+          "label": "信息互补可合并",
+          "text": "新信息补充旧信息时，保留两者的适用条件。",
+          "alt": "调解虎把工作日与周末图标卡并排装进同一个资料夹。"
+        },
+        {
+          "label": "不确定时标记冲突",
+          "text": "来源或时间关系不清时，保留疑问并请求确认。",
+          "alt": "调解虎将方向相反的两张卡放到带问号的待核对托盘。"
+        },
+        {
+          "label": "证据不足先不存",
+          "text": "不要把猜测或一次性表述固化成长期事实。",
+          "alt": "调解虎把模糊空白卡留在桌外，档案柜中只放确认过的资料。"
+        }
+      ],
+      "scenePrompt": "角色：调解虎：米色西装、青绿领带。四格动作依次是：第1格：调解虎把咖啡图标卡放入旧档案层，将茶杯图标卡放到当前层。 第2格：调解虎把工作日与周末图标卡并排装进同一个资料夹。 第3格：调解虎将方向相反的两张卡放到带问号的待核对托盘。 第4格：调解虎把模糊空白卡留在桌外，档案柜中只放确认过的资料。"
+    },
+    {
+      "file": "9-18.html",
+      "sourceArtifact": "exec-996ac9b4-98e6-4d52-855d-f4dd2b953c7a.png",
+      "slug": "practice-memory-retrieval-budget",
+      "lessonTitle": "记忆注入的成本问题",
+      "role": "档案虎：青绿制服、橙帽子",
+      "title": "四格看懂：记忆注入的成本问题",
+      "takeaway": "按需取回相关记忆可控制输入量，但必须检查漏检、过期与权限问题。",
+      "originalHtmlSha256": "dd08c965b17f869d38a80b8bacb9310875dd2224b07d6f8e4e40494d704edc38",
+      "panels": [
+        {
+          "label": "全量搬来会拥挤",
+          "text": "记忆增长后，每次全部注入会增加成本与噪声。",
+          "alt": "档案虎试图把整柜文件搬上小工作桌，桌面已经堆满。"
+        },
+        {
+          "label": "依据任务检索",
+          "text": "按当前问题找候选记录，再筛选必要内容。",
+          "alt": "档案虎拿着问题卡从柜中挑出带相关书签的资料。"
+        },
+        {
+          "label": "控制数量与时效",
+          "text": "去重、检查有效性，并把必要依据放入本次输入。",
+          "alt": "档案虎将过期时钟卡与重复卡移开，留下几张相关资料。"
+        },
+        {
+          "label": "评测是否漏掉关键项",
+          "text": "观察答案能否利用重要记忆，必要时补取或确认。",
+          "alt": "档案虎对照目标卡发现缺口，返回档案柜取出一张关键卡。"
+        }
+      ],
+      "scenePrompt": "角色：档案虎：青绿制服、橙帽子。四格动作依次是：第1格：档案虎试图把整柜文件搬上小工作桌，桌面已经堆满。 第2格：档案虎拿着问题卡从柜中挑出带相关书签的资料。 第3格：档案虎将过期时钟卡与重复卡移开，留下几张相关资料。 第4格：档案虎对照目标卡发现缺口，返回档案柜取出一张关键卡。"
+    }
+  ]
+}

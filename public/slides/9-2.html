@@ -51,15 +51,17 @@
 <!--seo:begin--><meta property="og:description" content="用户说「示例角色 在阳台发呆」。生图模型需要的是一长段精确的视觉描述，光这句话远远不够。中间有一个翻译步骤：用 LLM 把人话翻译成生图语言。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">AI 生图</div>
-    <h1>用 AI 给 AI 写 Prompt</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>用 AI 给 AI 写 Prompt</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>用 AI 给 AI 写 Prompt</h1>
     <p class="subtitle">用户说「示例角色 在阳台发呆」。生图模型需要的是一长段精确的视觉描述，光这句话远远不够。中间有一个翻译步骤：用 LLM 把人话翻译成生图语言。</p>
-  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>用户说「画个夕阳下的猫」，生图模型需要的是完全不同的描述，解法是用 LLM 做翻译</p></aside><!--seo:end-->  <div class="sec-label">示例一：阳台发呆</div>
+  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>用户说「画个夕阳下的猫」，生图模型需要的是完全不同的描述，解法是用 LLM 做翻译</p></aside><section class="lesson-comic" data-lesson-comic="9-2.html"><noscript><h2>四格看懂：用 AI 给 AI 写 Prompt</h2><img src="assets/comics/practice-prompt-translation.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：用 AI 给 AI 写 Prompt"><ol><li><b>先收集原始意图</b>：说明主体、动作、环境与用途，不清楚的地方先澄清。</li><li><b>整理成视觉说明</b>：将主体特征、构图、风格与光线组织成清楚描述。</li><li><b>核对有没有加戏</b>：检查转换后的要求是否新增不需要的角色或细节。</li><li><b>生成后对照修改</b>：把实际图片与原始需求比较，再做具体调整。</li></ol><p>让文字模型整理视觉需求时，保留用户意图和明确限制，再检查图片。</p></noscript></section><!--seo:end-->  <div class="sec-label">示例一：阳台发呆</div>
 
   <div class="translate-flow" id="flow1">
     <div class="flow-card" id="f1-step1">

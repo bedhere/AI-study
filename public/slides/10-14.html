@@ -92,15 +92,17 @@
 <!--seo:begin--><meta property="og:title" content="Session 不等于 Context Window"><meta property="og:description" content="两个最容易混淆的概念：Claude 当前能看到的，和所有发生过的事。它们必须分离。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">长运行 Agent</div>
-    <h1>Session 不等于 Context Window</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Session 不等于 Context Window</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Session 不等于 Context Window</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">两个最容易混淆的概念：Claude 当前能看到的，和所有发生过的事。它们必须分离。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>会话日志是持久的事件流、上下文窗口是临时的工作记忆，两者必须分离</p></aside><!--seo:end-->  <div class="sec-label">两个容易混淆的概念</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>会话日志是持久的事件流、上下文窗口是临时的工作记忆，两者必须分离</p></aside><section class="lesson-comic" data-lesson-comic="10-14.html"><noscript><h2>四格看懂：Session 不等于 Context Window</h2><img src="assets/comics/engineering-session-context.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Session 不等于 Context Window"><ol><li><b>日志记录过程</b>：会话事件保留可追溯的请求、工具结果和状态变化。</li><li><b>窗口选择当前所需</b>：上下文窗口是本轮模型能看到的有限输入。</li><li><b>压缩可能丢细节</b>：摘要有取舍，需要时应能回查获准保留的原始记录。</li><li><b>记录也需治理</b>：按权限、保留期限和隐私要求管理日志及重建过程。</li></ol><p>持久事件记录与当前模型输入承担不同职责。</p></noscript></section><!--seo:end-->  <div class="sec-label">两个容易混淆的概念</div>
 
   <div class="concept-pair reveal">
     <div class="concept-box ctx">

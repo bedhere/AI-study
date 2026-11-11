@@ -1,0 +1,183 @@
+{
+  "total": 193,
+  "panels": 772,
+  "webpAssets": 965,
+  "catalogTotal": 445,
+  "remaining": 252,
+  "originalBodiesPreserved": 131,
+  "previousManifestRecordsPreserved": 62,
+  "baseline": "2aa7dd0",
+  "allPanelsDecoded": true,
+  "maxFourPanelKiB": 201.7,
+  "fourPanelBytes": 27652036,
+  "batches": [
+    {
+      "batch": "20261111-complete-engineering-a",
+      "count": 15
+    },
+    {
+      "batch": "20261111-complete-harness-a",
+      "count": 18
+    },
+    {
+      "batch": "20261111-complete-harness-b",
+      "count": 22
+    },
+    {
+      "batch": "20261111-complete-harness-c",
+      "count": 22
+    },
+    {
+      "batch": "20261111-complete-opening",
+      "count": 17
+    },
+    {
+      "batch": "20261111-complete-practical-a",
+      "count": 19
+    },
+    {
+      "batch": "20261111-complete-practical-b",
+      "count": 18
+    }
+  ],
+  "parts": [
+    {
+      "id": "p-start",
+      "title": "开始之前",
+      "total": 7,
+      "comics": 7
+    },
+    {
+      "id": "p-learn",
+      "title": "AI 教我学习：把它当老师用",
+      "total": 11,
+      "comics": 11
+    },
+    {
+      "id": "p0",
+      "title": "写给第一次接触 AI 的你",
+      "total": 42,
+      "comics": 42
+    },
+    {
+      "id": "p1",
+      "title": "大模型是怎么来的",
+      "total": 19,
+      "comics": 19
+    },
+    {
+      "id": "p2",
+      "title": "AI Harness",
+      "total": 62,
+      "comics": 62
+    },
+    {
+      "id": "p3",
+      "title": "实战 · 从 Demo 到产品",
+      "total": 37,
+      "comics": 37
+    },
+    {
+      "id": "p4",
+      "title": "进阶 · AI 工程设计模式",
+      "total": 22,
+      "comics": 15
+    },
+    {
+      "id": "p5",
+      "title": "Harness 与自我改进",
+      "total": 9,
+      "comics": 0
+    },
+    {
+      "id": "p7",
+      "title": "Vibe Coding 方法论",
+      "total": 14,
+      "comics": 0
+    },
+    {
+      "id": "p-taste",
+      "title": "审美工程：让 AI 做出有品味的东西",
+      "total": 12,
+      "comics": 0
+    },
+    {
+      "id": "p-ixd",
+      "title": "交互工程：让 AI 做出好用的东西",
+      "total": 10,
+      "comics": 0
+    },
+    {
+      "id": "p-psy",
+      "title": "AI 产品心理学：让用户觉得好用",
+      "total": 19,
+      "comics": 0
+    },
+    {
+      "id": "p-cost",
+      "title": "Token 降本增效：AI 应用的成本工程",
+      "total": 13,
+      "comics": 0
+    },
+    {
+      "id": "p-ds",
+      "title": "数据结构：AI 世界的骨架",
+      "total": 13,
+      "comics": 0
+    },
+    {
+      "id": "p-algo",
+      "title": "算法：AI 的思考方式",
+      "total": 15,
+      "comics": 0
+    },
+    {
+      "id": "p6",
+      "title": "解剖 Grok Build：Rust 写的生产级 Coding Agent",
+      "total": 25,
+      "comics": 0
+    },
+    {
+      "id": "p-dsh",
+      "title": "解剖 DeepSeek Harness：一切皆插件的 Agent 底座",
+      "total": 29,
+      "comics": 0
+    },
+    {
+      "id": "p-codex",
+      "title": "解剖 OpenAI Codex：把安全观写进类型系统",
+      "total": 32,
+      "comics": 0
+    },
+    {
+      "id": "p-oss",
+      "title": "开源、蒸馏与本地部署",
+      "total": 9,
+      "comics": 0
+    },
+    {
+      "id": "p-exam",
+      "title": "七套篇章自测 · 350 道题",
+      "total": 9,
+      "comics": 0
+    },
+    {
+      "id": "p9",
+      "title": "一人公司 OPC",
+      "total": 16,
+      "comics": 0
+    },
+    {
+      "id": "p-seo",
+      "title": "被搜到：SEO 与 GEO",
+      "total": 6,
+      "comics": 0
+    },
+    {
+      "id": "p8",
+      "title": "雷军创业课",
+      "total": 14,
+      "comics": 0
+    }
+  ]
+}

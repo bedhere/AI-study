@@ -103,15 +103,17 @@
 <!--seo:begin--><meta property="og:description" content="业界已验证有效的五种 Workflow 编排模式。它们由简到繁，每种解决特定类型的问题。不追求最复杂的，追求最合适的。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">Agent 设计模式</div>
-    <h1>五种 Workflow 模式</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>五种 Workflow 模式</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>五种 Workflow 模式</h1>
     <p class="subtitle">业界已验证有效的五种 Workflow 编排模式。它们由简到繁，每种解决特定类型的问题。不追求最复杂的，追求最合适的。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Prompt Chaining / Routing / Parallelization / Orchestrator-Workers / Evaluator-Optimizer</p></aside><!--seo:end-->  <!-- Pattern 1 -->
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Prompt Chaining / Routing / Parallelization / Orchestrator-Workers / Evaluator-Optimizer</p></aside><section class="lesson-comic" data-lesson-comic="10-2.html"><noscript><h2>四格看懂：五种 Workflow 模式</h2><img src="assets/comics/engineering-five-workflows.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：五种 Workflow 模式"><ol><li><b>顺序串联与分类分流</b>：提示链逐步传递结果；路由把不同输入交给合适分支。</li><li><b>独立任务并行</b>：把互不依赖的任务同时处理，再检查并汇总结果。</li><li><b>按任务动态拆分</b>：编排者根据当前需求决定子任务，再整合各自输出。</li><li><b>评估后迭代</b>：生成结果，按明确标准评价，再修改并设置停止条件。</li></ol><p>五种工作流分别组织顺序、分流、并行、动态拆分与反馈迭代。</p></noscript></section><!--seo:end-->  <!-- Pattern 1 -->
   <div class="sec-label">Pattern 1</div>
   <div class="pattern-card reveal">
     <div class="p-header">

@@ -37,15 +37,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson bd-page">
 
   <header class="lesson-header">
     <div class="kicker">动手实战 · 你现在能做什么</div>
-    <h1>让它从「会说」变成「会做」：接上第一个工具</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>让它从「会说」变成「会做」：接上第一个工具</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>让它从「会说」变成「会做」：接上第一个工具</h1>
     <p class="subtitle">提示词已经能稳定生成草稿，下一步是让工具真正执行一个动作。先接入一个可核验、可撤销或可人工接管的操作，不追求工具数量。</p>
-  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>工具调用闭环四段演示；三档任务：选定工具、写三行描述、跑通闭环并故意搞一次破坏</p></aside><!--seo:end-->  <!-- ── 主线定位 ── -->
+  </header><aside class="xa-tldr company-example-note"><p>本页中的助手、角色与流程为教学示例，用于解释技术原理，不代表方片已上线产品或真实项目业绩。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>工具调用闭环四段演示；三档任务：选定工具、写三行描述、跑通闭环并故意搞一次破坏</p></aside><section class="lesson-comic" data-lesson-comic="build-3.html"><noscript><h2>四格看懂：让它从「会说」变成「会做」：接上第一个工具</h2><img src="assets/comics/practice-first-tool-loop.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：让它从「会说」变成「会做」：接上第一个工具"><ol><li><b>挑好第一个工具</b>：范围要小、输入输出清楚，优先选择可核验的操作。</li><li><b>定义与校验请求</b>：说明工具用途和参数，错误输入要能明确拒绝。</li><li><b>实际执行并记录</b>：确认权限后运行工具，区分成功、失败和超时。</li><li><b>结果回传再回答</b>：把工具结果交回模型，检查用户看到的回复是否有依据。</li></ol><p>从高频、低后果且能核验的工具开始，跑通请求、校验、执行和回传。</p></noscript></section><!--seo:end-->  <!-- ── 主线定位 ── -->
   <div class="bd-here">
     <div class="bd-here-cap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>

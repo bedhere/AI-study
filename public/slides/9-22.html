@@ -90,15 +90,17 @@
 <!--seo:begin--><meta property="og:description" content="KV Cache 的规则极其简单：前缀一模一样就命中，差一个字就全部重算。所以，往 System Prompt 里插入任何动态内容，都可能让缓存永远打不中。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Prompt Harness</div>
-    <h1>提示词和缓存的微妙关系</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>提示词和缓存的微妙关系</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>提示词和缓存的微妙关系</h1>
     <p class="subtitle">KV Cache 的规则极其简单：前缀一模一样就命中，差一个字就全部重算。所以，往 System Prompt 里插入任何动态内容，都可能让缓存永远打不中。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>改一个字 System Prompt，整条 KV Cache 作废。怎么减少手抖的成本</p></aside><!--seo:end-->  <div class="sec-label">指纹变了 = 缓存作废</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>改一个字 System Prompt，整条 KV Cache 作废。怎么减少手抖的成本</p></aside><section class="lesson-comic" data-lesson-comic="9-22.html"><noscript><h2>四格看懂：提示词和缓存的微妙关系</h2><img src="assets/comics/practice-prompt-cache-layout.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：提示词和缓存的微妙关系"><ol><li><b>找出稳定部分</b>：将固定说明与可复用资料组织清楚。</li><li><b>变化的位置有影响</b>：动态内容插入较早位置，可能减少可复用的前缀。</li><li><b>结构服务任务与复用</b>：按接口支持组织模块，不能为缓存丢掉必要信息。</li><li><b>验证实际命中与质量</b>：部分前缀能否复用、费用如何变化，都以实际数据核对。</li></ol><p>稳定前缀有利于复用，动态内容与工具变动的影响需按服务规则实测。</p></noscript></section><!--seo:end-->  <div class="sec-label">指纹变了 = 缓存作废</div>
 
   <div class="hash-demo reveal">
     <h4>每次请求，系统会对 System Prompt 算一个指纹（hash）</h4>

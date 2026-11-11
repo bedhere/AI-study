@@ -1,0 +1,646 @@
+
+> sites-project@0.1.0 pretest
+> node scripts/build-search-index.mjs
+
+{
+  "localSearchIndexes": [
+    {
+      "language": "zh",
+      "documents": 445,
+      "bytes": 3440201,
+      "gzipBytes": 1333540
+    },
+    {
+      "language": "en",
+      "documents": 399,
+      "bytes": 3268686,
+      "gzipBytes": 1062164
+    },
+    {
+      "language": "ko",
+      "documents": 399,
+      "bytes": 3789833,
+      "gzipBytes": 1198339
+    },
+    {
+      "language": "tw",
+      "documents": 466,
+      "bytes": 3547349,
+      "gzipBytes": 1366323
+    },
+    {
+      "language": "hk",
+      "documents": 466,
+      "bytes": 3532516,
+      "gzipBytes": 1373802
+    }
+  ]
+}
+
+> sites-project@0.1.0 test
+> node --test tests/local-learning.test.mjs tests/personality.test.mjs tests/aiti.test.mjs tests/company-paths.test.mjs tests/home-motion.test.mjs tests/robot-scene.test.mjs tests/mbti-entry.test.mjs tests/aiti-collection.test.mjs tests/certificate.test.mjs tests/employee-feedback.test.mjs tests/comics-and-navigation.test.mjs tests/spring-strap.test.mjs
+
+TAP version 13
+# Subtest: new visitors have sixteen locked personalities and no generated own result or code
+ok 1 - new visitors have sixteen locked personalities and no generated own result or code
+  ---
+  duration_ms: 5.2955
+  type: 'test'
+  ...
+# Subtest: reference-site card codes decode without translating their public profile IDs
+ok 2 - reference-site card codes decode without translating their public profile IDs
+  ---
+  duration_ms: 2.0234
+  type: 'test'
+  ...
+# Subtest: completing a result unlocks only the own tiger and preserves its code across reload and rerender
+ok 3 - completing a result unlocks only the own tiger and preserves its code across reload and rerender
+  ---
+  duration_ms: 2.3102
+  type: 'test'
+  ...
+# Subtest: a changed quiz result creates the new own code without losing previously met tigers
+ok 4 - a changed quiz result creates the new own code without losing previously met tigers
+  ---
+  duration_ms: 1.4032
+  type: 'test'
+  ...
+# Subtest: a valid friend code unlocks one tiger, while duplicate, own, and same-profile codes do not increase count
+ok 5 - a valid friend code unlocks one tiger, while duplicate, own, and same-profile codes do not increase count
+  ---
+  duration_ms: 1.4461
+  type: 'test'
+  ...
+# Subtest: invalid checksums, nonexistent IDs, and ambiguous letters never mutate saved collection
+ok 6 - invalid checksums, nonexistent IDs, and ambiguous letters never mutate saved collection
+  ---
+  duration_ms: 2.2479
+  type: 'test'
+  ...
+# Subtest: malformed and unknown-version state cannot manufacture a result or damage the original quiz record
+ok 7 - malformed and unknown-version state cannot manufacture a result or damage the original quiz record
+  ---
+  duration_ms: 3.4569
+  type: 'test'
+  ...
+# Subtest: the collection remains bounded to sixteen profiles and returned state is isolated from caller mutation
+ok 8 - the collection remains bounded to sixteen profiles and returned state is isolated from caller mutation
+  ---
+  duration_ms: 4.2105
+  type: 'test'
+  ...
+# Subtest: blocked and quota-exhausted storage retain this-page collection and notify only once
+ok 9 - blocked and quota-exhausted storage retain this-page collection and notify only once
+  ---
+  duration_ms: 2.4132
+  type: 'test'
+  ...
+# Subtest: AITI uses exactly the four requested equally weighted dimensions and 16 items
+ok 10 - AITI uses exactly the four requested equally weighted dimensions and 16 items
+  ---
+  duration_ms: 2.7715
+  type: 'test'
+  ...
+# Subtest: all sixteen binary combinations reach exactly one of the specified personalities
+ok 11 - all sixteen binary combinations reach exactly one of the specified personalities
+  ---
+  duration_ms: 1.3482
+  type: 'test'
+  ...
+# Subtest: continuous averages are retained, including threshold and near-boundary values
+ok 12 - continuous averages are retained, including threshold and near-boundary values
+  ---
+  duration_ms: 0.3619
+  type: 'test'
+  ...
+# Subtest: neutral and endpoint answers still yield positive named profiles without a ranking
+ok 13 - neutral and endpoint answers still yield positive named profiles without a ranking
+  ---
+  duration_ms: 0.3597
+  type: 'test'
+  ...
+# Subtest: incomplete, sparse, legacy-length and invalid answers cannot be scored
+ok 14 - incomplete, sparse, legacy-length and invalid answers cannot be scored
+  ---
+  duration_ms: 0.8401
+  type: 'test'
+  ...
+# Subtest: draft, cursor and completion survive reload independently of old MBTI/DISC storage
+ok 15 - draft, cursor and completion survive reload independently of old MBTI/DISC storage
+  ---
+  duration_ms: 0.8845
+  type: 'test'
+  ...
+# Subtest: malformed and unknown-version records recover without inventing a result
+ok 16 - malformed and unknown-version records recover without inventing a result
+  ---
+  duration_ms: 1.9603
+  type: 'test'
+  ...
+# Subtest: unavailable or quota-exhausted storage preserves this-page answers and reports failure
+ok 17 - unavailable or quota-exhausted storage preserves this-page answers and reports failure
+  ---
+  duration_ms: 0.5658
+  type: 'test'
+  ...
+# Subtest: all reference images match the recorded source hashes and named character mappings
+ok 18 - all reference images match the recorded source hashes and named character mappings
+  ---
+  duration_ms: 39.7695
+  type: 'test'
+  ...
+# Subtest: the old entry redirects, DISC remains separate, and all five homepages point at AITI
+ok 19 - the old entry redirects, DISC remains separate, and all five homepages point at AITI
+  ---
+  duration_ms: 10.3433
+  type: 'test'
+  ...
+# Subtest: certificate eligibility counts only real unique lessons, including legacy language aliases
+ok 20 - certificate eligibility counts only real unique lessons, including legacy language aliases
+  ---
+  duration_ms: 3.4512
+  type: 'test'
+  ...
+# Subtest: incomplete learning cannot issue a certificate and never writes a completion record
+ok 21 - incomplete learning cannot issue a certificate and never writes a completion record
+  ---
+  duration_ms: 1.7694
+  type: 'test'
+  ...
+# Subtest: claiming persists a named certificate and repeat claims keep its identifier and date
+ok 22 - claiming persists a named certificate and repeat claims keep its identifier and date
+  ---
+  duration_ms: 3.4409
+  type: 'test'
+  ...
+# Subtest: course versions and languages do not inherit an unrelated certificate
+ok 23 - course versions and languages do not inherit an unrelated certificate
+  ---
+  duration_ms: 0.609
+  type: 'test'
+  ...
+# Subtest: blocked and quota-exhausted storage retain a usable this-page certificate without claiming persistence
+ok 24 - blocked and quota-exhausted storage retain a usable this-page certificate without claiming persistence
+  ---
+  duration_ms: 0.7517
+  type: 'test'
+  ...
+# Subtest: invalid names and malformed saved certificates do not become issued records
+ok 25 - invalid names and malformed saved certificates do not become issued records
+  ---
+  duration_ms: 1.0485
+  type: 'test'
+  ...
+# Subtest: five home and certificate pages load the shared runtime and their own real course catalog
+ok 26 - five home and certificate pages load the shared runtime and their own real course catalog
+  ---
+  duration_ms: 11.4588
+  type: 'test'
+  ...
+# Subtest: every graduation plan resolves completely in all five language catalogs
+ok 27 - every graduation plan resolves completely in all five language catalogs
+  ---
+  duration_ms: 80.7511
+  type: 'test'
+  ...
+# Subtest: different routes cannot inherit a certificate and missing required content blocks claiming
+ok 28 - different routes cannot inherit a certificate and missing required content blocks claiming
+  ---
+  duration_ms: 2.7999
+  type: 'test'
+  ...
+# Subtest: certificate records have a bounded history and never persist rendered images
+ok 29 - certificate records have a bounded history and never persist rendered images
+  ---
+  duration_ms: 6.4359
+  type: 'test'
+  ...
+# Subtest: closed navigation allows the reader and generated image downloads while blocking outside origins
+ok 30 - closed navigation allows the reader and generated image downloads while blocking outside origins
+  ---
+  duration_ms: 3.938
+  type: 'test'
+  ...
+# Subtest: scripted popups and late external links cannot bypass the navigation guard
+ok 31 - scripted popups and late external links cannot bypass the navigation guard
+  ---
+  duration_ms: 3.223
+  type: 'test'
+  ...
+# Subtest: all accepted illustrated lessons have exactly four accessible panels with small local assets
+ok 32 - all accepted illustrated lessons have exactly four accessible panels with small local assets
+  ---
+  duration_ms: 244.9655
+  type: 'test'
+  ...
+# Subtest: the hallucination sample does not claim models can never express uncertainty
+ok 33 - the hallucination sample does not claim models can never express uncertainty
+  ---
+  duration_ms: 1.2734
+  type: 'test'
+  ...
+# Subtest: three employee roles have distinct starts that actually belong to their learning routes
+ok 34 - three employee roles have distinct starts that actually belong to their learning routes
+  ---
+  duration_ms: 62.2436
+  type: 'test'
+  ...
+# Subtest: explicit role links override a saved route without changing course progress
+ok 35 - explicit role links override a saved route without changing course progress
+  ---
+  duration_ms: 3.1561
+  type: 'test'
+  ...
+# Subtest: legacy roles, invalid URLs and unavailable storage have defined fallbacks
+ok 36 - legacy roles, invalid URLs and unavailable storage have defined fallbacks
+  ---
+  duration_ms: 2.0088
+  type: 'test'
+  ...
+# Subtest: all homepages and route pages expose the same three actionable role links
+ok 37 - all homepages and route pages expose the same three actionable role links
+  ---
+  duration_ms: 33.1113
+  type: 'test'
+  ...
+# Subtest: the old assistant lesson now describes the source-reading lesson it actually opens
+ok 38 - the old assistant lesson now describes the source-reading lesson it actually opens
+  ---
+  duration_ms: 8.5162
+  type: 'test'
+  ...
+# Subtest: product history and unavailable assistant features have explicit replacement content
+ok 39 - product history and unavailable assistant features have explicit replacement content
+  ---
+  duration_ms: 3.5111
+  type: 'test'
+  ...
+# Subtest: the external-link guard tolerates a document being replaced during navigation
+ok 40 - the external-link guard tolerates a document being replaced during navigation
+  ---
+  duration_ms: 3.7642
+  type: 'test'
+  ...
+# Subtest: comment publishing requires a local identity and survives reload, logout and sign-in
+ok 41 - comment publishing requires a local identity and survives reload, logout and sign-in
+  ---
+  duration_ms: 8.4029
+  type: 'test'
+  ...
+# Subtest: small bounded records reject invalid inputs, preserve prior data on quota failure and never store images
+ok 42 - small bounded records reject invalid inputs, preserve prior data on quota failure and never store images
+  ---
+  duration_ms: 29.5352
+  type: 'test'
+  ...
+# Subtest: malformed saved data cannot become a profile or a comment
+ok 43 - malformed saved data cannot become a profile or a comment
+  ---
+  duration_ms: 1.1096
+  type: 'test'
+  ...
+# Subtest: home shows the sign-in entry even without initial comments, and excludes unapproved records
+ok 44 - home shows the sign-in entry even without initial comments, and excludes unapproved records
+  ---
+  duration_ms: 5.0147
+  type: 'test'
+  ...
+# Subtest: comment text stays text, external avatars are rejected and expansion is accessible
+ok 45 - comment text stays text, external avatars are rejected and expansion is accessible
+  ---
+  duration_ms: 2.8802
+  type: 'test'
+  ...
+# Subtest: the sign-in and comment forms publish only after persistence succeeds
+ok 46 - the sign-in and comment forms publish only after persistence succeeds
+  ---
+  duration_ms: 39.6119
+  type: 'test'
+  ...
+# Subtest: seven configured profiles have small local avatars and the old preview wording is removed
+ok 47 - seven configured profiles have small local avatars and the old preview wording is removed
+  ---
+  duration_ms: 4.1091
+  type: 'test'
+  ...
+# Subtest: pointer tracking maps the whole viewport, including the nav and both sides of the certificate
+ok 48 - pointer tracking maps the whole viewport, including the nav and both sides of the certificate
+  ---
+  duration_ms: 4.9747
+  type: 'test'
+  ...
+# Subtest: the short scroll path fades the robot continuously without an empty pinned slide
+ok 49 - the short scroll path fades the robot continuously without an empty pinned slide
+  ---
+  duration_ms: 2.2823
+  type: 'test'
+  ...
+# Subtest: the actual camera filter has equal response at 30 and 120 fps
+ok 50 - the actual camera filter has equal response at 30 and 120 fps
+  ---
+  duration_ms: 2.634
+  type: 'test'
+  ...
+# Subtest: five language homepages preserve learning controls and all three real employee routes
+ok 51 - five language homepages preserve learning controls and all three real employee routes
+  ---
+  duration_ms: 15.7546
+  type: 'test'
+  ...
+# Subtest: homepage preview uses the original AITI collection and leaves scoring to the existing test
+ok 52 - homepage preview uses the original AITI collection and leaves scoring to the existing test
+  ---
+  duration_ms: 9.12
+  type: 'test'
+  ...
+# Subtest: scroll handlers avoid layout reads, wheel interception and recurring accessibility writes
+ok 53 - scroll handlers avoid layout reads, wheel interception and recurring accessibility writes
+  ---
+  duration_ms: 1.1392
+  type: 'test'
+  ...
+# Subtest: normal-flow content stays available without motion or a WebGL renderer
+ok 54 - normal-flow content stays available without motion or a WebGL renderer
+  ---
+  duration_ms: 3.5243
+  type: 'test'
+  ...
+# Subtest: reader routes preserve quiz mode and reject malformed or unrelated modes
+ok 55 - reader routes preserve quiz mode and reject malformed or unrelated modes
+  ---
+  duration_ms: 4.6394
+  type: 'test'
+  ...
+# Subtest: mark, reload, undo and last lesson persist across page instances
+ok 56 - mark, reload, undo and last lesson persist across page instances
+  ---
+  duration_ms: 3.4975
+  type: 'test'
+  ...
+# Subtest: legacy localized keys migrate and do not double count a lesson
+ok 57 - legacy localized keys migrate and do not double count a lesson
+  ---
+  duration_ms: 1.3149
+  type: 'test'
+  ...
+# Subtest: saving one language does not erase progress in lessons absent from that language
+ok 58 - saving one language does not erase progress in lessons absent from that language
+  ---
+  duration_ms: 1.2888
+  type: 'test'
+  ...
+# Subtest: blocked storage keeps this session usable without claiming persistence
+ok 59 - blocked storage keeps this session usable without claiming persistence
+  ---
+  duration_ms: 1.275
+  type: 'test'
+  ...
+# Subtest: malformed, array and unsafe legacy records cannot become course progress
+ok 60 - malformed, array and unsafe legacy records cannot become course progress
+  ---
+  duration_ms: 6.136
+  type: 'test'
+  ...
+# Subtest: same-tab writes and cross-tab storage changes notify readers
+ok 61 - same-tab writes and cross-tab storage changes notify readers
+  ---
+  duration_ms: 1.476
+  type: 'test'
+  ...
+# Subtest: exam results remain local and keep the most recent 50 attempts
+ok 62 - exam results remain local and keep the most recent 50 attempts
+  ---
+  duration_ms: 26.0561
+  type: 'test'
+  ...
+# Subtest: full current curriculum progress and bounded scores stay within small storage budgets
+ok 63 - full current curriculum progress and bounded scores stay within small storage budgets
+  ---
+  duration_ms: 39.1262
+  type: 'test'
+  ...
+# Subtest: oversized progress stays usable in memory without overwriting the previous small saved record
+ok 64 - oversized progress stays usable in memory without overwriting the previous small saved record
+  ---
+  duration_ms: 11.1944
+  type: 'test'
+  ...
+# Subtest: local full-text search normalizes queries, supports terms and caches one index load
+ok 65 - local full-text search normalizes queries, supports terms and caches one index load
+  ---
+  duration_ms: 2.6756
+  type: 'test'
+  ...
+# Subtest: failed index requests are retryable rather than cached as empty results
+ok 66 - failed index requests are retryable rather than cached as empty results
+  ---
+  duration_ms: 1.2302
+  type: 'test'
+  ...
+# Subtest: generated indexes cover exactly the curriculum of each open language
+ok 67 - generated indexes cover exactly the curriculum of each open language
+  ---
+  duration_ms: 158.4508
+  type: 'test'
+  ...
+# Subtest: the independent MBTI entry defaults to MBTI without redirecting to AITI
+ok 68 - the independent MBTI entry defaults to MBTI without redirecting to AITI
+  ---
+  duration_ms: 4.0505
+  type: 'test'
+  ...
+# Subtest: valid MBTI result hashes are retained and DISC hashes use the independent DISC page
+ok 69 - valid MBTI result hashes are retained and DISC hashes use the independent DISC page
+  ---
+  duration_ms: 5.6073
+  type: 'test'
+  ...
+# Subtest: the entry loads the original 32-question MBTI renderer rather than the AITI questionnaire
+ok 70 - the entry loads the original 32-question MBTI renderer rather than the AITI questionnaire
+  ---
+  duration_ms: 6.006
+  type: 'test'
+  ...
+# Subtest: completed original MBTI answers open their existing tiger result and unfinished result links return to the quiz
+ok 71 - completed original MBTI answers open their existing tiger result and unfinished result links return to the quiz
+  ---
+  duration_ms: 14.2152
+  type: 'test'
+  ...
+# Subtest: new page navigation returns to school or the independent DISC page
+ok 72 - new page navigation returns to school or the independent DISC page
+  ---
+  duration_ms: 1.5322
+  type: 'test'
+  ...
+# Subtest: the page keeps its MBTI label as the shared renderer replaces questions and results
+ok 73 - the page keeps its MBTI label as the shared renderer replaces questions and results
+  ---
+  duration_ms: 1.2779
+  type: 'test'
+  ...
+# Subtest: entry resources are local and present, while existing AITI and legacy routing remain separate
+ok 74 - entry resources are local and present, while existing AITI and legacy routing remain separate
+  ---
+  duration_ms: 7.124
+  type: 'test'
+  ...
+# Subtest: all sixteen preference combinations produce their corresponding tiger
+ok 75 - all sixteen preference combinations produce their corresponding tiger
+  ---
+  duration_ms: 4.7078
+  type: 'test'
+  ...
+# Subtest: balanced answers are reported without manufacturing a clear type
+ok 76 - balanced answers are reported without manufacturing a clear type
+  ---
+  duration_ms: 0.6081
+  type: 'test'
+  ...
+# Subtest: each DISC preference wins when its balanced positive and negative items agree
+ok 77 - each DISC preference wins when its balanced positive and negative items agree
+  ---
+  duration_ms: 0.9406
+  type: 'test'
+  ...
+# Subtest: incomplete and out-of-range responses cannot produce a result
+ok 78 - incomplete and out-of-range responses cannot produce a result
+  ---
+  duration_ms: 1.2299
+  type: 'test'
+  ...
+# Subtest: stored records are sanitized and cannot bypass completion
+ok 79 - stored records are sanitized and cannot bypass completion
+  ---
+  duration_ms: 0.5717
+  type: 'test'
+  ...
+# Subtest: partial ties preserve the unclear dimension and never turn into another exact type
+ok 80 - partial ties preserve the unclear dimension and never turn into another exact type
+  ---
+  duration_ms: 0.4577
+  type: 'test'
+  ...
+# Subtest: every result has a local tiger image and all homepage entries point at the actual test
+ok 81 - every result has a local tiger image and all homepage entries point at the actual test
+  ---
+  duration_ms: 13.1538
+  type: 'test'
+  ...
+# Subtest: the classic local bundle exposes a mount API and degrades without WebGL
+ok 82 - the classic local bundle exposes a mount API and degrades without WebGL
+  ---
+  duration_ms: 42.7054
+  type: 'test'
+  ...
+# Subtest: three scroll phases preserve bounded camera poses and introduce the quote face
+ok 83 - three scroll phases preserve bounded camera poses and introduce the quote face
+  ---
+  duration_ms: 10.8249
+  type: 'test'
+  ...
+# Subtest: pointer damping converges consistently at 30, 60 and 120 fps
+ok 84 - pointer damping converges consistently at 30, 60 and 120 fps
+  ---
+  duration_ms: 6.1529
+  type: 'test'
+  ...
+# Subtest: large pointer looks cover both sides while preserving a front-facing head in every scroll pose
+ok 85 - large pointer looks cover both sides while preserving a front-facing head in every scroll pose
+  ---
+  duration_ms: 17.6444
+  type: 'test'
+  ...
+# Subtest: real production head rotation keeps all four corner elevations symmetric and uncompressed
+ok 86 - real production head rotation keeps all four corner elevations symmetric and uncompressed
+  ---
+  duration_ms: 7.2503
+  type: 'test'
+  ...
+# Subtest: pointer entry at the centre, leaving, coarse input and reduced motion resolve independently
+ok 87 - pointer entry at the centre, leaving, coarse input and reduced motion resolve independently
+  ---
+  duration_ms: 5.6432
+  type: 'test'
+  ...
+# Subtest: entering and leaving the large follow smoothly converges at every supported frame rate
+ok 88 - entering and leaving the large follow smoothly converges at every supported frame rate
+  ---
+  duration_ms: 8.4446
+  type: 'test'
+  ...
+# Subtest: background raster work stays within a bounded pixel and shadow budget
+ok 89 - background raster work stays within a bounded pixel and shadow budget
+  ---
+  duration_ms: 5.6905
+  type: 'test'
+  ...
+# Subtest: idle rendering is capped at 30fps while scroll and pointer changes retain frame-by-frame response
+ok 90 - idle rendering is capped at 30fps while scroll and pointer changes retain frame-by-frame response
+  ---
+  duration_ms: 7.0189
+  type: 'test'
+  ...
+# Subtest: actual head rotation and centre-entry blending bypass the idle frame-rate cap
+ok 91 - actual head rotation and centre-entry blending bypass the idle frame-rate cap
+  ---
+  duration_ms: 6.6755
+  type: 'test'
+  ...
+# Subtest: stationary poses reuse one shadow map and scrolling requests at most low-frequency refreshes
+ok 92 - stationary poses reuse one shadow map and scrolling requests at most low-frequency refreshes
+  ---
+  duration_ms: 7.6663
+  type: 'test'
+  ...
+# Subtest: large pointer turns can refresh their shadow within the existing low-frequency budget
+ok 93 - large pointer turns can refresh their shadow within the existing low-frequency budget
+  ---
+  duration_ms: 7.671
+  type: 'test'
+  ...
+# Subtest: the mutable internal pose buffer preserves the public pose contract without per-frame arrays
+ok 94 - the mutable internal pose buffer preserves the public pose contract without per-frame arrays
+  ---
+  duration_ms: 5.3032
+  type: 'test'
+  ...
+# Subtest: blink intervals stay in the requested range with no random render-path state
+ok 95 - blink intervals stay in the requested range with no random render-path state
+  ---
+  duration_ms: 12.8091
+  type: 'test'
+  ...
+# Subtest: the pinned dependency provenance, bundle hash and local SVG fallbacks are intact
+ok 96 - the pinned dependency provenance, bundle hash and local SVG fallbacks are intact
+  ---
+  duration_ms: 9.5659
+  type: 'test'
+  ...
+# Subtest: release has a bounded spring overshoot and settles instead of drifting
+ok 97 - release has a bounded spring overshoot and settles instead of drifting
+  ---
+  duration_ms: 3.1801
+  type: 'test'
+  ...
+# Subtest: the same spring has equal response at 30, 60 and 120 frames per second
+ok 98 - the same spring has equal response at 30, 60 and 120 frames per second
+  ---
+  duration_ms: 0.5202
+  type: 'test'
+  ...
+# Subtest: curvature stays visible but never grows into a deep hanging loop
+ok 99 - curvature stays visible but never grows into a deep hanging loop
+  ---
+  duration_ms: 0.4312
+  type: 'test'
+  ...
+1..99
+# tests 99
+# suites 0
+# pass 99
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 431.2351

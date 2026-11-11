@@ -118,15 +118,17 @@
 <!--seo:begin--><meta property="og:description" content="工具写得好不好，Agent 最有发言权。业界验证了一套「用 Agent 写工具 → 跑评测 → 自动优化」的工作流，让工具设计从手工打磨变成系统化迭代。"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">工具设计的艺术</div>
-    <h1>用 Agent 优化 Agent 的工具</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>用 Agent 优化 Agent 的工具</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>用 Agent 优化 Agent 的工具</h1>
     <p class="subtitle">工具写得好不好，Agent 最有发言权。业界验证了一套「用 Agent 写工具 &rarr; 跑评测 &rarr; 自动优化」的工作流，让工具设计从手工打磨变成系统化迭代。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Claude Code 实践：用 AI 写工具描述、跑评测、自动迭代优化</p></aside><!--seo:end-->  <!-- ===== 核心思路 ===== -->
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Claude Code 实践：用 AI 写工具描述、跑评测、自动迭代优化</p></aside><section class="lesson-comic" data-lesson-comic="10-7.html"><noscript><h2>四格看懂：用 Agent 优化 Agent 的工具</h2><img src="assets/comics/engineering-tool-improvement-loop.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：用 Agent 优化 Agent 的工具"><ol><li><b>先做小原型</b>：明确工具目标，建立最小可用的名称、参数和实现。</li><li><b>用真实任务评测</b>：观察是否选对工具、参数有效、结果可理解且任务完成。</li><li><b>分析失败原因</b>：区分描述歧义、实现错误、返回过载和能力缺口。</li><li><b>修改后再比较</b>：在获准范围内迭代，并用保留用例检查泛化与退化。</li></ol><p>用原型、评测和失败分析迭代工具设计。</p></noscript></section><!--seo:end-->  <!-- ===== 核心思路 ===== -->
   <div class="sec-label">核心思路</div>
 
   <div class="l-callout reveal">

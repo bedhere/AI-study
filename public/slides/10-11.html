@@ -90,15 +90,17 @@
 <!--seo:begin--><meta property="og:title" content="为什么 Agent 跑不了长任务"><meta property="og:description" content="让 Agent 构建一个完整 Web 应用看似简单，但现实中充满了交接失败和上下文断裂的陷阱。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">长运行 Agent</div>
-    <h1>为什么 Agent 跑不了长任务</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>为什么 Agent 跑不了长任务</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>为什么 Agent 跑不了长任务</h1>
     <p class="subtitle">让 Agent 构建一个完整 Web 应用看似简单，但现实中充满了交接失败和上下文断裂的陷阱。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>一口气做太多、做完就收工，两种典型失败模式</p></aside><!--seo:end-->  <div class="sec-label">问题背景</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>一口气做太多、做完就收工，两种典型失败模式</p></aside><section class="lesson-comic" data-lesson-comic="10-11.html"><noscript><h2>四格看懂：为什么 Agent 跑不了长任务</h2><img src="assets/comics/engineering-long-task-handoff.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：为什么 Agent 跑不了长任务"><ol><li><b>一次做太多会失序</b>：大任务缺少分解时，容易留下难以接续的半成品。</li><li><b>部分完成不等于结束</b>：看到几个成功结果，还要核对完整任务范围。</li><li><b>逐项推进并验收</b>：拆成可检查步骤，完成一项就记录结果和证据。</li><li><b>留下可恢复的交接</b>：记录已完成、未完成、关键决定和环境状态。</li></ol><p>长任务依靠增量推进、明确状态和实际验收。</p></noscript></section><!--seo:end-->  <div class="sec-label">问题背景</div>
 
   <div class="scenario-box reveal">
     <div class="scenario-label">给 Agent 的高层提示</div>
