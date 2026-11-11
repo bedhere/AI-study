@@ -40,4 +40,8 @@
 
 ## 同步状态
 
-本轮 GitHub 同步结果在完成提交后记录。服务器通过既有指定私钥执行只读连接检查时返回 `Permission denied (publickey,password)`，本对话没有取得可用 SSH 认证，因此没有上传或切换线上版本，也没有猜测密码或把凭据写入仓库。线上仍以此前已发布版本为准，本地十篇已可用。
+功能提交 `207fe98bca7b20fbb1f35d94fcf56525a5eda6e3` 已推送到 GitHub `bedhere/AI-study` 的 `main`。本记录和当前进度另随文档提交同步。
+
+完整部署包已生成并逐项回读验证 3399 个文件（含 release 元数据）：`outputs/selfhost/comics-20261111/fangpian-xuetang-20261111-095531.tar.gz`，204346179 字节，SHA-256 为 `239755a2265129f1d73fa40e6ee4fdcb2ba132c2fe47fc4c4dcde2dbab7377ae`。包内不含私钥、环境文件、Git 或依赖目录。
+
+服务器通过既有指定私钥执行只读连接检查时返回 `Permission denied (publickey,password)`，本对话没有取得可用 SSH 认证，因此没有上传或切换线上版本，也没有猜测密码或把凭据写入仓库。线上仍以此前已发布版本为准，本地十篇已可用。
