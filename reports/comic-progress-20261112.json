@@ -2,13 +2,13 @@
   "date": "2026-11-12",
   "baseline": "b7dee1875f12de989c9132ddad5795a3729c1b5d",
   "total": 445,
-  "completed": 330,
-  "remaining": 115,
-  "coveragePercent": 74.2,
-  "panels": 1320,
-  "webpFiles": 1650,
-  "newStories": 137,
-  "newArticleBodiesPreserved": 137,
+  "completed": 342,
+  "remaining": 103,
+  "coveragePercent": 76.9,
+  "panels": 1368,
+  "webpFiles": 1710,
+  "newStories": 149,
+  "newArticleBodiesPreserved": 149,
   "previousProvenanceUnchanged": 193,
   "maxPanelKiB": 201.7,
   "chapters": [
@@ -128,8 +128,8 @@
       "id": "p-dsh",
       "title": "解剖 DeepSeek Harness：一切皆插件的 Agent 底座",
       "total": 29,
-      "completed": 0,
-      "remaining": 29
+      "completed": 12,
+      "remaining": 17
     },
     {
       "id": "p-codex",
@@ -179,90 +179,6 @@
       "id": "p-dsh",
       "title": "解剖 DeepSeek Harness：一切皆插件的 Agent 底座",
       "lessons": [
-        {
-          "file": "dsh-1.html",
-          "title": "一切皆插件：官宣与源码对照",
-          "desc": "发布文里说的四种模式、插件生态，在 deepseek-harness 仓库里对应哪个文件？本课一条条对上。",
-          "tag": "架构",
-          "navTitle": "一切皆插件：官宣与源码对照"
-        },
-        {
-          "file": "dsh-6.html",
-          "title": "Profile / Bundle / Patch：用户能把产品改到什么程度",
-          "desc": "不改源码也能换掉深层能力：配置由四层 patch 对着空数组叠出来，晚应用的赢，命中同一条就整条替换。",
-          "tag": "架构",
-          "navTitle": "Profile / Bundle / Patch：用户能把产品改到什么程度"
-        },
-        {
-          "file": "dsh-2.html",
-          "title": "Model-visible ⟺ logged：一条会崩给你看的不变量",
-          "desc": "模型看到的一切都要能从日志重建，发请求前还要现场验一遍，验不过直接崩。",
-          "tag": "深入",
-          "navTitle": "Model-visible ⟺ logged：一条会崩给你看的不变量"
-        },
-        {
-          "file": "dsh-3.html",
-          "title": "followup / steer / inject：双队列 Inbox",
-          "desc": "Agent 正在干活时你想说句话，消息该排哪条队、什么时候被处理。三个 API 共用一个 send()，只差两个参数。",
-          "tag": "交互",
-          "navTitle": "followup / steer / inject：双队列 Inbox"
-        },
-        {
-          "file": "dsh-7.html",
-          "title": "Esc 之后发生了什么：取消、崩溃恢复与重入",
-          "desc": "每轮一个取消信号，中断也要把账记平，kill -9 之后重启还能接着跑，已落盘的劳动成果一条不丢。",
-          "tag": "深入",
-          "navTitle": "Esc 之后发生了什么：取消、崩溃恢复与重入"
-        },
-        {
-          "file": "dsh-8.html",
-          "title": "Goal：消息溯源即权限",
-          "desc": "长期目标谁有权改，鉴权不读消息正文，只认宿主盖在事件元数据上的来源章。本课讲这个设计背后的两层思路。",
-          "tag": "设计模式",
-          "navTitle": "Goal：消息溯源即权限"
-        },
-        {
-          "file": "dsh-4.html",
-          "title": "Compaction 双路径与 replaceGeneration",
-          "desc": "上下文快满了就主动收拾，真撑爆了就先收拾再重试。重试前先对一遍世代号，收拾没起效就不许重试。",
-          "tag": "深入",
-          "navTitle": "Compaction 双路径与 replaceGeneration"
-        },
-        {
-          "file": "dsh-9.html",
-          "title": "Token 计量：决策用重放，展示用投影",
-          "desc": "两套计量各干各的，压缩决策从不信 UI 上那个数。核心源码：packages/llm/token-meter/src/usage-projection.ts。",
-          "tag": "概念",
-          "navTitle": "Token 计量：决策用重放，展示用投影"
-        },
-        {
-          "file": "dsh-10.html",
-          "title": "Spill：工具输出太大怎么办",
-          "desc": "超限输出落盘存档，给模型留一张取回凭证。核心源码：packages/spill/spill-policy/src/index.ts。",
-          "tag": "实战",
-          "navTitle": "Spill：工具输出太大怎么办"
-        },
-        {
-          "file": "dsh-11.html",
-          "title": "会话检索与跨会话引用",
-          "desc": "旧会话是可检索的资料库，引用还能带出处。核心源码：packages/session-query/ 与 packages/context/session-reference/。",
-          "tag": "深入",
-          "navTitle": "会话检索与跨会话引用"
-        },
-        {
-          "file": "dsh-12.html",
-          "title": "工具执行流水线：三段瀑布与单调 Guard",
-          "desc": "pre-execute 到 post-execute 的三段管线，Guard 只能收紧不能放行。核心源码：packages/core/tools/src/index.ts。",
-          "tag": "架构",
-          "navTitle": "工具执行流水线：三段瀑布与单调 Guard"
-        },
-        {
-          "file": "dsh-13.html",
-          "title": "工具输出契约：值与展示分离",
-          "desc": "同一个结果，模型看的和人看的可以不一样。核心源码：packages/core/tools/src/index.ts 与 presentation.ts。",
-          "tag": "设计模式",
-          "navTitle": "工具输出契约：值与展示分离"
-        },
         {
           "file": "dsh-14.html",
           "title": "文件编辑的工程学：先读后写",

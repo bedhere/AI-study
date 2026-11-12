@@ -1,6 +1,6 @@
 # 漫画补全进度（2026-11-12）
 
-从交接时的 193 篇继续，今日累计新增 **137 篇、548 格**。简体中文目录共 445 篇，已接入 **330 篇、1320 格**，覆盖率 **74.2%**，剩余 **115 篇**。
+从交接时的 193 篇继续，今日累计新增 **149 篇、596 格**。简体中文目录共 445 篇，已接入 **342 篇、1368 格**，覆盖率 **76.9%**，剩余 **103 篇**。
 
 当前仍在继续生成；完成一个批次只作为保存与验证检查点。
 
@@ -11,6 +11,7 @@
 | [comic-complete-algorithms-20261112](comic-complete-algorithms-20261112.json) | 15 |
 | [comic-complete-cost-20261112](comic-complete-cost-20261112.json) | 13 |
 | [comic-complete-data-structures-20261112](comic-complete-data-structures-20261112.json) | 13 |
+| [comic-complete-deepseek-a-20261112](comic-complete-deepseek-a-20261112.json) | 12 |
 | [comic-complete-engineering-b-20261112](comic-complete-engineering-b-20261112.json) | 7 |
 | [comic-complete-grok-a-20261112](comic-complete-grok-a-20261112.json) | 12 |
 | [comic-complete-grok-b-20261112](comic-complete-grok-b-20261112.json) | 13 |
@@ -43,7 +44,7 @@
 | 数据结构：AI 世界的骨架 | 13 | 13 | 0 |
 | 算法：AI 的思考方式 | 15 | 15 | 0 |
 | 解剖 Grok Build：Rust 写的生产级 Coding Agent | 25 | 25 | 0 |
-| 解剖 DeepSeek Harness：一切皆插件的 Agent 底座 | 0 | 29 | 29 |
+| 解剖 DeepSeek Harness：一切皆插件的 Agent 底座 | 12 | 29 | 17 |
 | 解剖 OpenAI Codex：把安全观写进类型系统 | 0 | 32 | 32 |
 | 开源、蒸馏与本地部署 | 0 | 9 | 9 |
 | 七套篇章自测 · 350 道题 | 0 | 9 | 9 |
@@ -64,14 +65,14 @@
 
 ## 最新验证
 
-- npm test：99/99。见 [测试记录](../reports/comic-330-tests-20261112.log)。
-- verify:content：无错误。见 [内容记录](../reports/comic-330-content-20261112.log)。
-- check:resources：无缺失引用。见 [资源记录](../reports/comic-330-resources-20261112.log)。
-- check:cleanup：无遗留问题。见 [清理记录](../reports/comic-330-cleanup-20261112.log)。
-- 全部 1650 个 WebP 已解码核对尺寸；单篇四格最大 201.7 KiB，均低于 250 KiB。
-- 对照基线 b7dee1875f12de989c9132ddad5795a3729c1b5d，新增 137 篇正文在去除漫画插入与旧封面后保持一致（忽略空白）；原 193 篇来源记录保持一致。
+- npm test：99/99。见 [测试记录](../reports/comic-342-tests-20261112.log)。
+- verify:content：无错误。见 [内容记录](../reports/comic-342-content-20261112.log)。
+- check:resources：无缺失引用。见 [资源记录](../reports/comic-342-resources-20261112.log)。
+- check:cleanup：无遗留问题。见 [清理记录](../reports/comic-342-cleanup-20261112.log)。
+- 全部 1710 个 WebP 已解码核对尺寸；单篇四格最大 201.7 KiB，均低于 250 KiB。
+- 对照基线 b7dee1875f12de989c9132ddad5795a3729c1b5d，新增 149 篇正文在去除漫画插入与旧封面后保持一致（忽略空白）；原 193 篇来源记录保持一致。
 - 浏览器已抽查桌面四列、390×844 手机两列和逐格讲解；继续复用相同组件。
 
 ## 发布边界
 
-本地仓库 330 篇，沿用授权分批提交和推送 main。服务器仍为已发布的 193 篇，本次持续生成尚未执行服务器部署。部署背景见 [193 篇部署记录](server-comics-193-20261111.md)。
+本地仓库 342 篇，沿用授权分批提交和推送 main。服务器仍为已发布的 193 篇，本次持续生成尚未执行服务器部署。部署背景见 [193 篇部署记录](server-comics-193-20261111.md)。
