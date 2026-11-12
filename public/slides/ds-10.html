@@ -114,15 +114,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">编程基础篇 · 大模型肚子里的数据结构</div>
-    <h1>向量：RAG 检索是在「找最近的邻居」</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>向量：RAG 检索是在「找最近的邻居」</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>向量：RAG 检索是在「找最近的邻居」</h1>
     <p class="subtitle">学 RAG 时我们说过：Embedding 把一段话变成一串数字。这串数字到底是什么？答案简单得出奇——<b>是坐标</b>。给每句话发一个「语义地图」上的位置，意思越近、位置越近。于是「检索资料」这件事，就变成了小学生都会的游戏：<b>在地图上找离你最近的邻居</b>。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Embedding 把语义变成坐标，相似度就是距离。在平面上拖动查询点看最近邻怎么变，再看 HNSW 为什么能在亿级向量里瞬间找到</p></aside><!--seo:end-->  <div class="sec-label">先玩地图 · 语义相近 = 坐标相邻</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Embedding 把语义变成坐标，相似度就是距离。在平面上拖动查询点看最近邻怎么变，再看 HNSW 为什么能在亿级向量里瞬间找到</p></aside><section class="lesson-comic" data-lesson-comic="ds-10.html"><noscript><h2>四格看懂：向量：RAG 检索是在「找最近的邻居」</h2><img src="assets/comics/ds-vector-neighbors-and-relevance.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：向量：RAG 检索是在「找最近的邻居」"><ol><li><b>内容映射为向量</b>：向量可以类比语义地图上的坐标，但相似程度依模型和度量。</li><li><b>查询也进入同一空间</b>：按选定相似度寻找候选资料，不保证候选都能回答问题。</li><li><b>索引减少搜索范围</b>：HNSW 等近似索引借助分层图搜索，效率与召回存在取舍。</li><li><b>检索之后检查证据</b>：结合过滤、重排与原文核对，评估召回、延迟及答案质量。</li></ol><p>Embedding 支持相似检索；近邻不是事实证明，近似索引需要衡量召回与延迟。</p></noscript></section><!--seo:end-->  <div class="sec-label">先玩地图 · 语义相近 = 坐标相邻</div>
 
   <p style="font-size:15px;color:var(--sub);margin-bottom:16px;">下面是一张迷你语义地图：12 个词已经被 Embedding 安排好了座位，自然聚成三个「街区」。<b style="color:var(--text)">拖动黑色的 ❓ 查询点</b>（或点击地图任意位置放置它），留意：连线永远指向<b style="color:var(--text)">最近的 3 个词</b>，距离实时变化，最近的那个戴 👑。把 ❓ 拖到两个街区中间，看看邻居怎么换人。</p>
 
