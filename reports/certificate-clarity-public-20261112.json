@@ -1,0 +1,553 @@
+{
+  "base": "https://111.228.5.133",
+  "sourceCommit": "a833ac6876515b9e41cf0a8bb002109a28ad8196",
+  "verifiedFiles": 77,
+  "allMatch": true,
+  "files": [
+    {
+      "path": "slides/0-how.html",
+      "status": 200,
+      "bytes": 17210,
+      "sha256": "1ce5e438431f0d7e12bc7a66d96272749f00dd35cb3a1fba99a6ab4ac02bd5c9",
+      "matches": true
+    },
+    {
+      "path": "slides/0-intro.html",
+      "status": 200,
+      "bytes": 10278,
+      "sha256": "1e7b77d3d71680bff692cd3c50f937b3eec8f6c86bd769a337a47546af3f4d36",
+      "matches": true
+    },
+    {
+      "path": "slides/0-why.html",
+      "status": 200,
+      "bytes": 13087,
+      "sha256": "7af73eea1c1b7e04f82af72608400c24fdf14fc2a21baa12a0c30e4a84a2cb49",
+      "matches": true
+    },
+    {
+      "path": "slides/academy-brand.css",
+      "status": 200,
+      "bytes": 3096,
+      "sha256": "d0b193580ffd3cba209caa5f2a987e3e6a2e1f98601f8fb9d2126306d3177976",
+      "matches": true
+    },
+    {
+      "path": "slides/academy-knowledge.html",
+      "status": 200,
+      "bytes": 3986,
+      "sha256": "1dd4e366b083e5e03f426e1ddae34dd73cb0aebbda53e022e2ad39602b2099aa",
+      "matches": true
+    },
+    {
+      "path": "slides/academy-practice.html",
+      "status": 200,
+      "bytes": 4406,
+      "sha256": "7827a54f3b45e39b4dc41ff5fd2265bb018a77c1b6346efcf694451c969d9862",
+      "matches": true
+    },
+    {
+      "path": "slides/academy-review.html",
+      "status": 200,
+      "bytes": 4129,
+      "sha256": "909d1057cfc94b4b43622f277aa5ec04ad6211a914bc1cafe048c2a86a873700",
+      "matches": true
+    },
+    {
+      "path": "slides/academy-samples.js",
+      "status": 200,
+      "bytes": 1002,
+      "sha256": "90bb76d35aae190d7cf9fe558cdc3149c79dbca7f5b58b87fe8a43c308ff7867",
+      "matches": true
+    },
+    {
+      "path": "slides/aiti-collection.js",
+      "status": 200,
+      "bytes": 5491,
+      "sha256": "a41233e75c180fe491678dfb6f21bc263467878d54a718bb3f9329171539fda2",
+      "matches": true
+    },
+    {
+      "path": "slides/aiti-data.js",
+      "status": 200,
+      "bytes": 13545,
+      "sha256": "d99ae85597d91a670893851dc1dd20af9e4db5bba125639923f10c35e21e400a",
+      "matches": true
+    },
+    {
+      "path": "slides/aiti.css",
+      "status": 200,
+      "bytes": 24235,
+      "sha256": "1bc366031ec390325f8efc8bd4b8a5ecbd7382e9b613879bc18c7c50afd81ab2",
+      "matches": true
+    },
+    {
+      "path": "slides/aiti.html",
+      "status": 200,
+      "bytes": 3300,
+      "sha256": "b4f91b313ce9cc2eff3c2ba543bb4a42bd813c6bd0bf7d9a3c468c38e8d60ad5",
+      "matches": true
+    },
+    {
+      "path": "slides/aiti.js",
+      "status": 200,
+      "bytes": 27543,
+      "sha256": "5a31784c66cd9fa44467a136791d3d099ad82e071ed3ada5f232cfac298c725c",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/01_赛博诸葛.png",
+      "status": 200,
+      "bytes": 759247,
+      "sha256": "c3968f2b461343548d99dc70f6ecb00732cb99bb55653dd23cde4886370f492e",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/02_Prompt法师.png",
+      "status": 200,
+      "bytes": 891344,
+      "sha256": "30158dcd9f91671406d5e17ebc5b7ab65c90508652a7b39f351854db54457400",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/03_AI炼金术士.png",
+      "status": 200,
+      "bytes": 731315,
+      "sha256": "f0613eb41fdb12a6872ad3809c447f9c56da7cd8ad1c2953a435ce1c71c0e035",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/04_人机搭子王.png",
+      "status": 200,
+      "bytes": 676234,
+      "sha256": "bb48d6daa45d5279681213cd6e899f76907a931f0129a87082c586a8ddd1aa03",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/05_脑洞永动机.png",
+      "status": 200,
+      "bytes": 789551,
+      "sha256": "42514b8afafbecd5e893efd3bc60b59eed0be1d17b369f5dd38e209e8589002a",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/06_数字鲁班.png",
+      "status": 200,
+      "bytes": 735265,
+      "sha256": "735cf6b5f013dded3096cfc11c31a1408ef67cb3f2bd29da78a658932ad2996a",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/07_AI开荒者.png",
+      "status": 200,
+      "bytes": 625610,
+      "sha256": "38318cef61011cba5fa2f3695db9eba28cd022cedca77c5980daf52b8a9ea4b8",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/08_善意放大器.png",
+      "status": 200,
+      "bytes": 655408,
+      "sha256": "150ea16cdbd55d1cfdb93517bab2ac074382526fcb60ecbf6672deb3de1c3b98",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/09_反幻觉侦探.png",
+      "status": 200,
+      "bytes": 750765,
+      "sha256": "f0004dc711c3d56c2dec88d50eb530a3f46f29121fbb680ba7406241bbb34309",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/10_效率开挂虎.png",
+      "status": 200,
+      "bytes": 782888,
+      "sha256": "0098716a32ccf4ceefd2c91f43513a0ee97d7ff952f4287be00e23d0e8dd513f",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/11_灵感捕手.png",
+      "status": 200,
+      "bytes": 663390,
+      "sha256": "660f46355b2e409a23fded96109361c9df576c3cc51927884ac76ae558f27d4a",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/12_共创带飞王.png",
+      "status": 200,
+      "bytes": 766670,
+      "sha256": "2fe41f34a8cdf3dda4f815b17e5672d4f8f2c5c450ae0355d01fa3351b7b06a4",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/13_AI清醒派.png",
+      "status": 200,
+      "bytes": 737931,
+      "sha256": "24e629a62594fd1e311cfd6a85955b66c1268bb983163f36545ccc643cd59423",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/14_疯狂进化虎.png",
+      "status": 200,
+      "bytes": 737382,
+      "sha256": "4d48375f87707dc9f80c128047b5f0eda06f89f58d96fa0e2e4fa24c6a3eb854",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/15_靠谱输出机.png",
+      "status": 200,
+      "bytes": 792188,
+      "sha256": "8705d1cdd7d987f4c8712627d5e684ad62069f32ba710075616bec60df04d962",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/aiti/16_长期主义虎.png",
+      "status": 200,
+      "bytes": 740623,
+      "sha256": "94f4ae7c95e4d6b78d1a82f8c663cb99a57c0835e48fe28d88097a2cff093615",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/comics/manifest.json",
+      "status": 200,
+      "bytes": 227099,
+      "sha256": "9d34e425f7776f49a0b167281977a9f9c721151ba69f167bf9e77b2e896cca46",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/comics/personal-explanation-1.webp",
+      "status": 200,
+      "bytes": 46782,
+      "sha256": "294cff5e355e8f8d8d384bb645c9eb6b2a128d168d956b52427bdba51addff87",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/comics/verify-ai-1.webp",
+      "status": 200,
+      "bytes": 49048,
+      "sha256": "6b766df730523e1e216544c6b7b6df810a926e7240b57cb8a4df00eba7112723",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/fangpian/employee-hongye.webp",
+      "status": 200,
+      "bytes": 1712,
+      "sha256": "55b6440fc574f2162edd89c1bb6b6de3ddfff7b154136b4673f45a2b1619f06a",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/fangpian/employee-lihui.webp",
+      "status": 200,
+      "bytes": 3232,
+      "sha256": "8b34a49e6e83e0cab479566940234ae3e4fe5fe354744623ee48cdcc3c3f1219",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/fangpian/employee-nianhun.webp",
+      "status": 200,
+      "bytes": 2172,
+      "sha256": "090e43e5614699298fc5037e326354eca5470000c6c4f74a97ffdc0ecfc60abd",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/fangpian/employee-orange.webp",
+      "status": 200,
+      "bytes": 2498,
+      "sha256": "7df42499a1affb07bd81b5c5c2d09bec6107472fcdfc99c0b1b41e6402142266",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/fangpian/employee-tingfeng.webp",
+      "status": 200,
+      "bytes": 3168,
+      "sha256": "c35a3a020e7ce283909a42b40c37db5ced8a8122beba44247ee79bd5df5d50fa",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/fangpian/employee-xiaoduan.webp",
+      "status": 200,
+      "bytes": 2340,
+      "sha256": "0abf169572fe8ed57388924ee971ac2e32165d157b762b0cc1db5fa04773309c",
+      "matches": true
+    },
+    {
+      "path": "slides/assets/fangpian/employee-yang-yiming.webp",
+      "status": 200,
+      "bytes": 3082,
+      "sha256": "214db93c1ef30f5f100348885848b904f4873520a3b8d5d6fb28c267844e8e4d",
+      "matches": true
+    },
+    {
+      "path": "slides/certificate-art.js",
+      "status": 200,
+      "bytes": 6285,
+      "sha256": "0ab20e052125d1c76dc3be6a69816ba75144ce999d335667ebb993a11e50d7aa",
+      "matches": true
+    },
+    {
+      "path": "slides/certificate-data.js",
+      "status": 200,
+      "bytes": 7614,
+      "sha256": "e64e01171a9f78dca5acc75d5ae0417a7bd338c35520e8d560a033ff0d87aacb",
+      "matches": true
+    },
+    {
+      "path": "slides/certificate-experience.css",
+      "status": 200,
+      "bytes": 8964,
+      "sha256": "1ac6dbcfee4af247c71de961c449731d261e8c93997ac0d801b73123c6140bef",
+      "matches": true
+    },
+    {
+      "path": "slides/certificate-experience.js",
+      "status": 200,
+      "bytes": 242451,
+      "sha256": "eb9d6f7fbeac162643b0c533d03dc86ff23ba5f757f3295649d890ffb720e8f0",
+      "matches": true
+    },
+    {
+      "path": "slides/certificate.en.html",
+      "status": 200,
+      "bytes": 1450,
+      "sha256": "c319f8c1fc9a31a682d295172eeb758b2732148dbdd351e18a51804e4d40fc04",
+      "matches": true
+    },
+    {
+      "path": "slides/certificate.hk.html",
+      "status": 200,
+      "bytes": 1455,
+      "sha256": "982d3ee0a301c6b6262a3ce9d0c5855a51e6f4b7ba158c2f6991418725161416",
+      "matches": true
+    },
+    {
+      "path": "slides/certificate.html",
+      "status": 200,
+      "bytes": 1447,
+      "sha256": "50fc4fc23156d87bcaf3c26dc5ba48e7daf9e2a908ab72c6e37b6ed42d654068",
+      "matches": true
+    },
+    {
+      "path": "slides/certificate.ko.html",
+      "status": 200,
+      "bytes": 1450,
+      "sha256": "bf22f7d2496205c5e7d80dc1eae6f5e354b4b1567db0221cab057b46e816809e",
+      "matches": true
+    },
+    {
+      "path": "slides/certificate.tw.html",
+      "status": 200,
+      "bytes": 1455,
+      "sha256": "d463efbecb36ed7cbc6b5b4ef7d629ecf46c7e71c35240a409d795d761f9e57a",
+      "matches": true
+    },
+    {
+      "path": "slides/comic-data.js",
+      "status": 200,
+      "bytes": 562777,
+      "sha256": "ff6546dbfaee3e55383ee3c8c6a985442af7f44b859003a1ce7156421e9bdc30",
+      "matches": true
+    },
+    {
+      "path": "slides/employee-feedback-data.js",
+      "status": 200,
+      "bytes": 2861,
+      "sha256": "5623838c875e950594af6de98d076348b1177521d698d1f16cc887b6f479cac4",
+      "matches": true
+    },
+    {
+      "path": "slides/employee-feedback-store.js",
+      "status": 200,
+      "bytes": 3974,
+      "sha256": "5097148bc6dc1adb20d1e4b2313878907ca9afdc5d97577e3c1b112ed52ab234",
+      "matches": true
+    },
+    {
+      "path": "slides/employee-feedback.css",
+      "status": 200,
+      "bytes": 6829,
+      "sha256": "e20c3af0fffe4791afae74a5c27ec3d96e005ed3f86e9e4a2968a53eaf9d673a",
+      "matches": true
+    },
+    {
+      "path": "slides/employee-feedback.js",
+      "status": 200,
+      "bytes": 7727,
+      "sha256": "587872e7c4e35c7774ebc88a1b341eebb62d3ae2072aee0e93b00c8cbc673b3f",
+      "matches": true
+    },
+    {
+      "path": "slides/external-platform-policy.js",
+      "status": 200,
+      "bytes": 2896,
+      "sha256": "620825490ae3cf2ba242babc910ee7ea4262f32b674e486d63a6875c455925f5",
+      "matches": true
+    },
+    {
+      "path": "slides/home-motion.js",
+      "status": 200,
+      "bytes": 8254,
+      "sha256": "0b9e94b5a61e22beb39e1867b66ba3fb5f25ed3f57975bed0d34f2348a0e94ee",
+      "matches": true
+    },
+    {
+      "path": "slides/home.en.html",
+      "status": 200,
+      "bytes": 116327,
+      "sha256": "cf834f75fe65028ee1bb484783130d2fe1c40ce395e38cdaa0174de0dff58aa1",
+      "matches": true
+    },
+    {
+      "path": "slides/home.hk.html",
+      "status": 200,
+      "bytes": 119953,
+      "sha256": "365164fbe22b4b5df03dfd704542ac366c16ddf4c115aba1a1f20434f9416b6e",
+      "matches": true
+    },
+    {
+      "path": "slides/home.html",
+      "status": 200,
+      "bytes": 119856,
+      "sha256": "bdbeb84d42c6438cd5f0a7b9ddc30265667034d81fd26d5590c64668d0b3747a",
+      "matches": true
+    },
+    {
+      "path": "slides/home.ko.html",
+      "status": 200,
+      "bytes": 117986,
+      "sha256": "02d38d841e80134793e0395869693051619a99fca3bf78bd5c035b9a9b8a1ec0",
+      "matches": true
+    },
+    {
+      "path": "slides/home.tw.html",
+      "status": 200,
+      "bytes": 119986,
+      "sha256": "8195e14eba875855bd01934f1fa32bf10adcde2498c64b0a6499c15511257b28",
+      "matches": true
+    },
+    {
+      "path": "slides/learn-3.html",
+      "status": 200,
+      "bytes": 33231,
+      "sha256": "6ec1671a7325b8478b757c302620f98799967b490c6f2aa361240edd063f340b",
+      "matches": true
+    },
+    {
+      "path": "slides/learn.en.html",
+      "status": 200,
+      "bytes": 95933,
+      "sha256": "a0d585c681419fd85b32d9c187a260bf068e291168517b032a9a269da7be19b8",
+      "matches": true
+    },
+    {
+      "path": "slides/learn.hk.html",
+      "status": 200,
+      "bytes": 96099,
+      "sha256": "6237b1bb696a35da94a2292b920a7cdaac7b6725a19023fac70bf3f0a4d7a807",
+      "matches": true
+    },
+    {
+      "path": "slides/learn.html",
+      "status": 200,
+      "bytes": 96020,
+      "sha256": "eeaebc572b8d98ae9394be08952e0c57567039ae69e60b74909a338d0cdb138d",
+      "matches": true
+    },
+    {
+      "path": "slides/learn.ko.html",
+      "status": 200,
+      "bytes": 97086,
+      "sha256": "b2d81ec06c23ffbc5770b14d54296d3816210bb00c4cfa3a3ce2025ba2196521",
+      "matches": true
+    },
+    {
+      "path": "slides/learn.tw.html",
+      "status": 200,
+      "bytes": 96105,
+      "sha256": "12be1b1d22355882fc0c0260b148525cf95103034e7b40f98eb3ecea3ab5326c",
+      "matches": true
+    },
+    {
+      "path": "slides/lesson-comic.css",
+      "status": 200,
+      "bytes": 2154,
+      "sha256": "d2c3e2407c07847fd69aee97c8125246a434c0a4c04a362196ce9e612285bc8f",
+      "matches": true
+    },
+    {
+      "path": "slides/lesson-comic.js",
+      "status": 200,
+      "bytes": 3117,
+      "sha256": "8ee7ffa6452869a6065213a27ad3806411289a78ebdb3d51fd99141329635e03",
+      "matches": true
+    },
+    {
+      "path": "slides/local-learning.js",
+      "status": 200,
+      "bytes": 9505,
+      "sha256": "d3475cb800a5395ea821b4b7f80c4d0c84a6ca53cf987b2da9fc8e33fc5b9623",
+      "matches": true
+    },
+    {
+      "path": "slides/robot-scene.js",
+      "status": 200,
+      "bytes": 15825,
+      "sha256": "badb7828055cf50f98f9aa3694d3e1120a44f6e238bb74d973c0fa7b6b3d71b5",
+      "matches": true
+    },
+    {
+      "path": "slides/search-index.en.json",
+      "status": 200,
+      "bytes": 3268687,
+      "sha256": "90f0bddd99194a92fe5f05c5e9e39d6e6c6fa3a4c4119f0963c5ae7488ab4116",
+      "matches": true
+    },
+    {
+      "path": "slides/search-index.hk.json",
+      "status": 200,
+      "bytes": 3532517,
+      "sha256": "7a50e14212cc0b44e6bc21dec37def1f4ba6d98ef0f42b359dfbdbdf1352d015",
+      "matches": true
+    },
+    {
+      "path": "slides/search-index.ko.json",
+      "status": 200,
+      "bytes": 3789834,
+      "sha256": "eff89da99543b2b169b42944e8750157886268c56f4cd87b3e320f8eece49a17",
+      "matches": true
+    },
+    {
+      "path": "slides/search-index.tw.json",
+      "status": 200,
+      "bytes": 3547350,
+      "sha256": "71d058a932c36cbbe98227ef8f460467e87d3327437534a8b9e4b38ed306e9d7",
+      "matches": true
+    },
+    {
+      "path": "slides/search-index.zh.json",
+      "status": 200,
+      "bytes": 3551194,
+      "sha256": "27b58e0a2805e8666e1df29b2b3a80196caca7c36cdbcf636116c53ab196ec74",
+      "matches": true
+    },
+    {
+      "path": "slides/three-shared.js",
+      "status": 200,
+      "bytes": 507718,
+      "sha256": "b49a026e1479da6ca91415804c29f54284b58a2842b8746bf373ef026a38aece",
+      "matches": true
+    },
+    {
+      "path": "slides/zero-3.html",
+      "status": 200,
+      "bytes": 17634,
+      "sha256": "ebe4a8b8f842e2c0b3291396899ac00eb3e27337eb7664589d87c4543d13b18a",
+      "matches": true
+    }
+  ],
+  "httpChecks": [
+    {
+      "path": "/slides/missing-clarity-file.html",
+      "status": 404
+    }
+  ]
+}
