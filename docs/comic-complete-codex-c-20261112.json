@@ -1,0 +1,291 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-codex-c",
+  "status": "accepted; all 8 article-specific comics integrated and visually reviewed",
+  "evidenceScope": "Actual codex-25 through codex-32 lesson HTML and quoted Codex commit 4f39251a01. Snapshot-specific illustrations, preserving differences between implemented behavior, protocol contracts, and governance. Lesson examples are not commands to execute.",
+  "verificationSources": [
+    "https://developers.openai.com/blog/codex-as-a-platform"
+  ],
+  "lessons": [
+    {
+      "file": "codex-25.html",
+      "slug": "codex-hook-event-contracts",
+      "role": "挂钩虎：青绿工装、橙色帽",
+      "takeaway": "挂钩能改什么由事件合同和生命周期决定，不能按配置名字猜能力。",
+      "panels": [
+        {
+          "label": "识别不等于能运行",
+          "text": "本课协议和配置认得的类型，比实际运行表更宽。",
+          "alt": "挂钩虎拿着几种接口卡检查插座板，只有两种卡能接入亮灯的执行槽。"
+        },
+        {
+          "label": "超时不等于显式拦截",
+          "text": "普通工具前钩子的故障与明确拒绝走不同分支。",
+          "alt": "挂钩虎在分流台把超时沙漏送到继续通道，把明确拒绝卡放到关闭闸门前。"
+        },
+        {
+          "label": "工具前后能力不同",
+          "text": "运行前可按合同改输入或跳过；运行后不能撤销已发生副作用。",
+          "alt": "挂钩虎在前置工作台调整命令卡，后方已写入文件的盒子留在完成区。"
+        },
+        {
+          "label": "拆卸期只做来得及的事",
+          "text": "Stop 的续跑需要对应提示；SessionEnd 则是受限的拆卸通知。",
+          "alt": "挂钩虎收好工作台，在关门前递出一张通知卡，旁边回流管道已经关闭。"
+        }
+      ],
+      "scenePrompt": "角色：挂钩虎：青绿工装、橙色帽。从左到右四格，每格一个完整场景：第1格：挂钩虎拿着几种接口卡检查插座板，只有两种卡能接入亮灯的执行槽。 第2格：挂钩虎在分流台把超时沙漏送到继续通道，把明确拒绝卡放到关闭闸门前。 第3格：挂钩虎在前置工作台调整命令卡，后方已写入文件的盒子留在完成区。 第4格：挂钩虎收好工作台，在关门前递出一张通知卡，旁边回流管道已经关闭。",
+      "originalHtmlSha256": "edd044b9735d82b18ece7304a4605b1e2e896bd77e7611db14dc89f691fadff8",
+      "lessonTitle": "挂钩点能改什么，由事件合同决定",
+      "title": "四格看懂：挂钩点能改什么，由事件合同决定",
+      "sourceArtifact": "exec-1356ad4e-9cf7-43f1-9cf2-114b4a0d1063.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-1356ad4e-9cf7-43f1-9cf2-114b4a0d1063.png"
+    },
+    {
+      "file": "codex-26.html",
+      "slug": "codex-mcp-name-translation",
+      "role": "命名虎：蓝色夹克、米色围巾",
+      "takeaway": "模型工具名经过规范化与消歧，协议调用仍保留原始身份，目录与依赖就绪分开。",
+      "panels": [
+        {
+          "label": "先区分对外入口与内部能力",
+          "text": "本课托管服务入口与会话内部 MCP 工具目录属于不同界面。",
+          "alt": "命名虎在外部门廊查看两只入口卡槽，屋内另外摆着多种工具柜。"
+        },
+        {
+          "label": "给模型看的名字先翻译",
+          "text": "汇总工具后规范字符，原始服务与工具身份另行保留。",
+          "alt": "命名虎把带不同形状边缘的工具卡送过转换门，后方保留配对的原始卡。"
+        },
+        {
+          "label": "撞名或超长再消歧",
+          "text": "规范化后冲突加稳定后缀，调用时仍路由到原服务。",
+          "alt": "命名虎给两张外形相似的卡装上不同纹路的小尾签，再分别连接原来的工具柜。"
+        },
+        {
+          "label": "目录存在不等于依赖就绪",
+          "text": "技能按需读取正文；缺少 MCP 依赖另行处理。",
+          "alt": "命名虎翻开技能目录卡，旁边缺少连接线的工具柜仍处于待接入状态。"
+        }
+      ],
+      "scenePrompt": "角色：命名虎：蓝色夹克、米色围巾。从左到右四格，每格一个完整场景：第1格：命名虎在外部门廊查看两只入口卡槽，屋内另外摆着多种工具柜。 第2格：命名虎把带不同形状边缘的工具卡送过转换门，后方保留配对的原始卡。 第3格：命名虎给两张外形相似的卡装上不同纹路的小尾签，再分别连接原来的工具柜。 第4格：命名虎翻开技能目录卡，旁边缺少连接线的工具柜仍处于待接入状态。",
+      "originalHtmlSha256": "d9874a9349df2d69207008de1e994af2818e14342c2b7980c08c184d2b0ce6ac",
+      "lessonTitle": "MCP 接进来：模型看见翻译过的名字",
+      "title": "四格看懂：MCP 接进来：模型看见翻译过的名字",
+      "sourceArtifact": "exec-d6c2ca9b-8502-4186-9624-742d267971ae.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-d6c2ca9b-8502-4186-9624-742d267971ae.png"
+    },
+    {
+      "file": "codex-27.html",
+      "slug": "codex-migration-field-mapping",
+      "role": "搬家虎：橙色背带裤、青绿围巾",
+      "takeaway": "迁移逐字段决定拷贝、改写或跳过，保留已有目标，并区分回执与后台完成。",
+      "panels": [
+        {
+          "label": "先检测再逐字段映射",
+          "text": "本课导入器按来源与能力白名单处理，不能整目录照搬。",
+          "alt": "搬家虎打开旧配置箱，将不同形状的字段卡摊在检测工作台。"
+        },
+        {
+          "label": "三种出口明确区分",
+          "text": "能对应的原样搬或改写，不能对应的条目明确跳过。",
+          "alt": "搬家虎把字段卡分别放入直通托盘、转换模具和未搬运托盘。"
+        },
+        {
+          "label": "安装权限认清来源",
+          "text": "可执行插件按用户范围处理，仓库设置不能自动取得安装权。",
+          "alt": "搬家虎拿着用户钥匙打开插件柜，来自仓库的小箱仍在检查台等待。"
+        },
+        {
+          "label": "填空并追踪后台结果",
+          "text": "已有目标尽量保留，远程插件和会话导入还需等待后台完成。",
+          "alt": "搬家虎把新卡补入已有配置柜的空槽，旁边后台小车仍运送会话箱和回执卡。"
+        }
+      ],
+      "scenePrompt": "角色：搬家虎：橙色背带裤、青绿围巾。从左到右四格，每格一个完整场景：第1格：搬家虎打开旧配置箱，将不同形状的字段卡摊在检测工作台。 第2格：搬家虎把字段卡分别放入直通托盘、转换模具和未搬运托盘。 第3格：搬家虎拿着用户钥匙打开插件柜，来自仓库的小箱仍在检查台等待。 第4格：搬家虎把新卡补入已有配置柜的空槽，旁边后台小车仍运送会话箱和回执卡。",
+      "originalHtmlSha256": "815a36531348ee8c0f92d072a6707d2f22c26e975cd4e7d676a8f081334246ef",
+      "lessonTitle": "搬家只搬对得上的字段",
+      "title": "四格看懂：搬家只搬对得上的字段",
+      "sourceArtifact": "exec-3f4cc11e-602b-4de4-b815-f471088e4c93.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-3f4cc11e-602b-4de4-b815-f471088e4c93.png"
+    },
+    {
+      "file": "codex-28.html",
+      "slug": "codex-submission-event-queues",
+      "role": "事件虎：紫色马甲、米色衬衣",
+      "takeaway": "命令与事件分两条队列，代码名和 wire 名分开维护，未知事件按边界处理。",
+      "panels": [
+        {
+          "label": "命令从提交队列进入",
+          "text": "本课 Submission 带操作与关联标识，用于内部调度。",
+          "alt": "事件虎把带圆形配对扣的命令信封放进下行队列。"
+        },
+        {
+          "label": "事件从另一队列返回",
+          "text": "Event 可序列化并关联提交，接收回执和生命周期不是同一消息。",
+          "alt": "事件虎从上行队列接住带同款圆扣的事件盒，旁边单独摆着接收回执卡。"
+        },
+        {
+          "label": "改代码名仍守住旧合同",
+          "text": "序列化名称与读入别名分开，让已有数据保持可读。",
+          "alt": "事件虎为同一事件盒装上新的内侧标签板，外侧旧图形标记保持不变。"
+        },
+        {
+          "label": "未知类型要写明落点",
+          "text": "编译期、跨版本 JSON 与日志恢复，各有自己的处理路径。",
+          "alt": "事件虎在三个入口分别查看不匹配卡片，落点为编译门、解码门和记录错误的跳行托盘。"
+        }
+      ],
+      "scenePrompt": "角色：事件虎：紫色马甲、米色衬衣。从左到右四格，每格一个完整场景：第1格：事件虎把带圆形配对扣的命令信封放进下行队列。 第2格：事件虎从上行队列接住带同款圆扣的事件盒，旁边单独摆着接收回执卡。 第3格：事件虎为同一事件盒装上新的内侧标签板，外侧旧图形标记保持不变。 第4格：事件虎在三个入口分别查看不匹配卡片，落点为编译门、解码门和记录错误的跳行托盘。",
+      "originalHtmlSha256": "88e674fd2fa2aa786e61160d4c403c6d27cca1551ed05e0a3b5254ba5d430e82",
+      "lessonTitle": "SQ 进、EQ 出：同一件事两副面孔",
+      "title": "四格看懂：SQ 进、EQ 出：同一件事两副面孔",
+      "sourceArtifact": "exec-0d5622cb-80ac-44eb-889b-872a5f51c49e.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-0d5622cb-80ac-44eb-889b-872a5f51c49e.png"
+    },
+    {
+      "file": "codex-29.html",
+      "slug": "codex-app-server-projection",
+      "role": "协议虎：深蓝马甲、青绿领结",
+      "takeaway": "对外 Thread、Turn、Item 是内核事件投影，请求回执、通知和反向请求分别处理。",
+      "panels": [
+        {
+          "label": "对外协议先经过投影",
+          "text": "本课调度层将内核事件改名、换容器、丢弃或拆开。",
+          "alt": "协议虎将多种内核积木送过投影台，出口出现适合界面卡片的整齐盒子。"
+        },
+        {
+          "label": "接收请求不等于已经开跑",
+          "text": "turn/start 回响应，真正启动再由后续通知表达。",
+          "alt": "协议虎先收到回执卡，身后的工作轨道仍待启动灯亮起。"
+        },
+        {
+          "label": "审批需要反向回包",
+          "text": "服务端请求客户端作决定，不能当作可忽略的普通通知。",
+          "alt": "协议虎接住从服务器返回的带配对扣请求卡，再把决定卡送回锁定闸门。"
+        },
+        {
+          "label": "载体与协议面分开看",
+          "text": "同合同可以换传输；本课不同 SDK 还可能使用不同协议面。",
+          "alt": "协议虎比较两根不同传输管道上的同形盒子，旁边另一轨道使用不同形状的小卡。"
+        }
+      ],
+      "scenePrompt": "角色：协议虎：深蓝马甲、青绿领结。从左到右四格，每格一个完整场景：第1格：协议虎将多种内核积木送过投影台，出口出现适合界面卡片的整齐盒子。 第2格：协议虎先收到回执卡，身后的工作轨道仍待启动灯亮起。 第3格：协议虎接住从服务器返回的带配对扣请求卡，再把决定卡送回锁定闸门。 第4格：协议虎比较两根不同传输管道上的同形盒子，旁边另一轨道使用不同形状的小卡。",
+      "originalHtmlSha256": "56b67b2a9ab7e99067450420c499d29fa77d4c645ceb16a890b525b2ba6d7ffa",
+      "lessonTitle": "对外协议是投影",
+      "title": "四格看懂：对外协议是投影",
+      "sourceArtifact": "exec-366e6a5b-b596-410e-bc82-9a96c416e748.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-366e6a5b-b596-410e-bc82-9a96c416e748.png"
+    },
+    {
+      "file": "codex-30.html",
+      "slug": "codex-terminal-stream-finalization",
+      "role": "渲染虎：青绿背心、蓝色袖衬衣",
+      "takeaway": "终端稳定区提交后不回改，可变尾部保留未定稿内容，表格需等待完整再提交。",
+      "panels": [
+        {
+          "label": "先等源文本形成完整行",
+          "text": "本课半行增量先留缓冲，避免结构在每个 token 到达时乱跳。",
+          "alt": "渲染虎把零散小积木接成一条完整文本行，再推向终端工作台。"
+        },
+        {
+          "label": "稳定行移交历史区",
+          "text": "已提交的 scrollback 不回改，可变尾巴留在活动区域。",
+          "alt": "渲染虎把定型行卡放入封存的历史格架，桌面还留着可以调整的尾部卡片。"
+        },
+        {
+          "label": "表格没闭合先扣住",
+          "text": "表头与分隔行确认后，整张表留在可变区重排列宽。",
+          "alt": "渲染虎在可伸缩的表格框中加宽一列，旁边历史格架保持不动。"
+        },
+        {
+          "label": "定稿与写屏一起收束",
+          "text": "结束时提交表格，队列按压力排水，历史与活动区同帧刷新。",
+          "alt": "渲染虎把完整表格框放进历史格架，并操作一个连接两区的统一刷新开关。"
+        }
+      ],
+      "scenePrompt": "角色：渲染虎：青绿背心、蓝色袖衬衣。从左到右四格，每格一个完整场景：第1格：渲染虎把零散小积木接成一条完整文本行，再推向终端工作台。 第2格：渲染虎把定型行卡放入封存的历史格架，桌面还留着可以调整的尾部卡片。 第3格：渲染虎在可伸缩的表格框中加宽一列，旁边历史格架保持不动。 第4格：渲染虎把完整表格框放进历史格架，并操作一个连接两区的统一刷新开关。",
+      "originalHtmlSha256": "f858efafa505649391b56cb4b9707d42684a88f1765d64460e6043553946032d",
+      "lessonTitle": "流式输出怎么在终端两区之间定稿",
+      "title": "四格看懂：流式输出怎么在终端两区之间定稿",
+      "sourceArtifact": "exec-578748c6-0e77-47ca-8193-ae5b82861dad.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-578748c6-0e77-47ca-8193-ae5b82861dad.png"
+    },
+    {
+      "file": "codex-31.html",
+      "slug": "codex-architecture-as-lint",
+      "role": "门禁虎：橙色夹克、青绿帽",
+      "takeaway": "可局部检查的架构约束写成工具，散文规则仍需明确由谁核对。",
+      "panels": [
+        {
+          "label": "先让调用点自己可读",
+          "text": "本课优先改 API，无法消除的匿名字面量再用参数名说明。",
+          "alt": "门禁虎在一排含糊的参数积木旁加上匹配的形状标记。"
+        },
+        {
+          "label": "可检查规则变成红灯",
+          "text": "自定义 lint 核对调用与参数名，CI 在不同系统执行。",
+          "alt": "门禁虎将调用卡送过三座同形检查门，一张不匹配卡让警示灯亮起。"
+        },
+        {
+          "label": "散文不会自行验证",
+          "text": "路径与行数写进文档，也要核对是否真的有检查命令。",
+          "alt": "门禁虎拿着文档地图寻找空掉的文件位置，旁边未接线的检测灯保持熄灭。"
+        },
+        {
+          "label": "用穷尽表锁住登记",
+          "text": "特性枚举、规格表与测试维护登记和默认值，但不会自动安排删除。",
+          "alt": "门禁虎逐格对齐特性卡与规格槽，一张遗漏卡阻止整板合拢。"
+        }
+      ],
+      "scenePrompt": "角色：门禁虎：橙色夹克、青绿帽。从左到右四格，每格一个完整场景：第1格：门禁虎在一排含糊的参数积木旁加上匹配的形状标记。 第2格：门禁虎将调用卡送过三座同形检查门，一张不匹配卡让警示灯亮起。 第3格：门禁虎拿着文档地图寻找空掉的文件位置，旁边未接线的检测灯保持熄灭。 第4格：门禁虎逐格对齐特性卡与规格槽，一张遗漏卡阻止整板合拢。",
+      "originalHtmlSha256": "813768948bcb7d40993eae655e885ceb7d77b7d5823cd9ea5414be62e56c86c8",
+      "lessonTitle": "把架构决策写成 lint",
+      "title": "四格看懂：把架构决策写成 lint",
+      "sourceArtifact": "exec-df41eaea-2617-4cc9-9dc8-2fa257e285bb.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-df41eaea-2617-4cc9-9dc8-2fa257e285bb.png"
+    },
+    {
+      "file": "codex-32.html",
+      "slug": "codex-replay-and-refusal",
+      "role": "复盘虎：棕色马甲、蓝围巾",
+      "takeaway": "能拒绝与能回放是两种验收：事前守边界，事后留下真实可解释的观察。",
+      "panels": [
+        {
+          "label": "先问事后能否还原",
+          "text": "权威日志保留了什么，决定能复原多少当时上下文。",
+          "alt": "复盘虎从原始账卷拼回工作场景卡，旁边索引柜只保存简短目录。"
+        },
+        {
+          "label": "再问事前能否拒绝",
+          "text": "规则、审批、沙箱与代理分别检查不同风险。",
+          "alt": "复盘虎让命令小车依次面对规则闸门、批准台、隔离盒和出口漏斗。"
+        },
+        {
+          "label": "两种能力不能互相代替",
+          "text": "完整记录不自动阻止危险动作，拒绝动作也不等于保存所有现场。",
+          "alt": "复盘虎在同一工作台分别检查一卷完整账带和一扇关闭的闸门。"
+        },
+        {
+          "label": "拒绝后还要保留回执",
+          "text": "常见命令失败和代理拒绝作为观察交回模型，别混成引擎崩溃。",
+          "alt": "复盘虎将拒绝回执放入账本，再送到仍在工作的模型工位。"
+        }
+      ],
+      "scenePrompt": "角色：复盘虎：棕色马甲、蓝围巾。从左到右四格，每格一个完整场景：第1格：复盘虎从原始账卷拼回工作场景卡，旁边索引柜只保存简短目录。 第2格：复盘虎让命令小车依次面对规则闸门、批准台、隔离盒和出口漏斗。 第3格：复盘虎在同一工作台分别检查一卷完整账带和一扇关闭的闸门。 第4格：复盘虎将拒绝回执放入账本，再送到仍在工作的模型工位。",
+      "originalHtmlSha256": "2330ef0bdb9a59a67439adadbc572751d5a39e02fc9988b658e1095fef1d1903",
+      "lessonTitle": "两种安全视角：同一条命令，两套判词",
+      "title": "四格看懂：两种安全视角：同一条命令，两套判词",
+      "sourceArtifact": "exec-e0635290-9958-4bb6-87ab-ec4f8232ff40.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-e0635290-9958-4bb6-87ab-ec4f8232ff40.png"
+    }
+  ]
+}

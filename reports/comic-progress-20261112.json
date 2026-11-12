@@ -2,13 +2,13 @@
   "date": "2026-11-12",
   "baseline": "b7dee1875f12de989c9132ddad5795a3729c1b5d",
   "total": 445,
-  "completed": 359,
-  "remaining": 86,
-  "coveragePercent": 80.7,
-  "panels": 1436,
-  "webpFiles": 1795,
-  "newStories": 166,
-  "newArticleBodiesPreserved": 166,
+  "completed": 391,
+  "remaining": 54,
+  "coveragePercent": 87.9,
+  "panels": 1564,
+  "webpFiles": 1955,
+  "newStories": 198,
+  "newArticleBodiesPreserved": 198,
   "previousProvenanceUnchanged": 193,
   "maxPanelKiB": 201.7,
   "chapters": [
@@ -135,8 +135,8 @@
       "id": "p-codex",
       "title": "解剖 OpenAI Codex：把安全观写进类型系统",
       "total": 32,
-      "completed": 0,
-      "remaining": 32
+      "completed": 32,
+      "remaining": 0
     },
     {
       "id": "p-oss",
@@ -175,236 +175,6 @@
     }
   ],
   "remainingChapters": [
-    {
-      "id": "p-codex",
-      "title": "解剖 OpenAI Codex：把安全观写进类型系统",
-      "lessons": [
-        {
-          "file": "codex-01.html",
-          "title": "新功能先找落脚的 crate，core 是最后一档",
-          "desc": "打开仓库，第一反应是往 core 里加。仓库把这件事写成禁令：先找现有的非 core crate，否则新建一个。依赖方向会把叶子类型挡在核心之外。",
-          "tag": "工程",
-          "navTitle": "新功能先找落脚的 crate，core 是最后一档"
-        },
-        {
-          "file": "codex-02.html",
-          "title": "三层 Turn Loop：谁有资格决定继续",
-          "desc": "你看到的是一轮对话。内部叠了任务壳、轮次、采样三层循环。各层只回答自己那一个问题，控制权每次只在一层。",
-          "tag": "架构",
-          "navTitle": "三层 Turn Loop：谁有资格决定继续"
-        },
-        {
-          "file": "codex-03.html",
-          "title": "流还在走，工具已经开工",
-          "desc": "模型还在打字，读文件的声音已经响了。采样循环的时序是：流内建 future，流后统一 drain。先 persist，再等结果。",
-          "tag": "架构",
-          "navTitle": "流还在走，工具已经开工"
-        },
-        {
-          "file": "codex-04.html",
-          "title": "中途插话：这句话进本轮、下一轮，还是被拒",
-          "desc": "Agent 正在改第三个文件，你看见方向偏了，补了一句：配置用 YAML。回车之后，这句话是开工、插进当前轮，还是当场被拒，Core 当场拍板，不等模型开口。",
-          "tag": "架构",
-          "navTitle": "中途插话：这句话进本轮、下一轮，还是被拒"
-        },
-        {
-          "file": "codex-05.html",
-          "title": "按下取消之后，各层怎么收手",
-          "desc": "工具失败回给模型，用户按 Esc 才停 turn。取消令牌从任务传到采样再传到工具。已完成的结果留在历史里，100 毫秒之后的硬拆不可逆。",
-          "tag": "架构",
-          "navTitle": "按下取消之后，各层怎么收手"
-        },
-        {
-          "file": "codex-06.html",
-          "title": "往模型上下文里塞东西，先给它造一个类型",
-          "desc": "批准前缀、工作区、AGENTS.md、被中断的 turn，全是告诉模型一件它自己看不到的事实。Codex 先给每一种注入造一个类型，类型自己知道 role、marker 和 body。",
-          "tag": "上下文",
-          "navTitle": "往模型上下文里塞东西，先给它造一个类型"
-        },
-        {
-          "file": "codex-07.html",
-          "title": "把上下文治理写进 code review",
-          "desc": "上一章把往上下文里塞东西收成类型。类型过了，这段文字仍然可以合法地又长、又勤、又无界。挡这些后果的，是仓库根十行禁令，外加一份会把同一节再读一遍的评审 skill。",
-          "tag": "工程",
-          "navTitle": "把上下文治理写进 code review"
-        },
-        {
-          "file": "codex-08.html",
-          "title": "满窗之后，砍哪一段留哪一段",
-          "desc": "三个时机共用一个分发器，三种实现由开关选中。同一份摘要在中途必须停在历史最后一项。",
-          "tag": "上下文",
-          "navTitle": "满窗之后，砍哪一段留哪一段"
-        },
-        {
-          "file": "codex-09.html",
-          "title": "JSONL 是真相，SQLite 是镜像",
-          "desc": "昨天关了终端，今天列表还在，对话也能接着改。这两件事看起来像同一份存储，落盘时却走两条轨。上轨按行追加，下轨只抄封面。中途拔电之后，能捡回来的永远是已经过了闸门的那几行。",
-          "tag": "存储",
-          "navTitle": "JSONL 是真相，SQLite 是镜像"
-        },
-        {
-          "file": "codex-10.html",
-          "title": "模型看见的工具清单，是一次采样算出来的",
-          "desc": "同一段对话、同一份配置，下一轮采样却可能多出 MCP 名字、协作入口或 tool_search。变的是这一次允许广告哪些 handler。",
-          "tag": "工具",
-          "navTitle": "模型看见的工具清单，是一次采样算出来的"
-        },
-        {
-          "file": "codex-11.html",
-          "title": "对模型说随便并行，底下用锁管住",
-          "desc": "模型看见的、实际执行的、历史记录的，是三套顺序。一面旗允许一次发多个调用，一把读写锁决定谁能叠着进。",
-          "tag": "工具",
-          "navTitle": "对模型说随便并行，底下用锁管住"
-        },
-        {
-          "file": "codex-12.html",
-          "title": "统一入口：一条命令按特征分叉",
-          "desc": "模型只看见 exec_command 和 write_stdin。进门之后，tty、远程环境和 150 毫秒窗口会把同一条命令送到 PTY、pipe、exec-server，或者送进重试门。",
-          "tag": "执行",
-          "navTitle": "统一入口：一条命令按特征分叉"
-        },
-        {
-          "file": "codex-13.html",
-          "title": "沙箱管理器：把权限档案编译成一行命令",
-          "desc": "工作区可写，网络收紧。同一条 git status，Mac 套上 sandbox-exec，Linux 套上 helper，Windows 可能原样出门。差别出在编译器。",
-          "tag": "沙箱",
-          "navTitle": "沙箱管理器：把权限档案编译成一行命令"
-        },
-        {
-          "file": "codex-14.html",
-          "title": "macOS：把安全策略拼成一个字符串",
-          "desc": "Seatbelt 吃的是一段文本。文本由静态基线加现拼的读写网段组成。路径不进这段文本，走旁边的参数表。",
-          "tag": "沙箱",
-          "navTitle": "macOS：把安全策略拼成一个字符串"
-        },
-        {
-          "file": "codex-15.html",
-          "title": "Linux：先建视图，再上 seccomp，最后 exec",
-          "desc": "同一条读取，Mac 上回 Operation not permitted，Linux 上回 No such file or directory。差别在于 Linux 先换进程能看见的文件树，再收紧它能调用的系统接口。",
-          "tag": "沙箱",
-          "navTitle": "Linux：先建视图，再上 seccomp，最后 exec"
-        },
-        {
-          "file": "codex-16.html",
-          "title": "Windows：受限令牌、防火墙过滤器与两个专用系统用户",
-          "desc": "没有 seatbelt，也没有 bubblewrap。Windows 上的沙箱是三道关卡叠起来的：令牌管写，专用账户管你是谁，WFP 按这个身份滤网。AppContainer 对不上这份权限模型，整套还默认关着。",
-          "tag": "沙箱",
-          "navTitle": "Windows：受限令牌、防火墙过滤器与两个专用系统用户"
-        },
-        {
-          "file": "codex-17.html",
-          "title": "execpolicy：让策略文件自带测试用例",
-          "desc": "白名单写错，通常要等线上才知道。Codex 把正反例写进规则本身，加载时就地跑一遍。规则和例子打架，这份策略进不了会话。",
-          "tag": "策略",
-          "navTitle": "execpolicy：让策略文件自带测试用例"
-        },
-        {
-          "file": "codex-18.html",
-          "title": "审批策略：同一条命令，问不问看哪两颗旋钮",
-          "desc": "默认问不问跟沙箱种类绑在一起。问过一次之后，记住的是完整命令，还是一段前缀。",
-          "tag": "审批",
-          "navTitle": "审批策略：同一条命令，问不问看哪两颗旋钮"
-        },
-        {
-          "file": "codex-19.html",
-          "title": "Guardian：让一个模型去审批另一个模型",
-          "desc": "审批弹窗多到人开始无脑点同意时，Codex 把决定权交给一次锁死的审查会话。超时、坏 JSON、连续拒绝，各有各的收场。",
-          "tag": "审批",
-          "navTitle": "Guardian：让一个模型去审批另一个模型"
-        },
-        {
-          "file": "codex-20.html",
-          "title": "网络与凭据代理：模型看不见的那把钥匙",
-          "desc": "出站要过几道门。真 token 不进子进程。模型看见的是假值和一句 403。",
-          "tag": "网络",
-          "navTitle": "网络与凭据代理：模型看不见的那把钥匙"
-        },
-        {
-          "file": "codex-21.html",
-          "title": "apply-patch，给模型设计一种 diff",
-          "desc": "模型填一份没有行号的补丁，人看的是事后算出来的 unified diff。同一处修改，两套格式各自会在哪一步翻车。",
-          "tag": "工具",
-          "navTitle": "apply-patch，给模型设计一种 diff"
-        },
-        {
-          "file": "codex-22.html",
-          "title": "exec 与 wait：跑不完的程序怎么收场",
-          "desc": "与其让模型发二十次工具调用，不如让它写一段 JavaScript。这段程序在哪跑、能干什么、十秒跑不完又怎么办，本课讲这三个问题背后的两个思路。",
-          "tag": "代码模式",
-          "navTitle": "exec 与 wait：跑不完的程序怎么收场"
-        },
-        {
-          "file": "codex-23.html",
-          "title": "宿主拆分：程序挂在谁身上",
-          "desc": "上一课讲 exec 和 wait 的语义。这一课问另一件事：这段 JavaScript 到底挂在谁身上，挂点换了之后，故障域和状态归属怎么变。",
-          "tag": "代码模式",
-          "navTitle": "宿主拆分：程序挂在谁身上"
-        },
-        {
-          "file": "codex-24.html",
-          "title": "多 Agent 是一张要持久化的图",
-          "desc": "派出去的是节点，边一出生就是 Open。信先入队，followup 才叫醒。关掉的是边，历史还在。",
-          "tag": "多 Agent",
-          "navTitle": "多 Agent 是一张要持久化的图"
-        },
-        {
-          "file": "codex-25.html",
-          "title": "挂钩点能改什么，由事件合同决定",
-          "desc": "一次 turn 会经过十一个挂钩。协议认四种处理器，运行表只装命令和 MCP。超时默认放行，拆卸期丢掉 stdout。",
-          "tag": "扩展",
-          "navTitle": "挂钩点能改什么，由事件合同决定"
-        },
-        {
-          "file": "codex-26.html",
-          "title": "MCP 接进来：模型看见翻译过的名字",
-          "desc": "外部 server 的工具要先过一层翻译才进模型眼睛。skill 目录常在，缺 MCP 时另问人。",
-          "tag": "扩展",
-          "navTitle": "MCP 接进来：模型看见翻译过的名字"
-        },
-        {
-          "file": "codex-27.html",
-          "title": "搬家只搬对得上的字段",
-          "desc": "换到 Codex 的第一周，最怕去年攒的 hook、MCP 和插件还在不在。检测会列出一份清单。导入只收下能映射的那一部分。",
-          "tag": "扩展",
-          "navTitle": "搬家只搬对得上的字段"
-        },
-        {
-          "file": "codex-28.html",
-          "title": "SQ 进、EQ 出：同一件事两副面孔",
-          "desc": "命令走进程内的 Submission Queue。事件走能写成 JSON 的 Event Queue。Rust 名叫 TurnStarted，磁盘上仍写 task_started。",
-          "tag": "协议",
-          "navTitle": "SQ 进、EQ 出：同一件事两副面孔"
-        },
-        {
-          "file": "codex-29.html",
-          "title": "对外协议是投影",
-          "desc": "IDE 看见的是 Thread / Turn / Item，不是内核 EventMsg。一次 turn/start 先回响应，再推事件流；审批是反向请求，不回包这一轮就停住。",
-          "tag": "协议",
-          "navTitle": "对外协议是投影"
-        },
-        {
-          "file": "codex-30.html",
-          "title": "流式输出怎么在终端两区之间定稿",
-          "desc": "模型按 token 往外推，终端却是一个写出去就改不了的字符网格。已经不会变的行交给 scrollback，还可能变的尾巴留在活动 cell，表格没闭合之前整段扣住。",
-          "tag": "界面",
-          "navTitle": "流式输出怎么在终端两区之间定稿"
-        },
-        {
-          "file": "codex-31.html",
-          "title": "把架构决策写成 lint",
-          "desc": "同一份 AGENTS.md 里，有命令的规则会在三台操作系统上亮红。只有路径的那条，重命名之后没人发现。",
-          "tag": "工程",
-          "navTitle": "把架构决策写成 lint"
-        },
-        {
-          "file": "codex-32.html",
-          "title": "两种安全视角：同一条命令，两套判词",
-          "desc": "出事之前有没有门可以拒绝，出事之后能不能复原模型当时看见的世界。同一条危险命令上，这两套视角会一致，也会给出相反结论。",
-          "tag": "安全",
-          "navTitle": "两种安全视角：同一条命令，两套判词"
-        }
-      ]
-    },
     {
       "id": "p-oss",
       "title": "开源、蒸馏与本地部署",

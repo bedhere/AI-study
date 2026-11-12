@@ -1,0 +1,427 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-codex-a",
+  "status": "accepted; all 12 article-specific comics integrated and visually reviewed",
+  "evidenceScope": "Actual codex-01 through codex-12 lesson HTML and their quoted Codex source snapshot. Illustrations explain that snapshot; no claim about current upstream defaults, tool availability, or security guarantees.",
+  "verificationSources": [
+    "https://developers.openai.com/blog/codex-as-a-platform"
+  ],
+  "lessons": [
+    {
+      "file": "codex-01.html",
+      "slug": "codex-crate-placement",
+      "role": "架构虎：青绿工装、米色围巾",
+      "takeaway": "新增能力先找独立落点，评估依赖方向后才考虑放进 core。",
+      "panels": [
+        {
+          "label": "先认清能力的职责",
+          "text": "本课源码约定先查已有 crate，别把 core 当成默认入口。",
+          "alt": "架构虎拿着齿轮积木，观察大仓库周围各有用途的独立工坊。"
+        },
+        {
+          "label": "已有模块能承接吗",
+          "text": "先找职责相符的非 core crate，避免重复造轮子。",
+          "alt": "架构虎将齿轮积木对准一个已有工坊的接口，仔细比对形状。"
+        },
+        {
+          "label": "需要时建立独立边界",
+          "text": "新增 crate 也要梳理契约，别让叶子能力反向污染核心。",
+          "alt": "架构虎在独立小工坊接好单向传送带，中心仓库仍保持整洁。"
+        },
+        {
+          "label": "core 留给必要职责",
+          "text": "复核复用与依赖后，再决定核心是否必须承担这项能力。",
+          "alt": "架构虎拿着模块模型对照依赖图，谨慎检查中心仓库的入口。"
+        }
+      ],
+      "scenePrompt": "角色：架构虎：青绿工装、米色围巾。从左到右四格，每格一个完整场景：第1格：架构虎拿着齿轮积木，观察大仓库周围各有用途的独立工坊。 第2格：架构虎将齿轮积木对准一个已有工坊的接口，仔细比对形状。 第3格：架构虎在独立小工坊接好单向传送带，中心仓库仍保持整洁。 第4格：架构虎拿着模块模型对照依赖图，谨慎检查中心仓库的入口。",
+      "originalHtmlSha256": "edb3aa7b6e8af2ce95ec4946bec27d5f739dd2772a7a00a7fba7ce5202ceea4a",
+      "lessonTitle": "新功能先找落脚的 crate，core 是最后一档",
+      "title": "四格看懂：新功能先找落脚的 crate，core 是最后一档",
+      "sourceArtifact": "exec-c27c3c45-e49e-4ef3-8eb5-78e167acd170.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-c27c3c45-e49e-4ef3-8eb5-78e167acd170.png"
+    },
+    {
+      "file": "codex-02.html",
+      "slug": "codex-three-turn-loops",
+      "role": "调度虎：蓝色夹克、橙围巾",
+      "takeaway": "任务、回合与流式采样各自决定继续，不能混成一个循环。",
+      "panels": [
+        {
+          "label": "任务壳管理整体生命期",
+          "text": "RegularTask 判断任务是否还有工作或待处理输入。",
+          "alt": "调度虎站在总调度台，将待办卡放进大环形工作轨道。"
+        },
+        {
+          "label": "回合判断是否再采样",
+          "text": "工具结果、插话与钩子可能让 run_turn 继续。",
+          "alt": "调度虎在一座工位环路上接住工具回执，再将它送回模型工位。"
+        },
+        {
+          "label": "采样循环接收流",
+          "text": "流式采样等待完成事件，重试属于这一层的处理。",
+          "alt": "调度虎沿着连续的小积木传送带观察终点旗帜和重试岔道。"
+        },
+        {
+          "label": "边界决定何时可见",
+          "text": "待处理输入要在对应边界接入，流重试也不等于新任务。",
+          "alt": "调度虎把新卡片放在下一道闸门前，原有工作令牌仍挂在同一轨道。"
+        }
+      ],
+      "scenePrompt": "角色：调度虎：蓝色夹克、橙围巾。从左到右四格，每格一个完整场景：第1格：调度虎站在总调度台，将待办卡放进大环形工作轨道。 第2格：调度虎在一座工位环路上接住工具回执，再将它送回模型工位。 第3格：调度虎沿着连续的小积木传送带观察终点旗帜和重试岔道。 第4格：调度虎把新卡片放在下一道闸门前，原有工作令牌仍挂在同一轨道。",
+      "originalHtmlSha256": "3ca3f6e6f1d4ffb5515e968b763e48c2cd23e530ca2bf8603198c6141836af8d",
+      "lessonTitle": "三层 Turn Loop：谁有资格决定继续",
+      "title": "四格看懂：三层 Turn Loop：谁有资格决定继续",
+      "sourceArtifact": "exec-45b50b63-f5df-47a7-9bed-1005d2326888.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-45b50b63-f5df-47a7-9bed-1005d2326888.png"
+    },
+    {
+      "file": "codex-03.html",
+      "slug": "codex-streaming-tool-dispatch",
+      "role": "流水虎：黄色工装、青绿帽",
+      "takeaway": "完整工具调用先记录再启动，流结束后仍要收拢在途结果。",
+      "panels": [
+        {
+          "label": "调用完整后先记录",
+          "text": "OutputItemDone 中的完整调用先进入历史和 rollout。",
+          "alt": "流水虎把完整工具卡盖进账本盒，再准备推向工具工位。"
+        },
+        {
+          "label": "流未结束工具已开工",
+          "text": "工具带着子取消令牌执行，采样流仍可继续到达。",
+          "alt": "流水虎看着前景工具工位运转，旁边同一条流式传送带仍送来积木。"
+        },
+        {
+          "label": "收拢在途工具结果",
+          "text": "流结束后继续等待已排队的工具 future，并记录回执。",
+          "alt": "流水虎在传送带末端按队列接住几个已完成的工具回执盒。"
+        },
+        {
+          "label": "取消也留下已发生的事",
+          "text": "已记录调用和已经发生的外部操作，不会因取消凭空消失。",
+          "alt": "流水虎关闭工作开关，桌上已写好的文件与账本中的调用卡仍然保留。"
+        }
+      ],
+      "scenePrompt": "角色：流水虎：黄色工装、青绿帽。从左到右四格，每格一个完整场景：第1格：流水虎把完整工具卡盖进账本盒，再准备推向工具工位。 第2格：流水虎看着前景工具工位运转，旁边同一条流式传送带仍送来积木。 第3格：流水虎在传送带末端按队列接住几个已完成的工具回执盒。 第4格：流水虎关闭工作开关，桌上已写好的文件与账本中的调用卡仍然保留。",
+      "originalHtmlSha256": "e22650e63d67cbba49605a7f8ecbd53be24fa1267ac1feba67a3b5172b1e2b61",
+      "lessonTitle": "流还在走，工具已经开工",
+      "title": "四格看懂：流还在走，工具已经开工",
+      "sourceArtifact": "exec-35f085df-edc2-41e9-9467-81de0a26f635.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-35f085df-edc2-41e9-9467-81de0a26f635.png"
+    },
+    {
+      "file": "codex-04.html",
+      "slug": "codex-start-steer-routing",
+      "role": "分流虎：珊瑚夹克、蓝围巾",
+      "takeaway": "插话先原子判断状态，再决定启动、转向或拒绝。",
+      "panels": [
+        {
+          "label": "先声明提交意图",
+          "text": "本课区分启动或转向、仅空闲启动、仅转向三种意图。",
+          "alt": "分流虎把一张新输入卡交给有三种形状入口的分流台。"
+        },
+        {
+          "label": "判断与入队一起完成",
+          "text": "锁内判定活动状态，避免判断结束后目标回合已经变化。",
+          "alt": "分流虎在一座带锁的闸门内，同时核对工作令牌并放入输入卡。"
+        },
+        {
+          "label": "按阶段选择接入点",
+          "text": "插话可能进入当前或下一轮；不符合条件时明确拒绝。",
+          "alt": "分流虎操作一座分岔装置，输入卡面向两条时序轨道和关闭的出口。"
+        },
+        {
+          "label": "拒绝不偷偷修改设置",
+          "text": "先预览设置；接纳后的设置也不替换当前 TurnContext。",
+          "alt": "分流虎将被退回的输入卡放回托盘，原先封存的设置盒保持原样。"
+        }
+      ],
+      "scenePrompt": "角色：分流虎：珊瑚夹克、蓝围巾。从左到右四格，每格一个完整场景：第1格：分流虎把一张新输入卡交给有三种形状入口的分流台。 第2格：分流虎在一座带锁的闸门内，同时核对工作令牌并放入输入卡。 第3格：分流虎操作一座分岔装置，输入卡面向两条时序轨道和关闭的出口。 第4格：分流虎将被退回的输入卡放回托盘，原先封存的设置盒保持原样。",
+      "originalHtmlSha256": "c1e3c49d56aa658ca0fb8b1b1272e11b3e5b8075c7b680ed2da8b581deb7314c",
+      "lessonTitle": "中途插话：这句话进本轮、下一轮，还是被拒",
+      "title": "四格看懂：中途插话：这句话进本轮、下一轮，还是被拒",
+      "sourceArtifact": "exec-319215b7-0a55-4d91-bd56-08a79e58a7ab.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-319215b7-0a55-4d91-bd56-08a79e58a7ab.png"
+    },
+    {
+      "file": "codex-05.html",
+      "slug": "codex-cancellation-and-errors",
+      "role": "收尾虎：青绿背带裤、橙围巾",
+      "takeaway": "区分工具回执与引擎故障，取消沿层传播但不自动回滚外部写入。",
+      "panels": [
+        {
+          "label": "先辨认错误的归属",
+          "text": "非零退出等常见执行结果，可以作为工具回执返回模型。",
+          "alt": "收尾虎拿着红色状态卡检查工具回执盒，主工作台仍亮着灯。"
+        },
+        {
+          "label": "致命错误由引擎收尾",
+          "text": "参数或执行问题与 Fatal 错误，走不同处理路径。",
+          "alt": "收尾虎在分流台把普通故障卡送回工具通道，把破损核心卡送到停机入口。"
+        },
+        {
+          "label": "取消沿各层传下去",
+          "text": "任务、采样、工具逐层接收取消，并给执行留下收尾窗口。",
+          "alt": "收尾虎按下停止开关，层层相连的工位依次暗下，末端沙漏仍在流动。"
+        },
+        {
+          "label": "已落地的副作用仍在",
+          "text": "取消不等于事务回滚，写出的文件和已完成回执需另行处理。",
+          "alt": "收尾虎检查已经落盘的文件和回执账本，将它们整齐留在桌上。"
+        }
+      ],
+      "scenePrompt": "角色：收尾虎：青绿背带裤、橙围巾。从左到右四格，每格一个完整场景：第1格：收尾虎拿着红色状态卡检查工具回执盒，主工作台仍亮着灯。 第2格：收尾虎在分流台把普通故障卡送回工具通道，把破损核心卡送到停机入口。 第3格：收尾虎按下停止开关，层层相连的工位依次暗下，末端沙漏仍在流动。 第4格：收尾虎检查已经落盘的文件和回执账本，将它们整齐留在桌上。",
+      "originalHtmlSha256": "9dd6f7741985f527ff48d084e9e85bdf66865fe380da43e10d1d005ad0bd5439",
+      "lessonTitle": "按下取消之后，各层怎么收手",
+      "title": "四格看懂：按下取消之后，各层怎么收手",
+      "sourceArtifact": "exec-3f921598-2925-473b-ad6c-d15429549bae.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-3f921598-2925-473b-ad6c-d15429549bae.png"
+    },
+    {
+      "file": "codex-06.html",
+      "slug": "codex-typed-context-fragments",
+      "role": "语境虎：紫色马甲、米色衬衣",
+      "takeaway": "给上下文片段定义角色与边界，类型契约仍需配合内容治理。",
+      "panels": [
+        {
+          "label": "先定义片段类型",
+          "text": "本课用独立上下文片段类型承载注入内容。",
+          "alt": "语境虎把散乱纸条放入一种有固定卡槽的积木模具。"
+        },
+        {
+          "label": "角色与首尾边界明确",
+          "text": "契约提供角色、开始标记、正文、结束标记和消息形式。",
+          "alt": "语境虎在一个完整卡片框内安装前后边框和中央正文纸片。"
+        },
+        {
+          "label": "同一契约支持识别",
+          "text": "渲染与反向识别使用同一对边界，减少临时拼串。",
+          "alt": "语境虎把封好的片段卡送过识别门，门框与卡片边缘形状一致。"
+        },
+        {
+          "label": "类型之外仍要限量",
+          "text": "类型不能独自证明正文正确、长度有界或注入频率合理。",
+          "alt": "语境虎拿着标尺检查一摞过厚的标准卡片，旁边留着容量有限的盒子。"
+        }
+      ],
+      "scenePrompt": "角色：语境虎：紫色马甲、米色衬衣。从左到右四格，每格一个完整场景：第1格：语境虎把散乱纸条放入一种有固定卡槽的积木模具。 第2格：语境虎在一个完整卡片框内安装前后边框和中央正文纸片。 第3格：语境虎把封好的片段卡送过识别门，门框与卡片边缘形状一致。 第4格：语境虎拿着标尺检查一摞过厚的标准卡片，旁边留着容量有限的盒子。",
+      "originalHtmlSha256": "de61b09b1950ac506e52fac9f08be629bfe65edafbd63d1b79f1f05f3e3cb052",
+      "lessonTitle": "往模型上下文里塞东西，先给它造一个类型",
+      "title": "四格看懂：往模型上下文里塞东西，先给它造一个类型",
+      "sourceArtifact": "exec-a9b7451d-753b-4ad4-98fa-7b5418a5b04d.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-a9b7451d-753b-4ad4-98fa-7b5418a5b04d.png"
+    },
+    {
+      "file": "codex-07.html",
+      "slug": "codex-context-code-review",
+      "role": "审查虎：深蓝马甲、金色领结",
+      "takeaway": "上下文治理要进入代码审查，不能只依赖类型或假定存在自动检查。",
+      "panels": [
+        {
+          "label": "类型合格也可能超量",
+          "text": "片段格式正确，仍可能过长、过频或没有上限。",
+          "alt": "审查虎查看一摞外形整齐却溢出盒子的上下文卡片。"
+        },
+        {
+          "label": "审查预算与增长边界",
+          "text": "检查输出上限和硬预算，让新增内容的成本可控。",
+          "alt": "审查虎用容量盒和标尺测量即将进入上下文的卡片堆。"
+        },
+        {
+          "label": "保护稳定前缀",
+          "text": "优先追加，减少改写历史与稳定指令，检查缓存相关测试。",
+          "alt": "审查虎将新卡追加到轨道尾部，前方封存的稳定卡段保持完整。"
+        },
+        {
+          "label": "明确人工审查责任",
+          "text": "本课这些规则需要审查落实，不能假定都有专用 lint。",
+          "alt": "审查虎逐项检查放大镜下的卡片契约，旁边机器只亮起部分检测灯。"
+        }
+      ],
+      "scenePrompt": "角色：审查虎：深蓝马甲、金色领结。从左到右四格，每格一个完整场景：第1格：审查虎查看一摞外形整齐却溢出盒子的上下文卡片。 第2格：审查虎用容量盒和标尺测量即将进入上下文的卡片堆。 第3格：审查虎将新卡追加到轨道尾部，前方封存的稳定卡段保持完整。 第4格：审查虎逐项检查放大镜下的卡片契约，旁边机器只亮起部分检测灯。",
+      "originalHtmlSha256": "9317fcbd7f397e63b3d56b606f9b090f88e0aaad51d26e6473e2892f150a7a0f",
+      "lessonTitle": "把上下文治理写进 code review",
+      "title": "四格看懂：把上下文治理写进 code review",
+      "sourceArtifact": "exec-4d091318-61ce-4f3e-8849-b14a144ce8ba.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-4d091318-61ce-4f3e-8849-b14a144ce8ba.png"
+    },
+    {
+      "file": "codex-08.html",
+      "slug": "codex-compaction-phases",
+      "role": "压缩虎：青绿围裙、蓝袖衬衣",
+      "takeaway": "压缩阶段与实现方式是两条轴，恢复时还要维护当前上下文和窗口顺序。",
+      "panels": [
+        {
+          "label": "先辨明触发阶段",
+          "text": "回合前、回合中和独立压缩，决定后续如何恢复。",
+          "alt": "压缩虎在同一条工作轨道上检查三个不同位置的压缩入口。"
+        },
+        {
+          "label": "再选择实现路径",
+          "text": "本课调度器依功能和提供方能力选择本地或远端等路径。",
+          "alt": "压缩虎操作一个分流阀，将厚卡片堆送向不同压缩工位。"
+        },
+        {
+          "label": "重新装入当前语境",
+          "text": "过滤过时指令，恢复当前世界状态，而非盲目照搬旧窗口。",
+          "alt": "压缩虎把旧环境卡放进回收托盘，将新的环境卡装入干净窗口框。"
+        },
+        {
+          "label": "整体替换且守住顺序",
+          "text": "回合中压缩的摘要须在窗口末尾，再继续采样。",
+          "alt": "压缩虎将最后一张摘要卡插入窗口尾端，随后打开通往模型工位的闸门。"
+        }
+      ],
+      "scenePrompt": "角色：压缩虎：青绿围裙、蓝袖衬衣。从左到右四格，每格一个完整场景：第1格：压缩虎在同一条工作轨道上检查三个不同位置的压缩入口。 第2格：压缩虎操作一个分流阀，将厚卡片堆送向不同压缩工位。 第3格：压缩虎把旧环境卡放进回收托盘，将新的环境卡装入干净窗口框。 第4格：压缩虎将最后一张摘要卡插入窗口尾端，随后打开通往模型工位的闸门。",
+      "originalHtmlSha256": "9f2d85c472f7f41bdd6770eb5071530b12cfde696bf2bcc6aad99f1c056a11c3",
+      "lessonTitle": "满窗之后，砍哪一段留哪一段",
+      "title": "四格看懂：满窗之后，砍哪一段留哪一段",
+      "sourceArtifact": "exec-30be2dac-1e48-48c6-a931-196be597f968.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-30be2dac-1e48-48c6-a931-196be597f968.png"
+    },
+    {
+      "file": "codex-09.html",
+      "slug": "codex-rollout-sqlite-projection",
+      "role": "记账虎：棕色马甲、青绿领结",
+      "takeaway": "rollout JSONL 是持久事实，SQLite 是可重建且可能滞后的投影。",
+      "panels": [
+        {
+          "label": "先分清两条记录线",
+          "text": "本课将权威 rollout 与列表索引元数据分开。",
+          "alt": "记账虎看着一卷连续账带和旁边摆放的卡片索引柜。"
+        },
+        {
+          "label": "持久化要认写入边界",
+          "text": "只把规定事件写入持久日志；崩溃恢复依赖已刷出的内容。",
+          "alt": "记账虎将完整事件卡压入耐久账卷，未落盘的小光点仍停在入口外。"
+        },
+        {
+          "label": "日志先落地再投影",
+          "text": "先写入并刷新 JSONL，再更新 SQLite 镜像。",
+          "alt": "记账虎把账卷固定在桌上，连接的索引柜才接收到一张新索引卡。"
+        },
+        {
+          "label": "投影滞后可重建",
+          "text": "索引故障可从原始日志重建；它不能替代丢失的事实源。",
+          "alt": "记账虎依据保存完好的账卷重新摆好索引卡柜。"
+        }
+      ],
+      "scenePrompt": "角色：记账虎：棕色马甲、青绿领结。从左到右四格，每格一个完整场景：第1格：记账虎看着一卷连续账带和旁边摆放的卡片索引柜。 第2格：记账虎将完整事件卡压入耐久账卷，未落盘的小光点仍停在入口外。 第3格：记账虎把账卷固定在桌上，连接的索引柜才接收到一张新索引卡。 第4格：记账虎依据保存完好的账卷重新摆好索引卡柜。",
+      "originalHtmlSha256": "0dc464f869954ef2c24f5f05a21825a235dbe7eb51700c5ea3ed916b4986b614",
+      "lessonTitle": "JSONL 是真相，SQLite 是镜像",
+      "title": "四格看懂：JSONL 是真相，SQLite 是镜像",
+      "sourceArtifact": "exec-efa5e370-8fad-4e30-ac16-f9925beb7020.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-efa5e370-8fad-4e30-ac16-f9925beb7020.png"
+    },
+    {
+      "file": "codex-10.html",
+      "slug": "codex-sampling-tool-snapshot",
+      "role": "清单虎：蓝色衬衣、青绿背心",
+      "takeaway": "工具清单按一次采样建立，模型看到的能力与实际派发使用同一份计划。",
+      "panels": [
+        {
+          "label": "每次采样建立快照",
+          "text": "StepContext 固定本次模型、权限、环境和工具路由。",
+          "alt": "清单虎把环境盒、权限钥匙和工具卡一起装入一个透明快照框。"
+        },
+        {
+          "label": "公布与派发用同一计划",
+          "text": "工具广告与调用派发共享本次能力计划，避免各说各话。",
+          "alt": "清单虎将同一套工具卡架连接到模型窗口和工具派发台。"
+        },
+        {
+          "label": "变化留给下一次采样",
+          "text": "连接变化不改写当前快照，下一步再重建。",
+          "alt": "清单虎让一条外接线脱离当前封存卡架，把新连接卡放进下一框的托盘。"
+        },
+        {
+          "label": "身份决定能力范围",
+          "text": "审查者等不同身份按各自计划获得受限工具。",
+          "alt": "清单虎将一个精简工具盘递给审查虎，完整工具柜仍在工作台另一侧。"
+        }
+      ],
+      "scenePrompt": "角色：清单虎：蓝色衬衣、青绿背心。从左到右四格，每格一个完整场景：第1格：清单虎把环境盒、权限钥匙和工具卡一起装入一个透明快照框。 第2格：清单虎将同一套工具卡架连接到模型窗口和工具派发台。 第3格：清单虎让一条外接线脱离当前封存卡架，把新连接卡放进下一框的托盘。 第4格：清单虎将一个精简工具盘递给审查虎，完整工具柜仍在工作台另一侧。",
+      "originalHtmlSha256": "537ca98e3da773141725a1c2f9f8dbf1d1c109542394e38fbceaeef23c1dbebc",
+      "lessonTitle": "模型看见的工具清单，是一次采样算出来的",
+      "title": "四格看懂：模型看见的工具清单，是一次采样算出来的",
+      "sourceArtifact": "exec-fa639476-29d7-4c53-82d7-e3e65d7cf06a.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-fa639476-29d7-4c53-82d7-e3e65d7cf06a.png"
+    },
+    {
+      "file": "codex-11.html",
+      "slug": "codex-parallel-tools-locks",
+      "role": "并行虎：橙色工装、蓝色安全帽",
+      "takeaway": "模型并行开关、处理器并行资格与历史顺序是不同层次。",
+      "panels": [
+        {
+          "label": "模型愿意并行还不够",
+          "text": "请求中的并行开关，不等于每种工具都能同时执行。",
+          "alt": "并行虎举起一对工具卡，观察前方仍关闭的调度闸门。"
+        },
+        {
+          "label": "按处理器资格分配锁",
+          "text": "本课默认串行，明确允许的处理器才走共享通道。",
+          "alt": "并行虎将不同形状的工具卡分给双通道闸门和单独的独占闸门。"
+        },
+        {
+          "label": "共享与独占控制重叠",
+          "text": "锁依据处理器元数据工作，不能把共享锁误读成命令只读。",
+          "alt": "并行虎在共享轨道旁检查一个带齿轮的执行工具，独占闸门正在等待。"
+        },
+        {
+          "label": "执行并行历史仍有序",
+          "text": "并行调度不意味着随意重排会话里的工具回执。",
+          "alt": "并行虎从两条汇合传送带收回工具盒，并按卡槽顺序摆入账本。"
+        }
+      ],
+      "scenePrompt": "角色：并行虎：橙色工装、蓝色安全帽。从左到右四格，每格一个完整场景：第1格：并行虎举起一对工具卡，观察前方仍关闭的调度闸门。 第2格：并行虎将不同形状的工具卡分给双通道闸门和单独的独占闸门。 第3格：并行虎在共享轨道旁检查一个带齿轮的执行工具，独占闸门正在等待。 第4格：并行虎从两条汇合传送带收回工具盒，并按卡槽顺序摆入账本。",
+      "originalHtmlSha256": "d905125719848dd9422196371ab01c74c213bb70475034746413636cb318a236",
+      "lessonTitle": "对模型说随便并行，底下用锁管住",
+      "title": "四格看懂：对模型说随便并行，底下用锁管住",
+      "sourceArtifact": "exec-2c38692f-4fb4-4e93-bce3-caa8b590d4cf.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-2c38692f-4fb4-4e93-bce3-caa8b590d4cf.png"
+    },
+    {
+      "file": "codex-12.html",
+      "slug": "codex-unified-exec-backends",
+      "role": "终端虎：青绿工装、橙手套",
+      "takeaway": "统一命令入口再选择后端，长进程用会话句柄继续交互。",
+      "panels": [
+        {
+          "label": "统一入口接收命令",
+          "text": "exec_command 发起执行，write_stdin 负责已有会话的输入或轮询。",
+          "alt": "终端虎把命令卡放进统一入口，旁边握着可以再次连接的会话圆环。"
+        },
+        {
+          "label": "按环境选择后端",
+          "text": "是否需要终端、输入管道及执行环境，决定后端路径。",
+          "alt": "终端虎在分流工位前选择带屏幕的终端口或带管道的执行口。"
+        },
+        {
+          "label": "经过执行策略协调",
+          "text": "准备、审批与沙箱由协调器按配置处理，失败不能随意绕过。",
+          "alt": "终端虎在带钥匙的检查闸门前核对命令卡与环境盒。"
+        },
+        {
+          "label": "返回结果或保留会话",
+          "text": "长进程返回句柄供后续交互；早期与后续退出要分开判断。",
+          "alt": "终端虎接住一个仍亮着的会话圆环，另一侧托盘中放着已完成的退出回执。"
+        }
+      ],
+      "scenePrompt": "角色：终端虎：青绿工装、橙手套。从左到右四格，每格一个完整场景：第1格：终端虎把命令卡放进统一入口，旁边握着可以再次连接的会话圆环。 第2格：终端虎在分流工位前选择带屏幕的终端口或带管道的执行口。 第3格：终端虎在带钥匙的检查闸门前核对命令卡与环境盒。 第4格：终端虎接住一个仍亮着的会话圆环，另一侧托盘中放着已完成的退出回执。",
+      "originalHtmlSha256": "bda2c82278d53e9dc6870e151101b7903768d87ed00d927711cac693a0578c67",
+      "lessonTitle": "统一入口：一条命令按特征分叉",
+      "title": "四格看懂：统一入口：一条命令按特征分叉",
+      "sourceArtifact": "exec-40392c5d-2241-4bad-b44c-8971c630d306.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-40392c5d-2241-4bad-b44c-8971c630d306.png"
+    }
+  ]
+}
