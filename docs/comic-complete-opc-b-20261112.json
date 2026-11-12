@@ -1,0 +1,296 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-opc-b",
+  "status": "accepted; all 8 article-specific comics integrated and visually reviewed",
+  "evidenceScope": "Actual OPC lesson HTML. New captions preserve each teaching topic while avoiding absolute legal claims, universal class-35/ICP requirements, mandatory founder percentages or default nominee-holding advice. Historical source cases remain attributed to source; no unverified 2026 trademark-law amendment repeated. Official statutory and agency material checked 2026-11-12.",
+  "verificationSources": [
+    "https://www.cnipa.gov.cn/module/download/down.jsp?colID=66&i_ID=180686",
+    "https://www.cnipa.gov.cn/art/2020/11/23/art_97_155167.html",
+    "https://www.cac.gov.cn/2013-02/08/c_12648744.htm",
+    "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html",
+    "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm",
+    "https://www.miit.gov.cn/datainfo/fgk/gytxyxxhfg/xzfg/art/2020/art_44595811ff9a42b9b073386046905103.html"
+  ],
+  "lessons": [
+    {
+      "file": "opc-9.html",
+      "slug": "opc-capital-and-separate-finances",
+      "role": "账目虎：青绿背心、米色衬衣",
+      "takeaway": "认缴承诺、出资安排和财产独立需要落实，金额依业务条件与承担能力确定。",
+      "panels": [
+        {
+          "label": "认缴不是随意填大数",
+          "text": "结合适用期限、业务门槛和真实承担能力安排资本。",
+          "alt": "账目虎在资金计划板前比较认缴承诺卡与实际资源盒。"
+        },
+        {
+          "label": "出资方式与手续要合规",
+          "text": "货币或符合法定条件的非货币出资，各有交付与留证要求。",
+          "alt": "账目虎把现金盒和知识产权文件分别送入对应出资检查槽。"
+        },
+        {
+          "label": "公司与个人财产分清",
+          "text": "独立账户、记账与合法资金往来，帮助证明财产独立。",
+          "alt": "账目虎在同一工作台分别管理公司账本与个人钱包，中间有清晰隔板。"
+        },
+        {
+          "label": "收款仍需完整财税管理",
+          "text": "核对支付资质、资金流与凭证，正规接口不等于自动完成纳税义务。",
+          "alt": "账目虎沿用户付款、公司账户和发票凭证核对资金路线。"
+        }
+      ],
+      "scenePrompt": "角色：账目虎：青绿背心、米色衬衣。从左到右四格，每格一个完整场景：第1格：账目虎在资金计划板前比较认缴承诺卡与实际资源盒。 第2格：账目虎把现金盒和知识产权文件分别送入对应出资检查槽。 第3格：账目虎在同一工作台分别管理公司账本与个人钱包，中间有清晰隔板。 第4格：账目虎沿用户付款、公司账户和发票凭证核对资金路线。",
+      "originalHtmlSha256": "5d955bf96c5365d2aea34cdaa90fb81b0ef72039171406f9b25d541eeb9941aa",
+      "lessonTitle": "注册资本别乱写：五年内要真金白银缴足",
+      "title": "四格看懂：注册资本别乱写：五年内要真金白银缴足",
+      "sourceArtifact": "exec-57b16f5f-a8f8-4eff-b2c3-c5d26172ba46.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-57b16f5f-a8f8-4eff-b2c3-c5d26172ba46.png"
+    },
+    {
+      "file": "opc-10.html",
+      "slug": "opc-partners-complement-and-trial",
+      "role": "合伙虎：蓝色夹克、橙围巾",
+      "takeaway": "先识别业务瓶颈，再通过真实项目检验能力、合作与决策方式。",
+      "panels": [
+        {
+          "label": "先问缺的是哪种能力",
+          "text": "忙不过来与缺失整块业务能力，可能需要不同解决办法。",
+          "alt": "合伙虎在业务模型上找到缺失模块，旁边摆着外包工具箱与合伙拼图。"
+        },
+        {
+          "label": "互补与共同目标一起看",
+          "text": "明确各自职责，同时了解对方如何处理分歧。",
+          "alt": "合伙虎与另一位同族伙伴分别放入技术和业务拼图，形成完整项目图。"
+        },
+        {
+          "label": "信任配合透明规则",
+          "text": "信任不要求放弃必要核对，责任、沟通与信息共享应明确。",
+          "alt": "合伙虎与伙伴共同查看透明项目板，交换职责卡并核对进展。"
+        },
+        {
+          "label": "先做项目再谈长期安排",
+          "text": "用交付、协作和问题处理记录作为进一步谈判的依据。",
+          "alt": "合伙虎和伙伴完成一件小项目，把结果与复盘记录摆在股权讨论桌前。"
+        }
+      ],
+      "scenePrompt": "角色：合伙虎：蓝色夹克、橙围巾。从左到右四格，每格一个完整场景：第1格：合伙虎在业务模型上找到缺失模块，旁边摆着外包工具箱与合伙拼图。 第2格：合伙虎与另一位同族伙伴分别放入技术和业务拼图，形成完整项目图。 第3格：合伙虎与伙伴共同查看透明项目板，交换职责卡并核对进展。 第4格：合伙虎和伙伴完成一件小项目，把结果与复盘记录摆在股权讨论桌前。",
+      "originalHtmlSha256": "4bd5cc62adc4fb80d350f83180a4654b3aa50800ef93cb07d264964729ee2779",
+      "lessonTitle": "合伙人要互补：能力重叠的两个人别合伙",
+      "title": "四格看懂：合伙人要互补：能力重叠的两个人别合伙",
+      "sourceArtifact": "exec-975f17e8-a264-483e-9e7a-55c15de8a28d.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-975f17e8-a264-483e-9e7a-55c15de8a28d.png"
+    },
+    {
+      "file": "opc-11.html",
+      "slug": "opc-equity-voting-and-deadlock",
+      "role": "表决虎：紫色马甲、青绿围巾",
+      "takeaway": "股权安排要同时看贡献、表决规则与僵局机制，没有一个比例适合所有团队。",
+      "panels": [
+        {
+          "label": "先分清决议与表决规则",
+          "text": "普通和特别事项的法定要求不同，还要核对公司章程。",
+          "alt": "表决虎在一张表决台上对照两种门槛不同的决议闸门。"
+        },
+        {
+          "label": "均分也要算怎样形成多数",
+          "text": "平均分配不必然失效，但可能依赖稳定协商与联盟。",
+          "alt": "表决虎与两位同族伙伴各持一块同样大小的表决积木，尝试拼成过闸组合。"
+        },
+        {
+          "label": "比例还会随融资变化",
+          "text": "模拟增资、激励与稀释后，再看各方权利和决策能力。",
+          "alt": "表决虎在股权圆盘上加入新积木，重新测量表决门槛。"
+        },
+        {
+          "label": "把僵局处理提前约定",
+          "text": "角色、保留事项与争议机制要写清，别只盯一个控制比例。",
+          "alt": "表决虎与伙伴把一致同意的决策路线卡装入章程册。"
+        }
+      ],
+      "scenePrompt": "角色：表决虎：紫色马甲、青绿围巾。从左到右四格，每格一个完整场景：第1格：表决虎在一张表决台上对照两种门槛不同的决议闸门。 第2格：表决虎与两位同族伙伴各持一块同样大小的表决积木，尝试拼成过闸组合。 第3格：表决虎在股权圆盘上加入新积木，重新测量表决门槛。 第4格：表决虎与伙伴把一致同意的决策路线卡装入章程册。",
+      "originalHtmlSha256": "d377ae0a676918725e0f0b9baadd23c92d001e0208b4560a48220554160a24da",
+      "lessonTitle": "三个人各 1/3 是最贵的公平",
+      "title": "四格看懂：三个人各 1/3 是最贵的公平",
+      "sourceArtifact": "exec-128b8c4a-566c-4a10-bb77-c73fcc89f903.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-128b8c4a-566c-4a10-bb77-c73fcc89f903.png"
+    },
+    {
+      "file": "opc-12.html",
+      "slug": "opc-equity-contribution-framework",
+      "role": "贡献虎：棕色马甲、蓝领结",
+      "takeaway": "把贡献维度拿到桌面谈，参考权重用于讨论，最终安排还须正式落实。",
+      "panels": [
+        {
+          "label": "先把贡献拆开",
+          "text": "能力、资金、机会成本、发起贡献与责任担当分别讨论。",
+          "alt": "贡献虎在讨论台上摆出技能齿轮、资金盒、沙漏、灯泡和责任盾牌。"
+        },
+        {
+          "label": "权重是协商工具",
+          "text": "课程权重只是参考，按实际投入和共同预期调整。",
+          "alt": "贡献虎与伙伴移动不同维度的无字权重滑块，观察比例圆盘变化。"
+        },
+        {
+          "label": "区分经济利益与决策安排",
+          "text": "讨论收益、角色和表决规则，避免只凭钱或最初想法分配。",
+          "alt": "贡献虎将收益硬币盘、角色卡与表决钥匙分别放在方案板上。"
+        },
+        {
+          "label": "写清依据与变化机制",
+          "text": "用协议落实承诺，对未来贡献、成熟和调整条件作出明确安排。",
+          "alt": "贡献虎把贡献证据和阶段条件卡装入双方核对的协议册。"
+        }
+      ],
+      "scenePrompt": "角色：贡献虎：棕色马甲、蓝领结。从左到右四格，每格一个完整场景：第1格：贡献虎在讨论台上摆出技能齿轮、资金盒、沙漏、灯泡和责任盾牌。 第2格：贡献虎与伙伴移动不同维度的无字权重滑块，观察比例圆盘变化。 第3格：贡献虎将收益硬币盘、角色卡与表决钥匙分别放在方案板上。 第4格：贡献虎把贡献证据和阶段条件卡装入双方核对的协议册。",
+      "originalHtmlSha256": "64121a70418051cdc60ede93ef1d0a4583b751af17c115dc45063f705886ac99",
+      "lessonTitle": "股权别靠感觉分：五个维度算一遍",
+      "title": "四格看懂：股权别靠感觉分：五个维度算一遍",
+      "sourceArtifact": "exec-34630bb5-f0b1-4ba4-afa3-0ed1fe04b6b5.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-34630bb5-f0b1-4ba4-afa3-0ed1fe04b6b5.png"
+    },
+    {
+      "file": "opc-13.html",
+      "slug": "opc-equity-vesting-and-exit",
+      "role": "归属虎：青绿夹克、橙围巾",
+      "takeaway": "持股、代持、分期成熟与退出各有风险，结构要按需要设计并正式审查。",
+      "panels": [
+        {
+          "label": "先选必要的结构",
+          "text": "直接持股、激励或代持的效果不同，不宜默认一种安排普遍更好。",
+          "alt": "归属虎在方案台比较直接股权拼图、阶段卡和代持双层文件夹。"
+        },
+        {
+          "label": "内部约定与外部风险分清",
+          "text": "代持涉及名义与实际主体，处分、出资和登记风险要单独核对。",
+          "alt": "归属虎检查两位同族当事人的身份卡与登记柜之间的连接。"
+        },
+        {
+          "label": "成熟条件具体到动作",
+          "text": "时间、业绩、离职和未成熟部分的处理应写清。",
+          "alt": "归属虎沿归属时间轴逐格放入满足条件的权益积木，未成熟格仍封着。"
+        },
+        {
+          "label": "退出机制与手续一起设计",
+          "text": "回购、转让、对价和实施条件需要专业核对并落实文件。",
+          "alt": "归属虎与伙伴在退出路线图前核对合同、付款卡与登记变更文件。"
+        }
+      ],
+      "scenePrompt": "角色：归属虎：青绿夹克、橙围巾。从左到右四格，每格一个完整场景：第1格：归属虎在方案台比较直接股权拼图、阶段卡和代持双层文件夹。 第2格：归属虎检查两位同族当事人的身份卡与登记柜之间的连接。 第3格：归属虎沿归属时间轴逐格放入满足条件的权益积木，未成熟格仍封着。 第4格：归属虎与伙伴在退出路线图前核对合同、付款卡与登记变更文件。",
+      "originalHtmlSha256": "8201471c0a868635974c1f2c44630a348d5c1f1d5776df58c29f87937bbe6fd8",
+      "lessonTitle": "先签代持协议，成熟了再动工商登记",
+      "title": "四格看懂：先签代持协议，成熟了再动工商登记",
+      "sourceArtifact": "exec-814d3b49-20ce-4db4-a810-aac66fd58d5e.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-814d3b49-20ce-4db4-a810-aac66fd58d5e.png"
+    },
+    {
+      "file": "opc-14.html",
+      "slug": "opc-cross-border-service-scope",
+      "role": "出海虎：蓝工装、米色围巾",
+      "takeaway": "先看向谁提供什么服务，再核对相关地区的合规和实际运营要求。",
+      "panels": [
+        {
+          "label": "服务器位置不是唯一依据",
+          "text": "识别用户、服务内容与经营活动所在地区，别仅凭部署地点判断。",
+          "alt": "出海虎在地球模型上连起服务器、用户小屋和经营柜台三个位置。"
+        },
+        {
+          "label": "面向境内公众需核对范围",
+          "text": "生成式 AI 服务按适用规则判断，安全评估和备案有具体条件。",
+          "alt": "出海虎拿服务范围卡对照境内用户群和合规检查册。"
+        },
+        {
+          "label": "目标市场也要重新评估",
+          "text": "当地数据、支付、税务与主体要求，需结合业务形态核对。",
+          "alt": "出海虎在目标市场柜台检查数据盒、支付卡和主体文件夹。"
+        },
+        {
+          "label": "用真实运营验证成本",
+          "text": "需求、定价、客服和长期维护一起测，再决定投入规模。",
+          "alt": "出海虎与当地同族用户测试产品，把反馈卡和运营账本放进同一托盘。"
+        }
+      ],
+      "scenePrompt": "角色：出海虎：蓝工装、米色围巾。从左到右四格，每格一个完整场景：第1格：出海虎在地球模型上连起服务器、用户小屋和经营柜台三个位置。 第2格：出海虎拿服务范围卡对照境内用户群和合规检查册。 第3格：出海虎在目标市场柜台检查数据盒、支付卡和主体文件夹。 第4格：出海虎与当地同族用户测试产品，把反馈卡和运营账本放进同一托盘。",
+      "originalHtmlSha256": "8cc54e6dd79c49ce3b0b00da9c039d9df8de921f1812b0e74384345ef32ab310",
+      "lessonTitle": "服务器放哪不重要，用户在哪才关键",
+      "title": "四格看懂：服务器放哪不重要，用户在哪才关键",
+      "sourceArtifact": "exec-7d3504d6-aa7e-4943-8b91-f83ce5cb5115.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-7d3504d6-aa7e-4943-8b91-f83ce5cb5115.png"
+    },
+    {
+      "file": "opc-15.html",
+      "slug": "opc-niche-market-and-model-tests",
+      "role": "长尾虎：橙夹克、青绿围巾",
+      "takeaway": "用真实需求和自身能力选择切口，再以效果、成本、延迟和合规检验模型。",
+      "panels": [
+        {
+          "label": "从具体痛点找切口",
+          "text": "小市场也要验证需求频率、付费意愿和服务成本。",
+          "alt": "长尾虎在大市场地图边缘找到一个具体用户小屋，拿着问题卡交流。"
+        },
+        {
+          "label": "按能力选择市场路线",
+          "text": "国内或海外都要看真实客户与可承担的运营投入。",
+          "alt": "长尾虎比较两条市场路线，分别放上客户卡、技能盒与成本沙漏。"
+        },
+        {
+          "label": "同一用例测试候选模型",
+          "text": "比较效果、费用、响应与服务条件，别用品牌印象替代实测。",
+          "alt": "长尾虎把相同任务卡送入不同模型盒，收集结果、硬币和沙漏。"
+        },
+        {
+          "label": "把规模与替换也算进去",
+          "text": "估算增长后的成本，安排可切换接口与必要备用。",
+          "alt": "长尾虎在应用工位插入可替换模型模块，同时核对放大的请求量托盘。"
+        }
+      ],
+      "scenePrompt": "角色：长尾虎：橙夹克、青绿围巾。从左到右四格，每格一个完整场景：第1格：长尾虎在大市场地图边缘找到一个具体用户小屋，拿着问题卡交流。 第2格：长尾虎比较两条市场路线，分别放上客户卡、技能盒与成本沙漏。 第3格：长尾虎把相同任务卡送入不同模型盒，收集结果、硬币和沙漏。 第4格：长尾虎在应用工位插入可替换模型模块，同时核对放大的请求量托盘。",
+      "originalHtmlSha256": "f5ce4de43c10b57306a04acceee910d50cb31404c87f146f2399f1339e5c66d3",
+      "lessonTitle": "大厂看不上的长尾，才是一个人的机会",
+      "title": "四格看懂：大厂看不上的长尾，才是一个人的机会",
+      "sourceArtifact": "exec-17be1eba-e77f-4d30-90a9-3c264ed18b3e.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-17be1eba-e77f-4d30-90a9-3c264ed18b3e.png"
+    },
+    {
+      "file": "opc-final.html",
+      "slug": "opc-validated-market-and-rights",
+      "role": "创业虎：青绿毛衣、橙围巾",
+      "takeaway": "先验证需求，再用 AI 交付，并让权属、合规和经营检查随业务推进。",
+      "panels": [
+        {
+          "label": "先找到愿意行动的用户",
+          "text": "具体痛点与真实付费行为，比礼貌赞美更能检验需求。",
+          "alt": "创业虎向同族用户展示小原型，接住真实订单卡而非只有点赞卡。"
+        },
+        {
+          "label": "用小实验检验假设",
+          "text": "记录反馈、成本和停止条件，及时决定继续或调整。",
+          "alt": "创业虎在实验台对照反馈卡与成本沙漏，将不合适的方案放回待调整托盘。"
+        },
+        {
+          "label": "再把产品与保护做扎实",
+          "text": "AI 帮助交付，权属、数据与上线义务按实际情况同步核对。",
+          "alt": "创业虎与白色青绿脸机器人搭好产品模型，旁边逐项检查合同盒和上线清单。"
+        },
+        {
+          "label": "复盘后安排下一步",
+          "text": "自查清单用于发现遗漏，勾完不代表已获得全面合法性保证。",
+          "alt": "创业虎根据检查册找到尚缺的一块拼图，在行动日历上安排补齐。"
+        }
+      ],
+      "scenePrompt": "角色：创业虎：青绿毛衣、橙围巾。从左到右四格，每格一个完整场景：第1格：创业虎向同族用户展示小原型，接住真实订单卡而非只有点赞卡。 第2格：创业虎在实验台对照反馈卡与成本沙漏，将不合适的方案放回待调整托盘。 第3格：创业虎与白色青绿脸机器人搭好产品模型，旁边逐项检查合同盒和上线清单。 第4格：创业虎根据检查册找到尚缺的一块拼图，在行动日历上安排补齐。",
+      "originalHtmlSha256": "ceb8ed31c10eebc879b5d670e4e8b4e751540540e028a651bd8f17ee35313045",
+      "lessonTitle": "新创业公式：先找买单的人，再用 AI 做出来",
+      "title": "四格看懂：新创业公式：先找买单的人，再用 AI 做出来",
+      "sourceArtifact": "exec-9c4a2f07-de03-4a64-a225-0dc4251c7925.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-9c4a2f07-de03-4a64-a225-0dc4251c7925.png"
+    }
+  ]
+}
