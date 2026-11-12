@@ -1,0 +1,288 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "evidenceScope": "Actual course HTML and quoted deepseek-harness-master source snapshot, checked in the lessons on 2026-08-13; no claim about current upstream or other product internals.",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-deepseek-c",
+  "status": "accepted; all 8 article-specific comics integrated and visually reviewed",
+  "lessons": [
+    {
+      "file": "dsh-22.html",
+      "slug": "dsh-llm-attempts-chunks-and-messages",
+      "role": "流式虎：青绿夹克、蓝围巾",
+      "takeaway": "适配器只做单次尝试，分片与成功消息分别记账，重试由上层显式记录。",
+      "panels": [
+        {
+          "label": "一次调用对应一次尝试",
+          "text": "本课适配器关闭库内隐藏重试，失败转换为稳定错误。",
+          "alt": "流式虎把单次请求卡送过一个尝试工位，失败卡清楚返回出口。"
+        },
+        {
+          "label": "原始分片先写日志",
+          "text": "分片按类型组装，成功结束后再写完整消息。",
+          "alt": "流式虎把不同颜色的流式积木逐个放进录像账本，再合成完整消息卡。"
+        },
+        {
+          "label": "失败半截不冒充完整历史",
+          "text": "失败分片保留作证，但不作为成功消息进入后续派生上下文。",
+          "alt": "流式虎将半成品卡留在事故记录盒，完整历史卡架上对应格仍空着。"
+        },
+        {
+          "label": "重试成为可观察事件",
+          "text": "记录原因、延迟与尝试；空响应和停滞也要按规则处理。",
+          "alt": "流式虎在重试轨道旁保存失败卡、沙漏和新尝试票，再核对成功结果。"
+        }
+      ],
+      "scenePrompt": "角色：流式虎：青绿夹克、蓝围巾。从左到右四格，每格一个完整场景：第1格：流式虎把单次请求卡送过一个尝试工位，失败卡清楚返回出口。 第2格：流式虎把不同颜色的流式积木逐个放进录像账本，再合成完整消息卡。 第3格：流式虎将半成品卡留在事故记录盒，完整历史卡架上对应格仍空着。 第4格：流式虎在重试轨道旁保存失败卡、沙漏和新尝试票，再核对成功结果。",
+      "originalHtmlSha256": "1976e629ef23e014d247a7f6278b63ed9f377e2b61e7bdfe8e19bd191aa95397",
+      "lessonTitle": "LLM 适配层：单次尝试、显式重试、双流持久",
+      "title": "四格看懂：LLM 适配层：单次尝试、显式重试、双流持久",
+      "sourceArtifact": "exec-2b4a4b46-85a9-480a-bef0-b4dcf583ddbb.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-2b4a4b46-85a9-480a-bef0-b4dcf583ddbb.png"
+    },
+    {
+      "file": "dsh-26.html",
+      "slug": "dsh-test-replay-properties-faults",
+      "role": "测试虎：橙工装、紫围巾",
+      "takeaway": "用真实格式回放、性质测试与故障注入互补，覆盖率不能代替行为证据。",
+      "panels": [
+        {
+          "label": "回放从真实日志出发",
+          "text": "生产格式记录可派生测试输入，检查重建行为。",
+          "alt": "测试虎把真实会话账本接到回放台，输出可比对的请求卡列。"
+        },
+        {
+          "label": "性质测试探索交错序列",
+          "text": "合法与畸形分片组合可检查关闭、顺序和组装不变量。",
+          "alt": "测试虎将重复关闭片和滞后分片混入积木流，观察检查闸门。"
+        },
+        {
+          "label": "故障服务器模拟真实边界",
+          "text": "脚本控制断线、限流或停滞，由被测系统决定如何恢复。",
+          "alt": "测试虎在故障台上切断连接管、调节请求闸门并暂停流式传送带。"
+        },
+        {
+          "label": "失败要保留可复现证据",
+          "text": "按契约修复实现或 fixture，不用宽松比对掩盖差异。",
+          "alt": "测试虎对照失败差异卡与原始 fixture 档案，把改动说明放入测试记录夹。"
+        }
+      ],
+      "scenePrompt": "角色：测试虎：橙工装、紫围巾。从左到右四格，每格一个完整场景：第1格：测试虎把真实会话账本接到回放台，输出可比对的请求卡列。 第2格：测试虎将重复关闭片和滞后分片混入积木流，观察检查闸门。 第3格：测试虎在故障台上切断连接管、调节请求闸门并暂停流式传送带。 第4格：测试虎对照失败差异卡与原始 fixture 档案，把改动说明放入测试记录夹。",
+      "originalHtmlSha256": "45d2a15a41cccb20f998f36d4b15e37d8329c5d44409b7a40fddbd02787d1d08",
+      "lessonTitle": "测试一个非确定性系统",
+      "title": "四格看懂：测试一个非确定性系统",
+      "sourceArtifact": "exec-2ac1d79a-9c93-4870-a5f8-b8cbafc1e751.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-2ac1d79a-9c93-4870-a5f8-b8cbafc1e751.png"
+    },
+    {
+      "file": "dsh-23.html",
+      "slug": "dsh-persistence-version-refusal",
+      "role": "版本虎：蓝马甲、青绿领结",
+      "takeaway": "持久日志按语义版本与事件兼容性读取，不认识的数据不能静默猜读。",
+      "panels": [
+        {
+          "label": "先确认格式版本",
+          "text": "本课按能否语义正确处理决定兼容，而非只看解析成功。",
+          "alt": "版本虎把日志首页的版本齿位与读取器插槽核对。"
+        },
+        {
+          "label": "版本不同说明处理方向",
+          "text": "新日志要求升级读取器，旧日志需要完整的升级链。",
+          "alt": "版本虎在新旧两类日志前分别摆出读取器升级卡和逐级转换积木。"
+        },
+        {
+          "label": "查看不立即改写原件",
+          "text": "本课先在内存迁移，继续会话时才按规则写回并留备份。",
+          "alt": "版本虎在透明临时台转换卡片，原始日志仍封存在备份柜中。"
+        },
+        {
+          "label": "未知事件明确处理",
+          "text": "只有契约允许忽略的事件可跳过，其余应拒绝并给出定位信息。",
+          "alt": "版本虎把可忽略标记卡放入旁路，无标记未知卡停在拒绝门前并附来源书签。"
+        }
+      ],
+      "scenePrompt": "角色：版本虎：蓝马甲、青绿领结。从左到右四格，每格一个完整场景：第1格：版本虎把日志首页的版本齿位与读取器插槽核对。 第2格：版本虎在新旧两类日志前分别摆出读取器升级卡和逐级转换积木。 第3格：版本虎在透明临时台转换卡片，原始日志仍封存在备份柜中。 第4格：版本虎把可忽略标记卡放入旁路，无标记未知卡停在拒绝门前并附来源书签。",
+      "originalHtmlSha256": "c869e969ebca5de307c6d8474dab8cd1f20a4624530d9ddb239413c8f70cd84d",
+      "lessonTitle": "持久化治理：版本、fork 边界与拒绝解读",
+      "title": "四格看懂：持久化治理：版本、fork 边界与拒绝解读",
+      "sourceArtifact": "exec-adeb797d-3607-4c78-9551-c9c5f542a607.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-adeb797d-3607-4c78-9551-c9c5f542a607.png"
+    },
+    {
+      "file": "dsh-24.html",
+      "slug": "dsh-credentials-reference-and-snapshot",
+      "role": "凭据虎：紫夹克、橙领结",
+      "takeaway": "配置保存凭据引用，每个操作重新解析并固定本次快照，界面只描述来源和可写性。",
+      "panels": [
+        {
+          "label": "引用与机密值分开",
+          "text": "本课配置持有引用名称，真实值由凭据提供方解析。",
+          "alt": "凭据虎把钥匙图标引用牌放在配置册，真正钥匙留在独立带锁提供柜。"
+        },
+        {
+          "label": "每次操作重新取快照",
+          "text": "新请求可看到轮换后的值，进行中请求保持同一代端点和凭据。",
+          "alt": "凭据虎给当前请求车装上成套钥匙与端点卡，新一套留给下一辆车。"
+        },
+        {
+          "label": "来源优先级影响更新",
+          "text": "高优先级环境来源可能遮住文件值，不能只看保存成功。",
+          "alt": "凭据虎对照分层来源架，发现上层钥匙仍挡住下层新钥匙。"
+        },
+        {
+          "label": "界面展示状态而非值",
+          "text": "说明已配置、来源与能否写入，缺少凭据应明确失败。",
+          "alt": "凭据虎向机器人展示无机密内容的状态板，空钥匙槽对应的请求车停在门前。"
+        }
+      ],
+      "scenePrompt": "角色：凭据虎：紫夹克、橙领结。从左到右四格，每格一个完整场景：第1格：凭据虎把钥匙图标引用牌放在配置册，真正钥匙留在独立带锁提供柜。 第2格：凭据虎给当前请求车装上成套钥匙与端点卡，新一套留给下一辆车。 第3格：凭据虎对照分层来源架，发现上层钥匙仍挡住下层新钥匙。 第4格：凭据虎向机器人展示无机密内容的状态板，空钥匙槽对应的请求车停在门前。",
+      "originalHtmlSha256": "f61f93a5d6b0c5646ba6e050b1d1d952ad8f6f5ce029de4742fb39d3e627da32",
+      "lessonTitle": "凭据、设置、存储与遥测",
+      "title": "四格看懂：凭据、设置、存储与遥测",
+      "sourceArtifact": "exec-4a92494b-b2f2-486c-a40f-e38985971146.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-4a92494b-b2f2-486c-a40f-e38985971146.png"
+    },
+    {
+      "file": "dsh-25.html",
+      "slug": "dsh-entry-adapters-shared-core",
+      "role": "入口虎：青绿围裙、蓝衬衫",
+      "takeaway": "不同入口通过协议适配共享内核，传输通道与身份解析各有明确合约。",
+      "panels": [
+        {
+          "label": "不同面孔共用能力",
+          "text": "本课入口主要改变协议桥，核心会话与工具机制仍可复用。",
+          "alt": "入口虎把网页、无头设备、编辑器、脚本和接口图标连向同一内核工位。"
+        },
+        {
+          "label": "入口负责翻译而非复制内核",
+          "text": "把外部请求转成会话操作，再把事件转回对应输出。",
+          "alt": "入口虎在协议桥两端转换外部消息卡和统一会话卡。"
+        },
+        {
+          "label": "标识要在边界解析",
+          "text": "wire identity 需映射到宿主对象，不能直接信任外来对象。",
+          "alt": "入口虎核对外部身份票后，从会话登记柜取出匹配的真实对象盒。"
+        },
+        {
+          "label": "传输线保留给协议",
+          "text": "stdio 协议通道不能混入普通日志，其他入口也需守各自限流与消息规则。",
+          "alt": "入口虎把协议珠串送入专用管道，将日志纸带分到另一个出口。"
+        }
+      ],
+      "scenePrompt": "角色：入口虎：青绿围裙、蓝衬衫。从左到右四格，每格一个完整场景：第1格：入口虎把网页、无头设备、编辑器、脚本和接口图标连向同一内核工位。 第2格：入口虎在协议桥两端转换外部消息卡和统一会话卡。 第3格：入口虎核对外部身份票后，从会话登记柜取出匹配的真实对象盒。 第4格：入口虎把协议珠串送入专用管道，将日志纸带分到另一个出口。",
+      "originalHtmlSha256": "5ba6be6b48262ab9e7f07c1b952407dde15252c5698c73505146909b2eaa3cdf",
+      "lessonTitle": "多入口与 Typert：一个内核，五张面孔",
+      "title": "四格看懂：多入口与 Typert：一个内核，五张面孔",
+      "sourceArtifact": "exec-2991a0ab-b3db-4232-9480-b1f8b0c8bc02.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-2991a0ab-b3db-4232-9480-b1f8b0c8bc02.png"
+    },
+    {
+      "file": "dsh-27.html",
+      "slug": "dsh-notes-lifecycle-checkable-rules",
+      "role": "笔记虎：橙开衫、蓝背带裤",
+      "takeaway": "设计记录保存问题、决定与替代方案，状态转换和可检查规则帮助后来者复核。",
+      "panels": [
+        {
+          "label": "先保存问题与候选方案",
+          "text": "记录为什么要改，以及考虑过哪些选择。",
+          "alt": "笔记虎把问题卡、候选方案卡和比较图放进提案夹。"
+        },
+        {
+          "label": "笔记有明确生命周期",
+          "text": "本课区分 proposed、implemented、rejected 与 archived 的语义。",
+          "alt": "笔记虎将同一主题档案按状态图标移动到四个不同文件柜。"
+        },
+        {
+          "label": "状态与正文一起更新",
+          "text": "搬目录时也要核对状态行、决定表述与格式要求。",
+          "alt": "笔记虎把档案放入新状态柜前，用清单核对封面与内页。"
+        },
+        {
+          "label": "规则写到可执行程度",
+          "text": "少量明确约束配合脚本或评审，实际改动仍需对应证据。",
+          "alt": "笔记虎向同事虎展示简短规则卡与校验记录，指出无法判断的一条并重写。"
+        }
+      ],
+      "scenePrompt": "角色：笔记虎：橙开衫、蓝背带裤。从左到右四格，每格一个完整场景：第1格：笔记虎把问题卡、候选方案卡和比较图放进提案夹。 第2格：笔记虎将同一主题档案按状态图标移动到四个不同文件柜。 第3格：笔记虎把档案放入新状态柜前，用清单核对封面与内页。 第4格：笔记虎向同事虎展示简短规则卡与校验记录，指出无法判断的一条并重写。",
+      "originalHtmlSha256": "2093b50ab5c17ddb3efa77f99ca170d967875fc6f2a8f51ab1099e739d51507b",
+      "lessonTitle": "Agent Notes 与 AGENTS.md：用 AI 开发 AI 的规训",
+      "title": "四格看懂：Agent Notes 与 AGENTS.md：用 AI 开发 AI 的规训",
+      "sourceArtifact": "exec-06892d95-09dd-4469-9b72-bacbc88360bb.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-06892d95-09dd-4469-9b72-bacbc88360bb.png"
+    },
+    {
+      "file": "dsh-28.html",
+      "slug": "dsh-prefix-stability-contract",
+      "role": "缓存虎：蓝工装、青绿围巾",
+      "takeaway": "把请求前缀稳定性纳入合约，稳定排序并将动态信息放到合适位置。",
+      "panels": [
+        {
+          "label": "先看哪些内容进入请求",
+          "text": "系统提示、工具 schema 与动态上下文各有位置和开销。",
+          "alt": "缓存虎把规则册、工具卡与动态消息卡依次放到请求色带。"
+        },
+        {
+          "label": "前缀变化可能影响复用",
+          "text": "不同 token 的位置影响可复用范围，实际规则依服务实现。",
+          "alt": "缓存虎在色带前段换一块积木，后方复用灯随之转暗。"
+        },
+        {
+          "label": "规范化工具与模板组装",
+          "text": "本课集中定序，检查变量注册与插值，减少加载顺序抖动。",
+          "alt": "缓存虎把乱序工具卡按固定格架排好，再核对模板变量插槽。"
+        },
+        {
+          "label": "动态变化要有用途与证据",
+          "text": "按需追加上下文，并测命中、总成本与质量，不能为缓存牺牲任务信息。",
+          "alt": "缓存虎把必要新消息追加到稳定色带尾部，对照账盘与实际任务成品。"
+        }
+      ],
+      "scenePrompt": "角色：缓存虎：蓝工装、青绿围巾。从左到右四格，每格一个完整场景：第1格：缓存虎把规则册、工具卡与动态消息卡依次放到请求色带。 第2格：缓存虎在色带前段换一块积木，后方复用灯随之转暗。 第3格：缓存虎把乱序工具卡按固定格架排好，再核对模板变量插槽。 第4格：缓存虎把必要新消息追加到稳定色带尾部，对照账盘与实际任务成品。",
+      "originalHtmlSha256": "7996d029218fbdf12836d3174d48abac0cc384106d06a961c3191bb214ec2562",
+      "lessonTitle": "KV Cache 是接口",
+      "title": "四格看懂：KV Cache 是接口",
+      "sourceArtifact": "exec-c382b725-e5ae-433d-b723-4e607529e173.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-c382b725-e5ae-433d-b723-4e607529e173.png"
+    },
+    {
+      "file": "dsh-29.html",
+      "slug": "dsh-adopt-mechanisms-by-dependencies",
+      "role": "选抄虎：紫围裙、橙衬衫",
+      "takeaway": "从项目需要选择最小机制，先补依赖，再评估维护成本与可复现性。",
+      "panels": [
+        {
+          "label": "先写清真正的问题",
+          "text": "日志一致性、恢复、扩展与成本优化解决的是不同需求。",
+          "alt": "选抄虎将项目问题卡分到日志、恢复、模块和预算四个托盘。"
+        },
+        {
+          "label": "选能力时同时检查依赖",
+          "text": "重试等机制需要相应状态与证据基础，不能只摘表面功能。",
+          "alt": "选抄虎在机制拼图板上发现上层模块缺少底座，先补齐依赖积木。"
+        },
+        {
+          "label": "避开养不起的体量",
+          "text": "按当前团队与风险选择最小可维护方案。",
+          "alt": "选抄虎比较庞大工具柜与轻量工作台，把暂不需要的模块放回架子。"
+        },
+        {
+          "label": "用受控实验验证取舍",
+          "text": "固定任务、工作区和配置，比较真实效果并保存证据边界。",
+          "alt": "选抄虎让两套明确配置的工作台完成同一任务，核对记录与成品。"
+        }
+      ],
+      "scenePrompt": "角色：选抄虎：紫围裙、橙衬衫。从左到右四格，每格一个完整场景：第1格：选抄虎将项目问题卡分到日志、恢复、模块和预算四个托盘。 第2格：选抄虎在机制拼图板上发现上层模块缺少底座，先补齐依赖积木。 第3格：选抄虎比较庞大工具柜与轻量工作台，把暂不需要的模块放回架子。 第4格：选抄虎让两套明确配置的工作台完成同一任务，核对记录与成品。",
+      "originalHtmlSha256": "fe8987f0648afd3eec78e2be3aa2078221dab20b3aff0c3999e5be2eb23f8608",
+      "lessonTitle": "终章：五种工程观，我们该抄什么",
+      "title": "四格看懂：终章：五种工程观，我们该抄什么",
+      "sourceArtifact": "exec-1a537a3a-fb30-4631-a2fe-6e0d27fe2bfd.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-1a537a3a-fb30-4631-a2fe-6e0d27fe2bfd.png"
+    }
+  ]
+}

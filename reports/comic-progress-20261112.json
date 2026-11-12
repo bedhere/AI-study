@@ -2,13 +2,13 @@
   "date": "2026-11-12",
   "baseline": "b7dee1875f12de989c9132ddad5795a3729c1b5d",
   "total": 445,
-  "completed": 342,
-  "remaining": 103,
-  "coveragePercent": 76.9,
-  "panels": 1368,
-  "webpFiles": 1710,
-  "newStories": 149,
-  "newArticleBodiesPreserved": 149,
+  "completed": 359,
+  "remaining": 86,
+  "coveragePercent": 80.7,
+  "panels": 1436,
+  "webpFiles": 1795,
+  "newStories": 166,
+  "newArticleBodiesPreserved": 166,
   "previousProvenanceUnchanged": 193,
   "maxPanelKiB": 201.7,
   "chapters": [
@@ -128,8 +128,8 @@
       "id": "p-dsh",
       "title": "解剖 DeepSeek Harness：一切皆插件的 Agent 底座",
       "total": 29,
-      "completed": 12,
-      "remaining": 17
+      "completed": 29,
+      "remaining": 0
     },
     {
       "id": "p-codex",
@@ -175,131 +175,6 @@
     }
   ],
   "remainingChapters": [
-    {
-      "id": "p-dsh",
-      "title": "解剖 DeepSeek Harness：一切皆插件的 Agent 底座",
-      "lessons": [
-        {
-          "file": "dsh-14.html",
-          "title": "文件编辑的工程学：先读后写",
-          "desc": "read / edit / write 三件套，没读过的文件不许改。核心源码：packages/fs/fs-observation-policy/src/index.ts。",
-          "tag": "实战",
-          "navTitle": "文件编辑的工程学：先读后写"
-        },
-        {
-          "file": "dsh-17.html",
-          "title": "DSH 独有的工具面：terminal / lsp / jobs",
-          "desc": "别家没有的几个工具各解决什么问题。核心源码：packages/terminal/、packages/lsp/ 与 packages/jobs/，工具描述全文见 docs/tool-catalog.zh.md。",
-          "tag": "案例",
-          "navTitle": "DSH 独有的工具面：terminal / lsp / jobs"
-        },
-        {
-          "file": "dsh-15.html",
-          "title": "审批与权限：两个旋钮，一个下拉框",
-          "desc": "沙箱模式和审批策略是两个独立旋钮，预设只是常用组合。核心源码：packages/interaction/user-approval 与 packages/interaction/permission-presets。",
-          "tag": "安全",
-          "navTitle": "审批与权限：两个旋钮，一个下拉框"
-        },
-        {
-          "file": "dsh-16.html",
-          "title": "沙箱：从 seatbelt 到执行世界",
-          "desc": "ctx.fs 和 ctx.subprocess 同享一个路径命名空间，执行环境可以整体换掉。核心源码：packages/sandbox/、packages/e2b/ 与 native/landlock-run/。",
-          "tag": "安全",
-          "navTitle": "沙箱：从 seatbelt 到执行世界"
-        },
-        {
-          "file": "dsh-5.html",
-          "title": "Code Mode：一段代码顶多轮工具调用",
-          "desc": "模型写一段小程序，run_code 把它送进 worker 沙箱，五次工具调用一轮搞定。本课讲这个设计背后的两个思路。",
-          "tag": "前沿",
-          "navTitle": "Code Mode：一段代码顶多轮工具调用"
-        },
-        {
-          "file": "dsh-18.html",
-          "title": "Subagent 是一个 seam：从进程内到委派 Claude Code",
-          "desc": "子 Agent 是能力接缝，进程内、远程、别家产品都能接。核心源码：packages/subagent/。",
-          "tag": "架构",
-          "navTitle": "Subagent 是一个 seam：从进程内到委派 Claude Code"
-        },
-        {
-          "file": "dsh-19.html",
-          "title": "workflow / schedule / plan / todo：编排原语的取舍",
-          "desc": "四种编排原语各管什么，为什么没做成一个大而全。核心文档：docs/subsystems/workflow.zh.md 等四篇。",
-          "tag": "概念",
-          "navTitle": "workflow / schedule / plan / todo：编排原语的取舍"
-        },
-        {
-          "file": "dsh-20.html",
-          "title": "Skill、Preset 与自我修改",
-          "desc": "cordis_define 让 Agent 在运行时改写自己的运行时。核心目录：packages/extensions/tool-cordis/ 与 apps/cli/config/agent-presets/。",
-          "tag": "前沿",
-          "navTitle": "Skill、Preset 与自我修改"
-        },
-        {
-          "file": "dsh-21.html",
-          "title": "MCP 与 Extensions：外部工具接入的两条路",
-          "desc": "桥接生态标准与原生扩展怎么分工。核心源码：packages/mcp/mcp-client/ 与 packages/extensions/。",
-          "tag": "深入",
-          "navTitle": "MCP 与 Extensions：外部工具接入的两条路"
-        },
-        {
-          "file": "dsh-22.html",
-          "title": "LLM 适配层：单次尝试、显式重试、双流持久",
-          "desc": "推理流与正文流分开存，重试是显式事件。核心源码：packages/llm/llm/src/assembler.ts 与 packages/core/agent-loop/src/agent.ts。",
-          "tag": "深入",
-          "navTitle": "LLM 适配层：单次尝试、显式重试、双流持久"
-        },
-        {
-          "file": "dsh-26.html",
-          "title": "测试一个非确定性系统",
-          "desc": "确定性回放、性质测试、专门骗 LLM 客户端的故障服务器。核心材料：docs/testing.zh.md 与 packages/test-support/。",
-          "tag": "实战",
-          "navTitle": "测试一个非确定性系统"
-        },
-        {
-          "file": "dsh-23.html",
-          "title": "持久化治理：版本、fork 边界与拒绝解读",
-          "desc": "日志格式怎么演进，分叉边界怎么定，读不懂的数据宁可拒绝。",
-          "tag": "架构",
-          "navTitle": "持久化治理：版本、fork 边界与拒绝解读"
-        },
-        {
-          "file": "dsh-24.html",
-          "title": "凭据、设置、存储与遥测",
-          "desc": "不起眼但全是坑：凭据每次现取、配置不落盘。",
-          "tag": "实战",
-          "navTitle": "凭据、设置、存储与遥测"
-        },
-        {
-          "file": "dsh-25.html",
-          "title": "多入口与 Typert：一个内核，五张面孔",
-          "desc": "Web、headless、ACP、SDK、HTTP 共享同一个内核。",
-          "tag": "架构",
-          "navTitle": "多入口与 Typert：一个内核，五张面孔"
-        },
-        {
-          "file": "dsh-27.html",
-          "title": "Agent Notes 与 AGENTS.md：用 AI 开发 AI 的规训",
-          "desc": "四状态设计笔记和给 AI 看的编码规范，团队立刻能抄。",
-          "tag": "汇总",
-          "navTitle": "Agent Notes 与 AGENTS.md：用 AI 开发 AI 的规训"
-        },
-        {
-          "file": "dsh-28.html",
-          "title": "KV Cache 是接口",
-          "desc": "prompt 前缀稳定性当成兼容性承诺来维护。",
-          "tag": "前沿",
-          "navTitle": "KV Cache 是接口"
-        },
-        {
-          "file": "dsh-29.html",
-          "title": "终章：五种工程观，我们该抄什么",
-          "desc": "五家 harness 设计哲学总表，附最小可抄清单和体量陷阱清单。",
-          "tag": "收官",
-          "navTitle": "终章：五种工程观，我们该抄什么"
-        }
-      ]
-    },
     {
       "id": "p-codex",
       "title": "解剖 OpenAI Codex：把安全观写进类型系统",

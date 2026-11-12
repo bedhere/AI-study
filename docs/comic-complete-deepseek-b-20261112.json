@@ -1,0 +1,322 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "evidenceScope": "Actual course HTML and quoted deepseek-harness-master source snapshot, checked in the lessons on 2026-08-13; no claim about current upstream or other product internals.",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-deepseek-b",
+  "status": "accepted; all 9 article-specific comics integrated and visually reviewed",
+  "lessons": [
+    {
+      "file": "dsh-14.html",
+      "slug": "dsh-file-observation-freshness",
+      "role": "编辑虎：蓝围裙、橙衬衫",
+      "takeaway": "文件观测账本与版本守卫保护编辑边界，外部变化后应重新读取。",
+      "panels": [
+        {
+          "label": "先区分三种文件操作",
+          "text": "read、edit 与 write 分别承担读取、字面替换和整文件写入。",
+          "alt": "编辑虎在桌上把放大镜、局部替换卡和完整卷册摆成三组。"
+        },
+        {
+          "label": "读取形成观测记录",
+          "text": "本课策略按会话记录文件目标与观测状态。",
+          "alt": "编辑虎读完文件卡后，将带版本齿位的观测票放入会话账本。"
+        },
+        {
+          "label": "编辑时核对新鲜度",
+          "text": "文件已被外部改动，旧观测不能继续授权同样写入。",
+          "alt": "编辑虎拿旧版本票对照已换内容的文件卡，在写入闸前发现不匹配。"
+        },
+        {
+          "label": "成功与失败都要检查",
+          "text": "按新建、覆盖与局部修改的条件执行，过期时重读并复核差异。",
+          "alt": "编辑虎重新读取新文件，对照拟修改片段和结果差异卡再确认。"
+        }
+      ],
+      "scenePrompt": "角色：编辑虎：蓝围裙、橙衬衫。从左到右四格，每格一个完整场景：第1格：编辑虎在桌上把放大镜、局部替换卡和完整卷册摆成三组。 第2格：编辑虎读完文件卡后，将带版本齿位的观测票放入会话账本。 第3格：编辑虎拿旧版本票对照已换内容的文件卡，在写入闸前发现不匹配。 第4格：编辑虎重新读取新文件，对照拟修改片段和结果差异卡再确认。",
+      "originalHtmlSha256": "1cf2140241e5223c6cffca6267ce7dd8f03dc1c6d671b25eeb4457544cabced1",
+      "lessonTitle": "文件编辑的工程学：先读后写",
+      "title": "四格看懂：文件编辑的工程学：先读后写",
+      "sourceArtifact": "exec-0a4824b4-302b-4fa1-9e8e-c31a26b89aab.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-0a4824b4-302b-4fa1-9e8e-c31a26b89aab.png"
+    },
+    {
+      "file": "dsh-17.html",
+      "slug": "dsh-terminal-lsp-owned-jobs",
+      "role": "终端虎：青绿工装、蓝围巾",
+      "takeaway": "持久终端、语义导航和统一任务登记各管一层，还要处理所有权与资源释放。",
+      "panels": [
+        {
+          "label": "有状态终端延续会话",
+          "text": "同一终端中的交互进程可接收后续输入，需检查忙碌状态。",
+          "alt": "终端虎在持久终端工位给同一机器人连续递交调试卡。"
+        },
+        {
+          "label": "语义工具依赖服务配置",
+          "text": "LSP 能力需语言服务器支持，未配置时应给出明确结果。",
+          "alt": "终端虎把定义查询卡递到语言服务插槽，发现插槽未接服务并记录说明。"
+        },
+        {
+          "label": "后台任务有统一所有者",
+          "text": "本课 jobs 的读取、等待与取消按 owner 校验。",
+          "alt": "终端虎在任务面板前用所属会话钥匙打开自己的任务格，另一格保持上锁。"
+        },
+        {
+          "label": "完成包含清理与通知",
+          "text": "资源释放后再兑现完成，取消所属任务并避免重复通知。",
+          "alt": "终端虎关闭后台设备并收好线缆，将一张完成卡放进通知盒。"
+        }
+      ],
+      "scenePrompt": "角色：终端虎：青绿工装、蓝围巾。从左到右四格，每格一个完整场景：第1格：终端虎在持久终端工位给同一机器人连续递交调试卡。 第2格：终端虎把定义查询卡递到语言服务插槽，发现插槽未接服务并记录说明。 第3格：终端虎在任务面板前用所属会话钥匙打开自己的任务格，另一格保持上锁。 第4格：终端虎关闭后台设备并收好线缆，将一张完成卡放进通知盒。",
+      "originalHtmlSha256": "7f8e0d93c11b0c5ba1e137e3b63f276307febbc5197593ecac54879dc5861880",
+      "lessonTitle": "DSH 独有的工具面：terminal / lsp / jobs",
+      "title": "四格看懂：DSH 独有的工具面：terminal / lsp / jobs",
+      "sourceArtifact": "exec-17be0cac-1ad6-41ad-aa8f-3d85056b3cbe.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-17be0cac-1ad6-41ad-aa8f-3d85056b3cbe.png"
+    },
+    {
+      "file": "dsh-15.html",
+      "slug": "dsh-approval-and-sandbox-axes",
+      "role": "审批虎：紫夹克、橙领结",
+      "takeaway": "沙箱能力与审批策略独立设置，预设只是可展开的常用组合。",
+      "panels": [
+        {
+          "label": "两个旋钮回答不同问题",
+          "text": "一边限制可访问能力，一边决定何时征询批准。",
+          "alt": "审批虎在控制台前分别调节能力罩旋钮与确认铃旋钮。"
+        },
+        {
+          "label": "预设组合现有设置",
+          "text": "本课选择预设会按实际差异调用各自设置路径。",
+          "alt": "审批虎用一张预设组合卡对照两个旋钮，只有变化项亮起。"
+        },
+        {
+          "label": "以当前生效值为准",
+          "text": "单独调整旋钮后，预设显示也需按规则重新派生。",
+          "alt": "审批虎改变一个旋钮，再对照已不匹配的旧预设卡与新状态板。"
+        },
+        {
+          "label": "审批不可用要明确结算",
+          "text": "禁止询问或应答者消失时，遵守对应策略，不能把无回复当批准。",
+          "alt": "审批虎在无人回应的确认台前关闭待执行闸门并保存拒绝结果卡。"
+        }
+      ],
+      "scenePrompt": "角色：审批虎：紫夹克、橙领结。从左到右四格，每格一个完整场景：第1格：审批虎在控制台前分别调节能力罩旋钮与确认铃旋钮。 第2格：审批虎用一张预设组合卡对照两个旋钮，只有变化项亮起。 第3格：审批虎改变一个旋钮，再对照已不匹配的旧预设卡与新状态板。 第4格：审批虎在无人回应的确认台前关闭待执行闸门并保存拒绝结果卡。",
+      "originalHtmlSha256": "d146357a8ab95240d264fc962aa0052c152b45418934981bae96f446d1d31a41",
+      "lessonTitle": "审批与权限：两个旋钮，一个下拉框",
+      "title": "四格看懂：审批与权限：两个旋钮，一个下拉框",
+      "sourceArtifact": "exec-37429a0e-349e-46f2-81ce-68315a1c1a01.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-37429a0e-349e-46f2-81ce-68315a1c1a01.png"
+    },
+    {
+      "file": "dsh-16.html",
+      "slug": "dsh-shared-filesystem-execution-world",
+      "role": "世界虎：橙背带裤、青绿衬衫",
+      "takeaway": "文件与子进程共享路径语义，替换执行后端时也要明确哪些状态仍留在宿主。",
+      "panels": [
+        {
+          "label": "工具依赖统一插口",
+          "text": "文件访问与子进程通过宿主提供的能力接口工作。",
+          "alt": "世界虎把文件柜和进程工作台分别接到同一执行底座的两个插口。"
+        },
+        {
+          "label": "两端必须看到同一文件",
+          "text": "文件接口给出的路径要能被相应子进程正确打开。",
+          "alt": "世界虎将同一文件卡从读取柜送到进程台，两边使用匹配路径钥匙。"
+        },
+        {
+          "label": "可整体替换执行世界",
+          "text": "本课远程适配器替换文件和进程，宿主与会话状态另有边界。",
+          "alt": "世界虎更换插口下方的远程执行底座，上方工具连线不变，会话档案仍留在本地桌。"
+        },
+        {
+          "label": "错误还要区分来源",
+          "text": "策略拒绝、启动器故障和命令失败需要各自证据。",
+          "alt": "世界虎把拒绝锁卡、损坏启动齿轮与普通失败卡分到不同诊断托盘。"
+        }
+      ],
+      "scenePrompt": "角色：世界虎：橙背带裤、青绿衬衫。从左到右四格，每格一个完整场景：第1格：世界虎把文件柜和进程工作台分别接到同一执行底座的两个插口。 第2格：世界虎将同一文件卡从读取柜送到进程台，两边使用匹配路径钥匙。 第3格：世界虎更换插口下方的远程执行底座，上方工具连线不变，会话档案仍留在本地桌。 第4格：世界虎把拒绝锁卡、损坏启动齿轮与普通失败卡分到不同诊断托盘。",
+      "originalHtmlSha256": "c79f302b72a7a09bb27a2f8e074b5081c7a8252d83463f876fa46bdd0f90cfa2",
+      "lessonTitle": "沙箱：从 seatbelt 到执行世界",
+      "title": "四格看懂：沙箱：从 seatbelt 到执行世界",
+      "sourceArtifact": "exec-b8374824-7cc3-4c77-9ccc-564b9ffedddb.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-b8374824-7cc3-4c77-9ccc-564b9ffedddb.png"
+    },
+    {
+      "file": "dsh-5.html",
+      "slug": "dsh-code-mode-host-owned-tools",
+      "role": "程序虎：蓝夹克、紫围巾",
+      "takeaway": "程序化工具编排减少模型往返，但工具注册、权限和可见记账仍由宿主控制。",
+      "panels": [
+        {
+          "label": "把多步编排写成程序",
+          "text": "本课 code mode 可在一次程序中调用多个宿主工具。",
+          "alt": "程序虎把多张顺序工具卡组合到一条程序轨道。"
+        },
+        {
+          "label": "中间值留在运行环境",
+          "text": "只返回必要输出，减少把每份中间结果送回模型。",
+          "alt": "程序虎在运行盒内保留中间资料堆，只将精选结果卡送到机器人面前。"
+        },
+        {
+          "label": "工具调用仍过宿主管线",
+          "text": "worker 通过结构化通道请求能力，不能自行绕过注册与权限。",
+          "alt": "程序虎让运行盒中的请求经过窄消息管道与宿主检查门。"
+        },
+        {
+          "label": "隔离与预算要如实界定",
+          "text": "全新环境、资源和时间限制提供隔离，本课不把 worker 当强安全边界。",
+          "alt": "程序虎核对独立运行盒、沙漏和容量闸门，旁边另放需独立配置的系统安全罩。"
+        }
+      ],
+      "scenePrompt": "角色：程序虎：蓝夹克、紫围巾。从左到右四格，每格一个完整场景：第1格：程序虎把多张顺序工具卡组合到一条程序轨道。 第2格：程序虎在运行盒内保留中间资料堆，只将精选结果卡送到机器人面前。 第3格：程序虎让运行盒中的请求经过窄消息管道与宿主检查门。 第4格：程序虎核对独立运行盒、沙漏和容量闸门，旁边另放需独立配置的系统安全罩。",
+      "originalHtmlSha256": "d8d0ef581712e172f72632e989fee9bc39fe19bc73575613db2709c7387efcf5",
+      "lessonTitle": "Code Mode：一段代码顶多轮工具调用",
+      "title": "四格看懂：Code Mode：一段代码顶多轮工具调用",
+      "sourceArtifact": "exec-b17597a4-5e48-41cd-a4d2-34dbc14c7655.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-b17597a4-5e48-41cd-a4d2-34dbc14c7655.png"
+    },
+    {
+      "file": "dsh-18.html",
+      "slug": "dsh-subagent-provider-capabilities",
+      "role": "委派虎：青绿马甲、橙围巾",
+      "takeaway": "子任务通过 provider 合约启动，先验证能力，再决定上下文种子与生命周期。",
+      "panels": [
+        {
+          "label": "接缝统一委派词汇",
+          "text": "不同执行位置可实现同一启动请求与结果句柄。",
+          "alt": "委派虎把同一任务卡接到本地、协议桥与远程三种工作台。"
+        },
+        {
+          "label": "启动前核对能力表",
+          "text": "结构输出、深度、工具过滤与 Persona 等要求需逐项支持。",
+          "alt": "委派虎将需求积木逐个对照提供方插槽，不匹配的任务停在启动门外。"
+        },
+        {
+          "label": "spawn 与 fork 种子不同",
+          "text": "本课 fork 只取已完成轮次的平衡前缀，进行中的尾部不进入种子。",
+          "alt": "委派虎从父日志中取走闭合的前缀卡链，把未闭合尾部留在父工位。"
+        },
+        {
+          "label": "一次运行与可继续会话分开",
+          "text": "等待结果、释放句柄和后续发消息具有不同生命周期合约。",
+          "alt": "委派虎将完成的一次性结果盒归档，另一持久会话盒继续接收消息卡。"
+        }
+      ],
+      "scenePrompt": "角色：委派虎：青绿马甲、橙围巾。从左到右四格，每格一个完整场景：第1格：委派虎把同一任务卡接到本地、协议桥与远程三种工作台。 第2格：委派虎将需求积木逐个对照提供方插槽，不匹配的任务停在启动门外。 第3格：委派虎从父日志中取走闭合的前缀卡链，把未闭合尾部留在父工位。 第4格：委派虎将完成的一次性结果盒归档，另一持久会话盒继续接收消息卡。",
+      "originalHtmlSha256": "589bce7c1555a74edef8a3aa5567713afadea54af7b0ba49a7ac54449934fec6",
+      "lessonTitle": "Subagent 是一个 seam：从进程内到委派 Claude Code",
+      "title": "四格看懂：Subagent 是一个 seam：从进程内到委派 Claude Code",
+      "sourceArtifact": "exec-9b00ebd0-c1b0-4c3b-b299-6c8cdbb20560.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-9b00ebd0-c1b0-4c3b-b299-6c8cdbb20560.png"
+    },
+    {
+      "file": "dsh-19.html",
+      "slug": "dsh-orchestration-primitives-boundaries",
+      "role": "编排虎：紫围裙、蓝衬衫",
+      "takeaway": "workflow、schedule、plan 与 todo 分别承载不同语义，不能互相冒充执行保证。",
+      "panels": [
+        {
+          "label": "先分清四种用途",
+          "text": "脚本编排、定时事件、计划姿态与展示清单各有持久形态。",
+          "alt": "编排虎把程序轨道、闹钟、计划册和清单板分成四个工位。"
+        },
+        {
+          "label": "提醒有调度与交付边界",
+          "text": "本课错过时点会合并处理，至少一次语义仍需防重复副作用。",
+          "alt": "编排虎将多张错过的闹钟卡合成当前到期卡，并保留重复处理检查盒。"
+        },
+        {
+          "label": "计划姿态不替代权限",
+          "text": "plan 是提示指引，写操作限制要由沙箱与审批承担。",
+          "alt": "编排虎把计划册放在建议台旁，真正的写入闸仍由能力锁控制。"
+        },
+        {
+          "label": "展示清单不等于任务引擎",
+          "text": "todo 整表更新，并行进行中规则需由部署明确配置。",
+          "alt": "编排虎替换整块任务清单板，旁边独立工作台按已选并发规则执行。"
+        }
+      ],
+      "scenePrompt": "角色：编排虎：紫围裙、蓝衬衫。从左到右四格，每格一个完整场景：第1格：编排虎把程序轨道、闹钟、计划册和清单板分成四个工位。 第2格：编排虎将多张错过的闹钟卡合成当前到期卡，并保留重复处理检查盒。 第3格：编排虎把计划册放在建议台旁，真正的写入闸仍由能力锁控制。 第4格：编排虎替换整块任务清单板，旁边独立工作台按已选并发规则执行。",
+      "originalHtmlSha256": "688313f17159bfc92528a83549c85e874d90fd903cba58ef5379a4ad871d651b",
+      "lessonTitle": "workflow / schedule / plan / todo：编排原语的取舍",
+      "title": "四格看懂：workflow / schedule / plan / todo：编排原语的取舍",
+      "sourceArtifact": "exec-c9606025-7a25-4b4c-be12-67e85bbf6a81.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-c9606025-7a25-4b4c-be12-67e85bbf6a81.png"
+    },
+    {
+      "file": "dsh-20.html",
+      "slug": "dsh-live-extension-and-preset-scope",
+      "role": "创造虎：橙工装、青绿领结",
+      "takeaway": "运行时扩展要检查作用域、配置与日志一致性，持久修改应落在可维护的副本。",
+      "panels": [
+        {
+          "label": "先检查运行时能力",
+          "text": "本课通过检查工具了解服务和接口，再定义扩展。",
+          "alt": "创造虎用放大镜查看运行树的服务插口与当前工具清单。"
+        },
+        {
+          "label": "定义与启停分开",
+          "text": "扩展源码提交、运行、停止和卸载各有明确入口。",
+          "alt": "创造虎把新模块装到定义台，再用独立开关接入或断开运行树。"
+        },
+        {
+          "label": "作用域决定遮蔽与冲突",
+          "text": "近层同名能力可能覆盖远层，需要核对服务所在范围。",
+          "alt": "创造虎在嵌套工作盒中比较同名图标模块，近层卡挡住远层卡。"
+        },
+        {
+          "label": "保存可维护的配置副本",
+          "text": "能力变化要反映到请求日志；改预设应使用合适副本并验证。",
+          "alt": "创造虎复制预设册到项目夹，更新工具快照账本并测试新模块。"
+        }
+      ],
+      "scenePrompt": "角色：创造虎：橙工装、青绿领结。从左到右四格，每格一个完整场景：第1格：创造虎用放大镜查看运行树的服务插口与当前工具清单。 第2格：创造虎把新模块装到定义台，再用独立开关接入或断开运行树。 第3格：创造虎在嵌套工作盒中比较同名图标模块，近层卡挡住远层卡。 第4格：创造虎复制预设册到项目夹，更新工具快照账本并测试新模块。",
+      "originalHtmlSha256": "1f722cbb45873818e3fd04217927c3e057e46ba133287e67c2ee3cd98b223e17",
+      "lessonTitle": "Skill、Preset 与自我修改",
+      "title": "四格看懂：Skill、Preset 与自我修改",
+      "sourceArtifact": "exec-f517668d-09e7-4d25-abc0-3e45475a4b6f.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-f517668d-09e7-4d25-abc0-3e45475a4b6f.png"
+    },
+    {
+      "file": "dsh-21.html",
+      "slug": "dsh-mcp-generations-native-extension",
+      "role": "桥接虎：蓝围裙、橙衬衫",
+      "takeaway": "MCP 工具桥与原生扩展能力不同，命名与世代替换要避免半套可见状态。",
+      "panels": [
+        {
+          "label": "按能力选择接入路径",
+          "text": "本课 MCP 主要桥接工具，原生扩展还能接事件与服务等能力。",
+          "alt": "桥接虎把外部工具站接到协议桥，把原生模块接到宿主服务树。"
+        },
+        {
+          "label": "公开名稳定映射身份",
+          "text": "用服务器与原工具身份生成名称，重连不应随意改变同一工具标识。",
+          "alt": "桥接虎给两个服务器的同形工具卡装上不同前缀形状片。"
+        },
+        {
+          "label": "准备完整新世代再交换",
+          "text": "发现失败保留旧代；注册失败需按策略回滚，避免暴露半套。",
+          "alt": "桥接虎先备好一整排新工具卡，再在交换台核对旧代与新代的完整性。"
+        },
+        {
+          "label": "断线期间名称与可用性不同",
+          "text": "旧工具可保持注册但调用失败，恢复后重新发现并遵守重试预算。",
+          "alt": "桥接虎在断开的工具桥前保留目录卡，接通后换上新世代并检查等待预算沙漏。"
+        }
+      ],
+      "scenePrompt": "角色：桥接虎：蓝围裙、橙衬衫。从左到右四格，每格一个完整场景：第1格：桥接虎把外部工具站接到协议桥，把原生模块接到宿主服务树。 第2格：桥接虎给两个服务器的同形工具卡装上不同前缀形状片。 第3格：桥接虎先备好一整排新工具卡，再在交换台核对旧代与新代的完整性。 第4格：桥接虎在断开的工具桥前保留目录卡，接通后换上新世代并检查等待预算沙漏。",
+      "originalHtmlSha256": "90c644e600cc093aff3c02c8f28374a1797dd79f8945f4be73b63e343dc7424c",
+      "lessonTitle": "MCP 与 Extensions：外部工具接入的两条路",
+      "title": "四格看懂：MCP 与 Extensions：外部工具接入的两条路",
+      "sourceArtifact": "exec-bce3dd97-3abf-44d3-b4d5-272263ddbbbe.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-bce3dd97-3abf-44d3-b4d5-272263ddbbbe.png"
+    }
+  ]
+}
