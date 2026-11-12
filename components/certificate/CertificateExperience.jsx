@@ -24,7 +24,7 @@ const labels = {
 const copy = labels[language === 'hk' ? 'tw' : language] || labels.zh;
 let backArtwork;
 
-function useCertificate() {
+function useCertificate({ badge = false } = {}) {
   const [planId, setPlanId] = useState(() => model.selectedPlan());
   const read = useCallback(() => model.store.status(lessons, local?.read() || {}, language, planId), [planId]);
   const [state, setState] = useState(read);
@@ -52,11 +52,12 @@ function useCertificate() {
   useEffect(() => {
     let active = true;
     backArtwork ||= window.FangpianCertificateArt.back().then(canvas => canvas.toDataURL('image/png'));
-    Promise.all([window.FangpianCertificateArt.front(JSON.parse(recordJson), { total: state.total, planLabel: state.plan?.label }), backArtwork]).then(([front, back]) => {
+    const renderFront = badge ? window.FangpianCertificateArt.badge : window.FangpianCertificateArt.front;
+    Promise.all([renderFront(JSON.parse(recordJson), { total: state.total, planLabel: state.plan?.label }), backArtwork]).then(([front, back]) => {
       if (active) setArt({ front: front.toDataURL('image/png'), back, recordKey, ready: true });
     }).catch(() => { if (active) setArt({ front: preview, back: logo, recordKey, ready: false }); });
     return () => { active = false; };
-  }, [recordKey, recordJson, state.total, state.plan?.label]);
+  }, [recordKey, recordJson, state.total, state.plan?.label, badge]);
   const claim = name => {
     const record = model.store.claim(lessons, local?.read() || {}, name, language, planId);
     window.dispatchEvent(new CustomEvent('fangpian:certificate'));
@@ -71,7 +72,7 @@ function useCertificate() {
 }
 
 function CertificateWidget() {
-  const { state, art } = useCertificate();
+  const { state, art } = useCertificate({ badge: true });
   const controls = useRef(null);
   const stage = useRef(null);
   const [seen, setSeen] = useState(false);

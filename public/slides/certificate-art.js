@@ -48,6 +48,31 @@
     text(ctx, '方片内部学习纪念 · 依据本浏览器的学习记录生成', WIDTH / 2, 1601, 24, 400, '#8b8476', 'center');
     return element;
   }
+  // The homepage badge is about 300px wide. Use a reading layout at that size;
+  // the full certificate below remains the detailed 2400px document for download.
+  async function badge(record, summary = {}) {
+    const element = canvas(), ctx = element.getContext('2d'), image = await logo();
+    ctx.fillStyle = '#fbf8f0'; ctx.fillRect(0, 0, WIDTH, HEIGHT);
+    ctx.fillStyle = '#ffd85f'; ctx.fillRect(0, 0, 32, HEIGHT);
+    ctx.strokeStyle = '#c9ad52'; ctx.lineWidth = 5; ctx.strokeRect(68, 68, WIDTH - 136, HEIGHT - 136);
+    if (image) ctx.drawImage(image, 133, 118, 156, 156);
+    text(ctx, 'AI学院', image ? 330 : 133, 238, 114, 700);
+    text(ctx, record ? '学习完成纪念' : '证书样张', WIDTH - 135, 220, 76, 600, '#68521a', 'right');
+    rule(ctx, 133, 350, WIDTH - 266, '#c9ad52');
+    text(ctx, '结业证书', WIDTH / 2, 686, 228, 700, '#252525', 'center');
+    text(ctx, 'CERTIFICATE OF COMPLETION', WIDTH / 2, 798, 58, 500, '#68521a', 'center');
+    const name = record?.name || '你的名字';
+    let nameSize = 190;
+    do { ctx.font = `700 ${nameSize}px "Microsoft YaHei",Arial,sans-serif`; if (ctx.measureText(name).width <= WIDTH - 420) break; nameSize -= 4; } while (nameSize > 54);
+    text(ctx, name, WIDTH / 2, 1082, nameSize, 700, '#252525', 'center');
+    const total = record?.lessonCount || summary.total || 6;
+    const plan = record?.planLabel || summary.planLabel || '课程';
+    text(ctx, `${plan} · ${total} 节必修`, WIDTH / 2, 1280, 104, 600, '#39362e', 'center');
+    text(ctx, '把 AI 用进真实工作', WIDTH / 2, 1448, 88, 500, '#534b38', 'center');
+    rule(ctx, 133, 1510, WIDTH - 266, '#c9ad52');
+    text(ctx, record ? '方片新媒体 · 学习完成纪念' : '完成必修课程，即可领取', WIDTH / 2, 1612, 70, 500, '#534b38', 'center');
+    return element;
+  }
   async function back() {
     const element = canvas(), ctx = element.getContext('2d'), image = await logo();
     ctx.fillStyle = '#ffd85f'; ctx.fillRect(0, 0, WIDTH, HEIGHT);
@@ -58,5 +83,5 @@
     text(ctx, '正心正念，利他向善', WIDTH / 2, 1470, 34, 400, '#4c483f', 'center');
     return element;
   }
-  root.FangpianCertificateArt = { front, back, width: WIDTH, height: HEIGHT };
+  root.FangpianCertificateArt = { front, badge, back, width: WIDTH, height: HEIGHT };
 })(typeof window === 'undefined' ? globalThis : window);

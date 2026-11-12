@@ -27,7 +27,7 @@ const RING_RADIUS = 0.095;
 const RING_TUBE = 0.0135;
 const EYELET_RADIUS = 0.036;
 const CLAMP_BODY = 0.15;
-const FACE_WIDTH = 1024;
+const FACE_WIDTH = 2048;
 
 const FINISHES = {
   glossy: { roughness: 0.42, metalness: 0, clearcoat: 1, clearcoatRoughness: 0.06, foil: 0, anisotropy: 0 },
@@ -430,6 +430,8 @@ const drawFitted = (ctx, image, width, height, fit) => {
 const paintFace = (canvas, image, color, fit) => {
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = 'high';
   ctx.fillStyle = toCss(color);
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   if (image) drawFitted(ctx, image, canvas.width, canvas.height, fit);
@@ -791,7 +793,7 @@ const Lanyard = ({
     canvas.setAttribute('aria-hidden', 'true');
     container.appendChild(canvas);
 
-    const anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
+    const anisotropy = Math.min(16, renderer.capabilities.getMaxAnisotropy());
     const scene = new THREE.Scene();
     const environment = buildEnvironment(renderer);
     scene.environment = environment.texture;
@@ -831,18 +833,17 @@ const Lanyard = ({
         .replace('#include <opaque_fragment>', `${FOIL_FRAGMENT_BODY}\n#include <opaque_fragment>`);
     };
 
-    const frontMaterial = new THREE.MeshPhysicalMaterial({
-      map: frontTexture,
-      normalMap: grain,
-      normalScale: new THREE.Vector2(0.06, 0.06)
-    });
-    const backMaterial = new THREE.MeshPhysicalMaterial({
-      map: backTexture,
-      normalMap: grain,
-      normalScale: new THREE.Vector2(0.06, 0.06)
-    });
-    frontMaterial.onBeforeCompile = injectFoil;
-    backMaterial.onBeforeCompile = injectFoil;
+    // Keep the printed certificate ink independent of environment glare and
+    // tone mapping. The bevel, clasp and strap still use lit physical materials.
+    const makeFaceMaterial = map => viewportOrigin
+      ? new THREE.MeshBasicMaterial({ map, toneMapped: false })
+      : new THREE.MeshPhysicalMaterial({ map, normalMap: grain, normalScale: new THREE.Vector2(0.06, 0.06) });
+    const frontMaterial = makeFaceMaterial(frontTexture);
+    const backMaterial = makeFaceMaterial(backTexture);
+    if (!viewportOrigin) {
+      frontMaterial.onBeforeCompile = injectFoil;
+      backMaterial.onBeforeCompile = injectFoil;
+    }
     const edgeMaterial = new THREE.MeshPhysicalMaterial();
     const metalMaterial = new THREE.MeshStandardMaterial({ metalness: 1 });
     const bandMaterial = new THREE.MeshPhysicalMaterial({
@@ -906,7 +907,7 @@ const Lanyard = ({
     const paintFaces = () => {
       const s = settingsRef.current;
       const color = parseColor(s.cardColor, [1, 1, 1]);
-      const width = FACE_WIDTH;
+      const width = Math.min(FACE_WIDTH, renderer.capabilities.maxTextureSize);
       const height = Math.round((FACE_WIDTH * layout.height) / layout.width);
       if (frontCanvas.width !== width || frontCanvas.height !== height) {
         frontCanvas.width = width;
@@ -920,6 +921,7 @@ const Lanyard = ({
       paintFace(backCanvas, images.back || images.front, color, s.imageFit);
       frontTexture.needsUpdate = true;
       backTexture.needsUpdate = true;
+      canvas.dataset.faceResolution = `${width}x${height}`;
       start();
     };
 
@@ -1017,6 +1019,7 @@ const Lanyard = ({
       const finish = FINISHES[s.finish] || FINISHES.glossy;
       const card = parseColor(s.cardColor, [1, 1, 1]);
       [frontMaterial, backMaterial].forEach(material => {
+        if (!material.isMeshPhysicalMaterial) return;
         material.roughness = finish.roughness;
         material.metalness = finish.metalness;
         material.clearcoat = finish.clearcoat;
@@ -1366,7 +1369,10 @@ const Lanyard = ({
       canvas.style.left = canvas.style.top = `${-view.padding}px`;
       canvas.style.width = `${view.renderWidth}px`;
       canvas.style.height = `${view.renderHeight}px`;
-      const ratio = Math.min(window.devicePixelRatio || 1, view.width < 600 ? 1.25 : 1.5, Math.sqrt((viewportOrigin ? 1600000 : 600000) / (view.renderWidth * view.renderHeight)));
+      // Text must not be upscaled from a sub-native drawing buffer. Bound HiDPI
+      // rendering to about a 4K buffer while retaining native pixels on large screens.
+      const pixelBudget = viewportOrigin ? 8294400 : 2400000;
+      const ratio = Math.min(window.devicePixelRatio || 1, 2, Math.max(1, Math.sqrt(pixelBudget / (view.renderWidth * view.renderHeight))));
       if (canvas.width !== Math.floor(view.renderWidth * ratio) || canvas.height !== Math.floor(view.renderHeight * ratio)) {
         renderer.setPixelRatio(ratio);
         renderer.setSize(view.renderWidth, view.renderHeight, false);
