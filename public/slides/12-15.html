@@ -39,14 +39,16 @@
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="子 Agent 的四个隔离维度"><meta property="og:description" content="上下文来源、身份连续性、工作目录和文件改动空间分别控制不同边界。把它们混成一个「隔离等级」，容易误读恢复和 worktree 的真实行为。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Grok Build · Context Isolation</div>
-    <h1>子 Agent 的四个隔离维度</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>子 Agent 的四个隔离维度</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>子 Agent 的四个隔离维度</h1>
     <p class="subtitle">上下文来源、身份连续性、工作目录和文件改动空间分别控制不同边界。把它们混成一个「隔离等级」，容易误读恢复和 worktree 的真实行为。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从上下文来源、恢复模式、工作树和任务状态分析隔离边界</p></aside><!--seo:end-->  <section class="objective reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从上下文来源、恢复模式、工作树和任务状态分析隔离边界</p></aside><section class="lesson-comic" data-lesson-comic="12-15.html"><noscript><h2>四格看懂：子 Agent 的四个隔离维度</h2><img src="assets/comics/grok-isolation-orthogonal-dimensions.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：子 Agent 的四个隔离维度"><ol><li><b>新会话不等于新文件空间</b>：New 描述历史来源，是否共享文件还要看 cwd 与 isolation。</li><li><b>恢复会话有继承边界</b>：本课恢复可复制历史与工具状态，同时重新渲染相关提示。</li><li><b>工作目录决定操作落点</b>：None 不表示共享对话历史，文件空间与上下文需分别判断。</li><li><b>Worktree 隔离文件改动</b>：恢复时还需检查原路径与可用快照，不能把它等同完整沙箱。</li></ol><p>上下文、身份连续性、工作目录与文件改动空间是不同维度。</p></noscript></section><!--seo:end-->  <section class="objective reveal">
     <b>课程目标</b>
     <p>能准确解释 <span class="mono">ContextSource::New / Resumed</span>、<span class="mono">ResumeSourceData</span>、<span class="mono">SubagentIsolationMode</span>，并根据任务选择新会话、恢复与 worktree。</p>
   </section>

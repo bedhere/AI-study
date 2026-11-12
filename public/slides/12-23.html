@@ -55,15 +55,17 @@
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="工程复盘：能力与边界一起读"><meta property="og:description" content="Grok Build 源码课第 23 节：基于源码与 README 的工程复盘和适用边界"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
   <main class="lesson">
     <header>
       <div class="eyebrow">Grok Build Source Course · 12 / 23</div>
-      <h1>工程复盘：<span>能力与边界一起读</span></h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>工程复盘：能力与边界一起读</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+      <h1>工程复盘：<span>能力与边界一起读</span></h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
       <p class="lead">公开源码能证明实现机制，也有明确的解释边界。优点从类型、状态机和测试中找证据，限制从 README、贡献政策、生成流程与本地快照条件中找证据。</p>
       <div class="chips"><span class="tag">Source-backed</span><span class="tag">README-backed</span><span class="tag">Snapshot Boundary</span><span class="tag">No Popularity Guess</span></div>
-    </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>用类型、状态机、测试和仓库政策复盘工程优点与适用限制</p></aside><!--seo:end-->    <section>
+    </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>用类型、状态机、测试和仓库政策复盘工程优点与适用限制</p></aside><section class="lesson-comic" data-lesson-comic="12-23.html"><noscript><h2>四格看懂：工程复盘： 能力与边界一起读</h2><img src="assets/comics/grok-review-mechanisms-and-limits.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：工程复盘： 能力与边界一起读"><ol><li><b>优点要落到机制</b>：从类型约束、状态转换和测试找到实际证据。</li><li><b>发布条件也影响理解</b>：README、贡献政策与生成流程提供不同的限制信息。</li><li><b>缺少历史就不补造版本</b>：本课本地快照无 Git 元数据，不能据此编造提交时间线。</li><li><b>同时交代能力与边界</b>：记录实现证据、材料范围和待核对项，形成可追踪账本。</li></ol><p>用类型、分支、状态机和测试证明机制，也要记录发布方式与快照缺口。</p></noscript></section><!--seo:end-->    <section>
       <div class="section-head"><span class="num">01 / OBJECTIVES</span><h2>课程目标</h2></div>
       <div class="grid objectives">
         <article class="card"><h3>从机制提炼优点</h3><p>用类型、错误分支、状态机和测试证明工程特征。</p></article>

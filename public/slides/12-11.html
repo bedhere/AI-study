@@ -40,14 +40,16 @@
 <!--seo:begin--><meta property="og:description" content="xai-token-estimation 提供共享算术原语。它既有 bytes/4 的本地粗估，也有对调用方传入 used 与 total 的使用率和阈值判断。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Grok Build · 上下文容量</div>
-    <h1>估算、百分比与严格阈值</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>估算、百分比与严格阈值</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>估算、百分比与严格阈值</h1>
     <p class="subtitle"><code>xai-token-estimation</code> 提供共享算术原语。它既有 bytes/4 的本地粗估，也有对调用方传入 <code>used</code> 与 <code>total</code> 的使用率和阈值判断。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>区分 Token 估算、使用率计算和 exceeds_threshold 的严格比较语义</p></aside><!--seo:end-->  <div class="objective reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>区分 Token 估算、使用率计算和 exceeds_threshold 的严格比较语义</p></aside><section class="lesson-comic" data-lesson-comic="12-11.html"><noscript><h2>四格看懂：估算、百分比与严格阈值</h2><img src="assets/comics/grok-estimates-and-threshold-boundaries.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：估算、百分比与严格阈值"><ol><li><b>粗估用于提前预测</b>：本课本地估算使用简化规则，不能冒充具体分词器的精确计数。</li><li><b>usage 描述实际计量</b>：请求后获得的用量与调用前预测，应分别记录来源。</li><li><b>阈值要核对比较符</b>：达到边界是否触发，以及 headroom 如何预留，都影响流程。</li><li><b>异常输入也要测</b>：零窗口、饱和算术和百分比上限需要单独检查。</li></ol><p>粗估、实际 usage 和阈值算术是不同概念，等号与零窗口要按源码测试。</p></noscript></section><!--seo:end-->  <div class="objective reveal">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19a8 8 0 1 1 16 0"/><path d="M12 12l4-4"/><circle cx="12" cy="19" r="1"/></svg>
     <span><b>课程目标</b>区分本地估算与服务端 usage 观测，读懂 <code>usage_percentage</code>、<code>exceeds_threshold</code>、<code>exceeds_threshold_with_headroom</code>，并准确判断 85% 的等号边界。</span>
   </div>

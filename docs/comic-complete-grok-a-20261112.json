@@ -1,0 +1,424 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-grok-a",
+  "status": "accepted; all 12 article-specific comics integrated and visually reviewed",
+  "evidenceScope": "Based on the actual lesson HTML and its quoted local source snapshot. Do not claim current upstream versions or a specific commit.",
+  "lessons": [
+    {
+      "file": "12-1.html",
+      "slug": "grok-workspace-composition-map",
+      "role": "架构虎：蓝工装、青绿围巾",
+      "takeaway": "沿组合入口、界面、宿主与状态的依赖读源码，比套固定层数更可靠。",
+      "panels": [
+        {
+          "label": "先从清单确认组件",
+          "text": "本课源码快照列出多个 workspace 成员，数量不是职责图。",
+          "alt": "架构虎在大模块柜前核对组件清单与不同形状的模块盒。"
+        },
+        {
+          "label": "找到真正组合入口",
+          "text": "入口二进制负责组合，界面库和 Agent 宿主承担不同工作。",
+          "alt": "架构虎把入口插座连向屏幕模型和独立机器人工作台。"
+        },
+        {
+          "label": "沿调用追到状态",
+          "text": "工具、采样与对话状态分属不同组件，不能全归给界面。",
+          "alt": "架构虎顺着连线依次检查工具柜、采样转盘和会话档案盒。"
+        },
+        {
+          "label": "用证据绘制主轴",
+          "text": "标出真实依赖与跨组件流程，记录快照范围。",
+          "alt": "架构虎把模块依赖图与打开的源码册逐一对照。"
+        }
+      ],
+      "scenePrompt": "角色：架构虎：蓝工装、青绿围巾。从左到右四格，每格一个完整场景：第1格：架构虎在大模块柜前核对组件清单与不同形状的模块盒。 第2格：架构虎把入口插座连向屏幕模型和独立机器人工作台。 第3格：架构虎顺着连线依次检查工具柜、采样转盘和会话档案盒。 第4格：架构虎把模块依赖图与打开的源码册逐一对照。",
+      "originalHtmlSha256": "0b4d4e8fb1a374657cf4257613543be34983b4725955f36f7d09546732a7cd3c",
+      "lessonTitle": "79 个 Workspace 成员如何组成产品",
+      "title": "四格看懂：79 个 Workspace 成员如何组成产品",
+      "sourceArtifact": "exec-770a5109-8823-4e5b-b8c8-edcca94db130.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-770a5109-8823-4e5b-b8c8-edcca94db130.png"
+    },
+    {
+      "file": "12-2.html",
+      "slug": "grok-rust-facts-and-inference",
+      "role": "证据虎：紫马甲、橙领结",
+      "takeaway": "源码能证明使用了什么，选择它的组织动机仍需独立证据。",
+      "panels": [
+        {
+          "label": "先列可验证事实",
+          "text": "语言版本、异步依赖与二进制目标可从本课清单核对。",
+          "alt": "证据虎用放大镜检查构建清单、运行齿轮和原生程序盒。"
+        },
+        {
+          "label": "再解释工程取舍",
+          "text": "类型建模、并发约束与分发方式可以作为分析角度。",
+          "alt": "证据虎比较类型拼接卡、并行轨道和打包盒三组模型。"
+        },
+        {
+          "label": "推断要有明确边界",
+          "text": "代码形态不能直接证明官方选择动机，也不保证必然更快。",
+          "alt": "证据虎把实物证据卡与半透明推测卡分开放到两个托盘。"
+        },
+        {
+          "label": "用对应证据回答",
+          "text": "说明事实在哪里、解释基于什么，以及还缺什么材料。",
+          "alt": "证据虎向评审虎展示来源书签、分析卡和留空的待证据格。"
+        }
+      ],
+      "scenePrompt": "角色：证据虎：紫马甲、橙领结。从左到右四格，每格一个完整场景：第1格：证据虎用放大镜检查构建清单、运行齿轮和原生程序盒。 第2格：证据虎比较类型拼接卡、并行轨道和打包盒三组模型。 第3格：证据虎把实物证据卡与半透明推测卡分开放到两个托盘。 第4格：证据虎向评审虎展示来源书签、分析卡和留空的待证据格。",
+      "originalHtmlSha256": "e08e8f2f136e4b86bdf40963a6e3c27f8b19a1c274be27f598932012f414608c",
+      "lessonTitle": "为什么 Rust 合适：先分清事实与推断",
+      "title": "四格看懂：为什么 Rust 合适：先分清事实与推断",
+      "sourceArtifact": "exec-9d31662f-5021-4d09-9ebf-5ff6e878691f.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-9d31662f-5021-4d09-9ebf-5ff6e878691f.png"
+    },
+    {
+      "file": "12-3.html",
+      "slug": "grok-entry-to-sampling-flow",
+      "role": "入口虎：橙夹克、蓝围巾",
+      "takeaway": "从真实入口顺着模式分派追到会话、提示词与采样，区分界面和宿主。",
+      "panels": [
+        {
+          "label": "入口先解析运行方式",
+          "text": "本课入口按命令与模式选择交互或其他宿主路径。",
+          "alt": "入口虎在入口分流台前将任务卡送往屏幕、连接管和无头工作台。"
+        },
+        {
+          "label": "宿主建立会话",
+          "text": "交互界面与长期运行的 Agent 承载层有不同边界。",
+          "alt": "入口虎把屏幕遥控台接到独立会话工作台，机器人在宿主工位等待。"
+        },
+        {
+          "label": "准备模型请求",
+          "text": "会话与 Agent 组织提示词、工具和当前输入，再交给采样层。",
+          "alt": "入口虎把规则册、工具卡与消息托盘汇入请求箱。"
+        },
+        {
+          "label": "流式事件再返回",
+          "text": "沿事件回路找到结果如何回到宿主与界面。",
+          "alt": "入口虎顺着从采样装置回到屏幕的亮点事件轨道核对结果。"
+        }
+      ],
+      "scenePrompt": "角色：入口虎：橙夹克、蓝围巾。从左到右四格，每格一个完整场景：第1格：入口虎在入口分流台前将任务卡送往屏幕、连接管和无头工作台。 第2格：入口虎把屏幕遥控台接到独立会话工作台，机器人在宿主工位等待。 第3格：入口虎把规则册、工具卡与消息托盘汇入请求箱。 第4格：入口虎顺着从采样装置回到屏幕的亮点事件轨道核对结果。",
+      "originalHtmlSha256": "12363fad62d731e710727ac721c4a63161ebab5409fd1c6aebc4a82aefa2a5b5",
+      "lessonTitle": "从真实 main() 到第一轮采样",
+      "title": "四格看懂：从真实 main() 到第一轮采样",
+      "sourceArtifact": "exec-cca93485-b0bb-4fd4-bcfc-96dbfa0b2f04.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-cca93485-b0bb-4fd4-bcfc-96dbfa0b2f04.png"
+    },
+    {
+      "file": "12-4.html",
+      "slug": "grok-session-state-cancellation",
+      "role": "会话虎：青绿背带裤、橙衬衫",
+      "takeaway": "会话编排、对话状态与采样各有所有者，取消通过协作路径收尾。",
+      "panels": [
+        {
+          "label": "会话有独立运行边界",
+          "text": "本课快照中，Session 在线程内建立异步运行环境。",
+          "alt": "会话虎为两个独立会话工位分别接入运行齿轮与事件轨道。"
+        },
+        {
+          "label": "编排与状态分开拥有",
+          "text": "SessionActor 协调 turn，ChatStateActor 串行处理对话状态。",
+          "alt": "会话虎把调度卡递给调度工位，将会话档案留在专属状态柜。"
+        },
+        {
+          "label": "采样通过事件协作",
+          "text": "模型请求与返回事件沿各自通道流转。",
+          "alt": "会话虎将请求卡送往采样装置，观察结果珠沿返回管道到状态柜。"
+        },
+        {
+          "label": "取消不等于插队",
+          "text": "取消信号推动协作式终止，还要完成相应清理。",
+          "alt": "会话虎拉下停止手柄，机器人保存任务记录并关闭工作台。"
+        }
+      ],
+      "scenePrompt": "角色：会话虎：青绿背带裤、橙衬衫。从左到右四格，每格一个完整场景：第1格：会话虎为两个独立会话工位分别接入运行齿轮与事件轨道。 第2格：会话虎把调度卡递给调度工位，将会话档案留在专属状态柜。 第3格：会话虎将请求卡送往采样装置，观察结果珠沿返回管道到状态柜。 第4格：会话虎拉下停止手柄，机器人保存任务记录并关闭工作台。",
+      "originalHtmlSha256": "31dc8a1f866a4389c554c735e8553f72119642a226d6b14266de6f053d4e598b",
+      "lessonTitle": "Session Actor：线程、状态与取消边界",
+      "title": "四格看懂：Session Actor：线程、状态与取消边界",
+      "sourceArtifact": "exec-53232951-8c8a-45c3-b406-95b6ed792ff7.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-53232951-8c8a-45c3-b406-95b6ed792ff7.png"
+    },
+    {
+      "file": "12-5.html",
+      "slug": "grok-compaction-config-paths",
+      "role": "压缩虎：蓝围裙、紫衬衫",
+      "takeaway": "阈值与可选开关共同决定压缩路径，不能把可用能力当成默认启用。",
+      "panels": [
+        {
+          "label": "先读阈值与当前用量",
+          "text": "本课快照按上下文比例判断是否进入自动压缩。",
+          "alt": "压缩虎比较资料堆高度与容量刻度板上的触发标记。"
+        },
+        {
+          "label": "可选前置步骤要看开关",
+          "text": "memory flush 只有启用后才进入相应流程。",
+          "alt": "压缩虎在关闭的记忆归档支路旁核对开关卡，主轨道仍通行。"
+        },
+        {
+          "label": "单次与两阶段分清楚",
+          "text": "two-pass 开启后才可能先总结前缀，再结合近期尾部处理。",
+          "alt": "压缩虎把前缀摘要卡和近期消息卡送入两阶段整理工位。"
+        },
+        {
+          "label": "同时核对默认与预算",
+          "text": "读取真实配置、超时和边界案例，不能从功能名猜路径。",
+          "alt": "压缩虎对照配置册、沙漏和临界用量卡，保存实际路径图。"
+        }
+      ],
+      "scenePrompt": "角色：压缩虎：蓝围裙、紫衬衫。从左到右四格，每格一个完整场景：第1格：压缩虎比较资料堆高度与容量刻度板上的触发标记。 第2格：压缩虎在关闭的记忆归档支路旁核对开关卡，主轨道仍通行。 第3格：压缩虎把前缀摘要卡和近期消息卡送入两阶段整理工位。 第4格：压缩虎对照配置册、沙漏和临界用量卡，保存实际路径图。",
+      "originalHtmlSha256": "73e4c90f8efa82af62ee307bd64eb4a01b61cba6917d1550cabbe1e4e2d0a142",
+      "lessonTitle": "Compaction：85% 阈值与可选 two-pass",
+      "title": "四格看懂：Compaction：85% 阈值与可选 two-pass",
+      "sourceArtifact": "exec-a56bc272-5362-4fbd-9779-3eb1d7f09572.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-a56bc272-5362-4fbd-9779-3eb1d7f09572.png"
+    },
+    {
+      "file": "12-6.html",
+      "slug": "grok-prompt-context-render-boundary",
+      "role": "模板虎：紫开衫、青绿领结",
+      "takeaway": "PromptContext 是模板输入，序列化、模板选择与最终渲染有不同职责。",
+      "panels": [
+        {
+          "label": "先收集结构化输入",
+          "text": "角色、环境、规则文件和记忆开关等信息进入上下文字段。",
+          "alt": "模板虎把身份、环境、规则册和记忆抽屉图标卡放到输入格架。"
+        },
+        {
+          "label": "序列化便于检查与保存",
+          "text": "字段是否省略依声明而定，不能把上下文直接当成最终提示词。",
+          "alt": "模板虎将有值的字段卡装入存档盒，空位卡留在省略托盘。"
+        },
+        {
+          "label": "选择匹配的模板",
+          "text": "标准、紧凑或自定义等模板分支，应按本课真实配置核对。",
+          "alt": "模板虎在三种不同槽位的模板板中挑选与当前角色匹配的一块。"
+        },
+        {
+          "label": "渲染后检查实际结果",
+          "text": "由桥接渲染得到提示词，再对照输入与模板验证。",
+          "alt": "模板虎把字段卡与模板板送入渲染装置，展开输出卷册检查。"
+        }
+      ],
+      "scenePrompt": "角色：模板虎：紫开衫、青绿领结。从左到右四格，每格一个完整场景：第1格：模板虎把身份、环境、规则册和记忆抽屉图标卡放到输入格架。 第2格：模板虎将有值的字段卡装入存档盒，空位卡留在省略托盘。 第3格：模板虎在三种不同槽位的模板板中挑选与当前角色匹配的一块。 第4格：模板虎把字段卡与模板板送入渲染装置，展开输出卷册检查。",
+      "originalHtmlSha256": "632bd00b93b2fdb1ec930b4af506ef0da7ad22a71caa79d522649dead9c93568",
+      "lessonTitle": "PromptContext：可检查的渲染输入",
+      "title": "四格看懂：PromptContext：可检查的渲染输入",
+      "sourceArtifact": "exec-e3781c1c-2fe2-4079-9828-fde1d0ddec4a.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-e3781c1c-2fe2-4079-9828-fde1d0ddec4a.png"
+    },
+    {
+      "file": "12-7.html",
+      "slug": "grok-process-preset-registry",
+      "role": "注册虎：橙背带裤、蓝衬衫",
+      "takeaway": "进程注册表保存工具集构建函数；公开枚举、名称解析与已有配置要分开。",
+      "panels": [
+        {
+          "label": "注册的是构建入口",
+          "text": "本课注册表保存按名称生成工具配置的构建函数。",
+          "alt": "注册虎把工厂模具卡按图标放进全局注册抽屉。"
+        },
+        {
+          "label": "可见性影响公开列表",
+          "text": "Internal 不进公开枚举，但仍可按名称解析。",
+          "alt": "注册虎将公开模具放在展示架，内部模具留在可按钥匙取用的抽屉。"
+        },
+        {
+          "label": "解析时生成新配置",
+          "text": "查询注册表调用构建函数，得到对应工具配置。",
+          "alt": "注册虎按名称图标选出模具，在构建台生成新的工具盒。"
+        },
+        {
+          "label": "晚注册不回写旧配置",
+          "text": "后续解析可见新项，已解析的配置保持原样。",
+          "alt": "注册虎保留旧工具箱，把新模具加入注册架后另建一个新工具箱。"
+        }
+      ],
+      "scenePrompt": "角色：注册虎：橙背带裤、蓝衬衫。从左到右四格，每格一个完整场景：第1格：注册虎把工厂模具卡按图标放进全局注册抽屉。 第2格：注册虎将公开模具放在展示架，内部模具留在可按钥匙取用的抽屉。 第3格：注册虎按名称图标选出模具，在构建台生成新的工具盒。 第4格：注册虎保留旧工具箱，把新模具加入注册架后另建一个新工具箱。",
+      "originalHtmlSha256": "1105e64453ccaf8470be0f49be9704aa95944445228bcc52377333e6b582a117",
+      "lessonTitle": "进程级外部 Toolset Preset 注册表",
+      "title": "四格看懂：进程级外部 Toolset Preset 注册表",
+      "sourceArtifact": "exec-65ca4089-10b7-4459-9d50-ed330071486e.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-65ca4089-10b7-4459-9d50-ed330071486e.png"
+    },
+    {
+      "file": "12-8.html",
+      "slug": "grok-readonly-defaults-not-authorization",
+      "role": "权限虎：青绿夹克、橙围巾",
+      "takeaway": "工具种类的默认只读分类只是元数据，实际执行仍受多层控制。",
+      "panels": [
+        {
+          "label": "先查种类默认值",
+          "text": "本课 ToolKind 提供默认只读语义，并非执行许可。",
+          "alt": "权限虎将放大镜工具与写入工具放到不同默认分类格。"
+        },
+        {
+          "label": "再看具体工具覆盖",
+          "text": "工具自身元数据可能改变种类层的默认判断。",
+          "alt": "权限虎对照同类工具卡与其中一张带额外设置片的工具卡。"
+        },
+        {
+          "label": "执行还要检查控制层",
+          "text": "规则、沙箱、Hook 与批准等信号共同参与判断。",
+          "alt": "权限虎引导工具车经过规则卡、隔离罩、检查钩和确认门组成的关卡。"
+        },
+        {
+          "label": "不要由标签推断放行",
+          "text": "只读标签不代替权限检查，非只读也不等于永远禁止。",
+          "alt": "权限虎在执行闸门前核对全部信号，再为适配任务的工具车选择通道。"
+        }
+      ],
+      "scenePrompt": "角色：权限虎：青绿夹克、橙围巾。从左到右四格，每格一个完整场景：第1格：权限虎将放大镜工具与写入工具放到不同默认分类格。 第2格：权限虎对照同类工具卡与其中一张带额外设置片的工具卡。 第3格：权限虎引导工具车经过规则卡、隔离罩、检查钩和确认门组成的关卡。 第4格：权限虎在执行闸门前核对全部信号，再为适配任务的工具车选择通道。",
+      "originalHtmlSha256": "88e0e290b0838e56455016983ec79851d10d9b57b7da14f697e0a3543851a4a0",
+      "lessonTitle": "ToolKind 提供默认只读语义",
+      "title": "四格看懂：ToolKind 提供默认只读语义",
+      "sourceArtifact": "exec-d8d881c7-4c4e-4ece-8179-7a5cefb5d5a4.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-d8d881c7-4c4e-4ece-8179-7a5cefb5d5a4.png"
+    },
+    {
+      "file": "12-9.html",
+      "slug": "grok-discover-schema-then-dispatch",
+      "role": "桥接虎：蓝马甲、紫领结",
+      "takeaway": "实现族由注册表组合，经 ToolBridge 接入会话；动态工具先发现 schema 再调用。",
+      "panels": [
+        {
+          "label": "不同实现族可共存",
+          "text": "本课内置工具与运行时 MCP 工具通过不同来源进入组合。",
+          "alt": "桥接虎把不同外形的工具箱接到同一注册底座。"
+        },
+        {
+          "label": "注册表组织可用能力",
+          "text": "定义、资源与分派入口组合后，经桥接层适配会话。",
+          "alt": "桥接虎把工具卡、资源盒和分派开关连入会话连接桥。"
+        },
+        {
+          "label": "发现时先读描述与 schema",
+          "text": "先搜索所需工具，确认名称、输入字段与能力。",
+          "alt": "桥接虎与机器人打开工具目录，查看一张工具卡的输入插槽图。"
+        },
+        {
+          "label": "按发现的合约执行",
+          "text": "携带合格工具名与匹配输入，由固定调用入口分发并返回结果。",
+          "alt": "桥接虎将匹配的输入积木装入调用盒，沿桥发送给外部工具并接回结果卡。"
+        }
+      ],
+      "scenePrompt": "角色：桥接虎：蓝马甲、紫领结。从左到右四格，每格一个完整场景：第1格：桥接虎把不同外形的工具箱接到同一注册底座。 第2格：桥接虎把工具卡、资源盒和分派开关连入会话连接桥。 第3格：桥接虎与机器人打开工具目录，查看一张工具卡的输入插槽图。 第4格：桥接虎将匹配的输入积木装入调用盒，沿桥发送给外部工具并接回结果卡。",
+      "originalHtmlSha256": "9176e01e29145b509f1e2fe51ee3024d5b651f3d8e973e6e5d90bc83bd5c0137",
+      "lessonTitle": "实现族、注册表与动态 MCP",
+      "title": "四格看懂：实现族、注册表与动态 MCP",
+      "sourceArtifact": "exec-9ee4944d-c004-4489-a11e-cb50b08149f4.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-9ee4944d-c004-4489-a11e-cb50b08149f4.png"
+    },
+    {
+      "file": "12-10.html",
+      "slug": "grok-canonical-lightweight-projection",
+      "role": "投影虎：紫围裙、橙衬衫",
+      "takeaway": "Canonical input 提取稳定公共语义，完整原始参数仍需保留并另行查阅。",
+      "panels": [
+        {
+          "label": "原始参数可以不同",
+          "text": "不同工具协议可能用不同字段表达同类操作。",
+          "alt": "投影虎对照两套槽位不同的输入卡架，分别放着路径和编辑内容卡。"
+        },
+        {
+          "label": "只投影共同语义",
+          "text": "归一化层保留稳定且轻量的公共字段。",
+          "alt": "投影虎把两套卡架投过筛选框，共同路径图标落入标准小格。"
+        },
+        {
+          "label": "投影不等于完整镜像",
+          "text": "大文本与非共享选项可能省略，排查时需看原始输入。",
+          "alt": "投影虎将精简卡放在前台，完整编辑卷册与设置卡留在原始档案盒。"
+        },
+        {
+          "label": "按真实版本检查合约",
+          "text": "核对字段、可选值和元数据版本，不能凭示意图增加字段。",
+          "alt": "投影虎用放大镜比较标准字段册、精简投影卡与完整档案。"
+        }
+      ],
+      "scenePrompt": "角色：投影虎：紫围裙、橙衬衫。从左到右四格，每格一个完整场景：第1格：投影虎对照两套槽位不同的输入卡架，分别放着路径和编辑内容卡。 第2格：投影虎把两套卡架投过筛选框，共同路径图标落入标准小格。 第3格：投影虎将精简卡放在前台，完整编辑卷册与设置卡留在原始档案盒。 第4格：投影虎用放大镜比较标准字段册、精简投影卡与完整档案。",
+      "originalHtmlSha256": "61554525b11b90c75891edd01e9b5d4fed466787851dd39a2a6de905723a897d",
+      "lessonTitle": "Canonical input 是稳定投影",
+      "title": "四格看懂：Canonical input 是稳定投影",
+      "sourceArtifact": "exec-04662776-b75e-4b36-805b-a5b45f342d71.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-04662776-b75e-4b36-805b-a5b45f342d71.png"
+    },
+    {
+      "file": "12-11.html",
+      "slug": "grok-estimates-and-threshold-boundaries",
+      "role": "阈值虎：橙马甲、青绿领结",
+      "takeaway": "粗估、实际 usage 和阈值算术是不同概念，等号与零窗口要按源码测试。",
+      "panels": [
+        {
+          "label": "粗估用于提前预测",
+          "text": "本课本地估算使用简化规则，不能冒充具体分词器的精确计数。",
+          "alt": "阈值虎用粗刻度尺测资料卷长度，旁边放着精确编码积木。"
+        },
+        {
+          "label": "usage 描述实际计量",
+          "text": "请求后获得的用量与调用前预测，应分别记录来源。",
+          "alt": "阈值虎把预测卡和服务返回的计量卡分放到两个账盘。"
+        },
+        {
+          "label": "阈值要核对比较符",
+          "text": "达到边界是否触发，以及 headroom 如何预留，都影响流程。",
+          "alt": "阈值虎在容量架临界线旁比较略低、正好到线和超出三张用量卡。"
+        },
+        {
+          "label": "异常输入也要测",
+          "text": "零窗口、饱和算术和百分比上限需要单独检查。",
+          "alt": "阈值虎核对空容量盒、满容量盒与预留空间板，保存边界测试卡。"
+        }
+      ],
+      "scenePrompt": "角色：阈值虎：橙马甲、青绿领结。从左到右四格，每格一个完整场景：第1格：阈值虎用粗刻度尺测资料卷长度，旁边放着精确编码积木。 第2格：阈值虎把预测卡和服务返回的计量卡分放到两个账盘。 第3格：阈值虎在容量架临界线旁比较略低、正好到线和超出三张用量卡。 第4格：阈值虎核对空容量盒、满容量盒与预留空间板，保存边界测试卡。",
+      "originalHtmlSha256": "077b66ac42fc7924b5b6a36ced3269328666eb6931beb0db1f7d8f30e99bfe93",
+      "lessonTitle": "估算、百分比与严格阈值",
+      "title": "四格看懂：估算、百分比与严格阈值",
+      "sourceArtifact": "exec-75043e61-18be-4630-b4be-97530976dd5d.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-75043e61-18be-4630-b4be-97530976dd5d.png"
+    },
+    {
+      "file": "12-12.html",
+      "slug": "grok-memory-refresh-hybrid-fallback",
+      "role": "召回虎：青绿工装、蓝围巾",
+      "takeaway": "记忆检索先同步文件变化，再合并候选；向量降级与可选重排必须按配置区分。",
+      "panels": [
+        {
+          "label": "先同步脏文件",
+          "text": "本课查询前更新修改内容，并移除已删文件留下的旧索引。",
+          "alt": "召回虎把更新页换入索引柜，将已删除页的旧卡取出。"
+        },
+        {
+          "label": "候选可来自两条路",
+          "text": "全文检索与可选向量检索各自形成候选后合并。",
+          "alt": "召回虎将关键词图标卡和向量点图卡送入两条汇合轨道。"
+        },
+        {
+          "label": "排序信号分步应用",
+          "text": "归一化后按配置结合时间、来源和访问等权重。",
+          "alt": "召回虎在候选托盘旁用沙漏、来源书签和访问标记调节排序滑块。"
+        },
+        {
+          "label": "失败与可选步骤分清",
+          "text": "向量路径失败仍可保留全文结果；MMR 需显式开启才运行。",
+          "alt": "召回虎关闭故障的向量支路，让全文轨道继续，旁边多样性重排开关保持关闭。"
+        }
+      ],
+      "scenePrompt": "角色：召回虎：青绿工装、蓝围巾。从左到右四格，每格一个完整场景：第1格：召回虎把更新页换入索引柜，将已删除页的旧卡取出。 第2格：召回虎将关键词图标卡和向量点图卡送入两条汇合轨道。 第3格：召回虎在候选托盘旁用沙漏、来源书签和访问标记调节排序滑块。 第4格：召回虎关闭故障的向量支路，让全文轨道继续，旁边多样性重排开关保持关闭。",
+      "originalHtmlSha256": "96f74e8132a76db28cc211dbacd4c7d622d3ac94bd107df967d63e774472849f",
+      "lessonTitle": "从文件变更到混合排序",
+      "title": "四格看懂：从文件变更到混合排序",
+      "sourceArtifact": "exec-80f60699-da6f-4fcd-b5d7-a2993c3f43c0.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-80f60699-da6f-4fcd-b5d7-a2993c3f43c0.png"
+    }
+  ]
+}

@@ -38,14 +38,16 @@
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="五种沙箱 Profile"><meta property="og:description" content="workspace、devbox、read-only、strict、off 定义文件系统和子进程网络的不同能力集合。名称提供方向，真实边界要看解析后的 capability set。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Grok Build · Sandbox Profiles</div>
-    <h1>五种沙箱 Profile</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>五种沙箱 Profile</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>五种沙箱 Profile</h1>
     <p class="subtitle">workspace、devbox、read-only、strict、off 定义文件系统和子进程网络的不同能力集合。名称提供方向，真实边界要看解析后的 capability set。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>比较 workspace、devbox、read-only、strict、off 与自定义 Profile 的边界</p></aside><!--seo:end-->  <section class="objective reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>比较 workspace、devbox、read-only、strict、off 与自定义 Profile 的边界</p></aside><section class="lesson-comic" data-lesson-comic="12-17.html"><noscript><h2>四格看懂：五种沙箱 Profile</h2><img src="assets/comics/grok-sandbox-resolved-capabilities.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：五种沙箱 Profile"><ol><li><b>先看实际能力集合</b>：本课不同 profile 在读写与网络方面有不同默认边界。</li><li><b>自定义还要核对合并规则</b>：继承基类再加限制，同名配置的优先级不能凭直觉猜。</li><li><b>应用结果受平台约束</b>：操作系统、构建条件与 enforce 设置影响实际隔离。</li><li><b>用访问测试验证边界</b>：分别测试工作区、临时目录、敏感路径与子进程网络。</li></ol><p>Profile 名称只是入口，实际边界取决于解析后的能力、配置合并与平台应用。</p></noscript></section><!--seo:end-->  <section class="objective reveal">
     <b>课程目标</b>
     <p>能从 <span class="mono">ProfileName</span> 和 <span class="mono">SandboxProfile</span> 判断读写与网络边界，能正确配置 custom extends，并识别平台支持与降级条件。</p>
   </section>

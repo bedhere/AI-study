@@ -36,14 +36,16 @@
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Compaction：85% 阈值与可选 two-pass"><meta property="og:description" content="默认策略在上下文使用率达到 85% 时允许自动压缩。memory flush 和 two-pass 默认均关闭，启用后才进入对应流程。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">CHAPTER 12 · CONTEXT BUDGET</div>
-    <h1>Compaction：85% 阈值与可选 two-pass</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Compaction：85% 阈值与可选 two-pass</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Compaction：85% 阈值与可选 two-pass</h1>
     <p class="subtitle">默认策略在上下文使用率达到 85% 时允许自动压缩。memory flush 和 two-pass 默认均关闭，启用后才进入对应流程。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>核对自动压缩阈值、memory flush、two-pass 和超时预算的真实配置</p></aside><!--seo:end-->  <div class="goal reveal"><b>课程目标</b><br>记住 <code>CompactionPolicy</code> 的五个真实字段与默认值，并能追到 <code>Agent::should_auto_compact</code> 和 <code>xai-token-estimation</code> 的阈值判断。</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>核对自动压缩阈值、memory flush、two-pass 和超时预算的真实配置</p></aside><section class="lesson-comic" data-lesson-comic="12-5.html"><noscript><h2>四格看懂：Compaction：85% 阈值与可选 two-pass</h2><img src="assets/comics/grok-compaction-config-paths.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Compaction：85% 阈值与可选 two-pass"><ol><li><b>先读阈值与当前用量</b>：本课快照按上下文比例判断是否进入自动压缩。</li><li><b>可选前置步骤要看开关</b>：memory flush 只有启用后才进入相应流程。</li><li><b>单次与两阶段分清楚</b>：two-pass 开启后才可能先总结前缀，再结合近期尾部处理。</li><li><b>同时核对默认与预算</b>：读取真实配置、超时和边界案例，不能从功能名猜路径。</li></ol><p>阈值与可选开关共同决定压缩路径，不能把可用能力当成默认启用。</p></noscript></section><!--seo:end-->  <div class="goal reveal"><b>课程目标</b><br>记住 <code>CompactionPolicy</code> 的五个真实字段与默认值，并能追到 <code>Agent::should_auto_compact</code> 和 <code>xai-token-estimation</code> 的阈值判断。</div>
 
   <div class="section-title">核心视觉 · 自动压缩阈值</div>
   <div class="meter reveal">

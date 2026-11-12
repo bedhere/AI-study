@@ -40,14 +40,16 @@
 <!--seo:begin--><meta property="og:description" content="不同 harness 可以使用不同原始参数名。Grok Build 把少量稳定语义投影到 x.ai/tool 元数据中，让展示、遥测和跨工具分析拥有共同词汇。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Grok Build · 跨工具归一化</div>
-    <h1>Canonical input 是稳定投影</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>Canonical input 是稳定投影</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>Canonical input 是稳定投影</h1>
     <p class="subtitle">不同 harness 可以使用不同原始参数名。Grok Build 把少量稳定语义投影到 <code>x.ai/tool</code> 元数据中，让展示、遥测和跨工具分析拥有共同词汇。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>用 CanonicalToolMeta 和输入投影解释跨工具实现的稳定合约</p></aside><!--seo:end-->  <div class="objective reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>用 CanonicalToolMeta 和输入投影解释跨工具实现的稳定合约</p></aside><section class="lesson-comic" data-lesson-comic="12-10.html"><noscript><h2>四格看懂：Canonical input 是稳定投影</h2><img src="assets/comics/grok-canonical-lightweight-projection.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Canonical input 是稳定投影"><ol><li><b>原始参数可以不同</b>：不同工具协议可能用不同字段表达同类操作。</li><li><b>只投影共同语义</b>：归一化层保留稳定且轻量的公共字段。</li><li><b>投影不等于完整镜像</b>：大文本与非共享选项可能省略，排查时需看原始输入。</li><li><b>按真实版本检查合约</b>：核对字段、可选值和元数据版本，不能凭示意图增加字段。</li></ol><p>Canonical input 提取稳定公共语义，完整原始参数仍需保留并另行查阅。</p></noscript></section><!--seo:end-->  <div class="objective reveal">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v5H4zM7 9v5h10V9M10 14v6h4v-6"/></svg>
     <span><b>课程目标</b>记住八个 canonical fields、七个 <code>CanonicalToolMeta</code> 字段与 <code>version = 1</code>，并能解释 <code>input</code> 为何允许缺字段或整体省略。</span>
   </div>

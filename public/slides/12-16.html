@@ -39,14 +39,16 @@
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="多 Agent 的组织方式"><meta property="og:description" content="多 Agent 系统要同时解决角色定义、spawn、状态查询、取消、完成通知与资源继承。Grok Build 的源码把这些职责落在定义层与协调事件层。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Grok Build · Multi-Agent Organization</div>
-    <h1>多 Agent 的组织方式</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>多 Agent 的组织方式</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>多 Agent 的组织方式</h1>
     <p class="subtitle">多 Agent 系统要同时解决角色定义、spawn、状态查询、取消、完成通知与资源继承。Grok Build 的源码把这些职责落在定义层与协调事件层。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>基于公开证据比较 Agent、Persona、协调者与并行任务的组织方式</p></aside><!--seo:end-->  <section class="objective reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>基于公开证据比较 Agent、Persona、协调者与并行任务的组织方式</p></aside><section class="lesson-comic" data-lesson-comic="12-16.html"><noscript><h2>四格看懂：多 Agent 的组织方式</h2><img src="assets/comics/grok-team-organization-costs.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：多 Agent 的组织方式"><ol><li><b>先判断是否需要多人</b>：简单任务可由单 Agent 完成，不能只因能并行就拆。</li><li><b>协调者管理生命周期</b>：spawn、查询、取消与完成通知需要清楚的事件责任。</li><li><b>并行收益有代价</b>：上下文复制、同文件冲突和结果合并可能抵消提速。</li><li><b>按证据选择协作结构</b>：区分源码类型与公开产品行为，明确 owner 和交付合约。</li></ol><p>选择组织方式要一起看依赖、上下文、文件冲突、取消与汇总责任。</p></noscript></section><!--seo:end-->  <section class="objective reveal">
     <b>课程目标</b>
     <p>从 <span class="mono">subagent_coordinator</span> 读出 Grok Build 的实际组织方式，能用任务依赖、上下文需求、文件冲突和结果汇总成本选择组织策略。</p>
   </section>

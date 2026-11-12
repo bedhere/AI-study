@@ -2,13 +2,13 @@
   "date": "2026-11-12",
   "baseline": "b7dee1875f12de989c9132ddad5795a3729c1b5d",
   "total": 445,
-  "completed": 305,
-  "remaining": 140,
-  "coveragePercent": 68.5,
-  "panels": 1220,
-  "webpFiles": 1525,
-  "newStories": 112,
-  "newArticleBodiesPreserved": 112,
+  "completed": 330,
+  "remaining": 115,
+  "coveragePercent": 74.2,
+  "panels": 1320,
+  "webpFiles": 1650,
+  "newStories": 137,
+  "newArticleBodiesPreserved": 137,
   "previousProvenanceUnchanged": 193,
   "maxPanelKiB": 201.7,
   "chapters": [
@@ -121,8 +121,8 @@
       "id": "p6",
       "title": "解剖 Grok Build：Rust 写的生产级 Coding Agent",
       "total": 25,
-      "completed": 0,
-      "remaining": 25
+      "completed": 25,
+      "remaining": 0
     },
     {
       "id": "p-dsh",
@@ -175,186 +175,6 @@
     }
   ],
   "remainingChapters": [
-    {
-      "id": "p6",
-      "title": "解剖 Grok Build：Rust 写的生产级 Coding Agent",
-      "lessons": [
-        {
-          "file": "12-1.html",
-          "title": "79 个 Workspace 成员如何组成产品",
-          "desc": "根 Cargo.toml 列出 79 个成员，其中 crates/codegen/ 占 62 个。理解这套系统，要沿组合入口、交互界面、Agent 宿主、领域能力、推理状态五条主轴阅读。",
-          "tag": "架构",
-          "navTitle": "79 个 Workspace 成员如何组成产品"
-        },
-        {
-          "file": "12-2.html",
-          "title": "为什么 Rust 合适：先分清事实与推断",
-          "desc": "源码能证明 Rust 2024、Tokio、强类型建模和原生二进制产物。技术选择背后的组织动机没有写入源码，本课只给出有边界的课程推断。",
-          "tag": "概念",
-          "navTitle": "为什么 Rust 合适：先分清事实与推断"
-        },
-        {
-          "file": "12-3.html",
-          "title": "从真实 main() 到第一轮采样",
-          "desc": "实际入口位于 xai-grok-pager-bin/src/main.rs。同一个组合入口解析命令与交互模式，再把工作交给 TUI 或 Shell Agent 宿主。",
-          "tag": "深入",
-          "navTitle": "从真实 main() 到第一轮采样"
-        },
-        {
-          "file": "12-4.html",
-          "title": "Session Actor：线程、状态与取消边界",
-          "desc": "每个 Session 在独立 OS 线程上运行 current-thread Tokio runtime 与 LocalSet。SessionActor 协调 turn，ChatStateActor 串行拥有对话状态，CancellationToken 负责协作式终止。",
-          "tag": "深入",
-          "navTitle": "Session Actor：线程、状态与取消边界"
-        },
-        {
-          "file": "12-5.html",
-          "title": "Compaction：85% 阈值与可选 two-pass",
-          "desc": "默认策略在上下文使用率达到 85% 时允许自动压缩。memory flush 和 two-pass 默认均关闭，启用后才进入对应流程。",
-          "tag": "交互",
-          "navTitle": "Compaction：85% 阈值与可选 two-pass"
-        },
-        {
-          "file": "12-6.html",
-          "title": "PromptContext：可检查的渲染输入",
-          "desc": "PromptContext 保存 Agent 专属的模板输入。它通过 Serde derive 获得序列化能力，再交给 ToolBridge::render_prompt() 完成渲染。",
-          "tag": "概念",
-          "navTitle": "PromptContext：可检查的渲染输入"
-        },
-        {
-          "file": "12-7.html",
-          "title": "进程级外部 Toolset Preset 注册表",
-          "desc": "config.rs 允许 crate 外的扩展代码在当前进程内注册按名称解析的工具集构建函数，并用 Public 与 Internal 控制是否进入公开枚举。",
-          "tag": "架构",
-          "navTitle": "进程级外部 Toolset Preset 注册表"
-        },
-        {
-          "file": "12-8.html",
-          "title": "ToolKind 提供默认只读语义",
-          "desc": "is_read_only() 是工具种类层的默认分类。具体工具可以覆盖它，最终是否执行还要经过规则、沙箱、Hook 与交互批准等控制。",
-          "tag": "设计模式",
-          "navTitle": "ToolKind 提供默认只读语义"
-        },
-        {
-          "file": "12-9.html",
-          "title": "实现族、注册表与动态 MCP",
-          "desc": "xai-grok-tools 同时容纳多套内置工具实现与运行时 MCP 工具。ToolBridge 把 registry 接入会话层，SearchTool 与 UseTool 提供发现和调用入口。",
-          "tag": "深入",
-          "navTitle": "实现族、注册表与动态 MCP"
-        },
-        {
-          "file": "12-10.html",
-          "title": "Canonical input 是稳定投影",
-          "desc": "不同 harness 可以使用不同原始参数名。Grok Build 把少量稳定语义投影到 x.ai/tool 元数据中，让展示、遥测和跨工具分析拥有共同词汇。",
-          "tag": "案例",
-          "navTitle": "Canonical input 是稳定投影"
-        },
-        {
-          "file": "12-11.html",
-          "title": "估算、百分比与严格阈值",
-          "desc": "xai-token-estimation 提供共享算术原语。它既有 bytes/4 的本地粗估，也有对调用方传入 used 与 total 的使用率和阈值判断。",
-          "tag": "交互",
-          "navTitle": "估算、百分比与严格阈值"
-        },
-        {
-          "file": "12-12.html",
-          "title": "从文件变更到混合排序",
-          "desc": "查询前先同步脏文件，再结合 FTS5 BM25 与可选的 sqlite-vec KNN。合并分数经过时间衰减、来源权重与访问增益，最后可选择启用 MMR 多样性重排。",
-          "tag": "深入",
-          "navTitle": "从文件变更到混合排序"
-        },
-        {
-          "file": "12-13.html",
-          "title": "Dream 的真实机制",
-          "desc": "Dream 会把近期 session 日志与现有 MEMORY.md 合并成长期记忆。它由会话结束、可选周期检查或手动命令进入，并受门控与最佳努力锁共同约束。",
-          "tag": "前沿",
-          "navTitle": "Dream 的真实机制"
-        },
-        {
-          "file": "12-14.html",
-          "title": "AgentDefinition 与 Persona 如何合并",
-          "desc": "子 Agent 先解析可执行骨架，再把 spawn 参数、role 默认值和 Persona 默认值折叠为运行时配置。两套结构在不同阶段生效，最终共同决定子会话。",
-          "tag": "设计模式",
-          "navTitle": "AgentDefinition 与 Persona 如何合并"
-        },
-        {
-          "file": "12-15.html",
-          "title": "子 Agent 的四个隔离维度",
-          "desc": "上下文来源、身份连续性、工作目录和文件改动空间分别控制不同边界。把它们混成一个「隔离等级」，容易误读恢复和 worktree 的真实行为。",
-          "tag": "深入",
-          "navTitle": "子 Agent 的四个隔离维度"
-        },
-        {
-          "file": "12-16.html",
-          "title": "多 Agent 的组织方式",
-          "desc": "多 Agent 系统要同时解决角色定义、spawn、状态查询、取消、完成通知与资源继承。Grok Build 的源码把这些职责落在定义层与协调事件层。",
-          "tag": "案例",
-          "navTitle": "多 Agent 的组织方式"
-        },
-        {
-          "file": "12-17.html",
-          "title": "五种沙箱 Profile",
-          "desc": "workspace、devbox、read-only、strict、off 定义文件系统和子进程网络的不同能力集合。名称提供方向，真实边界要看解析后的 capability set。",
-          "tag": "安全"
-        },
-        {
-          "file": "12-18.html",
-          "title": "从工具请求到受限执行：完整授权链",
-          "desc": "一次工具调用先被解析成具体访问意图，再经过 plan gate、hooks、策略规则、会话授权、Auto 模式和用户确认。允许执行后，沙箱继续约束操作系统能力。",
-          "tag": "安全",
-          "navTitle": "从工具请求到受限执行：完整授权链"
-        },
-        {
-          "file": "12-19.html",
-          "title": "Hooks：明确 deny 才阻断",
-          "desc": "Grok Build 源码课第 19 节：Hooks 事件、matcher、阻断语义与 fail-open 边界",
-          "tag": "实战",
-          "navTitle": "Hooks：明确 deny 才阻断"
-        },
-        {
-          "file": "12-20.html",
-          "title": "MCP：连接只是起点",
-          "desc": "Grok Build 源码课第 20 节：MCP 客户端、OAuth、工具可见性与连接恢复",
-          "tag": "深入",
-          "navTitle": "MCP：连接只是起点"
-        },
-        {
-          "file": "12-21.html",
-          "title": "Marketplace：发现、安装、执行分层",
-          "desc": "Grok Build 源码课第 21 节：Plugin Marketplace、插件发现与信任边界",
-          "tag": "架构",
-          "navTitle": "Marketplace：发现、安装、执行分层"
-        },
-        {
-          "file": "12-22.html",
-          "title": "完整对照：先校准证据，再谈取舍",
-          "desc": "Grok Build 与 Claude Code 完整对照：源码证据与公开产品行为分层比较",
-          "tag": "汇总",
-          "navTitle": "完整对照：先校准证据，再谈取舍"
-        },
-        {
-          "file": "12-23.html",
-          "title": "工程复盘：能力与边界一起读",
-          "desc": "Grok Build 源码课第 23 节：基于源码与 README 的工程复盘和适用边界",
-          "tag": "收官",
-          "navTitle": "工程复盘：能力与边界一起读"
-        },
-        {
-          "file": "12-24.html",
-          "title": "Coding Agent 设计工作台",
-          "desc": "Coding Agent 设计工作台：九个系统维度与可提交结课成果",
-          "tag": "收官",
-          "navTitle": "Coding Agent 设计工作台"
-        },
-        {
-          "file": "interview-6.html",
-          "title": "解剖 Grok Build · 30 道灵魂拷问",
-          "desc": "协作方法论篇拆的是真实源码，这章的问题也最硬核。你说自己懂 Coding Agent，这 30 个问题就是照妖镜，先自己开口回答，再看框架。",
-          "tag": "考察",
-          "navTitle": "解剖 Grok Build · 30 道灵魂拷问"
-        }
-      ]
-    },
     {
       "id": "p-dsh",
       "title": "解剖 DeepSeek Harness：一切皆插件的 Agent 底座",

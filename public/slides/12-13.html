@@ -43,14 +43,16 @@
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="Dream 的真实机制"><meta property="og:description" content="Dream 会把近期 session 日志与现有 MEMORY.md 合并成长期记忆。它由会话结束、可选周期检查或手动命令进入，并受门控与最佳努力锁共同约束。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">Grok Build · Memory Engineering</div>
-    <h1>Dream 的真实机制</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Dream 的真实机制</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Dream 的真实机制</h1>
     <p class="subtitle">Dream 会把近期 session 日志与现有 MEMORY.md 合并成长期记忆。它由会话结束、可选周期检查或手动命令进入，并受门控与最佳努力锁共同约束。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>核对空闲门控、DreamLock、后台整理和记忆写回的实际边界</p></aside><!--seo:end-->  <section class="objective reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>核对空闲门控、DreamLock、后台整理和记忆写回的实际边界</p></aside><section class="lesson-comic" data-lesson-comic="12-13.html"><noscript><h2>四格看懂：Dream 的真实机制</h2><img src="assets/comics/grok-dream-success-boundary.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Dream 的真实机制"><ol><li><b>触发后先过门控</b>：本课快照检查开关、时间和会话条件；周期检查需配置启用。</li><li><b>汇总近期记录与旧记忆</b>：先构建输入并调用模型，锁只提供最佳努力协调。</li><li><b>写回失败保留恢复机会</b>：写记忆失败时恢复旧锁状态，不能先删原始日志。</li><li><b>成功后按实际清理同步</b>：只清理允许删除的已读日志，索引跟随实际删除与新记忆更新。</li></ol><p>Dream 通过门控与最佳努力锁整理记忆，成功写回后才清理相应日志。</p></noscript></section><!--seo:end-->  <section class="objective reveal">
     <b>课程目标</b>
     <p>读懂 Dream 从触发到重建索引的完整链路，能解释 <span class="mono">DreamGate</span>、幂等要求、锁竞争和写入失败回滚各自解决什么问题。</p>
   </section>

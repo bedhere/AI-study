@@ -39,14 +39,16 @@
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="为什么 Rust 合适：先分清事实与推断"><meta property="og:description" content="源码能证明 Rust 2024、Tokio、强类型建模和原生二进制产物。技术选择背后的组织动机没有写入源码，本课只给出有边界的课程推断。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
   <header class="lesson-header">
     <div class="kicker">CHAPTER 12 · ENGINEERING CHOICE</div>
-    <h1>为什么 Rust 合适：先分清事实与推断</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>为什么 Rust 合适：先分清事实与推断</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>为什么 Rust 合适：先分清事实与推断</h1>
     <p class="subtitle">源码能证明 Rust 2024、Tokio、强类型建模和原生二进制产物。技术选择背后的组织动机没有写入源码，本课只给出有边界的课程推断。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从源码可验证事实出发，分析类型系统、并发安全和分发方式带来的工程取舍</p></aside><!--seo:end-->  <div class="goal reveal"><b>课程目标</b><br>用「仓库证据」和「工程推断」两套标签分析技术选型，避免把合理解释写成 xAI 官方动机。</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从源码可验证事实出发，分析类型系统、并发安全和分发方式带来的工程取舍</p></aside><section class="lesson-comic" data-lesson-comic="12-2.html"><noscript><h2>四格看懂：为什么 Rust 合适：先分清事实与推断</h2><img src="assets/comics/grok-rust-facts-and-inference.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：为什么 Rust 合适：先分清事实与推断"><ol><li><b>先列可验证事实</b>：语言版本、异步依赖与二进制目标可从本课清单核对。</li><li><b>再解释工程取舍</b>：类型建模、并发约束与分发方式可以作为分析角度。</li><li><b>推断要有明确边界</b>：代码形态不能直接证明官方选择动机，也不保证必然更快。</li><li><b>用对应证据回答</b>：说明事实在哪里、解释基于什么，以及还缺什么材料。</li></ol><p>源码能证明使用了什么，选择它的组织动机仍需独立证据。</p></noscript></section><!--seo:end-->  <div class="goal reveal"><b>课程目标</b><br>用「仓库证据」和「工程推断」两套标签分析技术选型，避免把合理解释写成 xAI 官方动机。</div>
 
   <div class="section-title">源码可验证事实</div>
   <div class="facts">
