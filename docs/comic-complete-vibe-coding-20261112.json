@@ -1,0 +1,491 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-vibe-coding",
+  "status": "accepted; 14 original comics integrated and visually reviewed",
+  "lessons": [
+    {
+      "file": "vibe-1.html",
+      "slug": "vibe-rules-from-incidents",
+      "role": "规则虎：蓝工作服、青绿围巾",
+      "takeaway": "把反复出现的问题变成可执行规则，并检查规则是否真正加载。",
+      "panels": [
+        {
+          "label": "先识别事故",
+          "text": "理解偏差、选型漂移和无关改动都值得留下记录。",
+          "alt": "规则虎看着机器人搭出的歪斜房屋，与手中的原始房屋图不一致。"
+        },
+        {
+          "label": "把约束写具体",
+          "text": "写明触发条件、应做动作和检查方式。",
+          "alt": "规则虎把房屋目标图、固定积木类型和保护锁图卡夹到规则板。"
+        },
+        {
+          "label": "确认规则已加载",
+          "text": "按工具支持的机制提供规则，并核查本轮适用范围。",
+          "alt": "规则虎把规则板放入机器人工作台入口，机器人先查看规则再拿积木。"
+        },
+        {
+          "label": "用实际任务检验",
+          "text": "规则仍需维护，不能替代结果检查。",
+          "alt": "规则虎对照房屋模型、原始目标图和标出了屋顶的检查图卡。"
+        }
+      ],
+      "scenePrompt": "角色：规则虎：蓝工作服、青绿围巾。从左到右四格，每格一个完整场景：第1格：规则虎看着机器人搭出的歪斜房屋，与手中的原始房屋图不一致。 第2格：规则虎把房屋目标图、固定积木类型和保护锁图卡夹到规则板。 第3格：规则虎把规则板放入机器人工作台入口，机器人先查看规则再拿积木。 第4格：规则虎用房屋图对照新搭好的模型，拿检查卡圈出待修的屋顶。",
+      "originalHtmlSha256": "04a08c986e2bf459f461b8ee9cce1aa78187bdcde2150556c86a717370a80d06",
+      "lessonTitle": "为什么要给 AI 立规矩",
+      "title": "四格看懂：为什么要给 AI 立规矩",
+      "sourceArtifact": "exec-655eef76-0f84-4320-b15b-a517ab24fdc4.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-655eef76-0f84-4320-b15b-a517ab24fdc4.png"
+    },
+    {
+      "file": "vibe-2.html",
+      "slug": "vibe-clarify-before-build",
+      "role": "架构虎：橙安全帽、青绿背带裤",
+      "takeaway": "把需求、范围和验收条件讲清楚，再按已授权方案执行。",
+      "panels": [
+        {
+          "label": "先复述要做什么",
+          "text": "把目标和未知点说清，及早发现理解偏差。",
+          "alt": "架构虎与黄色客户虎对照两张不同的桥梁目标图，找出结构差异。"
+        },
+        {
+          "label": "落成可审阅方案",
+          "text": "列出范围、文件改动和依赖，先搜索已有实现。",
+          "alt": "架构虎在工程桌上展开桥梁图，旁边摆着从旧零件架取来的桥墩。"
+        },
+        {
+          "label": "关键决策先确认",
+          "text": "在需要决定范围与取舍的地方设置明确检查点。",
+          "alt": "架构虎向客户虎展示桥梁模型与材料清单图卡，客户虎检查后递回目标卡。"
+        },
+        {
+          "label": "沿约定范围施工",
+          "text": "实现后对照验收条件，避免顺手改无关功能。",
+          "alt": "架构虎按图组装桥梁，保留旁边圈在透明罩内的旧车站。"
+        }
+      ],
+      "scenePrompt": "角色：架构虎：橙安全帽、青绿背带裤。从左到右四格，每格一个完整场景：第1格：架构虎与黄色客户虎对照两张不同的桥梁目标图，找出结构差异。 第2格：架构虎在工程桌上展开桥梁图，旁边摆着从旧零件架取来的桥墩。 第3格：架构虎向客户虎展示桥梁模型与材料清单图卡，客户虎检查后递回目标卡。 第4格：架构虎按图组装桥梁，保留旁边圈在透明罩内的旧车站。",
+      "originalHtmlSha256": "61561404574e8ea1ab12c2744ae08a38488db51cbaf1c8c16c074d0c7d78542e",
+      "lessonTitle": "四步流程：复述、PRD、确认、编码",
+      "title": "四格看懂：四步流程：复述、PRD、确认、编码",
+      "sourceArtifact": "exec-79cca9ee-1e98-4840-910c-de0c9dc82afd.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-79cca9ee-1e98-4840-910c-de0c9dc82afd.png"
+    },
+    {
+      "file": "vibe-3.html",
+      "slug": "vibe-isolated-playground",
+      "role": "试装虎：紫围裙、青绿衬衫",
+      "takeaway": "让组件先在独立演示中调试，再集成并同步维护示例。",
+      "panels": [
+        {
+          "label": "把组件单独摆出来",
+          "text": "脱离复杂业务流程，建立可反复调试的示例。",
+          "alt": "试装虎从完整控制台取出一个圆角按钮模块，放到独立小底座上。"
+        },
+        {
+          "label": "在隔离环境调参数",
+          "text": "检查不同尺寸、状态与动效，不影响其他业务。",
+          "alt": "试装虎转动小底座旋钮，比较按钮模块的大小和颜色样片。"
+        },
+        {
+          "label": "调好再接入页面",
+          "text": "将已检查的组件接入真实页面，再核对联动。",
+          "alt": "试装虎把调好的按钮模块装回完整控制台的指定插槽。"
+        },
+        {
+          "label": "示例跟着实现更新",
+          "text": "保留有用的历史与状态案例，避免演示过期。",
+          "alt": "试装虎将更新后按钮模型放在样品架，新旧样品各有图标卡片。"
+        }
+      ],
+      "scenePrompt": "角色：试装虎：紫围裙、青绿衬衫。从左到右四格，每格一个完整场景：第1格：试装虎从完整控制台取出一个圆角按钮模块，放到独立小底座上。 第2格：试装虎转动小底座旋钮，比较按钮模块的大小和颜色样片。 第3格：试装虎把调好的按钮模块装回完整控制台的指定插槽。 第4格：试装虎将更新后按钮模型放在样品架，新旧样品各有图标卡片。",
+      "originalHtmlSha256": "2c3b50561f15589991f1a957bf18b3055359e1b9e0eafbf2f97e93e14efd6b60",
+      "lessonTitle": "PlayGround：组件的试衣间",
+      "title": "四格看懂：PlayGround：组件的试衣间",
+      "sourceArtifact": "exec-87a28aab-5ddb-4d79-8c33-7099674c4fc7.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-87a28aab-5ddb-4d79-8c33-7099674c4fc7.png"
+    },
+    {
+      "file": "vibe-3b.html",
+      "slug": "vibe-converge-style-tokens",
+      "role": "配色虎：蓝围裙、珊瑚衬衫",
+      "takeaway": "先盘点重复样式，再用少量变量分批收敛，保留有语义的差异。",
+      "panels": [
+        {
+          "label": "盘点已有样式",
+          "text": "先查同类组件、颜色与圆角，不急着全量修改。",
+          "alt": "配色虎用放大镜查看散落的相似按钮模型和多种近似蓝色色块。"
+        },
+        {
+          "label": "定义少量公共变量",
+          "text": "把常用颜色、间距和圆角整理成明确档位。",
+          "alt": "配色虎把挑出的颜色与圆角样片放入整齐的小分格配色盒。"
+        },
+        {
+          "label": "一次合并一类组件",
+          "text": "逐批等价替换并验证，避免顺手改变视觉。",
+          "alt": "配色虎用统一圆角按钮样片核对旧按钮，工作盒内分开摆着不同样式。"
+        },
+        {
+          "label": "为合理差异命名",
+          "text": "危险、次要等语义差异要保留，新建前先搜索。",
+          "alt": "配色虎把青绿普通按钮、珊瑚危险按钮和浅色次要按钮摆在同一规范架上。"
+        }
+      ],
+      "scenePrompt": "角色：配色虎：蓝围裙、珊瑚衬衫。从左到右四格，每格一个完整场景：第1格：配色虎用放大镜查看散落的相似按钮模型和多种近似蓝色色块。 第2格：配色虎把挑出的颜色与圆角样片放入整齐的小分格配色盒。 第3格：配色虎拿统一按钮模板逐个核对旧按钮，卡片和输入框暂留旁边盒中。 第4格：配色虎把青绿普通按钮、珊瑚危险按钮和浅色次要按钮摆在同一规范架上。",
+      "originalHtmlSha256": "ec9ad1ee2fe48a05a2712bec8c82652a58cabd9160d93ecedd0be22270b9b7df",
+      "lessonTitle": "样式收敛：一个按钮不要八套 CSS",
+      "title": "四格看懂：样式收敛：一个按钮不要八套 CSS",
+      "sourceArtifact": "exec-dc5eafff-2cb3-4ab3-9c8d-99bdb1950a6a.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-dc5eafff-2cb3-4ab3-9c8d-99bdb1950a6a.png"
+    },
+    {
+      "file": "vibe-4.html",
+      "slug": "vibe-comments-protect-intent",
+      "role": "档案虎：米白衬衫、紫背带裤",
+      "takeaway": "记录背景、设计意图和关键约束，改实现时同步更新说明。",
+      "panels": [
+        {
+          "label": "解释为什么存在",
+          "text": "把业务背景留下，避免注释只复述函数名。",
+          "alt": "档案虎在旧机器旁翻开记录册，将客户需求图卡贴在对应部件旁。"
+        },
+        {
+          "label": "保留设计取舍",
+          "text": "写清为什么选这个方案，以及关键限制。",
+          "alt": "档案虎将两种齿轮方案和一张边界锁图卡夹进分隔笔记本。"
+        },
+        {
+          "label": "改实现也改说明",
+          "text": "检查记录与当前代码是否一致。",
+          "alt": "档案虎为换过新齿轮的机器更新同一页笔记，旧图卡放入历史袋。"
+        },
+        {
+          "label": "移除先查影响",
+          "text": "审查删除理由与依赖，按项目授权处理。",
+          "alt": "档案虎拦下机器人伸向旧兼容零件的夹爪，先展开连接该零件的依赖图。"
+        }
+      ],
+      "scenePrompt": "角色：档案虎：米白衬衫、紫背带裤。从左到右四格，每格一个完整场景：第1格：档案虎在旧机器旁翻开记录册，将客户需求图卡贴在对应部件旁。 第2格：档案虎将两种齿轮方案和一张边界锁图卡夹进分隔笔记本。 第3格：档案虎为换过新齿轮的机器更新同一页笔记，旧图卡放入历史袋。 第4格：档案虎拦下机器人伸向旧兼容零件的夹爪，先展开连接该零件的依赖图。",
+      "originalHtmlSha256": "ed422853411337d80ebc185f5d4fa70208a9988da5cc0b4732a676f512fe04d7",
+      "lessonTitle": "注释三要素与代码保护",
+      "title": "四格看懂：注释三要素与代码保护",
+      "sourceArtifact": "exec-4b0e6f62-a137-4b7f-a8f1-66960af9baef.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-4b0e6f62-a137-4b7f-a8f1-66960af9baef.png"
+    },
+    {
+      "file": "vibe-5.html",
+      "slug": "vibe-debug-with-evidence",
+      "role": "侦探虎：青绿侦探外套、橙领结",
+      "takeaway": "先复现并验证根因，再做有范围的修复和回归检查。",
+      "panels": [
+        {
+          "label": "先复现真实问题",
+          "text": "还原触发步骤与完整链路，避免只盯报错位置。",
+          "alt": "侦探虎在一条包裹传送链上找出错误转弯的那个步骤。"
+        },
+        {
+          "label": "用证据验证假设",
+          "text": "选择日志、断点或测试检查怀疑的原因。",
+          "alt": "侦探虎用放大镜对照运行记录与停在分岔口的包裹。"
+        },
+        {
+          "label": "改动前查影响面",
+          "text": "确认上下游依赖和其他同类问题。",
+          "alt": "侦探虎沿着连接三处收件箱的路线图逐一放置检查标记。"
+        },
+        {
+          "label": "修完再跑链路",
+          "text": "回归原问题与相关路径，交代结果和剩余限制。",
+          "alt": "侦探虎重新放行包裹，对照各收件箱结果与检查板。"
+        }
+      ],
+      "scenePrompt": "角色：侦探虎：青绿侦探外套、橙领结。从左到右四格，每格一个完整场景：第1格：侦探虎在一条包裹传送链上找出错误转弯的那个步骤。 第2格：侦探虎用放大镜对照运行记录与停在分岔口的包裹。 第3格：侦探虎沿着连接三处收件箱的路线图逐一放置检查标记。 第4格：侦探虎重新放行包裹，对照各收件箱结果与检查板。",
+      "originalHtmlSha256": "0b197cfdd820265f1dd8393b34db4cb5d0b4af1eb24e7eecd4d71c9b8273a751",
+      "lessonTitle": "调试铁律：先 Log 再改码",
+      "title": "四格看懂：调试铁律：先 Log 再改码",
+      "sourceArtifact": "exec-ceccdb56-61dd-43b2-8aab-57940254e8ae.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-ceccdb56-61dd-43b2-8aab-57940254e8ae.png"
+    },
+    {
+      "file": "vibe-6.html",
+      "slug": "vibe-complete-agreed-scope",
+      "role": "交付虎：蓝工程夹克、珊瑚围巾",
+      "takeaway": "完整实现约定范围；确需调整时说明代价和前置决策。",
+      "panels": [
+        {
+          "label": "识别悄悄缩水",
+          "text": "能运行的片段不等于已满足约定需求。",
+          "alt": "交付虎将缺一扇门的房屋模型与完整双门设计图对照。"
+        },
+        {
+          "label": "先给完整方案",
+          "text": "说清必需组件、依赖、难点和真实工作量。",
+          "alt": "交付虎把双门房屋的所有组件整齐铺在工作桌，旁边放着沙漏。"
+        },
+        {
+          "label": "取舍交给负责人",
+          "text": "需要拆分时明确范围、前置决定和验收标准。",
+          "alt": "交付虎与黄色客户虎检查两种装配安排，并在范围边框里挑选约定组件。"
+        },
+        {
+          "label": "交付对照约定",
+          "text": "检查完整链路，不能把未实现内容伪装成已完成。",
+          "alt": "交付虎逐一打开房屋两扇门，核对完整目标图与检查清单。"
+        }
+      ],
+      "scenePrompt": "角色：交付虎：蓝工程夹克、珊瑚围巾。从左到右四格，每格一个完整场景：第1格：交付虎将缺一扇门的房屋模型与完整双门设计图对照。 第2格：交付虎把双门房屋的所有组件整齐铺在工作桌，旁边放着沙漏。 第3格：交付虎与黄色客户虎检查两种装配安排，并在范围边框里挑选约定组件。 第4格：交付虎逐一打开房屋两扇门，核对完整目标图与检查清单。",
+      "originalHtmlSha256": "f91bb07376978552160704df6ad2da89b66d7a66fa695f0968f9c5edcd9aa64a",
+      "lessonTitle": "不接受分期交付",
+      "title": "四格看懂：不接受分期交付",
+      "sourceArtifact": "exec-e7b7249d-1f89-4135-86cd-a8b12bf03951.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-e7b7249d-1f89-4135-86cd-a8b12bf03951.png"
+    },
+    {
+      "file": "vibe-7.html",
+      "slug": "vibe-document-decisions",
+      "role": "记录虎：青绿开衫、橙背带",
+      "takeaway": "分别记录功能沿革、技术改动、用户收益与可复用决策。",
+      "panels": [
+        {
+          "label": "功能留下沿革",
+          "text": "记录需求、状态变化与方案调整理由。",
+          "alt": "记录虎把房屋需求图与历次模型照片夹进带分隔页的生命周期档案。"
+        },
+        {
+          "label": "改动留下证据",
+          "text": "技术记录写清触发原因、改动范围和影响。",
+          "alt": "记录虎把一个更换过的齿轮和对应前后图卡放进技术档案夹。"
+        },
+        {
+          "label": "向用户说明收益",
+          "text": "用用户能理解的语言描述可感知变化。",
+          "alt": "记录虎向黄色用户虎展示修好门把手的小屋，用户虎轻松打开门。"
+        },
+        {
+          "label": "把取舍沉淀下来",
+          "text": "提炼有上下文的原则与反模式，定期维护。",
+          "alt": "记录虎将反复使用的设计图卡并入方法手册，把被否决方案放进附页袋。"
+        }
+      ],
+      "scenePrompt": "角色：记录虎：青绿开衫、橙背带。从左到右四格，每格一个完整场景：第1格：记录虎把房屋需求图与历次模型照片夹进带分隔页的生命周期档案。 第2格：记录虎把一个更换过的齿轮和对应前后图卡放进技术档案夹。 第3格：记录虎向黄色用户虎展示修好门把手的小屋，用户虎轻松打开门。 第4格：记录虎将反复使用的设计图卡并入方法手册，把被否决方案放进附页袋。",
+      "originalHtmlSha256": "bfe4caafe3359d7423091a4c1871ace180370365f8a77dcdd35f1d2efc3bb569",
+      "lessonTitle": "三份文档与方法论沉淀",
+      "title": "四格看懂：三份文档与方法论沉淀",
+      "sourceArtifact": "exec-08add04a-d6fa-40e8-98d0-f93a7a98f8d7.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-08add04a-d6fa-40e8-98d0-f93a7a98f8d7.png"
+    },
+    {
+      "file": "vibe-8.html",
+      "slug": "vibe-record-environment-facts",
+      "role": "配置虎：深蓝工装、青绿护目镜",
+      "takeaway": "记录实际环境与协议要求，敏感凭据另管，开新会话再核对。",
+      "panels": [
+        {
+          "label": "把环境事实列出来",
+          "text": "明确技术栈、模型配置与超时等真实条件。",
+          "alt": "配置虎查看工作台接口、不同工具和沙漏，把对应图卡固定在配置板。"
+        },
+        {
+          "label": "格式服从实际接口",
+          "text": "按协议选择数据格式，避免把项目偏好当通用定律。",
+          "alt": "配置虎把圆形与方形连接件分别接入形状匹配的接口，错配连接件留在盒内。"
+        },
+        {
+          "label": "把易错边界写具体",
+          "text": "例如输入法组合期间，确认候选不应误触发送。",
+          "alt": "配置虎守在键盘和发送闸门之间，把仍在拼合的图形卡留在输入托盘。"
+        },
+        {
+          "label": "新会话核对配置",
+          "text": "确认规则适用且资料未过时，凭据不要写入普通规则。",
+          "alt": "配置虎在新工作桌读取配置板，旁边敏感钥匙卡单独锁在安全盒中。"
+        }
+      ],
+      "scenePrompt": "角色：配置虎：深蓝工装、青绿护目镜。从左到右四格，每格一个完整场景：第1格：配置虎查看工作台接口、不同工具和沙漏，把对应图卡固定在配置板。 第2格：配置虎把圆形与方形连接件分别接入形状匹配的接口，错配连接件留在盒内。 第3格：配置虎守在键盘和发送闸门之间，把仍在拼合的图形卡留在输入托盘。 第4格：配置虎在新工作桌读取配置板，旁边敏感钥匙卡单独锁在安全盒中。",
+      "originalHtmlSha256": "d16fbb7dabbcbb6945c696bae490919a945b7f5199fc4ac44b37835ca57d4405",
+      "lessonTitle": "把环境事实写进 Rule",
+      "title": "四格看懂：把环境事实写进 Rule",
+      "sourceArtifact": "exec-d464e551-f408-4bbd-a4ae-4741aa600ec8.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-d464e551-f408-4bbd-a4ae-4741aa600ec8.png"
+    },
+    {
+      "file": "vibe-9.html",
+      "slug": "vibe-release-three-gates",
+      "role": "守门虎：橙安全背心、蓝衬衫",
+      "takeaway": "备份、可执行的恢复方案和实际变更审查都要落在操作前。",
+      "panels": [
+        {
+          "label": "先保护可恢复状态",
+          "text": "涉及数据改动时，使用合适的备份并验证可用。",
+          "alt": "守门虎把资料罐复制到备份箱，并取出一份检查能否读回。"
+        },
+        {
+          "label": "演练如何恢复",
+          "text": "说明恢复材料、步骤和限制，不能只说可以回退。",
+          "alt": "守门虎用备份罐在独立小工作台重建原来的资料结构。"
+        },
+        {
+          "label": "审查实际改动",
+          "text": "对照发布范围检查差异，找出混入的无关修改。",
+          "alt": "守门虎对照成果图与零件盘，圈出一块不在计划中的珊瑚齿轮。"
+        },
+        {
+          "label": "过闸后再发布",
+          "text": "按已授权流程执行，保留版本与回退依据。",
+          "alt": "守门虎在核对目标卡、备份箱和恢复工具后打开发布闸门，机器人推来成品。"
+        }
+      ],
+      "scenePrompt": "角色：守门虎：橙安全背心、蓝衬衫。从左到右四格，每格一个完整场景：第1格：守门虎把资料罐复制到备份箱，并取出一份检查能否读回。 第2格：守门虎用备份罐在独立小工作台重建原来的资料结构。 第3格：守门虎对照成果图与零件盘，圈出一块不在计划中的珊瑚齿轮。 第4格：守门虎在核对目标卡、备份箱和恢复工具后打开发布闸门，机器人推来成品。",
+      "originalHtmlSha256": "ca6bc8847c9c93127abec1dc037f793f3ff41d96d6af4af170cb9c91799f58ad",
+      "lessonTitle": "破坏性操作的三道闸",
+      "title": "四格看懂：破坏性操作的三道闸",
+      "sourceArtifact": "exec-4c3b0c33-fdd3-4714-a20c-ede441dcc210.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-4c3b0c33-fdd3-4714-a20c-ede441dcc210.png"
+    },
+    {
+      "file": "vibe-10.html",
+      "slug": "vibe-anchor-and-write-clearly",
+      "role": "编辑虎：紫开衫、青绿围巾",
+      "takeaway": "长任务重新锚定最新目标，写作要求转成可检查的具体规则。",
+      "panels": [
+        {
+          "label": "发现约定漂移",
+          "text": "对照最新需求核查当前方案，不靠记忆猜。",
+          "alt": "编辑虎发现机器人手中的方形模块与起点约定的圆形接口不符。"
+        },
+        {
+          "label": "关键动作前再锚定",
+          "text": "复述当前目标、有效约束与已发生的变化。",
+          "alt": "编辑虎把最新目标图和锁定接口图卡固定在当前工作板上，旧卡放入历史袋。"
+        },
+        {
+          "label": "编辑前重读现状",
+          "text": "共享文件可能已变，后续修改须基于最新内容。",
+          "alt": "编辑虎打开刚更新的档案页，对照手里的旧版本卡后放下旧卡。"
+        },
+        {
+          "label": "用清单检查表达",
+          "text": "把含糊风格要求变成具体检查项，改掉空泛句式。",
+          "alt": "编辑虎用笔删掉纸上的装饰性飘带图案，留下清楚的成果图与简洁横线。"
+        }
+      ],
+      "scenePrompt": "角色：编辑虎：紫开衫、青绿围巾。从左到右四格，每格一个完整场景：第1格：编辑虎发现机器人手中的方形模块与起点约定的圆形接口不符。 第2格：编辑虎把最新目标图和锁定接口图卡固定在当前工作板上，旧卡放入历史袋。 第3格：编辑虎打开刚更新的档案页，对照手里的旧版本卡后放下旧卡。 第4格：编辑虎用笔删掉纸上的装饰性飘带图案，留下清楚的成果图与简洁横线。",
+      "originalHtmlSha256": "22c917adc01227c6c5811334ee8cbc057db5812a00700ec4435c0c939179f97a",
+      "lessonTitle": "长对话锚定与写作规范",
+      "title": "四格看懂：长对话锚定与写作规范",
+      "sourceArtifact": "exec-52b6d2e9-54f9-4400-96d9-65adeb9a9bf3.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-52b6d2e9-54f9-4400-96d9-65adeb9a9bf3.png"
+    },
+    {
+      "file": "vibe-final.html",
+      "slug": "vibe-adapt-rules",
+      "role": "裁剪虎：青绿裁缝围裙、橙衬衫",
+      "takeaway": "从真实问题挑规则，按项目删、换、调、补并检验效果。",
+      "panels": [
+        {
+          "label": "删去无关规则",
+          "text": "理解每条解决什么问题，避免照搬整套。",
+          "alt": "裁剪虎从厚规则卡堆中挑出与手头房屋目标不相关的船只图卡。"
+        },
+        {
+          "label": "替换环境事实",
+          "text": "将技术栈、接口和配置改为本项目的真实条件。",
+          "alt": "裁剪虎把规则板上的旧插头图换成当前工作台使用的新接口图卡。"
+        },
+        {
+          "label": "调整触发条件",
+          "text": "按任务风险与协作流程设置合适检查点。",
+          "alt": "裁剪虎移动流程轨道上的可调闸门，使其位于关键装配步骤前。"
+        },
+        {
+          "label": "补上反复踩的坑",
+          "text": "把新失败变成具体动作，再用真实任务复查。",
+          "alt": "裁剪虎将一次屋顶错配的记录改成检查图卡，放到下一次房屋装配台旁。"
+        }
+      ],
+      "scenePrompt": "角色：裁剪虎：青绿裁缝围裙、橙衬衫。从左到右四格，每格一个完整场景：第1格：裁剪虎从厚规则卡堆中挑出与手头房屋目标不相关的船只图卡。 第2格：裁剪虎把规则板上的旧插头图换成当前工作台使用的新接口图卡。 第3格：裁剪虎移动流程轨道上的可调闸门，使其位于关键装配步骤前。 第4格：裁剪虎将一次屋顶错配的记录改成检查图卡，放到下一次房屋装配台旁。",
+      "originalHtmlSha256": "eb3f0959190c3cb3ab206a79e32de52c071a4ce5cd2467a22944c462b5efb05b",
+      "lessonTitle": "规则的价值：每条解决一个真实问题",
+      "title": "四格看懂：规则的价值：每条解决一个真实问题",
+      "sourceArtifact": "exec-57bdd278-e870-4244-8a3f-db5053e4c5e1.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-57bdd278-e870-4244-8a3f-db5053e4c5e1.png"
+    },
+    {
+      "file": "build-6.html",
+      "slug": "vibe-reproducible-method",
+      "role": "传承虎：蓝马甲、珊瑚领结",
+      "takeaway": "从建造日志提炼操作规范，再让另一位使用者实际复现。",
+      "panels": [
+        {
+          "label": "从一次真实失败开始",
+          "text": "说明为什么需要这条规则，以及触发时该做什么。",
+          "alt": "传承虎从建造日志翻出错配工具记录，配上一张正确操作图卡。"
+        },
+        {
+          "label": "让需求经过检查点",
+          "text": "复述、写方案、确认关键取舍，再进入约定实现。",
+          "alt": "传承虎与黄色同伴虎在开工闸门前对照目标图与简短装配方案。"
+        },
+        {
+          "label": "整理成可复用规范",
+          "text": "保存目标、提示、工具、评测、记忆与流程的关键决定。",
+          "alt": "传承虎把目标旗、对话、工具、检查表和笔记图卡收进一本分隔手册。"
+        },
+        {
+          "label": "让别人照着试一次",
+          "text": "观察卡点并改进说明，复现要靠实际运行检验。",
+          "alt": "传承虎观察同伴虎按手册组装装置，并在同伴卡住的步骤加书签。"
+        }
+      ],
+      "scenePrompt": "角色：传承虎：蓝马甲、珊瑚领结。从左到右四格，每格一个完整场景：第1格：传承虎从建造日志翻出错配工具记录，配上一张正确操作图卡。 第2格：传承虎与黄色同伴虎在开工闸门前对照目标图与简短装配方案。 第3格：传承虎把目标旗、对话、工具、检查表和笔记图卡收进一本分隔手册。 第4格：传承虎观察同伴虎按手册组装装置，并在同伴卡住的步骤加书签。",
+      "originalHtmlSha256": "17b0cc03e79652c6a8310bf6b9a94cd72529714c854e6e81e7baa2970e1626a5",
+      "lessonTitle": "最后一格：让「你的做法」变成「谁来都行」",
+      "title": "四格看懂：最后一格：让「你的做法」变成「谁来都行」",
+      "sourceArtifact": "exec-815f974a-4af7-4055-b2f8-327f21180dab.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-815f974a-4af7-4055-b2f8-327f21180dab.png"
+    },
+    {
+      "file": "interview-7.html",
+      "slug": "vibe-explain-collaboration",
+      "role": "答题虎：紫马甲、橙领结",
+      "takeaway": "用事故、规则动作与验证证据解释协作流程和质量责任。",
+      "panels": [
+        {
+          "label": "先给具体事故",
+          "text": "从返工、漂移或误删说明规则为何存在。",
+          "alt": "答题虎向黄色评审虎展示歪房屋和原始设计图，指出差异。"
+        },
+        {
+          "label": "讲清规则怎样触发",
+          "text": "说明适用范围、具体动作和关键决策点。",
+          "alt": "答题虎在流程板上将一张规则图卡放到开工闸门前。"
+        },
+        {
+          "label": "拿验证证据回答",
+          "text": "展示复现、检查结果和影响范围，避免只说感觉改善。",
+          "alt": "答题虎把修好房屋、前后结果卡与依赖路线图并排摆在桌上。"
+        },
+        {
+          "label": "交代责任与边界",
+          "text": "谁决定取舍、谁验收，以及如何记录和恢复都需讲清。",
+          "alt": "答题虎与评审虎共同检查目标卡、带云图标的备份箱和交接手册。"
+        }
+      ],
+      "scenePrompt": "角色：答题虎：紫马甲、橙领结。从左到右四格，每格一个完整场景：第1格：答题虎向黄色评审虎展示歪房屋和原始设计图，指出差异。 第2格：答题虎在流程板上将一张规则图卡放到开工闸门前。 第3格：答题虎把修好房屋、前后结果卡与依赖路线图并排摆在桌上。 第4格：答题虎和评审虎共同检查目标卡、备份箱与交接手册。",
+      "originalHtmlSha256": "fe8647199c4f6964a480a8e8805368c995c69446e9758d68792382c91e428217",
+      "lessonTitle": "Vibe Coding 方法论 · 30 道灵魂拷问",
+      "title": "四格看懂：Vibe Coding 方法论 · 30 道灵魂拷问",
+      "sourceArtifact": "exec-2167f46a-0398-4527-9b2d-d7dec1060587.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-2167f46a-0398-4527-9b2d-d7dec1060587.png"
+    }
+  ]
+}

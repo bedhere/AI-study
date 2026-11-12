@@ -97,15 +97,17 @@ pre code{background:none;padding:0;color:#d9f2ec}
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="把环境事实写进 Rule"><meta property="og:description" content="每次新开对话，AI 都不知道该调哪个模型、超时设多少、项目用什么框架。把这些环境事实一次性写死在 Rule 里，相当于给 AI 一份预填好的 .env 说明书，每轮对话自动带入。本页两个演示都可以真实操作。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">VIBE CODING 方法论 · 第 8 节</div>
-    <h1>把环境事实写进 Rule</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>把环境事实写进 Rule</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>把环境事实写进 Rule</h1>
     <p class="subtitle">每次新开对话，AI 都不知道该调哪个模型、超时设多少、项目用什么框架。把这些环境事实一次性写死在 Rule 里，相当于给 AI 一份预填好的 .env 说明书，每轮对话自动带入。本页两个演示都可以真实操作。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>模型配置、技术栈锁定、数据格式三分法与 isComposing 这类必踩的坑</p></aside><!--seo:end-->  <div class="l-callout reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>模型配置、技术栈锁定、数据格式三分法与 isComposing 这类必踩的坑</p></aside><section class="lesson-comic" data-lesson-comic="vibe-8.html"><noscript><h2>四格看懂：把环境事实写进 Rule</h2><img src="assets/comics/vibe-record-environment-facts.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：把环境事实写进 Rule"><ol><li><b>把环境事实列出来</b>：明确技术栈、模型配置与超时等真实条件。</li><li><b>格式服从实际接口</b>：按协议选择数据格式，避免把项目偏好当通用定律。</li><li><b>把易错边界写具体</b>：例如输入法组合期间，确认候选不应误触发送。</li><li><b>新会话核对配置</b>：确认规则适用且资料未过时，凭据不要写入普通规则。</li></ol><p>记录实际环境与协议要求，敏感凭据另管，开新会话再核对。</p></noscript></section><!--seo:end-->  <div class="l-callout reveal">
     <p style="font-size:14.5px;line-height:1.8"><b>为什么是 Rule：</b>把配置写在 .env 里让 AI 自己读，它不一定每次都主动读；写在对话里，对话一长就被截断遗忘。Rule 在每轮对话开始前就被加载进上下文，是最稳的注入方式。</p>
   </div>
 

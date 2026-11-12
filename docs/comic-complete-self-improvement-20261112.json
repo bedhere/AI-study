@@ -1,0 +1,335 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-self-improvement",
+  "status": "accepted; 9 original comics integrated and visually reviewed",
+  "verificationSources": [
+    "https://sakana.ai/dgm/",
+    "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+    "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
+  ],
+  "lessons": [
+    {
+      "file": "11-1.html",
+      "slug": "improve-runtime-not-weights",
+      "lessonTitle": "从脚手架到自我改进系统",
+      "role": "机械虎：蓝工装、橙围巾",
+      "title": "四格看懂：从脚手架到自我改进系统",
+      "takeaway": "改进运行时的工具、上下文与流程，并用评测检验收益。",
+      "panels": [
+        {
+          "label": "找到改进对象",
+          "text": "本课讨论围绕模型的运行时系统，不等于聊天会修改权重。",
+          "alt": "机械虎看着固定白色机器人与可拆卸工作台，指向工作台的工具模块。"
+        },
+        {
+          "label": "从失败找线索",
+          "text": "查看任务轨迹，定位资料、工具或编排中的问题。",
+          "alt": "机械虎用放大镜检查一张带断开齿轮图标的运行记录。"
+        },
+        {
+          "label": "提出有限修改",
+          "text": "在允许范围内修改工具配置、上下文或流程。",
+          "alt": "机械虎只更换工作台上被框出的青绿工具模块，机器人保持原样。"
+        },
+        {
+          "label": "验证后再采用",
+          "text": "对照基线检验效果与代价，保留回退版本。",
+          "alt": "机械虎并排检查新旧工作台的结果卡，将旧模块放入保存盒。"
+        }
+      ],
+      "scenePrompt": "角色：机械虎：蓝工装、橙围巾。严格按顺序四格：第1格：机械虎看着固定白色机器人与可拆卸工作台，指向工作台的工具模块。 第2格：机械虎用放大镜检查一张带断开齿轮图标的运行记录。 第3格：机械虎只更换工作台上被框出的青绿工具模块，机器人保持原样。 第4格：机械虎并排检查新旧工作台的结果卡，将旧模块放入保存盒。",
+      "originalHtmlSha256": "03956420020d9c8ff426faf4288b3af4c57d96cc1b0ea5ce38be1da1379959a6",
+      "sourceArtifact": "exec-6341a622-bc25-4afb-8120-1e00296743e7.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-6341a622-bc25-4afb-8120-1e00296743e7.png"
+    },
+    {
+      "file": "11-2.html",
+      "slug": "improve-three-patterns",
+      "lessonTitle": "Harness 的三大设计模式",
+      "role": "调度虎：青绿背带裤、橙衬衫",
+      "title": "四格看懂：Harness 的三大设计模式",
+      "takeaway": "反馈循环、持久文件与可检查的并行任务按需要组合。",
+      "panels": [
+        {
+          "label": "让反馈进入循环",
+          "text": "执行后观察结果，再按证据修正下一步。",
+          "alt": "调度虎把失败零件送回环形小工作台的修理位。"
+        },
+        {
+          "label": "把历史存到文件",
+          "text": "长期轨迹落盘，当前上下文只保留所需信息。",
+          "alt": "调度虎将厚厚记录夹放进档案柜，桌上留下薄任务卡。"
+        },
+        {
+          "label": "独立任务再并行",
+          "text": "为分支划定范围、输出和完成条件。",
+          "alt": "调度虎向两只黄色同伴虎分发不同图标的任务盒，工位彼此分开。"
+        },
+        {
+          "label": "汇总仍需验证",
+          "text": "检查状态和输出，处理失败并核对合并结果。",
+          "alt": "调度虎将两个工位返回的零件在检验台拼合，并挑出一块不匹配零件。"
+        }
+      ],
+      "scenePrompt": "角色：调度虎：青绿背带裤、橙衬衫。严格按顺序四格：第1格：调度虎把失败零件送回环形小工作台的修理位。 第2格：调度虎将厚厚记录夹放进档案柜，桌上留下薄任务卡。 第3格：调度虎向两只黄色同伴虎分发不同图标的任务盒，工位彼此分开。 第4格：调度虎将两个工位返回的零件在检验台拼合，并挑出一块不匹配零件。",
+      "originalHtmlSha256": "b544dcbe6ec6a95145001a3d113c7a303c8e6929713cad1a927df4697b56d857",
+      "sourceArtifact": "exec-49d511d8-40aa-4d69-a4f8-3e7c0ab87b7a.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-49d511d8-40aa-4d69-a4f8-3e7c0ab87b7a.png"
+    },
+    {
+      "file": "11-3.html",
+      "slug": "improve-context-mechanisms",
+      "lessonTitle": "上下文工程：从手写 Prompt 到自动进化",
+      "role": "策展虎：紫马甲、橙领结",
+      "title": "四格看懂：上下文工程：从手写 Prompt 到自动进化",
+      "takeaway": "分清上下文内容、管理方法和运行时代码，逐层验证改进。",
+      "panels": [
+        {
+          "label": "追加会挤满工作桌",
+          "text": "历史越来越多时，当前任务容易被无关资料淹没。",
+          "alt": "策展虎在堆满纸张的桌面寻找被压住的目标图卡。"
+        },
+        {
+          "label": "先维护结构化内容",
+          "text": "从轨迹提炼条目，合并、去重并保留来源。",
+          "alt": "策展虎把重复纸页并入一个带来源书签的分隔笔记本。"
+        },
+        {
+          "label": "再比较管理方法",
+          "text": "选择、检索与格式化的方法，也可以成为优化对象。",
+          "alt": "策展虎比较按颜色分盒与按形状分格的两套资料整理架。"
+        },
+        {
+          "label": "代码修改另设门禁",
+          "text": "改管理机制时，仍要检查独立任务、开销和回退路径。",
+          "alt": "策展虎在测试台检查换过筛选模块的资料架，旁边保存旧模块与沙漏。"
+        }
+      ],
+      "scenePrompt": "角色：策展虎：紫马甲、橙领结。严格按顺序四格：第1格：策展虎在堆满纸张的桌面寻找被压住的目标图卡。 第2格：策展虎把重复纸页并入一个带来源书签的分隔笔记本。 第3格：策展虎比较按颜色分盒与按形状分格的两套资料整理架。 第4格：策展虎在测试台检查换过筛选模块的资料架，旁边保存旧模块与沙漏。",
+      "originalHtmlSha256": "a8a1a12b9261225ea3769393366bd60e7a41fafccc4560aab2450de155f4948f",
+      "sourceArtifact": "exec-eaa63331-ad2e-4009-9a16-fb19d6b650b9.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-eaa63331-ad2e-4009-9a16-fb19d6b650b9.png"
+    },
+    {
+      "file": "11-4.html",
+      "slug": "improve-workflow-search",
+      "lessonTitle": "工作流设计：从手工到自动搜索",
+      "role": "流程虎：青绿外套、蓝领结",
+      "title": "四格看懂：工作流设计：从手工到自动搜索",
+      "takeaway": "把工作流变成可执行候选，在预算内搜索并评测。",
+      "panels": [
+        {
+          "label": "画出可执行流程",
+          "text": "明确步骤、分支与输入输出，先建立基线。",
+          "alt": "流程虎把目标、齿轮和成果图卡用箭头放进一条流程轨道。"
+        },
+        {
+          "label": "生成不同候选",
+          "text": "在限定设计空间中增删步骤，形成可比较版本。",
+          "alt": "流程虎在树状工作板上为起始流程分出两条不同的新轨道。"
+        },
+        {
+          "label": "执行才有反馈",
+          "text": "试跑候选并记录结果，平衡探索与利用。",
+          "alt": "流程虎让两条模型轨道分别把零件送到同一个测量台。"
+        },
+        {
+          "label": "到预算就停下来",
+          "text": "结合质量、开销与独立测试选择方案，不宣称全局最优。",
+          "alt": "流程虎拿着象征搜索分支的树枝，检查候选成果与沙漏，旁边放着另一盒测试卡。"
+        }
+      ],
+      "scenePrompt": "角色：流程虎：青绿外套、蓝领结。严格按顺序四格：第1格：流程虎把目标、齿轮和成果图卡用箭头放进一条流程轨道。 第2格：流程虎在树状工作板上为起始流程分出两条不同的新轨道。 第3格：流程虎让两条模型轨道分别把零件送到同一个测量台。 第4格：流程虎收起搜索枝条，检查候选成果与沙漏，并打开另一盒测试卡。",
+      "originalHtmlSha256": "4278e4e5689e973d6ee4d12500ab6ef4081f9a53cf6c89df56f4b2e1d776de9c",
+      "sourceArtifact": "exec-4fe2610a-5e71-4692-bb1c-d35334ff3e96.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-4fe2610a-5e71-4692-bb1c-d35334ff3e96.png"
+    },
+    {
+      "file": "11-5.html",
+      "slug": "improve-bounded-edits",
+      "lessonTitle": "让 Harness 改进自己",
+      "role": "修理虎：蓝围裙、橙衬衫",
+      "title": "四格看懂：让 Harness 改进自己",
+      "takeaway": "用失败证据提出有界修改，再验证收益与回归。",
+      "panels": [
+        {
+          "label": "把失败归成模式",
+          "text": "从可验证的失败信号找重复问题，记录已尝试方案。",
+          "alt": "修理虎把几张相同断齿图标的失败卡归进同一档案盒。"
+        },
+        {
+          "label": "圈定允许编辑处",
+          "text": "只修改被授权的运行时部分，权限和评估器独立维护。",
+          "alt": "修理虎在透明围栏内换一个工具齿轮，围栏外的锁箱与测量台保持封闭。"
+        },
+        {
+          "label": "新旧任务都检查",
+          "text": "既看目标问题，也查已有能力是否退化。",
+          "alt": "修理虎把新模块分别送过日常任务台与独立的封盒测试台。"
+        },
+        {
+          "label": "有证据才接受",
+          "text": "结果不合格就拒绝或回退，递归并不保证进步。",
+          "alt": "修理虎把不合格新模块放进退回盒，重新安装保存好的旧模块。"
+        }
+      ],
+      "scenePrompt": "角色：修理虎：蓝围裙、橙衬衫。严格按顺序四格：第1格：修理虎把几张相同断齿图标的失败卡归进同一档案盒。 第2格：修理虎在透明围栏内换一个工具齿轮，围栏外的锁箱与测量台保持封闭。 第3格：修理虎把新模块分别送过日常任务台与独立的封盒测试台。 第4格：修理虎把不合格新模块放进退回盒，重新安装保存好的旧模块。",
+      "originalHtmlSha256": "910b17d59f6b1e23ba6c4162fda974bce3ef1b9032b0d154126216dbed82b3b5",
+      "sourceArtifact": "exec-ba49b877-9efb-46ce-a787-b7cf9e157857.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-ba49b877-9efb-46ce-a787-b7cf9e157857.png",
+      "previousArtifact": "exec-f323437f-27a6-419f-af55-d07e03bbc548.png",
+      "previousGenerationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-f323437f-27a6-419f-af55-d07e03bbc548.png",
+      "editInstruction": "第三、四格各改为一位主角的完整单场景：第三格两台测试装置并排，第四格安装旧齿轮且拒绝箱在旁。"
+    },
+    {
+      "file": "11-6.html",
+      "slug": "improve-evolution-archive",
+      "lessonTitle": "进化搜索：让最强 Harness 存活",
+      "role": "育种虎：青绿园艺围裙、蓝衬衫",
+      "title": "四格看懂：进化搜索：让最强 Harness 存活",
+      "takeaway": "候选变异、执行评估与档案保留形成搜索，收益受评估与预算限制。",
+      "panels": [
+        {
+          "label": "保存候选档案",
+          "text": "保留不同方案及其结果，为后续选择提供起点。",
+          "alt": "育种虎把形状不同的机械幼苗与各自结果图卡放在档案架上。"
+        },
+        {
+          "label": "从候选生成变体",
+          "text": "在允许范围内改代码或配置，产生新的候选。",
+          "alt": "育种虎从一株机械幼苗拆出分枝，为新分枝换上一种不同齿轮。"
+        },
+        {
+          "label": "按任务评估",
+          "text": "执行候选、检查实际产物，评估信号仍可能有盲点。",
+          "alt": "育种虎把不同机械幼苗放在同一试验台，检查它们送出的零件。"
+        },
+        {
+          "label": "兼顾差异与开销",
+          "text": "保留有用差异，监控评估成本并设置停止条件。",
+          "alt": "育种虎把两种不同机械幼苗放回档案架，看着沙漏关闭继续生成的闸门。"
+        }
+      ],
+      "scenePrompt": "角色：育种虎：青绿园艺围裙、蓝衬衫。严格按顺序四格：第1格：育种虎把形状不同的机械幼苗与各自结果图卡放在档案架上。 第2格：育种虎从一株机械幼苗拆出分枝，为新分枝换上一种不同齿轮。 第3格：育种虎把不同机械幼苗放在同一试验台，检查它们送出的零件。 第4格：育种虎把两种不同机械幼苗放回档案架，看着沙漏关闭继续生成的闸门。",
+      "originalHtmlSha256": "2c0e4cf047c6e46c4f63c7179251c15650e93c2c351fa1d600b76a3d6b67d95c",
+      "sourceArtifact": "exec-4962b78f-cf12-462d-b0b4-1a788785b960.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-4962b78f-cf12-462d-b0b4-1a788785b960.png"
+    },
+    {
+      "file": "11-7.html",
+      "slug": "improve-seven-challenges",
+      "lessonTitle": "未来挑战：自我改进的七道关",
+      "role": "领航虎：蓝制服、橙围巾",
+      "title": "四格看懂：未来挑战：自我改进的七道关",
+      "takeaway": "反馈、记忆、多样性和权限都有限制，人要维护目标与长期质量。",
+      "panels": [
+        {
+          "label": "分数需要被质疑",
+          "text": "评估器可能模糊或被钻空子，分数高不等于目标达成。",
+          "alt": "领航虎对照一张亮绿色结果卡与实际缺轮的小车，露出疑问神情。"
+        },
+        {
+          "label": "记住失败和差异",
+          "text": "保存负面结果并保留候选差异，避免重复走死路。",
+          "alt": "领航虎把失败卡归档，并留下两种形状不同的车轮方案。"
+        },
+        {
+          "label": "守住独立边界",
+          "text": "权限和评估机制需独立维护，也要关注可维护性。",
+          "alt": "领航虎在前景检查小车内部连接，背景的评估柜已锁好，机器人在透明工作区内。"
+        },
+        {
+          "label": "监督落在目标上",
+          "text": "由负责的人设定方向、验收取舍并检查长期影响。",
+          "alt": "领航虎与黄色同伴虎一起在路线图上核对目标旗与修理检查本，机器人在旁等待。"
+        }
+      ],
+      "scenePrompt": "角色：领航虎：蓝制服、橙围巾。严格按顺序四格：第1格：领航虎对照一张亮绿色结果卡与实际缺轮的小车，露出疑问神情。 第2格：领航虎把失败卡归档，并留下两种形状不同的车轮方案。 第3格：领航虎锁好机器人工作区外的裁判柜，再检查小车的内部连接。 第4格：领航虎与黄色同伴虎一起在路线图上核对目标旗与修理检查本，机器人在旁等待。",
+      "originalHtmlSha256": "91dc6e0681d0351e7447ce645964bb8e6b1de95f4560a5efef014ca37f9c8bd4",
+      "sourceArtifact": "exec-b9e6a459-a24b-4dea-ad22-3da421a4649b.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-b9e6a459-a24b-4dea-ad22-3da421a4649b.png",
+      "previousArtifact": "exec-0813b457-bb9c-466e-b107-f4f62d3bf8a9.png",
+      "previousGenerationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-0813b457-bb9c-466e-b107-f4f62d3bf8a9.png",
+      "editInstruction": "第三格仅一位主角检查小车，锁闭评估柜和机器人隔离工作区位于同一场景背景。"
+    },
+    {
+      "file": "build-5.html",
+      "slug": "improve-long-task-memory",
+      "lessonTitle": "它跑十轮很聪明，跑五十轮呢？",
+      "role": "长跑虎：橙运动外套、青绿裤",
+      "title": "四格看懂：它跑十轮很聪明，跑五十轮呢？",
+      "takeaway": "按场景定义压缩触发、关键约束保留和落盘恢复规则。",
+      "panels": [
+        {
+          "label": "观察何时丢信息",
+          "text": "从实际长任务找遗漏，不把示例轮数当通用阈值。",
+          "alt": "长跑虎沿着一串对话图卡找到与起点目标卡不符的一张，放下标记锥。"
+        },
+        {
+          "label": "定义压缩触发",
+          "text": "结合窗口、任务与预留空间，明确何时整理上下文。",
+          "alt": "长跑虎在装满不同纸卡的透明工作箱旁调整一条青绿触发横杆。"
+        },
+        {
+          "label": "保住任务约束",
+          "text": "压缩前保护关键需求、权限限制和仍有效的决定。",
+          "alt": "长跑虎将目标图、边界锁和决定图卡放进固定夹，其他历史卡移入摘要篮。"
+        },
+        {
+          "label": "落盘并读回",
+          "text": "保存进度、证据和下一步，在新会话中实际验证恢复。",
+          "alt": "长跑虎在新的干净工作桌读回笔记本，零件放在手边，身后是关闭的档案柜。"
+        }
+      ],
+      "scenePrompt": "角色：长跑虎：橙运动外套、青绿裤。严格按顺序四格：第1格：长跑虎沿着一串对话图卡找到与起点目标卡不符的一张，放下标记锥。 第2格：长跑虎在装满不同纸卡的透明工作箱旁调整一条青绿触发横杆。 第3格：长跑虎将目标图、边界锁和决定图卡放进固定夹，其他历史卡移入摘要篮。 第4格：长跑虎把笔记本放进档案柜，再在新的干净工作桌打开同一本笔记继续装配。",
+      "originalHtmlSha256": "397d6948a88aeded557917b5d1a43e3c029464e8970383f04599f83d063e9cba",
+      "sourceArtifact": "exec-73e99f49-aa2c-4648-9f06-ad82e1a59322.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-73e99f49-aa2c-4648-9f06-ad82e1a59322.png",
+      "previousArtifact": "exec-ed3b8084-d71d-4219-80d0-fb4f046b9bba.png",
+      "previousGenerationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-ed3b8084-d71d-4219-80d0-fb4f046b9bba.png",
+      "editInstruction": "第四格仅一位主角在新桌面读笔记继续装配，档案柜在背景。"
+    },
+    {
+      "file": "interview-5.html",
+      "slug": "improve-explain-evidence",
+      "lessonTitle": "Harness 与自我改进 · 30 道灵魂拷问",
+      "role": "研究虎：紫西装、橙领带",
+      "title": "四格看懂：Harness 与自我改进 · 30 道灵魂拷问",
+      "takeaway": "讲清优化对象、反馈来源、验证边界与算力代价。",
+      "panels": [
+        {
+          "label": "先说改什么",
+          "text": "区分内容、管理机制、运行时代码与模型权重。",
+          "alt": "研究虎向黄色评审虎展示分层工作台，圈出一个可更换的模块。"
+        },
+        {
+          "label": "再说凭什么改",
+          "text": "说明失败轨迹如何变成具体提案，避免只谈自我反思。",
+          "alt": "研究虎把失败记录卡、放大镜和候选修改模块依次放在桌上。"
+        },
+        {
+          "label": "把检验和成本说清",
+          "text": "比较基线与独立任务，交代预算及可能的回归。",
+          "alt": "研究虎向评审虎展示新旧结果卡、沙漏与一张未通过的测试卡。"
+        },
+        {
+          "label": "讲明谁来守边界",
+          "text": "解释权限、评估与回退安排，以及负责人的判断。",
+          "alt": "研究虎和评审虎一起检查工作区外的锁箱、回退模块盒与目标图卡。"
+        }
+      ],
+      "scenePrompt": "角色：研究虎：紫西装、橙领带。严格按顺序四格：第1格：研究虎向黄色评审虎展示分层工作台，圈出一个可更换的模块。 第2格：研究虎把失败记录卡、放大镜和候选修改模块依次放在桌上。 第3格：研究虎向评审虎展示新旧结果卡、沙漏与一张未通过的测试卡。 第4格：研究虎和评审虎一起检查工作区外的锁箱、回退模块盒与目标图卡。",
+      "originalHtmlSha256": "fba0f7b634f786ee82611e6fe90dd742e8bbdb64cee3bc821561b4f1da8ec3d6",
+      "sourceArtifact": "exec-86bd6a61-06fa-47c6-9d39-edea279a6ac3.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-86bd6a61-06fa-47c6-9d39-edea279a6ac3.png"
+    }
+  ]
+}

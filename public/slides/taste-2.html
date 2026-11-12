@@ -198,16 +198,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">审美工程 · 2 / 12</div>
-    <h1>「AI 味儿」是怎么来的</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>「AI 味儿」是怎么来的</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>「AI 味儿」是怎么来的</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">让 AI 随便生成一个页面，十有八九是紫色渐变、毛玻璃、居中大标题三件套。这种整齐划一有数学上的原因，看懂了它，你就知道怎么绕开它。</p>
     <div class="chips"><span class="chip">AI 味找茬</span><span class="chip">噪音体检单</span><span class="chip">嘉年华效应</span><span class="chip">平均值陷阱</span><span class="chip">具体度旋钮</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>紫色渐变、毛玻璃、圆角卡片三件套：AI 默认输出训练数据的平均值，平均值就是平庸。在一张典型的 AI 生成页面上点出「AI 味」特征，集齐揭晓成因</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>紫色渐变、毛玻璃、圆角卡片三件套：AI 默认输出训练数据的平均值，平均值就是平庸。在一张典型的 AI 生成页面上点出「AI 味」特征，集齐揭晓成因</p></aside><section class="lesson-comic" data-lesson-comic="taste-2.html"><noscript><h2>四格看懂：「AI 味儿」是怎么来的</h2><img src="assets/comics/taste-remove-default-noise.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：「AI 味儿」是怎么来的"><ol><li><b>识别重复套路</b>：相似装饰堆叠可能掩盖内容，也未必适合当前任务。</li><li><b>找出注意力噪音</b>：检查拥挤、过多颜色和无意义装饰。</li><li><b>把要求说具体</b>：说明信息密度、主色、层级与不需要的元素。</li><li><b>按任务检查修改</b>：删减后仍应保留必要信息与操作线索。</li></ol><p>识别无助于任务的装饰，用具体参考与约束指导修改。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">动手 · 先把「AI 味」抓出来</div>
     <p class="desc">下面是一张典型的 AI 生成 landing page。它藏着 <b>5 个高频出现的「AI 味」特征</b>，在页面上把它们逐个点出来。每点中一个，会告诉你这个特征为什么成了 AI 的默认动作。</p>
     <div class="toy" id="t2Hunt">

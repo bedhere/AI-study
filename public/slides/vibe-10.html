@@ -119,15 +119,17 @@ code{color:var(--vibe-deep)}
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="长对话锚定与写作规范"><meta property="og:description" content="对话开头说了用 PostgreSQL，聊到 30 轮 AI 突然建议 SQLite，因为早期约定已经被上下文窗口挤掉了。这一节讲两件事：怎么对抗长对话的认知漂移，以及怎么让 AI 写出的中文摆脱 AI 腔。两个交互演示，动手拖一拖、点一点。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">VIBE CODING 方法论 · 第 10 节</div>
-    <h1>长对话锚定与写作规范</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>长对话锚定与写作规范</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>长对话锚定与写作规范</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">对话开头说了用 PostgreSQL，聊到 30 轮 AI 突然建议 SQLite，因为早期约定已经被上下文窗口挤掉了。这一节讲两件事：怎么对抗长对话的认知漂移，以及怎么让 AI 写出的中文摆脱 AI 腔。两个交互演示，动手拖一拖、点一点。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>超过 10 轮强制复述目标；违禁句式清单让文案摆脱 AI 腔</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>超过 10 轮强制复述目标；违禁句式清单让文案摆脱 AI 腔</p></aside><section class="lesson-comic" data-lesson-comic="vibe-10.html"><noscript><h2>四格看懂：长对话锚定与写作规范</h2><img src="assets/comics/vibe-anchor-and-write-clearly.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：长对话锚定与写作规范"><ol><li><b>发现约定漂移</b>：对照最新需求核查当前方案，不靠记忆猜。</li><li><b>关键动作前再锚定</b>：复述当前目标、有效约束与已发生的变化。</li><li><b>编辑前重读现状</b>：共享文件可能已变，后续修改须基于最新内容。</li><li><b>用清单检查表达</b>：把含糊风格要求变成具体检查项，改掉空泛句式。</li></ol><p>长任务重新锚定最新目标，写作要求转成可检查的具体规则。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">课程目标</div>
     <div class="cards3">
       <div class="l-card"><h3>理解漂移成因</h3><p>上下文窗口截断和长文本尾部注意力衰减，让 AI 忘掉早期约定。即使是 200K token 的模型，注意力在长文本尾部的衰减也真实存在。</p></div>

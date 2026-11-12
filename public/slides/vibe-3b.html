@@ -103,16 +103,18 @@ code{color:var(--vibe-deep);background:rgba(13,148,136,.08)}
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="样式收敛：一个按钮不要八套 CSS"><meta property="og:description" content="让 AI 连着做十个功能，你会攒出八个长得差不多的按钮类。它不是不会复用，是每轮对话都不知道你已经有什么。这一节讲样式为什么会增殖、怎么收干净，以及哪些差异该留着。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">Vibe Coding 方法论 · 质量底线</div>
-    <h1>样式收敛：一个按钮不要八套 CSS</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>样式收敛：一个按钮不要八套 CSS</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>样式收敛：一个按钮不要八套 CSS</h1>
     <p class="subtitle">让 AI 连着做十个功能，你会攒出八个长得差不多的按钮类。它不是不会复用，是每轮对话都不知道你已经有什么。这一节讲样式为什么会增殖、怎么收干净，以及哪些差异该留着。</p>
     <div class="chips"><span class="chip">复用优先</span><span class="chip">design token</span><span class="chip">技术债</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>样式为什么会增殖、怎么分批收进 token，以及哪些差异该留着</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>样式为什么会增殖、怎么分批收进 token，以及哪些差异该留着</p></aside><section class="lesson-comic" data-lesson-comic="vibe-3b.html"><noscript><h2>四格看懂：样式收敛：一个按钮不要八套 CSS</h2><img src="assets/comics/vibe-converge-style-tokens.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：样式收敛：一个按钮不要八套 CSS"><ol><li><b>盘点已有样式</b>：先查同类组件、颜色与圆角，不急着全量修改。</li><li><b>定义少量公共变量</b>：把常用颜色、间距和圆角整理成明确档位。</li><li><b>一次合并一类组件</b>：逐批等价替换并验证，避免顺手改变视觉。</li><li><b>为合理差异命名</b>：危险、次要等语义差异要保留，新建前先搜索。</li></ol><p>先盘点重复样式，再用少量变量分批收敛，保留有语义的差异。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">交互演示一 · 亲手攒一堆按钮</div>
     <p class="desc">下面模拟一个真实项目的迭代。每点一次「再加个功能」，就是你开一轮新对话让 AI 做一个页面。注意看它每次是怎么处理按钮的，以及底下四个数字怎么涨。</p>
     <div class="ent-wrap">

@@ -105,15 +105,17 @@
 <!--seo:begin--><meta property="og:title" content="三类风险：滥用、失控、外部攻击"><meta property="og:description" content="安全不是加一层提示词就够的，需要从架构层面进行结构性设计。这里介绍一套系统化的安全分类框架。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">安全与容器化</div>
-    <h1>三类风险：滥用、失控、外部攻击</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>三类风险：滥用、失控、外部攻击</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>三类风险：滥用、失控、外部攻击</h1>
     <p class="subtitle">安全不是加一层提示词就够的，需要从架构层面进行结构性设计。这里介绍一套系统化的安全分类框架。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Anthropic 的安全分类框架：用户滥用 / 模型 Misbehavior / Prompt Injection</p></aside><!--seo:end-->  <!-- ===== 三类风险 ===== -->
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Anthropic 的安全分类框架：用户滥用 / 模型 Misbehavior / Prompt Injection</p></aside><section class="lesson-comic" data-lesson-comic="10-15.html"><noscript><h2>四格看懂：三类风险：滥用、失控、外部攻击</h2><img src="assets/comics/engineering-three-risks.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：三类风险：滥用、失控、外部攻击"><ol><li><b>用户也可能滥用</b>：识别请求目的和允许范围，阻止越界的使用方式。</li><li><b>模型可能做错</b>：合法目标下也可能误解约束或采取错误动作。</li><li><b>外部内容可能注入</b>：网页、文件和工具返回中的指令应按其来源判断。</li><li><b>防护落实到结构</b>：组合权限控制、隔离、验证和审计，降低各类风险。</li></ol><p>区分滥用、模型不当行为和外部注入，再设计对应防护。</p></noscript></section><!--seo:end-->  <!-- ===== 三类风险 ===== -->
   <div class="sec-label">安全分类框架</div>
 
   <p class="desc reveal">每种 AI 产品面对的威胁模型不同，但所有风险都可以归入三个类别。理解这三类风险是设计安全架构的第一步。</p>

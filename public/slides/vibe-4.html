@@ -100,14 +100,16 @@
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="注释三要素与代码保护"><meta property="og:description" content="AI 写的注释多是功能复述，三个月后回来看代码，想不起当初为什么这样实现。这一节给注释立结构，也给「删代码」立规矩。页面里有两个可动手的演示。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
   <header class="lesson-header">
     <div class="kicker">Vibe Coding 方法论 · 第 4 节</div>
-    <h1>注释三要素与代码保护</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>注释三要素与代码保护</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>注释三要素与代码保护</h1>
     <p class="subtitle">AI 写的注释多是功能复述，三个月后回来看代码，想不起当初为什么这样实现。这一节给注释立结构，也给「删代码」立规矩。页面里有两个可动手的演示。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>背景、设计意图、关键约束缺一不可；禁止静默删除代码与依赖</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>背景、设计意图、关键约束缺一不可；禁止静默删除代码与依赖</p></aside><section class="lesson-comic" data-lesson-comic="vibe-4.html"><noscript><h2>四格看懂：注释三要素与代码保护</h2><img src="assets/comics/vibe-comments-protect-intent.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：注释三要素与代码保护"><ol><li><b>解释为什么存在</b>：把业务背景留下，避免注释只复述函数名。</li><li><b>保留设计取舍</b>：写清为什么选这个方案，以及关键限制。</li><li><b>改实现也改说明</b>：检查记录与当前代码是否一致。</li><li><b>移除先查影响</b>：审查删除理由与依赖，按项目授权处理。</li></ol><p>记录背景、设计意图和关键约束，改实现时同步更新说明。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">问题在哪</div>
     <div class="l-callout">
       <p>代码只能表达「做了什么」。<b>为什么存在、为什么这样实现、调用时要注意什么</b>，这些信息只有写进注释才能跨时间留存。「写好注释」四个字 AI 执行不了，必须给出固定结构和示例。</p>

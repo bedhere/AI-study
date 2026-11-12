@@ -80,15 +80,17 @@
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="让 Harness 改进自己"><meta property="og:description" content="如果 LLM 能优化执行 Agent 的代码，它就能访问比手写 Prompt 大得多的设计空间。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson wide">
 
   <header class="lesson-header">
     <div class="kicker">PART 5 · Harness 与自我改进</div>
-    <h1>让 Harness <em>改进自己</em></h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>让 Harness 改进自己</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>让 Harness <em>改进自己</em></h1>
     <p class="subtitle">如果 LLM 能优化执行 Agent 的代码，它就能访问比手写 Prompt 大得多的设计空间。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>STOP 递归改善器 + Self-Harness 的 propose-evaluate-accept 循环</p></aside><!--seo:end-->  <!-- ========== STOP ========== -->
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>STOP 递归改善器 + Self-Harness 的 propose-evaluate-accept 循环</p></aside><section class="lesson-comic" data-lesson-comic="11-5.html"><noscript><h2>四格看懂：让 Harness 改进自己</h2><img src="assets/comics/improve-bounded-edits.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：让 Harness 改进自己"><ol><li><b>把失败归成模式</b>：从可验证的失败信号找重复问题，记录已尝试方案。</li><li><b>圈定允许编辑处</b>：只修改被授权的运行时部分，权限和评估器独立维护。</li><li><b>新旧任务都检查</b>：既看目标问题，也查已有能力是否退化。</li><li><b>有证据才接受</b>：结果不合格就拒绝或回退，递归并不保证进步。</li></ol><p>用失败证据提出有界修改，再验证收益与回归。</p></noscript></section><!--seo:end-->  <!-- ========== STOP ========== -->
   <div class="sec-label">STOP: Self-Taught Optimizer</div>
 
   <div class="plain-talk reveal">

@@ -97,14 +97,16 @@
 <!--seo:begin--><meta property="og:type" content="article"><meta property="og:title" content="不接受分期交付"><meta property="og:description" content="你要一个完整的认证系统，AI 说「先做一个简版的用户名密码登录，后续再加 OAuth」。后续永远不会来。这一节用两个演示，看清「先做简版」的完整生命周期，并练习正确的回应方式。"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
   <header class="lesson-header">
     <div class="kicker">Vibe Coding 方法论 · 第 6 节</div>
-    <h1>不接受分期交付</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>不接受分期交付</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>不接受分期交付</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">你要一个完整的认证系统，AI 说「先做一个简版的用户名密码登录，后续再加 OAuth」。后续永远不会来。这一节用两个演示，看清「先做简版」的完整生命周期，并练习正确的回应方式。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>AI 爱做「先上简版」的真实原因，以及为什么要打破这个模式</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>AI 爱做「先上简版」的真实原因，以及为什么要打破这个模式</p></aside><section class="lesson-comic" data-lesson-comic="vibe-6.html"><noscript><h2>四格看懂：不接受分期交付</h2><img src="assets/comics/vibe-complete-agreed-scope.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：不接受分期交付"><ol><li><b>识别悄悄缩水</b>：能运行的片段不等于已满足约定需求。</li><li><b>先给完整方案</b>：说清必需组件、依赖、难点和真实工作量。</li><li><b>取舍交给负责人</b>：需要拆分时明确范围、前置决定和验收标准。</li><li><b>交付对照约定</b>：检查完整链路，不能把未实现内容伪装成已完成。</li></ol><p>完整实现约定范围；确需调整时说明代价和前置决策。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">动机分析</div>
     <div class="l-callout" style="background:var(--vibe-soft);border-color:rgba(13,148,136,.3)">
       <p>实践中 AI 说「先做简版」往往与复杂度无关，<b style="color:var(--vibe-deep)">它想快速给你一个能跑的东西来换取正反馈</b>。「先用临时方案」「暂时 Mock」「简单处理一下」背后是同一个模式。打破这个模式后，AI 反而会更认真地分析完整方案。</p>

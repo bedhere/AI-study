@@ -1,0 +1,423 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-taste",
+  "status": "accepted; 12 original comics integrated and visually reviewed",
+  "lessons": [
+    {
+      "file": "taste-1.html",
+      "slug": "taste-judge-by-goal",
+      "role": "策展虎：青绿西装、珊瑚领结",
+      "takeaway": "先明确人群和任务，再比较方案是否把关键信息传达清楚。",
+      "panels": [
+        {
+          "label": "候选很多，先别急选",
+          "text": "生成速度快了，仍需要人判断什么适合任务。",
+          "alt": "策展虎在桌上摊开三张风格不同的海报图卡，认真比较。"
+        },
+        {
+          "label": "先说清给谁看",
+          "text": "明确受众、场景和希望完成的动作。",
+          "alt": "策展虎与黄色观众虎对照演出舞台图、日历图和入口图卡。"
+        },
+        {
+          "label": "用目标挑方案",
+          "text": "看重要信息和主入口是否清楚，不能只凭装饰好看。",
+          "alt": "策展虎从杂乱装饰海报旁挑出一张突出日历、地点与单一入口图标的海报。"
+        },
+        {
+          "label": "再让真实使用者试",
+          "text": "观察对方是否看懂，并据此调整。",
+          "alt": "策展虎向观众虎展示所选海报，观众虎顺利指出入口图标。"
+        }
+      ],
+      "scenePrompt": "角色：策展虎：青绿西装、珊瑚领结。从左到右四格，每格一个完整场景：第1格：策展虎在桌上摊开三张风格不同的海报图卡，认真比较。 第2格：策展虎与黄色观众虎对照演出舞台图、日历图和入口图卡。 第3格：策展虎从杂乱装饰海报旁挑出一张突出日历、地点与单一入口图标的海报。 第4格：策展虎向观众虎展示所选海报，观众虎顺利指出入口图标。",
+      "originalHtmlSha256": "f7c55cd5c8300ce831ffe3106247cffdb1c21938fd27760c213947399a49ad4c",
+      "lessonTitle": "执行免费了，判断力开始涨价",
+      "title": "四格看懂：执行免费了，判断力开始涨价",
+      "sourceArtifact": "exec-8f058ebe-e447-4666-956a-abfae009d6fc.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-8f058ebe-e447-4666-956a-abfae009d6fc.png"
+    },
+    {
+      "file": "taste-2.html",
+      "slug": "taste-remove-default-noise",
+      "role": "去噪虎：蓝围裙、青绿衬衫",
+      "takeaway": "识别无助于任务的装饰，用具体参考与约束指导修改。",
+      "panels": [
+        {
+          "label": "识别重复套路",
+          "text": "相似装饰堆叠可能掩盖内容，也未必适合当前任务。",
+          "alt": "去噪虎看着一块塞满渐变色块、玻璃卡和贴纸的界面模型。"
+        },
+        {
+          "label": "找出注意力噪音",
+          "text": "检查拥挤、过多颜色和无意义装饰。",
+          "alt": "去噪虎用放大镜在模型上找出抢走主按钮注意力的装饰徽章。"
+        },
+        {
+          "label": "把要求说具体",
+          "text": "说明信息密度、主色、层级与不需要的元素。",
+          "alt": "去噪虎把单色样片、整齐网格和唯一主按钮图卡交给白色机器人。"
+        },
+        {
+          "label": "按任务检查修改",
+          "text": "删减后仍应保留必要信息与操作线索。",
+          "alt": "去噪虎对照简洁后的界面与目标图卡，确认主按钮和核心内容仍在。"
+        }
+      ],
+      "scenePrompt": "角色：去噪虎：蓝围裙、青绿衬衫。从左到右四格，每格一个完整场景：第1格：去噪虎看着一块塞满渐变色块、玻璃卡和贴纸的界面模型。 第2格：去噪虎用放大镜在模型上找出抢走主按钮注意力的装饰徽章。 第3格：去噪虎把单色样片、整齐网格和唯一主按钮图卡交给白色机器人。 第4格：去噪虎对照简洁后的界面与目标图卡，确认主按钮和核心内容仍在。",
+      "originalHtmlSha256": "e7ac46230ca921c740e7f43df4b0eacb742de3cc0f3a7c7c8a9fead6f782555c",
+      "lessonTitle": "「AI 味儿」是怎么来的",
+      "title": "四格看懂：「AI 味儿」是怎么来的",
+      "sourceArtifact": "exec-9f011728-d536-4b36-b8cc-5096979540fb.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-9f011728-d536-4b36-b8cc-5096979540fb.png"
+    },
+    {
+      "file": "taste-3.html",
+      "slug": "taste-one-visual-focus",
+      "role": "灯光虎：紫马甲、橙围巾",
+      "takeaway": "先定主要信息，再用大小、字重与明暗建立清楚层级。",
+      "panels": [
+        {
+          "label": "同时抢戏就没重点",
+          "text": "多个元素同样醒目时，读者难以判断先看哪里。",
+          "alt": "灯光虎面对三个同样大、同样亮的舞台道具，露出困惑表情。"
+        },
+        {
+          "label": "先确定主角",
+          "text": "按本屏任务选出最重要的信息或动作。",
+          "alt": "灯光虎拿目标旗图卡，挑出中间的关键道具并移到主展示台。"
+        },
+        {
+          "label": "先调低配角",
+          "text": "减弱次要元素，用大小与明暗拉开层级。",
+          "alt": "灯光虎调暗两侧小灯，让中间主道具保持明亮而两侧安静。"
+        },
+        {
+          "label": "模糊看仍分主次",
+          "text": "用眯眼检查帮助发现层级问题，再核对信息关系。",
+          "alt": "灯光虎眯起眼看舞台，主道具突出，次要道具整齐聚在较暗一侧。"
+        }
+      ],
+      "scenePrompt": "角色：灯光虎：紫马甲、橙围巾。从左到右四格，每格一个完整场景：第1格：灯光虎面对三个同样大、同样亮的舞台道具，露出困惑表情。 第2格：灯光虎拿目标旗图卡，挑出中间的关键道具并移到主展示台。 第3格：灯光虎调暗两侧小灯，让中间主道具保持明亮而两侧安静。 第4格：灯光虎眯起眼看舞台，主道具突出，次要道具整齐聚在较暗一侧。",
+      "originalHtmlSha256": "adc25b948cb135bac45009668a22a903d9240b44292c87e14d0fb33c55bd5511",
+      "lessonTitle": "层级：一屏只有一个主角",
+      "title": "四格看懂：层级：一屏只有一个主角",
+      "sourceArtifact": "exec-65c1834c-c14c-4e73-b361-6b65c244b617.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-65c1834c-c14c-4e73-b361-6b65c244b617.png"
+    },
+    {
+      "file": "taste-4.html",
+      "slug": "taste-space-and-align",
+      "role": "测量虎：青绿工装、蓝围裙",
+      "takeaway": "相关元素靠近，同层级间距一致，并核对对齐与阅读路径。",
+      "panels": [
+        {
+          "label": "先把关系摆清楚",
+          "text": "用距离表达分组，避免所有元素挤成一团。",
+          "alt": "测量虎在拥挤的工具墙前，把属于同一用途的工具移到一起。"
+        },
+        {
+          "label": "间距遵守共同档位",
+          "text": "选一套适合项目的间距尺度，减少随手取值。",
+          "alt": "测量虎用相同长度的间距积木分隔工具组，组内近、组间远。"
+        },
+        {
+          "label": "再核对边缘和基线",
+          "text": "检查图标、卡片和按钮是否按约定对齐。",
+          "alt": "测量虎用直尺把工具卡底边对齐在同一条架子边缘。"
+        },
+        {
+          "label": "沿任务走一遍",
+          "text": "检查视线能否顺着内容到达主要操作。",
+          "alt": "测量虎沿着目标图卡、分组工具和主按钮形成的清晰路线逐一查看。"
+        }
+      ],
+      "scenePrompt": "角色：测量虎：青绿工装、蓝围裙。从左到右四格，每格一个完整场景：第1格：测量虎在拥挤的工具墙前，把属于同一用途的工具移到一起。 第2格：测量虎用相同长度的间距积木分隔工具组，组内近、组间远。 第3格：测量虎用直尺把工具卡底边对齐在同一条架子边缘。 第4格：测量虎沿着目标图卡、分组工具和主按钮形成的清晰路线逐一查看。",
+      "originalHtmlSha256": "226407f033906827bc2981468fbb6b0efe620dd814863e85c04b2ccc4f15b89e",
+      "lessonTitle": "留白与对齐：大多数丑都丑在间距",
+      "title": "四格看懂：留白与对齐：大多数丑都丑在间距",
+      "sourceArtifact": "exec-93ee5d0f-c3cd-4b94-b2ac-511455b7a5c4.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-93ee5d0f-c3cd-4b94-b2ac-511455b7a5c4.png"
+    },
+    {
+      "file": "taste-5.html",
+      "slug": "taste-visual-budget",
+      "role": "调色虎：米白外套、珊瑚围裙",
+      "takeaway": "给颜色、字重和形状设预算，删去无用差异并保留信息。",
+      "panels": [
+        {
+          "label": "先数用了多少",
+          "text": "检查过多颜色、强调样式和形状是否互相抢戏。",
+          "alt": "调色虎面对装满鲜艳色块与不同圆角样片的桌面，拿着空预算盒。"
+        },
+        {
+          "label": "留下必要档位",
+          "text": "用主色、中性色和有用途的状态色组成精简方案。",
+          "alt": "调色虎挑出一块青绿主色、几块中性色与一块珊瑚状态色，放进小盒。"
+        },
+        {
+          "label": "做减法也要看信息",
+          "text": "删除装饰时检查是否损害内容或操作。",
+          "alt": "调色虎从展示卡取下多余贴纸，保留目标图、内容横线与主按钮。"
+        },
+        {
+          "label": "没理由的差异收拢",
+          "text": "相近却无语义区别的样式统一，有意义的区别留下。",
+          "alt": "调色虎把几块近似青绿并入同一格，珊瑚危险按钮单独保留。"
+        }
+      ],
+      "scenePrompt": "角色：调色虎：米白外套、珊瑚围裙。从左到右四格，每格一个完整场景：第1格：调色虎面对装满鲜艳色块与不同圆角样片的桌面，拿着空预算盒。 第2格：调色虎挑出一块青绿主色、几块中性色与一块珊瑚状态色，放进小盒。 第3格：调色虎从展示卡取下多余贴纸，保留目标图、内容横线与主按钮。 第4格：调色虎把几块近似青绿并入同一格，珊瑚危险按钮单独保留。",
+      "originalHtmlSha256": "def5845d7ad9a6ac62f8428749d323fcc3bdf66f8c7f25bcd6a0ea7c340648e0",
+      "lessonTitle": "克制：给颜色和字体做预算",
+      "title": "四格看懂：克制：给颜色和字体做预算",
+      "sourceArtifact": "exec-8cd3d840-db48-43a9-8ab4-0f3f889ba042.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-8cd3d840-db48-43a9-8ab4-0f3f889ba042.png"
+    },
+    {
+      "file": "taste-6.html",
+      "slug": "taste-shared-design-tokens",
+      "role": "系统虎：蓝衬衫、橙背带",
+      "takeaway": "让公共样式读取同一套变量，保留有语义的差异并检查漂移。",
+      "panels": [
+        {
+          "label": "单看不错，合看分散",
+          "text": "按钮、圆角与颜色各写各的，会形成无理由差异。",
+          "alt": "系统虎把两块尺寸和圆角不一致的界面模型并排放在桌上。"
+        },
+        {
+          "label": "先建公共变量表",
+          "text": "明确颜色、尺寸与间距的共同档位。",
+          "alt": "系统虎把色块、圆角模板和间距积木收进中央变量控制盒。"
+        },
+        {
+          "label": "组件从同一处取值",
+          "text": "公共变量可以联动更新，但修改后仍需验证。",
+          "alt": "系统虎转动中央圆角旋钮，连接的按钮、卡片和输入框模块形状同步变化。"
+        },
+        {
+          "label": "跨页面核对",
+          "text": "对照共享规范找漂移，并为例外保留理由。",
+          "alt": "系统虎检查已统一的两块界面，旁边单独放着带危险图标的珊瑚按钮。"
+        }
+      ],
+      "scenePrompt": "角色：系统虎：蓝衬衫、橙背带。从左到右四格，每格一个完整场景：第1格：系统虎把两块尺寸和圆角不一致的界面模型并排放在桌上。 第2格：系统虎把色块、圆角模板和间距积木收进中央变量控制盒。 第3格：系统虎转动中央圆角旋钮，连接的按钮、卡片和输入框模块形状同步变化。 第4格：系统虎检查已统一的两块界面，旁边单独放着带危险图标的珊瑚按钮。",
+      "originalHtmlSha256": "439787b5cce9e1a85feee3d42b97672636d8bf2a90908fd5d32f86221dcf39ad",
+      "lessonTitle": "一致性：系统感从哪来",
+      "title": "四格看懂：一致性：系统感从哪来",
+      "sourceArtifact": "exec-310dcdc2-498d-4c62-b495-746bcdecf316.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-310dcdc2-498d-4c62-b495-746bcdecf316.png"
+    },
+    {
+      "file": "taste-7.html",
+      "slug": "taste-name-visual-variables",
+      "role": "翻译虎：紫开衫、青绿领结",
+      "takeaway": "把模糊评价拆成可调整的视觉变量，再说清修改方向。",
+      "panels": [
+        {
+          "label": "只说好看很含糊",
+          "text": "感觉可以作为起点，还需要指出哪里不合适。",
+          "alt": "翻译虎拿着一张装饰星星图卡，白色机器人面对界面不知该调整哪个旋钮。"
+        },
+        {
+          "label": "先给问题命名",
+          "text": "从密度、噪音、层级、留白和对比等维度定位。",
+          "alt": "翻译虎把拥挤元素、间距和明暗样片分到不同观察托盘。"
+        },
+        {
+          "label": "点名变量和方向",
+          "text": "表达层级可调整大小与明暗，分类可使用形状或色调。",
+          "alt": "翻译虎在旋钮台上增大主图形、调深主色块，将分类图形分别摆开。"
+        },
+        {
+          "label": "检查是否改到点上",
+          "text": "用任务和对照图检验，避免只换一个形容词。",
+          "alt": "翻译虎与机器人对照前后界面，把改善主次的那一处用放大镜指出。"
+        }
+      ],
+      "scenePrompt": "角色：翻译虎：紫开衫、青绿领结。从左到右四格，每格一个完整场景：第1格：翻译虎拿着一张装饰星星图卡，白色机器人面对界面不知该调整哪个旋钮。 第2格：翻译虎把拥挤元素、间距和明暗样片分到不同观察托盘。 第3格：翻译虎在旋钮台上增大主图形、调深主色块，将分类图形分别摆开。 第4格：翻译虎与机器人对照前后界面，把改善主次的那一处用放大镜指出。",
+      "originalHtmlSha256": "fca7f7280e411c93925bab88f228a759a59e4c7479abc7ddfc8b71858423a7c0",
+      "lessonTitle": "「好看」的一百种具体说法",
+      "title": "四格看懂：「好看」的一百种具体说法",
+      "sourceArtifact": "exec-57a00a47-37e7-4897-8afa-e29060a16bb7.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-57a00a47-37e7-4897-8afa-e29060a16bb7.png"
+    },
+    {
+      "file": "taste-8.html",
+      "slug": "taste-ui-specification",
+      "role": "规格虎：青绿夹克、橙围巾",
+      "takeaway": "把目标、布局、排印和样式限制写成可检查的规格。",
+      "panels": [
+        {
+          "label": "先明确页面用途",
+          "text": "说明受众、核心内容与主要操作。",
+          "alt": "规格虎把用户头像图、内容卡和主按钮图放在空白页面框前。"
+        },
+        {
+          "label": "列出具体样式规则",
+          "text": "为颜色、间距、字级和控件约定取值与例外。",
+          "alt": "规格虎把主色色片、分档间距块和大小不同的无字横线样片放入规格板。"
+        },
+        {
+          "label": "补上文字可读性",
+          "text": "检查排印、对比和不同屏幕下的实际阅读。",
+          "alt": "规格虎用放大镜查看深浅文字横线与背景样片，并对照窄屏和宽屏模型。"
+        },
+        {
+          "label": "逐项验收产物",
+          "text": "限制要能核对，生成结果仍需实际检查。",
+          "alt": "规格虎用规格板检查机器人交来的页面模型，指出一枚颜色漂移的按钮。"
+        }
+      ],
+      "scenePrompt": "角色：规格虎：青绿夹克、橙围巾。从左到右四格，每格一个完整场景：第1格：规格虎把用户头像图、内容卡和主按钮图放在空白页面框前。 第2格：规格虎把主色色片、分档间距块和大小不同的无字横线样片放入规格板。 第3格：规格虎用放大镜查看深浅文字横线与背景样片，并对照窄屏和宽屏模型。 第4格：规格虎用规格板检查机器人交来的页面模型，指出一枚颜色漂移的按钮。",
+      "originalHtmlSha256": "76e705063e402fbbc92fa0a0e73dd46bd0c5d675aba330d1cd3716b63cbc6635",
+      "lessonTitle": "生 UI：从形容词到规格书",
+      "title": "四格看懂：生 UI：从形容词到规格书",
+      "sourceArtifact": "exec-f44ea5d8-de91-435f-ad01-161506aae93f.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-f44ea5d8-de91-435f-ad01-161506aae93f.png"
+    },
+    {
+      "file": "taste-9.html",
+      "slug": "taste-image-three-languages",
+      "role": "摄影虎：蓝摄影马甲、珊瑚围巾",
+      "takeaway": "用构图、光影与色彩描述画面，并排比较候选与任务的匹配。",
+      "panels": [
+        {
+          "label": "构图安排主体",
+          "text": "说明主体位置、画面关系和需要留出的空间。",
+          "alt": "摄影虎透过相机取景框安排咖啡杯位置，旁边留出干净空白区域。"
+        },
+        {
+          "label": "光影塑造体积",
+          "text": "交代光源方向、软硬与氛围。",
+          "alt": "摄影虎转动柔光灯，让咖啡杯出现柔和侧光与连贯阴影。"
+        },
+        {
+          "label": "色彩服务情绪",
+          "text": "指定色调与饱和程度，并结合品牌任务判断。",
+          "alt": "摄影虎在咖啡杯旁比较温暖低饱和与鲜艳色调的两张候选照片。"
+        },
+        {
+          "label": "候选并排再选",
+          "text": "在相同目标下比较差异，不把术语当成必然好看。",
+          "alt": "摄影虎把四张不同构图光线的咖啡图片并排放在桌上，对照目标图卡选择。"
+        }
+      ],
+      "scenePrompt": "角色：摄影虎：蓝摄影马甲、珊瑚围巾。从左到右四格，每格一个完整场景：第1格：摄影虎透过相机取景框安排咖啡杯位置，旁边留出干净空白区域。 第2格：摄影虎转动柔光灯，让咖啡杯出现柔和侧光与连贯阴影。 第3格：摄影虎在咖啡杯旁比较温暖低饱和配色样片与高饱和样片。 第4格：摄影虎把四张不同构图光线的咖啡图片并排放在桌上，对照目标图卡选择。",
+      "originalHtmlSha256": "f491f43d4e51d43e4f7fde447035fd9c7736a1b6fb609c344e831a1e6f9791ae",
+      "lessonTitle": "生图：构图、光影、色彩的语言",
+      "title": "四格看懂：生图：构图、光影、色彩的语言",
+      "sourceArtifact": "exec-068c05ee-45eb-4e51-ba10-ca2012d6178a.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-068c05ee-45eb-4e51-ba10-ca2012d6178a.png"
+    },
+    {
+      "file": "taste-10.html",
+      "slug": "taste-analyze-reference",
+      "role": "拆解虎：米白衬衫、青绿围裙",
+      "takeaway": "先看层级，再量间距、数颜色、查细节，把参考变成可复用判断。",
+      "panels": [
+        {
+          "label": "先看主次与分组",
+          "text": "从整体轮廓判断先看什么、什么属于一组。",
+          "alt": "拆解虎眯着一只眼并借助放大镜，观察有清楚大小块面的界面样板。"
+        },
+        {
+          "label": "再测量间距",
+          "text": "用工具观察尺度规律，不能只凭感觉猜。",
+          "alt": "拆解虎拿直尺测量样板卡片之间的距离，旁边放着间距积木。"
+        },
+        {
+          "label": "数颜色再查细节",
+          "text": "分析主色分工、字级、圆角和图标是否有共同规则。",
+          "alt": "拆解虎从样板旁取下色片、大小横线和圆角模板，分别摆在托盘。"
+        },
+        {
+          "label": "存下具体判词",
+          "text": "记录它在哪个变量上适合什么任务，而非只存截图。",
+          "alt": "拆解虎将样板缩略图与分组测量图卡一起夹进参考档案本。"
+        }
+      ],
+      "scenePrompt": "角色：拆解虎：米白衬衫、青绿围裙。从左到右四格，每格一个完整场景：第1格：拆解虎眯眼观察一块有清楚大小块面的界面样板。 第2格：拆解虎拿直尺测量样板卡片之间的距离，旁边放着间距积木。 第3格：拆解虎从样板旁取下色片、大小横线和圆角模板，分别摆在托盘。 第4格：拆解虎将样板缩略图与分组测量图卡一起夹进参考档案本。",
+      "originalHtmlSha256": "4a8cd31bb667721a3a602c4d1dce95fba69b6261956d1800d2fa5fa4d74c5295",
+      "lessonTitle": "怎么看设计才算看进去了",
+      "title": "四格看懂：怎么看设计才算看进去了",
+      "sourceArtifact": "exec-e35e5667-b5bb-4047-98f9-e6590bb1c2e1.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-e35e5667-b5bb-4047-98f9-e6590bb1c2e1.png"
+    },
+    {
+      "file": "taste-11.html",
+      "slug": "taste-feed-references",
+      "role": "参考虎：紫背带裤、青绿衬衫",
+      "takeaway": "说明参考用于什么，再把风格翻译成规格和变量并检查产物。",
+      "panels": [
+        {
+          "label": "参考要交代用途",
+          "text": "说明参考的是构图、风格还是组件关系。",
+          "alt": "参考虎向机器人展示烘焙店参考图，分别指向画面布局和配色样片。"
+        },
+        {
+          "label": "气质翻译成规则",
+          "text": "从体验属性出发，落成能执行的样式要求。",
+          "alt": "参考虎把温暖太阳与安静叶子图卡对应到柔和色片、留白框和简洁组件。"
+        },
+        {
+          "label": "变量帮助保持一致",
+          "text": "把主色、圆角与间距作为明确输入，并说明例外。",
+          "alt": "参考虎把色片、圆角模板与间距积木装入规则板，交到机器人工作桌。"
+        },
+        {
+          "label": "结果仍要对照",
+          "text": "参考也可能被误读，比较产物、目标与规格再修正。",
+          "alt": "参考虎将机器人生成的烘焙页模型与参考图并排，指出按钮颜色偏差。"
+        }
+      ],
+      "scenePrompt": "角色：参考虎：紫背带裤、青绿衬衫。从左到右四格，每格一个完整场景：第1格：参考虎向机器人展示烘焙店参考图，分别指向画面布局和配色样片。 第2格：参考虎把温暖太阳与安静叶子图卡对应到柔和色片、留白框和简洁组件。 第3格：参考虎把色片、圆角模板与间距积木装入规则板，交到机器人工作桌。 第4格：参考虎将机器人生成的烘焙页模型与参考图并排，指出按钮颜色偏差。",
+      "originalHtmlSha256": "639f385ef3c38b1b35030162e70b1edfabb6c5a2c070eaafda84d01f8a89c02f",
+      "lessonTitle": "把参考喂给 AI",
+      "title": "四格看懂：把参考喂给 AI",
+      "sourceArtifact": "exec-40ae6931-8160-43b5-9787-b516c3d90e83.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-40ae6931-8160-43b5-9787-b516c3d90e83.png"
+    },
+    {
+      "file": "taste-final.html",
+      "slug": "taste-acceptance-checklist",
+      "role": "验收虎：蓝外套、橙领结",
+      "takeaway": "依次检查层级、间距、克制、一致性与细节，再确认任务是否完成。",
+      "panels": [
+        {
+          "label": "先看整体骨架",
+          "text": "明确主角与分组，核对主要任务入口。",
+          "alt": "验收虎眯眼检查界面大块面，并在主按钮旁放下目标图卡。"
+        },
+        {
+          "label": "再查间距与规范",
+          "text": "测量对齐，核对颜色、形状与组件的一致性。",
+          "alt": "验收虎用直尺和彩色样片检查两块相邻页面模型。"
+        },
+        {
+          "label": "细节要实际操作",
+          "text": "检查可读性、状态反馈和窄屏表现。",
+          "alt": "验收虎点击窄屏模型的按钮，观察明确的加载图标和完成状态图标。"
+        },
+        {
+          "label": "逐项反馈再确认",
+          "text": "清单辅助验收，未通过项要具体指出并复查。",
+          "alt": "验收虎把未通过的圆角样片交给机器人，旁边检查表保留一个待办空格。"
+        }
+      ],
+      "scenePrompt": "角色：验收虎：蓝外套、橙领结。从左到右四格，每格一个完整场景：第1格：验收虎眯眼检查界面大块面，并在主按钮旁放下目标图卡。 第2格：验收虎用直尺和彩色样片检查两块相邻页面模型。 第3格：验收虎点击窄屏模型的按钮，观察明确的加载图标和完成状态图标。 第4格：验收虎把未通过的圆角样片交给机器人，旁边检查表保留一个待办空格。",
+      "originalHtmlSha256": "937d6111e9fb81982ff34bd75220746a4ecb1a50d3b22e71d71bbc605ea9ea65",
+      "lessonTitle": "验收清单：点头之前过一遍",
+      "title": "四格看懂：验收清单：点头之前过一遍",
+      "sourceArtifact": "exec-10393360-1af5-4b3f-b36e-52ce7ba7d2cf.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-10393360-1af5-4b3f-b36e-52ce7ba7d2cf.png"
+    }
+  ]
+}

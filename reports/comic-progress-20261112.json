@@ -1,0 +1,1722 @@
+{
+  "date": "2026-11-12",
+  "baseline": "b7dee1875f12de989c9132ddad5795a3729c1b5d",
+  "total": 445,
+  "completed": 235,
+  "remaining": 210,
+  "coveragePercent": 52.8,
+  "panels": 940,
+  "webpFiles": 1175,
+  "newStories": 42,
+  "newArticleBodiesPreserved": 42,
+  "previousProvenanceUnchanged": 193,
+  "maxPanelKiB": 201.7,
+  "chapters": [
+    {
+      "id": "p-start",
+      "title": "开始之前",
+      "total": 7,
+      "completed": 7,
+      "remaining": 0
+    },
+    {
+      "id": "p-learn",
+      "title": "AI 教我学习：把它当老师用",
+      "total": 11,
+      "completed": 11,
+      "remaining": 0
+    },
+    {
+      "id": "p0",
+      "title": "写给第一次接触 AI 的你",
+      "total": 42,
+      "completed": 42,
+      "remaining": 0
+    },
+    {
+      "id": "p1",
+      "title": "大模型是怎么来的",
+      "total": 19,
+      "completed": 19,
+      "remaining": 0
+    },
+    {
+      "id": "p2",
+      "title": "AI Harness",
+      "total": 62,
+      "completed": 62,
+      "remaining": 0
+    },
+    {
+      "id": "p3",
+      "title": "实战 · 从 Demo 到产品",
+      "total": 37,
+      "completed": 37,
+      "remaining": 0
+    },
+    {
+      "id": "p4",
+      "title": "进阶 · AI 工程设计模式",
+      "total": 22,
+      "completed": 22,
+      "remaining": 0
+    },
+    {
+      "id": "p5",
+      "title": "Harness 与自我改进",
+      "total": 9,
+      "completed": 9,
+      "remaining": 0
+    },
+    {
+      "id": "p7",
+      "title": "Vibe Coding 方法论",
+      "total": 14,
+      "completed": 14,
+      "remaining": 0
+    },
+    {
+      "id": "p-taste",
+      "title": "审美工程：让 AI 做出有品味的东西",
+      "total": 12,
+      "completed": 12,
+      "remaining": 0
+    },
+    {
+      "id": "p-ixd",
+      "title": "交互工程：让 AI 做出好用的东西",
+      "total": 10,
+      "completed": 0,
+      "remaining": 10
+    },
+    {
+      "id": "p-psy",
+      "title": "AI 产品心理学：让用户觉得好用",
+      "total": 19,
+      "completed": 0,
+      "remaining": 19
+    },
+    {
+      "id": "p-cost",
+      "title": "Token 降本增效：AI 应用的成本工程",
+      "total": 13,
+      "completed": 0,
+      "remaining": 13
+    },
+    {
+      "id": "p-ds",
+      "title": "数据结构：AI 世界的骨架",
+      "total": 13,
+      "completed": 0,
+      "remaining": 13
+    },
+    {
+      "id": "p-algo",
+      "title": "算法：AI 的思考方式",
+      "total": 15,
+      "completed": 0,
+      "remaining": 15
+    },
+    {
+      "id": "p6",
+      "title": "解剖 Grok Build：Rust 写的生产级 Coding Agent",
+      "total": 25,
+      "completed": 0,
+      "remaining": 25
+    },
+    {
+      "id": "p-dsh",
+      "title": "解剖 DeepSeek Harness：一切皆插件的 Agent 底座",
+      "total": 29,
+      "completed": 0,
+      "remaining": 29
+    },
+    {
+      "id": "p-codex",
+      "title": "解剖 OpenAI Codex：把安全观写进类型系统",
+      "total": 32,
+      "completed": 0,
+      "remaining": 32
+    },
+    {
+      "id": "p-oss",
+      "title": "开源、蒸馏与本地部署",
+      "total": 9,
+      "completed": 0,
+      "remaining": 9
+    },
+    {
+      "id": "p-exam",
+      "title": "七套篇章自测 · 350 道题",
+      "total": 9,
+      "completed": 0,
+      "remaining": 9
+    },
+    {
+      "id": "p9",
+      "title": "一人公司 OPC",
+      "total": 16,
+      "completed": 0,
+      "remaining": 16
+    },
+    {
+      "id": "p-seo",
+      "title": "被搜到：SEO 与 GEO",
+      "total": 6,
+      "completed": 0,
+      "remaining": 6
+    },
+    {
+      "id": "p8",
+      "title": "雷军创业课",
+      "total": 14,
+      "completed": 0,
+      "remaining": 14
+    }
+  ],
+  "remainingChapters": [
+    {
+      "id": "p-ixd",
+      "title": "交互工程：让 AI 做出好用的东西",
+      "lessons": [
+        {
+          "file": "ixd-1.html",
+          "title": "能跑通了，然后呢？",
+          "desc": "上一章练的是看出「哪里丑」，这一章练看出「哪里难用」。AI 交付的应用功能齐全、点哪都有反应，但用起来处处硌手。这一节先立住全章的地基：交互的病比审美的病更隐蔽，然后拿一张理论清单，亲手抓五个现行。",
+          "tag": "开篇",
+          "navTitle": "能跑通了，然后呢？"
+        },
+        {
+          "file": "ixd-2.html",
+          "title": "状态三件套：loading、空态、错误态",
+          "desc": "AI 生成的界面默认只有一种状态：数据齐全、网络流畅、一切正常。可用户遇到的头一屏常常是另外三种：没数据、在等待、出错了。这三种非正常时刻恰恰是体验分水岭，这一节把三件套逐个拆开，每件配一局 A/B 对决。",
+          "tag": "交互",
+          "navTitle": "状态三件套：loading、空态、错误态"
+        },
+        {
+          "file": "ixd-3.html",
+          "title": "防错与可逆：让用户敢点",
+          "desc": "上一节教错误怎么说，这一节往前挪一步：让错误压根发生不了，发生了也能一键回头。AI 生成的应用最爱用确认弹窗当保险，但那是最弱的一道防线，你自己动手删两条数据就明白了。",
+          "tag": "交互",
+          "navTitle": "防错与可逆：让用户敢点"
+        },
+        {
+          "file": "ixd-4.html",
+          "title": "流程克制：每多一步掉一批人",
+          "desc": "上一节管住了危险按钮，这一节看整条路：用户从进来到办完事，中间有多少步在伺候软件而没在办他的事。AI 生成的流程有个通病：太完整。你来当一回流程审计员，把一个五步注册砍到两步。",
+          "tag": "交互",
+          "navTitle": "流程克制：每多一步掉一批人"
+        },
+        {
+          "file": "ixd-5.html",
+          "title": "习惯用法：别让 AI 发明新交互",
+          "desc": "流程砍利索了，还有一种病藏得更深：AI 有时会发明看着新颖、没人会用的交互。这一节讲两个词，习惯用法（idiom）和能供性（affordance），学完你能一眼认出哪个控件在装创新，还能说清为什么用户学不会。",
+          "tag": "交互",
+          "navTitle": "习惯用法：别让 AI 发明新交互"
+        },
+        {
+          "file": "ixd-6.html",
+          "title": "控件选对了吗：单选、多选、开关与下拉",
+          "desc": "前面四节看的是流程和状态，这一节钻进界面最小的零件。控件是用户和产品之间的通用语言，用错一个，用户就要多点一次、多猜一次。选用规则四句话就讲完，AI 不知道这四句，你得替它把关。",
+          "tag": "交互",
+          "navTitle": "控件选对了吗：单选、多选、开关与下拉"
+        },
+        {
+          "file": "ixd-7.html",
+          "title": "界面会说话：用户怎么理解你的文案",
+          "desc": "控件选对了，界面还得开口说话。按钮上的两个字、弹窗里的一句话，就是产品和用户的全部对话。微文案是交互的一半：写对了，用户不用想；写错了，控件再标准也白搭。AI 写微文案只有一招，逢事「确定」。",
+          "tag": "交互",
+          "navTitle": "界面会说话：用户怎么理解你的文案"
+        },
+        {
+          "file": "ixd-8.html",
+          "title": "目标导向：用目标描述需求，别用功能清单",
+          "desc": "前七节教你识别好交互，这两节教你把要求翻译给 AI 听。第一句翻译心法来自《About Face 4》的开篇方法论：先说清用户是谁、要完成什么，功能让 AI 自己推。给它开清单，你会收到一个柜台；给它讲场景，你会收到一个工具。",
+          "tag": "实战",
+          "navTitle": "目标导向：用目标描述需求，别用功能清单"
+        },
+        {
+          "file": "ixd-9.html",
+          "title": "把状态机和边界写进提示词",
+          "desc": "上一节把「要什么」翻译成了目标和场景，这一节补上「别糊弄」的部分。规律很简单：AI 只认真写你提到的状态，没提到的一律按晴天想象。所以状态要列全，边界要说死，防错要写明，这三样合起来就是交互规格。",
+          "tag": "实战",
+          "navTitle": "把状态机和边界写进提示词"
+        },
+        {
+          "file": "ixd-final.html",
+          "title": "交互验收清单：上线前的第二张清单",
+          "desc": "审美篇收官交付了第一张清单管「好看」，这一章交付第二张管「好用」。好看管第一眼，好用管接下来的每一天，而且交互的病更隐蔽：截图看不出来，要点起来才露馅。14 项，每项一个动作，点头之前过一遍。",
+          "tag": "收官",
+          "navTitle": "交互验收清单：上线前的第二张清单"
+        }
+      ]
+    },
+    {
+      "id": "p-psy",
+      "title": "AI 产品心理学：让用户觉得好用",
+      "lessons": [
+        {
+          "file": "psy-1.html",
+          "title": "工程指标及格了，用户为什么还骂慢？",
+          "desc": "前面的章节教你把延迟压下来、把成本抠下来、把幻觉率降下来。这一章换一块秒表：用户脑子里那块。它和服务器的秒表走时不同，打分、续费、卸载都跟着它走。第一课先跑个实验，再把这块表的走时怪癖逐个拆开。",
+          "tag": "开篇",
+          "navTitle": "工程指标及格了，用户为什么还骂慢？"
+        },
+        {
+          "file": "psy-2.html",
+          "title": "等待心理学：难受的从来不是那 5 秒",
+          "desc": "第 1 课你已经亲手测过：同样 5 秒，体感能差两三倍。这一课把背后的规律讲透。服务运营研究把排队心理总结成几条定律，条条能翻译成 AI 产品的设计决策，翻译完你会发现：大部分「太慢了」的差评，修的其实是呈现，模型一行都不用动。",
+          "tag": "交互",
+          "navTitle": "等待心理学：难受的从来不是那 5 秒"
+        },
+        {
+          "file": "psy-3.html",
+          "title": "劳动错觉：让 AI 把努力演出来",
+          "desc": "第 2 课说等待要有反馈，这一课的结论更反直觉：有些等待根本没必要消灭。展示工作过程的产品，让用户多等几秒，满意度和信任反而更高。这个效应叫劳动错觉（Labor Illusion）。先做实验，再看研究，最后把边界画清。",
+          "tag": "交互",
+          "navTitle": "劳动错觉：让 AI 把努力演出来"
+        },
+        {
+          "file": "psy-4.html",
+          "title": "峰终定律：用户只记得峰值和结尾",
+          "desc": "诺奖得主卡尼曼发现：人对一段体验的记忆评分，几乎只由最强烈的那一刻（峰）和最后一刻（终）决定，和平均水平、持续时长关系不大。这条定律直接回答一个预算问题：最贵的模型、最多的优化精力，该花在会话的哪个位置。这一课五个实验，逐个上手。",
+          "tag": "交互",
+          "navTitle": "峰终定律：用户只记得峰值和结尾"
+        },
+        {
+          "file": "psy-5.html",
+          "title": "信任校准：最好的用户是半信半疑的",
+          "desc": "前四课都在给体验挣分，这一课踩一脚刹车：信任这个指标，目标值从来就没定在满分。AI 会出错是改不掉的物理现实，所以健康的用户长这样：该信的场景放心用，该查的场景留个心眼。往哪边偏都要交学费。这一课先看两笔真实学费，再给你三件能亲手拨弄的校准工具。",
+          "tag": "交互",
+          "navTitle": "信任校准：最好的用户是半信半疑的"
+        },
+        {
+          "file": "psy-9.html",
+          "title": "算法厌恶：AI 犯一次错，就被永久拉黑",
+          "desc": "上一课讲信任要校准。这一课讲校准路上最大的一块石头：人对 AI 的容错率，远低于对人。同样犯一次错，人类同事会被原谅，AI 会被弃用。这个不对称有实验、有数据、也有解药。",
+          "tag": "交互",
+          "navTitle": "算法厌恶：AI 犯一次错，就被永久拉黑"
+        },
+        {
+          "file": "psy-6.html",
+          "title": "防御心理：用户不是不会用，是不敢用",
+          "desc": "很多 AI 功能的低使用率，复盘时被归因成「用户教育不够」，再做一轮引导弹窗，还是没人用。真正的原因常常是用户在防御：他看懂了你的功能，然后决定不碰。这一课先测你自己防不防，再拆三种防御的来源，最后把三板斧一把一把拨给你看，五个教具，逐个亲手玩。",
+          "tag": "交互",
+          "navTitle": "防御心理：用户不是不会用，是不敢用"
+        },
+        {
+          "file": "psy-7.html",
+          "title": "心智模型：用户拿错了说明书",
+          "desc": "交互设计有个老概念叫心智模型：用户会带着一套「这东西应该怎么运作」的假设来用你的产品，假设错了，操作就错，然后差评打给产品，账算在你头上。AI 是人类历史上第一个「长得像老产品、内核两样」的东西，心智错配格外严重。这一课先认出四本错误说明书，再亲手玩三个纠正教具。",
+          "tag": "交互",
+          "navTitle": "心智模型：用户拿错了说明书"
+        },
+        {
+          "file": "psy-8.html",
+          "title": "拟人化的度，与 AI 道歉的艺术",
+          "desc": "上世纪 90 年代，斯坦福的 Reeves 和 Nass 在《媒体等同》里报告了一组反直觉的实验：人会不由自主地对电脑讲礼貌、被电脑夸了会开心，明知对面是机器也照样套用社交规则。这叫 CASA 范式（把计算机当社会行动者）。它意味着拟人化根本由不得你选：用户一定会把你的 AI 当某种人对待，你能决定的只有让它当哪种人，以及它闯祸之后怎么开口。这一课五个实验，全部亲手玩。",
+          "tag": "交互",
+          "navTitle": "拟人化的度，与 AI 道歉的艺术"
+        },
+        {
+          "file": "psy-10.html",
+          "title": "蜜月悬崖：宣传拉高的期望，要用留存来还",
+          "desc": "发布会上的演示惊为天人，上手第一天很兴奋，第三天开始挑刺，第三十天卸载。这条曲线你在无数 AI 产品上见过。它有两个成因：期望被宣传拉高了，新鲜感又天然会掉。两个都能设计。",
+          "tag": "交互",
+          "navTitle": "蜜月悬崖：宣传拉高的期望，要用留存来还"
+        },
+        {
+          "file": "psy-11.html",
+          "title": "AI 标签折扣：同样的内容，标上 AI 就掉价",
+          "desc": "内容没变，加四个字「AI 生成」，评价掉一截；工具很好用，用户却不想让同事知道自己在用。这两件事是同一个偏见的两面。做 AI 产品，标签什么时候必须亮、什么时候是自己给自己减分，是一道天天要做的题。",
+          "tag": "交互",
+          "navTitle": "AI 标签折扣：同样的内容，标上 AI 就掉价"
+        },
+        {
+          "file": "psy-12.html",
+          "title": "认知卸载：用户一边用你，一边怕自己废掉",
+          "desc": "你的重度用户里藏着一批矛盾的人：离了你的产品干不了活，又隐隐觉得自己正在废掉。这份焦虑不会写进 NPS 评语，但它决定续费、决定推荐，也决定他会不会在某天突然「戒掉」你。焦虑的名字叫认知卸载，它能被产品设计接住。",
+          "tag": "交互",
+          "navTitle": "认知卸载：用户一边用你，一边怕自己废掉"
+        },
+        {
+          "file": "psy-13.html",
+          "title": "情感依恋：用户爱上你的产品之后",
+          "desc": "拟人化那课讲过：人会不由自主地把机器当社会角色对待。这一课讲它走到深处的样子：用户对 AI 产生真实的情感依恋。它带来最强的留存曲线，也带来产品经理职业生涯里最重的责任。这不是陪伴类产品的专属课题，任何一个有对话框的产品都躲不开。",
+          "tag": "交互",
+          "navTitle": "情感依恋：用户爱上你的产品之后"
+        },
+        {
+          "file": "psy-14.html",
+          "title": "付费心理：为一个概率商品掏钱，痛在哪",
+          "desc": "AI 是个奇怪的商品：付同样的钱，这次生成惊艳，下次翻车，成本还在你看不见的地方按 token 跳动。用户口袋里的每一块钱都连着神经，怎么收钱，决定了掏钱疼不疼。这一课讲付费的心理侧，下一课讲定价的数字侧。",
+          "tag": "交互",
+          "navTitle": "付费心理：为一个概率商品掏钱，痛在哪"
+        },
+        {
+          "file": "psy-15.html",
+          "title": "定价心理：锚点、诱饵与体面的价格歧视",
+          "desc": "上一课讲怎么收钱不疼，这一课讲收多少。先记住一个反直觉的事实：用户对价格没有客观感受，全部判断来自参照物。参照物是可以摆的，这门手艺有一百年历史，AI 产品还拿到了一件独有的新工具。",
+          "tag": "交互",
+          "navTitle": "定价心理：锚点、诱饵与体面的价格歧视"
+        },
+        {
+          "file": "psy-16.html",
+          "title": "反馈心理：用户为什么不点踩",
+          "desc": "你在回答旁边放了 👍 和 👎，指望用户帮你标数据。一个月后一看：点踩率 0.4%，但流失率在涨。不是产品没问题，是不满的用户根本不点踩，他们直接走。这一课讲反馈的心理成本，和不靠用户开口也能听见的办法。",
+          "tag": "交互",
+          "navTitle": "反馈心理：用户为什么不点踩"
+        },
+        {
+          "file": "psy-books.html",
+          "title": "九本书，把这一章读厚",
+          "desc": "这一章的每个结论都有出处，课里只给了你压缩版。这一节把原书排上书架：九本书，拆出十九条 PM 必须懂的心理学原理，每条都标注它在 AI 产品上的落点。别按顺序啃，先选你现在最头疼的问题。",
+          "tag": "书单",
+          "navTitle": "九本书，把这一章读厚"
+        },
+        {
+          "file": "psy-final.html",
+          "title": "十六个效应一张表，外加上线前十四问",
+          "desc": "这一章的每个心理效应都对应一个你早就学过的工程开关。收官把它们排成一张表，再给一份能直接抄进上线流程的检查清单。心理学不玄：它只是把「用户为什么这样反应」从猜测变成了规律。",
+          "tag": "收官",
+          "navTitle": "十六个效应一张表，外加上线前十四问"
+        },
+        {
+          "file": "psy-interview.html",
+          "title": "AI 产品心理学 · 40 道灵魂拷问",
+          "desc": "心理学章学完了，能不能把「用户为什么这样反应」讲成可执行的方案，一问便知。这 40 个问题来自三个真实场景，先自己开口回答，再看框架。",
+          "tag": "考察",
+          "navTitle": "AI 产品心理学 · 40 道灵魂拷问"
+        }
+      ]
+    },
+    {
+      "id": "p-cost",
+      "title": "Token 降本增效：AI 应用的成本工程",
+      "lessons": [
+        {
+          "file": "cost-1.html",
+          "title": "和用户对赌的生意",
+          "desc": "不知道你有没有这种感受：我们总想为用户提供更好的 AI 服务，但在商业化层面，是和用户在对赌——产品用得越好，用户用得越多，利润反而越薄。看到消费账单的时候，不知道会不会窒息。",
+          "tag": "开篇",
+          "navTitle": "和用户对赌的生意"
+        },
+        {
+          "file": "cost-2.html",
+          "title": "Token 怎么数：BPE 与隐形的「Token 税」",
+          "desc": "账单按 Token 结算，但 Token 到底是怎么数出来的？它既不是字符，也不是单词，而是基于统计规律生成的「子词」。理解这套规则，你才会明白：同样一句话，中文为什么天生比英文贵 2 倍。",
+          "tag": "交互",
+          "navTitle": "Token 怎么数：BPE 与隐形的「Token 税」"
+        },
+        {
+          "file": "cost-3.html",
+          "title": "报价表速览与三大梯队",
+          "desc": "把常用模型的定价摊开在一张表上，你会看到三个清晰的梯队。但仅仅知道哪个贵、哪个便宜是远远不够的——真正的成本刺客，藏在那些价格跳变的边界线里。",
+          "tag": "选型",
+          "navTitle": "报价表速览与三大梯队"
+        },
+        {
+          "file": "cost-4.html",
+          "title": "GLM 的短输出博弈：200 Token 断崖",
+          "desc": "观察 GLM-4.6 的定价结构，会发现一个神奇的设计：它不按输入长度分档，而是按输出长度分档，分界线在 200 个 Token。输出 199 和输出 201，适用完全不同的价格。",
+          "tag": "交互",
+          "navTitle": "GLM 的短输出博弈：200 Token 断崖"
+        },
+        {
+          "file": "cost-5.html",
+          "title": "Qwen 的阶梯逃逸：32k 红线",
+          "desc": "Qwen 系列的分档逻辑和智谱完全不同：按输入长度计费，分界线在 32k 和 128k。最容易被忽略的计费细节是——越线后不是「超出部分加价」，而是整个请求全量按高价档结算。",
+          "tag": "交互",
+          "navTitle": "Qwen 的阶梯逃逸：32k 红线"
+        },
+        {
+          "file": "cost-6.html",
+          "title": "图片 Token：像素也要交税",
+          "desc": "文字 BPE 是「合并字符」，图片编码是「切割像素」。你以为传的是原图，其实模型按缩放对齐后的分辨率计费——这里面藏着和文字 32k 红线一模一样的跳档陷阱。",
+          "tag": "交互",
+          "navTitle": "图片 Token：像素也要交税"
+        },
+        {
+          "file": "cost-7.html",
+          "title": "输入主导：62:1 的 I/O Ratio",
+          "desc": "普通 Chatbot 是一问一答；Agent 是「思考 → 行动 → 观察 → 再思考」的循环。关键认知：每一轮的 Input 都包含了全部历史信息——轮次越多，Input 越长，成本累积膨胀。",
+          "tag": "交互",
+          "navTitle": "输入主导：62:1 的 I/O Ratio"
+        },
+        {
+          "file": "cost-8.html",
+          "title": "Agent 四大成本陷阱与熔断",
+          "desc": "上一节看到的还只是「一次成功的执行」。真实世界里，Agent 的账单事故来自四个方向：工具返回爆炸、思考税、死循环、历史雪球。每一个都有对应的工程解法。",
+          "tag": "深入",
+          "navTitle": "Agent 四大成本陷阱与熔断"
+        },
+        {
+          "file": "cost-9.html",
+          "title": "语法层：Prompt 是写给机器的",
+          "desc": "进入实战四层的第一层。很多产品早期为了调试方便，或者干脆是让 AI 代写的提示词，习惯用 ###、** 加粗、JSON 展示数据。这些对人类友好的排版，在大模型的计费逻辑里全是「词法税」。",
+          "tag": "实战",
+          "navTitle": "语法层：Prompt 是写给机器的"
+        },
+        {
+          "file": "cost-10.html",
+          "title": "语义层：双重蒸馏",
+          "desc": "格式的税砍完了，往深一层看内容本身。RAG 和长文档场景里最常见的工程错误：把上下文窗口当垃圾桶——Few-Shot 案例、检索文档全怼进去，让模型自己辨识。能用，但不该这样用。",
+          "tag": "实战",
+          "navTitle": "语义层：双重蒸馏"
+        },
+        {
+          "file": "cost-11.html",
+          "title": "架构层：KV Cache 的注意事项",
+          "desc": "在商业化产品的降本增效中，KV Cache 是最被低估的技术点之一。命中缓存和没命中，最高差 90% 的成本——但里面有几个隐形的坑，不说你可能不知道。",
+          "tag": "实战",
+          "navTitle": "架构层：KV Cache 的注意事项"
+        },
+        {
+          "file": "cost-12.html",
+          "title": "输出层：管住模型的嘴",
+          "desc": "实战四层的最后一层。输出 Token 比输入贵好几倍（回看第 3 节报价表），而且直接决定接口返回速度。管住模型的嘴，有三类合适的操作：指令层、代码层、工程层。",
+          "tag": "实战",
+          "navTitle": "输出层：管住模型的嘴"
+        },
+        {
+          "file": "cost-final.html",
+          "title": "算力时代的极简主义",
+          "desc": "做完这几层优化，你基本上已经跑赢 90% 的粗放型 AI 产品了。收官这一节，把整个专题串成一张清单，再聊聊「省钱」背后的那件更重要的事。",
+          "tag": "收官",
+          "navTitle": "算力时代的极简主义"
+        }
+      ]
+    },
+    {
+      "id": "p-ds",
+      "title": "数据结构：AI 世界的骨架",
+      "lessons": [
+        {
+          "file": "ds-1.html",
+          "title": "都 2026 年了，为什么还要懂数据结构？",
+          "desc": "AI 都会写代码了，还要学这个「程序员基本功」吗？先说结论：你可以不写代码，但要会验收 AI 写的代码。这一章不背定义、不手写链表，只给你一副能看穿代码的眼镜。第一课先玩个游戏。",
+          "tag": "交互",
+          "navTitle": "都 2026 年了，为什么还要懂数据结构？"
+        },
+        {
+          "file": "ds-2.html",
+          "title": "数组：你聊的每句话都躺在里面",
+          "desc": "上一课说好了：数据结构 = 收纳方式。第一种收纳方式你其实天天在喂它数据——你和 AI 的每一段对话，在程序眼里就是一个 message list，而 message list 的真身，是最朴素的收纳方式：一排编了号的格子，叫数组。这一课先把你的对话摊开来看，再顺手回答一个老疑问：为什么聊久了它会忘事。",
+          "tag": "交互",
+          "navTitle": "数组：你聊的每句话都躺在里面"
+        },
+        {
+          "file": "ds-3.html",
+          "title": "栈：Cmd+Z 和「爆栈」的秘密",
+          "desc": "第二种收纳方式长得像一摞盘子：只能从最上面放、也只能从最上面拿，这叫栈。听着限制很大？可你每天按的撤销键、程序里每一次函数调用，靠的都是它。这一课先亲手玩坏一个文档再一键撤回来，最后围观一场「爆栈」事故——全球最大的程序员问答网站 Stack Overflow，名字就是从这场事故来的。",
+          "tag": "交互",
+          "navTitle": "栈：Cmd+Z 和「爆栈」的秘密"
+        },
+        {
+          "file": "ds-4.html",
+          "title": "队列：Agent 的活是排着队干的",
+          "desc": "上一课的栈是「后进先出」，这一课把方向掉个头：先进先出，一头进、另一头出——就是食堂打饭的那条队。别嫌它朴素，AI 服务能扛住一万个人同时提问、Agent 能有条不紊地干完一串任务，靠的都是这条队。这一课你来当调度员：亲手开动一条流水线，把它玩到积压、再救回来。",
+          "tag": "交互",
+          "navTitle": "队列：Agent 的活是排着队干的"
+        },
+        {
+          "file": "ds-5.html",
+          "title": "哈希表：为什么它找东西快到不讲理",
+          "desc": "还记得第一课的伏笔吗？「查会员名单」的版本 B 用了一行 set.has(user)，名单从 100 人涨到 1000 万人，耗时纹丝不动。当时说好第五课揭底——今天就把这个「直达」的魔术拆给你看：它根本不翻，它是算出来的。",
+          "tag": "交互",
+          "navTitle": "哈希表：为什么它找东西快到不讲理"
+        },
+        {
+          "file": "ds-6.html",
+          "title": "缓存：AI 账单的隐形折扣",
+          "desc": "上一课的哈希表解决了「怎么瞬间找到」，这一课解决另一个问题：算过的东西，别再算第二遍。你在模型价格表上见过的「缓存命中五折甚至一折」，账单上省下的每一分钱，背后都是同一种收纳方式——把算过的结果存起来，下次直接取。",
+          "tag": "交互",
+          "navTitle": "缓存：AI 账单的隐形折扣"
+        },
+        {
+          "file": "ds-7.html",
+          "title": "树：Coding Agent 眼里全是它",
+          "desc": "前面几课的收纳方式都是「一排排」的，这一课换个维度：一层套一层的收纳。衣柜里有格子，格子里有盒子，盒子里有袋子——这种「层级 + 包含」的收纳方式，在编程世界叫「树」。而 Coding Agent 抬眼望去，你的项目里全是树。",
+          "tag": "交互",
+          "navTitle": "树：Coding Agent 眼里全是它"
+        },
+        {
+          "file": "ds-8.html",
+          "title": "图：从知识图谱到多 Agent 协作",
+          "desc": "上一课的树规矩得很：每个节点只有一个爹，永远不绕圈。可现实世界的关系乱多了——你的朋友互相也是朋友，公司和学校和人搅在一起。把「每个节点只能有一个爹」这条规矩撕掉，树就升级成了图：节点 + 关系，想怎么连怎么连。这一课看图在 AI 世界的两大主场。",
+          "tag": "交互",
+          "navTitle": "图：从知识图谱到多 Agent 协作"
+        },
+        {
+          "file": "ds-9.html",
+          "title": "词表与 Trie：Tokenizer 的切词秘密",
+          "desc": "还记得大模型原理篇那个细节吗——分词器把「五花肉」切成一整块词元，而不是三个字。当时我们说「常见组合当一个整体」，这次揭底层：分词器是怎么在几万个词里，瞬间认出「五花肉」该整块拿走的？答案是一种叫 Trie（前缀树）的收纳方式——把词表按「共享开头」挂成一棵树。",
+          "tag": "交互",
+          "navTitle": "词表与 Trie：Tokenizer 的切词秘密"
+        },
+        {
+          "file": "ds-10.html",
+          "title": "向量：RAG 检索是在「找最近的邻居」",
+          "desc": "学 RAG 时我们说过：Embedding 把一段话变成一串数字。这串数字到底是什么？答案简单得出奇——是坐标。给每句话发一个「语义地图」上的位置，意思越近、位置越近。于是「检索资料」这件事，就变成了小学生都会的游戏：在地图上找离你最近的邻居。",
+          "tag": "交互",
+          "navTitle": "向量：RAG 检索是在「找最近的邻居」"
+        },
+        {
+          "file": "ds-summary.html",
+          "title": "汇总 · 八种结构一张决策表",
+          "desc": "十课走完，八种收纳方式全部揭底。这一页不讲新东西，只做一件事：把它们摆上同一张桌子，让你以后看到场景就能报出结构名。先扫一遍决策表，再玩选型器和快问快答，检验自己是不是真的能给 AI 写的代码把关了。",
+          "tag": "汇总",
+          "navTitle": "汇总 · 八种结构一张决策表"
+        },
+        {
+          "file": "ds-build.html",
+          "title": "把 AI 写的代码「验收」一遍",
+          "desc": "整章都在说「你可以不写代码，但要会验收」——今天就验一次真的。三档任务按投入挑一个：30 分钟能完成最轻的那档，一周能把验收变成你的工作习惯。每档都配了直接可用的提示词。",
+          "tag": "实战",
+          "navTitle": "把 AI 写的代码「验收」一遍"
+        },
+        {
+          "file": "ds-interview.html",
+          "title": "数据结构 · 30 道灵魂拷问",
+          "desc": "数据结构篇学完了，收纳方式的直觉建立了没有，一问便知。这 30 个问题来自三个真实场景，先自己开口回答，再看框架。",
+          "tag": "考察",
+          "navTitle": "数据结构 · 30 道灵魂拷问"
+        }
+      ]
+    },
+    {
+      "id": "p-algo",
+      "title": "算法：AI 的思考方式",
+      "lessons": [
+        {
+          "file": "algo-1.html",
+          "title": "Big-O：一眼看穿代码要跑多久",
+          "desc": "姊妹篇讲完了「数据结构 = 收纳方式」，这一章讲另一半：算法 = 做事的套路。评价一个套路好不好，程序员有一把统一的尺子，叫 Big-O。别被数学符号吓到——它回答的问题只有一个：数据变多的时候，你的代码会慢多少？今天用三个交互把这把尺子装进你脑子里。",
+          "tag": "交互",
+          "navTitle": "Big-O：一眼看穿代码要跑多久"
+        },
+        {
+          "file": "algo-2.html",
+          "title": "为什么上下文越长越贵？O(n²) 的账单",
+          "desc": "上一课你拿到了 Big-O 这把尺子，还记得那条起飞的红线吗？今天带你去看大模型里最有名的一个 O(n²)——注意力机制。学完你会突然理解一堆老问题：为什么长对话越来越卡、为什么上下文窗口是「窗口」不是「仓库」、为什么大家拼命做上下文压缩。",
+          "tag": "交互",
+          "navTitle": "为什么上下文越长越贵？O(n²) 的账单"
+        },
+        {
+          "file": "algo-3.html",
+          "title": "二分查找：猜数字游戏的最优解",
+          "desc": "上一课那条最省心的绿线 O(log n)，今天揭开它的真面目。你小时候玩过「我想了个 1 到 100 的数，你猜」吗？猜数字的最优策略，就是计算机科学里最经典的算法之一——二分查找。先玩，再讲理。",
+          "tag": "交互",
+          "navTitle": "二分查找：猜数字游戏的最优解"
+        },
+        {
+          "file": "algo-4.html",
+          "title": "排序：冒泡和快排的赛跑",
+          "desc": "上一课说了，二分查找的门票是「先排好序」。那排序本身贵不贵？看你用什么套路。今天安排一场公开赛：同一组乱序数据，冒泡排序和快速排序同时开跑，谁先把柱子从矮到高排整齐谁赢。先看小数据，再上 60 根柱子——差距会让你印象深刻。",
+          "tag": "动画",
+          "navTitle": "排序：冒泡和快排的赛跑"
+        },
+        {
+          "file": "algo-5.html",
+          "title": "排序在 AI 里的真身：Rerank",
+          "desc": "上一课的排序比的是数字大小，但 AI 世界里排的是「相关性」：RAG 从知识库捞回来一堆段落，谁排前面谁就能挤进上下文——排错了，模型就会一本正经地引用错误资料。这个「打分 + 重排」的环节叫 Rerank。今天你亲自上岗，当一次 Rerank 模型。",
+          "tag": "交互",
+          "navTitle": "排序在 AI 里的真身：Rerank"
+        },
+        {
+          "file": "algo-6.html",
+          "title": "递归：把大事拆成同一件小事",
+          "desc": "「做个官网」听着吓人，「写首页的三行文案」谁都会。工程进阶篇里你见过 Coding Agent 接到大需求后自己列小任务清单——它用的思路有个名字：递归。这一课不写一行代码，点一棵任务树、拖一根滑块，你就能拿到这个程序员嘴里最玄的词。",
+          "tag": "交互",
+          "navTitle": "递归：把大事拆成同一件小事"
+        },
+        {
+          "file": "algo-7.html",
+          "title": "分治：上下文压缩的算法原理",
+          "desc": "动手实战篇讲过：对话太长装不下时，AI 会做一次 Compaction——把旧对话压成摘要。当时说「像搬家前把杂物打包」，这一课揭开包装纸：它是一个有两千年历史的算法套路，叫分治。上一课的递归是「拆」，这一课补上另一半：「拆完再合」。",
+          "tag": "交互",
+          "navTitle": "分治：上下文压缩的算法原理"
+        },
+        {
+          "file": "algo-8.html",
+          "title": "BFS 与 DFS：Agent 在代码库里找文件",
+          "desc": "工程进阶篇里，Coding Agent 接到「找出登录报错的原因」后，会在几百个文件夹里翻代码。往哪儿翻？先翻完这层再下去，还是抓住一条线索钻到底？这是两种截然不同的性格——BFS（广度优先）和 DFS（深度优先）。这一课让它们各走一遍同一个迷宫，性格一眼见分晓。",
+          "tag": "交互",
+          "navTitle": "BFS 与 DFS：Agent 在代码库里找文件"
+        },
+        {
+          "file": "algo-9.html",
+          "title": "贪心与采样：AI 选词时的两种性格",
+          "desc": "大模型原理篇你看过 AI 逐词元续写时脑子里的候选概率条，也调过 Temperature 旋钮。当时是「体感」，这一课给它算法学的名字：每步挑最大的叫贪心，按概率掷骰子叫采样。同一个开头，两种性格各生成三次——差别一眼就能看穿。",
+          "tag": "交互",
+          "navTitle": "贪心与采样：AI 选词时的两种性格"
+        },
+        {
+          "file": "algo-10.html",
+          "title": "Beam Search：往前多看几步再选",
+          "desc": "上一课留了个坑：贪心每步拿眼前最大的，可能一步错、步步错。填坑的办法朴素得可爱——别急着定，多留几条候选路一起往前走，走完了比总分。这就是 Beam Search（束搜索）。下面这张「词格」，让三种走法同台竞技。",
+          "tag": "交互",
+          "navTitle": "Beam Search：往前多看几步再选"
+        },
+        {
+          "file": "algo-11.html",
+          "title": "AI 都会做题了，还要刷 LeetCode 吗？",
+          "desc": "这是全章被问得最多的问题。答案不是简单的「要」或「不要」——不同岗位差别很大。这一课不灌鸡汤，把 2026 年的面试行情实话实说：什么岗位还在考、考到什么档位、什么岗位早就不看了。先找到你的位置。",
+          "tag": "交互",
+          "navTitle": "AI 都会做题了，还要刷 LeetCode 吗？"
+        },
+        {
+          "file": "algo-12.html",
+          "title": "用 AI 学算法的正确姿势",
+          "desc": "上一课说了「还值得学」，这一课解决「怎么学最快」。关键一步是把角色换过来：你出题它把关，而不是它出手你围观。三个提示词模板直接拿去用，再做 5 组对比题校准一下你的姿势。",
+          "tag": "实战",
+          "navTitle": "用 AI 学算法的正确姿势"
+        },
+        {
+          "file": "algo-summary.html",
+          "title": "汇总 · 五类算法思想对照表",
+          "desc": "十二课走完，该收网了。这一章其实只讲了五类思想，每类都在 AI 里有个真身。这一页一张大表带走全章，再用 8 道场景题测测你能不能「一眼定位」——看到问题就知道该动哪类思想。",
+          "tag": "汇总",
+          "navTitle": "汇总 · 五类算法思想对照表"
+        },
+        {
+          "file": "algo-build.html",
+          "title": "给 AI 写的代码做一次复杂度体检",
+          "desc": "算法篇的收官实战：拿一段真实的 AI 代码，走一遍自报 → 优化 → 实测的完整体检流程。三档任务按投入挑一个，30 分钟起步；走到第三档，你会亲眼看到 AI 自报的复杂度有没有吹牛。",
+          "tag": "实战",
+          "navTitle": "给 AI 写的代码做一次复杂度体检"
+        },
+        {
+          "file": "algo-interview.html",
+          "title": "算法 · 30 道灵魂拷问",
+          "desc": "算法篇学完了，复杂度的直觉建立了没有，一问便知。这 30 个问题来自三个真实场景，先自己开口回答，再看框架。",
+          "tag": "考察",
+          "navTitle": "算法 · 30 道灵魂拷问"
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "解剖 Grok Build：Rust 写的生产级 Coding Agent",
+      "lessons": [
+        {
+          "file": "12-1.html",
+          "title": "79 个 Workspace 成员如何组成产品",
+          "desc": "根 Cargo.toml 列出 79 个成员，其中 crates/codegen/ 占 62 个。理解这套系统，要沿组合入口、交互界面、Agent 宿主、领域能力、推理状态五条主轴阅读。",
+          "tag": "架构",
+          "navTitle": "79 个 Workspace 成员如何组成产品"
+        },
+        {
+          "file": "12-2.html",
+          "title": "为什么 Rust 合适：先分清事实与推断",
+          "desc": "源码能证明 Rust 2024、Tokio、强类型建模和原生二进制产物。技术选择背后的组织动机没有写入源码，本课只给出有边界的课程推断。",
+          "tag": "概念",
+          "navTitle": "为什么 Rust 合适：先分清事实与推断"
+        },
+        {
+          "file": "12-3.html",
+          "title": "从真实 main() 到第一轮采样",
+          "desc": "实际入口位于 xai-grok-pager-bin/src/main.rs。同一个组合入口解析命令与交互模式，再把工作交给 TUI 或 Shell Agent 宿主。",
+          "tag": "深入",
+          "navTitle": "从真实 main() 到第一轮采样"
+        },
+        {
+          "file": "12-4.html",
+          "title": "Session Actor：线程、状态与取消边界",
+          "desc": "每个 Session 在独立 OS 线程上运行 current-thread Tokio runtime 与 LocalSet。SessionActor 协调 turn，ChatStateActor 串行拥有对话状态，CancellationToken 负责协作式终止。",
+          "tag": "深入",
+          "navTitle": "Session Actor：线程、状态与取消边界"
+        },
+        {
+          "file": "12-5.html",
+          "title": "Compaction：85% 阈值与可选 two-pass",
+          "desc": "默认策略在上下文使用率达到 85% 时允许自动压缩。memory flush 和 two-pass 默认均关闭，启用后才进入对应流程。",
+          "tag": "交互",
+          "navTitle": "Compaction：85% 阈值与可选 two-pass"
+        },
+        {
+          "file": "12-6.html",
+          "title": "PromptContext：可检查的渲染输入",
+          "desc": "PromptContext 保存 Agent 专属的模板输入。它通过 Serde derive 获得序列化能力，再交给 ToolBridge::render_prompt() 完成渲染。",
+          "tag": "概念",
+          "navTitle": "PromptContext：可检查的渲染输入"
+        },
+        {
+          "file": "12-7.html",
+          "title": "进程级外部 Toolset Preset 注册表",
+          "desc": "config.rs 允许 crate 外的扩展代码在当前进程内注册按名称解析的工具集构建函数，并用 Public 与 Internal 控制是否进入公开枚举。",
+          "tag": "架构",
+          "navTitle": "进程级外部 Toolset Preset 注册表"
+        },
+        {
+          "file": "12-8.html",
+          "title": "ToolKind 提供默认只读语义",
+          "desc": "is_read_only() 是工具种类层的默认分类。具体工具可以覆盖它，最终是否执行还要经过规则、沙箱、Hook 与交互批准等控制。",
+          "tag": "设计模式",
+          "navTitle": "ToolKind 提供默认只读语义"
+        },
+        {
+          "file": "12-9.html",
+          "title": "实现族、注册表与动态 MCP",
+          "desc": "xai-grok-tools 同时容纳多套内置工具实现与运行时 MCP 工具。ToolBridge 把 registry 接入会话层，SearchTool 与 UseTool 提供发现和调用入口。",
+          "tag": "深入",
+          "navTitle": "实现族、注册表与动态 MCP"
+        },
+        {
+          "file": "12-10.html",
+          "title": "Canonical input 是稳定投影",
+          "desc": "不同 harness 可以使用不同原始参数名。Grok Build 把少量稳定语义投影到 x.ai/tool 元数据中，让展示、遥测和跨工具分析拥有共同词汇。",
+          "tag": "案例",
+          "navTitle": "Canonical input 是稳定投影"
+        },
+        {
+          "file": "12-11.html",
+          "title": "估算、百分比与严格阈值",
+          "desc": "xai-token-estimation 提供共享算术原语。它既有 bytes/4 的本地粗估，也有对调用方传入 used 与 total 的使用率和阈值判断。",
+          "tag": "交互",
+          "navTitle": "估算、百分比与严格阈值"
+        },
+        {
+          "file": "12-12.html",
+          "title": "从文件变更到混合排序",
+          "desc": "查询前先同步脏文件，再结合 FTS5 BM25 与可选的 sqlite-vec KNN。合并分数经过时间衰减、来源权重与访问增益，最后可选择启用 MMR 多样性重排。",
+          "tag": "深入",
+          "navTitle": "从文件变更到混合排序"
+        },
+        {
+          "file": "12-13.html",
+          "title": "Dream 的真实机制",
+          "desc": "Dream 会把近期 session 日志与现有 MEMORY.md 合并成长期记忆。它由会话结束、可选周期检查或手动命令进入，并受门控与最佳努力锁共同约束。",
+          "tag": "前沿",
+          "navTitle": "Dream 的真实机制"
+        },
+        {
+          "file": "12-14.html",
+          "title": "AgentDefinition 与 Persona 如何合并",
+          "desc": "子 Agent 先解析可执行骨架，再把 spawn 参数、role 默认值和 Persona 默认值折叠为运行时配置。两套结构在不同阶段生效，最终共同决定子会话。",
+          "tag": "设计模式",
+          "navTitle": "AgentDefinition 与 Persona 如何合并"
+        },
+        {
+          "file": "12-15.html",
+          "title": "子 Agent 的四个隔离维度",
+          "desc": "上下文来源、身份连续性、工作目录和文件改动空间分别控制不同边界。把它们混成一个「隔离等级」，容易误读恢复和 worktree 的真实行为。",
+          "tag": "深入",
+          "navTitle": "子 Agent 的四个隔离维度"
+        },
+        {
+          "file": "12-16.html",
+          "title": "多 Agent 的组织方式",
+          "desc": "多 Agent 系统要同时解决角色定义、spawn、状态查询、取消、完成通知与资源继承。Grok Build 的源码把这些职责落在定义层与协调事件层。",
+          "tag": "案例",
+          "navTitle": "多 Agent 的组织方式"
+        },
+        {
+          "file": "12-17.html",
+          "title": "五种沙箱 Profile",
+          "desc": "workspace、devbox、read-only、strict、off 定义文件系统和子进程网络的不同能力集合。名称提供方向，真实边界要看解析后的 capability set。",
+          "tag": "安全"
+        },
+        {
+          "file": "12-18.html",
+          "title": "从工具请求到受限执行：完整授权链",
+          "desc": "一次工具调用先被解析成具体访问意图，再经过 plan gate、hooks、策略规则、会话授权、Auto 模式和用户确认。允许执行后，沙箱继续约束操作系统能力。",
+          "tag": "安全",
+          "navTitle": "从工具请求到受限执行：完整授权链"
+        },
+        {
+          "file": "12-19.html",
+          "title": "Hooks：明确 deny 才阻断",
+          "desc": "Grok Build 源码课第 19 节：Hooks 事件、matcher、阻断语义与 fail-open 边界",
+          "tag": "实战",
+          "navTitle": "Hooks：明确 deny 才阻断"
+        },
+        {
+          "file": "12-20.html",
+          "title": "MCP：连接只是起点",
+          "desc": "Grok Build 源码课第 20 节：MCP 客户端、OAuth、工具可见性与连接恢复",
+          "tag": "深入",
+          "navTitle": "MCP：连接只是起点"
+        },
+        {
+          "file": "12-21.html",
+          "title": "Marketplace：发现、安装、执行分层",
+          "desc": "Grok Build 源码课第 21 节：Plugin Marketplace、插件发现与信任边界",
+          "tag": "架构",
+          "navTitle": "Marketplace：发现、安装、执行分层"
+        },
+        {
+          "file": "12-22.html",
+          "title": "完整对照：先校准证据，再谈取舍",
+          "desc": "Grok Build 与 Claude Code 完整对照：源码证据与公开产品行为分层比较",
+          "tag": "汇总",
+          "navTitle": "完整对照：先校准证据，再谈取舍"
+        },
+        {
+          "file": "12-23.html",
+          "title": "工程复盘：能力与边界一起读",
+          "desc": "Grok Build 源码课第 23 节：基于源码与 README 的工程复盘和适用边界",
+          "tag": "收官",
+          "navTitle": "工程复盘：能力与边界一起读"
+        },
+        {
+          "file": "12-24.html",
+          "title": "Coding Agent 设计工作台",
+          "desc": "Coding Agent 设计工作台：九个系统维度与可提交结课成果",
+          "tag": "收官",
+          "navTitle": "Coding Agent 设计工作台"
+        },
+        {
+          "file": "interview-6.html",
+          "title": "解剖 Grok Build · 30 道灵魂拷问",
+          "desc": "协作方法论篇拆的是真实源码，这章的问题也最硬核。你说自己懂 Coding Agent，这 30 个问题就是照妖镜，先自己开口回答，再看框架。",
+          "tag": "考察",
+          "navTitle": "解剖 Grok Build · 30 道灵魂拷问"
+        }
+      ]
+    },
+    {
+      "id": "p-dsh",
+      "title": "解剖 DeepSeek Harness：一切皆插件的 Agent 底座",
+      "lessons": [
+        {
+          "file": "dsh-1.html",
+          "title": "一切皆插件：官宣与源码对照",
+          "desc": "发布文里说的四种模式、插件生态，在 deepseek-harness 仓库里对应哪个文件？本课一条条对上。",
+          "tag": "架构",
+          "navTitle": "一切皆插件：官宣与源码对照"
+        },
+        {
+          "file": "dsh-6.html",
+          "title": "Profile / Bundle / Patch：用户能把产品改到什么程度",
+          "desc": "不改源码也能换掉深层能力：配置由四层 patch 对着空数组叠出来，晚应用的赢，命中同一条就整条替换。",
+          "tag": "架构",
+          "navTitle": "Profile / Bundle / Patch：用户能把产品改到什么程度"
+        },
+        {
+          "file": "dsh-2.html",
+          "title": "Model-visible ⟺ logged：一条会崩给你看的不变量",
+          "desc": "模型看到的一切都要能从日志重建，发请求前还要现场验一遍，验不过直接崩。",
+          "tag": "深入",
+          "navTitle": "Model-visible ⟺ logged：一条会崩给你看的不变量"
+        },
+        {
+          "file": "dsh-3.html",
+          "title": "followup / steer / inject：双队列 Inbox",
+          "desc": "Agent 正在干活时你想说句话，消息该排哪条队、什么时候被处理。三个 API 共用一个 send()，只差两个参数。",
+          "tag": "交互",
+          "navTitle": "followup / steer / inject：双队列 Inbox"
+        },
+        {
+          "file": "dsh-7.html",
+          "title": "Esc 之后发生了什么：取消、崩溃恢复与重入",
+          "desc": "每轮一个取消信号，中断也要把账记平，kill -9 之后重启还能接着跑，已落盘的劳动成果一条不丢。",
+          "tag": "深入",
+          "navTitle": "Esc 之后发生了什么：取消、崩溃恢复与重入"
+        },
+        {
+          "file": "dsh-8.html",
+          "title": "Goal：消息溯源即权限",
+          "desc": "长期目标谁有权改，鉴权不读消息正文，只认宿主盖在事件元数据上的来源章。本课讲这个设计背后的两层思路。",
+          "tag": "设计模式",
+          "navTitle": "Goal：消息溯源即权限"
+        },
+        {
+          "file": "dsh-4.html",
+          "title": "Compaction 双路径与 replaceGeneration",
+          "desc": "上下文快满了就主动收拾，真撑爆了就先收拾再重试。重试前先对一遍世代号，收拾没起效就不许重试。",
+          "tag": "深入",
+          "navTitle": "Compaction 双路径与 replaceGeneration"
+        },
+        {
+          "file": "dsh-9.html",
+          "title": "Token 计量：决策用重放，展示用投影",
+          "desc": "两套计量各干各的，压缩决策从不信 UI 上那个数。核心源码：packages/llm/token-meter/src/usage-projection.ts。",
+          "tag": "概念",
+          "navTitle": "Token 计量：决策用重放，展示用投影"
+        },
+        {
+          "file": "dsh-10.html",
+          "title": "Spill：工具输出太大怎么办",
+          "desc": "超限输出落盘存档，给模型留一张取回凭证。核心源码：packages/spill/spill-policy/src/index.ts。",
+          "tag": "实战",
+          "navTitle": "Spill：工具输出太大怎么办"
+        },
+        {
+          "file": "dsh-11.html",
+          "title": "会话检索与跨会话引用",
+          "desc": "旧会话是可检索的资料库，引用还能带出处。核心源码：packages/session-query/ 与 packages/context/session-reference/。",
+          "tag": "深入",
+          "navTitle": "会话检索与跨会话引用"
+        },
+        {
+          "file": "dsh-12.html",
+          "title": "工具执行流水线：三段瀑布与单调 Guard",
+          "desc": "pre-execute 到 post-execute 的三段管线，Guard 只能收紧不能放行。核心源码：packages/core/tools/src/index.ts。",
+          "tag": "架构",
+          "navTitle": "工具执行流水线：三段瀑布与单调 Guard"
+        },
+        {
+          "file": "dsh-13.html",
+          "title": "工具输出契约：值与展示分离",
+          "desc": "同一个结果，模型看的和人看的可以不一样。核心源码：packages/core/tools/src/index.ts 与 presentation.ts。",
+          "tag": "设计模式",
+          "navTitle": "工具输出契约：值与展示分离"
+        },
+        {
+          "file": "dsh-14.html",
+          "title": "文件编辑的工程学：先读后写",
+          "desc": "read / edit / write 三件套，没读过的文件不许改。核心源码：packages/fs/fs-observation-policy/src/index.ts。",
+          "tag": "实战",
+          "navTitle": "文件编辑的工程学：先读后写"
+        },
+        {
+          "file": "dsh-17.html",
+          "title": "DSH 独有的工具面：terminal / lsp / jobs",
+          "desc": "别家没有的几个工具各解决什么问题。核心源码：packages/terminal/、packages/lsp/ 与 packages/jobs/，工具描述全文见 docs/tool-catalog.zh.md。",
+          "tag": "案例",
+          "navTitle": "DSH 独有的工具面：terminal / lsp / jobs"
+        },
+        {
+          "file": "dsh-15.html",
+          "title": "审批与权限：两个旋钮，一个下拉框",
+          "desc": "沙箱模式和审批策略是两个独立旋钮，预设只是常用组合。核心源码：packages/interaction/user-approval 与 packages/interaction/permission-presets。",
+          "tag": "安全",
+          "navTitle": "审批与权限：两个旋钮，一个下拉框"
+        },
+        {
+          "file": "dsh-16.html",
+          "title": "沙箱：从 seatbelt 到执行世界",
+          "desc": "ctx.fs 和 ctx.subprocess 同享一个路径命名空间，执行环境可以整体换掉。核心源码：packages/sandbox/、packages/e2b/ 与 native/landlock-run/。",
+          "tag": "安全",
+          "navTitle": "沙箱：从 seatbelt 到执行世界"
+        },
+        {
+          "file": "dsh-5.html",
+          "title": "Code Mode：一段代码顶多轮工具调用",
+          "desc": "模型写一段小程序，run_code 把它送进 worker 沙箱，五次工具调用一轮搞定。本课讲这个设计背后的两个思路。",
+          "tag": "前沿",
+          "navTitle": "Code Mode：一段代码顶多轮工具调用"
+        },
+        {
+          "file": "dsh-18.html",
+          "title": "Subagent 是一个 seam：从进程内到委派 Claude Code",
+          "desc": "子 Agent 是能力接缝，进程内、远程、别家产品都能接。核心源码：packages/subagent/。",
+          "tag": "架构",
+          "navTitle": "Subagent 是一个 seam：从进程内到委派 Claude Code"
+        },
+        {
+          "file": "dsh-19.html",
+          "title": "workflow / schedule / plan / todo：编排原语的取舍",
+          "desc": "四种编排原语各管什么，为什么没做成一个大而全。核心文档：docs/subsystems/workflow.zh.md 等四篇。",
+          "tag": "概念",
+          "navTitle": "workflow / schedule / plan / todo：编排原语的取舍"
+        },
+        {
+          "file": "dsh-20.html",
+          "title": "Skill、Preset 与自我修改",
+          "desc": "cordis_define 让 Agent 在运行时改写自己的运行时。核心目录：packages/extensions/tool-cordis/ 与 apps/cli/config/agent-presets/。",
+          "tag": "前沿",
+          "navTitle": "Skill、Preset 与自我修改"
+        },
+        {
+          "file": "dsh-21.html",
+          "title": "MCP 与 Extensions：外部工具接入的两条路",
+          "desc": "桥接生态标准与原生扩展怎么分工。核心源码：packages/mcp/mcp-client/ 与 packages/extensions/。",
+          "tag": "深入",
+          "navTitle": "MCP 与 Extensions：外部工具接入的两条路"
+        },
+        {
+          "file": "dsh-22.html",
+          "title": "LLM 适配层：单次尝试、显式重试、双流持久",
+          "desc": "推理流与正文流分开存，重试是显式事件。核心源码：packages/llm/llm/src/assembler.ts 与 packages/core/agent-loop/src/agent.ts。",
+          "tag": "深入",
+          "navTitle": "LLM 适配层：单次尝试、显式重试、双流持久"
+        },
+        {
+          "file": "dsh-26.html",
+          "title": "测试一个非确定性系统",
+          "desc": "确定性回放、性质测试、专门骗 LLM 客户端的故障服务器。核心材料：docs/testing.zh.md 与 packages/test-support/。",
+          "tag": "实战",
+          "navTitle": "测试一个非确定性系统"
+        },
+        {
+          "file": "dsh-23.html",
+          "title": "持久化治理：版本、fork 边界与拒绝解读",
+          "desc": "日志格式怎么演进，分叉边界怎么定，读不懂的数据宁可拒绝。",
+          "tag": "架构",
+          "navTitle": "持久化治理：版本、fork 边界与拒绝解读"
+        },
+        {
+          "file": "dsh-24.html",
+          "title": "凭据、设置、存储与遥测",
+          "desc": "不起眼但全是坑：凭据每次现取、配置不落盘。",
+          "tag": "实战",
+          "navTitle": "凭据、设置、存储与遥测"
+        },
+        {
+          "file": "dsh-25.html",
+          "title": "多入口与 Typert：一个内核，五张面孔",
+          "desc": "Web、headless、ACP、SDK、HTTP 共享同一个内核。",
+          "tag": "架构",
+          "navTitle": "多入口与 Typert：一个内核，五张面孔"
+        },
+        {
+          "file": "dsh-27.html",
+          "title": "Agent Notes 与 AGENTS.md：用 AI 开发 AI 的规训",
+          "desc": "四状态设计笔记和给 AI 看的编码规范，团队立刻能抄。",
+          "tag": "汇总",
+          "navTitle": "Agent Notes 与 AGENTS.md：用 AI 开发 AI 的规训"
+        },
+        {
+          "file": "dsh-28.html",
+          "title": "KV Cache 是接口",
+          "desc": "prompt 前缀稳定性当成兼容性承诺来维护。",
+          "tag": "前沿",
+          "navTitle": "KV Cache 是接口"
+        },
+        {
+          "file": "dsh-29.html",
+          "title": "终章：五种工程观，我们该抄什么",
+          "desc": "五家 harness 设计哲学总表，附最小可抄清单和体量陷阱清单。",
+          "tag": "收官",
+          "navTitle": "终章：五种工程观，我们该抄什么"
+        }
+      ]
+    },
+    {
+      "id": "p-codex",
+      "title": "解剖 OpenAI Codex：把安全观写进类型系统",
+      "lessons": [
+        {
+          "file": "codex-01.html",
+          "title": "新功能先找落脚的 crate，core 是最后一档",
+          "desc": "打开仓库，第一反应是往 core 里加。仓库把这件事写成禁令：先找现有的非 core crate，否则新建一个。依赖方向会把叶子类型挡在核心之外。",
+          "tag": "工程",
+          "navTitle": "新功能先找落脚的 crate，core 是最后一档"
+        },
+        {
+          "file": "codex-02.html",
+          "title": "三层 Turn Loop：谁有资格决定继续",
+          "desc": "你看到的是一轮对话。内部叠了任务壳、轮次、采样三层循环。各层只回答自己那一个问题，控制权每次只在一层。",
+          "tag": "架构",
+          "navTitle": "三层 Turn Loop：谁有资格决定继续"
+        },
+        {
+          "file": "codex-03.html",
+          "title": "流还在走，工具已经开工",
+          "desc": "模型还在打字，读文件的声音已经响了。采样循环的时序是：流内建 future，流后统一 drain。先 persist，再等结果。",
+          "tag": "架构",
+          "navTitle": "流还在走，工具已经开工"
+        },
+        {
+          "file": "codex-04.html",
+          "title": "中途插话：这句话进本轮、下一轮，还是被拒",
+          "desc": "Agent 正在改第三个文件，你看见方向偏了，补了一句：配置用 YAML。回车之后，这句话是开工、插进当前轮，还是当场被拒，Core 当场拍板，不等模型开口。",
+          "tag": "架构",
+          "navTitle": "中途插话：这句话进本轮、下一轮，还是被拒"
+        },
+        {
+          "file": "codex-05.html",
+          "title": "按下取消之后，各层怎么收手",
+          "desc": "工具失败回给模型，用户按 Esc 才停 turn。取消令牌从任务传到采样再传到工具。已完成的结果留在历史里，100 毫秒之后的硬拆不可逆。",
+          "tag": "架构",
+          "navTitle": "按下取消之后，各层怎么收手"
+        },
+        {
+          "file": "codex-06.html",
+          "title": "往模型上下文里塞东西，先给它造一个类型",
+          "desc": "批准前缀、工作区、AGENTS.md、被中断的 turn，全是告诉模型一件它自己看不到的事实。Codex 先给每一种注入造一个类型，类型自己知道 role、marker 和 body。",
+          "tag": "上下文",
+          "navTitle": "往模型上下文里塞东西，先给它造一个类型"
+        },
+        {
+          "file": "codex-07.html",
+          "title": "把上下文治理写进 code review",
+          "desc": "上一章把往上下文里塞东西收成类型。类型过了，这段文字仍然可以合法地又长、又勤、又无界。挡这些后果的，是仓库根十行禁令，外加一份会把同一节再读一遍的评审 skill。",
+          "tag": "工程",
+          "navTitle": "把上下文治理写进 code review"
+        },
+        {
+          "file": "codex-08.html",
+          "title": "满窗之后，砍哪一段留哪一段",
+          "desc": "三个时机共用一个分发器，三种实现由开关选中。同一份摘要在中途必须停在历史最后一项。",
+          "tag": "上下文",
+          "navTitle": "满窗之后，砍哪一段留哪一段"
+        },
+        {
+          "file": "codex-09.html",
+          "title": "JSONL 是真相，SQLite 是镜像",
+          "desc": "昨天关了终端，今天列表还在，对话也能接着改。这两件事看起来像同一份存储，落盘时却走两条轨。上轨按行追加，下轨只抄封面。中途拔电之后，能捡回来的永远是已经过了闸门的那几行。",
+          "tag": "存储",
+          "navTitle": "JSONL 是真相，SQLite 是镜像"
+        },
+        {
+          "file": "codex-10.html",
+          "title": "模型看见的工具清单，是一次采样算出来的",
+          "desc": "同一段对话、同一份配置，下一轮采样却可能多出 MCP 名字、协作入口或 tool_search。变的是这一次允许广告哪些 handler。",
+          "tag": "工具",
+          "navTitle": "模型看见的工具清单，是一次采样算出来的"
+        },
+        {
+          "file": "codex-11.html",
+          "title": "对模型说随便并行，底下用锁管住",
+          "desc": "模型看见的、实际执行的、历史记录的，是三套顺序。一面旗允许一次发多个调用，一把读写锁决定谁能叠着进。",
+          "tag": "工具",
+          "navTitle": "对模型说随便并行，底下用锁管住"
+        },
+        {
+          "file": "codex-12.html",
+          "title": "统一入口：一条命令按特征分叉",
+          "desc": "模型只看见 exec_command 和 write_stdin。进门之后，tty、远程环境和 150 毫秒窗口会把同一条命令送到 PTY、pipe、exec-server，或者送进重试门。",
+          "tag": "执行",
+          "navTitle": "统一入口：一条命令按特征分叉"
+        },
+        {
+          "file": "codex-13.html",
+          "title": "沙箱管理器：把权限档案编译成一行命令",
+          "desc": "工作区可写，网络收紧。同一条 git status，Mac 套上 sandbox-exec，Linux 套上 helper，Windows 可能原样出门。差别出在编译器。",
+          "tag": "沙箱",
+          "navTitle": "沙箱管理器：把权限档案编译成一行命令"
+        },
+        {
+          "file": "codex-14.html",
+          "title": "macOS：把安全策略拼成一个字符串",
+          "desc": "Seatbelt 吃的是一段文本。文本由静态基线加现拼的读写网段组成。路径不进这段文本，走旁边的参数表。",
+          "tag": "沙箱",
+          "navTitle": "macOS：把安全策略拼成一个字符串"
+        },
+        {
+          "file": "codex-15.html",
+          "title": "Linux：先建视图，再上 seccomp，最后 exec",
+          "desc": "同一条读取，Mac 上回 Operation not permitted，Linux 上回 No such file or directory。差别在于 Linux 先换进程能看见的文件树，再收紧它能调用的系统接口。",
+          "tag": "沙箱",
+          "navTitle": "Linux：先建视图，再上 seccomp，最后 exec"
+        },
+        {
+          "file": "codex-16.html",
+          "title": "Windows：受限令牌、防火墙过滤器与两个专用系统用户",
+          "desc": "没有 seatbelt，也没有 bubblewrap。Windows 上的沙箱是三道关卡叠起来的：令牌管写，专用账户管你是谁，WFP 按这个身份滤网。AppContainer 对不上这份权限模型，整套还默认关着。",
+          "tag": "沙箱",
+          "navTitle": "Windows：受限令牌、防火墙过滤器与两个专用系统用户"
+        },
+        {
+          "file": "codex-17.html",
+          "title": "execpolicy：让策略文件自带测试用例",
+          "desc": "白名单写错，通常要等线上才知道。Codex 把正反例写进规则本身，加载时就地跑一遍。规则和例子打架，这份策略进不了会话。",
+          "tag": "策略",
+          "navTitle": "execpolicy：让策略文件自带测试用例"
+        },
+        {
+          "file": "codex-18.html",
+          "title": "审批策略：同一条命令，问不问看哪两颗旋钮",
+          "desc": "默认问不问跟沙箱种类绑在一起。问过一次之后，记住的是完整命令，还是一段前缀。",
+          "tag": "审批",
+          "navTitle": "审批策略：同一条命令，问不问看哪两颗旋钮"
+        },
+        {
+          "file": "codex-19.html",
+          "title": "Guardian：让一个模型去审批另一个模型",
+          "desc": "审批弹窗多到人开始无脑点同意时，Codex 把决定权交给一次锁死的审查会话。超时、坏 JSON、连续拒绝，各有各的收场。",
+          "tag": "审批",
+          "navTitle": "Guardian：让一个模型去审批另一个模型"
+        },
+        {
+          "file": "codex-20.html",
+          "title": "网络与凭据代理：模型看不见的那把钥匙",
+          "desc": "出站要过几道门。真 token 不进子进程。模型看见的是假值和一句 403。",
+          "tag": "网络",
+          "navTitle": "网络与凭据代理：模型看不见的那把钥匙"
+        },
+        {
+          "file": "codex-21.html",
+          "title": "apply-patch，给模型设计一种 diff",
+          "desc": "模型填一份没有行号的补丁，人看的是事后算出来的 unified diff。同一处修改，两套格式各自会在哪一步翻车。",
+          "tag": "工具",
+          "navTitle": "apply-patch，给模型设计一种 diff"
+        },
+        {
+          "file": "codex-22.html",
+          "title": "exec 与 wait：跑不完的程序怎么收场",
+          "desc": "与其让模型发二十次工具调用，不如让它写一段 JavaScript。这段程序在哪跑、能干什么、十秒跑不完又怎么办，本课讲这三个问题背后的两个思路。",
+          "tag": "代码模式",
+          "navTitle": "exec 与 wait：跑不完的程序怎么收场"
+        },
+        {
+          "file": "codex-23.html",
+          "title": "宿主拆分：程序挂在谁身上",
+          "desc": "上一课讲 exec 和 wait 的语义。这一课问另一件事：这段 JavaScript 到底挂在谁身上，挂点换了之后，故障域和状态归属怎么变。",
+          "tag": "代码模式",
+          "navTitle": "宿主拆分：程序挂在谁身上"
+        },
+        {
+          "file": "codex-24.html",
+          "title": "多 Agent 是一张要持久化的图",
+          "desc": "派出去的是节点，边一出生就是 Open。信先入队，followup 才叫醒。关掉的是边，历史还在。",
+          "tag": "多 Agent",
+          "navTitle": "多 Agent 是一张要持久化的图"
+        },
+        {
+          "file": "codex-25.html",
+          "title": "挂钩点能改什么，由事件合同决定",
+          "desc": "一次 turn 会经过十一个挂钩。协议认四种处理器，运行表只装命令和 MCP。超时默认放行，拆卸期丢掉 stdout。",
+          "tag": "扩展",
+          "navTitle": "挂钩点能改什么，由事件合同决定"
+        },
+        {
+          "file": "codex-26.html",
+          "title": "MCP 接进来：模型看见翻译过的名字",
+          "desc": "外部 server 的工具要先过一层翻译才进模型眼睛。skill 目录常在，缺 MCP 时另问人。",
+          "tag": "扩展",
+          "navTitle": "MCP 接进来：模型看见翻译过的名字"
+        },
+        {
+          "file": "codex-27.html",
+          "title": "搬家只搬对得上的字段",
+          "desc": "换到 Codex 的第一周，最怕去年攒的 hook、MCP 和插件还在不在。检测会列出一份清单。导入只收下能映射的那一部分。",
+          "tag": "扩展",
+          "navTitle": "搬家只搬对得上的字段"
+        },
+        {
+          "file": "codex-28.html",
+          "title": "SQ 进、EQ 出：同一件事两副面孔",
+          "desc": "命令走进程内的 Submission Queue。事件走能写成 JSON 的 Event Queue。Rust 名叫 TurnStarted，磁盘上仍写 task_started。",
+          "tag": "协议",
+          "navTitle": "SQ 进、EQ 出：同一件事两副面孔"
+        },
+        {
+          "file": "codex-29.html",
+          "title": "对外协议是投影",
+          "desc": "IDE 看见的是 Thread / Turn / Item，不是内核 EventMsg。一次 turn/start 先回响应，再推事件流；审批是反向请求，不回包这一轮就停住。",
+          "tag": "协议",
+          "navTitle": "对外协议是投影"
+        },
+        {
+          "file": "codex-30.html",
+          "title": "流式输出怎么在终端两区之间定稿",
+          "desc": "模型按 token 往外推，终端却是一个写出去就改不了的字符网格。已经不会变的行交给 scrollback，还可能变的尾巴留在活动 cell，表格没闭合之前整段扣住。",
+          "tag": "界面",
+          "navTitle": "流式输出怎么在终端两区之间定稿"
+        },
+        {
+          "file": "codex-31.html",
+          "title": "把架构决策写成 lint",
+          "desc": "同一份 AGENTS.md 里，有命令的规则会在三台操作系统上亮红。只有路径的那条，重命名之后没人发现。",
+          "tag": "工程",
+          "navTitle": "把架构决策写成 lint"
+        },
+        {
+          "file": "codex-32.html",
+          "title": "两种安全视角：同一条命令，两套判词",
+          "desc": "出事之前有没有门可以拒绝，出事之后能不能复原模型当时看见的世界。同一条危险命令上，这两套视角会一致，也会给出相反结论。",
+          "tag": "安全",
+          "navTitle": "两种安全视角：同一条命令，两套判词"
+        }
+      ]
+    },
+    {
+      "id": "p-oss",
+      "title": "开源、蒸馏与本地部署",
+      "lessons": [
+        {
+          "file": "oss-1.html",
+          "title": "权重是什么？一个模型的全部本事",
+          "desc": "新闻里天天说「某某模型开源了」。开源的到底是什么东西？是代码吗？其实主要是一个文件：权重。搞清楚它是什么，后面所有关于开源的争论你都能自己判断。",
+          "tag": "概念",
+          "navTitle": "权重是什么？一个模型的全部本事"
+        },
+        {
+          "file": "oss-2.html",
+          "title": "真开源 vs 假开源：怎么看懂一张许可证",
+          "desc": "几乎每家都说自己「开源」，但这个词在各家嘴里的含义差得很远。有的能随便商用，有的用户量一大就要另外签合同，有的只是发了篇论文。学会自己判断，比记住谁家开源更有用。",
+          "tag": "选型",
+          "navTitle": "真开源 vs 假开源：怎么看懂一张许可证"
+        },
+        {
+          "file": "oss-3.html",
+          "title": "开源是一门生意：各家在图什么",
+          "desc": "训练一个旗舰模型要烧掉巨额算力，权重一旦放出去就收不回来。既然如此，为什么还有这么多公司选择开源？答案跟慈善无关。看懂各家的算盘，你的选型判断会稳很多。",
+          "tag": "案例",
+          "navTitle": "开源是一门生意：各家在图什么"
+        },
+        {
+          "file": "oss-4.html",
+          "title": "涌现：能力为什么会突然出现",
+          "desc": "模型越大越强，这句话听起来很自然。真实情况要复杂一点。有些能力在模型小的时候接近零分，参数量跨过某个量级之后，短时间内就有了。这个现象叫涌现，它也是后面几节所有矛盾的起点。",
+          "tag": "概念",
+          "navTitle": "涌现：能力为什么会突然出现"
+        },
+        {
+          "file": "oss-5.html",
+          "title": "为什么要把模型做小：蒸馏的动机",
+          "desc": "上一节刚讲完，模型越大，能力越容易涌现。那为什么整个行业还在拼命把模型做小？因为能力不是唯一的约束条件。成本、延迟、数据能不能出门，这三件事会在真实项目里直接把旗舰模型挡在门外。",
+          "tag": "方法论"
+        },
+        {
+          "file": "oss-6.html",
+          "title": "蒸馏是怎么做的：从老师到学生",
+          "desc": "上一节讲了为什么要把模型做小。这一节看具体怎么做。整个过程比想象中朴素：让老师去答题，把答题过程记下来，拿这批材料去训练学生。难点不在流程，在细节。",
+          "tag": "案例",
+          "navTitle": "蒸馏是怎么做的：从老师到学生"
+        },
+        {
+          "file": "oss-7.html",
+          "title": "蒸馏的代价：模型正在变得越来越像",
+          "desc": "上一节说蒸馏是让学生学老师。问题在于，学生学到的是老师的全部：本事、口癖、偏见、甚至对自己身份的认知。当整个行业都在向少数几个老师学习，结果就是大家越来越像。",
+          "tag": "深入",
+          "navTitle": "蒸馏的代价：模型正在变得越来越像"
+        },
+        {
+          "file": "oss-8.html",
+          "title": "你的电脑能跑多大的模型",
+          "desc": "前面讲的都是概念，这一节动手。选一下你的显卡或者 Mac 型号，直接看结论。看完你会发现，本地跑模型的门槛比大多数人想的低。",
+          "tag": "交互"
+        },
+        {
+          "file": "oss-9.html",
+          "title": "Ollama 与 LM Studio 怎么上手",
+          "desc": "上一节算出了你能跑什么，这一节把它装起来。两个工具，一个命令行一个图形界面，第一次用十分钟能跑通。",
+          "tag": "实战",
+          "navTitle": "Ollama 与 LM Studio 怎么上手"
+        }
+      ]
+    },
+    {
+      "id": "p-exam",
+      "title": "七套篇章自测 · 350 道题",
+      "lessons": [
+        {
+          "file": "exam.html",
+          "title": "七套篇章自测 · 350 道题",
+          "desc": "六个正课篇章各一套卷子，Grok Build 专题另有一套，每套 50 道题，全部依据对应内容编写。学完一章就来考一次，比反复重读有用得多。全部考完了，最后还有一份跨全站的综合考。",
+          "tag": "交互",
+          "navTitle": "七套篇章自测 · 350 道题"
+        },
+        {
+          "file": "exam-1.html",
+          "title": "大模型基础 · 篇章自测",
+          "desc": "学完大模型原理篇来验证一下。50 题全部出自本章课程：训练三阶段、Token 与上下文、幻觉的四种类型、四种缓解策略的选择。",
+          "tag": "交互",
+          "navTitle": "大模型基础 · 篇章自测"
+        },
+        {
+          "file": "exam-2.html",
+          "title": "AI Harness · 篇章自测",
+          "desc": "学完Harness 核心篇来验证一下。50 题全部出自本章课程：上下文窗口、Prompt 工程、注入防御、工具调用、KV Cache 与成本优化。",
+          "tag": "交互",
+          "navTitle": "AI Harness · 篇章自测"
+        },
+        {
+          "file": "exam-3.html",
+          "title": "实战 · 从 Demo 到产品 · 篇章自测",
+          "desc": "学完动手实战篇来验证一下。50 题全部出自本章课程：生图产品化、Agent 卡死与防呆、上下文压缩、长期记忆、多 Agent 与 MCP。",
+          "tag": "交互",
+          "navTitle": "实战 · 从 Demo 到产品 · 篇章自测"
+        },
+        {
+          "file": "exam-4.html",
+          "title": "AI 工程设计模式 · 篇章自测",
+          "desc": "学完工程进阶篇来验证一下。50 题全部出自本章课程：Workflow vs Agent、上下文工程、ACI 工具设计、评测方法论、沙箱与凭证隔离。",
+          "tag": "交互",
+          "navTitle": "AI 工程设计模式 · 篇章自测"
+        },
+        {
+          "file": "exam-5.html",
+          "title": "Harness 与自我改进 · 篇章自测",
+          "desc": "学完自我改进篇来验证一下。50 题全部出自本章课程：Harness 设计模式、上下文自动进化、递归自我改进的机制与七道关。",
+          "tag": "交互",
+          "navTitle": "Harness 与自我改进 · 篇章自测"
+        },
+        {
+          "file": "exam-7.html",
+          "title": "Vibe Coding 方法论 · 篇章自测",
+          "desc": "学完第七篇章来验证一下。50 题全部出自本章课程：流程控制、质量底线、拒绝分期、文档沉淀、环境与安全闸门。",
+          "tag": "交互",
+          "navTitle": "Vibe Coding 方法论 · 篇章自测"
+        },
+        {
+          "file": "exam-6.html",
+          "title": "解剖 Grok Build · 篇章自测",
+          "desc": "学完协作方法论篇来验证一下。50 题全部出自本章课程：运行时循环、Compaction、工具系统、记忆检索、沙箱安全与 MCP 集成。",
+          "tag": "交互",
+          "navTitle": "解剖 Grok Build · 篇章自测"
+        },
+        {
+          "file": "exam-all.html",
+          "title": "全站综合考 · 七章抽 35 题",
+          "desc": "篇章卷检验单章掌握，这份卷子检验的是另一件事：跨章节的概念会不会混。上下文压缩和长期记忆的边界在哪、Workflow 和 Agent 该怎么选、Harness 和提示词工程是什么关系，这些只有把七章放在一起考才暴露得出来。学完整门课再来。",
+          "tag": "交互",
+          "navTitle": "全站综合考 · 七章抽 35 题"
+        }
+      ]
+    },
+    {
+      "id": "p9",
+      "title": "一人公司 OPC",
+      "lessons": [
+        {
+          "file": "opc-1.html",
+          "title": "六种武器：给每样资产配对的锁",
+          "desc": "你写的代码、起的名字、想出来的算法、发出去的文章，在法律上是完全不同的东西，各有各的锁。拿错锁等于没锁。这一节把六种武器一次认全，后面每一节都会回来用它。",
+          "tag": "开篇",
+          "navTitle": "六种武器：给每样资产配对的锁"
+        },
+        {
+          "file": "opc-2.html",
+          "title": "确权要趁早：做早了是投入，做晚了是损失",
+          "desc": "上一节认全了六种武器，这一节讲什么时候动手。答案很短：越早越好。因为确权这件事有个残酷的特点，同一个动作，早做是几百块的投入，晚做是几万块加一两年时间的损失。",
+          "tag": "交互",
+          "navTitle": "确权要趁早：做早了是投入，做晚了是损失"
+        },
+        {
+          "file": "opc-3.html",
+          "title": "商标一个不够：35、42、41 一起拿",
+          "desc": "商标按商品和服务分成 45 个类别，注册哪一类就只在那一类受保护。很多人注册了一个类就觉得万事大吉，结果推广的时候发现推广本身属于另一个类。这一节讲清做互联网产品最要紧的几个类，以及图样一致性这个隐形的坑。",
+          "tag": "交互",
+          "navTitle": "商标一个不够：35、42、41 一起拿"
+        },
+        {
+          "file": "opc-4.html",
+          "title": "被驳回之后：把挡路的商标拿掉",
+          "desc": "「方片数智」第一次提交就被驳回了。挡路的是一个 2015 年就注册、却早已没在使用的在先商标。这一节把从驳回、撤三到复审的完整链路拆开讲清楚，这条路是我们自己走完的一遍。",
+          "tag": "案例",
+          "navTitle": "被驳回之后：把挡路的商标拿掉"
+        },
+        {
+          "file": "opc-5.html",
+          "title": "域名全拿下：十万的报价怎么谈到五千",
+          "desc": "miyang.cn 这个域名，曾经在交易平台上被挂到 102,222 元一口价。最后我们用五千块拿下。中间没有什么谈判魔法，只有一件提前三年做完的事：把这个品牌能用的后缀，几乎全注册在了自己手里。",
+          "tag": "案例",
+          "navTitle": "域名全拿下：十万的报价怎么谈到五千"
+        },
+        {
+          "file": "opc-6.html",
+          "title": "软著与备案：版权自动产生，证据要自己挣",
+          "desc": "著作权在创作完成那一刻就自动产生了，不用注册。听起来很省心，直到你被抄袭、要打官司的那天才发现：权利是自动的，证据不是。这一节讲软著登记和著作权备案这两件「花小钱买证据」的事，顺带拆一个外包开发的大坑。",
+          "tag": "交互",
+          "navTitle": "软著与备案：版权自动产生，证据要自己挣"
+        },
+        {
+          "file": "opc-7.html",
+          "title": "专利还是商业秘密：先申请，后公开",
+          "desc": "手里有真技术的人要做一道选择题：申请专利，还是当商业秘密捂着。两条路的逻辑完全相反，选错了代价很大。更要命的是顺序问题：产品发布在专利申请之前，这个专利就永远申请不成了。",
+          "tag": "交互",
+          "navTitle": "专利还是商业秘密：先申请，后公开"
+        },
+        {
+          "file": "opc-8.html",
+          "title": "ICP 备案是地基，ICP 证是收费执照",
+          "desc": "很多人把「ICP 备案」和「ICP 证」当成一回事，其实是两件事，差着一百万注册资本的距离。备案是网站能在国内被访问的前提，人人要办；ICP 证是合法向用户收费的执照，门槛高得多。这一节把两个都讲清，重点是注册公司那天就要做对的一个决定。",
+          "tag": "交互",
+          "navTitle": "ICP 备案是地基，ICP 证是收费执照"
+        },
+        {
+          "file": "opc-9.html",
+          "title": "注册资本别乱写：五年内要真金白银缴足",
+          "desc": "认缴制时代流行把注册资本写得很威风，反正不用马上掏钱。这个玩法 2024 年 7 月起结束了：新公司法要求认缴的钱五年内缴足。这一节讲注册资本怎么定，顺带拆一人公司最容易炸的两个雷：公私账混同，和贪省事用灰产收款。",
+          "tag": "交互",
+          "navTitle": "注册资本别乱写：五年内要真金白银缴足"
+        },
+        {
+          "file": "opc-10.html",
+          "title": "合伙人要互补：能力重叠的两个人别合伙",
+          "desc": "一个人跑到某个点，总会撞上自己补不上的短板，这时候才谈合伙人。挑人的第一标准是能力互补，志同道合排在后面。这一节讲两条原则，和一个能省掉很多痛苦的「试婚期」做法。",
+          "tag": "交互",
+          "navTitle": "合伙人要互补：能力重叠的两个人别合伙"
+        },
+        {
+          "file": "opc-11.html",
+          "title": "三个人各 1/3 是最贵的公平",
+          "desc": "三个人一起干，股权一人三分之一，谁也不吃亏，谈的时候大家都很舒服。这个结构的代价在半年后才出现：公司做不了决定。这一节用表决权门槛算一遍，再讲核心创始人为什么要拿到 70% 以上。",
+          "tag": "交互",
+          "navTitle": "三个人各 1/3 是最贵的公平"
+        },
+        {
+          "file": "opc-12.html",
+          "title": "股权别靠感觉分：五个维度算一遍",
+          "desc": "上一节讲了结构，这一节讲比例怎么来。凭感觉谈出来的数字，双方过后都会觉得自己吃亏。把贡献拆成五个维度，各给一个权重，算完再谈，讨论的对象就从「谁更重要」变成「这个维度算谁的」。",
+          "tag": "交互",
+          "navTitle": "股权别靠感觉分：五个维度算一遍"
+        },
+        {
+          "file": "opc-13.html",
+          "title": "先签代持协议，成熟了再动工商登记",
+          "desc": "比例谈完了，接下来是怎么给。早期最容易犯的错是结构做得太重：持股平台、期权池、一堆主体，公司还没跑起来，架子先搭好了。这一节讲三条纪律，重点是那句最贵的经验，离职的人不签字，公司会被锁死。",
+          "tag": "交互",
+          "navTitle": "先签代持协议，成熟了再动工商登记"
+        },
+        {
+          "file": "opc-14.html",
+          "title": "服务器放哪不重要，用户在哪才关键",
+          "desc": "很多 AI 产品的所谓出海，就是把服务器放到新加坡，套一层境外模型的接口，然后照样给国内用户用。这套操作在合规上是无效的。这一节先把判断标准说清，再讲真出海到底要做哪些事。",
+          "tag": "交互",
+          "navTitle": "服务器放哪不重要，用户在哪才关键"
+        },
+        {
+          "file": "opc-15.html",
+          "title": "大厂看不上的长尾，才是一个人的机会",
+          "desc": "大公司立项要过 ROI 门槛，一个市场再真实，规模不够大就不会有人做。这道门槛帮你挡掉了最强的竞争对手。这一节讲国内长尾和海外两条路怎么选，再讲一件直接影响成本的事：模型怎么挑。",
+          "tag": "交互",
+          "navTitle": "大厂看不上的长尾，才是一个人的机会"
+        },
+        {
+          "file": "opc-final.html",
+          "title": "新创业公式：先找买单的人，再用 AI 做出来",
+          "desc": "前面十五节讲的是不踩坑：商标、软著、专利、备案、注册资本、股权。这一节讲往哪走。旧的创业公式已经失效，因为它的第一步押的是技术门槛，而技术门槛现在接近于零。收官这节把新公式讲清，把十五节摊成一张图，再给一份能勾的自查清单。",
+          "tag": "收官",
+          "navTitle": "新创业公式：先找买单的人，再用 AI 做出来"
+        }
+      ]
+    },
+    {
+      "id": "p-seo",
+      "title": "被搜到：SEO 与 GEO",
+      "lessons": [
+        {
+          "file": "seo-1.html",
+          "title": "做出来了，为什么没人来",
+          "desc": "前面的课把产品做出来了，OPC 把它确了权。然后是一个更朴素的问题：做完不等于有人来。这一节先把「被发现」这件事拆开：流量从哪三条路来、各自什么脾气，再用一个五层漏斗，找到你的产品卡在哪一层。",
+          "tag": "开篇",
+          "navTitle": "做出来了，为什么没人来"
+        },
+        {
+          "file": "seo-2.html",
+          "title": "SEO 最低可行清单：能被抓、能被读懂、能被收录",
+          "desc": "SEO 这个词被各种「秘籍」搞得神神叨叨，其实对一个人的小站来说，值得做的部分很小、很明确：让爬虫抓得到、让引擎读得懂、让收录查得着。这一节只讲做了就有效、不做就归零的部分，每一条都能自己动手核对。",
+          "tag": "实战",
+          "navTitle": "SEO 最低可行清单：能被抓、能被读懂、能被收录"
+        },
+        {
+          "file": "seo-3.html",
+          "title": "GEO：让 AI 引擎愿意引用你",
+          "desc": "越来越多的用户跳过搜索框，直接把问题丢给 ChatGPT、Kimi 或豆包。答案由 AI 组织，你的站在不在答案里，成了新的生死线。这门手艺有个名字：GEO（Generative Engine Optimization）。这一节讲它的四个杠杆，每个都配一个当场能玩的教具。",
+          "tag": "交互",
+          "navTitle": "GEO：让 AI 引擎愿意引用你"
+        },
+        {
+          "file": "seo-4.html",
+          "title": "拆案例站点：Google 收录 693 页，Bing 只有 50 页",
+          "desc": "前两节的清单和杠杆，这一节全部落在一个真实病人身上：案例站点自己。2026 年 8 月 10 日我们给全站做了一次 SEO / GEO 审计，查出十个缺口，当周修完一轮。这一节挑五个最有代表性的，每个讲清怎么发现的、改了什么、拿什么验收。",
+          "tag": "案例",
+          "navTitle": "拆案例站点：Google 收录 693 页，Bing 只有 50 页"
+        },
+        {
+          "file": "seo-5.html",
+          "title": "一个人的优先级：先写能被搜到的问题",
+          "desc": "技术清单前面三节讲完了，全是一次性动作。真正日复一日的仗在内容：写什么、先写什么。一人公司没有 SEO 团队、没有词库工具的预算，你唯一的武器是排序能力：把力气花在有人搜的问题上，用真实经历换可信度，离歪路远一点。",
+          "tag": "实战",
+          "navTitle": "一个人的优先级：先写能被搜到的问题"
+        },
+        {
+          "file": "seo-final.html",
+          "title": "被搜到验收清单：上线前再过一遍",
+          "desc": "全章收官。前五节的东西全部收进一张 12 项清单，每项都是一个能当场核对的动作：查源码、数条目、贴地址、看日志。勾选进度存在本地，每次上线新产品回来过一遍。清单之后是四个度量口径，回答那个最重要的问题：怎么知道这些活儿有没有白干。",
+          "tag": "收官",
+          "navTitle": "被搜到验收清单：上线前再过一遍"
+        }
+      ]
+    },
+    {
+      "id": "p8",
+      "title": "雷军创业课",
+      "lessons": [
+        {
+          "file": "lei-1.html",
+          "title": "谁适合创业：莫名其妙的自信",
+          "desc": "什么样的人适合创业？雷军的回答从一句玩笑开始：「创业不是人干的事情，是阿猫阿狗干的事情。」这一节讲创业者需要的三种能力，以及 1996 年金山陷入绝境时，他靠什么撑过来。",
+          "tag": "开篇",
+          "navTitle": "谁适合创业：莫名其妙的自信"
+        },
+        {
+          "file": "lei-2.html",
+          "title": "心理准备：第一天就想好怎么死",
+          "desc": "大多数创业者第一天想的是公司会多成功，雷军创办小米的第一天想的是公司会怎么死。这一节讲他 40 岁再创业的动机、对失败率的清醒认知，以及三条具体的保命策略。",
+          "tag": "交互",
+          "navTitle": "心理准备：第一天就想好怎么死"
+        },
+        {
+          "file": "lei-3.html",
+          "title": "选方向：Go Big Market",
+          "desc": "「你们干的事情，都不一定是你们能干的最大的事情。」这一节是雷军办金山最大的后悔和总结：方向怎么选、天花板怎么算，以及一句他用得比发明人还多的话：Go Big Market，做最肥的市场。",
+          "tag": "交互",
+          "navTitle": "选方向：Go Big Market"
+        },
+        {
+          "file": "lei-4.html",
+          "title": "起名：赢在起跑线",
+          "desc": "雷军看到的创业者里，99.9% 的公司名是随便起的。而联想、百度、腾讯、华为，这些成功公司的名字全都很好听。这不是巧合：「你在名字上花多少时间，就意味着你会花多少时间在它的业务上」。这一节看小米这个名字是怎么磨出来的。",
+          "tag": "交互",
+          "navTitle": "起名：赢在起跑线"
+        },
+        {
+          "file": "lei-5.html",
+          "title": "互联网七字诀",
+          "desc": "「互联网实际上是一种思想，一种做事的方法。这个方法就是七个字：专注、极致、口碑、快。」雷军说琢磨透这七个字去做事是攻无不克的。它的恐怖之处在于，你要真做到。",
+          "tag": "交互"
+        },
+        {
+          "file": "lei-6.html",
+          "title": "口碑的本质是超出预期",
+          "desc": "互联网让口碑传播变得极快：东西好，很快就会被消费者传开。但什么东西才有口碑？雷军花了很长时间琢磨透这个问题，答案来自两次亲身消费：一趟失望的帆船酒店，和一顿被感动的海底捞。",
+          "tag": "交互",
+          "navTitle": "口碑的本质是超出预期"
+        },
+        {
+          "file": "lei-7.html",
+          "title": "第一笔钱：从身边人开始",
+          "desc": "办公司第一件事就是需要钱。雷军的答案很朴素：天使投资在美国就是凑份子，真正的问题是人家凭什么相信你。这一节讲第一笔钱从哪来、信用怎么攒，以及为什么几百页的商业计划书没人看。",
+          "tag": "交互",
+          "navTitle": "第一笔钱：从身边人开始"
+        },
+        {
+          "file": "lei-8.html",
+          "title": "融资时机：有钱才能融到钱",
+          "desc": "这个世界很纠结：只有有钱才能融到钱。账上留足现金、钱花一半就启动、让投资人来找你。再看懂 VC 的账本，明白他要赚十倍为什么不是贪婪，你就知道该在什么时候、用什么姿态谈钱。",
+          "tag": "交互",
+          "navTitle": "融资时机：有钱才能融到钱"
+        },
+        {
+          "file": "lei-9.html",
+          "title": "估值的艺术：融资卖的是信心",
+          "desc": "做价越高越好？雷军的结论正相反：做价高，出售的是一个更高的预期，达不成就要付出代价。这一节讲怎么定价（先做市场调查，从中间价往上走），以及融资这件事的本质：销售信心。",
+          "tag": "交互",
+          "navTitle": "估值的艺术：融资卖的是信心"
+        },
+        {
+          "file": "lei-10.html",
+          "title": "股权就是拼图：切忌均分",
+          "desc": "刚开始创业的时候，那 100% 的股份其实是个梦想。创业的过程，就是拿这 100% 的梦想去跟钱 share、跟最优秀的工程师 share、跟最好的 marketing 和资源 share。雷军的原话：创业就是拼图。这一节看拼图怎么拼，以及极左、极右、均分这三种拼法为什么都会死。",
+          "tag": "交互",
+          "navTitle": "股权就是拼图：切忌均分"
+        },
+        {
+          "file": "lei-11.html",
+          "title": "合伙人：先分梦想，再分股份",
+          "desc": "股份的分配是相对的，不是绝对的：公司做到十亿美金，1% 就是一千万美元。所以找 co-founder 的顺序不能反：先 share 梦想，他不 buy in，给他 100% 也没用；然后才是角色、贡献和分饼；最后把最难开口的事谈完：锁定四年，退出机制。",
+          "tag": "交互",
+          "navTitle": "合伙人：先分梦想，再分股份"
+        },
+        {
+          "file": "lei-12.html",
+          "title": "现金流与报酬包",
+          "desc": "对早期创业公司来说，最重要的数字是账上还有多少现金：假如没有任何收入，你能活多少个月？这是创业公司每天都要想的问题。这一节讲雷军的三笔账：现金跑道、现金流，和给最优秀的人算的那笔「报酬包」。",
+          "tag": "交互"
+        },
+        {
+          "file": "lei-final.html",
+          "title": "写给 AI 时代的一人公司",
+          "desc": "22 段口述讲完了。雷军讲的是办公司，但 AI 时代一个人就是一家公司：你自己是 CEO，也是那个技术大拿；你的存款是账上现金，你的时间是 100% 的股份。收官这节把 12 节课摊成一张全景图，再把它变成一份属于 OPC（One Person Company）的自查清单和行动清单。",
+          "tag": "收官",
+          "navTitle": "写给 AI 时代的一人公司"
+        },
+        {
+          "file": "lei-test.html",
+          "title": "测一测你的 AI 创业成功率",
+          "desc": "13 节课讲完了，现在轮到你。12 道题，全部来自前面课程里雷军的核心判断：心态、方向、产品、现金、合伙、AI 杠杆。凭直觉选，别猜「标准答案」，测的是你现在真实的样子。",
+          "tag": "交互",
+          "navTitle": "测一测你的 AI 创业成功率"
+        }
+      ]
+    }
+  ]
+}
