@@ -122,7 +122,7 @@ pre code{background:none;padding:0;color:#d9f2ec}
     <div class="kicker">VIBE CODING 方法论 · 第 9 节</div>
     <h1>破坏性操作的三道闸</h1>
     <p class="subtitle">发版时以为只改了 A 功能，实际 diff 里混进了上周调试 B 的临时改动，半成品代码进了生产环境。数据库、配置、部署这些不可逆操作，必须在执行前设闸。下面两个演练都可以动手操作。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>数据库先备份、不可逆操作先给回退方案、发版前做 diff 审查</p></aside><section class="lesson-comic" data-lesson-comic="vibe-9.html"><noscript><h2>四格看懂：破坏性操作的三道闸</h2><img src="assets/comics/vibe-release-three-gates.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：破坏性操作的三道闸"><ol><li><b>先保护可恢复状态</b>：涉及数据改动时，使用合适的备份并验证可用。</li><li><b>演练如何恢复</b>：说明恢复材料、步骤和限制，不能只说可以回退。</li><li><b>审查实际改动</b>：对照发布范围检查差异，找出混入的无关修改。</li><li><b>过闸后再发布</b>：按已授权流程执行，保留版本与回退依据。</li></ol><p>备份、可执行的恢复方案和实际变更审查都要落在操作前。</p></noscript></section><!--seo:end-->  <div class="l-callout reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>数据库先备份、不可逆操作先给回退方案、发版前做 diff 审查</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="vibe-9.html"><noscript><h2>四格看懂：破坏性操作的三道闸</h2><img src="assets/comics/vibe-release-three-gates.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：破坏性操作的三道闸"><ol><li><b>先保护可恢复状态</b>：涉及数据改动时，使用合适的备份并验证可用。</li><li><b>演练如何恢复</b>：说明恢复材料、步骤和限制，不能只说可以回退。</li><li><b>审查实际改动</b>：对照发布范围检查差异，找出混入的无关修改。</li><li><b>过闸后再发布</b>：按已授权流程执行，保留版本与回退依据。</li></ol><p>备份、可执行的恢复方案和实际变更审查都要落在操作前。</p></noscript></section>  <div class="l-callout reveal">
     <p style="font-size:14.5px;line-height:1.8"><b>核心原则：</b>不可逆操作的安全感来自闸门。备份拦数据损失，回退方案拦无法恢复，diff 审查拦带病发版，三道闸都设在执行之前。</p>
   </div>
 

@@ -1,0 +1,224 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-lei-b",
+  "status": "accepted; all 6 article-specific comics integrated and visually reviewed",
+  "evidenceScope": "Actual lei-9 through lei-12, lei-final and lei-test HTML. Conditional educational interpretation of valuation, governance, partnership and cash flow; no fixed ownership split, mandatory vesting term, guaranteed stock compensation or validated startup-outcome prediction. Quiz uses an arbitrary course score transform; new captions explicitly identify self-assessment rather than real success probability. Original quiz implementation and article bodies remain intact.",
+  "verificationSources": [
+    "https://legacy.sba.gov/business-guide/plan-your-business/write-your-business-plan",
+    "https://www.samr.gov.cn/xyjgs/flfg/art/2024/art_d4e84936a8a744f8928ac7aec7594345.html"
+  ],
+  "lessons": [
+    {
+      "file": "lei-9.html",
+      "slug": "lei-valuation-and-expectations",
+      "role": "估值虎：紫色西装、青绿领带",
+      "takeaway": "估值要与业务证据、可达成的预期和融资条件一起考虑，信心需要执行来支持。",
+      "panels": [
+        {
+          "label": "先了解价值依据",
+          "text": "比较业务进展与相关案例，明确估值讨论的假设和范围。",
+          "alt": "估值虎在工作台上用放大镜查看产品、客户反馈与可比案例卡。"
+        },
+        {
+          "label": "把预期放在现实里",
+          "text": "高估值可能带来更高期待，要检验下一阶段里程碑能否实现。",
+          "alt": "估值虎将高高的估值积木塔与实际可搭建的里程碑台阶并排比对。"
+        },
+        {
+          "label": "一起看条件与合作",
+          "text": "价格之外，还要理解权利安排、约束和长期合作是否合适。",
+          "alt": "估值虎与同族投资者共同查看条款册和协作拼图，桌旁放着平衡秤。"
+        },
+        {
+          "label": "用执行积累信任",
+          "text": "融资沟通中的信心应由真实进展支撑，不能代替核实和约定。",
+          "alt": "估值虎把按期完成的原型与反馈档案放在会谈桌上，双方核对记录。"
+        }
+      ],
+      "scenePrompt": "角色：估值虎：紫色西装、青绿领带。从左到右四格，每格一个完整场景：第1格：估值虎在工作台上用放大镜查看产品、客户反馈与可比案例卡。 第2格：估值虎将高高的估值积木塔与实际可搭建的里程碑台阶并排比对。 第3格：估值虎与同族投资者共同查看条款册和协作拼图，桌旁放着平衡秤。 第4格：估值虎把按期完成的原型与反馈档案放在会谈桌上，双方核对记录。",
+      "originalHtmlSha256": "2bfaa4a36ec5e85ae17f757b3d0a9a40febdd1bf800ed049dd73e9a18d6e0b3e",
+      "lessonTitle": "估值的艺术：融资卖的是信心",
+      "title": "四格看懂：估值的艺术：融资卖的是信心",
+      "sourceArtifact": "exec-7eee4cd3-6167-4dbd-869e-7cd893ff95cb.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-7eee4cd3-6167-4dbd-869e-7cd893ff95cb.png"
+    },
+    {
+      "file": "lei-10.html",
+      "slug": "lei-equity-and-governance",
+      "role": "拼图虎：蓝色马甲、米色衬衣",
+      "takeaway": "股权安排应结合真实贡献与治理规则，没有适合所有团队的固定分法。",
+      "panels": [
+        {
+          "label": "先列出缺少的能力",
+          "text": "明确技术、经营、资金等需要，再判断什么合作能补齐。",
+          "alt": "拼图虎检查缺着几块的公司拼图，将工具、用户和资金图卡摆在缺口旁。"
+        },
+        {
+          "label": "权益对应真实投入",
+          "text": "讨论角色、投入和责任，避免只为凑头衔就随意分配。",
+          "alt": "拼图虎与同族伙伴把各自带来的能力积木放进公司拼图，旁边逐项记录投入。"
+        },
+        {
+          "label": "提前模拟决策分歧",
+          "text": "均分与否都要考虑治理，明确谁能决定什么以及僵局如何处理。",
+          "alt": "拼图虎与同族伙伴在路线模型两端各指一条路，共同查看中间的决策规则小册。"
+        },
+        {
+          "label": "把规则写成可执行约定",
+          "text": "股权、职责、激励与治理一起设计，并按实际情况核对适用要求。",
+          "alt": "拼图虎和同族伙伴在桌前整理协议册，将角色卡、分配拼图和决策图依次归档。"
+        }
+      ],
+      "scenePrompt": "角色：拼图虎：蓝色马甲、米色衬衣。从左到右四格，每格一个完整场景：第1格：拼图虎检查缺着几块的公司拼图，将工具、用户和资金图卡摆在缺口旁。 第2格：拼图虎与同族伙伴把各自带来的能力积木放进公司拼图，旁边逐项记录投入。 第3格：拼图虎与同族伙伴在路线模型两端各指一条路，共同查看中间的决策规则小册。 第4格：拼图虎和同族伙伴在桌前整理协议册，将角色卡、分配拼图和决策图依次归档。",
+      "originalHtmlSha256": "75679e752fe9c9f7b2801df925c50ee65abe0c70f7e79442ea1517b527737cb9",
+      "lessonTitle": "股权就是拼图：切忌均分",
+      "title": "四格看懂：股权就是拼图：切忌均分",
+      "sourceArtifact": "exec-02e8bf4c-eb10-4ae2-81eb-6fd7ca4e1f0c.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-02e8bf4c-eb10-4ae2-81eb-6fd7ca4e1f0c.png"
+    },
+    {
+      "file": "lei-11.html",
+      "slug": "lei-partner-alignment-and-exit",
+      "role": "合伙虎：青绿夹克、橙色围巾",
+      "takeaway": "先对齐愿景、风险与投入，再谈权益，并在开始前约定兑现和退出规则。",
+      "panels": [
+        {
+          "label": "先对齐方向与风险",
+          "text": "把为什么做、可能遇到什么困难讲清，确认双方理解一致。",
+          "alt": "合伙虎与同族伙伴围坐桌前，查看共同目标模型以及沿途的风险卡。"
+        },
+        {
+          "label": "再谈投入和责任",
+          "text": "明确角色、时间投入与贡献，减少只凭默契合作的空白。",
+          "alt": "合伙虎与同族伙伴把各自的工具和时间筹码放到分工托盘，逐项比对。"
+        },
+        {
+          "label": "权益兑现要有明确条件",
+          "text": "归属安排取决于协议与适用法律，课程案例中的年限不是统一规定。",
+          "alt": "合伙虎在桌上将权益拼图沿里程碑轨道摆放，与伙伴一起核对协议册。"
+        },
+        {
+          "label": "提前约定退出与交接",
+          "text": "把退出、知识产权和结算等问题写清，必要时请专业人士审查。",
+          "alt": "合伙虎与同族伙伴整理退出路线图、交接档案和结算托盘，旁边同族顾问查看条款。"
+        }
+      ],
+      "scenePrompt": "角色：合伙虎：青绿夹克、橙色围巾。从左到右四格，每格一个完整场景：第1格：合伙虎与同族伙伴围坐桌前，查看共同目标模型以及沿途的风险卡。 第2格：合伙虎与同族伙伴把各自的工具和时间筹码放到分工托盘，逐项比对。 第3格：合伙虎在桌上将权益拼图沿里程碑轨道摆放，与伙伴一起核对协议册。 第4格：合伙虎与同族伙伴整理退出路线图、交接档案和结算托盘，旁边同族顾问查看条款。",
+      "originalHtmlSha256": "1aeb7a024b1bf9eb73a5dfdf920c5e62f0c001ceefcacce7e2b4be7216408138",
+      "lessonTitle": "合伙人：先分梦想，再分股份",
+      "title": "四格看懂：合伙人：先分梦想，再分股份",
+      "sourceArtifact": "exec-a7dc00f4-508e-493b-ba96-fb1e75e5b9f4.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-a7dc00f4-508e-493b-ba96-fb1e75e5b9f4.png"
+    },
+    {
+      "file": "lei-12.html",
+      "slug": "lei-cash-flow-and-compensation",
+      "role": "现金虎：棕色背心、蓝色衬衣",
+      "takeaway": "区分账面收入与实际现金，做压力情景，并让人才报酬与现金承受力相匹配。",
+      "panels": [
+        {
+          "label": "先预测实际收支",
+          "text": "记录可用现金、支出与回款时间，账面收入不等于钱已到账。",
+          "alt": "现金虎对照账单册和现金罐，将尚未到账的应收卡放进独立托盘。"
+        },
+        {
+          "label": "再做压力情景",
+          "text": "用收入减少、回款延迟等假设看承受能力，情景结果不是保证。",
+          "alt": "现金虎把回款筹码移到时间轨道后段，检查前方支出闸口留下的现金缺口。"
+        },
+        {
+          "label": "设计清楚的报酬包",
+          "text": "现金薪酬需符合适用要求，权益报酬的条件、风险和流动性要说清。",
+          "alt": "现金虎与同族候选人查看现金袋、锁住的权益盒与报酬条款册。"
+        },
+        {
+          "label": "持续更新储备与计划",
+          "text": "随着真实经营数据变化，调整支出节奏、招聘和筹资安排。",
+          "alt": "现金虎将最新到账筹码放入现金罐，重新排好预算、招聘与备用方案卡。"
+        }
+      ],
+      "scenePrompt": "角色：现金虎：棕色背心、蓝色衬衣。从左到右四格，每格一个完整场景：第1格：现金虎对照账单册和现金罐，将尚未到账的应收卡放进独立托盘。 第2格：现金虎把回款筹码移到时间轨道后段，检查前方支出闸口留下的现金缺口。 第3格：现金虎与同族候选人查看现金袋、锁住的权益盒与报酬条款册。 第4格：现金虎将最新到账筹码放入现金罐，重新排好预算、招聘与备用方案卡。",
+      "originalHtmlSha256": "d17b8accae88896addafd31cf4bfd8a2ece77a192de9b908ed928fa337a28ab7",
+      "lessonTitle": "现金流与报酬包",
+      "title": "四格看懂：现金流与报酬包",
+      "sourceArtifact": "exec-19d19beb-c96f-44ed-853b-eb6a09b4347f.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-19d19beb-c96f-44ed-853b-eb6a09b4347f.png"
+    },
+    {
+      "file": "lei-final.html",
+      "slug": "lei-one-person-business-action-map",
+      "role": "行动虎：橙色夹克、青绿围巾",
+      "takeaway": "把创业经验变成具体行动：核对用户价值、现金与合作规则，再按反馈迭代。",
+      "panels": [
+        {
+          "label": "把课程串成经营地图",
+          "text": "从心态、方向到产品、资金、合作和运营，找出当前缺口。",
+          "alt": "行动虎在桌前查看连成一条路的目标、用户、产品、现金和合作图形卡。"
+        },
+        {
+          "label": "先核对用户价值",
+          "text": "用一句话说明为谁解决什么问题，再找真实用户验证。",
+          "alt": "行动虎向同族用户展示简洁的产品原型，手边放着用户问题和价值卡。"
+        },
+        {
+          "label": "再看现金和合作约定",
+          "text": "检查可承受的收支情景，有伙伴时核对分工与退出安排。",
+          "alt": "行动虎在同一工作台比对现金轨道和合作协议册，找出空白检查卡。"
+        },
+        {
+          "label": "选出本周能做的事",
+          "text": "AI 可以辅助执行，关键判断仍需结合现实证据持续复查。",
+          "alt": "行动虎与白色青脸机器人把少量行动卡放入本周托盘，旁边保留反馈小册。"
+        }
+      ],
+      "scenePrompt": "角色：行动虎：橙色夹克、青绿围巾。从左到右四格，每格一个完整场景：第1格：行动虎在桌前查看连成一条路的目标、用户、产品、现金和合作图形卡。 第2格：行动虎向同族用户展示简洁的产品原型，手边放着用户问题和价值卡。 第3格：行动虎在同一工作台比对现金轨道和合作协议册，找出空白检查卡。 第4格：行动虎与白色青脸机器人把少量行动卡放入本周托盘，旁边保留反馈小册。",
+      "originalHtmlSha256": "a10468b4307d89748270565d31b00f23336ba75a678063b34e97d258baf262d5",
+      "lessonTitle": "写给 AI 时代的一人公司",
+      "title": "四格看懂：写给 AI 时代的一人公司",
+      "sourceArtifact": "exec-e38c183c-b079-448e-bf89-acc94ce57f30.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-e38c183c-b079-448e-bf89-acc94ce57f30.png"
+    },
+    {
+      "file": "lei-test.html",
+      "slug": "lei-course-self-assessment",
+      "role": "自评虎：紫色马甲、橙色围巾",
+      "takeaway": "这是课程自评，不是经验证的创业成功概率；用薄弱项选择下一步练习。",
+      "panels": [
+        {
+          "label": "按真实情况作答",
+          "text": "回顾动机、方向、产品、现金、合作与 AI 使用，避免只选理想答案。",
+          "alt": "自评虎坐在桌前对照自己的真实工作档案，将选择图卡放进问卷册。"
+        },
+        {
+          "label": "看见各维度的薄弱项",
+          "text": "页面得分是课程规则的呈现，不代表真实创业成功概率。",
+          "alt": "自评虎查看六个方向长短不同的雷达图，旁边另有被合上盖子的水晶球。"
+        },
+        {
+          "label": "把结果变成学习行动",
+          "text": "回到薄弱项对应课程，挑选可以核验的小任务去改进。",
+          "alt": "自评虎从较短的雷达方向取出课程小册，把配套行动卡放到工作台。"
+        },
+        {
+          "label": "复测看行为是否改变",
+          "text": "记录已完成的行动与证据，用复测帮助反思，不能据此预测成败。",
+          "alt": "自评虎将新旧自评卡与实际完成的原型和账册并排比较，写入反思档案。"
+        }
+      ],
+      "scenePrompt": "角色：自评虎：紫色马甲、橙色围巾。从左到右四格，每格一个完整场景：第1格：自评虎坐在桌前对照自己的真实工作档案，将选择图卡放进问卷册。 第2格：自评虎查看六个方向长短不同的雷达图，旁边另有被合上盖子的水晶球。 第3格：自评虎从较短的雷达方向取出课程小册，把配套行动卡放到工作台。 第4格：自评虎将新旧自评卡与实际完成的原型和账册并排比较，写入反思档案。",
+      "originalHtmlSha256": "98d81fc198ff015436b40e9b0cf1cfe409ec9814c0b439618e424733cb17dce0",
+      "lessonTitle": "测一测你的 AI 创业成功率",
+      "title": "四格看懂：测一测你的 AI 创业成功率",
+      "sourceArtifact": "exec-0e307378-9cea-47eb-8027-d58e473616ab.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-0e307378-9cea-47eb-8027-d58e473616ab.png"
+    }
+  ]
+}

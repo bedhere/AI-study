@@ -92,7 +92,7 @@
     <div class="kicker">Agent 评测</div>
     <h1>三种 Grader：代码、模型、人工</h1>
     <p class="subtitle">Grader 是评测系统的裁判。选错了 Grader，评测结果就不可信。生产环境的经验表明，三种 Grader 组合使用，各取所长。没有银弹，但有最优组合。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>静态断言 vs LLM-as-Judge vs 人工校准，每种适合什么场景</p></aside><section class="lesson-comic" data-lesson-comic="10-9.html"><noscript><h2>四格看懂：三种 Grader：代码、模型、人工</h2><img src="assets/comics/engineering-three-graders.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：三种 Grader：代码、模型、人工"><ol><li><b>代码检查硬条件</b>：格式、数值、权限和执行结果可用明确规则判断。</li><li><b>模型评主观质量</b>：用具体量表评价表达等内容，并关注偏差与不稳定性。</li><li><b>人工校准标准</b>：让人检查难例与争议，校准量表和模型裁判。</li><li><b>按任务组合裁判</b>：先验证结果与硬约束，再补充所需质量判断。</li></ol><p>代码、模型和人工评分各有适用范围。</p></noscript></section><!--seo:end-->  <!-- ═══ 代码 Grader ═══ -->
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>静态断言 vs LLM-as-Judge vs 人工校准，每种适合什么场景</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="10-9.html"><noscript><h2>四格看懂：三种 Grader：代码、模型、人工</h2><img src="assets/comics/engineering-three-graders.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：三种 Grader：代码、模型、人工"><ol><li><b>代码检查硬条件</b>：格式、数值、权限和执行结果可用明确规则判断。</li><li><b>模型评主观质量</b>：用具体量表评价表达等内容，并关注偏差与不稳定性。</li><li><b>人工校准标准</b>：让人检查难例与争议，校准量表和模型裁判。</li><li><b>按任务组合裁判</b>：先验证结果与硬约束，再补充所需质量判断。</li></ol><p>代码、模型和人工评分各有适用范围。</p></noscript></section>  <!-- ═══ 代码 Grader ═══ -->
   <div class="sec-label">Grader 1：代码评判器</div>
 
   <div class="grader-section reveal">

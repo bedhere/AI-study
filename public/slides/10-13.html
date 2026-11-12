@@ -164,7 +164,7 @@
     <div class="kicker">长运行 Agent</div>
     <h1>Managed Agent：脑手分离</h1>
     <p class="subtitle">核心洞察：把 Agent 的思考和执行拆成独立组件，让系统在任何部分出错时都能优雅恢复。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>把思考和执行拆到不同进程，像操作系统一样虚拟化 Agent</p></aside><section class="lesson-comic" data-lesson-comic="10-13.html"><noscript><h2>四格看懂：Managed Agent：脑手分离</h2><img src="assets/comics/engineering-brain-hands-session.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Managed Agent：脑手分离"><ol><li><b>会话保存事件</b>：Session 持久保存任务过程中的可记录事件。</li><li><b>循环负责调度</b>：Harness 调用模型、安排工具并处理返回结果。</li><li><b>沙箱负责执行</b>：执行环境承载代码和文件操作，并限制可用资源。</li><li><b>通过接口协作</b>：组件用稳定接口连接，恢复过程仍需核查状态和副作用。</li></ol><p>会话、调度循环与执行环境分离，便于替换和恢复。</p></noscript></section><!--seo:end-->  <div class="sec-label">类比：操作系统的虚拟化</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>把思考和执行拆到不同进程，像操作系统一样虚拟化 Agent</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="10-13.html"><noscript><h2>四格看懂：Managed Agent：脑手分离</h2><img src="assets/comics/engineering-brain-hands-session.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Managed Agent：脑手分离"><ol><li><b>会话保存事件</b>：Session 持久保存任务过程中的可记录事件。</li><li><b>循环负责调度</b>：Harness 调用模型、安排工具并处理返回结果。</li><li><b>沙箱负责执行</b>：执行环境承载代码和文件操作，并限制可用资源。</li><li><b>通过接口协作</b>：组件用稳定接口连接，恢复过程仍需核查状态和副作用。</li></ol><p>会话、调度循环与执行环境分离，便于替换和恢复。</p></noscript></section>  <div class="sec-label">类比：操作系统的虚拟化</div>
 
   <div class="analogy-bar reveal">
     <div class="ab-icon">

@@ -162,7 +162,7 @@
     <div class="kicker">Prompt 安全</div>
     <h1>Prompt Injection：为什么会被攻击</h1>
     <p class="subtitle">Prompt 注入是大模型应用面临的最严重安全威胁之一。它和 SQL 注入同源：数据和指令混在同一个通道里。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>SQL 注入类比 → Message List 本质 → 缺乏参数化 → 5 大攻击类型概览</p></aside><section class="lesson-comic" data-lesson-comic="prompt-attack.html"><noscript><h2>四格看懂：Prompt Injection：为什么会被攻击</h2><img src="assets/comics/harness-untrusted-instructions.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Prompt Injection：为什么会被攻击"><ol><li><b>任务本来很明确</b>：用户授权的是具体任务与有限的工具范围。</li><li><b>资料夹带要求</b>：网页、文件或输入可能混入与任务无关的恶意指令。</li><li><b>识别越界诱导</b>：伪装身份或要求泄露秘密，并不会产生真实授权。</li><li><b>用权限限制后果</b>：结合内容隔离、最小权限与实际校验，持续测试残余风险。</li></ol><p>外部内容可能夹带指令；把不可信资料与授权边界分开处理。</p></noscript></section><!--seo:end-->  <div class="sec-label">攻击原理</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>SQL 注入类比 → Message List 本质 → 缺乏参数化 → 5 大攻击类型概览</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="prompt-attack.html"><noscript><h2>四格看懂：Prompt Injection：为什么会被攻击</h2><img src="assets/comics/harness-untrusted-instructions.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Prompt Injection：为什么会被攻击"><ol><li><b>任务本来很明确</b>：用户授权的是具体任务与有限的工具范围。</li><li><b>资料夹带要求</b>：网页、文件或输入可能混入与任务无关的恶意指令。</li><li><b>识别越界诱导</b>：伪装身份或要求泄露秘密，并不会产生真实授权。</li><li><b>用权限限制后果</b>：结合内容隔离、最小权限与实际校验，持续测试残余风险。</li></ol><p>外部内容可能夹带指令；把不可信资料与授权边界分开处理。</p></noscript></section>  <div class="sec-label">攻击原理</div>
 
   <div class="block compare-box reveal" id="b0">
     <div class="compare-title">SQL Injection vs Prompt Injection</div>

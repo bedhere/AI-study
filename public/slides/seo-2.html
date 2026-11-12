@@ -102,16 +102,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">被搜到 · 2 / 6</div>
-    <h1>SEO 最低可行清单：能被抓、能被读懂、能被收录</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="practice"><div><strong>SEO 最低可行清单：能被抓、能被读懂、能被收录</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>SEO 最低可行清单：能被抓、能被读懂、能被收录</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">SEO 这个词被各种「秘籍」搞得神神叨叨，其实对一个人的小站来说，值得做的部分很小、很明确：<b>让爬虫抓得到、让引擎读得懂、让收录查得着</b>。这一节只讲做了就有效、不做就归零的部分，每一条都能自己动手核对。</p>
     <div class="chips"><span class="chip">抓取模拟器</span><span class="chip">title 改写</span><span class="chip">收录三件套</span><span class="chip">十项自查</span></div>
-  </header><aside class="xa-tldr company-source-case"><p>本页保留课程来源项目的公开网站案例作为教学材料。案例经历、流量与收录数据不属于方片内部平台，代码示例也不代表当前学堂的实际实现。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>只讲做了就有效的部分：一页一个主题、title 说人话、正文别全靠 JS 渲染、sitemap 与站长平台提交。抓取模拟器亲手切两态，看爬虫到底拿到了什么</p></aside><!--seo:end-->  <section class="reveal">
+  </header><aside class="xa-tldr company-source-case"><p>本页保留课程来源项目的公开网站案例作为教学材料。案例经历、流量与收录数据不属于方片内部平台，代码示例也不代表当前学堂的实际实现。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>只讲做了就有效的部分：一页一个主题、title 说人话、正文别全靠 JS 渲染、sitemap 与站长平台提交。抓取模拟器亲手切两态，看爬虫到底拿到了什么</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="seo-2.html"><noscript><h2>四格看懂：SEO 最低可行清单：能被抓、能被读懂、能被收录</h2><img src="assets/comics/seo-technical-search-basics.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：SEO 最低可行清单：能被抓、能被读懂、能被收录"><ol><li><b>关键内容要能读到</b>：检查返回页面与渲染结果，让正文和内部链接可被访问。</li><li><b>每页主题清楚</b>：独立标题、描述与正文对应，避免模糊或重复的页面说明。</li><li><b>整理站点发现信号</b>：核对 sitemap、robots、canonical 与语言关联，避免自相矛盾。</li><li><b>提交后继续看报告</b>：提交地图是发现线索，不能保证抓取、索引或排名。</li></ol><p>先清技术障碍，让内容可访问可理解，再通过平台报告观察索引情况。</p></noscript></section>  <section class="reveal">
     <div class="sec-label">最低可行是什么意思</div>
     <p class="desc">传统 SEO 是个大行业：外链建设、竞品词库、站群、老域名…那套东西面向有团队有预算的公司。一个人做产品，学那些是浪费生命。好消息是，搜索引擎这些年一直在把游戏往一个方向推：<b>把内容做好、把技术障碍清掉的站，自然会被善待</b>。</p>
     <p class="desc" style="margin-top:16px">所以最低可行清单的逻辑是：只做那些不做就直接出局的事。按照上一节漏斗的分层，它们正好分成三组：能被抓（抓取层）、能被读懂（理解层）、能被收录（索引层）。三组都通了，剩下的交给内容质量，那是第 5 节的事。</p>

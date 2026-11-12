@@ -128,7 +128,7 @@
     <div class="kicker">成本优化</div>
     <h1>KV Cache：用空间换时间</h1>
     <p class="subtitle">每轮对话，模型都要对所有历史 Token 做 Attention 计算。KV Cache 把已算过的 K/V 矩阵缓存下来，下轮只计算新增 Token。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>类比理解 + 节省效果计算器，拖动轮次查看节省比例</p></aside><section class="lesson-comic" data-lesson-comic="8-2.html"><noscript><h2>四格看懂：KV Cache：用空间换时间</h2><img src="assets/comics/harness-kv-cache.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：KV Cache：用空间换时间"><ol><li><b>重复前文有开销</b>：自回归生成需要利用前文的注意力表示。</li><li><b>缓存已算过的内容</b>：保存先前词元的键和值，避免全部重新计算。</li><li><b>新内容接着计算</b>：满足复用条件时，在已有表示上处理新增内容。</li><li><b>同时看资源与费用</b>：缓存占用内存；跨请求复用和价格规则依平台实现。</li></ol><p>KV Cache 复用已有计算以减少重复处理；显存、命中条件与计费仍要分别考虑。</p></noscript></section><!--seo:end-->  <div class="sec-label">原理</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>类比理解 + 节省效果计算器，拖动轮次查看节省比例</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="8-2.html"><noscript><h2>四格看懂：KV Cache：用空间换时间</h2><img src="assets/comics/harness-kv-cache.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：KV Cache：用空间换时间"><ol><li><b>重复前文有开销</b>：自回归生成需要利用前文的注意力表示。</li><li><b>缓存已算过的内容</b>：保存先前词元的键和值，避免全部重新计算。</li><li><b>新内容接着计算</b>：满足复用条件时，在已有表示上处理新增内容。</li><li><b>同时看资源与费用</b>：缓存占用内存；跨请求复用和价格规则依平台实现。</li></ol><p>KV Cache 复用已有计算以减少重复处理；显存、命中条件与计费仍要分别考虑。</p></noscript></section>  <div class="sec-label">原理</div>
 
   <div class="analogy-box">
     <b>类比：</b><br>

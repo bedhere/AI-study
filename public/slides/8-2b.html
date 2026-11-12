@@ -136,7 +136,7 @@
     <div class="kicker">成本优化</div>
     <h1>显式缓存：实战对比</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">一行代码，保证命中。生产环境必须用显式缓存：隐式缓存在分布式架构下不可靠。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>cache_control 写法、缓存命中判断、价格折扣对比，真实省钱效果演示</p></aside><section class="lesson-comic" data-lesson-comic="8-2b.html"><noscript><h2>四格看懂：显式缓存：实战对比</h2><img src="assets/comics/harness-cache-measurement.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：显式缓存：实战对比"><ol><li><b>识别重复前缀</b>：先找到多次请求中保持一致、值得复用的部分。</li><li><b>按服务规则配置</b>：确认是否支持显式缓存、自动缓存及相应限制。</li><li><b>检查真实命中</b>：从返回用量或监控中区分写入、读取与未命中。</li><li><b>核算总成本</b>：把写入、保留时间和读取费用一起计算，不假设必然命中。</li></ol><p>缓存配置与命中条件因服务而异；读取实际用量字段验证效果。</p></noscript></section><!--seo:end-->  <div class="sec-label">为什么隐式缓存不可靠</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>cache_control 写法、缓存命中判断、价格折扣对比，真实省钱效果演示</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="8-2b.html"><noscript><h2>四格看懂：显式缓存：实战对比</h2><img src="assets/comics/harness-cache-measurement.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：显式缓存：实战对比"><ol><li><b>识别重复前缀</b>：先找到多次请求中保持一致、值得复用的部分。</li><li><b>按服务规则配置</b>：确认是否支持显式缓存、自动缓存及相应限制。</li><li><b>检查真实命中</b>：从返回用量或监控中区分写入、读取与未命中。</li><li><b>核算总成本</b>：把写入、保留时间和读取费用一起计算，不假设必然命中。</li></ol><p>缓存配置与命中条件因服务而异；读取实际用量字段验证效果。</p></noscript></section>  <div class="sec-label">为什么隐式缓存不可靠</div>
 
   <div class="problem-card">
     <h4>⚠️ 隐式缓存为什么在生产环境不可靠？</h4>

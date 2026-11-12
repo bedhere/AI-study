@@ -148,7 +148,7 @@
     <div class="kicker">工具设计的艺术</div>
     <h1>Think Tool：让 AI 先想后做</h1>
     <p class="subtitle">Agent 在执行长工具链时，经常忘记前面的信息，或者在需要权衡多条规则时犯错。实践证明，给 Agent 一个停下来想一想的工具，就能大幅提升准确率。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>在复杂工具链中给 Agent 一个暂停思考的空间，τ-bench 性能提升 54%</p></aside><section class="lesson-comic" data-lesson-comic="10-6.html"><noscript><h2>四格看懂：Think Tool：让 AI 先想后做</h2><img src="assets/comics/engineering-think-checkpoint.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Think Tool：让 AI 先想后做"><ol><li><b>动作前先停一下</b>：多步骤任务中，先检查当前目标和已知状态。</li><li><b>核对适用规则</b>：对照约束、权限和前一步结果，识别冲突或缺口。</li><li><b>给出可检查计划</b>：以简短计划或检查表核对下一步；当前模型也应评估原生推理能力。</li><li><b>再按授权执行</b>：核对本身不改变外部状态，实际动作仍需通过工具和权限。</li></ol><p>暂停核对是设计思路，专用 Think Tool 是否仍有用需随模型能力评测。</p></noscript></section><!--seo:end-->  <!-- ===== 问题场景 ===== -->
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>在复杂工具链中给 Agent 一个暂停思考的空间，τ-bench 性能提升 54%</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="10-6.html"><noscript><h2>四格看懂：Think Tool：让 AI 先想后做</h2><img src="assets/comics/engineering-think-checkpoint.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Think Tool：让 AI 先想后做"><ol><li><b>动作前先停一下</b>：多步骤任务中，先检查当前目标和已知状态。</li><li><b>核对适用规则</b>：对照约束、权限和前一步结果，识别冲突或缺口。</li><li><b>给出可检查计划</b>：以简短计划或检查表核对下一步；当前模型也应评估原生推理能力。</li><li><b>再按授权执行</b>：核对本身不改变外部状态，实际动作仍需通过工具和权限。</li></ol><p>暂停核对是设计思路，专用 Think Tool 是否仍有用需随模型能力评测。</p></noscript></section>  <!-- ===== 问题场景 ===== -->
   <div class="sec-label">问题场景：Agent 为什么会犯错</div>
 
   <div class="scenario-grid">

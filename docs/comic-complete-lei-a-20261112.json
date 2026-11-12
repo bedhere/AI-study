@@ -1,0 +1,291 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-lei-a",
+  "status": "accepted; all 8 article-specific comics integrated and visually reviewed",
+  "evidenceScope": "Actual lei-1 through lei-8 HTML. Interpret experience and historical cases conditionally, without unverified failure rates, universal market rules, compulsory fundraising thresholds or guaranteed success. Funding captions concern preparation and evidence, not personalized investment advice.",
+  "verificationSources": [
+    "https://legacy.sba.gov/business-guide/plan-your-business/write-your-business-plan"
+  ],
+  "lessons": [
+    {
+      "file": "lei-1.html",
+      "slug": "lei-founder-confidence",
+      "role": "信念虎：蓝色夹克、橙色围巾",
+      "takeaway": "信心帮助迈出第一步，清晰愿景、互补团队与持续反馈让坚持有依据。",
+      "panels": [
+        {
+          "label": "先想清为什么做",
+          "text": "面对不确定性，需要承担选择的勇气，也要认清自己的条件。",
+          "alt": "信念虎背着小包站在创业工作室门前，一手握住门把，一手拿着目标小册。"
+        },
+        {
+          "label": "把愿景讲具体",
+          "text": "说明为谁解决什么问题，让伙伴理解共同要去的方向。",
+          "alt": "信念虎在工作台上向同族伙伴展示连接用户图标与产品模型的愿景板。"
+        },
+        {
+          "label": "找到互补的伙伴",
+          "text": "把需要的能力和分工摆出来，用协作补齐自己的短板。",
+          "alt": "信念虎与两位同族伙伴把不同形状的能力积木合成一座小桥。"
+        },
+        {
+          "label": "让信念接受反馈",
+          "text": "坚持目标时也核对真实用户证据，必要时调整做法。",
+          "alt": "信念虎对照用户反馈卡修改桥梁模型，桌上保留最初目标小册。"
+        }
+      ],
+      "scenePrompt": "角色：信念虎：蓝色夹克、橙色围巾。从左到右四格，每格一个完整场景：第1格：信念虎背着小包站在创业工作室门前，一手握住门把，一手拿着目标小册。 第2格：信念虎在工作台上向同族伙伴展示连接用户图标与产品模型的愿景板。 第3格：信念虎与两位同族伙伴把不同形状的能力积木合成一座小桥。 第4格：信念虎对照用户反馈卡修改桥梁模型，桌上保留最初目标小册。",
+      "originalHtmlSha256": "db621e72ff9c57d0a5f9998f1d7f04b1334f3c72fdb6bbcc0237ae330dc8ea19",
+      "lessonTitle": "谁适合创业：莫名其妙的自信",
+      "title": "四格看懂：谁适合创业：莫名其妙的自信",
+      "sourceArtifact": "exec-860757df-9f29-4fbc-897c-426b8d37fce1.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-860757df-9f29-4fbc-897c-426b8d37fce1.png"
+    },
+    {
+      "file": "lei-2.html",
+      "slug": "lei-premortem-and-limits",
+      "role": "预演虎：青绿工装、米色袖衬衣",
+      "takeaway": "先做失败预演，设定可承受的投入边界和复查时点，再根据证据调整。",
+      "panels": [
+        {
+          "label": "先预演可能怎样失败",
+          "text": "把方向、资金、合作与平台依赖等风险提前列出来。",
+          "alt": "预演虎在安全的工作室桌前观察一条模型路线上的断桥、空钱罐和断开插头。"
+        },
+        {
+          "label": "用小范围试验验证",
+          "text": "先收集真实反馈，控制尚未验证阶段的投入和承诺。",
+          "alt": "预演虎在小型试验摊位向一位同族用户展示原型，旁边大展台仍盖着布。"
+        },
+        {
+          "label": "写清时间与预算边界",
+          "text": "课程中的个人期限是案例；自己的边界要按现实条件制定。",
+          "alt": "预演虎把预算筹码和沙漏放进同一计划托盘，手边有可调整的检查卡。"
+        },
+        {
+          "label": "到时复查并作选择",
+          "text": "根据反馈继续、转向或停止，把个人生活与健康也算进决策。",
+          "alt": "预演虎在路线岔口对照反馈小册，选择一条可承受的路，旁边保留休息长椅。"
+        }
+      ],
+      "scenePrompt": "角色：预演虎：青绿工装、米色袖衬衣。从左到右四格，每格一个完整场景：第1格：预演虎在安全的工作室桌前观察一条模型路线上的断桥、空钱罐和断开插头。 第2格：预演虎在小型试验摊位向一位同族用户展示原型，旁边大展台仍盖着布。 第3格：预演虎把预算筹码和沙漏放进同一计划托盘，手边有可调整的检查卡。 第4格：预演虎在路线岔口对照反馈小册，选择一条可承受的路，旁边保留休息长椅。",
+      "originalHtmlSha256": "3245c2f1dcc623406e7e17dd02651ef98e6780e438bd12774e5a62238472805f",
+      "lessonTitle": "心理准备：第一天就想好怎么死",
+      "title": "四格看懂：心理准备：第一天就想好怎么死",
+      "sourceArtifact": "exec-1659bc9f-d87b-46a9-a507-9c7601f684d7.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-1659bc9f-d87b-46a9-a507-9c7601f684d7.png"
+    },
+    {
+      "file": "lei-3.html",
+      "slug": "lei-market-and-founder-fit",
+      "role": "选向虎：棕色马甲、青绿围巾",
+      "takeaway": "结合兴趣、能力、市场空间与可行切口，验证一个适合自己的方向。",
+      "panels": [
+        {
+          "label": "画出兴趣与能力",
+          "text": "热爱和擅长提供起点，还要弄清自己能交付什么。",
+          "alt": "选向虎把爱心卡与工具卡摆进相交圆环，圈出自己的强项积木。"
+        },
+        {
+          "label": "理解用户与市场",
+          "text": "核对谁有问题、愿不愿付出成本，以及需求可能覆盖多大范围。",
+          "alt": "选向虎用放大镜查看不同用户小店组成的市场模型，手边记录实际访谈卡。"
+        },
+        {
+          "label": "比较合适的切口",
+          "text": "市场大不等于一定适合自己，小市场也要结合经营目标判断。",
+          "alt": "选向虎对照两条不同宽度的市场道路，把自己的工具箱与入口大小逐一比对。"
+        },
+        {
+          "label": "用小试验验证交集",
+          "text": "让兴趣、能力与需求相遇，再用真实反馈修正判断。",
+          "alt": "选向虎在三环交集的试验台展示原型，一位同族用户递回反馈卡。"
+        }
+      ],
+      "scenePrompt": "角色：选向虎：棕色马甲、青绿围巾。从左到右四格，每格一个完整场景：第1格：选向虎把爱心卡与工具卡摆进相交圆环，圈出自己的强项积木。 第2格：选向虎用放大镜查看不同用户小店组成的市场模型，手边记录实际访谈卡。 第3格：选向虎对照两条不同宽度的市场道路，把自己的工具箱与入口大小逐一比对。 第4格：选向虎在三环交集的试验台展示原型，一位同族用户递回反馈卡。",
+      "originalHtmlSha256": "7160e9f84fe780d406aa375945fee80c358ec5d15420f45871fb1d4766bf6bab",
+      "lessonTitle": "选方向：Go Big Market",
+      "title": "四格看懂：选方向：Go Big Market",
+      "sourceArtifact": "exec-b70c9df3-8c48-4f0a-b40e-e4a002a11e8c.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-b70c9df3-8c48-4f0a-b40e-e4a002a11e8c.png"
+    },
+    {
+      "file": "lei-4.html",
+      "slug": "lei-naming-and-availability",
+      "role": "命名虎：紫色背心、米色衬衣",
+      "takeaway": "名字要易记、好读、含义合适，选定前核对商标与域名等实际条件。",
+      "panels": [
+        {
+          "label": "先找简单好记的候选",
+          "text": "从产品含义出发，准备若干便于记忆和传播的名字。",
+          "alt": "命名虎在桌前从一堆复杂图形名牌中选出几张简洁图形候选卡。"
+        },
+        {
+          "label": "核对能否使用",
+          "text": "检查相关商标与域名情况，避免只凭喜欢就投入品牌制作。",
+          "alt": "命名虎用放大镜比对候选卡、分类档案柜与域名地址卡的形状。"
+        },
+        {
+          "label": "请用户试读试记",
+          "text": "检查发音、联想和目标市场中的含义，发现歧义及时调整。",
+          "alt": "命名虎向两位同族用户展示一张图形候选卡，观察他们复述时的反应。"
+        },
+        {
+          "label": "确认后统一使用",
+          "text": "保留查询与决策记录，再把名称落实到产品和传播中。",
+          "alt": "命名虎把选中的图形标签贴到包装和网页模型上，将核对册收进档案盒。"
+        }
+      ],
+      "scenePrompt": "角色：命名虎：紫色背心、米色衬衣。从左到右四格，每格一个完整场景：第1格：命名虎在桌前从一堆复杂图形名牌中选出几张简洁图形候选卡。 第2格：命名虎用放大镜比对候选卡、分类档案柜与域名地址卡的形状。 第3格：命名虎向两位同族用户展示一张图形候选卡，观察他们复述时的反应。 第4格：命名虎把选中的图形标签贴到包装和网页模型上，将核对册收进档案盒。",
+      "originalHtmlSha256": "b56d42034de04bc34775e44433fbd9e47c352c9815e008e2e99a8720b6b4ea80",
+      "lessonTitle": "起名：赢在起跑线",
+      "title": "四格看懂：起名：赢在起跑线",
+      "sourceArtifact": "exec-0de43c82-5bc6-48ef-8ac1-43ed5ef00d62.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-0de43c82-5bc6-48ef-8ac1-43ed5ef00d62.png"
+    },
+    {
+      "file": "lei-5.html",
+      "slug": "lei-focus-quality-word-of-mouth-speed",
+      "role": "打磨虎：橙色工装、蓝色围巾",
+      "takeaway": "围绕核心体验聚焦、打磨细节、积累口碑，并带着质量检查快速响应。",
+      "panels": [
+        {
+          "label": "把核心事情做集中",
+          "text": "先抓住最需要解决的用户问题，减少分散精力的功能。",
+          "alt": "打磨虎把一排杂乱功能积木移到待办盘，只将核心产品模型留在工作台中央。"
+        },
+        {
+          "label": "把容易忽略的细节做好",
+          "text": "从真实使用过程找摩擦，细节应服务体验。",
+          "alt": "打磨虎用小工具调整产品接口与按钮位置，旁边摆着用户使用观察卡。"
+        },
+        {
+          "label": "让体验带动口碑",
+          "text": "持续兑现承诺，认真处理反馈，让用户愿意主动推荐。",
+          "alt": "打磨虎向同族用户交付完善产品，用户把同样的产品图卡分享给朋友。"
+        },
+        {
+          "label": "快速响应也要验质量",
+          "text": "缩短反馈到改进的时间，同时检查关键体验与风险。",
+          "alt": "打磨虎在短循环工作台上将反馈卡变成改进模型，再送入检查托盘。"
+        }
+      ],
+      "scenePrompt": "角色：打磨虎：橙色工装、蓝色围巾。从左到右四格，每格一个完整场景：第1格：打磨虎把一排杂乱功能积木移到待办盘，只将核心产品模型留在工作台中央。 第2格：打磨虎用小工具调整产品接口与按钮位置，旁边摆着用户使用观察卡。 第3格：打磨虎向同族用户交付完善产品，用户把同样的产品图卡分享给朋友。 第4格：打磨虎在短循环工作台上将反馈卡变成改进模型，再送入检查托盘。",
+      "originalHtmlSha256": "3c26eec6d863b4758e0fc5178fd9b2ddf0e8a547ca3239280e11d90a8745aea4",
+      "lessonTitle": "互联网七字诀",
+      "title": "四格看懂：互联网七字诀",
+      "sourceArtifact": "exec-ae528cf1-c68c-4171-9664-b9026a46d650.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-ae528cf1-c68c-4171-9664-b9026a46d650.png"
+    },
+    {
+      "file": "lei-6.html",
+      "slug": "lei-expectation-and-experience",
+      "role": "体验虎：青绿围裙、橙色领结",
+      "takeaway": "口碑来自承诺与实际体验的关系，真实、体贴的细节比过度宣传更可靠。",
+      "panels": [
+        {
+          "label": "宣传会抬高预期",
+          "text": "承诺过满时，实际服务稍有落差也可能让用户失望。",
+          "alt": "体验虎看着巨大的华丽宣传礼盒与旁边普通小盒之间的落差，神情困惑。"
+        },
+        {
+          "label": "先把承诺说实在",
+          "text": "让宣传符合能够稳定交付的体验，避免刻意制造虚假期待。",
+          "alt": "体验虎将夸张装饰收进盒子，向用户展示真实产品和清楚的服务图卡。"
+        },
+        {
+          "label": "把关心落实到细节",
+          "text": "及时解决问题、提供恰当帮助，让服务回应真实需求。",
+          "alt": "体验虎发现同族用户的产品零件松动，取来合适工具仔细修好。"
+        },
+        {
+          "label": "用反馈检验感受",
+          "text": "课程的预期模型是理解口碑的比喻，仍要听取具体用户反馈。",
+          "alt": "体验虎收到用户的反馈卡与感谢小花，用户在旁向朋友介绍修好的产品。"
+        }
+      ],
+      "scenePrompt": "角色：体验虎：青绿围裙、橙色领结。从左到右四格，每格一个完整场景：第1格：体验虎看着巨大的华丽宣传礼盒与旁边普通小盒之间的落差，神情困惑。 第2格：体验虎将夸张装饰收进盒子，向用户展示真实产品和清楚的服务图卡。 第3格：体验虎发现同族用户的产品零件松动，取来合适工具仔细修好。 第4格：体验虎收到用户的反馈卡与感谢小花，用户在旁向朋友介绍修好的产品。",
+      "originalHtmlSha256": "adc0548c9f56f5816b965bceed6c7e3d4b9064bfbbbcf6f799b7f2352827f413",
+      "lessonTitle": "口碑的本质是超出预期",
+      "title": "四格看懂：口碑的本质是超出预期",
+      "sourceArtifact": "exec-ee150999-56e3-405e-88d6-11954ed070f1.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-ee150999-56e3-405e-88d6-11954ed070f1.png"
+    },
+    {
+      "file": "lei-7.html",
+      "slug": "lei-trust-and-first-funding",
+      "role": "信用虎：蓝色西装、橙色领带",
+      "takeaway": "长期信用能帮助建立融资沟通，仍需清楚展示业务证据、风险和条件。",
+      "panels": [
+        {
+          "label": "信用来自日常兑现",
+          "text": "先把小承诺做好，让他人有依据理解你的可靠性。",
+          "alt": "信用虎按约把修好的模型交给同族伙伴，双方在交付小册上放好完成图卡。"
+        },
+        {
+          "label": "把业务讲清楚",
+          "text": "说明客户问题、产品价值和资金用途，准备适合对方的信息。",
+          "alt": "信用虎在桌前将用户卡、产品模型与资金用途积木排成一条清楚的链。"
+        },
+        {
+          "label": "让证据支持沟通",
+          "text": "介绍人和信任帮助开启对话，团队与真实进展仍需核实。",
+          "alt": "信用虎通过同族伙伴介绍向另一位同族投资者展示原型和真实反馈档案。"
+        },
+        {
+          "label": "风险与条件说在前面",
+          "text": "是否融资要看需求与适配，熟人关系也不能代替审慎约定。",
+          "alt": "信用虎与同族投资者共同查看风险卡和条款册，桌上钱袋仍合着口。"
+        }
+      ],
+      "scenePrompt": "角色：信用虎：蓝色西装、橙色领带。从左到右四格，每格一个完整场景：第1格：信用虎按约把修好的模型交给同族伙伴，双方在交付小册上放好完成图卡。 第2格：信用虎在桌前将用户卡、产品模型与资金用途积木排成一条清楚的链。 第3格：信用虎通过同族伙伴介绍向另一位同族投资者展示原型和真实反馈档案。 第4格：信用虎与同族投资者共同查看风险卡和条款册，桌上钱袋仍合着口。",
+      "originalHtmlSha256": "0204750346a65664041fa5ccfeeb40cd3f544a56a8987e83bc4a4fc85d24f7ab",
+      "lessonTitle": "第一笔钱：从身边人开始",
+      "title": "四格看懂：第一笔钱：从身边人开始",
+      "sourceArtifact": "exec-798fd43e-c994-4dfa-be5f-90b311106159.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-798fd43e-c994-4dfa-be5f-90b311106159.png"
+    },
+    {
+      "file": "lei-8.html",
+      "slug": "lei-funding-timing-and-runway",
+      "role": "筹资虎：棕色夹克、蓝色围巾",
+      "takeaway": "结合现金预测与融资所需时间提前准备，同时保留可行的备用方案。",
+      "panels": [
+        {
+          "label": "先看现金能撑多久",
+          "text": "预测实际收支、回款和固定支出，识别可能出现的资金缺口。",
+          "alt": "筹资虎把现金筹码沿月份格盘摆放，检查支出漏斗下逐渐减少的余量。"
+        },
+        {
+          "label": "别等耗尽才准备",
+          "text": "按融资周期和业务需要提前安排；案例中的比例不是通用警戒线。",
+          "alt": "筹资虎在仍有余量的钱罐旁把融资会面卡放到前方时间轨道上。"
+        },
+        {
+          "label": "讲清资金如何创造进展",
+          "text": "把资金用途与可核验的业务里程碑对应，减少空泛承诺。",
+          "alt": "筹资虎向同族伙伴展示从预算袋通往原型、用户和交付台的路线模型。"
+        },
+        {
+          "label": "同时检查条件与退路",
+          "text": "评估合作条件、成本调整和其他方案，融资结果存在不确定性。",
+          "alt": "筹资虎在谈判桌查看条款册，身旁路线板保留一条缩小投入的备用路径。"
+        }
+      ],
+      "scenePrompt": "角色：筹资虎：棕色夹克、蓝色围巾。从左到右四格，每格一个完整场景：第1格：筹资虎把现金筹码沿月份格盘摆放，检查支出漏斗下逐渐减少的余量。 第2格：筹资虎在仍有余量的钱罐旁把融资会面卡放到前方时间轨道上。 第3格：筹资虎向同族伙伴展示从预算袋通往原型、用户和交付台的路线模型。 第4格：筹资虎在谈判桌查看条款册，身旁路线板保留一条缩小投入的备用路径。",
+      "originalHtmlSha256": "0871bfffc1057a8d5a82349c32a604899fd24433c14261001c9eaa2d429692d9",
+      "lessonTitle": "融资时机：有钱才能融到钱",
+      "title": "四格看懂：融资时机：有钱才能融到钱",
+      "sourceArtifact": "exec-6df2b6b0-7b19-49bc-9534-64a990fd8a45.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-6df2b6b0-7b19-49bc-9534-64a990fd8a45.png"
+    }
+  ]
+}

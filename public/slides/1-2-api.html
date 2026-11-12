@@ -182,7 +182,7 @@
     <div class="kicker">从补全到对话</div>
     <h1>chat/completions 之谜</h1>
     <p class="subtitle">明明是在和大模型对话，为什么 OpenAI 的 API 路径里写的是「补全」？这个命名背后，藏着对大模型本质的理解。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>明明是对话，为什么 API 叫「补全」？打字机动画解读</p></aside><section class="lesson-comic" data-lesson-comic="1-2-api.html"><noscript><h2>四格看懂：chat/completions 之谜</h2><img src="assets/comics/core-chat-completion.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：chat/completions 之谜"><ol><li><b>对话先分角色</b>：应用把规则、用户消息和历史回复等组织成结构化输入。</li><li><b>按模板提供给模型</b>：模型需要与训练匹配的消息格式，不是任意拼接都一样。</li><li><b>在合适位置生成</b>：模型根据输入继续生成助理响应，补全是理解这一过程的入口。</li><li><b>预算也包含历史</b>：规则、历史和回复都占资源；接口名字本身不决定能力。</li></ol><p>对话接口传递角色与消息，格式要按模型要求；生成仍有上下文与输出预算。</p></noscript></section><!--seo:end-->  <div class="sec-label">一个有意思的问题</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>明明是对话，为什么 API 叫「补全」？打字机动画解读</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="1-2-api.html"><noscript><h2>四格看懂：chat/completions 之谜</h2><img src="assets/comics/core-chat-completion.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：chat/completions 之谜"><ol><li><b>对话先分角色</b>：应用把规则、用户消息和历史回复等组织成结构化输入。</li><li><b>按模板提供给模型</b>：模型需要与训练匹配的消息格式，不是任意拼接都一样。</li><li><b>在合适位置生成</b>：模型根据输入继续生成助理响应，补全是理解这一过程的入口。</li><li><b>预算也包含历史</b>：规则、历史和回复都占资源；接口名字本身不决定能力。</li></ol><p>对话接口传递角色与消息，格式要按模型要求；生成仍有上下文与输出预算。</p></noscript></section>  <div class="sec-label">一个有意思的问题</div>
 
   <p style="font-size:17px; font-weight:700; line-height:1.6;">
     明明是「聊天」，为什么叫「<span style="color:var(--accent);">补全</span>」？

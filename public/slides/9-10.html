@@ -80,7 +80,7 @@
     <div class="kicker">Agent 实战</div>
     <h1>一条消息背后的真实成本</h1>
     <p class="subtitle">用户只发了一句话，但底层可能跑了 10+ 轮循环、产生几十条 API 消息。当你打开账单，可能会吓一跳。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>用户发一句话，底层可能跑 10+ 轮循环、几十条 API 消息，由此建立成本意识</p></aside><section class="lesson-comic" data-lesson-comic="9-10.html"><noscript><h2>四格看懂：一条消息背后的真实成本</h2><img src="assets/comics/practice-message-total-cost.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：一条消息背后的真实成本"><ol><li><b>界面只有一句请求</b>：用户看到的消息数不等于后台调用次数。</li><li><b>任务触发多个环节</b>：模型、检索、工具与重试都可能产生开销。</li><li><b>历史与结果不断累积</b>：长工具输出和重复上下文可能推高后续用量。</li><li><b>按任务核算与优化</b>：关联实际用量、缓存和人工返工，定位主要成本。</li></ol><p>一次用户请求可能触发多次调用，按完整任务统计用量、时延与返工。</p></noscript></section><!--seo:end-->  <div class="sec-label">选一个用户消息，看背后发生了什么</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>用户发一句话，底层可能跑 10+ 轮循环、几十条 API 消息，由此建立成本意识</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="9-10.html"><noscript><h2>四格看懂：一条消息背后的真实成本</h2><img src="assets/comics/practice-message-total-cost.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：一条消息背后的真实成本"><ol><li><b>界面只有一句请求</b>：用户看到的消息数不等于后台调用次数。</li><li><b>任务触发多个环节</b>：模型、检索、工具与重试都可能产生开销。</li><li><b>历史与结果不断累积</b>：长工具输出和重复上下文可能推高后续用量。</li><li><b>按任务核算与优化</b>：关联实际用量、缓存和人工返工，定位主要成本。</li></ol><p>一次用户请求可能触发多次调用，按完整任务统计用量、时延与返工。</p></noscript></section>  <div class="sec-label">选一个用户消息，看背后发生了什么</div>
 
   <div class="input-box reveal">
     <div class="label">模拟用户发送的消息：</div>

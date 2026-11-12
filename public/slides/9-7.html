@@ -72,7 +72,7 @@
     <div class="kicker">Agent 实战</div>
     <h1>为什么 Agent 会卡死</h1>
     <p class="subtitle">实验室里的 Agent 死循环很好发现：控制台一刷就看到了。但生产环境的卡死更隐蔽：用户不会说「你的 Agent 死循环了」，他只会说「你的 AI 怎么这么慢」或者「它是不是傻了」。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>真实场景中循环挂掉的几种典型模式，以及用户会看到什么</p></aside><section class="lesson-comic" data-lesson-comic="9-7.html"><noscript><h2>四格看懂：为什么 Agent 会卡死</h2><img src="assets/comics/practice-stuck-signals.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：为什么 Agent 会卡死"><ol><li><b>同样调用反复发生</b>：相同参数没有新结果时，检查是否陷入重复状态。</li><li><b>忙却没有推进</b>：用任务目标衡量增量，识别无用的边缘操作。</li><li><b>输出开始复读</b>：重复内容可能提示上下文或任务理解出了问题。</li><li><b>外部故障连锁放大</b>：连续失败要限流、隔离或暂停，避免不断放大影响。</li></ol><p>从重复调用、无效推进、文本复读和连锁失败中识别卡住信号。</p></noscript></section><!--seo:end-->  <div class="sec-label">四种生产环境特有的卡死模式</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>真实场景中循环挂掉的几种典型模式，以及用户会看到什么</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="9-7.html"><noscript><h2>四格看懂：为什么 Agent 会卡死</h2><img src="assets/comics/practice-stuck-signals.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：为什么 Agent 会卡死"><ol><li><b>同样调用反复发生</b>：相同参数没有新结果时，检查是否陷入重复状态。</li><li><b>忙却没有推进</b>：用任务目标衡量增量，识别无用的边缘操作。</li><li><b>输出开始复读</b>：重复内容可能提示上下文或任务理解出了问题。</li><li><b>外部故障连锁放大</b>：连续失败要限流、隔离或暂停，避免不断放大影响。</li></ol><p>从重复调用、无效推进、文本复读和连锁失败中识别卡住信号。</p></noscript></section>  <div class="sec-label">四种生产环境特有的卡死模式</div>
 
   <div class="pattern-grid paywall-locked xa-peek" id="patternGrid">
     <div class="pattern-card reveal" onclick="toggleCard(this)">

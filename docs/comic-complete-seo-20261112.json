@@ -1,0 +1,226 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-seo",
+  "status": "accepted; all 6 article-specific comics integrated and visually reviewed",
+  "evidenceScope": "Actual six SEO/GEO lesson pages. Historical source-site data is not Fangpian current performance. New captions avoid guaranteed indexing/ranking, exact site-query counts, bot visits proving use in models, mandatory llms.txt, FAQ rich-result promises, and access-control changes. Official search and crawler documentation checked 2026-11-12.",
+  "verificationSources": [
+    "https://developers.google.com/search/docs/appearance/ai-features",
+    "https://developers.google.com/search/updates",
+    "https://developers.openai.com/api/docs/bots",
+    "https://llmstxt.org/"
+  ],
+  "lessons": [
+    {
+      "file": "seo-1.html",
+      "slug": "seo-discovery-funnel",
+      "role": "发现虎：青绿夹克、橙围巾",
+      "takeaway": "把没有访客拆成发现、抓取、收录、展示和点击等环节，再定位问题。",
+      "panels": [
+        {
+          "label": "上线还要建立发现入口",
+          "text": "搜索、AI 回答与社交传播有不同的到达路径。",
+          "alt": "发现虎站在刚开门的小店前，观察搜索放大镜、机器人和同族用户分享的三条来路。"
+        },
+        {
+          "label": "把流量问题拆成漏斗",
+          "text": "页面存在、可抓取、被索引、获展示和点击，不能混成一个数字。",
+          "alt": "发现虎检查一串逐层变窄的入口漏斗，用户卡在不同关口停下。"
+        },
+        {
+          "label": "先找卡住的一层",
+          "text": "核对页面内容、访问限制、索引报告与用户问题是否匹配。",
+          "alt": "发现虎用放大镜在漏斗中找到一处关闭的内容闸门。"
+        },
+        {
+          "label": "带日期记录基线",
+          "text": "粗查帮助发现线索，收录与表现应结合站长平台等证据持续观察。",
+          "alt": "发现虎把基线卡放进日期账册，旁边分别记录不同入口的结果。"
+        }
+      ],
+      "scenePrompt": "角色：发现虎：青绿夹克、橙围巾。从左到右四格，每格一个完整场景：第1格：发现虎站在刚开门的小店前，观察搜索放大镜、机器人和同族用户分享的三条来路。 第2格：发现虎检查一串逐层变窄的入口漏斗，用户卡在不同关口停下。 第3格：发现虎用放大镜在漏斗中找到一处关闭的内容闸门。 第4格：发现虎把基线卡放进日期账册，旁边分别记录不同入口的结果。",
+      "originalHtmlSha256": "05b75981a044bb17bcead910ed13e69386af63bb90fb2c3765e4452314d5d3cb",
+      "lessonTitle": "做出来了，为什么没人来",
+      "title": "四格看懂：做出来了，为什么没人来",
+      "sourceArtifact": "exec-787e364d-23a8-482d-99bb-6d7adf049c00.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-787e364d-23a8-482d-99bb-6d7adf049c00.png"
+    },
+    {
+      "file": "seo-2.html",
+      "slug": "seo-technical-search-basics",
+      "role": "抓取虎：蓝色工装、米色帽",
+      "takeaway": "先清技术障碍，让内容可访问可理解，再通过平台报告观察索引情况。",
+      "panels": [
+        {
+          "label": "关键内容要能读到",
+          "text": "检查返回页面与渲染结果，让正文和内部链接可被访问。",
+          "alt": "抓取虎打开网站模型，发现透明外壳里面有完整正文卡和链接路线。"
+        },
+        {
+          "label": "每页主题清楚",
+          "text": "独立标题、描述与正文对应，避免模糊或重复的页面说明。",
+          "alt": "抓取虎给不同主题的页面卡分别装上匹配图形标签。"
+        },
+        {
+          "label": "整理站点发现信号",
+          "text": "核对 sitemap、robots、canonical 与语言关联，避免自相矛盾。",
+          "alt": "抓取虎将站点地图册、抓取闸门和正式地址卡接到同一检查台。"
+        },
+        {
+          "label": "提交后继续看报告",
+          "text": "提交地图是发现线索，不能保证抓取、索引或排名。",
+          "alt": "抓取虎递出站点地图后，查看仍在变化的索引状态板。"
+        }
+      ],
+      "scenePrompt": "角色：抓取虎：蓝色工装、米色帽。从左到右四格，每格一个完整场景：第1格：抓取虎打开网站模型，发现透明外壳里面有完整正文卡和链接路线。 第2格：抓取虎给不同主题的页面卡分别装上匹配图形标签。 第3格：抓取虎将站点地图册、抓取闸门和正式地址卡接到同一检查台。 第4格：抓取虎递出站点地图后，查看仍在变化的索引状态板。",
+      "originalHtmlSha256": "1da751a8854a573e09976269e83d5c12a39cd8fbee5bb9d02ed976639d3b151c",
+      "lessonTitle": "SEO 最低可行清单：能被抓、能被读懂、能被收录",
+      "title": "四格看懂：SEO 最低可行清单：能被抓、能被读懂、能被收录",
+      "sourceArtifact": "exec-6592594e-3da0-4ca4-b6c0-efacaffbba39.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-6592594e-3da0-4ca4-b6c0-efacaffbba39.png"
+    },
+    {
+      "file": "seo-3.html",
+      "slug": "seo-citable-content-and-bots",
+      "role": "引用虎：紫色马甲、青绿围巾",
+      "takeaway": "把答案写清并提供来源，机器可读信息与抓取策略要按引擎规则核对。",
+      "panels": [
+        {
+          "label": "先写能独立理解的答案",
+          "text": "直接回答问题，保留必要背景、依据和适用范围。",
+          "alt": "引用虎从一叠铺垫卡中选出完整回答卡，旁边附上来源小册。"
+        },
+        {
+          "label": "标记与可见内容一致",
+          "text": "结构化数据帮助表达内容，但格式通过不保证富结果或 AI 引用。",
+          "alt": "引用虎对照网页卡与结构化模具，确保两边图形信息对应。"
+        },
+        {
+          "label": "导览文件按需要维护",
+          "text": "llms.txt 是社区提案，不能当成所有引擎收录或排名的必要条件。",
+          "alt": "引用虎把小型导览册放在站点入口，主通道仍连接完整正文书架。"
+        },
+        {
+          "label": "分清机器人用途与结果",
+          "text": "搜索、训练和用户抓取用途不同；日志中的请求不能证明已收录或引用。",
+          "alt": "引用虎在同一日志台区分放大镜、训练齿轮和用户图标的请求卡，再查看独立引用证据。"
+        }
+      ],
+      "scenePrompt": "角色：引用虎：紫色马甲、青绿围巾。从左到右四格，每格一个完整场景：第1格：引用虎从一叠铺垫卡中选出完整回答卡，旁边附上来源小册。 第2格：引用虎对照网页卡与结构化模具，确保两边图形信息对应。 第3格：引用虎把小型导览册放在站点入口，主通道仍连接完整正文书架。 第4格：引用虎在同一日志台区分放大镜、训练齿轮和用户图标的请求卡，再查看独立引用证据。",
+      "originalHtmlSha256": "905fd3f995e56f9e6eaa7a58c8b45e8b487f45d7d82904fd32a51d6fb09c090f",
+      "lessonTitle": "GEO：让 AI 引擎愿意引用你",
+      "title": "四格看懂：GEO：让 AI 引擎愿意引用你",
+      "sourceArtifact": "exec-e82cd50a-66b8-4711-bf48-da7803ce7b81.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-e82cd50a-66b8-4711-bf48-da7803ce7b81.png"
+    },
+    {
+      "file": "seo-4.html",
+      "slug": "seo-search-audit-case",
+      "role": "审计虎：棕色马甲、蓝围巾",
+      "takeaway": "案例数据先认日期和来源，按发现、修复、验收形成自己的审计闭环。",
+      "panels": [
+        {
+          "label": "先标明案例与口径",
+          "text": "课程中的历史案例用于演示方法，不能直接当作本站当前成绩。",
+          "alt": "审计虎在案例档案盒上放好日期卡，与自己站点的空白报告分开放置。"
+        },
+        {
+          "label": "用可复现动作找缺口",
+          "text": "对照实际页面、地图清单、页面元数据与平台索引报告。",
+          "alt": "审计虎把站点页面卡逐张比对地图册，发现遗漏的语言卡。"
+        },
+        {
+          "label": "让修复进入构建与流程",
+          "text": "自动生成正确清单和元数据，同时维护真实访问控制与预览规则。",
+          "alt": "审计虎调整构建工位，让新页面卡自动附上元数据，受限柜仍保留门锁。"
+        },
+        {
+          "label": "分开验动作和看效果",
+          "text": "本地检查确认修复，后续再按日期观察抓取、索引和引用。",
+          "alt": "审计虎在同一台账分别记录完成的修复卡与尚待观察的效果图。"
+        }
+      ],
+      "scenePrompt": "角色：审计虎：棕色马甲、蓝围巾。从左到右四格，每格一个完整场景：第1格：审计虎在案例档案盒上放好日期卡，与自己站点的空白报告分开放置。 第2格：审计虎把站点页面卡逐张比对地图册，发现遗漏的语言卡。 第3格：审计虎调整构建工位，让新页面卡自动附上元数据，受限柜仍保留门锁。 第4格：审计虎在同一台账分别记录完成的修复卡与尚待观察的效果图。",
+      "originalHtmlSha256": "610ae2e93bf00a32d5f330c8ade2f2f65af391a7ae4d825869d4166e5092916e",
+      "lessonTitle": "拆案例站点：Google 收录 693 页，Bing 只有 50 页",
+      "title": "四格看懂：拆案例站点：Google 收录 693 页，Bing 只有 50 页",
+      "sourceArtifact": "exec-28f86553-915f-4a78-af88-dd2a37cfb3d4.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-28f86553-915f-4a78-af88-dd2a37cfb3d4.png"
+    },
+    {
+      "file": "seo-5.html",
+      "slug": "seo-search-content-priorities",
+      "role": "选题虎：橙色夹克、青绿围巾",
+      "takeaway": "从用户的真实问题排序选题，用有依据的经验写内容并持续更新。",
+      "panels": [
+        {
+          "label": "从用户问题出发",
+          "text": "把功能翻译成用户会问的具体问题，先理解搜索意图。",
+          "alt": "选题虎把产品齿轮卡翻成几张不同用户问题图形卡。"
+        },
+        {
+          "label": "按价值与竞争排序",
+          "text": "比较相关性、需求和已有答案质量，选择自己能提供帮助的切口。",
+          "alt": "选题虎在排序台比较问题卡与现有答案册，将合适选题移到前方。"
+        },
+        {
+          "label": "用真实材料写出差异",
+          "text": "经验、过程与数据先核对，涉及他人信息时做好必要处理。",
+          "alt": "选题虎把真实账单、事故时间轴和脱敏记录整理成有来源的文章册。"
+        },
+        {
+          "label": "更新与新增一起安排",
+          "text": "AI 可辅助整理，发布前仍需查事实，避免低价值批量堆页。",
+          "alt": "选题虎与机器人一起整理旧文和新稿，将未核对稿留在待审托盘。"
+        }
+      ],
+      "scenePrompt": "角色：选题虎：橙色夹克、青绿围巾。从左到右四格，每格一个完整场景：第1格：选题虎把产品齿轮卡翻成几张不同用户问题图形卡。 第2格：选题虎在排序台比较问题卡与现有答案册，将合适选题移到前方。 第3格：选题虎把真实账单、事故时间轴和脱敏记录整理成有来源的文章册。 第4格：选题虎与机器人一起整理旧文和新稿，将未核对稿留在待审托盘。",
+      "originalHtmlSha256": "8ebc119fca6ad8bdd299ba27d081494f638445f2ef43bb9b23402c06256ac53d",
+      "lessonTitle": "一个人的优先级：先写能被搜到的问题",
+      "title": "四格看懂：一个人的优先级：先写能被搜到的问题",
+      "sourceArtifact": "exec-8ff8ceee-a416-4df7-91f9-11e57e0a5313.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-8ff8ceee-a416-4df7-91f9-11e57e0a5313.png"
+    },
+    {
+      "file": "seo-final.html",
+      "slug": "seo-discovery-acceptance",
+      "role": "验收虎：青绿背心、蓝色袖衬衣",
+      "takeaway": "用可检查的项目验动作，再分别测量抓取、索引、来源访问与实际引用。",
+      "panels": [
+        {
+          "label": "清单每项都要有证据",
+          "text": "打开页面、查结构、看地图和报告，完成情况能够复核。",
+          "alt": "验收虎拿检查册逐项比对网站工位上的正文、地图和标题卡。"
+        },
+        {
+          "label": "动作完成不等于效果出现",
+          "text": "技术检查通过后，是否索引、展示和引用仍由相应系统决定。",
+          "alt": "验收虎把已完成清单放到一边，观察另一块仍有空格的效果状态板。"
+        },
+        {
+          "label": "各类指标分别记录",
+          "text": "抓取日志、索引报告、来源访问与引用测试互相补充，不能互相冒充。",
+          "alt": "验收虎在四个不同图标的记录槽分别收集请求卡、索引卡、访客卡和引用卡。"
+        },
+        {
+          "label": "统一口径持续复查",
+          "text": "给数据标日期、方法和范围，再根据变化安排下一步。",
+          "alt": "验收虎将新记录追加到日期账册，用放大镜选择下一项需要修复的页面。"
+        }
+      ],
+      "scenePrompt": "角色：验收虎：青绿背心、蓝色袖衬衣。从左到右四格，每格一个完整场景：第1格：验收虎拿检查册逐项比对网站工位上的正文、地图和标题卡。 第2格：验收虎把已完成清单放到一边，观察另一块仍有空格的效果状态板。 第3格：验收虎在四个不同图标的记录槽分别收集请求卡、索引卡、访客卡和引用卡。 第4格：验收虎将新记录追加到日期账册，用放大镜选择下一项需要修复的页面。",
+      "originalHtmlSha256": "74790293cfafd52771945e65de1a7795a97f7b77a95fdc744221dad63ae4de76",
+      "lessonTitle": "被搜到验收清单：上线前再过一遍",
+      "title": "四格看懂：被搜到验收清单：上线前再过一遍",
+      "sourceArtifact": "exec-31a6d17f-fb08-4cd6-88b4-9b9394b599a1.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-31a6d17f-fb08-4cd6-88b4-9b9394b599a1.png"
+    }
+  ]
+}

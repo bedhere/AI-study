@@ -43,7 +43,7 @@
         <div class="kicker">工具设计的艺术</div>
         <h1>Milvus 作为 Agent 知识库工具</h1>
         <p class="subtitle">让 Agent 自己判断何时需要企业资料；工具负责检索，Agent 负责基于 ToolMessage 组织答案。</p>
-      </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>把向量检索封成 search_knowledge：ToolMessage、记忆分层与调用/不调用的测试</p></aside><section class="lesson-comic" data-lesson-comic="vector-db-5.html"><noscript><h2>四格看懂：Milvus 作为 Agent 知识库工具</h2><img src="assets/comics/engineering-knowledge-tool.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Milvus 作为 Agent 知识库工具"><ol><li><b>判断是否需要资料</b>：问题需要企业知识时，才调用知识库检索。</li><li><b>查询先守边界</b>：查询、权限过滤和检索范围共同决定可返回的材料。</li><li><b>返回片段与来源</b>：工具返回匹配片段及来源信息，相关度并不保证答案正确。</li><li><b>测试调用与不调用</b>：检查需要检索、不需检索和无结果等情况。</li></ol><p>知识库工具提供可核查的检索材料，再由 Agent 组织回答。</p></noscript></section><!--seo:end-->      <div class="sec-label">一次工具调用</div>
+      </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>把向量检索封成 search_knowledge：ToolMessage、记忆分层与调用/不调用的测试</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="vector-db-5.html"><noscript><h2>四格看懂：Milvus 作为 Agent 知识库工具</h2><img src="assets/comics/engineering-knowledge-tool.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Milvus 作为 Agent 知识库工具"><ol><li><b>判断是否需要资料</b>：问题需要企业知识时，才调用知识库检索。</li><li><b>查询先守边界</b>：查询、权限过滤和检索范围共同决定可返回的材料。</li><li><b>返回片段与来源</b>：工具返回匹配片段及来源信息，相关度并不保证答案正确。</li><li><b>测试调用与不调用</b>：检查需要检索、不需检索和无结果等情况。</li></ol><p>知识库工具提供可核查的检索材料，再由 Agent 组织回答。</p></noscript></section>      <div class="sec-label">一次工具调用</div>
       <div class="vdb-flow">
         <div class="vdb-step">
           <span class="vdb-num">1</span>

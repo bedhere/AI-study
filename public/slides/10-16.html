@@ -110,7 +110,7 @@
     <div class="kicker">安全与容器化</div>
     <h1>沙箱与凭证隔离</h1>
     <p class="subtitle">Agent 生成的代码和用户的密钥永远不能在同一个地方。这是安全架构的硬性要求，不只是最佳实践的建议。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>生成的代码和密钥永远不在同一个容器里。结构性安全比靠提示词更可靠</p></aside><section class="lesson-comic" data-lesson-comic="10-16.html"><noscript><h2>四格看懂：沙箱与凭证隔离</h2><img src="assets/comics/engineering-sandbox-credentials.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：沙箱与凭证隔离"><ol><li><b>限制执行范围</b>：按任务约束文件、网络、进程及可使用资源。</li><li><b>凭证单独管理</b>：避免把长期敏感密钥直接交给不可信执行代码。</li><li><b>按授权代理调用</b>：由受控通道提供必要能力，并限制对象和操作范围。</li><li><b>核查边界与记录</b>：测试拒绝路径、撤销权限和审计记录，持续检查配置。</li></ol><p>用执行隔离和受控凭证通道限制影响范围。</p></noscript></section><!--seo:end-->  <!-- ===== 核心原则 ===== -->
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>生成的代码和密钥永远不在同一个容器里。结构性安全比靠提示词更可靠</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="10-16.html"><noscript><h2>四格看懂：沙箱与凭证隔离</h2><img src="assets/comics/engineering-sandbox-credentials.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：沙箱与凭证隔离"><ol><li><b>限制执行范围</b>：按任务约束文件、网络、进程及可使用资源。</li><li><b>凭证单独管理</b>：避免把长期敏感密钥直接交给不可信执行代码。</li><li><b>按授权代理调用</b>：由受控通道提供必要能力，并限制对象和操作范围。</li><li><b>核查边界与记录</b>：测试拒绝路径、撤销权限和审计记录，持续检查配置。</li></ol><p>用执行隔离和受控凭证通道限制影响范围。</p></noscript></section>  <!-- ===== 核心原则 ===== -->
   <div class="sec-label">核心原则</div>
 
   <div class="core-principle reveal">

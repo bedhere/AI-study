@@ -141,7 +141,7 @@
     <div class="kicker">Agent 设计模式</div>
     <h1>从 Prompt 工程到上下文工程</h1>
     <p class="subtitle">当我们从单轮对话走向多步 Agent，仅仅优化 Prompt 已经远远不够。真正的挑战是：如何策展每一轮推理时送给模型的全部 Token。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>在每一轮推理时策展最优的 Token 组合，写好提示词只是其中一环</p></aside><section class="lesson-comic" data-lesson-comic="10-3.html"><noscript><h2>四格看懂：从 Prompt 工程到上下文工程</h2><img src="assets/comics/engineering-context-whole-input.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：从 Prompt 工程到上下文工程"><ol><li><b>不只是一句提示</b>：系统规则、工具定义、历史和外部资料都会进入输入。</li><li><b>筛选相关内容</b>：围绕当前任务取用高信号信息，避免无关材料挤占空间。</li><li><b>保持规则清楚</b>：核心指令、工具职责与典型示例要清晰可辨。</li><li><b>每轮维护输入</b>：任务变化后更新状态，按需补资料并验证效果。</li></ol><p>上下文工程管理每轮输入的整体信息。</p></noscript></section><!--seo:end-->  <div class="sec-label">概念演进</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>在每一轮推理时策展最优的 Token 组合，写好提示词只是其中一环</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="10-3.html"><noscript><h2>四格看懂：从 Prompt 工程到上下文工程</h2><img src="assets/comics/engineering-context-whole-input.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：从 Prompt 工程到上下文工程"><ol><li><b>不只是一句提示</b>：系统规则、工具定义、历史和外部资料都会进入输入。</li><li><b>筛选相关内容</b>：围绕当前任务取用高信号信息，避免无关材料挤占空间。</li><li><b>保持规则清楚</b>：核心指令、工具职责与典型示例要清晰可辨。</li><li><b>每轮维护输入</b>：任务变化后更新状态，按需补资料并验证效果。</li></ol><p>上下文工程管理每轮输入的整体信息。</p></noscript></section>  <div class="sec-label">概念演进</div>
 
   <div class="evolution-strip reveal">
     <div class="evo-node">

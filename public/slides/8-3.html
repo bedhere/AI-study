@@ -137,7 +137,7 @@
     <div class="kicker">成本优化</div>
     <h1>动态时间戳：最贵的 System Prompt</h1>
     <p class="subtitle">一个小小的设计错误，可以让你的 KV Cache 完全失效，每轮对话成本翻倍：在 System Prompt 里写动态时间。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>错误设计 vs 正确设计，三种时间处理方案对比切换</p></aside><section class="lesson-comic" data-lesson-comic="8-3.html"><noscript><h2>四格看懂：动态时间戳：最贵的 System Prompt</h2><img src="assets/comics/harness-stable-prefix.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：动态时间戳：最贵的 System Prompt"><ol><li><b>前缀不断变化</b>：时间、随机标识等动态内容可能影响前缀复用。</li><li><b>稳定部分放一起</b>：把固定指令和可复用资料组织成稳定前缀。</li><li><b>动态信息按需提供</b>：需要当前时间时，仍应明确传入或通过工具获取。</li><li><b>观察真实收益</b>：检查命中、费用与任务正确性，避免为缓存删掉必要信息。</li></ol><p>将稳定说明与动态信息合理分开，减少不必要的前缀变化，并实测缓存。</p></noscript></section><!--seo:end-->  <div class="sec-label">错误 vs 正确设计</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>错误设计 vs 正确设计，三种时间处理方案对比切换</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="8-3.html"><noscript><h2>四格看懂：动态时间戳：最贵的 System Prompt</h2><img src="assets/comics/harness-stable-prefix.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：动态时间戳：最贵的 System Prompt"><ol><li><b>前缀不断变化</b>：时间、随机标识等动态内容可能影响前缀复用。</li><li><b>稳定部分放一起</b>：把固定指令和可复用资料组织成稳定前缀。</li><li><b>动态信息按需提供</b>：需要当前时间时，仍应明确传入或通过工具获取。</li><li><b>观察真实收益</b>：检查命中、费用与任务正确性，避免为缓存删掉必要信息。</li></ol><p>将稳定说明与动态信息合理分开，减少不必要的前缀变化，并实测缓存。</p></noscript></section>  <div class="sec-label">错误 vs 正确设计</div>
 
   <div class="compare-grid">
     <div class="sys-box bad">

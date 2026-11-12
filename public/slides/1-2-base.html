@@ -179,7 +179,7 @@
     <div class="kicker">基础原理</div>
     <h1>Base 模型：Token 推 Token 机器</h1>
     <p class="subtitle">训练结束后得到的原始模型，它只做一件事。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>训练结束后得到什么？逐步生成 + 概率分布实时更新</p></aside><section class="lesson-comic" data-lesson-comic="1-2-base.html"><noscript><h2>四格看懂：Base 模型：Token 推 Token 机器</h2><img src="assets/comics/core-base-loop.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Base 模型：Token 推 Token 机器"><ol><li><b>先给一段前文</b>：Base 模型接收序列，再估计后续词元的分布。</li><li><b>从分布中选下一块</b>：采样或解码策略决定怎么选择，不一定永远取最高概率。</li><li><b>追加以后再继续</b>：把新词元加入序列，重复生成，直到停止条件。</li><li><b>别默认它就是助手</b>：擅长续写的基础模型，还需要合适的对话格式与训练来适配助手任务。</li></ol><p>自回归语言模型逐词元生成；采样不一定总选概率最高项，基础模型也不等于助手。</p></noscript></section><!--seo:end-->  <div class="sec-label">训练结束后</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>训练结束后得到什么？逐步生成 + 概率分布实时更新</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="1-2-base.html"><noscript><h2>四格看懂：Base 模型：Token 推 Token 机器</h2><img src="assets/comics/core-base-loop.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Base 模型：Token 推 Token 机器"><ol><li><b>先给一段前文</b>：Base 模型接收序列，再估计后续词元的分布。</li><li><b>从分布中选下一块</b>：采样或解码策略决定怎么选择，不一定永远取最高概率。</li><li><b>追加以后再继续</b>：把新词元加入序列，重复生成，直到停止条件。</li><li><b>别默认它就是助手</b>：擅长续写的基础模型，还需要合适的对话格式与训练来适配助手任务。</li></ol><p>自回归语言模型逐词元生成；采样不一定总选概率最高项，基础模型也不等于助手。</p></noscript></section>  <div class="sec-label">训练结束后</div>
 
   <div class="big-claim">
     得到的就是一个

@@ -1,8 +1,8 @@
 # 漫画补全进度（2026-11-12）
 
-从交接时的 193 篇继续，今日累计新增 **232 篇、928 格**。简体中文目录共 445 篇，已接入 **425 篇、1700 格**，覆盖率 **95.5%**，剩余 **20 篇**。
+从交接时的 193 篇继续，今日累计新增 **252 篇、1008 格**。简体中文目录共 445 篇，已接入 **445 篇、1780 格**，覆盖率 **100.0%**，剩余 **0 篇**。
 
-当前仍在继续生成；完成一个批次只作为保存与验证检查点。
+简体中文目录已全部覆盖。
 
 ## 已接受批次
 
@@ -22,12 +22,15 @@
 | [comic-complete-grok-a-20261112](comic-complete-grok-a-20261112.json) | 12 |
 | [comic-complete-grok-b-20261112](comic-complete-grok-b-20261112.json) | 13 |
 | [comic-complete-interaction-20261112](comic-complete-interaction-20261112.json) | 10 |
+| [comic-complete-lei-a-20261112](comic-complete-lei-a-20261112.json) | 8 |
+| [comic-complete-lei-b-20261112](comic-complete-lei-b-20261112.json) | 6 |
 | [comic-complete-opc-a-20261112](comic-complete-opc-a-20261112.json) | 8 |
 | [comic-complete-opc-b-20261112](comic-complete-opc-b-20261112.json) | 8 |
 | [comic-complete-oss-20261112](comic-complete-oss-20261112.json) | 9 |
 | [comic-complete-psychology-a-20261112](comic-complete-psychology-a-20261112.json) | 10 |
 | [comic-complete-psychology-b-20261112](comic-complete-psychology-b-20261112.json) | 9 |
 | [comic-complete-self-improvement-20261112](comic-complete-self-improvement-20261112.json) | 9 |
+| [comic-complete-seo-20261112](comic-complete-seo-20261112.json) | 6 |
 | [comic-complete-taste-20261112](comic-complete-taste-20261112.json) | 12 |
 | [comic-complete-vibe-coding-20261112](comic-complete-vibe-coding-20261112.json) | 14 |
 
@@ -58,13 +61,14 @@
 | 开源、蒸馏与本地部署 | 9 | 9 | 0 |
 | 七套篇章自测 · 350 道题 | 9 | 9 | 0 |
 | 一人公司 OPC | 16 | 16 | 0 |
-| 被搜到：SEO 与 GEO | 0 | 6 | 6 |
-| 雷军创业课 | 0 | 14 | 14 |
+| 被搜到：SEO 与 GEO | 6 | 6 | 0 |
+| 雷军创业课 | 14 | 14 | 0 |
 
 完整逐篇差集见 [机器进度记录](../reports/comic-progress-20261112.json) 的 remainingChapters；运行时副本在 outputs/comic-complete/remaining-20261112.json。
 
 ## 文件与恢复
 
+- 最终修正了来源案例说明与真实摘要的定位，并将漫画移出 `<!--seo:begin-->` / `<!--seo:end-->` 自动管理区块；正文内容与原始图片来源保留。
 - 实际网站资源：public/slides/assets/comics/。
 - 最终原始 PNG：outputs/comic-originals/<batchId>/。
 - 工具返回图和修正前图：outputs/comic-generated/<batchId>/；计划同时保留真实 generationSourcePath。
@@ -74,14 +78,15 @@
 
 ## 最新验证
 
-- npm test：99/99。见 [测试记录](../reports/comic-425-tests-20261112.log)。
-- verify:content：无错误。见 [内容记录](../reports/comic-425-content-20261112.log)。
-- check:resources：无缺失引用。见 [资源记录](../reports/comic-425-resources-20261112.log)。
-- check:cleanup：无遗留问题。见 [清理记录](../reports/comic-425-cleanup-20261112.log)。
-- 全部 2125 个 WebP 已解码核对尺寸；单篇四格最大 201.7 KiB，均低于 250 KiB。
-- 对照基线 b7dee1875f12de989c9132ddad5795a3729c1b5d，新增 232 篇正文在去除漫画插入与旧封面后保持一致（忽略空白）；原 193 篇来源记录保持一致。
+- 全部 445 篇漫画均位于实际摘要或计划指定的页头之后，且位于摘要自动生成区块之外。见 [插入位置记录](../reports/comic-445-anchors-20261112.log)。
+- npm test：99/99。见 [测试记录](../reports/comic-445-tests-20261112.log)。
+- verify:content：无错误。见 [内容记录](../reports/comic-445-content-20261112.log)。
+- check:resources：无缺失引用。见 [资源记录](../reports/comic-445-resources-20261112.log)。
+- check:cleanup：无遗留问题。见 [清理记录](../reports/comic-445-cleanup-20261112.log)。
+- 全部 2225 个 WebP 已解码核对尺寸；单篇四格最大 201.7 KiB，均低于 250 KiB。
+- 对照基线 b7dee1875f12de989c9132ddad5795a3729c1b5d，全部 445 篇正文在去除漫画插入与旧封面后保持一致（忽略空白）；原 193 篇来源记录保持一致。
 - 浏览器已抽查桌面四列、390×844 手机两列和逐格讲解；继续复用相同组件。
 
 ## 发布边界
 
-本地仓库 425 篇，沿用授权分批提交和推送 main。服务器仍为已发布的 193 篇，本次持续生成尚未执行服务器部署。部署背景见 [193 篇部署记录](server-comics-193-20261111.md)。
+本地仓库 445 篇，沿用授权分批提交和推送 main。服务器仍为已发布的 193 篇，本次补全尚未执行服务器部署。部署背景见 [193 篇部署记录](server-comics-193-20261111.md)。

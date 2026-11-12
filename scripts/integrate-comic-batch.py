@@ -48,7 +48,7 @@ def summary_end(page, anchor=None):
             classes = dict(attrs).get('class', '').split()
             if self.end is not None: return
             matches = tag == 'header' if anchor == 'first-header-end' else (
-                ('xa-tldr' in classes and 'company-example-note' not in classes) or 'qa-answer' in classes)
+                ('xa-tldr' in classes and not {'company-example-note', 'company-source-case'}.intersection(classes)) or 'qa-answer' in classes)
             if self.tag is None and matches:
                 self.tag = tag; self.depth = 1
             elif tag == self.tag: self.depth += 1
@@ -58,6 +58,10 @@ def summary_end(page, anchor=None):
             if self.depth == 0:
                 line, col = self.getpos()
                 self.end = page.index('>', self.lines[line - 1] + col) + 1
+                # Keep comics outside the generated summary so a later SEO pass preserves them.
+                closing_marker = re.match(r'\s*<!--seo:end-->', page[self.end:])
+                if closing_marker:
+                    self.end += closing_marker.end()
     assert anchor in (None, 'first-header-end'), 'Unsupported insertion anchor'
     parser = Summary(); parser.feed(page)
     assert parser.end is not None, 'No supported summary insertion anchor'

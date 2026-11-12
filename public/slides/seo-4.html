@@ -122,16 +122,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">被搜到 · 4 / 6</div>
-    <h1>拆案例站点：Google 收录 693 页，Bing 只有 50 页</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="practice"><div><strong>拆案例站点：Google 收录 693 页，Bing 只有 50 页</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>拆案例站点：Google 收录 693 页，Bing 只有 50 页</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">前两节的清单和杠杆，这一节全部落在一个真实病人身上：案例站点自己。2026 年 8 月 10 日我们给全站做了一次 SEO / GEO 审计，查出十个缺口，当周修完一轮。<b>这一节挑五个最有代表性的，每个讲清怎么发现的、改了什么、拿什么验收。</b></p>
     <div class="chips"><span class="chip">真实案例</span><span class="chip">收录对比</span><span class="chip">审计报告</span><span class="chip">软墙拆解</span></div>
-  </header><aside class="xa-tldr company-source-case"><p>本页保留课程来源项目的公开网站案例作为教学材料。案例经历、流量与收录数据不属于方片内部平台，代码示例也不代表当前学堂的实际实现。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>案例站点 2026 年 8 月真实审计复盘：sitemap 漏了全部英韩页、Q&amp;A 页白扔了 FAQ 引用、日志把爬虫全丢弃。每个缺口讲清怎么发现、改了什么、拿什么验收</p></aside><!--seo:end-->  <section class="reveal">
+  </header><aside class="xa-tldr company-source-case"><p>本页保留课程来源项目的公开网站案例作为教学材料。案例经历、流量与收录数据不属于方片内部平台，代码示例也不代表当前学堂的实际实现。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>案例站点 2026 年 8 月真实审计复盘：sitemap 漏了全部英韩页、Q&amp;A 页白扔了 FAQ 引用、日志把爬虫全丢弃。每个缺口讲清怎么发现、改了什么、拿什么验收</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="seo-4.html"><noscript><h2>四格看懂：拆案例站点：Google 收录 693 页，Bing 只有 50 页</h2><img src="assets/comics/seo-search-audit-case.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：拆案例站点：Google 收录 693 页，Bing 只有 50 页"><ol><li><b>先标明案例与口径</b>：课程中的历史案例用于演示方法，不能直接当作本站当前成绩。</li><li><b>用可复现动作找缺口</b>：对照实际页面、地图清单、页面元数据与平台索引报告。</li><li><b>让修复进入构建与流程</b>：自动生成正确清单和元数据，同时维护真实访问控制与预览规则。</li><li><b>分开验动作和看效果</b>：本地检查确认修复，后续再按日期观察抓取、索引和引用。</li></ol><p>案例数据先认日期和来源，按发现、修复、验收形成自己的审计闭环。</p></noscript></section>  <section class="reveal">
     <div class="sec-label">先交代病人的底子</div>
     <p class="desc">审计那天的案例站点是这样的：759 个 HTML 页面，中英韩三语，绝大多数页面有 description（743 页）和 JSON-LD（741 页）<span class="data-note">2026-08-10 实测</span>。也就是说，上一节那张最低可行清单，它大部分是过关的。按很多教程的标准，这已经算「SEO 做得不错的站」了。</p>
     <p class="desc" style="margin-top:16px">但一做实测就露馅了。这正是本章反复强调「自己动手核对」的原因：<b>清单过了不代表没病，数字才是诊断书。</b>第一项实测就查出了全场最大的病。</p>

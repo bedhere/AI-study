@@ -119,7 +119,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
     <div class="kicker">成本优化</div>
     <h1>图片 Token：<em>像素也在烧钱</em></h1>
     <p class="subtitle">多模态模型不按「一张图」计费，而是把图片切成像素块换算成 Token。拖动滑块改变分辨率，实时看 Token 成本变化。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>图片计费公式、缩放机制、分辨率陷阱、按任务分级策略</p></aside><section class="lesson-comic" data-lesson-comic="8-5.html"><noscript><h2>四格看懂：图片 Token：像素也在烧钱</h2><img src="assets/comics/harness-vision-meter.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：图片 Token：像素也在烧钱"><ol><li><b>图片也占资源</b>：视觉输入会经过模型规定的缩放、切块或编码流程。</li><li><b>尺寸影响处理量</b>：分辨率、裁切与细节设置可能改变用量。</li><li><b>先查对应规则</b>：不同模型的图像计量与价格方式可能不同。</li><li><b>用实测校准估算</b>：用代表性图片检查费用与识别质量。</li></ol><p>图片输入的计量方式依模型而异；用适用规则估算，并以实际用量核对。</p></noscript></section><!--seo:end-->  <div class="sec-label">核心计费公式</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>图片计费公式、缩放机制、分辨率陷阱、按任务分级策略</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="8-5.html"><noscript><h2>四格看懂：图片 Token：像素也在烧钱</h2><img src="assets/comics/harness-vision-meter.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：图片 Token：像素也在烧钱"><ol><li><b>图片也占资源</b>：视觉输入会经过模型规定的缩放、切块或编码流程。</li><li><b>尺寸影响处理量</b>：分辨率、裁切与细节设置可能改变用量。</li><li><b>先查对应规则</b>：不同模型的图像计量与价格方式可能不同。</li><li><b>用实测校准估算</b>：用代表性图片检查费用与识别质量。</li></ol><p>图片输入的计量方式依模型而异；用适用规则估算，并以实际用量核对。</p></noscript></section>  <div class="sec-label">核心计费公式</div>
   <div class="formula-card">
     <div class="formula-title">核心计费公式</div>
     <div class="formula-eq">Token = (h̄ × w̄) / token_pixels + 2</div>

@@ -77,10 +77,12 @@ test('all accepted illustrated lessons have exactly four accessible panels with 
     assert.ok(position<(container[1]==='div'?page.lastIndexOf('</div>'):page.indexOf('</'+container[1]+'>')));
     assert.equal((page.match(/data-lesson-comic=/g)||[]).length,1);
     const firstHeader=additions.flatMap(plan=>plan.lessons).find(lesson=>lesson.file===file)?.insertionAnchor==='first-header-end';
-    const summary=[...page.matchAll(/<(aside|div)\b[^>]*class="([^"]+)"/g)].find(match=>{
-      const classes=match[2].split(/\s+/);return (classes.includes('xa-tldr')&&!classes.includes('company-example-note'))||classes.includes('qa-answer');
+    const summary=[...page.matchAll(/<(aside|div)\b[^>]*class="([^"]+)"[^>]*>[\s\S]*?<\/\1>/g)].find(match=>{
+      const classes=match[2].split(/\s+/);return (classes.includes('xa-tldr')&&!classes.some(name=>['company-example-note','company-source-case'].includes(name)))||classes.includes('qa-answer');
     });
-    assert.ok(firstHeader?position>page.indexOf('</header>'):summary&&position>summary.index,file);
+    assert.ok(firstHeader?position>page.indexOf('</header>'):summary&&position>=summary.index+summary[0].length,file);
+    const generatedSummaryStart=page.lastIndexOf('<!--seo:begin-->',position);
+    assert.ok(generatedSummaryStart<0||page.lastIndexOf('<!--seo:end-->',position)>generatedSummaryStart,'Comic inside generated summary: '+file);
     assert.ok(page.includes('comic-data.js?v=20261111complete'));
   }
 });

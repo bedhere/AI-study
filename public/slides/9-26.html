@@ -86,7 +86,7 @@
     <div class="kicker">多 Agent</div>
     <h1>定时任务的成本陷阱</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">让 Agent 每小时整理一次新闻，听起来简单。但如果复用旧会话，上下文每次都在增长，24 小时后你的成本会爆炸。一个选择就能让月账单差 10 倍。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Agent 定时跑任务，上下文是累积还是重建？一个选择差 10 倍成本</p></aside><section class="lesson-comic" data-lesson-comic="9-26.html"><noscript><h2>四格看懂：定时任务的成本陷阱</h2><img src="assets/comics/practice-recurring-job-context.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：定时任务的成本陷阱"><ol><li><b>每次都带旧记录</b>：无选择地复用会话，历史可能随执行次数增长。</li><li><b>明确本轮需要什么</b>：为独立轮次重建必要上下文，取回需要的跨轮状态。</li><li><b>控制运行与重复动作</b>：设定预算、重试和完成标记，避免重复交付。</li><li><b>比较长期用量与质量</b>：持续观察每轮成本、失败与结果完整性。</li></ol><p>独立定时任务应控制历史增长，跨轮必要状态单独保存，并避免重复副作用。</p></noscript></section><!--seo:end-->  <div class="sec-label">复用会话 vs 新建会话</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Agent 定时跑任务，上下文是累积还是重建？一个选择差 10 倍成本</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="9-26.html"><noscript><h2>四格看懂：定时任务的成本陷阱</h2><img src="assets/comics/practice-recurring-job-context.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：定时任务的成本陷阱"><ol><li><b>每次都带旧记录</b>：无选择地复用会话，历史可能随执行次数增长。</li><li><b>明确本轮需要什么</b>：为独立轮次重建必要上下文，取回需要的跨轮状态。</li><li><b>控制运行与重复动作</b>：设定预算、重试和完成标记，避免重复交付。</li><li><b>比较长期用量与质量</b>：持续观察每轮成本、失败与结果完整性。</li></ol><p>独立定时任务应控制历史增长，跨轮必要状态单独保存，并避免重复副作用。</p></noscript></section>  <div class="sec-label">复用会话 vs 新建会话</div>
 
   <div class="cost-compare">
     <div class="cost-panel reuse reveal">

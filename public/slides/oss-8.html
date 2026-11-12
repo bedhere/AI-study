@@ -86,7 +86,7 @@
     <div class="kicker">开源专题 · 在自己的机器上跑起来</div>
     <h1>你的电脑能跑多大的模型</h1>
     <p class="subtitle">前面讲的都是概念，这一节动手。选一下你的显卡或者 Mac 型号，直接看结论。看完你会发现，本地跑模型的门槛比大多数人想的低。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>选显卡或 Mac 型号实时出结论；显存换算公式、量化档位与 MoE 的显存速度错位</p></aside><section class="lesson-comic" data-lesson-comic="oss-8.html"><noscript><h2>四格看懂：你的电脑能跑多大的模型</h2><img src="assets/comics/oss-local-model-capacity.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：你的电脑能跑多大的模型"><ol><li><b>先核对可用容量</b>：显存或统一内存还要给系统与其他程序留空间。</li><li><b>量化换容量也可能换质量</b>：较低位宽压小权重，但误差影响要按任务测试。</li><li><b>总参数与激活参数分开看</b>：MoE 的权重容量不能只按一次激活的参数量估。</li><li><b>用实际负载验收</b>：上下文、并发和卸载方式都会影响内存与速度，估算只是起点。</li></ol><p>先估权重与运行内存，再按量化、上下文和硬件实测。</p></noscript></section><!--seo:end-->  <div class="sec-label">先算一次</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>选显卡或 Mac 型号实时出结论；显存换算公式、量化档位与 MoE 的显存速度错位</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="oss-8.html"><noscript><h2>四格看懂：你的电脑能跑多大的模型</h2><img src="assets/comics/oss-local-model-capacity.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：你的电脑能跑多大的模型"><ol><li><b>先核对可用容量</b>：显存或统一内存还要给系统与其他程序留空间。</li><li><b>量化换容量也可能换质量</b>：较低位宽压小权重，但误差影响要按任务测试。</li><li><b>总参数与激活参数分开看</b>：MoE 的权重容量不能只按一次激活的参数量估。</li><li><b>用实际负载验收</b>：上下文、并发和卸载方式都会影响内存与速度，估算只是起点。</li></ol><p>先估权重与运行内存，再按量化、上下文和硬件实测。</p></noscript></section>  <div class="sec-label">先算一次</div>
 
   <div class="oss-calc" id="calcMain">
     <div class="oc-controls">

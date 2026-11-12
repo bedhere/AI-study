@@ -52,7 +52,7 @@
     <div class="kicker">Grok Build · Memory Engineering</div>
     <h1>Dream 的真实机制</h1>
     <p class="subtitle">Dream 会把近期 session 日志与现有 MEMORY.md 合并成长期记忆。它由会话结束、可选周期检查或手动命令进入，并受门控与最佳努力锁共同约束。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>核对空闲门控、DreamLock、后台整理和记忆写回的实际边界</p></aside><section class="lesson-comic" data-lesson-comic="12-13.html"><noscript><h2>四格看懂：Dream 的真实机制</h2><img src="assets/comics/grok-dream-success-boundary.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Dream 的真实机制"><ol><li><b>触发后先过门控</b>：本课快照检查开关、时间和会话条件；周期检查需配置启用。</li><li><b>汇总近期记录与旧记忆</b>：先构建输入并调用模型，锁只提供最佳努力协调。</li><li><b>写回失败保留恢复机会</b>：写记忆失败时恢复旧锁状态，不能先删原始日志。</li><li><b>成功后按实际清理同步</b>：只清理允许删除的已读日志，索引跟随实际删除与新记忆更新。</li></ol><p>Dream 通过门控与最佳努力锁整理记忆，成功写回后才清理相应日志。</p></noscript></section><!--seo:end-->  <section class="objective reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>核对空闲门控、DreamLock、后台整理和记忆写回的实际边界</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="12-13.html"><noscript><h2>四格看懂：Dream 的真实机制</h2><img src="assets/comics/grok-dream-success-boundary.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Dream 的真实机制"><ol><li><b>触发后先过门控</b>：本课快照检查开关、时间和会话条件；周期检查需配置启用。</li><li><b>汇总近期记录与旧记忆</b>：先构建输入并调用模型，锁只提供最佳努力协调。</li><li><b>写回失败保留恢复机会</b>：写记忆失败时恢复旧锁状态，不能先删原始日志。</li><li><b>成功后按实际清理同步</b>：只清理允许删除的已读日志，索引跟随实际删除与新记忆更新。</li></ol><p>Dream 通过门控与最佳努力锁整理记忆，成功写回后才清理相应日志。</p></noscript></section>  <section class="objective reveal">
     <b>课程目标</b>
     <p>读懂 Dream 从触发到重建索引的完整链路，能解释 <span class="mono">DreamGate</span>、幂等要求、锁竞争和写入失败回滚各自解决什么问题。</p>
   </section>

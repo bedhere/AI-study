@@ -90,7 +90,7 @@
     <div class="kicker">PART 5 · Harness 与自我改进</div>
     <h1>让 Harness <em>改进自己</em></h1>
     <p class="subtitle">如果 LLM 能优化执行 Agent 的代码，它就能访问比手写 Prompt 大得多的设计空间。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>STOP 递归改善器 + Self-Harness 的 propose-evaluate-accept 循环</p></aside><section class="lesson-comic" data-lesson-comic="11-5.html"><noscript><h2>四格看懂：让 Harness 改进自己</h2><img src="assets/comics/improve-bounded-edits.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：让 Harness 改进自己"><ol><li><b>把失败归成模式</b>：从可验证的失败信号找重复问题，记录已尝试方案。</li><li><b>圈定允许编辑处</b>：只修改被授权的运行时部分，权限和评估器独立维护。</li><li><b>新旧任务都检查</b>：既看目标问题，也查已有能力是否退化。</li><li><b>有证据才接受</b>：结果不合格就拒绝或回退，递归并不保证进步。</li></ol><p>用失败证据提出有界修改，再验证收益与回归。</p></noscript></section><!--seo:end-->  <!-- ========== STOP ========== -->
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>STOP 递归改善器 + Self-Harness 的 propose-evaluate-accept 循环</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="11-5.html"><noscript><h2>四格看懂：让 Harness 改进自己</h2><img src="assets/comics/improve-bounded-edits.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：让 Harness 改进自己"><ol><li><b>把失败归成模式</b>：从可验证的失败信号找重复问题，记录已尝试方案。</li><li><b>圈定允许编辑处</b>：只修改被授权的运行时部分，权限和评估器独立维护。</li><li><b>新旧任务都检查</b>：既看目标问题，也查已有能力是否退化。</li><li><b>有证据才接受</b>：结果不合格就拒绝或回退，递归并不保证进步。</li></ol><p>用失败证据提出有界修改，再验证收益与回归。</p></noscript></section>  <!-- ========== STOP ========== -->
   <div class="sec-label">STOP: Self-Taught Optimizer</div>
 
   <div class="plain-talk reveal">

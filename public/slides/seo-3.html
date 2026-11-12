@@ -108,16 +108,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">被搜到 · 3 / 6</div>
-    <h1>GEO：让 AI 引擎愿意引用你</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>GEO：让 AI 引擎愿意引用你</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>GEO：让 AI 引擎愿意引用你</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">越来越多的用户跳过搜索框，直接把问题丢给 ChatGPT、Kimi 或豆包。答案由 AI 组织，你的站在不在答案里，成了新的生死线。这门手艺有个名字：<b>GEO（Generative Engine Optimization）</b>。这一节讲它的四个杠杆，每个都配一个当场能玩的教具。</p>
     <div class="chips"><span class="chip">引用竞标</span><span class="chip">一句话答案</span><span class="chip">FAQ 生成器</span><span class="chip">爬虫点名册</span></div>
-  </header><aside class="xa-tldr company-source-case"><p>本页保留课程来源项目的公开网站案例作为教学材料。案例经历、流量与收录数据不属于方片内部平台，代码示例也不代表当前学堂的实际实现。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>用户不再只搜，还在问。自包含段落、FAQ 结构化数据、llms.txt 与新鲜度信号，四个杠杆各配一个当场能玩的教具，附 AI 爬虫点名册</p></aside><!--seo:end-->  <section class="reveal">
+  </header><aside class="xa-tldr company-source-case"><p>本页保留课程来源项目的公开网站案例作为教学材料。案例经历、流量与收录数据不属于方片内部平台，代码示例也不代表当前学堂的实际实现。</p></aside><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>用户不再只搜，还在问。自包含段落、FAQ 结构化数据、llms.txt 与新鲜度信号，四个杠杆各配一个当场能玩的教具，附 AI 爬虫点名册</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="seo-3.html"><noscript><h2>四格看懂：GEO：让 AI 引擎愿意引用你</h2><img src="assets/comics/seo-citable-content-and-bots.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：GEO：让 AI 引擎愿意引用你"><ol><li><b>先写能独立理解的答案</b>：直接回答问题，保留必要背景、依据和适用范围。</li><li><b>标记与可见内容一致</b>：结构化数据帮助表达内容，但格式通过不保证富结果或 AI 引用。</li><li><b>导览文件按需要维护</b>：llms.txt 是社区提案，不能当成所有引擎收录或排名的必要条件。</li><li><b>分清机器人用途与结果</b>：搜索、训练和用户抓取用途不同；日志中的请求不能证明已收录或引用。</li></ol><p>把答案写清并提供来源，机器可读信息与抓取策略要按引擎规则核对。</p></noscript></section>  <section class="reveal">
     <div class="sec-label">搜索给链接，AI 给答案</div>
     <p class="desc">SEO 和 GEO 争的东西不一样。搜索引擎给用户十条蓝色链接，你争的是排位；AI 引擎直接给一段组织好的答案，<b>你争的是答案里的一句引用、一个署名</b>。用户可能永远不点进你的站，但「据某某站」这几个字就是新时代的曝光。</p>
     <div class="tbl-wrap"><table class="tbl">

@@ -115,7 +115,7 @@
     <div class="kicker">安全与容器化</div>
     <h1>三类风险：滥用、失控、外部攻击</h1>
     <p class="subtitle">安全不是加一层提示词就够的，需要从架构层面进行结构性设计。这里介绍一套系统化的安全分类框架。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Anthropic 的安全分类框架：用户滥用 / 模型 Misbehavior / Prompt Injection</p></aside><section class="lesson-comic" data-lesson-comic="10-15.html"><noscript><h2>四格看懂：三类风险：滥用、失控、外部攻击</h2><img src="assets/comics/engineering-three-risks.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：三类风险：滥用、失控、外部攻击"><ol><li><b>用户也可能滥用</b>：识别请求目的和允许范围，阻止越界的使用方式。</li><li><b>模型可能做错</b>：合法目标下也可能误解约束或采取错误动作。</li><li><b>外部内容可能注入</b>：网页、文件和工具返回中的指令应按其来源判断。</li><li><b>防护落实到结构</b>：组合权限控制、隔离、验证和审计，降低各类风险。</li></ol><p>区分滥用、模型不当行为和外部注入，再设计对应防护。</p></noscript></section><!--seo:end-->  <!-- ===== 三类风险 ===== -->
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>Anthropic 的安全分类框架：用户滥用 / 模型 Misbehavior / Prompt Injection</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="10-15.html"><noscript><h2>四格看懂：三类风险：滥用、失控、外部攻击</h2><img src="assets/comics/engineering-three-risks.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：三类风险：滥用、失控、外部攻击"><ol><li><b>用户也可能滥用</b>：识别请求目的和允许范围，阻止越界的使用方式。</li><li><b>模型可能做错</b>：合法目标下也可能误解约束或采取错误动作。</li><li><b>外部内容可能注入</b>：网页、文件和工具返回中的指令应按其来源判断。</li><li><b>防护落实到结构</b>：组合权限控制、隔离、验证和审计，降低各类风险。</li></ol><p>区分滥用、模型不当行为和外部注入，再设计对应防护。</p></noscript></section>  <!-- ===== 三类风险 ===== -->
   <div class="sec-label">安全分类框架</div>
 
   <p class="desc reveal">每种 AI 产品面对的威胁模型不同，但所有风险都可以归入三个类别。理解这三类风险是设计安全架构的第一步。</p>

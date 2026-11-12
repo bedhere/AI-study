@@ -435,7 +435,7 @@ canvas#heatmap {
       <div class="kicker">基础原理</div>
       <h1 id="stage-title">词表与训练</h1>
       <p class="subtitle" id="stage-desc">大模型学习的第一步：读取人类提供的海量文本数据。</p>
-    </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从语料到词间矩阵，Token 化 + 注意力权重交互演示</p></aside><section class="lesson-comic" data-lesson-comic="1-2-vocab.html"><noscript><h2>四格看懂：词表与训练</h2><img src="assets/comics/core-vocabulary.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：词表与训练"><ol><li><b>从文本切词元</b>：分词器把文字转换成词元序列，具体切法取决于词表和规则。</li><li><b>对照词表编码</b>：词元会对应编号等内部表示，不等于按中文词语逐字切。</li><li><b>结合上下文关联</b>：模型计算序列中的关系；页面矩阵只是帮助理解的示意。</li><li><b>再看下一步候选</b>：前文影响候选分布，重新采样可能产生不同后续。</li></ol><p>词表、分词和上下文关系是不同层次，示意图不等于真实模型全部运算。</p></noscript></section><!--seo:end-->    <div class="controls">
+    </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从语料到词间矩阵，Token 化 + 注意力权重交互演示</p></aside><!--seo:end--><section class="lesson-comic" data-lesson-comic="1-2-vocab.html"><noscript><h2>四格看懂：词表与训练</h2><img src="assets/comics/core-vocabulary.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：词表与训练"><ol><li><b>从文本切词元</b>：分词器把文字转换成词元序列，具体切法取决于词表和规则。</li><li><b>对照词表编码</b>：词元会对应编号等内部表示，不等于按中文词语逐字切。</li><li><b>结合上下文关联</b>：模型计算序列中的关系；页面矩阵只是帮助理解的示意。</li><li><b>再看下一步候选</b>：前文影响候选分布，重新采样可能产生不同后续。</li></ol><p>词表、分词和上下文关系是不同层次，示意图不等于真实模型全部运算。</p></noscript></section>    <div class="controls">
       <div class="stage-hint" id="stage-hint">本页演示 · 第 1/4 步</div>
       <button id="next-btn" onclick="nextStage()">▶ 播放下一步：文本分词</button>
     </div>
