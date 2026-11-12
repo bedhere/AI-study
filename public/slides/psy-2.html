@@ -147,15 +147,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">专题篇章 · AI 产品心理学</div>
-    <h1>等待心理学：难受的从来不是那 5 秒</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>等待心理学：难受的从来不是那 5 秒</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>等待心理学：难受的从来不是那 5 秒</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">第 1 课你已经亲手测过：同样 5 秒，体感能差两三倍。这一课把背后的规律讲透。服务运营研究把排队心理总结成几条定律，条条能翻译成 AI 产品的设计决策，<b>翻译完你会发现：大部分「太慢了」的差评，修的其实是呈现，模型一行都不用动</b>。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>排队研究三条定律配迪士尼与休斯顿机场案例；拖动耗时滑块看三档呈现决策：1 秒内直接出、10 秒内必须流式、超 10 秒转异步</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>排队研究三条定律配迪士尼与休斯顿机场案例；拖动耗时滑块看三档呈现决策：1 秒内直接出、10 秒内必须流式、超 10 秒转异步</p></aside><section class="lesson-comic" data-lesson-comic="psy-2.html"><noscript><h2>四格看懂：等待心理学：难受的从来不是那 5 秒</h2><img src="assets/comics/psychology-waiting-control.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：等待心理学：难受的从来不是那 5 秒"><ol><li><b>沉默让状态不明</b>：用户需要知道请求是否收到、是否仍在执行。</li><li><b>告诉现在在做什么</b>：用真实阶段和适当耗时范围解释进度。</li><li><b>能先用的先提供</b>：适合时先给可用部分，让用户确认方向。</li><li><b>长任务留退出与回访</b>：允许取消或后台继续，并清楚通知完成状态。</li></ol><p>等待要有可理解的进展、合理预期与离开后继续的办法。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">动手一 · 先拖出你的任务耗时</div>
     <p class="desc">人机交互研究里有一组用了几十年的经典阈值，出自 Jakob Nielsen《Usability Engineering》（1993，上溯 Miller 1968）：<b>0.1 秒内感觉是瞬间，1 秒内思路不被打断，10 秒是专注等待的极限</b>。三道线切出三档呈现策略。拖动滑块，输入你手头功能的实际耗时，看它落在哪一档、该怎么呈现。</p>
     <div class="toy" id="tierToy">

@@ -106,16 +106,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">交互工程 · 7 / 10</div>
-    <h1>界面会说话：用户怎么理解你的文案</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>界面会说话：用户怎么理解你的文案</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>界面会说话：用户怎么理解你的文案</h1>
     <p class="subtitle">控件选对了，界面还得开口说话。按钮上的两个字、弹窗里的一句话，就是产品和用户的全部对话。<b>微文案是交互的一半</b>：写对了，用户不用想；写错了，控件再标准也白搭。AI 写微文案只有一招，逢事「确定」。</p>
     <div class="chips"><span class="chip">按钮动词</span><span class="chip">确定取消</span><span class="chip">系统语翻译</span><span class="chip">弹窗改造</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>「删除这 3 条」比「确定」诚实。按钮动词要说清后果，标签用用户的词，别把数据库字段名端给用户。亲手改写一个弹窗的三处文案</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>「删除这 3 条」比「确定」诚实。按钮动词要说清后果，标签用用户的词，别把数据库字段名端给用户。亲手改写一个弹窗的三处文案</p></aside><section class="lesson-comic" data-lesson-comic="ixd-7.html"><noscript><h2>四格看懂：界面会说话：用户怎么理解你的文案</h2><img src="assets/comics/interaction-action-copy.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：界面会说话：用户怎么理解你的文案"><ol><li><b>含糊按钮让人猜</b>：只写泛泛确认，用户还得回头寻找操作后果。</li><li><b>把对象和动作讲清</b>：标题与按钮应帮助核对操作范围和结果。</li><li><b>换成用户的词</b>：界面术语贴近真实工作，避免把内部字段直接展示。</li><li><b>错误提示帮用户继续</b>：解释问题与可行动的修复方式，保留已完成输入。</li></ol><p>用用户熟悉的词说明对象、动作与后果，错误信息要支持行动。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">「确定」是最忙的按钮，也是最没用的</div>
     <p class="desc">数一数你今天点过多少次「确定」。它出现在删除、提交、退出、覆盖、清空的弹窗里，同一个词替一百种后果背书。问题就出在这：<b>按钮自己不带答案，答案在正文里</b>，用户必须读完整段话，才知道这一下点的是什么。「确定 / 取消」配对是偷懒，把阅读成本推给了用户。</p>
     <p class="desc" style="margin-top:16px">处方是让按钮把后果带在身上：「删除这 3 条」替掉「确定」，「留着」替掉「取消」。这样哪怕正文一个字没读，扫一眼按钮也能安全作答。Cooper 在《About Face 4》第 21 章给功能对话框立过同款规矩：标题要用动词。标题说清在确认什么，按钮说清点了会怎样，两头都不让用户猜。</p>

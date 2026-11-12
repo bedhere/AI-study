@@ -142,16 +142,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">交互工程 · 6 / 10</div>
-    <h1>控件选对了吗：单选、多选、开关与下拉</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>控件选对了吗：单选、多选、开关与下拉</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>控件选对了吗：单选、多选、开关与下拉</h1>
     <p class="subtitle">前面四节看的是流程和状态，这一节钻进界面最小的零件。控件是用户和产品之间的通用语言，用错一个，用户就要多点一次、多猜一次。<b>选用规则四句话就讲完</b>，AI 不知道这四句，你得替它把关。</p>
     <div class="chips"><span class="chip">四句口诀</span><span class="chip">场景连连看</span><span class="chip">下拉的代价</span><span class="chip">该不该弹</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>互斥选一个用单选钮，可勾多个用复选框，立即生效用开关，选项超过一屏才配用下拉。六个场景连连看，配一张能抄进提示词的速查表</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>互斥选一个用单选钮，可勾多个用复选框，立即生效用开关，选项超过一屏才配用下拉。六个场景连连看，配一张能抄进提示词的速查表</p></aside><section class="lesson-comic" data-lesson-comic="ixd-6.html"><noscript><h2>四格看懂：控件选对了吗：单选、多选、开关与下拉</h2><img src="assets/comics/interaction-select-controls.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：控件选对了吗：单选、多选、开关与下拉"><ol><li><b>互斥选项用单选</b>：用户在一组中选择一个时，让候选与选中状态清楚可见。</li><li><b>多个选择用复选</b>：允许独立选中或取消多个项目。</li><li><b>立即生效用开关</b>：开关应让状态与结果可理解，不能假装已保存。</li><li><b>长列表再考虑折叠</b>：结合空间、比较需求和可搜索性选择列表形式。</li></ol><p>按选择数量、是否互斥和生效时机选控件，并清楚显示当前状态。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">AI 挑控件，靠的是掷骰子</div>
     <p class="desc">让 AI 生成一张表单，控件八成是随手抓的：三个选项也塞进下拉，单选多选看心情，再顺手给每个动作都配一个弹窗。这些毛病单看都不大，叠在一张表单里，用户每一步都在多花力气。</p>
     <div class="tbl-wrap"><table class="tbl">

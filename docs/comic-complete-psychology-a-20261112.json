@@ -1,0 +1,359 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-psychology-a",
+  "status": "accepted; 10 original comics integrated and visually reviewed",
+  "verificationSources": [
+    "https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/",
+    "https://www.nngroup.com/articles/response-times-3-important-limits/"
+  ],
+  "lessons": [
+    {
+      "file": "psy-1.html",
+      "slug": "psychology-perceived-speed",
+      "role": "计时虎：蓝运动夹克、橙围巾",
+      "takeaway": "同时观察实际延迟与用户等待体验，用真实反馈改善可感知进展。",
+      "panels": [
+        {
+          "label": "先看两块秒表",
+          "text": "总耗时与用户感受到的等待不完全相同。",
+          "alt": "计时虎把沙漏放在静止黑屏与正在逐步出内容的屏幕模型之间。"
+        },
+        {
+          "label": "尽早给有用反馈",
+          "text": "说明任务已收到，并在能力允许时逐步呈现可用内容。",
+          "alt": "计时虎按下任务钮，屏幕先亮起确认图标并出现首批内容卡。"
+        },
+        {
+          "label": "进度要反映真工作",
+          "text": "展示可核验阶段，不能用假动画掩盖停滞。",
+          "alt": "计时虎看着机器真实完成一个工位，对应阶段灯才亮起。"
+        },
+        {
+          "label": "把体验和结果一起测",
+          "text": "分别记录首反馈、完成时间与产物质量，不预设改善倍数。",
+          "alt": "计时虎对照两组任务结果、两只沙漏和用户反馈卡。"
+        }
+      ],
+      "scenePrompt": "角色：计时虎：蓝运动夹克、橙围巾。从左到右四格，每格一个完整场景：第1格：计时虎把沙漏放在静止黑屏与正在逐步出内容的屏幕模型之间。 第2格：计时虎按下任务钮，屏幕先亮起确认图标并出现首批内容卡。 第3格：计时虎看着机器真实完成一个工位，对应阶段灯才亮起。 第4格：计时虎对照两组任务结果、两只沙漏和用户反馈卡。",
+      "originalHtmlSha256": "c87655eefee5e48ebc5584827b978e5edf23ffec61f8e5b968b8fa12106f4df1",
+      "lessonTitle": "工程指标及格了，用户为什么还骂慢？",
+      "title": "四格看懂：工程指标及格了，用户为什么还骂慢？",
+      "sourceArtifact": "exec-7b9ee5a2-98ea-4fa8-9e02-65215d107e58.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-7b9ee5a2-98ea-4fa8-9e02-65215d107e58.png"
+    },
+    {
+      "file": "psy-2.html",
+      "slug": "psychology-waiting-control",
+      "role": "候车虎：青绿制服、橙帽",
+      "takeaway": "等待要有可理解的进展、合理预期与离开后继续的办法。",
+      "panels": [
+        {
+          "label": "沉默让状态不明",
+          "text": "用户需要知道请求是否收到、是否仍在执行。",
+          "alt": "候车虎站在没有状态灯的取件柜前，拿着取件图卡等待。"
+        },
+        {
+          "label": "告诉现在在做什么",
+          "text": "用真实阶段和适当耗时范围解释进度。",
+          "alt": "候车虎查看机器依次亮起的加工、检验和装箱图标灯。"
+        },
+        {
+          "label": "能先用的先提供",
+          "text": "适合时先给可用部分，让用户确认方向。",
+          "alt": "候车虎把已完成的初稿卡递给用户虎，剩余工位仍在工作。"
+        },
+        {
+          "label": "长任务留退出与回访",
+          "text": "允许取消或后台继续，并清楚通知完成状态。",
+          "alt": "候车虎把任务凭证卡交给用户虎，用户离开座位，后台机器继续运转。"
+        }
+      ],
+      "scenePrompt": "角色：候车虎：青绿制服、橙帽。从左到右四格，每格一个完整场景：第1格：候车虎站在没有状态灯的取件柜前，拿着取件图卡等待。 第2格：候车虎查看机器依次亮起的加工、检验和装箱图标灯。 第3格：候车虎把已完成的初稿卡递给用户虎，剩余工位仍在工作。 第4格：候车虎把任务凭证卡交给用户虎，用户离开座位，后台机器继续运转。",
+      "originalHtmlSha256": "3da80a3de0ac308be816d54806c1aa5745cb2e4c15897a8366e1fc2828c3c579",
+      "lessonTitle": "等待心理学：难受的从来不是那 5 秒",
+      "title": "四格看懂：等待心理学：难受的从来不是那 5 秒",
+      "sourceArtifact": "exec-ae6d4f42-923b-4c92-8d9c-e8f00878738c.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-ae6d4f42-923b-4c92-8d9c-e8f00878738c.png"
+    },
+    {
+      "file": "psy-3.html",
+      "slug": "psychology-honest-process",
+      "role": "透明虎：蓝围裙、青绿衬衫",
+      "takeaway": "展示真实动作、来源和结果摘要，不能伪造劳动或故意拖慢。",
+      "panels": [
+        {
+          "label": "结果之外还有过程",
+          "text": "用户有时需要知道系统做过哪些可检查工作。",
+          "alt": "透明虎看着机器人交来的成品，与空白过程展示架。"
+        },
+        {
+          "label": "展示实际执行动作",
+          "text": "可呈现已完成的检索、读文件和工具调用摘要。",
+          "alt": "透明虎把机器人实际打开的档案、查看的书页和加工记录放到透明展示架。"
+        },
+        {
+          "label": "来源供人核查",
+          "text": "可打开的来源帮助核验，但不保证答案正确。",
+          "alt": "透明虎对照一张结果卡与原书，用放大镜指出一处不一致。"
+        },
+        {
+          "label": "诚实说明限制",
+          "text": "不伪造进度、暴露私密推理或为了表演而延迟。",
+          "alt": "透明虎关掉一台空转装饰机器，留下真实运行工位和简洁阶段卡。"
+        }
+      ],
+      "scenePrompt": "角色：透明虎：蓝围裙、青绿衬衫。从左到右四格，每格一个完整场景：第1格：透明虎看着机器人交来的成品，与空白过程展示架。 第2格：透明虎把机器人实际打开的档案、查看的书页和加工记录放到透明展示架。 第3格：透明虎对照一张结果卡与原书，用放大镜指出一处不一致。 第4格：透明虎关掉一台空转装饰机器，留下真实运行工位和简洁阶段卡。",
+      "originalHtmlSha256": "07382b583b8bfb274518a8821093ab7826a1b7fb21c92037656dd5b6de11c70a",
+      "lessonTitle": "劳动错觉：让 AI 把努力演出来",
+      "title": "四格看懂：劳动错觉：让 AI 把努力演出来",
+      "sourceArtifact": "exec-444c00c9-736f-4971-a017-de12985e36b9.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-444c00c9-736f-4971-a017-de12985e36b9.png"
+    },
+    {
+      "file": "psy-4.html",
+      "slug": "psychology-key-moments",
+      "role": "收尾虎：紫马甲、橙领结",
+      "takeaway": "关注关键节点与收尾的清楚交付，同时保障全过程的基本质量。",
+      "panels": [
+        {
+          "label": "回看整段体验",
+          "text": "把过程中的卡点与最终结果一起记录。",
+          "alt": "收尾虎沿任务路线查看一个高亮节点、一处故障点和终点成果。"
+        },
+        {
+          "label": "关键时刻保持可靠",
+          "text": "优先处理首次使用、重要决策与风险动作。",
+          "alt": "收尾虎在关键闸门前检查目标卡和锁定范围。"
+        },
+        {
+          "label": "收尾交代清楚",
+          "text": "说明完成了什么、证据在哪里、还有什么待处理。",
+          "alt": "收尾虎把成品、核验册和一张待办卡整齐放进交付盒。"
+        },
+        {
+          "label": "不能用结尾遮住失败",
+          "text": "总结应如实反映过程问题，不能牺牲中段质量。",
+          "alt": "收尾虎从装饰彩带旁取出未修好的零件，标记后放回修理托盘。"
+        }
+      ],
+      "scenePrompt": "角色：收尾虎：紫马甲、橙领结。从左到右四格，每格一个完整场景：第1格：收尾虎沿任务路线查看一个高亮节点、一处故障点和终点成果。 第2格：收尾虎在关键闸门前检查目标卡和锁定范围。 第3格：收尾虎把成品、核验册和一张待办卡整齐放进交付盒。 第4格：收尾虎从装饰彩带旁取出未修好的零件，标记后放回修理托盘。",
+      "originalHtmlSha256": "4038407a1dc802a74897bec0a2377cf00f9f2e7bcb126af3e2d194c221b06e57",
+      "lessonTitle": "峰终定律：用户只记得峰值和结尾",
+      "title": "四格看懂：峰终定律：用户只记得峰值和结尾",
+      "sourceArtifact": "exec-cd4220bb-b070-40c5-abb5-66483eb074d4.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-cd4220bb-b070-40c5-abb5-66483eb074d4.png"
+    },
+    {
+      "file": "psy-5.html",
+      "slug": "psychology-calibrated-trust",
+      "role": "核验虎：青绿外套、蓝领结",
+      "takeaway": "让信任与实际能力及风险匹配，用证据和适当提醒支持判断。",
+      "panels": [
+        {
+          "label": "流畅不等于正确",
+          "text": "外观专业与语气自信，都不能作为事实保证。",
+          "alt": "核验虎将光亮成品外壳打开，发现里面一块错配齿轮。"
+        },
+        {
+          "label": "提供可核验依据",
+          "text": "引用要真实相关，用户应能回到原文检查。",
+          "alt": "核验虎从回答卡的书签找到原书，逐项对照内容。"
+        },
+        {
+          "label": "不确定信号要解释",
+          "text": "检索分数或模型自评都不等于正确概率。",
+          "alt": "核验虎把看似满格的信号表与缺页原书并排，留下疑点标记。"
+        },
+        {
+          "label": "按风险安排复核",
+          "text": "在高后果步骤前显示具体限制，并保留负责人的判断。",
+          "alt": "核验虎在发布闸门前与同伴虎检查结果和风险卡，机器人等待放行。"
+        }
+      ],
+      "scenePrompt": "角色：核验虎：青绿外套、蓝领结。从左到右四格，每格一个完整场景：第1格：核验虎将光亮成品外壳打开，发现里面一块错配齿轮。 第2格：核验虎从回答卡的书签找到原书，逐项对照内容。 第3格：核验虎把看似满格的信号表与缺页原书并排，留下疑点标记。 第4格：核验虎在发布闸门前与同伴虎检查结果和风险卡，机器人等待放行。",
+      "originalHtmlSha256": "273d37b3578106990687c823efea8893a416c8245bcf471c2d65d677ac7a78b0",
+      "lessonTitle": "信任校准：最好的用户是半信半疑的",
+      "title": "四格看懂：信任校准：最好的用户是半信半疑的",
+      "sourceArtifact": "exec-1c0336a7-7871-4dea-9c76-6b91b645123d.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-1c0336a7-7871-4dea-9c76-6b91b645123d.png"
+    },
+    {
+      "file": "psy-9.html",
+      "slug": "psychology-recover-from-errors",
+      "role": "修复虎：蓝工装、橙围巾",
+      "takeaway": "错误后提供诚实解释、可控修正和复核，观察用户是否愿意继续。",
+      "panels": [
+        {
+          "label": "一次错误会影响信任",
+          "text": "用户可能在一次失败后放弃，需要了解具体原因。",
+          "alt": "修复虎看着出错的小车，用户虎把遥控器放回桌上。"
+        },
+        {
+          "label": "先处理实际问题",
+          "text": "说明已知错误与修复动作，不把失败归咎给用户。",
+          "alt": "修复虎打开小车检查错配车轮，向用户虎展示替换零件。"
+        },
+        {
+          "label": "给真实控制权",
+          "text": "允许适当调整与复核，不能只做看似可用的开关。",
+          "alt": "修复虎将能实际改变行驶方向的旋钮交给用户虎，小车随之转向。"
+        },
+        {
+          "label": "验证并防止重复",
+          "text": "保存适用的纠正信息，再检查新任务是否仍然有效。",
+          "alt": "修复虎把修理记录夹入档案，和用户虎一起复跑不同路线。"
+        }
+      ],
+      "scenePrompt": "角色：修复虎：蓝工装、橙围巾。从左到右四格，每格一个完整场景：第1格：修复虎看着出错的小车，用户虎把遥控器放回桌上。 第2格：修复虎打开小车检查错配车轮，向用户虎展示替换零件。 第3格：修复虎将能实际改变行驶方向的旋钮交给用户虎，小车随之转向。 第4格：修复虎把修理记录夹入档案，和用户虎一起复跑不同路线。",
+      "originalHtmlSha256": "76a96414ca03af04022e03506dc3b9e50b7a3852dd601e3e345791b6f8f35ea6",
+      "lessonTitle": "算法厌恶：AI 犯一次错，就被永久拉黑",
+      "title": "四格看懂：算法厌恶：AI 犯一次错，就被永久拉黑",
+      "sourceArtifact": "exec-81c90fb3-6732-42dc-aff5-56f5626b837c.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-81c90fb3-6732-42dc-aff5-56f5626b837c.png"
+    },
+    {
+      "file": "psy-6.html",
+      "slug": "psychology-control-and-recovery",
+      "role": "守护虎：紫夹克、青绿围巾",
+      "takeaway": "理解数据、能力和责任顾虑，提供真实控制、恢复与透明说明。",
+      "panels": [
+        {
+          "label": "不使用可能有顾虑",
+          "text": "不要把低使用率一概归因于不会操作。",
+          "alt": "守护虎看用户虎抱着锁住的文件夹，迟疑地站在机器人工作台外。"
+        },
+        {
+          "label": "把范围说清楚",
+          "text": "交代需要哪些数据、能做哪些动作及谁来确认。",
+          "alt": "守护虎把仅需使用的图卡放进限定托盘，其余资料仍在用户虎手中。"
+        },
+        {
+          "label": "先预览再应用",
+          "text": "适合时提供试运行、差异预览与可用的恢复入口。",
+          "alt": "守护虎将新旧文件卡并排展示，旁边的回转手柄连接恢复抽屉。"
+        },
+        {
+          "label": "让支持入口真可用",
+          "text": "失败后能获得帮助，设置与承诺必须实际生效。",
+          "alt": "守护虎打开求助窗口，另一位同伴虎接过问题卡并协助恢复。"
+        }
+      ],
+      "scenePrompt": "角色：守护虎：紫夹克、青绿围巾。从左到右四格，每格一个完整场景：第1格：守护虎看用户虎抱着锁住的文件夹，迟疑地站在机器人工作台外。 第2格：守护虎把仅需使用的图卡放进限定托盘，其余资料仍在用户虎手中。 第3格：守护虎将新旧文件卡并排展示，旁边的回转手柄连接恢复抽屉。 第4格：守护虎打开求助窗口，另一位同伴虎接过问题卡并协助恢复。",
+      "originalHtmlSha256": "be4dcc277541e17bad571f774e0f5df4e41bb11a888214424a0536c250e29bff",
+      "lessonTitle": "防御心理：用户不是不会用，是不敢用",
+      "title": "四格看懂：防御心理：用户不是不会用，是不敢用",
+      "sourceArtifact": "exec-517854a5-f0e1-415d-8205-e635211ebb86.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-517854a5-f0e1-415d-8205-e635211ebb86.png"
+    },
+    {
+      "file": "psy-7.html",
+      "slug": "psychology-explain-capabilities",
+      "role": "说明虎：青绿背带裤、米白衬衫",
+      "takeaway": "在使用路径中说明能力、来源与记忆边界，减少错误预期。",
+      "panels": [
+        {
+          "label": "旧经验可能套错",
+          "text": "聊天界面可能让人误以为它是搜索、数据库或计算器。",
+          "alt": "说明虎看用户虎将书本、档案柜和算盘模型都交给同一个机器人。"
+        },
+        {
+          "label": "示例帮助理解用途",
+          "text": "用真实可完成的任务演示，说明需要用户提供什么。",
+          "alt": "说明虎将资料整理示例卡放在机器人桌上，并展示用户输入与草稿结果。"
+        },
+        {
+          "label": "边界在关键处出现",
+          "text": "时效、精确计算和重要事实应说明验证方式。",
+          "alt": "说明虎在机器人给出的旧日历卡旁放上来源书与计算工具。"
+        },
+        {
+          "label": "记忆不要靠口头保证",
+          "text": "说明保存范围和可查看记录，聊天本身不等于训练权重。",
+          "alt": "说明虎打开机器人的记忆抽屉，查看保存的记录卡；抽屉上方的固定模块仍在透明罩内。"
+        }
+      ],
+      "scenePrompt": "角色：说明虎：青绿背带裤、米白衬衫。从左到右四格，每格一个完整场景：第1格：说明虎看用户虎将书本、档案柜和算盘模型都交给同一个机器人。 第2格：说明虎将资料整理示例卡放在机器人桌上，并展示用户输入与草稿结果。 第3格：说明虎在机器人给出的旧日历卡旁放上来源书与计算工具。 第4格：说明虎打开可查看的记忆抽屉，机器人内部固定模块仍封在透明罩内。",
+      "originalHtmlSha256": "61e7e2941b8bf51570e8355f5198513a03308bfab359d88cc3fa3d7680e014b7",
+      "lessonTitle": "心智模型：用户拿错了说明书",
+      "title": "四格看懂：心智模型：用户拿错了说明书",
+      "sourceArtifact": "exec-604e047c-36a3-44fe-a1c7-71e18f2d3b64.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-604e047c-36a3-44fe-a1c7-71e18f2d3b64.png"
+    },
+    {
+      "file": "psy-8.html",
+      "slug": "psychology-tone-and-repair",
+      "role": "服务虎：蓝马甲、珊瑚领结",
+      "takeaway": "语气应适合任务，身份保持透明，出错后以具体补救支持用户。",
+      "panels": [
+        {
+          "label": "语气要符合场景",
+          "text": "任务严肃程度与后果会影响合适的表达方式。",
+          "alt": "服务虎将简洁公文卡与轻松活动卡放在两个不同服务窗口。"
+        },
+        {
+          "label": "友好也要说明身份",
+          "text": "避免让拟人化暗示真人身份或没有依据的能力。",
+          "alt": "服务虎向用户虎介绍旁边的白色机器人，展示机器图标身份卡。"
+        },
+        {
+          "label": "认清具体错误",
+          "text": "说明错在哪里、已知原因与修正步骤，避免空泛道歉。",
+          "alt": "服务虎指出报表中错放的零件图卡，把正确卡放在旁边对照。"
+        },
+        {
+          "label": "补救结果可检查",
+          "text": "修正后给出证据和剩余限制，不能故意制造事故来赢信任。",
+          "alt": "服务虎与用户虎一起核对修好的成果、原始材料和检查清单。"
+        }
+      ],
+      "scenePrompt": "角色：服务虎：蓝马甲、珊瑚领结。从左到右四格，每格一个完整场景：第1格：服务虎将简洁公文卡与轻松活动卡放在两个不同服务窗口。 第2格：服务虎向用户虎介绍旁边的白色机器人，展示机器图标身份卡。 第3格：服务虎指出报表中错放的零件图卡，把正确卡放在旁边对照。 第4格：服务虎与用户虎一起核对修好的成果、原始材料和检查清单。",
+      "originalHtmlSha256": "68152deae3abb93354ca2bacbb3064de8ddca617a57c2ece1437d44b0954b3c0",
+      "lessonTitle": "拟人化的度，与 AI 道歉的艺术",
+      "title": "四格看懂：拟人化的度，与 AI 道歉的艺术",
+      "sourceArtifact": "exec-603015d3-4908-46f2-b973-9dd78d5f598e.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-603015d3-4908-46f2-b973-9dd78d5f598e.png"
+    },
+    {
+      "file": "psy-10.html",
+      "slug": "psychology-realistic-expectations",
+      "role": "承诺虎：青绿夹克、橙围巾",
+      "takeaway": "用代表性能力与真实限制管理预期，并持续衡量实际价值。",
+      "panels": [
+        {
+          "label": "精彩演示未必代表日常",
+          "text": "不能用精挑结果替代对常见任务的说明。",
+          "alt": "承诺虎将聚光灯下的完美样品与桌上的多种日常结果并排。"
+        },
+        {
+          "label": "承诺贴近可交付能力",
+          "text": "讲清适用任务、必要输入与主要限制。",
+          "alt": "承诺虎为产品样品配上任务图、输入图与边界锁图卡。"
+        },
+        {
+          "label": "引导发现实际用途",
+          "text": "帮助用户按需要掌握能力，不靠隐瞒重要功能制造惊喜。",
+          "alt": "承诺虎带用户虎从常用工具架找到完成当前任务所需的工具。"
+        },
+        {
+          "label": "持续验证长期收益",
+          "text": "观察重复任务、质量和使用反馈，不能只看首次惊艳。",
+          "alt": "承诺虎对照多次使用记录与实际成品，和用户虎一起整理改进卡。"
+        }
+      ],
+      "scenePrompt": "角色：承诺虎：青绿夹克、橙围巾。从左到右四格，每格一个完整场景：第1格：承诺虎将聚光灯下的完美样品与桌上的多种日常结果并排。 第2格：承诺虎为产品样品配上任务图、输入图与边界锁图卡。 第3格：承诺虎带用户虎从常用工具架找到完成当前任务所需的工具。 第4格：承诺虎对照多次使用记录与实际成品，和用户虎一起整理改进卡。",
+      "originalHtmlSha256": "39cfbeba6e1e460718b0f7ba0093e08074b3c9758a0971df16688a72fce018cf",
+      "lessonTitle": "蜜月悬崖：宣传拉高的期望，要用留存来还",
+      "title": "四格看懂：蜜月悬崖：宣传拉高的期望，要用留存来还",
+      "sourceArtifact": "exec-c7a0d9d1-866d-4dde-96a2-7ee318391404.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-c7a0d9d1-866d-4dde-96a2-7ee318391404.png"
+    }
+  ]
+}

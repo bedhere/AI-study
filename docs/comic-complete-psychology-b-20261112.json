@@ -1,0 +1,324 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-psychology-b",
+  "status": "accepted; 9 original comics integrated and visually reviewed",
+  "verificationSources": [
+    "https://fluent2.microsoft.design/responsible-AI"
+  ],
+  "lessons": [
+    {
+      "file": "psy-11.html",
+      "slug": "psychology-truthful-attribution",
+      "role": "署名虎：紫马甲、青绿领结",
+      "takeaway": "如实说明 AI 与人的参与，评价成果时把质量、来源和责任说清。",
+      "panels": [
+        {
+          "label": "先看内容本身",
+          "text": "标签可能影响判断，评估时仍要检查实际质量。",
+          "alt": "署名虎把两张内容相同、外框不同的海报并排检查。"
+        },
+        {
+          "label": "说明真实参与方式",
+          "text": "生成、辅助与人工修订应与实际过程一致。",
+          "alt": "署名虎把用户草图、机器人草稿和人工改稿依次放在来源台。"
+        },
+        {
+          "label": "披露不能靠误导",
+          "text": "需要说明的身份与来源要清楚，不伪造人工作品或背书。",
+          "alt": "署名虎把机器人图标身份卡固定在来源册旁，取下不符合实际的奖章。"
+        },
+        {
+          "label": "让责任可追溯",
+          "text": "记录采用的版本、人工修改和最终审核。",
+          "alt": "署名虎与作者虎核对终稿、修改笔和审核记录本后完成交接。"
+        }
+      ],
+      "scenePrompt": "角色：署名虎：紫马甲、青绿领结。从左到右四格，每格一个完整场景：第1格：署名虎把两张内容相同、外框不同的海报并排检查。 第2格：署名虎把用户草图、机器人草稿和人工改稿依次放在来源台。 第3格：署名虎把机器人图标身份卡固定在来源册旁，取下不符合实际的奖章。 第4格：署名虎与作者虎核对终稿、修改笔和审核记录本后完成交接。",
+      "originalHtmlSha256": "20eae4f7dc8dbfa2a56ec86fb93b11a803469a63816b9e0e45048d956c373db7",
+      "lessonTitle": "AI 标签折扣：同样的内容，标上 AI 就掉价",
+      "title": "四格看懂：AI 标签折扣：同样的内容，标上 AI 就掉价",
+      "sourceArtifact": "exec-f2bb7f34-0b30-4a3b-a205-dbb2ef151362.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-f2bb7f34-0b30-4a3b-a205-dbb2ef151362.png"
+    },
+    {
+      "file": "psy-12.html",
+      "slug": "psychology-maintain-user-skill",
+      "role": "练习虎：蓝背带裤、橙衬衫",
+      "takeaway": "让辅助降低重复负担，同时保留用户理解、练习和校验的机会。",
+      "panels": [
+        {
+          "label": "识别外包了什么",
+          "text": "分清检索、执行、生成和判断分别交给了谁。",
+          "alt": "练习虎把书本、工具、草稿与检查镜图卡放在分工桌上。"
+        },
+        {
+          "label": "按任务选择接管程度",
+          "text": "效率与掌握程度需要结合场景取舍。",
+          "alt": "练习虎在机器人自动装配与用户自己装配的两张工位图之间调整分工滑块。"
+        },
+        {
+          "label": "结果附可理解解释",
+          "text": "给简洁依据与验证办法，让用户能复查。",
+          "alt": "练习虎拿着成品，对照分步示意册检查关键连接。"
+        },
+        {
+          "label": "留出自主练习",
+          "text": "需要学习时提供提示或练习，再检查能否独立完成。",
+          "alt": "练习虎独立组装一个新模型，机器人在旁提供可选提示卡。"
+        }
+      ],
+      "scenePrompt": "角色：练习虎：蓝背带裤、橙衬衫。从左到右四格，每格一个完整场景：第1格：练习虎把书本、工具、草稿与检查镜图卡放在分工桌上。 第2格：练习虎在机器人自动装配与用户自己装配的两张工位图之间调整分工滑块。 第3格：练习虎拿着成品，对照分步示意册检查关键连接。 第4格：练习虎独立组装一个新模型，机器人在旁提供可选提示卡。",
+      "originalHtmlSha256": "511323bddbcae91391ade86e7b1aacc9ce80f48377ecc9ad92ad6e293a29cc6c",
+      "lessonTitle": "认知卸载：用户一边用你，一边怕自己废掉",
+      "title": "四格看懂：认知卸载：用户一边用你，一边怕自己废掉",
+      "sourceArtifact": "exec-d1b7d4c1-8675-4e99-ad05-bc2f075e0103.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-d1b7d4c1-8675-4e99-ad05-bc2f075e0103.png"
+    },
+    {
+      "file": "psy-13.html",
+      "slug": "psychology-companion-boundaries",
+      "role": "关怀虎：青绿开衫、橙围巾",
+      "takeaway": "尊重用户情感并保持身份透明，提供自主退出和真实支持路径。",
+      "panels": [
+        {
+          "label": "感受需要被尊重",
+          "text": "用户可能赋予对话情感意义，设计不能只盯使用时长。",
+          "alt": "关怀虎看着用户虎与白色机器人聊天，桌上沙漏已经空了。"
+        },
+        {
+          "label": "身份与变化要说明",
+          "text": "清楚说明 AI 身份及服务可能变化，避免虚假的永久承诺。",
+          "alt": "关怀虎展示机器人身份卡与可更换的服务模块，用户虎认真查看。"
+        },
+        {
+          "label": "支持现实中的联系",
+          "text": "遇到脆弱情境，应有适当真人支持和求助路径。",
+          "alt": "关怀虎陪用户虎走向同伴虎的支持窗口，机器人留在原工作台。"
+        },
+        {
+          "label": "离开不制造愧疚",
+          "text": "退出、休息或删除应清楚可用，不用情绪胁迫挽留。",
+          "alt": "关怀虎打开通向户外的休息门，用户虎自主离开，机器人友好挥手。"
+        }
+      ],
+      "scenePrompt": "角色：关怀虎：青绿开衫、橙围巾。从左到右四格，每格一个完整场景：第1格：关怀虎看着用户虎与白色机器人聊天，桌上沙漏已经空了。 第2格：关怀虎展示机器人身份卡与可更换的服务模块，用户虎认真查看。 第3格：关怀虎陪用户虎走向同伴虎的支持窗口，机器人留在原工作台。 第4格：关怀虎打开通向户外的休息门，用户虎自主离开，机器人友好挥手。",
+      "originalHtmlSha256": "99aac3afcac0c14297a5ccd5a51cdff4ed7891b7a23a3d98c9c5c4c19972aa18",
+      "lessonTitle": "情感依恋：用户爱上你的产品之后",
+      "title": "四格看懂：情感依恋：用户爱上你的产品之后",
+      "sourceArtifact": "exec-a616e185-0769-4f28-b795-04a0838b6788.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-a616e185-0769-4f28-b795-04a0838b6788.png"
+    },
+    {
+      "file": "psy-14.html",
+      "slug": "psychology-clear-billing",
+      "role": "预算虎：蓝围裙、青绿衬衫",
+      "takeaway": "让计费方式、额度、失败处理与升级选择可理解且可控制。",
+      "panels": [
+        {
+          "label": "不明账单会打断探索",
+          "text": "用户需要了解一次操作大致消耗什么。",
+          "alt": "预算虎看着连着机器的跳动筹码表，用户虎拿着任务卡犹豫。"
+        },
+        {
+          "label": "把规则讲清楚",
+          "text": "说明按量或套餐的适用范围与包含内容。",
+          "alt": "预算虎将散装筹码和封装套餐盒并排，配上相应任务图卡。"
+        },
+        {
+          "label": "给预算与额度反馈",
+          "text": "在接近限制前提醒，并提供可执行的选择。",
+          "alt": "预算虎指向接近上限的透明筹码盒，旁边是暂停和选择其他方案的入口。"
+        },
+        {
+          "label": "失败与升级公平处理",
+          "text": "费用处理应符合约定，不能靠突然阻断或模糊扣费诱导选择。",
+          "alt": "预算虎与用户虎核对失败任务记录和退回筹码托盘，升级盒仍由用户自主选择。"
+        }
+      ],
+      "scenePrompt": "角色：预算虎：蓝围裙、青绿衬衫。从左到右四格，每格一个完整场景：第1格：预算虎看着连着机器的跳动筹码表，用户虎拿着任务卡犹豫。 第2格：预算虎将散装筹码和封装套餐盒并排，配上相应任务图卡。 第3格：预算虎指向接近上限的透明筹码盒，旁边是暂停和选择其他方案的入口。 第4格：预算虎与用户虎核对失败任务记录和退回筹码托盘，升级盒仍由用户自主选择。",
+      "originalHtmlSha256": "6509d04016d4744d8e0366c0642d4797ee783d43548b2ba577152e905e66111d",
+      "lessonTitle": "付费心理：为一个概率商品掏钱，痛在哪",
+      "title": "四格看懂：付费心理：为一个概率商品掏钱，痛在哪",
+      "sourceArtifact": "exec-5e71fca2-ef6c-4416-a1eb-23f0c9d32861.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-5e71fca2-ef6c-4416-a1eb-23f0c9d32861.png"
+    },
+    {
+      "file": "psy-15.html",
+      "slug": "psychology-honest-price-options",
+      "role": "定价虎：紫夹克、橙领结",
+      "takeaway": "比较真实可用的套餐差异，清楚展示费用、限制与变更条件。",
+      "panels": [
+        {
+          "label": "用户需要可比选项",
+          "text": "把适用任务与实际能力放在同一比较框架中。",
+          "alt": "定价虎将小工具箱、大工具箱和专业工具箱平放在比较桌上。"
+        },
+        {
+          "label": "档位差异要真实",
+          "text": "套餐可以按用量或能力区分，但不能伪造价值。",
+          "alt": "定价虎打开三个工具箱，展示实际不同的工具与额度筹码。"
+        },
+        {
+          "label": "去掉误导参照",
+          "text": "不伪造销量、热度或无意义的高价诱饵。",
+          "alt": "定价虎取下没有证据的冠军奖章，留下可核对的套餐内容卡。"
+        },
+        {
+          "label": "变更前让人知情",
+          "text": "说明何时变化、如何选择和退出，避免暗中调价。",
+          "alt": "定价虎向用户虎展示旧新套餐卡与日历图，旁边保留清楚的退出门。"
+        }
+      ],
+      "scenePrompt": "角色：定价虎：紫夹克、橙领结。从左到右四格，每格一个完整场景：第1格：定价虎将小工具箱、大工具箱和专业工具箱平放在比较桌上。 第2格：定价虎打开三个工具箱，展示实际不同的工具与额度筹码。 第3格：定价虎取下没有证据的冠军奖章，留下可核对的套餐内容卡。 第4格：定价虎向用户虎展示旧新套餐卡与日历图，旁边保留清楚的退出门。",
+      "originalHtmlSha256": "e422ebef645297a14fbce6c044f23b53a916c3412742e5b2e37d9c21d3aca8d7",
+      "lessonTitle": "定价心理：锚点、诱饵与体面的价格歧视",
+      "title": "四格看懂：定价心理：锚点、诱饵与体面的价格歧视",
+      "sourceArtifact": "exec-6a6fe1c0-09b0-4e0d-b340-879f4b9d8d11.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-6a6fe1c0-09b0-4e0d-b340-879f4b9d8d11.png"
+    },
+    {
+      "file": "psy-16.html",
+      "slug": "psychology-feedback-with-context",
+      "role": "倾听虎：青绿夹克、蓝围巾",
+      "takeaway": "低点踩不等于低不满；结合上下文理解反馈并给可见处理。",
+      "panels": [
+        {
+          "label": "沉默不等于满意",
+          "text": "只看主动反馈，会漏掉直接离开的使用者。",
+          "alt": "倾听虎面对空反馈箱，看到用户虎把未完成任务放下后离开。"
+        },
+        {
+          "label": "降低表达负担",
+          "text": "让用户指出哪处回答需要改进，避免繁琐追问。",
+          "alt": "倾听虎把一张问题结果卡放入简洁反馈托盘，用户虎圈出不合适部分。"
+        },
+        {
+          "label": "给反馈后的实际帮助",
+          "text": "提供重试、修正或处理状态，不能只弹空泛感谢。",
+          "alt": "倾听虎将问题卡交给机器人修正，并把处理进度卡交还用户虎。"
+        },
+        {
+          "label": "行为信号要看语境",
+          "text": "重试、复制和编辑含义不唯一，应结合任务与用户研究判断。",
+          "alt": "倾听虎把复制、重试和编辑图卡与对应任务记录并排比较。"
+        }
+      ],
+      "scenePrompt": "角色：倾听虎：青绿夹克、蓝围巾。从左到右四格，每格一个完整场景：第1格：倾听虎面对空反馈箱，看到用户虎把未完成任务放下后离开。 第2格：倾听虎把一张问题结果卡放入简洁反馈托盘，用户虎圈出不合适部分。 第3格：倾听虎将问题卡交给机器人修正，并把处理进度卡交还用户虎。 第4格：倾听虎把复制、重试和编辑图卡与对应任务记录并排比较。",
+      "originalHtmlSha256": "6a438fb61781d885c0872f7658b3754f0e7c664a6bc3750d80a1eb8db4336382",
+      "lessonTitle": "反馈心理：用户为什么不点踩",
+      "title": "四格看懂：反馈心理：用户为什么不点踩",
+      "sourceArtifact": "exec-9af12008-8cb5-4001-98f3-6c7cc5c33867.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-9af12008-8cb5-4001-98f3-6c7cc5c33867.png"
+    },
+    {
+      "file": "psy-books.html",
+      "slug": "psychology-read-original-context",
+      "role": "读书虎：米白衬衫、紫背带",
+      "takeaway": "从产品问题找原始论证，检查研究条件，再用小规模验证指导设计。",
+      "panels": [
+        {
+          "label": "先带着问题选材料",
+          "text": "从等待、信任或控制等具体困惑出发。",
+          "alt": "读书虎拿着沙漏和信任检查图卡，在书架前选择相关书本。"
+        },
+        {
+          "label": "找到原始论证",
+          "text": "核对研究条件、指标与适用范围，区分理论和课堂演示。",
+          "alt": "读书虎用书签对照原书、研究图页与课堂示意卡。"
+        },
+        {
+          "label": "翻译为可检验改动",
+          "text": "提出明确设计假设，不能把效应名字当答案。",
+          "alt": "读书虎把读书笔记接到新旧两种等待反馈的实验工作台。"
+        },
+        {
+          "label": "按真实结果修正",
+          "text": "用合适任务和样本观察收益、限制与负面影响。",
+          "alt": "读书虎对照实验产物和反馈卡，将不支持假设的一张卡夹进记录本。"
+        }
+      ],
+      "scenePrompt": "角色：读书虎：米白衬衫、紫背带。从左到右四格，每格一个完整场景：第1格：读书虎拿着沙漏和信任检查图卡，在书架前选择相关书本。 第2格：读书虎用书签对照原书、研究图页与课堂示意卡。 第3格：读书虎把读书笔记接到新旧两种等待反馈的实验工作台。 第4格：读书虎对照实验产物和反馈卡，将不支持假设的一张卡夹进记录本。",
+      "originalHtmlSha256": "4bdc27e67df93e1bef0d4e72626c2385c945c540b251a94cc56b25993cf28f0e",
+      "lessonTitle": "九本书，把这一章读厚",
+      "title": "四格看懂：九本书，把这一章读厚",
+      "sourceArtifact": "exec-5f7ddf44-6139-4279-a0c8-ff04d864050f.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-5f7ddf44-6139-4279-a0c8-ff04d864050f.png"
+    },
+    {
+      "file": "psy-final.html",
+      "slug": "psychology-product-review",
+      "role": "总览虎：蓝夹克、青绿领结",
+      "takeaway": "把感知、信任、控制与商业呈现转成具体检查，再验证实际效果。",
+      "panels": [
+        {
+          "label": "感知性能查真实反馈",
+          "text": "检查等待状态、阶段说明与长任务的恢复路径。",
+          "alt": "总览虎检查沙漏、真实阶段灯与保存任务的抽屉。"
+        },
+        {
+          "label": "信任控制查能力边界",
+          "text": "核对来源、适用范围、人工判断与可逆动作。",
+          "alt": "总览虎将原书、边界锁、核验镜与回转手柄依次检查。"
+        },
+        {
+          "label": "长期关系查真实承诺",
+          "text": "说明身份与费用，尊重用户选择和退出。",
+          "alt": "总览虎与用户虎核对机器人身份卡、套餐盒和清楚的出口。"
+        },
+        {
+          "label": "验收必须看实际结果",
+          "text": "把未通过项变成改动与验证计划，持续听取真实反馈。",
+          "alt": "总览虎把待办检查卡交给机器人，用户虎把真实反馈放进改进托盘。"
+        }
+      ],
+      "scenePrompt": "角色：总览虎：蓝夹克、青绿领结。从左到右四格，每格一个完整场景：第1格：总览虎检查沙漏、真实阶段灯与保存任务的抽屉。 第2格：总览虎将原书、边界锁、核验镜与回转手柄依次检查。 第3格：总览虎与用户虎核对机器人身份卡、套餐盒和清楚的出口。 第4格：总览虎把待办检查卡交给机器人，用户虎把真实反馈放进改进托盘。",
+      "originalHtmlSha256": "21f3b69815e6cf699ab465524e6270878fbbcc95d5f49bcd9982b06f30aba550",
+      "lessonTitle": "十六个效应一张表，外加上线前十四问",
+      "title": "四格看懂：十六个效应一张表，外加上线前十四问",
+      "sourceArtifact": "exec-c4c84dde-d0a6-4d47-a682-82a015d7048f.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-c4c84dde-d0a6-4d47-a682-82a015d7048f.png"
+    },
+    {
+      "file": "psy-interview.html",
+      "slug": "psychology-explain-design-evidence",
+      "role": "答辩虎：紫西装、橙领带",
+      "takeaway": "从用户现象提出机制假设，给具体方案、证据与适用边界。",
+      "panels": [
+        {
+          "label": "先界定用户现象",
+          "text": "说明谁在什么任务里遇到什么问题。",
+          "alt": "答辩虎向评审虎展示用户画像卡、等待沙漏和任务成果。"
+        },
+        {
+          "label": "机制当作待验假设",
+          "text": "解释可能原因，也说明其他解释与研究条件。",
+          "alt": "答辩虎在两条不同因果路线图间摆放问题图卡和放大镜。"
+        },
+        {
+          "label": "方案落成具体动作",
+          "text": "说清反馈、来源、撤销或计费界面如何变化。",
+          "alt": "答辩虎把阶段灯、来源书签、回转手柄与额度盒摆在方案桌。"
+        },
+        {
+          "label": "用验证支撑取舍",
+          "text": "结合任务结果、用户反馈和风险判断，而非只背效应名称。",
+          "alt": "答辩虎与评审虎一起检查对照实验、反馈卡和风险边界图。"
+        }
+      ],
+      "scenePrompt": "角色：答辩虎：紫西装、橙领带。从左到右四格，每格一个完整场景：第1格：答辩虎向评审虎展示用户画像卡、等待沙漏和任务成果。 第2格：答辩虎在两条不同因果路线图间摆放问题图卡和放大镜。 第3格：答辩虎把阶段灯、来源书签、回转手柄与额度盒摆在方案桌。 第4格：答辩虎与评审虎一起检查对照实验、反馈卡和风险边界图。",
+      "originalHtmlSha256": "7e6e491fe2210f3c35419cedb025befc0210ec445eda88908a15ae7fe45b8f92",
+      "lessonTitle": "AI 产品心理学 · 40 道灵魂拷问",
+      "title": "四格看懂：AI 产品心理学 · 40 道灵魂拷问",
+      "sourceArtifact": "exec-5e2c9f8b-c85f-46eb-b6c7-4db706bed945.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-5e2c9f8b-c85f-46eb-b6c7-4db706bed945.png"
+    }
+  ]
+}

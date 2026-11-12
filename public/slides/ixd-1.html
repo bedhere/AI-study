@@ -134,16 +134,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">交互工程 · 1 / 10</div>
-    <h1>能跑通了，然后呢？</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>能跑通了，然后呢？</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>能跑通了，然后呢？</h1>
     <p class="subtitle">上一章练的是看出「哪里丑」，这一章练看出「哪里难用」。AI 交付的应用功能齐全、点哪都有反应，但用起来处处硌手。这一节先立住全章的地基：<b>交互的病比审美的病更隐蔽</b>，然后拿一张理论清单，亲手抓五个现行。</p>
     <div class="chips"><span class="chip">开篇立论</span><span class="chip">体贴清单</span><span class="chip">找茬实验</span><span class="chip">自查投票</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>把「体贴软件」的特质清单反过来用，就是 AI 默认交互的找茬清单。在一个能跑通的应用里逐个点出五处不体贴，看看你平时都默默忍了什么</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>把「体贴软件」的特质清单反过来用，就是 AI 默认交互的找茬清单。在一个能跑通的应用里逐个点出五处不体贴，看看你平时都默默忍了什么</p></aside><section class="lesson-comic" data-lesson-comic="ixd-1.html"><noscript><h2>四格看懂：能跑通了，然后呢？</h2><img src="assets/comics/interaction-test-real-use.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：能跑通了，然后呢？"><ol><li><b>能跑通只是起点</b>：演示顺利，不代表真实使用时没有阻碍。</li><li><b>新用户从空白开始</b>：检查没有数据时，用户是否知道下一步。</li><li><b>把坏情况走一遍</b>：检查网络失败、误操作与任务中断后如何继续。</li><li><b>反馈适度且有退路</b>：关注用户所需进展，避免无意义打断。</li></ol><p>交互验收要覆盖正常、首次使用和失败恢复场景。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">看一眼 vs 用一遍</div>
     <p class="desc">审美的病暴露得快：页面一打开，配色乱、间距挤，三秒钟就皱眉头。交互的病藏得深：demo 演示那两分钟一切正常，等真实用户删错一条数据、断一次网、第一次打开空荡荡的页面，病才发作。</p>
     <p class="desc" style="margin-top:16px">这就是 Vibe Coding 时代的新坑。AI 把「做出来」变得很容易，它默认交付的交互停在「能跑通」级别：空态一片空白、报错弹 alert、删除不带确认、保存了没动静。你验收时点两下觉得没问题，用户用一周就想卸载。</p>

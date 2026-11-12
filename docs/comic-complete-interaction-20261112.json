@@ -1,0 +1,355 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-interaction",
+  "status": "accepted; 10 original comics integrated and visually reviewed",
+  "lessons": [
+    {
+      "file": "ixd-1.html",
+      "slug": "interaction-test-real-use",
+      "role": "体验虎：蓝外套、橙围巾",
+      "takeaway": "交互验收要覆盖正常、首次使用和失败恢复场景。",
+      "panels": [
+        {
+          "label": "能跑通只是起点",
+          "text": "演示顺利，不代表真实使用时没有阻碍。",
+          "alt": "体验虎看机器人顺利把成品放上演示台，旁边还有未打开的测试盒。"
+        },
+        {
+          "label": "新用户从空白开始",
+          "text": "检查没有数据时，用户是否知道下一步。",
+          "alt": "体验虎打开空抽屉，找到一张工具图卡和清楚的创建入口。"
+        },
+        {
+          "label": "把坏情况走一遍",
+          "text": "检查网络失败、误操作与任务中断后如何继续。",
+          "alt": "体验虎发现断开的传送带，检查保留下来的包裹和恢复按钮。"
+        },
+        {
+          "label": "反馈适度且有退路",
+          "text": "关注用户所需进展，避免无意义打断。",
+          "alt": "体验虎一边继续装配一边看桌角的小进度灯，旁边放着可恢复的旧零件。"
+        }
+      ],
+      "scenePrompt": "角色：体验虎：蓝外套、橙围巾。从左到右四格，每格一个完整场景：第1格：体验虎看机器人顺利把成品放上演示台，旁边还有未打开的测试盒。 第2格：体验虎打开空抽屉，找到一张工具图卡和清楚的创建入口。 第3格：体验虎发现断开的传送带，检查保留下来的包裹和恢复按钮。 第4格：体验虎一边继续装配一边看桌角的小进度灯，旁边放着可恢复的旧零件。",
+      "originalHtmlSha256": "324dd37fd5f1cb25d460835b65e530c767959da05bcc3e99d20a76bd38234ed2",
+      "lessonTitle": "能跑通了，然后呢？",
+      "title": "四格看懂：能跑通了，然后呢？",
+      "sourceArtifact": "exec-95994372-d9b2-4956-b5d5-44d7af2e145f.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-95994372-d9b2-4956-b5d5-44d7af2e145f.png"
+    },
+    {
+      "file": "ixd-2.html",
+      "slug": "interaction-three-states",
+      "role": "状态虎：青绿背带、米白衬衫",
+      "takeaway": "为加载、空白和错误状态提供适当反馈与明确下一步。",
+      "panels": [
+        {
+          "label": "空态给入口",
+          "text": "说明这里有什么用途，并给可开始的动作或示例。",
+          "alt": "状态虎在空工具架上放一张示例图卡，指向唯一的新增托盘。"
+        },
+        {
+          "label": "加载呈现真实进展",
+          "text": "显示正在发生什么；进度未知时不要伪造精确百分比。",
+          "alt": "状态虎看着仍在加工的机器和分段进度灯，保留未完成工位。"
+        },
+        {
+          "label": "错误给出路",
+          "text": "交代发生了什么、已知原因和现在能做什么。",
+          "alt": "状态虎发现断开的接头，把保留的材料放好并指向重试接线口。"
+        },
+        {
+          "label": "恢复后保留成果",
+          "text": "不要让失败清空用户已输入的内容，恢复后再核对结果。",
+          "alt": "状态虎接回机器，取回保存完好的任务卡，检查恢复加工的成品。"
+        }
+      ],
+      "scenePrompt": "角色：状态虎：青绿背带、米白衬衫。从左到右四格，每格一个完整场景：第1格：状态虎在空工具架上放一张示例图卡，指向唯一的新增托盘。 第2格：状态虎看着仍在加工的机器和分段进度灯，保留未完成工位。 第3格：状态虎发现断开的接头，把保留的材料放好并指向重试接线口。 第4格：状态虎接回机器，取回保存完好的任务卡，检查恢复加工的成品。",
+      "originalHtmlSha256": "ee9319f30b1124a40a8aa71ebd8ce36ab8214954811464e894f5ae71c95b5f65",
+      "lessonTitle": "状态三件套：loading、空态、错误态",
+      "title": "四格看懂：状态三件套：loading、空态、错误态",
+      "sourceArtifact": "exec-fd45f59c-c497-45ca-a80f-6784b1a7c157.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-fd45f59c-c497-45ca-a80f-6784b1a7c157.png"
+    },
+    {
+      "file": "ixd-3.html",
+      "slug": "interaction-prevent-and-undo",
+      "role": "防错虎：蓝工装、青绿护目镜",
+      "takeaway": "先降低误操作机会，再为可恢复的动作提供清楚撤销；高风险另设保护。",
+      "panels": [
+        {
+          "label": "不可用就说明原因",
+          "text": "让当前不可执行的动作可理解，减少无效尝试。",
+          "alt": "防错虎在尚缺零件的机器旁放灰色按钮与缺件图卡。"
+        },
+        {
+          "label": "危险入口拉开距离",
+          "text": "用位置、语义和默认值降低误触机会。",
+          "alt": "防错虎把珊瑚危险按钮移到带护罩的独立位置，与普通青绿按钮分开。"
+        },
+        {
+          "label": "可恢复动作留撤销",
+          "text": "适合时保留恢复窗口，并让撤销入口明显可见。",
+          "alt": "防错虎把移出的文件卡放进可恢复抽屉，指向弯曲回转箭头手柄。"
+        },
+        {
+          "label": "按后果选择保护",
+          "text": "不可逆或后果严重的操作，还需明确对象与相应确认。",
+          "alt": "防错虎在永久移除闸门前与同伴虎核对唯一目标卡和锁定范围。"
+        }
+      ],
+      "scenePrompt": "角色：防错虎：蓝工装、青绿护目镜。从左到右四格，每格一个完整场景：第1格：防错虎在尚缺零件的机器旁放灰色按钮与缺件图卡。 第2格：防错虎把珊瑚危险按钮移到带护罩的独立位置，与普通青绿按钮分开。 第3格：防错虎把移出的文件卡放进可恢复抽屉，指向弯曲回转箭头手柄。 第4格：防错虎在永久移除闸门前与同伴虎核对唯一目标卡和锁定范围。",
+      "originalHtmlSha256": "dfe2a892b79e6aefc0989ef402150c323f25d88909ab555952678822f08dd5e9",
+      "lessonTitle": "防错与可逆：让用户敢点",
+      "title": "四格看懂：防错与可逆：让用户敢点",
+      "sourceArtifact": "exec-50f66cf4-15f8-47fb-a9ff-02afad77043e.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-50f66cf4-15f8-47fb-a9ff-02afad77043e.png"
+    },
+    {
+      "file": "ixd-4.html",
+      "slug": "interaction-reduce-friction",
+      "role": "路线虎：青绿夹克、橙领结",
+      "takeaway": "逐步检查核心流程，减少无助目标的操作，并保留必要保护。",
+      "panels": [
+        {
+          "label": "先画完整路径",
+          "text": "从进入到办完事，找出用户实际要走的步骤。",
+          "alt": "路线虎在长轨道上摆出目标旗与一连串停靠点。"
+        },
+        {
+          "label": "识别无用负担",
+          "text": "检查多余导航、打断和重复输入。",
+          "alt": "路线虎发现机器人要求重交已经盖好图标的资料卡，指向旁边已有档案。"
+        },
+        {
+          "label": "能省的步骤才省",
+          "text": "用合理默认和已有信息减负，不能随意删除安全要求。",
+          "alt": "路线虎移除多余停靠点，保留通向关键授权锁的必需闸门。"
+        },
+        {
+          "label": "用真实任务验证",
+          "text": "观察完成率、错误和时间，别把演示比例当结论。",
+          "alt": "路线虎让同伴虎沿简化轨道送达目标，旁边保留沙漏与实际结果卡。"
+        }
+      ],
+      "scenePrompt": "角色：路线虎：青绿夹克、橙领结。从左到右四格，每格一个完整场景：第1格：路线虎在长轨道上摆出目标旗与一连串停靠点。 第2格：路线虎发现机器人要求重交已经盖好图标的资料卡，指向旁边已有档案。 第3格：路线虎移除多余停靠点，保留通向关键授权锁的必需闸门。 第4格：路线虎让同伴虎沿简化轨道送达目标，旁边保留沙漏与实际结果卡。",
+      "originalHtmlSha256": "e292e986aae2b3649adcca08cfd32ae8509f9c036c3c9895bca513ad4fdafb27",
+      "lessonTitle": "流程克制：每多一步掉一批人",
+      "title": "四格看懂：流程克制：每多一步掉一批人",
+      "sourceArtifact": "exec-5bf39056-e204-4fa6-9e44-5799f2cb1aaa.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-5bf39056-e204-4fa6-9e44-5799f2cb1aaa.png"
+    },
+    {
+      "file": "ixd-5.html",
+      "slug": "interaction-familiar-controls",
+      "role": "向导虎：紫马甲、青绿围巾",
+      "takeaway": "基础操作沿用用户熟悉的模式，外观与真实能力要一致。",
+      "panels": [
+        {
+          "label": "先看用户已会什么",
+          "text": "选择与任务、平台及使用者经验匹配的基础模式。",
+          "alt": "向导虎看同伴虎熟练使用常见抽屉把手与开关。"
+        },
+        {
+          "label": "新奇不等于好用",
+          "text": "陌生控件若无明显收益，反而增加学习负担。",
+          "alt": "向导虎看着无明显入口的奇形机关，旁边同伴虎困惑地拿着工具。"
+        },
+        {
+          "label": "外观兑现操作承诺",
+          "text": "像按钮就应能按，可拖动对象要有清楚线索。",
+          "alt": "向导虎按下凸起按钮使抽屉打开，旁边装饰徽章保持平面无按钮样式。"
+        },
+        {
+          "label": "把创新留给关键价值",
+          "text": "用真实任务比较新方案，提供清楚引导与可发现入口。",
+          "alt": "向导虎让同伴虎试用改良机关，同伴通过明显把手顺利完成开箱。"
+        }
+      ],
+      "scenePrompt": "角色：向导虎：紫马甲、青绿围巾。从左到右四格，每格一个完整场景：第1格：向导虎看同伴虎熟练使用常见抽屉把手与开关。 第2格：向导虎看着无明显入口的奇形机关，旁边同伴虎困惑地拿着工具。 第3格：向导虎按下凸起按钮使抽屉打开，旁边装饰徽章保持平面无按钮样式。 第4格：向导虎让同伴虎试用改良机关，同伴通过明显把手顺利完成开箱。",
+      "originalHtmlSha256": "eb4dbb297475a9988dee4c6268af19e0d1f5e902f34000fb590f02623c716e65",
+      "lessonTitle": "习惯用法：别让 AI 发明新交互",
+      "title": "四格看懂：习惯用法：别让 AI 发明新交互",
+      "sourceArtifact": "exec-5a17d49e-0808-433a-aaea-dd4e9eac3cc8.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-5a17d49e-0808-433a-aaea-dd4e9eac3cc8.png"
+    },
+    {
+      "file": "ixd-6.html",
+      "slug": "interaction-select-controls",
+      "role": "控件虎：蓝围裙、珊瑚衬衫",
+      "takeaway": "按选择数量、是否互斥和生效时机选控件，并清楚显示当前状态。",
+      "panels": [
+        {
+          "label": "互斥选项用单选",
+          "text": "用户在一组中选择一个时，让候选与选中状态清楚可见。",
+          "alt": "控件虎按下三个圆形电台键中的一个，其余两个保持弹起。"
+        },
+        {
+          "label": "多个选择用复选",
+          "text": "允许独立选中或取消多个项目。",
+          "alt": "控件虎给两张方形任务卡分别放上勾选片，第三张保持空框。"
+        },
+        {
+          "label": "立即生效用开关",
+          "text": "开关应让状态与结果可理解，不能假装已保存。",
+          "alt": "控件虎拨动灯的开关，灯随之亮起，开关位置与发光状态一致。"
+        },
+        {
+          "label": "长列表再考虑折叠",
+          "text": "结合空间、比较需求和可搜索性选择列表形式。",
+          "alt": "控件虎展开长选项抽屉，通过放大镜查找图卡，旁边短选项直接平铺。"
+        }
+      ],
+      "scenePrompt": "角色：控件虎：蓝围裙、珊瑚衬衫。从左到右四格，每格一个完整场景：第1格：控件虎按下三个圆形电台键中的一个，其余两个保持弹起。 第2格：控件虎给两张方形任务卡分别放上勾选片，第三张保持空框。 第3格：控件虎拨动灯的开关，灯随之亮起，开关位置与发光状态一致。 第4格：控件虎展开长选项抽屉，通过放大镜查找图卡，旁边短选项直接平铺。",
+      "originalHtmlSha256": "508ef3e8ddd24ded3db2bb08fa18c70513de094b1b740626c924acaec062d516",
+      "lessonTitle": "控件选对了吗：单选、多选、开关与下拉",
+      "title": "四格看懂：控件选对了吗：单选、多选、开关与下拉",
+      "sourceArtifact": "exec-9253bc29-3f02-4b1a-bc79-2e4175be26dd.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-9253bc29-3f02-4b1a-bc79-2e4175be26dd.png"
+    },
+    {
+      "file": "ixd-7.html",
+      "slug": "interaction-action-copy",
+      "role": "文案虎：青绿开衫、紫背带",
+      "takeaway": "用用户熟悉的词说明对象、动作与后果，错误信息要支持行动。",
+      "panels": [
+        {
+          "label": "含糊按钮让人猜",
+          "text": "只写泛泛确认，用户还得回头寻找操作后果。",
+          "alt": "文案虎面对两枚外形相同的空白按钮，拿着待处理的文件卡犹豫。"
+        },
+        {
+          "label": "把对象和动作讲清",
+          "text": "标题与按钮应帮助核对操作范围和结果。",
+          "alt": "文案虎把指定文件图卡与移除图标放在操作按钮旁，其他文件放在保护区。"
+        },
+        {
+          "label": "换成用户的词",
+          "text": "界面术语贴近真实工作，避免把内部字段直接展示。",
+          "alt": "文案虎把复杂齿轮与接线图卡换成用户熟悉的发票和文件夹图卡。"
+        },
+        {
+          "label": "错误提示帮用户继续",
+          "text": "解释问题与可行动的修复方式，保留已完成输入。",
+          "alt": "文案虎将缺角输入卡放入修正托盘，旁边已填好的其他卡仍保存完整。"
+        }
+      ],
+      "scenePrompt": "角色：文案虎：青绿开衫、紫背带。从左到右四格，每格一个完整场景：第1格：文案虎面对两枚外形相同的空白按钮，拿着待处理的文件卡犹豫。 第2格：文案虎把指定文件图卡与移除图标放在操作按钮旁，其他文件放在保护区。 第3格：文案虎把复杂齿轮与接线图卡换成用户熟悉的发票和文件夹图卡。 第4格：文案虎将缺角输入卡放入修正托盘，旁边已填好的其他卡仍保存完整。",
+      "originalHtmlSha256": "51f6c4579f96911c98e5f59fafcbc92982e234da4c84248aaf6d45c10d75f49c",
+      "lessonTitle": "界面会说话：用户怎么理解你的文案",
+      "title": "四格看懂：界面会说话：用户怎么理解你的文案",
+      "sourceArtifact": "exec-8eb7872e-86fb-45c9-b6d7-40f0b0df1af7.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-8eb7872e-86fb-45c9-b6d7-40f0b0df1af7.png"
+    },
+    {
+      "file": "ixd-8.html",
+      "slug": "interaction-goals-before-features",
+      "role": "场景虎：蓝马甲、橙领结",
+      "takeaway": "从用户、目标与情境推导功能，再以实际结果验收。",
+      "panels": [
+        {
+          "label": "功能清单还缺主人",
+          "text": "有上传、表单和按钮，不代表解决了实际问题。",
+          "alt": "场景虎看着堆满工具的柜台，客户虎抱着发票不知先用哪个。"
+        },
+        {
+          "label": "说清用户想达到什么",
+          "text": "区分最终状态与中间任务，并说明场景约束。",
+          "alt": "场景虎与客户虎对照发票、沙漏和交付完成图卡。"
+        },
+        {
+          "label": "沿情境推导步骤",
+          "text": "从真实工作过程找必要能力与可减少的负担。",
+          "alt": "场景虎把拍照、核对与提交图卡排成简洁流程，重复抄写图卡移到旁边。"
+        },
+        {
+          "label": "验收目标与边界",
+          "text": "用代表任务检查结果，也核对失败恢复和必要约束。",
+          "alt": "场景虎观察客户虎顺利交出报销包，旁边保留核验清单与撤回抽屉。"
+        }
+      ],
+      "scenePrompt": "角色：场景虎：蓝马甲、橙领结。从左到右四格，每格一个完整场景：第1格：场景虎看着堆满工具的柜台，客户虎抱着发票不知先用哪个。 第2格：场景虎与客户虎对照发票、沙漏和交付完成图卡。 第3格：场景虎把拍照、核对与提交图卡排成简洁流程，重复抄写图卡移到旁边。 第4格：场景虎观察客户虎顺利交出报销包，旁边保留核验清单与撤回抽屉。",
+      "originalHtmlSha256": "c166d62a33853c509d3540647e1a4692c638fe69d8b2612c77046d6612371e42",
+      "lessonTitle": "目标导向：用目标描述需求，别用功能清单",
+      "title": "四格看懂：目标导向：用目标描述需求，别用功能清单",
+      "sourceArtifact": "exec-64d7cf8e-f5d5-428f-861b-e64c90318360.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-64d7cf8e-f5d5-428f-861b-e64c90318360.png"
+    },
+    {
+      "file": "ixd-9.html",
+      "slug": "interaction-state-spec",
+      "role": "规格虎：橙外套、青绿围巾",
+      "takeaway": "把状态、触发条件、恢复动作和关键边界写入交互规格。",
+      "panels": [
+        {
+          "label": "列出状态与转换",
+          "text": "明确加载、成功、空白和失败何时出现。",
+          "alt": "规格虎在工作板上连接沙漏、成品、空盒和断线图标卡。"
+        },
+        {
+          "label": "为每种状态给动作",
+          "text": "说明用户能看到什么、接下来能做什么。",
+          "alt": "规格虎分别给空盒配创建托盘、给断线工位配重试手柄。"
+        },
+        {
+          "label": "补上隐藏边界",
+          "text": "检查重复提交、权限不足、弱网和长内容等情形。",
+          "alt": "规格虎把重复包裹拦在同一入口外，并核对一张无权限的灰色卡。"
+        },
+        {
+          "label": "把规格跑成任务",
+          "text": "结合使用频率与场景验收，不能只检查正常路径。",
+          "alt": "规格虎让机器人按不同场景卡试跑工作台，并在未通过的分支放置标记。"
+        }
+      ],
+      "scenePrompt": "角色：规格虎：橙外套、青绿围巾。从左到右四格，每格一个完整场景：第1格：规格虎在工作板上连接沙漏、成品、空盒和断线图标卡。 第2格：规格虎分别给空盒配创建托盘、给断线工位配重试手柄。 第3格：规格虎把重复包裹拦在同一入口外，并核对一张无权限的灰色卡。 第4格：规格虎让机器人按不同场景卡试跑工作台，并在未通过的分支放置标记。",
+      "originalHtmlSha256": "1f0d9b1b2a5ddf996b445ac8dacb648e702fadca67178dda0d12c19464efec73",
+      "lessonTitle": "把状态机和边界写进提示词",
+      "title": "四格看懂：把状态机和边界写进提示词",
+      "sourceArtifact": "exec-1f1854f1-4301-4e5c-8bf3-893d00b30fba.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-1f1854f1-4301-4e5c-8bf3-893d00b30fba.png"
+    },
+    {
+      "file": "ixd-final.html",
+      "slug": "interaction-acceptance-walkthrough",
+      "role": "验收虎：紫夹克、青绿领结",
+      "takeaway": "亲手检查状态、撤销、流程、控件与文案，再复查不合格项。",
+      "panels": [
+        {
+          "label": "先走完整核心流程",
+          "text": "以用户目标判断任务是否完成，并记录卡点。",
+          "alt": "验收虎跟随同伴虎从入口走到成品出口，在卡住的停靠点插书签。"
+        },
+        {
+          "label": "主动试非正常情况",
+          "text": "用测试数据检查空态、失败、重复操作与恢复。",
+          "alt": "验收虎在测试台断开模拟接头，观察保留的任务卡和重试入口。"
+        },
+        {
+          "label": "检查每个界面零件",
+          "text": "核对控件、对象、反馈及操作后果是否明确。",
+          "alt": "验收虎用放大镜查看单选键、开关和带指定对象图卡的操作钮。"
+        },
+        {
+          "label": "明确打回并复验",
+          "text": "把问题写成具体动作，修正后重走相关路径。",
+          "alt": "验收虎把一张未通过的流程卡递给机器人，旁边检查本仍留一个待办空框。"
+        }
+      ],
+      "scenePrompt": "角色：验收虎：紫夹克、青绿领结。从左到右四格，每格一个完整场景：第1格：验收虎跟随同伴虎从入口走到成品出口，在卡住的停靠点插书签。 第2格：验收虎在测试台断开模拟接头，观察保留的任务卡和重试入口。 第3格：验收虎用放大镜查看单选键、开关和带指定对象图卡的操作钮。 第4格：验收虎把一张未通过的流程卡递给机器人，旁边检查本仍留一个待办空框。",
+      "originalHtmlSha256": "d32a8ffba8a10cd70bd5486397bab3e006f5c6126b6546804188bcb6d653f1b3",
+      "lessonTitle": "交互验收清单：上线前的第二张清单",
+      "title": "四格看懂：交互验收清单：上线前的第二张清单",
+      "sourceArtifact": "exec-53a46b0a-8efa-4ae9-9c75-d2b54554b431.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-53a46b0a-8efa-4ae9-9c75-d2b54554b431.png"
+    }
+  ]
+}

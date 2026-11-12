@@ -1,0 +1,39 @@
+
+> sites-project@0.1.0 verify:content
+> node scripts/verify-content.mjs
+
+{
+  "htmlPages": 2548,
+  "jsFiles": 96,
+  "inlineScripts": 2235,
+  "curricula": [
+    {
+      "language": "zh-CN",
+      "parts": 23,
+      "lessons": 445
+    },
+    {
+      "language": ".en",
+      "parts": 21,
+      "lessons": 399
+    },
+    {
+      "language": ".ko",
+      "parts": 21,
+      "lessons": 399
+    },
+    {
+      "language": ".tw",
+      "parts": 23,
+      "lessons": 466
+    },
+    {
+      "language": ".hk",
+      "parts": 23,
+      "lessons": 466
+    }
+  ],
+  "newFailures": 0,
+  "existingIssues": 0,
+  "examples": []
+}

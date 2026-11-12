@@ -153,16 +153,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">交互工程 · 2 / 10</div>
-    <h1>状态三件套：loading、空态、错误态</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>状态三件套：loading、空态、错误态</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>状态三件套：loading、空态、错误态</h1>
     <p class="subtitle">AI 生成的界面默认只有一种状态：数据齐全、网络流畅、一切正常。可用户遇到的头一屏常常是另外三种：没数据、在等待、出错了。<b>这三种非正常时刻恰恰是体验分水岭</b>，这一节把三件套逐个拆开，每件配一局 A/B 对决。</p>
     <div class="chips"><span class="chip">空态</span><span class="chip">骨架屏</span><span class="chip">错误三要素</span><span class="chip">文案改写</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>界面的三种非正常时刻恰恰是体验分水岭。空态该教下一步，loading 该报进度，错误该说人话给出路。三组 A/B 对决亲手挑</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>界面的三种非正常时刻恰恰是体验分水岭。空态该教下一步，loading 该报进度，错误该说人话给出路。三组 A/B 对决亲手挑</p></aside><section class="lesson-comic" data-lesson-comic="ixd-2.html"><noscript><h2>四格看懂：状态三件套：loading、空态、错误态</h2><img src="assets/comics/interaction-three-states.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：状态三件套：loading、空态、错误态"><ol><li><b>空态给入口</b>：说明这里有什么用途，并给可开始的动作或示例。</li><li><b>加载呈现真实进展</b>：显示正在发生什么；进度未知时不要伪造精确百分比。</li><li><b>错误给出路</b>：交代发生了什么、已知原因和现在能做什么。</li><li><b>恢复后保留成果</b>：不要让失败清空用户已输入的内容，恢复后再核对结果。</li></ol><p>为加载、空白和错误状态提供适当反馈与明确下一步。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">正常状态是及格线，非正常时刻才拉开差距</div>
     <p class="desc">给 AI 一句「做个笔记应用」，它交出来的界面永远预装着几条漂亮的假数据。可真实用户的第一屏没有数据，第一次搜索可能超时，第一次同步可能失败。这三种时刻怎么表现，AI 不会主动想，你不提要求，它就一律敷衍。</p>
     <div class="tbl-wrap"><table class="tbl">

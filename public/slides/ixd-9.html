@@ -98,16 +98,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">交互工程 · 9 / 10</div>
-    <h1>把状态机和边界写进提示词</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>把状态机和边界写进提示词</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>把状态机和边界写进提示词</h1>
     <p class="subtitle">上一节把「要什么」翻译成了目标和场景，这一节补上「别糊弄」的部分。规律很简单：<b>AI 只认真写你提到的状态，没提到的一律按晴天想象</b>。所以状态要列全，边界要说死，防错要写明，这三样合起来就是交互规格。</p>
     <div class="chips"><span class="chip">状态五件套</span><span class="chip">边界轮盘</span><span class="chip">界面姿态</span><span class="chip">规格积木机</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>每个界面把状态列全，把边界情况说死，把防错要求写明。状态机补全器 + 边界轮盘，配可复制的验收话术模板</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>每个界面把状态列全，把边界情况说死，把防错要求写明。状态机补全器 + 边界轮盘，配可复制的验收话术模板</p></aside><section class="lesson-comic" data-lesson-comic="ixd-9.html"><noscript><h2>四格看懂：把状态机和边界写进提示词</h2><img src="assets/comics/interaction-state-spec.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：把状态机和边界写进提示词"><ol><li><b>列出状态与转换</b>：明确加载、成功、空白和失败何时出现。</li><li><b>为每种状态给动作</b>：说明用户能看到什么、接下来能做什么。</li><li><b>补上隐藏边界</b>：检查重复提交、权限不足、弱网和长内容等情形。</li><li><b>把规格跑成任务</b>：结合使用频率与场景验收，不能只检查正常路径。</li></ol><p>把状态、触发条件、恢复动作和关键边界写入交互规格。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">为什么 AI 的产出总是「晴天版」</div>
     <p class="desc">你说「做一个订单列表页」，AI 脑补的画面永远是：网络通畅、数据正好一屏、用户不会点错。它不是偷懒，是你给的描述里只有晴天。本章第 2 节讲过界面的状态三件套（加载、空、错误），第 3 节讲过防错与可逆，那两节教你识别，这一节教你把识别出的要求<b>变成提示词里白纸黑字的条款</b>。</p>
     <a class="xref" href="ixd-2.html">
