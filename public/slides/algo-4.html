@@ -99,15 +99,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">编程基础篇 · 查找与排序</div>
-    <h1>排序：冒泡和快排的赛跑</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>排序：冒泡和快排的赛跑</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>排序：冒泡和快排的赛跑</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">上一课说了，二分查找的门票是「先排好序」。那排序本身贵不贵？看你用什么套路。今天安排一场公开赛：<b>同一组乱序数据，冒泡排序和快速排序同时开跑</b>，谁先把柱子从矮到高排整齐谁赢。先看小数据，再上 60 根柱子——差距会让你印象深刻。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>两种排序同场竞技的可视化动画：看冒泡怎么一步步挪、快排怎么分区跳跃；数据量一大差距有多悬殊</p></aside><!--seo:end-->  <div class="sec-label">同场赛跑 · 冒泡 vs 快排</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>两种排序同场竞技的可视化动画：看冒泡怎么一步步挪、快排怎么分区跳跃；数据量一大差距有多悬殊</p></aside><section class="lesson-comic" data-lesson-comic="algo-4.html"><noscript><h2>四格看懂：排序：冒泡和快排的赛跑</h2><img src="assets/comics/algo-sort-partition-tradeoffs.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：排序：冒泡和快排的赛跑"><ol><li><b>冒泡逐个比较邻居</b>：相邻逆序就交换，多轮把元素移向合适位置。</li><li><b>快排围绕基准分区</b>：按与基准的关系分组，再处理各子区间。</li><li><b>增长率也有适用条件</b>：冒泡通常平方量级；快排平均更好，最坏也可能退化。</li><li><b>选择要考虑真实约束</b>：稳定性、内存、输入特性与语言实现都影响取舍。</li></ol><p>比较排序要理解步骤、平均与最坏代价，工程中优先使用合适的成熟实现。</p></noscript></section><!--seo:end-->  <div class="sec-label">同场赛跑 · 冒泡 vs 快排</div>
 
   <p style="font-size:15px;color:var(--sub);margin-bottom:16px;">规则：两条泳道、同一组随机柱子、同样的动画节奏（每一步耗时相同），公平竞赛。<b style="color:var(--text)">留意三件事：①黄色 = 正在比较的柱子 ②紫色 = 快排选中的「基准」③绿色 = 已就位</b>。先用 10 根感受节奏，再点 60 根看差距。</p>
 

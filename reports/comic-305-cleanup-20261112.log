@@ -1,0 +1,11 @@
+
+> sites-project@0.1.0 check:cleanup
+> python scripts/cleanup_legacy.py --check
+
+{
+  "changed_files": 0,
+  "counts": {},
+  "html_pages": 2548,
+  "remaining": 0,
+  "examples": []
+}

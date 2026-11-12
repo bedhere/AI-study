@@ -120,15 +120,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">编程基础篇 · 搜索与决策</div>
-    <h1>Beam Search：往前多看几步再选</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Beam Search：往前多看几步再选</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Beam Search：往前多看几步再选</h1>
     <p class="subtitle">上一课留了个坑：贪心每步拿眼前最大的，可能一步错、步步错。填坑的办法朴素得可爱——<b>别急着定，多留几条候选路一起往前走，走完了比总分</b>。这就是 Beam Search（束搜索）。下面这张「词格」，让三种走法同台竞技。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>贪心一步错步步错，Beam Search 同时留几条候选路往前探。交互对比两种策略走出的句子，理解「先想再答」的直觉来源</p></aside><!--seo:end-->  <div class="sec-label">词格上的三条路</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>贪心一步错步步错，Beam Search 同时留几条候选路往前探。交互对比两种策略走出的句子，理解「先想再答」的直觉来源</p></aside><section class="lesson-comic" data-lesson-comic="algo-10.html"><noscript><h2>四格看懂：Beam Search：往前多看几步再选</h2><img src="assets/comics/algo-beam-search-pruning.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Beam Search：往前多看几步再选"><ol><li><b>先保留几条候选路</b>：每一步从当前候选展开后按分数筛选。</li><li><b>宽度限制搜索规模</b>：低分前缀被剪去后，通常不会在后面重新回来。</li><li><b>比较完成序列的分数</b>：概率及长度等评分规则影响选择，宽度更大不保证质量更好。</li><li><b>别把它等同推理模型</b>：多路解码是一种具体算法；额外推理计算可采用其他机制。</li></ol><p>束搜索保留有限候选并剪枝，以更多计算探索序列，仍可能错过最优结果。</p></noscript></section><!--seo:end-->  <div class="sec-label">词格上的三条路</div>
 
   <p style="font-size:15px;color:var(--sub);margin-bottom:16px;">开头固定「这家店的」，往右走 4 步，每步 3 个候选词。<b style="color:var(--text)">按顺序点三个按钮</b>，留意三件事：贪心（红线）第一步就抓住概率 0.5 的「菜」，但后面的路越走越窄；Beam=2（蓝线）同时养两条路，被淘汰的变灰；Beam=3 连第一步只有 0.2 的「装修」都留着——<b style="color:var(--text)">最后谁的累计分最高？右下角的计算量又差多少？</b></p>
 

@@ -93,15 +93,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">编程基础篇 · 搜索与决策</div>
-    <h1>BFS 与 DFS：Agent 在代码库里找文件</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>BFS 与 DFS：Agent 在代码库里找文件</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>BFS 与 DFS：Agent 在代码库里找文件</h1>
     <p class="subtitle">工程进阶篇里，Coding Agent 接到「找出登录报错的原因」后，会在几百个文件夹里翻代码。往哪儿翻？先翻完这层再下去，还是抓住一条线索钻到底？这是两种截然不同的性格——<b>BFS（广度优先）和 DFS（深度优先）</b>。这一课让它们各走一遍同一个迷宫，性格一眼见分晓。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>走迷宫动画看两种搜索的性格：一层层扫 vs 一条道走到黑；Coding Agent 的 grep 检索、网络爬虫都是它们的变体</p></aside><!--seo:end-->  <div class="sec-label">走迷宫看性格 · 同一张图，两种走法</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>走迷宫动画看两种搜索的性格：一层层扫 vs 一条道走到黑；Coding Agent 的 grep 检索、网络爬虫都是它们的变体</p></aside><section class="lesson-comic" data-lesson-comic="algo-8.html"><noscript><h2>四格看懂：BFS 与 DFS：Agent 在代码库里找文件</h2><img src="assets/comics/algo-bfs-dfs-search-conditions.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：BFS 与 DFS：Agent 在代码库里找文件"><ol><li><b>广度优先先看同一层</b>：通常用队列管理待探索节点。</li><li><b>深度优先沿分支前进</b>：用栈或递归深入，走不通时回退。</li><li><b>最短路有前提</b>：BFS 可求无权图最少边数路径；加权图不能直接照搬。</li><li><b>真实检索可混合策略</b>：设置访问记录和预算，按线索调整，避免循环和失控扩展。</li></ol><p>BFS 按层扩展，DFS 深入分支；路径性质和资源代价取决于图与实现。</p></noscript></section><!--seo:end-->  <div class="sec-label">走迷宫看性格 · 同一张图，两种走法</div>
 
   <p style="font-size:15px;color:var(--sub);margin-bottom:16px;">🏁 是起点，🎯 是终点，深灰是墙。两个按钮各代表一种性格，<b style="color:var(--text)">留意三处</b>：染色的<b style="color:var(--text)">形状</b>（BFS 是一圈圈的波纹，DFS 是一条蛇）；下方两个<b style="color:var(--text)">计数器</b>；以及最后绿色高亮的路——<b style="color:var(--text)">谁的更短？谁探过的格子更多？</b></p>
 

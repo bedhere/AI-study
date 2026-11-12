@@ -110,15 +110,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">编程基础篇 · 递归与分治</div>
-    <h1>递归：把大事拆成同一件小事</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>递归：把大事拆成同一件小事</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>递归：把大事拆成同一件小事</h1>
     <p class="subtitle">「做个官网」听着吓人，「写首页的三行文案」谁都会。工程进阶篇里你见过 Coding Agent 接到大需求后自己列小任务清单——它用的思路有个名字：<b>递归</b>。这一课不写一行代码，点一棵任务树、拖一根滑块，你就能拿到这个程序员嘴里最玄的词。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>遍历目录、拆解任务、画分形树，套路都一样：自己调用自己。看 Agent 怎么把「做个官网」递归拆成能动手的小任务</p></aside><!--seo:end-->  <div class="sec-label">先玩一局 · 帮 Agent 拆任务</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>遍历目录、拆解任务、画分形树，套路都一样：自己调用自己。看 Agent 怎么把「做个官网」递归拆成能动手的小任务</p></aside><section class="lesson-comic" data-lesson-comic="algo-6.html"><noscript><h2>四格看懂：递归：把大事拆成同一件小事</h2><img src="assets/comics/algo-recursion-smaller-and-base-case.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：递归：把大事拆成同一件小事"><ol><li><b>识别重复的问题形状</b>：子问题能沿用相同求解规则，才适合递归表达。</li><li><b>每次让问题变小</b>：减少规模或推进状态，避免原地自我调用。</li><li><b>到基础情况就停止</b>：直接处理可解的小问题，并关注调用深度。</li><li><b>返回时组合结果</b>：将子问题结果逐层带回，检查整体是否满足目标。</li></ol><p>递归用同类小问题解决原问题，需要进展、终止条件与结果组合。</p></noscript></section><!--seo:end-->  <div class="sec-label">先玩一局 · 帮 Agent 拆任务</div>
 
   <p style="font-size:15px;color:var(--sub);margin-bottom:16px;">老板丢来一句话：「给奶茶店做个官网」。这活没法直接动手——但可以<b style="color:var(--text)">拆</b>。点下面的卡片，把大任务一层层拆开；拆到✋「能直接干了」的小活为止，再点「开工」。<b style="color:var(--text)">留意两件事</b>：拆的时候是自上而下一层层展开；干完的时候，绿色是自下而上「冒泡」汇拢回去的。</p>
 

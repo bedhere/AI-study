@@ -109,15 +109,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">编程基础篇 · 复杂度：一眼看穿代码值不值</div>
-    <h1>为什么上下文越长越贵？O(n²) 的账单</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>为什么上下文越长越贵？O(n²) 的账单</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>为什么上下文越长越贵？O(n²) 的账单</h1>
     <p class="subtitle">上一课你拿到了 Big-O 这把尺子，还记得那条起飞的红线吗？今天带你去看大模型里最有名的一个 O(n²)——<b>注意力机制</b>。学完你会突然理解一堆老问题：为什么长对话越来越卡、为什么上下文窗口是「窗口」不是「仓库」、为什么大家拼命做上下文压缩。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>注意力机制要让每个 Token 看所有 Token：拖动上下文长度，看计算量和账单按平方往上蹿——长对话变卡变贵的根源</p></aside><!--seo:end-->  <div class="sec-label">先回忆一下 · 注意力在干嘛</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>注意力机制要让每个 Token 看所有 Token：拖动上下文长度，看计算量和账单按平方往上蹿——长对话变卡变贵的根源</p></aside><section class="lesson-comic" data-lesson-comic="algo-2.html"><noscript><h2>四格看懂：为什么上下文越长越贵？O(n²) 的账单</h2><img src="assets/comics/algo-attention-compute-versus-billing.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：为什么上下文越长越贵？O(n²) 的账单"><ol><li><b>全序列有成对交互</b>：密集自注意力在序列位置之间计算相关性。</li><li><b>序列增长带来更多配对</b>：长度扩大时，密集成对计算的数量按平方量级增长。</li><li><b>缓存与实现改变实际代价</b>：有 KV Cache 的逐词元生成不能简单按每步全量重算理解。</li><li><b>账单另按服务规则算</b>：结合输入输出、缓存、模型与实测延迟，避免套用固定平方账单。</li></ol><p>密集自注意力的全序列计算有平方项，但生成阶段、实现和计费需分别分析。</p></noscript></section><!--seo:end-->  <div class="sec-label">先回忆一下 · 注意力在干嘛</div>
 
   <p style="font-size:15px;color:var(--sub);margin-bottom:16px;">前面的课程讲过：大模型生成每个新词元（token）时，都要「<b style="color:var(--text)">回头看</b>」前面所有的词元，给每个词分配注意力权重，才知道接下来该接什么。一个 token 看一遍所有 token——这句话用上一课的语言翻译一下：<b style="color:var(--text)">n 个 token，每个都要看 n 个，总共 n × n 次「对视」</b>。这就是一张 n×n 的表格。拖滑块画给你看。</p>
 

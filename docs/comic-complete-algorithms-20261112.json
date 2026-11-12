@@ -1,0 +1,530 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-algorithms",
+  "status": "accepted; all 15 article-specific comics integrated and visually reviewed",
+  "verificationSources": [
+    "https://arxiv.org/abs/1706.03762",
+    "https://arxiv.org/abs/2205.14135",
+    "https://huggingface.co/docs/transformers/generation_strategies"
+  ],
+  "lessons": [
+    {
+      "file": "algo-1.html",
+      "slug": "algo-growth-not-stopwatch",
+      "role": "计量虎：蓝背带裤、橙衬衫",
+      "takeaway": "Big-O 描述规模增长时的渐近上界，实际耗时还需结合实现和数据测量。",
+      "panels": [
+        {
+          "label": "先看工作量怎样增长",
+          "text": "按位置取一次、逐个扫描和两两比较，增长方式不同。",
+          "alt": "计量虎对照单格取物、长排卡片和两两连线的点阵模型。"
+        },
+        {
+          "label": "小样本可能看不出差别",
+          "text": "规模变大后，不同增长率的开销才更明显。",
+          "alt": "计量虎把小卡堆换成大卡堆，看到比较纸带迅速变长。"
+        },
+        {
+          "label": "复杂度不是秒表读数",
+          "text": "常数、硬件、输入分布与实现都会影响实际耗时。",
+          "alt": "计量虎在同一工作量模型旁对照两台不同机器与沙漏。"
+        },
+        {
+          "label": "用推导加实测验收",
+          "text": "明确输入变量与操作，再比较代表性规模和边界情况。",
+          "alt": "计量虎把增长曲线图卡与实际测试记录放在一起核对。"
+        }
+      ],
+      "scenePrompt": "角色：计量虎：蓝背带裤、橙衬衫。从左到右四格，每格一个完整场景：第1格：计量虎对照单格取物、长排卡片和两两连线的点阵模型。 第2格：计量虎把小卡堆换成大卡堆，看到比较纸带迅速变长。 第3格：计量虎在同一工作量模型旁对照两台不同机器与沙漏。 第4格：计量虎把增长曲线图卡与实际测试记录放在一起核对。",
+      "originalHtmlSha256": "2e80b624434a2adea2821d77c376ca9af5ceb6792e6bc35a0036432f6c6aa8f1",
+      "lessonTitle": "Big-O：一眼看穿代码要跑多久",
+      "title": "四格看懂：Big-O：一眼看穿代码要跑多久",
+      "sourceArtifact": "exec-91ffa2dc-f8c9-48fa-91e3-00eae09c22cc.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-91ffa2dc-f8c9-48fa-91e3-00eae09c22cc.png"
+    },
+    {
+      "file": "algo-2.html",
+      "slug": "algo-attention-compute-versus-billing",
+      "role": "注意虎：青绿马甲、蓝围巾",
+      "takeaway": "密集自注意力的全序列计算有平方项，但生成阶段、实现和计费需分别分析。",
+      "panels": [
+        {
+          "label": "全序列有成对交互",
+          "text": "密集自注意力在序列位置之间计算相关性。",
+          "alt": "注意虎在方形点阵板上连接不同行列的位置节点。"
+        },
+        {
+          "label": "序列增长带来更多配对",
+          "text": "长度扩大时，密集成对计算的数量按平方量级增长。",
+          "alt": "注意虎把小点阵换成更大的点阵，桌面连接格明显增多。"
+        },
+        {
+          "label": "缓存与实现改变实际代价",
+          "text": "有 KV Cache 的逐词元生成不能简单按每步全量重算理解。",
+          "alt": "注意虎把已算状态积木留在抽屉，只为新到的一块接上计算装置。"
+        },
+        {
+          "label": "账单另按服务规则算",
+          "text": "结合输入输出、缓存、模型与实测延迟，避免套用固定平方账单。",
+          "alt": "注意虎分开摆放计算点阵、沙漏和筹码账本进行核对。"
+        }
+      ],
+      "scenePrompt": "角色：注意虎：青绿马甲、蓝围巾。从左到右四格，每格一个完整场景：第1格：注意虎在方形点阵板上连接不同行列的位置节点。 第2格：注意虎把小点阵换成更大的点阵，桌面连接格明显增多。 第3格：注意虎把已算状态积木留在抽屉，只为新到的一块接上计算装置。 第4格：注意虎分开摆放计算点阵、沙漏和筹码账本进行核对。",
+      "originalHtmlSha256": "860a7e6d146d79edd430f0590371d0d981a506cdfa9545c65c33b20a7b664496",
+      "lessonTitle": "为什么上下文越长越贵？O(n²) 的账单",
+      "title": "四格看懂：为什么上下文越长越贵？O(n²) 的账单",
+      "sourceArtifact": "exec-4b54ef78-8070-4c74-84ed-8ee30f8769bf.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-4b54ef78-8070-4c74-84ed-8ee30f8769bf.png"
+    },
+    {
+      "file": "algo-3.html",
+      "slug": "algo-binary-search-preconditions",
+      "role": "二分虎：橙外套、青绿围巾",
+      "takeaway": "二分利用有序或单调条件持续缩小候选区间，还要处理边界与预处理代价。",
+      "panels": [
+        {
+          "label": "先确认能排除哪一半",
+          "text": "候选按规则有序，比较结果才可指明下一侧。",
+          "alt": "二分虎面对从矮到高排列的柱子，查看中间柱和目标柱卡。"
+        },
+        {
+          "label": "每步检查区间中部",
+          "text": "根据比较保留可能包含目标的一半。",
+          "alt": "二分虎在长格架中拉下左侧遮帘，保留右侧亮起的候选格。"
+        },
+        {
+          "label": "重复收缩直到边界",
+          "text": "正确处理未找到、重复值与区间端点。",
+          "alt": "二分虎在已缩小的两格候选中比对目标卡，旁边有未命中空托盘。"
+        },
+        {
+          "label": "先排序也要付成本",
+          "text": "一次性查询与反复查询的合适方案可能不同。",
+          "alt": "二分虎把乱序柱子整理到有序架，再比较排序与多次查找的沙漏。"
+        }
+      ],
+      "scenePrompt": "角色：二分虎：橙外套、青绿围巾。从左到右四格，每格一个完整场景：第1格：二分虎面对从矮到高排列的柱子，查看中间柱和目标柱卡。 第2格：二分虎在长格架中拉下左侧遮帘，保留右侧亮起的候选格。 第3格：二分虎在已缩小的两格候选中比对目标卡，旁边有未命中空托盘。 第4格：二分虎把乱序柱子整理到有序架，再比较排序与多次查找的沙漏。",
+      "originalHtmlSha256": "49045e8c16841c903b1b61326baec31a03c832a446387bc69349bba404df50da",
+      "lessonTitle": "二分查找：猜数字游戏的最优解",
+      "title": "四格看懂：二分查找：猜数字游戏的最优解",
+      "sourceArtifact": "exec-c1d8164f-9817-4ded-8ea0-acb629f81f99.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-c1d8164f-9817-4ded-8ea0-acb629f81f99.png"
+    },
+    {
+      "file": "algo-4.html",
+      "slug": "algo-sort-partition-tradeoffs",
+      "role": "排序虎：紫围裙、蓝衬衫",
+      "takeaway": "比较排序要理解步骤、平均与最坏代价，工程中优先使用合适的成熟实现。",
+      "panels": [
+        {
+          "label": "冒泡逐个比较邻居",
+          "text": "相邻逆序就交换，多轮把元素移向合适位置。",
+          "alt": "排序虎在柱子队列中交换相邻的高柱和矮柱。"
+        },
+        {
+          "label": "快排围绕基准分区",
+          "text": "按与基准的关系分组，再处理各子区间。",
+          "alt": "排序虎把柱子分放到基准柱左右的两个托盘中。"
+        },
+        {
+          "label": "增长率也有适用条件",
+          "text": "冒泡通常平方量级；快排平均更好，最坏也可能退化。",
+          "alt": "排序虎对照均衡分开的托盘与一侧挤满柱子的偏斜托盘。"
+        },
+        {
+          "label": "选择要考虑真实约束",
+          "text": "稳定性、内存、输入特性与语言实现都影响取舍。",
+          "alt": "排序虎对照带颜色配对标记的成品柱列、空间盒和成熟工具册。"
+        }
+      ],
+      "scenePrompt": "角色：排序虎：紫围裙、蓝衬衫。从左到右四格，每格一个完整场景：第1格：排序虎在柱子队列中交换相邻的高柱和矮柱。 第2格：排序虎把柱子分放到基准柱左右的两个托盘中。 第3格：排序虎对照均衡分开的托盘与一侧挤满柱子的偏斜托盘。 第4格：排序虎对照带颜色配对标记的成品柱列、空间盒和成熟工具册。",
+      "originalHtmlSha256": "508b9a43e01fc025fc394210ea4461c81b72add94c4085081ea2f3889c907005",
+      "lessonTitle": "排序：冒泡和快排的赛跑",
+      "title": "四格看懂：排序：冒泡和快排的赛跑",
+      "sourceArtifact": "exec-c86a9799-4c09-4253-82a5-933023af9232.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-c86a9799-4c09-4253-82a5-933023af9232.png"
+    },
+    {
+      "file": "algo-5.html",
+      "slug": "algo-rerank-candidates-evidence",
+      "role": "重排虎：青绿夹克、橙领结",
+      "takeaway": "先召回候选再重排，可改善相关性筛选，但仍要核对时效、权限和原文。",
+      "panels": [
+        {
+          "label": "先召回有希望的候选",
+          "text": "用检索从大量资料中选出较小集合。",
+          "alt": "重排虎从大资料架中将若干候选页送入漏斗托盘。"
+        },
+        {
+          "label": "再按任务细看打分",
+          "text": "重排可结合问题与段落判断相关性，方法依系统而异。",
+          "alt": "重排虎与机器人将问题卡和候选页成对摆在检查台。"
+        },
+        {
+          "label": "相似不等于可用",
+          "text": "旧政策或无权访问的资料需要过滤，分数高也可能不适用。",
+          "alt": "重排虎把过期日历图卡和锁图卡对应的资料放进排除盒。"
+        },
+        {
+          "label": "精选后仍要查证",
+          "text": "控制候选数与开销，评估召回、排序和最终回答。",
+          "alt": "重排虎将精选原页与回答草稿对照，旁边放着沙漏和筹码盘。"
+        }
+      ],
+      "scenePrompt": "角色：重排虎：青绿夹克、橙领结。从左到右四格，每格一个完整场景：第1格：重排虎从大资料架中将若干候选页送入漏斗托盘。 第2格：重排虎与机器人将问题卡和候选页成对摆在检查台。 第3格：重排虎把过期日历图卡和锁图卡对应的资料放进排除盒。 第4格：重排虎将精选原页与回答草稿对照，旁边放着沙漏和筹码盘。",
+      "originalHtmlSha256": "330050ac26df3daafc3a0588ecf8cc7c071ac36f83501b02f21c377f8436ad6f",
+      "lessonTitle": "排序在 AI 里的真身：Rerank",
+      "title": "四格看懂：排序在 AI 里的真身：Rerank",
+      "sourceArtifact": "exec-6c66b795-9a10-4b9c-873a-f0f2b985d1b2.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-6c66b795-9a10-4b9c-873a-f0f2b985d1b2.png"
+    },
+    {
+      "file": "algo-6.html",
+      "slug": "algo-recursion-smaller-and-base-case",
+      "role": "递归虎：蓝工装、橙围巾",
+      "takeaway": "递归用同类小问题解决原问题，需要进展、终止条件与结果组合。",
+      "panels": [
+        {
+          "label": "识别重复的问题形状",
+          "text": "子问题能沿用相同求解规则，才适合递归表达。",
+          "alt": "递归虎在任务树上比较大文件夹与形状相同的小文件夹。"
+        },
+        {
+          "label": "每次让问题变小",
+          "text": "减少规模或推进状态，避免原地自我调用。",
+          "alt": "递归虎依次打开越来越小的套盒，将最小盒放到桌上。"
+        },
+        {
+          "label": "到基础情况就停止",
+          "text": "直接处理可解的小问题，并关注调用深度。",
+          "alt": "递归虎在最小任务卡旁放下停止挡板，避免继续堆叠调用卡。"
+        },
+        {
+          "label": "返回时组合结果",
+          "text": "将子问题结果逐层带回，检查整体是否满足目标。",
+          "alt": "递归虎把叶子任务成品逐层归入上级托盘，拼出完整网站模型。"
+        }
+      ],
+      "scenePrompt": "角色：递归虎：蓝工装、橙围巾。从左到右四格，每格一个完整场景：第1格：递归虎在任务树上比较大文件夹与形状相同的小文件夹。 第2格：递归虎依次打开越来越小的套盒，将最小盒放到桌上。 第3格：递归虎在最小任务卡旁放下停止挡板，避免继续堆叠调用卡。 第4格：递归虎把叶子任务成品逐层归入上级托盘，拼出完整网站模型。",
+      "originalHtmlSha256": "c37ff27cc2deda815cee4c55b0005ce1fa3ecd88d52f1ef31b700665884796bf",
+      "lessonTitle": "递归：把大事拆成同一件小事",
+      "title": "四格看懂：递归：把大事拆成同一件小事",
+      "sourceArtifact": "exec-a2680226-2f08-433d-be63-9c6c7e2cbdd5.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-a2680226-2f08-433d-be63-9c6c7e2cbdd5.png"
+    },
+    {
+      "file": "algo-7.html",
+      "slug": "algo-divide-summarize-merge",
+      "role": "分治虎：橙背带裤、青绿衬衫",
+      "takeaway": "分段摘要是一种分治式方案；合并时要保留跨段约束并核对损失。",
+      "panels": [
+        {
+          "label": "先按有意义的边界拆分",
+          "text": "按话题、时间或结构切段，避免割断关键关联。",
+          "alt": "分治虎把长对话卷册分到不同主题图标的托盘。"
+        },
+        {
+          "label": "局部处理保留要点",
+          "text": "每段记录事实、决定、未决问题与来源。",
+          "alt": "分治虎和机器人把各段资料整理为带来源书签的短卡。"
+        },
+        {
+          "label": "合并不是简单拼贴",
+          "text": "核对跨段依赖、冲突与最新决定，形成统一摘要。",
+          "alt": "分治虎用连接绳对照几张摘要卡，把冲突卡单独标出。"
+        },
+        {
+          "label": "压缩后对照原文验收",
+          "text": "摘要可能有损，关键细节应能回溯查证。",
+          "alt": "分治虎用放大镜比较短摘要与原始卷册上的锁图标约束。"
+        }
+      ],
+      "scenePrompt": "角色：分治虎：橙背带裤、青绿衬衫。从左到右四格，每格一个完整场景：第1格：分治虎把长对话卷册分到不同主题图标的托盘。 第2格：分治虎和机器人把各段资料整理为带来源书签的短卡。 第3格：分治虎用连接绳对照几张摘要卡，把冲突卡单独标出。 第4格：分治虎用放大镜比较短摘要与原始卷册上的锁图标约束。",
+      "originalHtmlSha256": "0a15dd9fa4633b6b1369b1616d5ded3ee98b868a43bbe557081a4f0aa42d8d22",
+      "lessonTitle": "分治：上下文压缩的算法原理",
+      "title": "四格看懂：分治：上下文压缩的算法原理",
+      "sourceArtifact": "exec-13231f3f-1684-48b6-bb1e-ad8279aa5932.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-13231f3f-1684-48b6-bb1e-ad8279aa5932.png"
+    },
+    {
+      "file": "algo-8.html",
+      "slug": "algo-bfs-dfs-search-conditions",
+      "role": "搜索虎：紫马甲、青绿围巾",
+      "takeaway": "BFS 按层扩展，DFS 深入分支；路径性质和资源代价取决于图与实现。",
+      "panels": [
+        {
+          "label": "广度优先先看同一层",
+          "text": "通常用队列管理待探索节点。",
+          "alt": "搜索虎在迷宫模型上点亮起点周围同一层格子，旁边排着待查卡。"
+        },
+        {
+          "label": "深度优先沿分支前进",
+          "text": "用栈或递归深入，走不通时回退。",
+          "alt": "搜索虎沿迷宫一条长路径探到死胡同，取出顶部返回卡。"
+        },
+        {
+          "label": "最短路有前提",
+          "text": "BFS 可求无权图最少边数路径；加权图不能直接照搬。",
+          "alt": "搜索虎比较无权连线图与带不同重量石块的道路图。"
+        },
+        {
+          "label": "真实检索可混合策略",
+          "text": "设置访问记录和预算，按线索调整，避免循环和失控扩展。",
+          "alt": "搜索虎在项目目录迷宫中保留已访问标记并选择一条有线索的分支。"
+        }
+      ],
+      "scenePrompt": "角色：搜索虎：紫马甲、青绿围巾。从左到右四格，每格一个完整场景：第1格：搜索虎在迷宫模型上点亮起点周围同一层格子，旁边排着待查卡。 第2格：搜索虎沿迷宫一条长路径探到死胡同，取出顶部返回卡。 第3格：搜索虎比较无权连线图与带不同重量石块的道路图。 第4格：搜索虎在项目目录迷宫中保留已访问标记并选择一条有线索的分支。",
+      "originalHtmlSha256": "0f7bd49663f086262c7d0c584def482e3729764e33f28abc89c89d4ec84fcd6a",
+      "lessonTitle": "BFS 与 DFS：Agent 在代码库里找文件",
+      "title": "四格看懂：BFS 与 DFS：Agent 在代码库里找文件",
+      "sourceArtifact": "exec-66f9617f-ce6b-4c58-b2a7-3614f55d752c.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-66f9617f-ce6b-4c58-b2a7-3614f55d752c.png"
+    },
+    {
+      "file": "algo-9.html",
+      "slug": "algo-greedy-sampling-validity",
+      "role": "采样虎：蓝围裙、橙衬衫",
+      "takeaway": "贪心每步选最高概率，采样按分布选择；两者都不能以概率代替事实验证。",
+      "panels": [
+        {
+          "label": "贪心只选当前最高项",
+          "text": "每一步局部最优不保证整个序列最优。",
+          "alt": "采样虎在不同高度候选条前取下最高条对应的卡片。"
+        },
+        {
+          "label": "采样按概率作选择",
+          "text": "非最高候选也可能被选中，带来输出差异。",
+          "alt": "采样虎从装有不同比例彩球的透明转盘抽出一颗球。"
+        },
+        {
+          "label": "温度改变分布形状",
+          "text": "在常见温度缩放下，高温更平坦，具体参数支持依接口而异。",
+          "alt": "采样虎调节旋钮，比较一组尖峰柱条与另一组较平坦柱条。"
+        },
+        {
+          "label": "策略不提供正确性保证",
+          "text": "低温也可能答错，服务输出还受配置与实现影响。",
+          "alt": "采样虎把不同生成卡片逐一与原始资料和验收清单对照。"
+        }
+      ],
+      "scenePrompt": "角色：采样虎：蓝围裙、橙衬衫。从左到右四格，每格一个完整场景：第1格：采样虎在不同高度候选条前取下最高条对应的卡片。 第2格：采样虎从装有不同比例彩球的透明转盘抽出一颗球。 第3格：采样虎调节旋钮，比较一组尖峰柱条与另一组较平坦柱条。 第4格：采样虎把不同生成卡片逐一与原始资料和验收清单对照。",
+      "originalHtmlSha256": "18cb2bc054d9a5b4cf74d7f4aca82387df8166517721f4df74ffca1b86e4cbad",
+      "lessonTitle": "贪心与采样：AI 选词时的两种性格",
+      "title": "四格看懂：贪心与采样：AI 选词时的两种性格",
+      "sourceArtifact": "exec-3d1466d1-75f0-41b7-80f4-b448cc2f8a95.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-3d1466d1-75f0-41b7-80f4-b448cc2f8a95.png"
+    },
+    {
+      "file": "algo-10.html",
+      "slug": "algo-beam-search-pruning",
+      "role": "束搜虎：青绿外套、紫围巾",
+      "takeaway": "束搜索保留有限候选并剪枝，以更多计算探索序列，仍可能错过最优结果。",
+      "panels": [
+        {
+          "label": "先保留几条候选路",
+          "text": "每一步从当前候选展开后按分数筛选。",
+          "alt": "束搜虎在分叉路径板上同时保留几条亮起的路线。"
+        },
+        {
+          "label": "宽度限制搜索规模",
+          "text": "低分前缀被剪去后，通常不会在后面重新回来。",
+          "alt": "束搜虎把较暗分支卡放入淘汰托盘，留下有限候选轨道。"
+        },
+        {
+          "label": "比较完成序列的分数",
+          "text": "概率及长度等评分规则影响选择，宽度更大不保证质量更好。",
+          "alt": "束搜虎对照不同长度的完整路径卡与评分积木。"
+        },
+        {
+          "label": "别把它等同推理模型",
+          "text": "多路解码是一种具体算法；额外推理计算可采用其他机制。",
+          "alt": "束搜虎将固定分支轨道模型与独立的草稿检查工作台分开放置。"
+        }
+      ],
+      "scenePrompt": "角色：束搜虎：青绿外套、紫围巾。从左到右四格，每格一个完整场景：第1格：束搜虎在分叉路径板上同时保留几条亮起的路线。 第2格：束搜虎把较暗分支卡放入淘汰托盘，留下有限候选轨道。 第3格：束搜虎对照不同长度的完整路径卡与评分积木。 第4格：束搜虎将固定分支轨道模型与独立的草稿检查工作台分开放置。",
+      "originalHtmlSha256": "f9a95a052a7b4e7f50430d3261ba3b7428d3de9bcd091ad0294e183557e116fe",
+      "lessonTitle": "Beam Search：往前多看几步再选",
+      "title": "四格看懂：Beam Search：往前多看几步再选",
+      "sourceArtifact": "exec-e06d8a93-30fb-4a8a-9503-6a476aeaac89.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-e06d8a93-30fb-4a8a-9503-6a476aeaac89.png"
+    },
+    {
+      "file": "algo-11.html",
+      "slug": "algo-learning-by-role-and-evidence",
+      "role": "求职虎：橙夹克、蓝领结",
+      "takeaway": "学习投入要结合岗位与实际要求；理解算法也能帮助评审 AI 代码。",
+      "panels": [
+        {
+          "label": "先核对目标岗位要求",
+          "text": "不同公司、岗位和时间的考察方式会变，不照搬行情示意。",
+          "alt": "求职虎对照几张不同岗位图标卡和当前招聘资料夹。"
+        },
+        {
+          "label": "区分面试训练与工作能力",
+          "text": "刷题、工程调试和系统评审有交集，也有各自重点。",
+          "alt": "求职虎把练习拼图、调试工具和系统模型分成三组。"
+        },
+        {
+          "label": "理解取舍比背结论更牢",
+          "text": "能解释二分前提、递归边界与空间时间代价。",
+          "alt": "求职虎向机器人演示有序柱架、停止挡板和空间盒。"
+        },
+        {
+          "label": "落到自己的验收任务",
+          "text": "用真实数据检查 AI 代码的正确性与规模表现。",
+          "alt": "求职虎在项目评审桌对照代码图卡、增长曲线和实际测试结果。"
+        }
+      ],
+      "scenePrompt": "角色：求职虎：橙夹克、蓝领结。从左到右四格，每格一个完整场景：第1格：求职虎对照几张不同岗位图标卡和当前招聘资料夹。 第2格：求职虎把练习拼图、调试工具和系统模型分成三组。 第3格：求职虎向机器人演示有序柱架、停止挡板和空间盒。 第4格：求职虎在项目评审桌对照代码图卡、增长曲线和实际测试结果。",
+      "originalHtmlSha256": "5e230a62743c8ac1c20903fe46e6e73299c00f5e76a9dec33ec4449548bf8345",
+      "lessonTitle": "AI 都会做题了，还要刷 LeetCode 吗？",
+      "title": "四格看懂：AI 都会做题了，还要刷 LeetCode 吗？",
+      "sourceArtifact": "exec-557c1d66-c6de-4765-8c35-687acfbcd6c8.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-557c1d66-c6de-4765-8c35-687acfbcd6c8.png"
+    },
+    {
+      "file": "algo-12.html",
+      "slug": "algo-ai-coach-active-practice",
+      "role": "练习虎：紫背带裤、青绿衬衫",
+      "takeaway": "先独立尝试，再让 AI 给提示、追问和检查；用新题验证理解。",
+      "panels": [
+        {
+          "label": "先做自己的第一版",
+          "text": "写出思路、例子和卡点，避免只围观答案。",
+          "alt": "练习虎独自用积木推演小题，旁边放着未打开的答案盒。"
+        },
+        {
+          "label": "要提示再自己推进",
+          "text": "让 AI 针对卡点提问或给一小步线索。",
+          "alt": "练习虎与机器人对照卡住的路径，机器人只递来一块提示积木。"
+        },
+        {
+          "label": "逐步解释并交叉验证",
+          "text": "请 AI 指出复杂度与边界，再用测试或可靠资料核对。",
+          "alt": "练习虎在步骤卡旁放置沙漏、空输入托盘和反例图卡。"
+        },
+        {
+          "label": "换一道题独立迁移",
+          "text": "隔一段时间重做变体，检查是否真正掌握。",
+          "alt": "练习虎关上旧题夹，独立完成不同外形但同类规则的新拼图。"
+        }
+      ],
+      "scenePrompt": "角色：练习虎：紫背带裤、青绿衬衫。从左到右四格，每格一个完整场景：第1格：练习虎独自用积木推演小题，旁边放着未打开的答案盒。 第2格：练习虎与机器人对照卡住的路径，机器人只递来一块提示积木。 第3格：练习虎在步骤卡旁放置沙漏、空输入托盘和反例图卡。 第4格：练习虎关上旧题夹，独立完成不同外形但同类规则的新拼图。",
+      "originalHtmlSha256": "761d3d7e21b0f4ae3d96d2666109d765c27cc7a4de30f64f4bd2f3e910a0e80b",
+      "lessonTitle": "用 AI 学算法的正确姿势",
+      "title": "四格看懂：用 AI 学算法的正确姿势",
+      "sourceArtifact": "exec-175d8267-a7c4-41d4-89ae-fcbd4c355a10.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-175d8267-a7c4-41d4-89ae-fcbd4c355a10.png"
+    },
+    {
+      "file": "algo-summary.html",
+      "slug": "algo-summary-match-method-to-task",
+      "role": "方法虎：蓝马甲、青绿领结",
+      "takeaway": "用任务特征选择算法思想，同时解释前提、复杂度和验证方式。",
+      "panels": [
+        {
+          "label": "用增长率辨认代价",
+          "text": "先问数据变多时，要多做哪些操作。",
+          "alt": "方法虎把小点阵与大点阵并排，观察随规模延长的操作链。"
+        },
+        {
+          "label": "按问题选择套路",
+          "text": "查找排序、递归分治、图搜索与解码各有适用条件。",
+          "alt": "方法虎在一张桌面上摆出有序格架、分段托盘、迷宫和候选转盘。"
+        },
+        {
+          "label": "数据结构与算法配合",
+          "text": "如何收纳和如何处理共同决定系统表现。",
+          "alt": "方法虎把队列卡架接到搜索模型旁，再连接资料存储柜。"
+        },
+        {
+          "label": "说清前提再做验证",
+          "text": "检查有序性、终止条件、图权重与评分目标，结合实测。",
+          "alt": "方法虎用检查夹核对不同模型的前提图卡与测试成品。"
+        }
+      ],
+      "scenePrompt": "角色：方法虎：蓝马甲、青绿领结。从左到右四格，每格一个完整场景：第1格：方法虎把小点阵与大点阵并排，观察随规模延长的操作链。 第2格：方法虎在一张桌面上摆出有序格架、分段托盘、迷宫和候选转盘。 第3格：方法虎把队列卡架接到搜索模型旁，再连接资料存储柜。 第4格：方法虎用检查夹核对不同模型的前提图卡与测试成品。",
+      "originalHtmlSha256": "54ce88c761d2e0cdc989dae88d9717500a46775d8bb4a461917e2ce8c9e0e239",
+      "lessonTitle": "汇总 · 五类算法思想对照表",
+      "title": "四格看懂：汇总 · 五类算法思想对照表",
+      "sourceArtifact": "exec-e34dda24-aebd-4115-86c6-ac6ce45e5bd8.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-e34dda24-aebd-4115-86c6-ac6ce45e5bd8.png"
+    },
+    {
+      "file": "algo-build.html",
+      "slug": "algo-build-complexity-benchmark",
+      "role": "体检虎：橙围裙、蓝衬衫",
+      "takeaway": "把复杂度推导、方案取舍和可复现基准结合，验证优化后的行为与开销。",
+      "panels": [
+        {
+          "label": "先说输入与主要操作",
+          "text": "要求 AI 明确变量，说明循环、查找和额外空间。",
+          "alt": "体检虎在代码步骤卡上圈出双层比较点阵与输入资料堆。"
+        },
+        {
+          "label": "优化要说明代价",
+          "text": "用哈希等结构提速时，也可能增加内存和维护要求。",
+          "alt": "体检虎把逐张比较轨道改为哈希桶架，旁边增加空间收纳盒。"
+        },
+        {
+          "label": "先验正确再量速度",
+          "text": "保留等价行为与边界测试，避免更快却漏结果。",
+          "alt": "体检虎用空托盘、重复卡和普通样例核对两种实现的输出。"
+        },
+        {
+          "label": "用多规模可复现实测",
+          "text": "固定条件、多次测量，观察趋势及异常，记录时间和内存。",
+          "alt": "体检虎对照三种大小资料堆、成排沙漏和空间盒，保存测试记录。"
+        }
+      ],
+      "scenePrompt": "角色：体检虎：橙围裙、蓝衬衫。从左到右四格，每格一个完整场景：第1格：体检虎在代码步骤卡上圈出双层比较点阵与输入资料堆。 第2格：体检虎把逐张比较轨道改为哈希桶架，旁边增加空间收纳盒。 第3格：体检虎用空托盘、重复卡和普通样例核对两种实现的输出。 第4格：体检虎对照三种大小资料堆、成排沙漏和空间盒，保存测试记录。",
+      "originalHtmlSha256": "df4d79baebdc01f1f986efc39d3f180e8cbbbb0aafe5d31e57d77f029cd131c7",
+      "lessonTitle": "给 AI 写的代码做一次复杂度体检",
+      "title": "四格看懂：给 AI 写的代码做一次复杂度体检",
+      "sourceArtifact": "exec-9461697a-2a77-45ad-86a9-3de1442bfd0e.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-9461697a-2a77-45ad-86a9-3de1442bfd0e.png"
+    },
+    {
+      "file": "algo-interview.html",
+      "slug": "algo-interview-reason-and-verify",
+      "role": "讲解虎：青绿西装、橙领结",
+      "takeaway": "回答算法问题时，从场景和前提出发，解释步骤、代价、限制与验证。",
+      "panels": [
+        {
+          "label": "先明确要解决什么",
+          "text": "说明输入规模、目标和约束，避免直接套算法名。",
+          "alt": "讲解虎向评审虎展示任务图、输入资料盒与锁图标约束卡。"
+        },
+        {
+          "label": "用小例子走一遍",
+          "text": "描述候选怎样缩小、任务怎样拆分或节点怎样扩展。",
+          "alt": "讲解虎在有序柱架前演示遮去一半候选的查找步骤。"
+        },
+        {
+          "label": "交代成本与失效条件",
+          "text": "区分平均和最坏情况，说出不适用的前提。",
+          "alt": "讲解虎对照均衡与偏斜的分支模型，旁边放着沙漏与空间盒。"
+        },
+        {
+          "label": "以证据回应追问",
+          "text": "提出反例、备选方案和测量计划，不把直觉说成保证。",
+          "alt": "讲解虎与评审虎一起核对反例托盘、两套方案和实测记录。"
+        }
+      ],
+      "scenePrompt": "角色：讲解虎：青绿西装、橙领结。从左到右四格，每格一个完整场景：第1格：讲解虎向评审虎展示任务图、输入资料盒与锁图标约束卡。 第2格：讲解虎在有序柱架前演示遮去一半候选的查找步骤。 第3格：讲解虎对照均衡与偏斜的分支模型，旁边放着沙漏与空间盒。 第4格：讲解虎与评审虎一起核对反例托盘、两套方案和实测记录。",
+      "originalHtmlSha256": "98bfa0259bb696c66c9f1a2944bfc9deac84b6802decef83e4b34090a97a5b9e",
+      "lessonTitle": "算法 · 30 道灵魂拷问",
+      "title": "四格看懂：算法 · 30 道灵魂拷问",
+      "sourceArtifact": "exec-f7b51d3f-98c7-43b3-8280-b686a3223451.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-f7b51d3f-98c7-43b3-8280-b686a3223451.png"
+    }
+  ]
+}

@@ -119,15 +119,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">编程基础篇 · 复杂度：一眼看穿代码值不值</div>
-    <h1>Big-O：一眼看穿代码要跑多久</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Big-O：一眼看穿代码要跑多久</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Big-O：一眼看穿代码要跑多久</h1>
     <p class="subtitle">姊妹篇讲完了「数据结构 = 收纳方式」，这一章讲另一半：<b>算法 = 做事的套路</b>。评价一个套路好不好，程序员有一把统一的尺子，叫 Big-O。别被数学符号吓到——它回答的问题只有一个：<b>数据变多的时候，你的代码会慢多少？</b>今天用三个交互把这把尺子装进你脑子里。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>拖动数据量滑块，看 O(1)、O(log n)、O(n)、O(n²) 四条曲线怎么分道扬镳；数据翻十倍，谁不动声色、谁当场爆炸</p></aside><!--seo:end-->  <div class="sec-label">交互一 · 四条曲线分道扬镳</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>拖动数据量滑块，看 O(1)、O(log n)、O(n)、O(n²) 四条曲线怎么分道扬镳；数据翻十倍，谁不动声色、谁当场爆炸</p></aside><section class="lesson-comic" data-lesson-comic="algo-1.html"><noscript><h2>四格看懂：Big-O：一眼看穿代码要跑多久</h2><img src="assets/comics/algo-growth-not-stopwatch.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Big-O：一眼看穿代码要跑多久"><ol><li><b>先看工作量怎样增长</b>：按位置取一次、逐个扫描和两两比较，增长方式不同。</li><li><b>小样本可能看不出差别</b>：规模变大后，不同增长率的开销才更明显。</li><li><b>复杂度不是秒表读数</b>：常数、硬件、输入分布与实现都会影响实际耗时。</li><li><b>用推导加实测验收</b>：明确输入变量与操作，再比较代表性规模和边界情况。</li></ol><p>Big-O 描述规模增长时的渐近上界，实际耗时还需结合实现和数据测量。</p></noscript></section><!--seo:end-->  <div class="sec-label">交互一 · 四条曲线分道扬镳</div>
 
   <p style="font-size:15px;color:var(--sub);margin-bottom:16px;">四种常见「套路」的耗时曲线：<b style="color:#8a8f98">O(1) 灰</b>（不管多少数据都一步到位）、<b style="color:#16a34a">O(log n) 绿</b>（每次砍一半）、<b style="color:#2563eb">O(n) 蓝</b>（挨个过一遍）、<b style="color:#dc2626">O(n²) 红</b>（每个都要和每个比）。拖动滑块把数据量从 10 拉到 10 万，右侧是按「1 亿次操作/秒」换算的真实耗时。<b style="color:var(--text)">留意：前半段四条线挤在一起——数据小时啥算法都快，这正是 Demo 骗人的原因。</b></p>
 

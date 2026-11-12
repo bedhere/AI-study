@@ -122,15 +122,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">编程基础篇 · 查找与排序</div>
-    <h1>排序在 AI 里的真身：Rerank</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>排序在 AI 里的真身：Rerank</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>排序在 AI 里的真身：Rerank</h1>
     <p class="subtitle">上一课的排序比的是数字大小，但 AI 世界里排的是「相关性」：RAG 从知识库捞回来一堆段落，<b>谁排前面谁就能挤进上下文</b>——排错了，模型就会一本正经地引用错误资料。这个「打分 + 重排」的环节叫 Rerank。今天你亲自上岗，当一次 Rerank 模型。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>RAG 检索回来的段落不能直接用：先粗排再精排。亲手调整权重，看候选段落怎么重新洗牌——推荐流和搜索结果同理</p></aside><!--seo:end-->  <div class="sec-label">交互 · 亲手当一次 Rerank 模型</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>RAG 检索回来的段落不能直接用：先粗排再精排。亲手调整权重，看候选段落怎么重新洗牌——推荐流和搜索结果同理</p></aside><section class="lesson-comic" data-lesson-comic="algo-5.html"><noscript><h2>四格看懂：排序在 AI 里的真身：Rerank</h2><img src="assets/comics/algo-rerank-candidates-evidence.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：排序在 AI 里的真身：Rerank"><ol><li><b>先召回有希望的候选</b>：用检索从大量资料中选出较小集合。</li><li><b>再按任务细看打分</b>：重排可结合问题与段落判断相关性，方法依系统而异。</li><li><b>相似不等于可用</b>：旧政策或无权访问的资料需要过滤，分数高也可能不适用。</li><li><b>精选后仍要查证</b>：控制候选数与开销，评估召回、排序和最终回答。</li></ol><p>先召回候选再重排，可改善相关性筛选，但仍要核对时效、权限和原文。</p></noscript></section><!--seo:end-->  <div class="sec-label">交互 · 亲手当一次 Rerank 模型</div>
 
   <p style="font-size:15px;color:var(--sub);margin-bottom:16px;">场景：用户在客服机器人里问「你们的退货政策是什么？」，粗排从知识库捞回 5 条候选段落。每条有三项分数：<b style="color:#2563eb">向量相似度</b>（意思相近）、<b style="color:#d97706">关键词命中</b>（字面匹配）、<b style="color:#16a34a">新鲜度</b>（文档新旧）。你手里有三个权重滑块，总分 = 三项分数加权平均。<b style="color:var(--text)">留意：初始只重相似度，排第一的其实是 2023 年的旧版政策——试试加大「新鲜度」权重，看正确条款怎么登顶。</b></p>
 
