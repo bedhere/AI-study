@@ -73,16 +73,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 降本增效 · 9 / 13</div>
-    <h1>语法层：Prompt 是写给机器的</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>语法层：Prompt 是写给机器的</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>语法层：Prompt 是写给机器的</h1>
     <p class="subtitle">进入实战四层的第一层。很多产品早期为了调试方便，或者干脆是让 AI 代写的提示词，习惯用 ###、** 加粗、JSON 展示数据。这些对人类友好的排版，在大模型的计费逻辑里全是「词法税」。</p>
     <div class="chips"><span class="chip">词法税</span><span class="chip">YAML</span><span class="chip">CSV</span><span class="chip">Minified JSON</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>加粗的 ** 就吃掉 8.5% Token；复杂对象用 YAML、扁平列表用 CSV、后台输出强制 Minified JSON</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>加粗的 ** 就吃掉 8.5% Token；复杂对象用 YAML、扁平列表用 CSV、后台输出强制 Minified JSON</p></aside><section class="lesson-comic" data-lesson-comic="cost-9.html"><noscript><h2>四格看懂：语法层：Prompt 是写给机器的</h2><img src="assets/comics/cost-format-measurement.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：语法层：Prompt 是写给机器的"><ol><li><b>先量现有格式</b>：在实际分词器上检查标题、缩进与数据表示的开销。</li><li><b>删除无意义装饰</b>：保留结构与清晰指令，不能为省符号破坏可理解性。</li><li><b>结构服从消费方</b>：按接口和解析器选择格式，不能一概说某种总更省。</li><li><b>比较合法率与成本</b>：后台紧凑输出也要验证完整、合法并保留所需字段。</li></ol><p>格式选择要兼顾协议、可解析性和实测 Token 开销，避免固定省钱结论。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">这笔税有多重：13% 都是格式</div>
     <p class="desc">作者做了一个 Token 可视化分析工具（<a rel="noopener" data-source-reference="true">yusuan.ai/analyzer</a>），把一段精简版 Lyra 提示词丢进去分析：<b>光是加粗用的 ** 符号，就吃掉了 8.5% 的 Token</b>。算上列表、标题符号、JSON 缩进换行，这份提示词 13% 都是格式性内容。一般产品的 Prompt 里，10%–20% 都是这种装饰性 Token。</p>
     <div class="fig-wrap">

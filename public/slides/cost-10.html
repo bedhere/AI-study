@@ -85,16 +85,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 降本增效 · 10 / 13</div>
-    <h1>语义层：双重蒸馏</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>语义层：双重蒸馏</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>语义层：双重蒸馏</h1>
     <p class="subtitle">格式的税砍完了，往深一层看内容本身。RAG 和长文档场景里最常见的工程错误：把上下文窗口当垃圾桶——Few-Shot 案例、检索文档全怼进去，让模型自己辨识。能用，但不该这样用。</p>
     <div class="chips"><span class="chip">O(N²)</span><span class="chip">中段迷失</span><span class="chip">动态 Few-Shot</span><span class="chip">LLMLingua-2</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>中段迷失效应：塞得越多越抓不住重点。动态 Few-Shot 从 4000 砍到 500，LLMLingua-2 压缩 5-20 倍</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>中段迷失效应：塞得越多越抓不住重点。动态 Few-Shot 从 4000 砍到 500，LLMLingua-2 压缩 5-20 倍</p></aside><section class="lesson-comic" data-lesson-comic="cost-10.html"><noscript><h2>四格看懂：语义层：双重蒸馏</h2><img src="assets/comics/cost-semantic-compression.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：语义层：双重蒸馏"><ol><li><b>上下文不是资料仓库</b>：无差别追加会增加开销，也可能干扰当前任务。</li><li><b>选与任务相关的示例</b>：按问题检索或筛选，保留来源与必要条件。</li><li><b>压缩内容可能有损</b>：去冗余时特别核对数字、实体、否定和约束。</li><li><b>用基线比较再采用</b>：测量成本、延迟与质量，不承诺固定压缩倍数或准确率提升。</li></ol><p>按问题选择示例和资料，压缩前后检查关键事实与任务效果。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">垃圾桶式上下文的两宗罪</div>
     <p class="desc"><b>第一，贵而且慢。</b>Transformer 自注意力的计算复杂度是 O(N²)：提示词长度翻倍，计算量翻四倍。提示词越长，Prefill 越久，首字延迟越高——用户还没看到第一个字，耐心已经消磨没了。</p>
     <p class="desc" style="margin-top:10px"><b>第二，效果可能更差。</b>有效信息被废话淹没后，会产生「中段迷失」效应。就像人读长文章：开头认真看（要搞清楚讲什么），结尾也留意（快出结论了），中间那一大坨——眼睛扫过去，脑子没过去。你精心挑选的参考资料如果不幸落在中段，模型可能根本没认真看。</p>

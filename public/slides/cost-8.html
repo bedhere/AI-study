@@ -76,16 +76,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 降本增效 · 8 / 13</div>
-    <h1>Agent 四大成本陷阱与熔断</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Agent 四大成本陷阱与熔断</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Agent 四大成本陷阱与熔断</h1>
     <p class="subtitle">上一节看到的还只是「一次成功的执行」。真实世界里，Agent 的账单事故来自四个方向：工具返回爆炸、思考税、死循环、历史雪球。每一个都有对应的工程解法。</p>
     <div class="chips"><span class="chip">工具截断</span><span class="chip">思考税</span><span class="chip">循环熔断</span><span class="chip">历史压缩</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>工具返回爆炸、思考税、死循环、历史雪球：每个陷阱配一个能落地的策略，外加三条红线</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>工具返回爆炸、思考税、死循环、历史雪球：每个陷阱配一个能落地的策略，外加三条红线</p></aside><section class="lesson-comic" data-lesson-comic="cost-8.html"><noscript><h2>四格看懂：Agent 四大成本陷阱与熔断</h2><img src="assets/comics/cost-agent-circuit-breakers.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Agent 四大成本陷阱与熔断"><ol><li><b>先找成本从哪膨胀</b>：分别记录长工具返回、重复调用与不断增长的历史。</li><li><b>为输出与上下文设界限</b>：按任务分页、摘要或缩小范围，保留重要约束。</li><li><b>重复失败触发停止</b>：结合轮次、预算和重复状态检测，避免无限重试。</li><li><b>停止也要能交接</b>：保存成果、失败证据和下一步，说明完成范围。</li></ol><p>监测工具输出、循环、历史与推理开销，触及预算时可恢复地退出。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">交互演示 · 挨个拆四个陷阱</div>
     <div class="trap-tabs" id="trapTabs"></div>
     <div class="trap-stage" id="trapStage">

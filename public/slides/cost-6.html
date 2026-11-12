@@ -82,16 +82,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 降本增效 · 6 / 13</div>
-    <h1>图片 Token：像素也要交税</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>图片 Token：像素也要交税</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>图片 Token：像素也要交税</h1>
     <p class="subtitle">文字 BPE 是「合并字符」，图片编码是「切割像素」。你以为传的是原图，其实模型按缩放对齐后的分辨率计费——这里面藏着和文字 32k 红线一模一样的跳档陷阱。</p>
     <div class="chips"><span class="chip">像素切块</span><span class="chip">32 对齐</span><span class="chip">分辨率诅咒</span><span class="chip">预算分级</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>输入分辨率实时算 Token 的计算器；32 像素对齐跳档、分辨率诅咒与图片成本三条红线</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>输入分辨率实时算 Token 的计算器；32 像素对齐跳档、分辨率诅咒与图片成本三条红线</p></aside><section class="lesson-comic" data-lesson-comic="cost-6.html"><noscript><h2>四格看懂：图片 Token：像素也要交税</h2><img src="assets/comics/cost-vision-task-budget.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：图片 Token：像素也要交税"><ol><li><b>图片也有编码开销</b>：不同模型可能采用不同缩放、切块与计费规则。</li><li><b>分辨率要匹配任务</b>：分类与读细小文字的需求不同，不能一律最高或最低。</li><li><b>压缩后核对可读细节</b>：调整尺寸或裁剪时，保留完成任务所需信息。</li><li><b>多图要看累计预算</b>：统计全部图片与文本输入，再选择分批或其他方案。</li></ol><p>图片输入预算取决于模型编码规则，应按任务验证分辨率和多图开销。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">图片是怎么变成 Token 的</div>
     <p class="desc">视觉模型把图片切成固定大小的像素块，每块对应一个 Token。以通义千问 VL 为例，核心公式是：</p>
     <div class="formula">图像 Token = (h̄ × w̄) / token_pixels + 2</div>

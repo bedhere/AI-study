@@ -75,16 +75,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 降本增效 · 12 / 13</div>
-    <h1>输出层：管住模型的嘴</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>输出层：管住模型的嘴</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>输出层：管住模型的嘴</h1>
     <p class="subtitle">实战四层的最后一层。输出 Token 比输入贵好几倍（回看第 3 节报价表），而且直接决定接口返回速度。管住模型的嘴，有三类合适的操作：指令层、代码层、工程层。</p>
     <div class="chips"><span class="chip">负向约束</span><span class="chip">Diff 输出</span><span class="chip">停止序列</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>明确的负向约束砍掉 30% 废话；润色用 Diff 别重写整段；停止序列做物理截断</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>明确的负向约束砍掉 30% 废话；润色用 Diff 别重写整段；停止序列做物理截断</p></aside><section class="lesson-comic" data-lesson-comic="cost-12.html"><noscript><h2>四格看懂：输出层：管住模型的嘴</h2><img src="assets/comics/cost-output-budget-validity.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：输出层：管住模型的嘴"><ol><li><b>先说清需要什么</b>：规定受众、字段、长度或条目范围，去除无用重复。</li><li><b>局部修改可局部返回</b>：适合时使用补丁或替换指令，应用后验证上下文。</li><li><b>预算与停止按接口配置</b>：参数能力依模型而异，不能把截断当成内容完成。</li><li><b>结构化结果要完整</b>：检查解析、字段和结束状态，避免在括号等符号处误截断。</li></ol><p>明确输出范围，使用适合接口的预算与结构约束，并校验完整性。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">指令层 · 写明确的负向约束</div>
     <p class="desc">很多人知道要求「请简洁回答」，但这是有问题的——<b>「简洁」对模型来说太抽象了，它不知道你要多简洁</b>。有效的写法是把「别干什么」列清楚：</p>
     <div class="l-cols2">

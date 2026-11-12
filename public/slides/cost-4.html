@@ -83,16 +83,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 降本增效 · 4 / 13</div>
-    <h1>GLM 的短输出博弈：200 Token 断崖</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>GLM 的短输出博弈：200 Token 断崖</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>GLM 的短输出博弈：200 Token 断崖</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">观察 GLM-4.6 的定价结构，会发现一个神奇的设计：它不按输入长度分档，而是按输出长度分档，分界线在 200 个 Token。输出 199 和输出 201，适用完全不同的价格。</p>
     <div class="chips"><span class="chip">输出分档</span><span class="chip">回溯计价</span><span class="chip">任务拆分</span><span class="chip">边界波动</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>输出 199 和 201 是两种价格，连输入都回溯涨价；拖动滑块看账单跳变，四种应对策略</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>输出 199 和 201 是两种价格，连输入都回溯涨价；拖动滑块看账单跳变，四种应对策略</p></aside><section class="lesson-comic" data-lesson-comic="cost-4.html"><noscript><h2>四格看懂：GLM 的短输出博弈：200 Token 断崖</h2><img src="assets/comics/cost-output-tier-boundary.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：GLM 的短输出博弈：200 Token 断崖"><ol><li><b>先辨认历史案例</b>：本课用输出长度分档演示风险，具体规则以所用服务为准。</li><li><b>测量输出分布</b>：看典型、长尾与失败重试，不只测一个短样例。</li><li><b>优化任务粒度</b>：明确必需字段与完整范围，必要时调整模型或计费方案。</li><li><b>校验质量与实际账单</b>：输出预算应留余量，不能用截断假装完成。</li></ol><p>把输出档位当作计费边界检查，不能为压短而丢失必要信息。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">现象：不仅输出涨价，输入也回溯涨价</div>
     <div class="tbl-wrap"><table class="tbl">
       <tr><th>指标</th><th>Output ≤ 200</th><th>Output &gt; 200</th><th>变化幅度</th></tr>

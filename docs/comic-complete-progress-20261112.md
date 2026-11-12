@@ -1,6 +1,6 @@
 # 漫画补全进度（2026-11-12）
 
-从交接时的 193 篇继续，今日累计新增 **71 篇、284 格**。简体中文目录共 445 篇，已接入 **264 篇、1056 格**，覆盖率 **59.3%**，剩余 **181 篇**。
+从交接时的 193 篇继续，今日累计新增 **84 篇、336 格**。简体中文目录共 445 篇，已接入 **277 篇、1108 格**，覆盖率 **62.2%**，剩余 **168 篇**。
 
 当前仍在继续生成；完成一个批次只作为保存与验证检查点。
 
@@ -8,6 +8,7 @@
 
 | 计划与提示词 | 篇数 |
 | --- | ---: |
+| [comic-complete-cost-20261112](comic-complete-cost-20261112.json) | 13 |
 | [comic-complete-engineering-b-20261112](comic-complete-engineering-b-20261112.json) | 7 |
 | [comic-complete-interaction-20261112](comic-complete-interaction-20261112.json) | 10 |
 | [comic-complete-psychology-a-20261112](comic-complete-psychology-a-20261112.json) | 10 |
@@ -34,7 +35,7 @@
 | 审美工程：让 AI 做出有品味的东西 | 12 | 12 | 0 |
 | 交互工程：让 AI 做出好用的东西 | 10 | 10 | 0 |
 | AI 产品心理学：让用户觉得好用 | 19 | 19 | 0 |
-| Token 降本增效：AI 应用的成本工程 | 0 | 13 | 13 |
+| Token 降本增效：AI 应用的成本工程 | 13 | 13 | 0 |
 | 数据结构：AI 世界的骨架 | 0 | 13 | 13 |
 | 算法：AI 的思考方式 | 0 | 15 | 15 |
 | 解剖 Grok Build：Rust 写的生产级 Coding Agent | 0 | 25 | 25 |
@@ -59,14 +60,14 @@
 
 ## 最新验证
 
-- npm test：99/99。见 [测试记录](../reports/comic-264-tests-20261112.log)。
-- verify:content：无错误。见 [内容记录](../reports/comic-264-content-20261112.log)。
-- check:resources：无缺失引用。见 [资源记录](../reports/comic-264-resources-20261112.log)。
-- check:cleanup：无遗留问题。见 [清理记录](../reports/comic-264-cleanup-20261112.log)。
-- 全部 1320 个 WebP 已解码核对尺寸；单篇四格最大 201.7 KiB，均低于 250 KiB。
-- 对照基线 b7dee1875f12de989c9132ddad5795a3729c1b5d，新增 71 篇正文在去除漫画插入与旧封面后保持一致（忽略空白）；原 193 篇来源记录保持一致。
+- npm test：99/99。见 [测试记录](../reports/comic-277-tests-20261112.log)。
+- verify:content：无错误。见 [内容记录](../reports/comic-277-content-20261112.log)。
+- check:resources：无缺失引用。见 [资源记录](../reports/comic-277-resources-20261112.log)。
+- check:cleanup：无遗留问题。见 [清理记录](../reports/comic-277-cleanup-20261112.log)。
+- 全部 1385 个 WebP 已解码核对尺寸；单篇四格最大 201.7 KiB，均低于 250 KiB。
+- 对照基线 b7dee1875f12de989c9132ddad5795a3729c1b5d，新增 84 篇正文在去除漫画插入与旧封面后保持一致（忽略空白）；原 193 篇来源记录保持一致。
 - 浏览器已抽查桌面四列、390×844 手机两列和逐格讲解；继续复用相同组件。
 
 ## 发布边界
 
-本地仓库 264 篇，沿用授权分批提交和推送 main。服务器仍为已发布的 193 篇，本次持续生成尚未执行服务器部署。部署背景见 [193 篇部署记录](server-comics-193-20261111.md)。
+本地仓库 277 篇，沿用授权分批提交和推送 main。服务器仍为已发布的 193 篇，本次持续生成尚未执行服务器部署。部署背景见 [193 篇部署记录](server-comics-193-20261111.md)。

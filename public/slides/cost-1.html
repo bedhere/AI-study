@@ -92,16 +92,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 降本增效 · 1 / 13</div>
-    <h1>和用户对赌的生意</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>和用户对赌的生意</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>和用户对赌的生意</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">不知道你有没有这种感受：我们总想为用户提供更好的 AI 服务，但在商业化层面，是和用户在对赌——产品用得越好，用户用得越多，利润反而越薄。看到消费账单的时候，不知道会不会窒息。</p>
     <div class="chips"><span class="chip">定价即架构</span><span class="chip">成本构成</span><span class="chip">延迟与吞吐</span><span class="chip">毛利保卫战</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>看到消费账单会窒息吗？Token 成本不只是财务账单，更是延迟与吞吐量的直接映射。这一章讲怎么把它抠下来</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>看到消费账单会窒息吗？Token 成本不只是财务账单，更是延迟与吞吐量的直接映射。这一章讲怎么把它抠下来</p></aside><section class="lesson-comic" data-lesson-comic="cost-1.html"><noscript><h2>四格看懂：和用户对赌的生意</h2><img src="assets/comics/cost-unit-economics.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：和用户对赌的生意"><ol><li><b>收入和消耗不一定同向</b>：固定收费与随用量增长的成本需要分别建模。</li><li><b>按成功任务算总账</b>：计入重试、工具与相关资源，不能只看一次调用。</li><li><b>把瓶颈拆成几层</b>：分别检查格式、内容、重复计算与输出冗余。</li><li><b>优化后仍要验证</b>：省下成本若损害质量或可靠性，就未必划算。</li></ol><p>用真实任务测算单次成功成本，把质量、延迟和用量一起纳入预算。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">先说结论</div>
     <div class="quote-card">
       <b>Token 成本不仅是财务账单，更是延迟与吞吐量的直接映射。</b>省下来的每一个 Token，既是钱，也是首字延迟，也是同一张显卡能扛住的并发。所以这一章叫「定价即架构」：读懂厂商的定价结构，本质上是在读懂推理算力的成本曲线，然后把你的应用架构设计到便宜的那一侧。

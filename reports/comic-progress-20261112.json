@@ -2,13 +2,13 @@
   "date": "2026-11-12",
   "baseline": "b7dee1875f12de989c9132ddad5795a3729c1b5d",
   "total": 445,
-  "completed": 264,
-  "remaining": 181,
-  "coveragePercent": 59.3,
-  "panels": 1056,
-  "webpFiles": 1320,
-  "newStories": 71,
-  "newArticleBodiesPreserved": 71,
+  "completed": 277,
+  "remaining": 168,
+  "coveragePercent": 62.2,
+  "panels": 1108,
+  "webpFiles": 1385,
+  "newStories": 84,
+  "newArticleBodiesPreserved": 84,
   "previousProvenanceUnchanged": 193,
   "maxPanelKiB": 201.7,
   "chapters": [
@@ -100,8 +100,8 @@
       "id": "p-cost",
       "title": "Token 降本增效：AI 应用的成本工程",
       "total": 13,
-      "completed": 0,
-      "remaining": 13
+      "completed": 13,
+      "remaining": 0
     },
     {
       "id": "p-ds",
@@ -175,103 +175,6 @@
     }
   ],
   "remainingChapters": [
-    {
-      "id": "p-cost",
-      "title": "Token 降本增效：AI 应用的成本工程",
-      "lessons": [
-        {
-          "file": "cost-1.html",
-          "title": "和用户对赌的生意",
-          "desc": "不知道你有没有这种感受：我们总想为用户提供更好的 AI 服务，但在商业化层面，是和用户在对赌——产品用得越好，用户用得越多，利润反而越薄。看到消费账单的时候，不知道会不会窒息。",
-          "tag": "开篇",
-          "navTitle": "和用户对赌的生意"
-        },
-        {
-          "file": "cost-2.html",
-          "title": "Token 怎么数：BPE 与隐形的「Token 税」",
-          "desc": "账单按 Token 结算，但 Token 到底是怎么数出来的？它既不是字符，也不是单词，而是基于统计规律生成的「子词」。理解这套规则，你才会明白：同样一句话，中文为什么天生比英文贵 2 倍。",
-          "tag": "交互",
-          "navTitle": "Token 怎么数：BPE 与隐形的「Token 税」"
-        },
-        {
-          "file": "cost-3.html",
-          "title": "报价表速览与三大梯队",
-          "desc": "把常用模型的定价摊开在一张表上，你会看到三个清晰的梯队。但仅仅知道哪个贵、哪个便宜是远远不够的——真正的成本刺客，藏在那些价格跳变的边界线里。",
-          "tag": "选型",
-          "navTitle": "报价表速览与三大梯队"
-        },
-        {
-          "file": "cost-4.html",
-          "title": "GLM 的短输出博弈：200 Token 断崖",
-          "desc": "观察 GLM-4.6 的定价结构，会发现一个神奇的设计：它不按输入长度分档，而是按输出长度分档，分界线在 200 个 Token。输出 199 和输出 201，适用完全不同的价格。",
-          "tag": "交互",
-          "navTitle": "GLM 的短输出博弈：200 Token 断崖"
-        },
-        {
-          "file": "cost-5.html",
-          "title": "Qwen 的阶梯逃逸：32k 红线",
-          "desc": "Qwen 系列的分档逻辑和智谱完全不同：按输入长度计费，分界线在 32k 和 128k。最容易被忽略的计费细节是——越线后不是「超出部分加价」，而是整个请求全量按高价档结算。",
-          "tag": "交互",
-          "navTitle": "Qwen 的阶梯逃逸：32k 红线"
-        },
-        {
-          "file": "cost-6.html",
-          "title": "图片 Token：像素也要交税",
-          "desc": "文字 BPE 是「合并字符」，图片编码是「切割像素」。你以为传的是原图，其实模型按缩放对齐后的分辨率计费——这里面藏着和文字 32k 红线一模一样的跳档陷阱。",
-          "tag": "交互",
-          "navTitle": "图片 Token：像素也要交税"
-        },
-        {
-          "file": "cost-7.html",
-          "title": "输入主导：62:1 的 I/O Ratio",
-          "desc": "普通 Chatbot 是一问一答；Agent 是「思考 → 行动 → 观察 → 再思考」的循环。关键认知：每一轮的 Input 都包含了全部历史信息——轮次越多，Input 越长，成本累积膨胀。",
-          "tag": "交互",
-          "navTitle": "输入主导：62:1 的 I/O Ratio"
-        },
-        {
-          "file": "cost-8.html",
-          "title": "Agent 四大成本陷阱与熔断",
-          "desc": "上一节看到的还只是「一次成功的执行」。真实世界里，Agent 的账单事故来自四个方向：工具返回爆炸、思考税、死循环、历史雪球。每一个都有对应的工程解法。",
-          "tag": "深入",
-          "navTitle": "Agent 四大成本陷阱与熔断"
-        },
-        {
-          "file": "cost-9.html",
-          "title": "语法层：Prompt 是写给机器的",
-          "desc": "进入实战四层的第一层。很多产品早期为了调试方便，或者干脆是让 AI 代写的提示词，习惯用 ###、** 加粗、JSON 展示数据。这些对人类友好的排版，在大模型的计费逻辑里全是「词法税」。",
-          "tag": "实战",
-          "navTitle": "语法层：Prompt 是写给机器的"
-        },
-        {
-          "file": "cost-10.html",
-          "title": "语义层：双重蒸馏",
-          "desc": "格式的税砍完了，往深一层看内容本身。RAG 和长文档场景里最常见的工程错误：把上下文窗口当垃圾桶——Few-Shot 案例、检索文档全怼进去，让模型自己辨识。能用，但不该这样用。",
-          "tag": "实战",
-          "navTitle": "语义层：双重蒸馏"
-        },
-        {
-          "file": "cost-11.html",
-          "title": "架构层：KV Cache 的注意事项",
-          "desc": "在商业化产品的降本增效中，KV Cache 是最被低估的技术点之一。命中缓存和没命中，最高差 90% 的成本——但里面有几个隐形的坑，不说你可能不知道。",
-          "tag": "实战",
-          "navTitle": "架构层：KV Cache 的注意事项"
-        },
-        {
-          "file": "cost-12.html",
-          "title": "输出层：管住模型的嘴",
-          "desc": "实战四层的最后一层。输出 Token 比输入贵好几倍（回看第 3 节报价表），而且直接决定接口返回速度。管住模型的嘴，有三类合适的操作：指令层、代码层、工程层。",
-          "tag": "实战",
-          "navTitle": "输出层：管住模型的嘴"
-        },
-        {
-          "file": "cost-final.html",
-          "title": "算力时代的极简主义",
-          "desc": "做完这几层优化，你基本上已经跑赢 90% 的粗放型 AI 产品了。收官这一节，把整个专题串成一张清单，再聊聊「省钱」背后的那件更重要的事。",
-          "tag": "收官",
-          "navTitle": "算力时代的极简主义"
-        }
-      ]
-    },
     {
       "id": "p-ds",
       "title": "数据结构：AI 世界的骨架",

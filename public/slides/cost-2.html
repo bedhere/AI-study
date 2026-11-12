@@ -88,16 +88,18 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">Token 降本增效 · 2 / 13</div>
-    <h1>Token 怎么数：BPE 与隐形的「Token 税」</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>Token 怎么数：BPE 与隐形的「Token 税」</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>Token 怎么数：BPE 与隐形的「Token 税」</h1>
     <p class="subtitle">账单按 Token 结算，但 Token 到底是怎么数出来的？它既不是字符，也不是单词，而是基于统计规律生成的「子词」。理解这套规则，你才会明白：同样一句话，中文为什么天生比英文贵 2 倍。</p>
     <div class="chips"><span class="chip">BPE</span><span class="chip">子词分词</span><span class="chip">tiktoken</span><span class="chip">Token 税</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从字符到子词的演进、BPE 的合并规则，以及中文为什么天生贵 2 倍；「给主人留下些什么吧」的诡异合并</p></aside><!--seo:end-->  <section class="reveal">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>从字符到子词的演进、BPE 的合并规则，以及中文为什么天生贵 2 倍；「给主人留下些什么吧」的诡异合并</p></aside><section class="lesson-comic" data-lesson-comic="cost-2.html"><noscript><h2>四格看懂：Token 怎么数：BPE 与隐形的「Token 税」</h2><img src="assets/comics/cost-tokenization-measure.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：Token 怎么数：BPE 与隐形的「Token 税」"><ol><li><b>字符不等于 Token</b>：模型把文本编码为分词单元，边界依赖分词器。</li><li><b>合并来自统计规则</b>：BPE 等方法通过学习合并形成词表，不能把单元等同完整语义。</li><li><b>换分词器可能不同</b>：相同内容在不同词表下可能得到不同长度。</li><li><b>预算用实际编码结果</b>：对真实语言、格式与任务样本计数，别套固定倍数。</li></ol><p>Token 数取决于具体分词器与文本，应实测而非按字符或固定语言倍数估算。</p></noscript></section><!--seo:end-->  <section class="reveal">
     <div class="sec-label">从字符到子词：两个极端的平衡点</div>
     <p class="desc">早期 NLP 走过两个极端。<b>词级别分词</b>语义明确，但英语几十万个单词加上词形变化（look / looks / looking / looked），词表直接爆炸，还处理不了没见过的新词（OOV 问题）。<b>字符级别分词</b>什么词都拆得开，但序列太长、单个字符信息量太低，推理效率极差。</p>
     <p class="desc" style="margin-top:10px">现代大模型选择了中间路线——<b>子词分词（Subword Tokenization）</b>：常见的词保留为完整 Token，不常见的词拆成有意义的片段。词表控制在 32k 到 200k 之间，既不爆炸，又什么都能表示。</p>
