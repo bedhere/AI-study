@@ -91,15 +91,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">开源专题 · 大模型如何变小</div>
-    <h1>为什么要把模型做小：蒸馏的动机</h1><div class="academy-cover" data-academy-cover="knowledge"><div><strong>为什么要把模型做小：蒸馏的动机</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>为什么要把模型做小：蒸馏的动机</h1>
     <p class="subtitle">上一节刚讲完，模型越大，能力越容易涌现。那为什么整个行业还在拼命把模型做小？因为能力不是唯一的约束条件。成本、延迟、数据能不能出门，这三件事会在真实项目里直接把旗舰模型挡在门外。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>成本、速度、私有化三个现实动机，和小模型做不到的那些事</p></aside><!--seo:end-->  <div class="sec-label">先说结论</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>成本、速度、私有化三个现实动机，和小模型做不到的那些事</p></aside><section class="lesson-comic" data-lesson-comic="oss-5.html"><noscript><h2>四格看懂：为什么要把模型做小：蒸馏的动机</h2><img src="assets/comics/oss-small-model-distillation-motive.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：为什么要把模型做小：蒸馏的动机"><ol><li><b>先列现实约束</b>：预算、响应时间与数据处理边界会影响模型选择。</li><li><b>选择能部署的规模</b>：权重、缓存和运行开销都要装得下，别只看参数名。</li><li><b>让教师帮助学生学习</b>：用教师提供的数据或分布训练学生，减少部分训练成本。</li><li><b>足够好要靠实测</b>：复杂推理等任务可能仍有差距，也要检查继承的偏差。</li></ol><p>成本、延迟与部署约束推动模型变小，蒸馏后仍须验证能力边界。</p></noscript></section><!--seo:end-->  <div class="sec-label">先说结论</div>
 
   <div class="l-callout">
     <b>把模型做小，是被现实逼出来的。</b>旗舰模型能力最强，但它贵、它慢，而且必须把数据发到别人的服务器上。很多场景里，一个能力够用的小模型才是唯一能落地的选项。蒸馏，就是把小模型的能力尽量补上来的那个手段。

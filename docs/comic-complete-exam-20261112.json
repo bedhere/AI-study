@@ -1,0 +1,322 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-exam",
+  "status": "accepted; all 9 article-specific comics integrated and visually reviewed",
+  "evidenceScope": "Actual nine Simplified Chinese exam pages, EXAM_BANK files 1-7 (50 entries each), exam-engine.js and local-learning.js. New comics support each page's distinct study goals and current browser-local progress; no cloud-account or guaranteed nonrepeating-exam claim.",
+  "lessons": [
+    {
+      "file": "exam.html",
+      "slug": "study-mode-hub",
+      "role": "自测虎：青绿毛衣、橙围巾",
+      "takeaway": "先选练习目标与模式，再用解析补弱，学习记录以当前浏览器为范围。",
+      "panels": [
+        {
+          "label": "先选对应篇章",
+          "text": "按已经学完的内容挑一套卷子，明确这次要检验的知识。",
+          "alt": "自测虎在书架前挑选一册带独特图形的篇章练习册。"
+        },
+        {
+          "label": "练习与考试各有用途",
+          "text": "顺序刷题即时看解析，模拟考试则交卷后回顾。",
+          "alt": "自测虎在同一学习台比较逐题解析卡和封好的模拟考卷。"
+        },
+        {
+          "label": "从错题回到概念",
+          "text": "复盘为什么选错，再回到相关课节重新解释。",
+          "alt": "自测虎拿着红色错题卡翻查对应课程书页。"
+        },
+        {
+          "label": "理解记录的保存范围",
+          "text": "当前成绩和进度主要保存在本机浏览器，换环境需留意。",
+          "alt": "自测虎把成绩卡放进电脑旁的本地抽屉，另一台电脑的抽屉仍是空的。"
+        }
+      ],
+      "scenePrompt": "角色：自测虎：青绿毛衣、橙围巾。从左到右四格，每格一个完整场景：第1格：自测虎在书架前挑选一册带独特图形的篇章练习册。 第2格：自测虎在同一学习台比较逐题解析卡和封好的模拟考卷。 第3格：自测虎拿着红色错题卡翻查对应课程书页。 第4格：自测虎把成绩卡放进电脑旁的本地抽屉，另一台电脑的抽屉仍是空的。",
+      "originalHtmlSha256": "122728fbbc76d549e8264ae646ed8be50089b91392940cdbc3920e309886b5b5",
+      "lessonTitle": "七套篇章自测 · 350 道题",
+      "title": "四格看懂：七套篇章自测 · 350 道题",
+      "sourceArtifact": "exec-da168dc8-e4ec-474a-ab79-0f325db75436.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-da168dc8-e4ec-474a-ab79-0f325db75436.png"
+    },
+    {
+      "file": "exam-1.html",
+      "slug": "foundations-concept-check",
+      "role": "基础虎：蓝色毛衣、米色围巾",
+      "takeaway": "用训练、生成与检索三条线复习大模型基础，分数之外要能说清边界。",
+      "panels": [
+        {
+          "label": "先区分训练阶段",
+          "text": "复习预训练、指令微调与对齐各自解决什么问题。",
+          "alt": "基础虎把原始书本、对话卡和反馈卡排在模型训练轨道的不同工位。"
+        },
+        {
+          "label": "再看生成与采样",
+          "text": "Token 概率与采样控制输出方式，别把低温当事实保证。",
+          "alt": "基础虎观察候选积木从概率漏斗中被选出，旁边保留事实核对卡。"
+        },
+        {
+          "label": "选择合适的知识补充",
+          "text": "私有或时效信息要检索，结果还需要核对来源。",
+          "alt": "基础虎将检索到的资料卡放到问题旁，拿放大镜比对来源册。"
+        },
+        {
+          "label": "用解析纠正概念混淆",
+          "text": "答错时区分知识、格式、随机性与人工复核的职责。",
+          "alt": "基础虎把一张错题卡拆成不同图形小卡，分别放进对应概念格子。"
+        }
+      ],
+      "scenePrompt": "角色：基础虎：蓝色毛衣、米色围巾。从左到右四格，每格一个完整场景：第1格：基础虎把原始书本、对话卡和反馈卡排在模型训练轨道的不同工位。 第2格：基础虎观察候选积木从概率漏斗中被选出，旁边保留事实核对卡。 第3格：基础虎将检索到的资料卡放到问题旁，拿放大镜比对来源册。 第4格：基础虎把一张错题卡拆成不同图形小卡，分别放进对应概念格子。",
+      "originalHtmlSha256": "e1ad6c51607f8baff54c7c74110186e8e3626b7487cd23a8cb1c5054fb922195",
+      "lessonTitle": "大模型基础 · 篇章自测",
+      "title": "四格看懂：大模型基础 · 篇章自测",
+      "sourceArtifact": "exec-64ac20af-30af-40c9-a6f4-2041c56175c5.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-64ac20af-30af-40c9-a6f4-2041c56175c5.png"
+    },
+    {
+      "file": "exam-2.html",
+      "slug": "harness-boundary-check",
+      "role": "窗口虎：紫色马甲、青绿围巾",
+      "takeaway": "把上下文、工具、安全与缓存作为不同工程机制来检验。",
+      "panels": [
+        {
+          "label": "先看窗口里还剩什么",
+          "text": "模型能利用本次提供的内容，超窗处理要由应用明确设计。",
+          "alt": "窗口虎检查一个容量有限的透明上下文框，部分历史卡留在框外。"
+        },
+        {
+          "label": "工具调用要走完整链路",
+          "text": "声明能力、发出调用、执行并交回结果，职责分别核对。",
+          "alt": "窗口虎沿工具卡、执行工位和回执托盘检查一条完整循环轨道。"
+        },
+        {
+          "label": "外部内容别冒充授权",
+          "text": "识别注入意图，并理解提示词与执行权限的不同边界。",
+          "alt": "窗口虎把夹在资料中的伪指令卡隔在带锁执行闸门外。"
+        },
+        {
+          "label": "缓存先检查稳定前缀",
+          "text": "动态内容的位置会影响可复用前缀，成本结论还需实测。",
+          "alt": "窗口虎将新卡追加在封存前缀卡段之后，旁边核对缓存表盘。"
+        }
+      ],
+      "scenePrompt": "角色：窗口虎：紫色马甲、青绿围巾。从左到右四格，每格一个完整场景：第1格：窗口虎检查一个容量有限的透明上下文框，部分历史卡留在框外。 第2格：窗口虎沿工具卡、执行工位和回执托盘检查一条完整循环轨道。 第3格：窗口虎把夹在资料中的伪指令卡隔在带锁执行闸门外。 第4格：窗口虎将新卡追加在封存前缀卡段之后，旁边核对缓存表盘。",
+      "originalHtmlSha256": "4b70ffa4a209230aed3403697da0fe92107921fcdcdb739f5bd03a4684571e4c",
+      "lessonTitle": "AI Harness · 篇章自测",
+      "title": "四格看懂：AI Harness · 篇章自测",
+      "sourceArtifact": "exec-a4526a81-9c65-4e44-8741-a0556eae74af.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-a4526a81-9c65-4e44-8741-a0556eae74af.png"
+    },
+    {
+      "file": "exam-3.html",
+      "slug": "demo-to-product-check",
+      "role": "实战虎：橙夹克、蓝围巾",
+      "takeaway": "产品化要验故障路径、上下文与记忆边界，以及协作的实际代价。",
+      "panels": [
+        {
+          "label": "先从正常演示走向故障",
+          "text": "复习角色一致性、失败降级与 Agent 卡死的处理。",
+          "alt": "实战虎查看正常产品工位旁一条被堵住的执行轨道，准备使用备用出口。"
+        },
+        {
+          "label": "压缩与记忆分开理解",
+          "text": "窗口整理与跨轮持久信息不是同一种机制。",
+          "alt": "实战虎在同一桌面分别整理摘要卡和独立的长期记忆柜。"
+        },
+        {
+          "label": "协作要计算成本",
+          "text": "多个执行者需明确任务、交接与可观察结果。",
+          "alt": "实战虎向两个穿不同衣服的同族助手递出任务卡，回收托盘各自分开。"
+        },
+        {
+          "label": "用错题定位产品缺口",
+          "text": "把解析对应回失败场景，验证自己能解释并处理。",
+          "alt": "实战虎用一张错题卡找到产品台上的缺失环节，补上对应检查积木。"
+        }
+      ],
+      "scenePrompt": "角色：实战虎：橙夹克、蓝围巾。从左到右四格，每格一个完整场景：第1格：实战虎查看正常产品工位旁一条被堵住的执行轨道，准备使用备用出口。 第2格：实战虎在同一桌面分别整理摘要卡和独立的长期记忆柜。 第3格：实战虎向两个穿不同衣服的同族助手递出任务卡，回收托盘各自分开。 第4格：实战虎用一张错题卡找到产品台上的缺失环节，补上对应检查积木。",
+      "originalHtmlSha256": "23b7788ee4a2dd60779c85361c7a3444a64bcc852d369217b4f2e1c162f43323",
+      "lessonTitle": "实战 · 从 Demo 到产品 · 篇章自测",
+      "title": "四格看懂：实战 · 从 Demo 到产品 · 篇章自测",
+      "sourceArtifact": "exec-4a4f743f-bd35-42de-ae7e-62fd0543aa86.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-4a4f743f-bd35-42de-ae7e-62fd0543aa86.png"
+    },
+    {
+      "file": "exam-4.html",
+      "slug": "engineering-pattern-check",
+      "role": "工程虎：青绿工装、米色帽",
+      "takeaway": "用控制权、工具契约、评测和隔离解释工程方案的取舍。",
+      "panels": [
+        {
+          "label": "先判断谁决定下一步",
+          "text": "Workflow 与 Agent 的关键差别在控制权安排。",
+          "alt": "工程虎比较预铺的固定轨道与由模型工位选择的分岔轨道。"
+        },
+        {
+          "label": "工具面要容易正确使用",
+          "text": "检查描述、参数和反馈是否让调用者理解行动边界。",
+          "alt": "工程虎用匹配模具核对工具卡接口，并查看清晰的结果回执。"
+        },
+        {
+          "label": "评测要有具体标准",
+          "text": "规则、模型与人工评分各有边界，评分量表要能对照。",
+          "alt": "工程虎在同一评测台用标尺、机器人和人工检查册比较候选结果。"
+        },
+        {
+          "label": "风险再对应执行防线",
+          "text": "区分误行为、外部注入和用户滥用，检查隔离与凭据处理。",
+          "alt": "工程虎把不同来源的风险卡对应到执行闸门、资料隔板和凭据柜。"
+        }
+      ],
+      "scenePrompt": "角色：工程虎：青绿工装、米色帽。从左到右四格，每格一个完整场景：第1格：工程虎比较预铺的固定轨道与由模型工位选择的分岔轨道。 第2格：工程虎用匹配模具核对工具卡接口，并查看清晰的结果回执。 第3格：工程虎在同一评测台用标尺、机器人和人工检查册比较候选结果。 第4格：工程虎把不同来源的风险卡对应到执行闸门、资料隔板和凭据柜。",
+      "originalHtmlSha256": "e6e3675c22dff27e858b6946e0f5dbb1d369f460ebe2060d4d75776f59c967e2",
+      "lessonTitle": "AI 工程设计模式 · 篇章自测",
+      "title": "四格看懂：AI 工程设计模式 · 篇章自测",
+      "sourceArtifact": "exec-1fe56568-e239-4749-bf13-16ef7f3a82d1.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-1fe56568-e239-4749-bf13-16ef7f3a82d1.png"
+    },
+    {
+      "file": "exam-5.html",
+      "slug": "self-improvement-check",
+      "role": "进化虎：棕色背心、橙围巾",
+      "takeaway": "把改进对象、搜索过程、评估可靠性与人类约束放在同一张图里。",
+      "panels": [
+        {
+          "label": "先确认究竟改什么",
+          "text": "区分模型权重、上下文与工作流，别把它们都叫自我改写。",
+          "alt": "进化虎分别检查模型箱、上下文卡架和可调整的工作流轨道。"
+        },
+        {
+          "label": "候选改动需要比较",
+          "text": "从生成候选到测试筛选，每一步都要有可观察记录。",
+          "alt": "进化虎将几条候选流程放到同一测试台，逐个收集结果卡。"
+        },
+        {
+          "label": "分数提高仍要查漏洞",
+          "text": "复习弱评估器、奖励黑客、记忆退化与多样性坍缩。",
+          "alt": "进化虎在放大镜下查看一座分数奖杯旁的空洞拼图和重复候选卡。"
+        },
+        {
+          "label": "保留外部验收与人的角色",
+          "text": "改进循环需受可靠评估和明确边界约束。",
+          "alt": "进化虎拿独立测试盒核验胜出方案，并在人工验收闸门前保存完整记录。"
+        }
+      ],
+      "scenePrompt": "角色：进化虎：棕色背心、橙围巾。从左到右四格，每格一个完整场景：第1格：进化虎分别检查模型箱、上下文卡架和可调整的工作流轨道。 第2格：进化虎将几条候选流程放到同一测试台，逐个收集结果卡。 第3格：进化虎在放大镜下查看一座分数奖杯旁的空洞拼图和重复候选卡。 第4格：进化虎拿独立测试盒核验胜出方案，并在人工验收闸门前保存完整记录。",
+      "originalHtmlSha256": "5b3f36ea9e13f8be5ebfef041a70eff02ace0dd11f0e7b7fa397b7904688afd6",
+      "lessonTitle": "Harness 与自我改进 · 篇章自测",
+      "title": "四格看懂：Harness 与自我改进 · 篇章自测",
+      "sourceArtifact": "exec-90eef2b7-8ab2-41ac-a223-df94effaaf9d.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-90eef2b7-8ab2-41ac-a223-df94effaaf9d.png"
+    },
+    {
+      "file": "exam-7.html",
+      "slug": "vibe-coding-method-check",
+      "role": "协作虎：蓝夹克、青绿围巾",
+      "takeaway": "把需求、边界、质量与决策记录串成完整交付，考试检验这些判断。",
+      "panels": [
+        {
+          "label": "先把需求与约束说清",
+          "text": "复习需求复述、技术边界和需要人决定的关键空白。",
+          "alt": "协作虎与另一位同族伙伴对照需求图，把缺失的约束卡补入计划板。"
+        },
+        {
+          "label": "按边界推进并检查",
+          "text": "阶段断点服务决策，不能拿擅自缩水代替完整方案。",
+          "alt": "协作虎在完整项目模型旁经过一个检查点，尚未完成的模块仍清楚标出。"
+        },
+        {
+          "label": "质量与高风险动作前置",
+          "text": "测试审查、备份和回退要落到具体可检查的动作。",
+          "alt": "协作虎在发布入口核对测试卡、备份盒和回退路线图。"
+        },
+        {
+          "label": "把选择与原因留下来",
+          "text": "记录需求、方案变化和最终实现，再用解析补齐薄弱点。",
+          "alt": "协作虎把决策卡按过程装入记录册，同时翻看一张待复盘错题卡。"
+        }
+      ],
+      "scenePrompt": "角色：协作虎：蓝夹克、青绿围巾。从左到右四格，每格一个完整场景：第1格：协作虎与另一位同族伙伴对照需求图，把缺失的约束卡补入计划板。 第2格：协作虎在完整项目模型旁经过一个检查点，尚未完成的模块仍清楚标出。 第3格：协作虎在发布入口核对测试卡、备份盒和回退路线图。 第4格：协作虎把决策卡按过程装入记录册，同时翻看一张待复盘错题卡。",
+      "originalHtmlSha256": "6400555b616b136fe7c35a9e2e3c6628a8bde06338b65e4d5f97449069d965e3",
+      "lessonTitle": "Vibe Coding 方法论 · 篇章自测",
+      "title": "四格看懂：Vibe Coding 方法论 · 篇章自测",
+      "sourceArtifact": "exec-389c3e68-7acb-4175-a9b3-182fbd35194a.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-389c3e68-7acb-4175-a9b3-182fbd35194a.png"
+    },
+    {
+      "file": "exam-6.html",
+      "slug": "grok-source-reading-check",
+      "role": "源码虎：橙色工装、米色帽",
+      "takeaway": "复习 Grok 运行时、记忆与安全时，同时区分源码事实、课程推断和示意。",
+      "panels": [
+        {
+          "label": "先画运行时职责",
+          "text": "用角色、消息与状态解释核心循环，别只背目录或数字。",
+          "alt": "源码虎沿三个职责不同的工位查看消息卡如何流转。"
+        },
+        {
+          "label": "压缩与检索各守边界",
+          "text": "检查上下文变化、双路候选与检索降级的关系。",
+          "alt": "源码虎在同一工作台比较摘要压缩盒与两路汇合的检索卡。"
+        },
+        {
+          "label": "安全要看实际失败路径",
+          "text": "审批、沙箱和连接故障不能只凭名字判断结果。",
+          "alt": "源码虎沿执行轨道检查审批闸门、沙箱盒和一处断开的连接线。"
+        },
+        {
+          "label": "每个结论都找证据",
+          "text": "把能直接指向源码的事实，与解释或课堂示意分开。",
+          "alt": "源码虎把带来源扣的代码卡放入事实托盘，将灯泡解释卡留在另一托盘。"
+        }
+      ],
+      "scenePrompt": "角色：源码虎：橙色工装、米色帽。从左到右四格，每格一个完整场景：第1格：源码虎沿三个职责不同的工位查看消息卡如何流转。 第2格：源码虎在同一工作台比较摘要压缩盒与两路汇合的检索卡。 第3格：源码虎沿执行轨道检查审批闸门、沙箱盒和一处断开的连接线。 第4格：源码虎把带来源扣的代码卡放入事实托盘，将灯泡解释卡留在另一托盘。",
+      "originalHtmlSha256": "ea369409bc7dadfe740aeb05f8723d2ea5dc46528c1ab5bac52e35f425ad7ef8",
+      "lessonTitle": "解剖 Grok Build · 篇章自测",
+      "title": "四格看懂：解剖 Grok Build · 篇章自测",
+      "sourceArtifact": "exec-58b284b5-a192-4c8e-b795-38174d866c50.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-58b284b5-a192-4c8e-b795-38174d866c50.png"
+    },
+    {
+      "file": "exam-all.html",
+      "slug": "cross-chapter-exam",
+      "role": "综合虎：青绿毛衣、蓝围巾",
+      "takeaway": "综合考检验跨章概念边界，交卷后按错题回到对应篇章补学。",
+      "panels": [
+        {
+          "label": "从多章均衡取样",
+          "text": "综合卷横跨课程主题，用来暴露只懂单章时看不出的混淆。",
+          "alt": "综合虎从多种图形的篇章书盒中各取任务卡，放入同一考卷盘。"
+        },
+        {
+          "label": "区分相似概念的职责",
+          "text": "压缩与记忆、流程与自主决策，都要按问题判断。",
+          "alt": "综合虎将几组看似相近的概念卡，放到各自职责不同的模具中。"
+        },
+        {
+          "label": "先作答再统一回顾",
+          "text": "综合模式以抽考为主，提交之后查看结果与解析。",
+          "alt": "综合虎独立完成一份封好的考卷，另一侧解析册仍合着等待交卷。"
+        },
+        {
+          "label": "把错题送回原章节",
+          "text": "按具体考点补课，再测理解；当前记录以本地浏览器为范围。",
+          "alt": "综合虎拿着错题卡返回对应课程书架，电脑旁保存着本地成绩册。"
+        }
+      ],
+      "scenePrompt": "角色：综合虎：青绿毛衣、蓝围巾。从左到右四格，每格一个完整场景：第1格：综合虎从多种图形的篇章书盒中各取任务卡，放入同一考卷盘。 第2格：综合虎将几组看似相近的概念卡，放到各自职责不同的模具中。 第3格：综合虎独立完成一份封好的考卷，另一侧解析册仍合着等待交卷。 第4格：综合虎拿着错题卡返回对应课程书架，电脑旁保存着本地成绩册。",
+      "originalHtmlSha256": "5af00b6129bde7aed67573d169ea64d9b9e4569b0c82d2ec9a8afe6a5ddacf04",
+      "lessonTitle": "全站综合考 · 七章抽 35 题",
+      "title": "四格看懂：全站综合考 · 七章抽 35 题",
+      "sourceArtifact": "exec-322781d9-957c-40c3-888e-d0772932cdc4.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-322781d9-957c-40c3-888e-d0772932cdc4.png"
+    }
+  ]
+}

@@ -58,15 +58,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">开源专题 · 开源到底开的是什么</div>
-    <h1>权重是什么？一个模型的全部本事</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside><div class="academy-cover" data-academy-cover="knowledge"><div><strong>权重是什么？一个模型的全部本事</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M18 20h25c8 0 11 4 11 10v49c-4-5-8-7-14-7H18Z"/><path d="M90 20H65c-8 0-11 4-11 10v49c4-5 8-7 14-7h22Z"/></svg></div>
+    <h1>权重是什么？一个模型的全部本事</h1><aside class="academy-review-note" data-academy-review="reference">本课保留技术教学内容。来源项目的经历与数据不代表方片实绩；涉及模型版本、服务价格及供应情况，使用前请核对官方资料。</aside>
     <p class="subtitle">新闻里天天说「某某模型开源了」。开源的到底是什么东西？是代码吗？其实主要是一个文件：<b>权重</b>。搞清楚它是什么，后面所有关于开源的争论你都能自己判断。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>训练几个月最后凝结成的那个文件：它长什么样、多大、为什么说拥有权重就是拥有控制权</p></aside><!--seo:end-->  <div class="sec-label">先说结论</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>训练几个月最后凝结成的那个文件：它长什么样、多大、为什么说拥有权重就是拥有控制权</p></aside><section class="lesson-comic" data-lesson-comic="oss-1.html"><noscript><h2>四格看懂：权重是什么？一个模型的全部本事</h2><img src="assets/comics/oss-weights-and-memory.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：权重是什么？一个模型的全部本事"><ol><li><b>训练把参数调整成形</b>：模型的许多能力体现在训练得到的权重中。</li><li><b>保存为可加载的文件</b>：本地运行还需要架构、配置、分词器与合适的推理软件。</li><li><b>文件大小不是运行预算</b>：推理还要留出 KV Cache、工作区和系统占用。</li><li><b>控制权仍有具体条件</b>：能否离线、修改与再分发，分别看部署条件和对应许可。</li></ol><p>权重是训练得到的参数，文件体积、运行内存和使用权利要分别核对。</p></noscript></section><!--seo:end-->  <div class="sec-label">先说结论</div>
 
   <div class="l-callout">
     <b>权重就是模型训练完之后留下的一堆数字。</b>训练花掉的几千万美元、几个月的算力，最后全部凝结成这一个文件。拿到它，你就能在自己的机器上跑出一模一样的模型，不需要联网，不需要向任何人付费。

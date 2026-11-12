@@ -73,15 +73,17 @@
 <!--seo:begin--><style>.xa-tldr{margin:18px 0 4px;padding:14px 18px;background:rgba(0,102,255,0.04);border:1px solid rgba(0,102,255,0.16);border-radius:10px}.xa-tldr .xa-tldr-tag{display:block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--accent,#0066ff);margin-bottom:6px}.xa-tldr p{margin:0;font-size:15px;line-height:1.8;color:var(--text,#1f2937)}</style><style>html.xa-locked .paywall-locked:not(.xa-peek){display:none!important}html.xa-locked .xa-peek{max-height:132px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%);mask-image:linear-gradient(180deg,#000 0,#000 14%,transparent 94%)}</style><!--seo:end-->
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <article class="lesson">
 
   <header class="lesson-header">
     <div class="kicker">开源专题 · 大模型如何变小</div>
-    <h1>蒸馏是怎么做的：从老师到学生</h1><div class="academy-cover" data-academy-cover="practice"><div><strong>蒸馏是怎么做的：从老师到学生</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><rect x="18" y="25" width="72" height="54" rx="10"/><path d="m30 45 12 10-12 10m22 0h22M40 25v-8h28v8"/></svg></div>
+    <h1>蒸馏是怎么做的：从老师到学生</h1>
     <p class="subtitle">上一节讲了为什么要把模型做小。这一节看具体怎么做。整个过程比想象中朴素：让老师去答题，把答题过程记下来，拿这批材料去训练学生。难点不在流程，在细节。</p>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>五步流程、软标签与温度系数；用 DeepSeek-R1 同批开源的六个蒸馏模型做样本</p></aside><!--seo:end-->  <div class="sec-label">五步走完</div>
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>五步流程、软标签与温度系数；用 DeepSeek-R1 同批开源的六个蒸馏模型做样本</p></aside><section class="lesson-comic" data-lesson-comic="oss-6.html"><noscript><h2>四格看懂：蒸馏是怎么做的：从老师到学生</h2><img src="assets/comics/oss-distillation-data-and-soft-targets.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：蒸馏是怎么做的：从老师到学生"><ol><li><b>先覆盖目标问题</b>：问题集决定训练覆盖面，先准备适合目标领域的样本。</li><li><b>保留可用的教师材料</b>：序列蒸馏可用教师生成回答；软标签路线则需要对应概率信息。</li><li><b>按选定路线训练学生</b>：本课软分布示意展示温度如何改变相对信息，不代表所有蒸馏都需 logits。</li><li><b>独立评估再迭代</b>：保留测试样本，检查真实任务表现后再调整数据与训练。</li></ol><p>蒸馏可学习教师生成样本，也可对齐可获得的软分布；训练路线要分清。</p></noscript></section><!--seo:end-->  <div class="sec-label">五步走完</div>
 
   <div class="oss-steps">
     <div class="oss-step">

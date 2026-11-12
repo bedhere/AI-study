@@ -127,6 +127,8 @@ html.standalone .exam-back{display:inline-flex}
   <script src="/slides/external-platform-policy.js?v=20261110closed"></script>
 <style>.q-report{display:none!important}</style>
 <link rel="stylesheet" href="academy-brand.css?v=20261110p0">
+<link rel="stylesheet" href="lesson-comic.css?v=20261110a">
+<script src="comic-data.js?v=20261111complete" defer></script><script src="lesson-comic.js?v=20261110a" defer></script>
 </head>
 <body>
 <main class="lesson">
@@ -138,10 +140,10 @@ html.standalone .exam-back{display:inline-flex}
 
   <header class="lesson-header">
     <div class="kicker">篇章自测 · 工程进阶篇</div>
-    <h1>AI 工程设计模式 · 篇章自测</h1><div class="academy-cover" data-academy-cover="review"><div><strong>AI 工程设计模式 · 篇章自测</strong><p>AI学院 · 方片全员学习</p></div><svg viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="104" height="104" rx="24" fill="var(--accent-soft)" stroke="none"/><path d="M80 56v28H24V20h40"/><path d="m42 43 12 12 30-30M38 70h28"/></svg></div>
+    <h1>AI 工程设计模式 · 篇章自测</h1>
     <p class="subtitle">学完工程进阶篇来验证一下。50 题全部出自本章课程：Workflow vs Agent、上下文工程、ACI 工具设计、评测方法论、沙箱与凭证隔离。</p>
     <div class="chips"><span class="chip">50 道题</span><span class="chip">随机抽 25 题</span><span class="chip">模拟考试</span><span class="chip">顺序刷题</span></div>
-  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>50 题：Workflow vs Agent / 上下文三板斧 / ACI 工具设计 / 评测与 Grader / 沙箱隔离</p></aside><!--seo:end-->  <section class="reveal" id="modeSec">
+  </header><!--seo:begin--><aside class="xa-tldr"><span class="xa-tldr-tag">一句话速览</span><p>50 题：Workflow vs Agent / 上下文三板斧 / ACI 工具设计 / 评测与 Grader / 沙箱隔离</p></aside><section class="lesson-comic" data-lesson-comic="exam-4.html"><noscript><h2>四格看懂：AI 工程设计模式 · 篇章自测</h2><img src="assets/comics/engineering-pattern-check.webp" width="2172" height="724" loading="lazy" style="width:100%;height:auto" alt="四格看懂：AI 工程设计模式 · 篇章自测"><ol><li><b>先判断谁决定下一步</b>：Workflow 与 Agent 的关键差别在控制权安排。</li><li><b>工具面要容易正确使用</b>：检查描述、参数和反馈是否让调用者理解行动边界。</li><li><b>评测要有具体标准</b>：规则、模型与人工评分各有边界，评分量表要能对照。</li><li><b>风险再对应执行防线</b>：区分误行为、外部注入和用户滥用，检查隔离与凭据处理。</li></ol><p>用控制权、工具契约、评测和隔离解释工程方案的取舍。</p></noscript></section><!--seo:end-->  <section class="reveal" id="modeSec">
     <div class="sec-label">选择模式</div>
     <div class="mode-grid">
       <button class="mode-card" onclick="startExam()">

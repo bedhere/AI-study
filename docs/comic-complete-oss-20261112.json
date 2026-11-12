@@ -1,0 +1,329 @@
+{
+  "referenceImages": [
+    "E:/fangpian/方片AI学堂/素材库/tiger-teacher-pointer.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-suit-document.webp",
+    "E:/fangpian/方片AI学堂/素材库/tiger-reading-seated.webp"
+  ],
+  "commonPrompt": "Use case: illustration-story. Create an original polished educational FOUR-panel comic, one wide landscape image with exactly FOUR equal-width vertical panels in ONE HORIZONTAL ROW, left-to-right, aligned boundaries at 25%, 50%, 75%, thin warm gray dividers. Aim for 3:1 landscape canvas. Each quarter contains one complete scene, all heads, paws and props safely inside its own quarter. Reference images are CHARACTER IDENTITY ONLY, never copy their watermarks. Preserve Fangpian's golden-yellow tiger family: round head and ears, brown forehead and cheek stripes, cream muzzle and belly, brown nose, large warm brown eyes, chunky little paws and striped tail. Soft high-quality 3D clay illustration, warm ivory background with a few meaningful scene props, yellow with restrained teal/coral accents, readable silhouette, varied camera angles and expressions. Each story's protagonist keeps exactly the same clothes across all four panels. Use two arms and two legs per tiger, coherent anatomy, no floating limbs. Any AI companion is a small neutral white rounded robot with teal face. Absolutely NO letters, text, numerals, captions, speech bubbles, logos, watermark or URLs anywhere, including screens, books and papers; use simple pictograms and blank horizontal lines only. Captions will be added in website HTML. Four distinct sequential actions, never four repeated poses. No outer title or big empty header, artwork fills each panel. No claims that AI verification guarantees correctness. Anatomical priority: every character has exactly TWO arms total. If both paws hold objects, NO extra chin-touching, pointing or head-scratching paw. Scenes below are visual directions, never render any of the supplied Chinese text. Keep all dividers straight at exact quarter boundaries. Preserve the same protagonist outfit in all panels. Do not add humans, logos, written language, numbers, badges declaring verified truth or decorative banners. All living supporting characters must also be golden-yellow tigers from this exact family. No dogs, rabbits, owls, other animal species or humans. Within each quarter use a SINGLE full-height unified camera view. NEVER create an inset, upper/lower split, horizontal internal divider, or duplicate the protagonist within one quarter.",
+  "generator": "built-in image_gen",
+  "cacheVersion": "20261111complete",
+  "date": "2026-11-12",
+  "batchId": "20261112-complete-oss",
+  "status": "accepted; all 9 article-specific comics integrated and visually reviewed",
+  "evidenceScope": "Actual oss-1 through oss-9 lesson HTML. New captions retain teaching topics without copying outdated model catalogs, fixed hardware recommendations, ecosystem statistics, guaranteed privacy, or unrestricted-license claims. Distinguish sequence distillation from logits-based soft-target training; local capacity is empirical.",
+  "verificationSources": [
+    "https://www.apache.org/licenses/LICENSE-2.0",
+    "https://github.com/deepseek-ai/DeepSeek-R1",
+    "https://arxiv.org/abs/2304.15004",
+    "https://docs.ollama.com/quickstart",
+    "https://lmstudio.ai/docs/app"
+  ],
+  "lessons": [
+    {
+      "file": "oss-1.html",
+      "slug": "oss-weights-and-memory",
+      "role": "权重虎：青绿工装、米色围巾",
+      "takeaway": "权重是训练得到的参数，文件体积、运行内存和使用权利要分别核对。",
+      "panels": [
+        {
+          "label": "训练把参数调整成形",
+          "text": "模型的许多能力体现在训练得到的权重中。",
+          "alt": "权重虎调整一面密集积木阵列，把松散色块装入稳定模型框。"
+        },
+        {
+          "label": "保存为可加载的文件",
+          "text": "本地运行还需要架构、配置、分词器与合适的推理软件。",
+          "alt": "权重虎把模型参数盒与配置卡一起放到本地计算机旁。"
+        },
+        {
+          "label": "文件大小不是运行预算",
+          "text": "推理还要留出 KV Cache、工作区和系统占用。",
+          "alt": "权重虎在内存货架上装入权重箱后，又为对话缓存和运行工具留出空格。"
+        },
+        {
+          "label": "控制权仍有具体条件",
+          "text": "能否离线、修改与再分发，分别看部署条件和对应许可。",
+          "alt": "权重虎拔下外接网线测试本地机器，并核对桌边的许可文件夹。"
+        }
+      ],
+      "scenePrompt": "角色：权重虎：青绿工装、米色围巾。从左到右四格，每格一个完整场景：第1格：权重虎调整一面密集积木阵列，把松散色块装入稳定模型框。 第2格：权重虎把模型参数盒与配置卡一起放到本地计算机旁。 第3格：权重虎在内存货架上装入权重箱后，又为对话缓存和运行工具留出空格。 第4格：权重虎拔下外接网线测试本地机器，并核对桌边的许可文件夹。",
+      "originalHtmlSha256": "e4d4a16778f9d2d331b5c28a6897ee7a9d6572d7374014031308d57ee06257a9",
+      "lessonTitle": "权重是什么？一个模型的全部本事",
+      "title": "四格看懂：权重是什么？一个模型的全部本事",
+      "sourceArtifact": "exec-2ee02a1d-8ca5-4d81-8639-82922fc1eb22.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-2ee02a1d-8ca5-4d81-8639-82922fc1eb22.png"
+    },
+    {
+      "file": "oss-2.html",
+      "slug": "oss-model-license-checklist",
+      "role": "许可虎：深蓝马甲、青绿领结",
+      "takeaway": "按具体模型与版本阅读许可，权重可下载不等于没有使用义务。",
+      "panels": [
+        {
+          "label": "先找对应权重与原文",
+          "text": "核对具体版本、尺寸和仓库中的许可证文件。",
+          "alt": "许可虎在不同尺寸模型箱旁，用放大镜查找各自附带的许可册。"
+        },
+        {
+          "label": "再核对用途和限制",
+          "text": "商用、规模、场景与地域等条款，要按实际项目逐项读。",
+          "alt": "许可虎把产品用途卡与许可册中的几个形状标签逐一配对。"
+        },
+        {
+          "label": "训练与分发另行检查",
+          "text": "确认输出使用、衍生训练及再分发条件，别只看一句宣传。",
+          "alt": "许可虎检查模型训练台和发布包之间附带的许可卡与来源链。"
+        },
+        {
+          "label": "标准许可也有义务",
+          "text": "保留相应许可、署名与变更说明等要求，不能把宽松理解成无条件。",
+          "alt": "许可虎把许可册、来源标签和变更卡一起装进待分发模型包。"
+        }
+      ],
+      "scenePrompt": "角色：许可虎：深蓝马甲、青绿领结。从左到右四格，每格一个完整场景：第1格：许可虎在不同尺寸模型箱旁，用放大镜查找各自附带的许可册。 第2格：许可虎把产品用途卡与许可册中的几个形状标签逐一配对。 第3格：许可虎检查模型训练台和发布包之间附带的许可卡与来源链。 第4格：许可虎把许可册、来源标签和变更卡一起装进待分发模型包。",
+      "originalHtmlSha256": "99434d084564c18237abb94c7ed8ebe899d52f95b16309a3a641afa0885bf0a4",
+      "lessonTitle": "真开源 vs 假开源：怎么看懂一张许可证",
+      "title": "四格看懂：真开源 vs 假开源：怎么看懂一张许可证",
+      "sourceArtifact": "exec-369385f1-f5fb-4689-ad3d-d1ccb2b1fc28.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-369385f1-f5fb-4689-ad3d-d1ccb2b1fc28.png"
+    },
+    {
+      "file": "oss-3.html",
+      "slug": "oss-open-model-business-ecosystem",
+      "role": "生态虎：橙夹克、蓝围巾",
+      "takeaway": "开源策略结合商业位置、实际发布和生态证据来判断。",
+      "panels": [
+        {
+          "label": "先看模型在业务中的位置",
+          "text": "模型可能是商品、服务入口或其他业务的互补品。",
+          "alt": "生态虎比较模型商店、服务工坊和云端算力仓三座相连建筑。"
+        },
+        {
+          "label": "区分承诺与实际发布",
+          "text": "宣布开放之后，仍要核对权重、许可证和可获得性。",
+          "alt": "生态虎在发布门口检查一个已拆封模型箱和一个仍封着的承诺箱。"
+        },
+        {
+          "label": "看真实使用与维护",
+          "text": "衍生作品、工具链和维护情况一起看，单个数字不能包办判断。",
+          "alt": "生态虎沿着模型树查看不同衍生工坊、工具箱和维修记录。"
+        },
+        {
+          "label": "生态集中也会传递风险",
+          "text": "规模带来便利，同时要评估共同底座与上游策略变化。",
+          "alt": "生态虎检查一棵繁茂模型树的共同根部，并为旁边另一株树留出连接路径。"
+        }
+      ],
+      "scenePrompt": "角色：生态虎：橙夹克、蓝围巾。从左到右四格，每格一个完整场景：第1格：生态虎比较模型商店、服务工坊和云端算力仓三座相连建筑。 第2格：生态虎在发布门口检查一个已拆封模型箱和一个仍封着的承诺箱。 第3格：生态虎沿着模型树查看不同衍生工坊、工具箱和维修记录。 第4格：生态虎检查一棵繁茂模型树的共同根部，并为旁边另一株树留出连接路径。",
+      "originalHtmlSha256": "e02766592b0fd8959d2659ed711e2e4c0aa3c801ed24062084cd0a474c90d9f2",
+      "lessonTitle": "开源是一门生意：各家在图什么",
+      "title": "四格看懂：开源是一门生意：各家在图什么",
+      "sourceArtifact": "exec-cc7f6fd3-ae7a-46af-b70d-819982b668a8.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-cc7f6fd3-ae7a-46af-b70d-819982b668a8.png"
+    },
+    {
+      "file": "oss-4.html",
+      "slug": "oss-emergence-and-metrics",
+      "role": "量尺虎：紫色背心、米色衬衣",
+      "takeaway": "能力曲线受规模、任务与评测指标共同影响，看到跳升先检查尺子。",
+      "panels": [
+        {
+          "label": "观察规模与任务成绩",
+          "text": "不同任务的曲线形状可能不同，不能套一个统一阈值。",
+          "alt": "量尺虎在无字图板上比较一条平滑曲线和一条突然抬升的曲线。"
+        },
+        {
+          "label": "离散判分会藏起进步",
+          "text": "只记整题通过，可能让中间改善一直显示为零。",
+          "alt": "量尺虎把逐步变完整的拼图送过只接收完整拼图的闸门。"
+        },
+        {
+          "label": "换一把连续的尺子",
+          "text": "按步骤或字段给分，交叉检查阶跃来自哪里。",
+          "alt": "量尺虎用细刻度尺测量同一批半成品拼图，逐渐增加的进度一目了然。"
+        },
+        {
+          "label": "在自己的任务上验证",
+          "text": "用真实样本控制模型规模与评测口径，再决定选型。",
+          "alt": "量尺虎在测试台比较不同尺寸模型盒，认真记录同一套任务卡的结果。"
+        }
+      ],
+      "scenePrompt": "角色：量尺虎：紫色背心、米色衬衣。从左到右四格，每格一个完整场景：第1格：量尺虎在无字图板上比较一条平滑曲线和一条突然抬升的曲线。 第2格：量尺虎把逐步变完整的拼图送过只接收完整拼图的闸门。 第3格：量尺虎用细刻度尺测量同一批半成品拼图，逐渐增加的进度一目了然。 第4格：量尺虎在测试台比较不同尺寸模型盒，认真记录同一套任务卡的结果。",
+      "originalHtmlSha256": "ca38c23759fa1345906a4af5da46cf2b1f57f7185d4acb445fdcd12aff9f5e25",
+      "lessonTitle": "涌现：能力为什么会突然出现",
+      "title": "四格看懂：涌现：能力为什么会突然出现",
+      "sourceArtifact": "exec-4a7f3052-3ffa-4264-9e84-af28e2c107c2.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-4a7f3052-3ffa-4264-9e84-af28e2c107c2.png"
+    },
+    {
+      "file": "oss-5.html",
+      "slug": "oss-small-model-distillation-motive",
+      "role": "精简虎：青绿背带裤、橙围巾",
+      "takeaway": "成本、延迟与部署约束推动模型变小，蒸馏后仍须验证能力边界。",
+      "panels": [
+        {
+          "label": "先列现实约束",
+          "text": "预算、响应时间与数据处理边界会影响模型选择。",
+          "alt": "精简虎把硬币、沙漏和带锁数据盒放在同一需求托盘。"
+        },
+        {
+          "label": "选择能部署的规模",
+          "text": "权重、缓存和运行开销都要装得下，别只看参数名。",
+          "alt": "精简虎将合适尺寸模型箱装进本地内存架，过大的箱子留在外面。"
+        },
+        {
+          "label": "让教师帮助学生学习",
+          "text": "用教师提供的数据或分布训练学生，减少部分训练成本。",
+          "alt": "精简虎在白板旁把教师示范卡交给穿同族衣服的小学生虎。"
+        },
+        {
+          "label": "足够好要靠实测",
+          "text": "复杂推理等任务可能仍有差距，也要检查继承的偏差。",
+          "alt": "精简虎拿着学生模型的结果卡与真实任务拼图比对，未完成的部分清楚留着空缺。"
+        }
+      ],
+      "scenePrompt": "角色：精简虎：青绿背带裤、橙围巾。从左到右四格，每格一个完整场景：第1格：精简虎把硬币、沙漏和带锁数据盒放在同一需求托盘。 第2格：精简虎将合适尺寸模型箱装进本地内存架，过大的箱子留在外面。 第3格：精简虎在白板旁把教师示范卡交给穿同族衣服的小学生虎。 第4格：精简虎拿着学生模型的结果卡与真实任务拼图比对，未完成的部分清楚留着空缺。",
+      "originalHtmlSha256": "6a0e010def54f47964a3ca6d3ff3ec4073b1577471c80bcbd29c3641e77f9c31",
+      "lessonTitle": "为什么要把模型做小：蒸馏的动机",
+      "title": "四格看懂：为什么要把模型做小：蒸馏的动机",
+      "sourceArtifact": "exec-33cc54c4-afbb-47f4-aa71-6e61cf932663.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-33cc54c4-afbb-47f4-aa71-6e61cf932663.png"
+    },
+    {
+      "file": "oss-6.html",
+      "slug": "oss-distillation-data-and-soft-targets",
+      "role": "蒸馏虎：蓝围裙、米色衬衣",
+      "takeaway": "蒸馏可学习教师生成样本，也可对齐可获得的软分布；训练路线要分清。",
+      "panels": [
+        {
+          "label": "先覆盖目标问题",
+          "text": "问题集决定训练覆盖面，先准备适合目标领域的样本。",
+          "alt": "蒸馏虎将多种任务图形卡整齐放入题目托盘。"
+        },
+        {
+          "label": "保留可用的教师材料",
+          "text": "序列蒸馏可用教师生成回答；软标签路线则需要对应概率信息。",
+          "alt": "蒸馏虎在教师工位接住回答卡和一张候选分布图卡，分别放进两个材料槽。"
+        },
+        {
+          "label": "按选定路线训练学生",
+          "text": "本课软分布示意展示温度如何改变相对信息，不代表所有蒸馏都需 logits。",
+          "alt": "蒸馏虎调节一只温度旋钮，旁边无字概率柱由尖锐变平缓，再送到学生模型盒。"
+        },
+        {
+          "label": "独立评估再迭代",
+          "text": "保留测试样本，检查真实任务表现后再调整数据与训练。",
+          "alt": "蒸馏虎用未进入训练托盘的测试卡检验学生模型，并把问题卡放入改进盒。"
+        }
+      ],
+      "scenePrompt": "角色：蒸馏虎：蓝围裙、米色衬衣。从左到右四格，每格一个完整场景：第1格：蒸馏虎将多种任务图形卡整齐放入题目托盘。 第2格：蒸馏虎在教师工位接住回答卡和一张候选分布图卡，分别放进两个材料槽。 第3格：蒸馏虎调节一只温度旋钮，旁边无字概率柱由尖锐变平缓，再送到学生模型盒。 第4格：蒸馏虎用未进入训练托盘的测试卡检验学生模型，并把问题卡放入改进盒。",
+      "originalHtmlSha256": "3d0b522c4c1a7b1cf31f23854cb9eceb2f5e6888965ebe5484143ed0bd65ec40",
+      "lessonTitle": "蒸馏是怎么做的：从老师到学生",
+      "title": "四格看懂：蒸馏是怎么做的：从老师到学生",
+      "sourceArtifact": "exec-7bacf491-80c6-437a-a87a-d2deb1916b4a.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-7bacf491-80c6-437a-a87a-d2deb1916b4a.png"
+    },
+    {
+      "file": "oss-7.html",
+      "slug": "oss-model-lineage-correlated-errors",
+      "role": "血缘虎：棕色马甲、青绿围巾",
+      "takeaway": "不同品牌可能共享底座或教师，多模型一致不能自动当成独立证据。",
+      "panels": [
+        {
+          "label": "学生可能继承习惯和缺陷",
+          "text": "能力、表达倾向与偏差，都可能沿训练数据传递。",
+          "alt": "血缘虎查看教师模型与几个学生模型给出的相似花纹回答卡。"
+        },
+        {
+          "label": "品牌不同也可能同源",
+          "text": "从模型卡追踪底座与教师，别只凭产品名字判断独立性。",
+          "alt": "血缘虎揭开几个不同外壳模型箱的底部，发现它们连向同一个根部模块。"
+        },
+        {
+          "label": "一致答案可能一起错",
+          "text": "相关错误会削弱多模型投票的验证价值。",
+          "alt": "血缘虎把几张完全相同的回答卡对照真实拼图，发现同一块都缺失。"
+        },
+        {
+          "label": "用外部证据与多样评测补足",
+          "text": "检查来源、任务覆盖与实际错误分布，别把换牌当成验证。",
+          "alt": "血缘虎拿着原始资料卡与任务测试盒，比较来自不同根部的模型结果。"
+        }
+      ],
+      "scenePrompt": "角色：血缘虎：棕色马甲、青绿围巾。从左到右四格，每格一个完整场景：第1格：血缘虎查看教师模型与几个学生模型给出的相似花纹回答卡。 第2格：血缘虎揭开几个不同外壳模型箱的底部，发现它们连向同一个根部模块。 第3格：血缘虎把几张完全相同的回答卡对照真实拼图，发现同一块都缺失。 第4格：血缘虎拿着原始资料卡与任务测试盒，比较来自不同根部的模型结果。",
+      "originalHtmlSha256": "f9c608799a5621bff0b79ed7791f351fc857b695e241b2c7fecc3ef33a83ef35",
+      "lessonTitle": "蒸馏的代价：模型正在变得越来越像",
+      "title": "四格看懂：蒸馏的代价：模型正在变得越来越像",
+      "sourceArtifact": "exec-e5e51bce-34f8-443c-a90f-9ac852f593a7.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-e5e51bce-34f8-443c-a90f-9ac852f593a7.png"
+    },
+    {
+      "file": "oss-8.html",
+      "slug": "oss-local-model-capacity",
+      "role": "显存虎：橙色工装、青绿帽",
+      "takeaway": "先估权重与运行内存，再按量化、上下文和硬件实测。",
+      "panels": [
+        {
+          "label": "先核对可用容量",
+          "text": "显存或统一内存还要给系统与其他程序留空间。",
+          "alt": "显存虎在内存货架上划出系统占用区，测量剩余可装模型的格子。"
+        },
+        {
+          "label": "量化换容量也可能换质量",
+          "text": "较低位宽压小权重，但误差影响要按任务测试。",
+          "alt": "显存虎把细密积木压成更少档位的小块，旁边保留原模型细节作对照。"
+        },
+        {
+          "label": "总参数与激活参数分开看",
+          "text": "MoE 的权重容量不能只按一次激活的参数量估。",
+          "alt": "显存虎查看装满专家盒的整座柜子，其中少数专家盒正在亮灯工作。"
+        },
+        {
+          "label": "用实际负载验收",
+          "text": "上下文、并发和卸载方式都会影响内存与速度，估算只是起点。",
+          "alt": "显存虎在本地机器上逐渐加长对话卡带，同时检查内存表盘和沙漏。"
+        }
+      ],
+      "scenePrompt": "角色：显存虎：橙色工装、青绿帽。从左到右四格，每格一个完整场景：第1格：显存虎在内存货架上划出系统占用区，测量剩余可装模型的格子。 第2格：显存虎把细密积木压成更少档位的小块，旁边保留原模型细节作对照。 第3格：显存虎查看装满专家盒的整座柜子，其中少数专家盒正在亮灯工作。 第4格：显存虎在本地机器上逐渐加长对话卡带，同时检查内存表盘和沙漏。",
+      "originalHtmlSha256": "da0b31730767081af24ab7789cf7c7f499c1c0ad5da64534ec8c83f25635e097",
+      "lessonTitle": "你的电脑能跑多大的模型",
+      "title": "四格看懂：你的电脑能跑多大的模型",
+      "sourceArtifact": "exec-bd491586-a58f-45ad-98c8-1399c3b15af9.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-bd491586-a58f-45ad-98c8-1399c3b15af9.png"
+    },
+    {
+      "file": "oss-9.html",
+      "slug": "oss-local-model-tools-first-run",
+      "role": "部署虎：青绿夹克、蓝围巾",
+      "takeaway": "核对官方模型标签与硬件，先完成本地小测试，再接入程序和扩大负载。",
+      "panels": [
+        {
+          "label": "先选工具与有效标签",
+          "text": "终端和图形界面都能作为入口，模型尺寸与量化版本要核对。",
+          "alt": "部署虎在终端屏与图形模型柜之间，选择附带容量卡的一个模型盒。"
+        },
+        {
+          "label": "下载后先完成一次对话",
+          "text": "先确认加载成功与基础响应，再逐项调整上下文等参数。",
+          "alt": "部署虎把模型盒装入本地机器，与白色青绿脸机器人交换一张小问题卡。"
+        },
+        {
+          "label": "需要时再接本地服务",
+          "text": "查看工具支持的 API 范围，兼容接口不等于所有功能完全相同。",
+          "alt": "部署虎把本地模型机器的受控端口连接到一个应用窗口。"
+        },
+        {
+          "label": "检查容量速度与磁盘",
+          "text": "慢或中断时检查内存、上下文和卸载情况，并整理不用的模型。",
+          "alt": "部署虎在机器旁同时检查内存表盘、沙漏和模型存储抽屉。"
+        }
+      ],
+      "scenePrompt": "角色：部署虎：青绿夹克、蓝围巾。从左到右四格，每格一个完整场景：第1格：部署虎在终端屏与图形模型柜之间，选择附带容量卡的一个模型盒。 第2格：部署虎把模型盒装入本地机器，与白色青绿脸机器人交换一张小问题卡。 第3格：部署虎把本地模型机器的受控端口连接到一个应用窗口。 第4格：部署虎在机器旁同时检查内存表盘、沙漏和模型存储抽屉。",
+      "originalHtmlSha256": "e7eeab34e621f4ed5fa4b8f3cbc7a1bd477858451df285068564fb9a09372584",
+      "lessonTitle": "Ollama 与 LM Studio 怎么上手",
+      "title": "四格看懂：Ollama 与 LM Studio 怎么上手",
+      "sourceArtifact": "exec-93826063-312f-4005-bb78-d2b010f48fbe.png",
+      "generationSourcePath": "C:\\Users\\12782\\.codex\\generated_images\\01a1cd7f-98e9-74c2-b8f0-cbf2a3a5d411\\exec-93826063-312f-4005-bb78-d2b010f48fbe.png"
+    }
+  ]
+}
